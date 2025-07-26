@@ -44,6 +44,21 @@
   • 适合有经验的用户
 ```
 
+### 🌲 DFS算法模拟系统
+**cpu_mesh_dfs.py** - 用于DFS算法模拟的系统
+```
+🎯 特点：
+  • 专门用于模拟深度优先搜索(DFS)算法
+  • 基于完整系统的架构设计
+  • 使用GUPS生成器模拟DFS访问模式
+  • 为实现自定义DFS生成器提供框架
+
+🧠 算法模拟：
+  • 所有核心使用DFS/GUPS生成器
+  • 模拟DFS遍历网格网络的行为
+  • 通过内存访问模式体现DFS特性
+```
+
 ## 运行方法
 
 ### 启动简化系统（推荐）
@@ -56,6 +71,12 @@ sst cpu_mesh_simplified.py
 ```bash
 cd 02_Core_Systems/
 sst cpu_mesh_miranda.py
+```
+
+### 启动DFS模拟系统
+```bash
+cd 02_Core_Systems/
+sst cpu_mesh_dfs.py
 ```
 
 ## 系统参数配置
@@ -84,6 +105,7 @@ LINK_LATENCY = "50ps"       # 链路延迟
 ### 统计数据
 - `simplified_miranda_stats.csv` - 简化系统统计数据
 - `miranda_mesh_stats.csv` - 完整系统统计数据
+- `dfs_simulation_stats.csv` - DFS模拟统计数据
 
 ### 关键指标
 - CPU周期数和IPC
@@ -113,7 +135,12 @@ LINK_LATENCY = "50ps"       # 链路延迟
 1. **入门使用** - 从cpu_mesh_simplified.py开始
 2. **参数调优** - 根据需求修改配置参数
 3. **扩展开发** - 基于核心系统添加新功能
-4. **性能分析** - 使用统计数据进行优化
+4. **算法模拟** - 使用cpu_mesh_dfs.py进行图算法模拟
+5. **性能分析** - 使用统计数据进行优化
+
+## 相关文档
+
+- [DFS算法实现指南](DFS_IMPLEMENTATION.md) - DFS算法在SST中的实现说明
 
 ## 最后更新
 2024年7月25日

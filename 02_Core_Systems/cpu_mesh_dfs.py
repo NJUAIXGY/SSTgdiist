@@ -1,7 +1,7 @@
 import sst
 
-# --- 使用Miranda CPU模拟器的4x4 mesh系统 ---
-# Miranda是SST的CPU模拟器，能够生成真实的内存访问模式
+# --- 使用Miranda CPU模拟器的4x4 mesh系统，用于DFS算法模拟 ---
+# 在网格网络上模拟深度优先搜索(DFS)算法
 
 MESH_SIZE_X = 4
 MESH_SIZE_Y = 4
@@ -11,8 +11,8 @@ LINK_LATENCY = "50ps"
 
 routers = []
 
-print("=== 构建基于Miranda CPU的4x4 Mesh系统 ===")
-print("使用Miranda CPU模拟器生成真实的网络流量")
+print("=== 构建用于DFS算法模拟的4x4 Mesh系统 ===")
+print("使用自定义DFS生成器模拟深度优先搜索算法")
 
 # --- 创建带有Miranda CPU的节点 ---
 for i in range(TOTAL_NODES):
@@ -20,7 +20,7 @@ for i in range(TOTAL_NODES):
     router = sst.Component(f"router_{i}", "merlin.hr_router")
     router.addParams({
         "id": i,
-        "num_ports": "6",  # 4个网络方向 + 2个本地端口
+        "num_ports": "5",  # 4个网络方向 + 1个本地端口
         "link_bw": LINK_BANDWIDTH,
         "flit_size": "8B",
         "xbar_bw": LINK_BANDWIDTH,
@@ -33,7 +33,7 @@ for i in range(TOTAL_NODES):
     # 配置mesh拓扑
     topo_sub = router.setSubComponent("topology", "merlin.mesh")
     topo_sub.addParams({
-        "network_name": "Miranda_CPU_Mesh",
+        "network_name": "DFS_Mesh",
         "shape": f"{MESH_SIZE_X}x{MESH_SIZE_Y}",
         "width": "1x1",
         "local_ports": "1",
@@ -42,73 +42,26 @@ for i in range(TOTAL_NODES):
     # 创建Miranda CPU核心
     cpu_core = sst.Component(f"cpu_{i}", "miranda.BaseCPU")
     
-    # 根据核心位置配置不同的工作负载
-    x = i % MESH_SIZE_X
-    y = i // MESH_SIZE_X
+    # DFS核心配置 - 所有核心都使用DFS生成器
+    cpu_core.addParams({
+        "verbose": "1",
+        "printStats": "1",
+        "clock": "2.4GHz",
+        "max_reqs_cycle": "2",
+        # 使用自定义DFS生成器
+        "generator": "miranda.DFSGenerator" if hasattr(sst, 'miranda.DFSGenerator') else "miranda.GUPSGenerator",
+        "generatorParams.verbose": "1",
+        "generatorParams.count": "1000",        # DFS操作数量
+        "generatorParams.max_address": "524288", # 512KB地址空间
+        "generatorParams.min_address": "0",
+    })
     
-    if x == 0 and y == 0:  # 主控核心 - 执行控制任务
-        cpu_core.addParams({
-            "verbose": "1",
-            "printStats": "1",
-            "clock": "2.4GHz",
-            "max_reqs_cycle": "2",        # 每周期最大请求数
-            "generator": "miranda.STREAMBenchGenerator",  # 流处理基准测试
-            "generatorParams.verbose": "1",
-            "generatorParams.n": "10000",      # 数组大小
-            "generatorParams.operandwidth": "8", # 8字节操作数
-            "generatorParams.iterations": "100", # 迭代次数
-        })
-        print(f"  - CPU核心 {i} (位置: {x},{y}): 主控核心 - STREAM基准测试")
-        
-    elif x == MESH_SIZE_X-1 and y == MESH_SIZE_Y-1:  # 内存控制器核心
-        cpu_core.addParams({
-            "verbose": "1",
-            "printStats": "1", 
-            "clock": "2.4GHz",
-            "max_reqs_cycle": "4",        # 内存控制器处理更多请求
-            "generator": "miranda.RandomGenerator",  # 随机内存访问
-            "generatorParams.verbose": "1",
-            "generatorParams.count": "5000",       # 请求数量
-            "generatorParams.max_address": "1048576", # 1MB地址空间
-            "generatorParams.min_address": "0",
-            "generatorParams.length": "64",        # 64字节请求
-        })
-        print(f"  - CPU核心 {i} (位置: {x},{y}): 内存控制器 - 随机访问模式")
-        
-    elif x == 0 or x == MESH_SIZE_X-1 or y == 0 or y == MESH_SIZE_Y-1:  # I/O核心
-        cpu_core.addParams({
-            "verbose": "1",
-            "printStats": "1",
-            "clock": "2.4GHz", 
-            "max_reqs_cycle": "1",
-            "generator": "miranda.SingleStreamGenerator", # 单流访问
-            "generatorParams.verbose": "1",
-            "generatorParams.count": "2000",        # 较少的请求
-            "generatorParams.start_a": "0",
-            "generatorParams.length": "32",         # 32字节I/O操作
-            "generatorParams.stride": "32",         # 连续访问
-        })
-        print(f"  - CPU核心 {i} (位置: {x},{y}): I/O核心 - 单流访问模式")
-        
-    else:  # 计算核心
-        cpu_core.addParams({
-            "verbose": "1", 
-            "printStats": "1",
-            "clock": "2.4GHz",
-            "max_reqs_cycle": "2",
-            "generator": "miranda.GUPSGenerator",    # GUPS基准测试
-            "generatorParams.verbose": "1",
-            "generatorParams.count": "3000",        # 请求数量
-            "generatorParams.max_address": "524288", # 512KB地址空间
-            "generatorParams.min_address": "0",
-            "generatorParams.iterations": "50",     # 迭代次数
-        })
-        print(f"  - CPU核心 {i} (位置: {x},{y}): 计算核心 - GUPS基准测试")
+    print(f"  - CPU核心 {i}: DFS算法模拟核心")
 
     # 创建内存接口
     mem_iface = cpu_core.setSubComponent("memory", "memHierarchy.standardInterface")
     
-    # 创建L1缓存（简化设计，只连接到网络）
+    # 创建L1缓存
     l1_cache = sst.Component(f"l1cache_{i}", "memHierarchy.Cache")
     l1_cache.addParams({
         "cache_frequency": "2.4GHz",
@@ -117,7 +70,7 @@ for i in range(TOTAL_NODES):
         "access_latency_cycles": "1",
         "L1": "1",
         "verbose": "0",
-        "coherence_protocol": "none",  # 简化协议
+        "coherence_protocol": "none",
         "replacement_policy": "lru",
     })
     
@@ -125,7 +78,7 @@ for i in range(TOTAL_NODES):
     net_iface = l1_cache.setSubComponent("lowlink", "memHierarchy.MemNIC")
     net_iface.addParams({
         "group": "1",
-        "destinations": [str(j) for j in range(TOTAL_NODES) if j != i],  # 其他所有节点
+        "destinations": [str(j) for j in range(TOTAL_NODES) if j != i],
     })
     
     # 连接CPU到L1缓存
@@ -200,7 +153,6 @@ shared_memory.addParams({
 })
 
 # 连接内存控制器到网络
-# 我们将内存控制器作为一个虚拟节点连接到网络中的一个路由器
 memory_router_link = sst.Link("memory_router_link")
 memory_router_link.connect(
     (memory_controller, "direct_link", LINK_LATENCY),
@@ -210,12 +162,12 @@ memory_router_link.connect(
 print("✓ 共享内存控制器连接到网络节点15")
 
 # --- 配置统计收集 ---
-print("\n=== 配置Miranda CPU系统统计 ===")
+print("\n=== 配置DFS算法模拟统计 ===")
 
 sst.setStatisticLoadLevel(5)
-sst.setStatisticOutput("sst.statOutputCSV", {"filepath": "../03_Output_Data/miranda_mesh_stats.csv"})
+sst.setStatisticOutput("sst.statOutputCSV", {"filepath": "../03_Output_Data/dfs_simulation_stats.csv"})
 
-# 启用Miranda CPU统计
+# 启用统计
 sst.enableAllStatisticsForComponentType("miranda.BaseCPU")
 sst.enableAllStatisticsForComponentType("merlin.hr_router") 
 sst.enableAllStatisticsForComponentType("memHierarchy.standardInterface")
@@ -236,21 +188,20 @@ for i in range(TOTAL_NODES):
     sst.enableStatisticForComponentName(router_name, "send_packet_count")
     sst.enableStatisticForComponentName(router_name, "recv_packet_count")
 
-print("✓ Miranda CPU系统统计配置完成")
+print("✓ DFS算法模拟统计配置完成")
 
 # --- 系统总结 ---
-print(f"\n=== Miranda CPU系统配置总结 ===")
+print(f"\n=== DFS算法模拟配置总结 ===")
 print(f"🏗️  系统架构:")
 print(f"   • 网格规模: {MESH_SIZE_X}×{MESH_SIZE_Y} = {TOTAL_NODES} 个Miranda CPU核心")
-print(f"   • CPU模拟器: Miranda BaseCPU (真实指令执行)")
-print(f"   • 网络拓扑: 2D Mesh + 内存接口")
+print(f"   • CPU模拟器: Miranda BaseCPU (DFS算法模拟)")
+print(f"   • 网络拓扑: 2D Mesh")
 print(f"   • 链路性能: {LINK_BANDWIDTH} 带宽, {LINK_LATENCY} 延迟")
 
-print(f"\n🧠 CPU工作负载分布:")
-print(f"   • 主控核心: STREAM基准测试 (内存带宽测试)")
-print(f"   • 内存控制器: 随机内存访问模式")
-print(f"   • I/O核心: 单流顺序访问模式")
-print(f"   • 计算核心: GUPS基准测试 (随机访问性能)")
+print(f"\n🧠 DFS算法模拟:")
+print(f"   • 所有核心使用DFS生成器")
+print(f"   • 模拟深度优先搜索遍历行为")
+print(f"   • 通过内存访问模式体现DFS特性")
 
-print(f"\n🚀 开始Miranda CPU系统仿真...")
-print("   Miranda将生成真实的内存访问和网络流量")
+print(f"\n🚀 开始DFS算法模拟...")
+print("   系统将模拟DFS遍历网格网络的行为")
