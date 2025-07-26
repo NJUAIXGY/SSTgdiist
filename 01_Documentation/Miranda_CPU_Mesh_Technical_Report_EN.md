@@ -1,19 +1,43 @@
 # Miranda CPU Mesh System Technical Report
 
-**Project Name:** SST Framework-based Miranda CPU Mesh Network System  
+**Project Name:** SST Framework-based Miranda CPU Mesh Network System Family  
+**System Files:** `cpu_mesh_miranda.py`, `cpu_mesh_simplified.py`, `cpu_mesh_dfs.py`  
 **Report Type:** Technical Documentation  
-**Date:** 2024-07-25  
-**Version:** 1.0
+**Date:** 2025-07-27  
+**Version:** 2.0
 
 ## Executive Summary
 
-This project successfully implemented a high-performance Miranda CPU mesh network system based on the SST (Structural Simulation Toolkit) framework. The system features:
+This project successfully implemented a comprehensive Miranda CPU mesh network system family based on the SST (Structural Simulation Toolkit) framework. The system family features:
 
+- **Multi-Version Architecture:** Three specialized system implementations for different research needs
 - **Real-time Simulation:** Instruction-level accurate modeling using Miranda CPU components
 - **Hierarchical Architecture:** Multi-level workload distribution across mesh topology
 - **Network Interconnect:** High-performance 2D mesh network with optimized routing
 - **Memory Hierarchy:** Multi-level cache and memory system integration
+- **Unified Data Management:** Centralized output data management in dedicated directory
 - **Performance Analysis:** Comprehensive statistics collection and monitoring
+
+## System Architecture Overview
+
+### System Family Comparison
+
+| Feature | Complete (miranda) | Simplified | DFS Algorithm |
+|---------|-------------------|------------|---------------|
+| CPU Cores | 16 Miranda CPUs | 16 Miranda CPUs | 16 Miranda CPUs |
+| Workload Types | 4 Layered Workloads | Unified GUPS | DFS Traversal Simulation |
+| Memory System | Complete Hierarchy | Simplified Config | DFS-Optimized |
+| Use Case | Complete Research | Quick Validation | Graph Algorithm Study |
+| Complexity | High | Medium | Medium |
+| Runtime | Longer | Shorter | Medium |
+
+### Unified Output Data Management
+
+All system versions output their statistics to the centralized `03_Output_Data/` directory:
+
+- `miranda_mesh_stats.csv` - Complete system statistics
+- `simplified_miranda_stats.csv` - Simplified system performance data  
+- `dfs_simulation_stats.csv` - DFS algorithm simulation statistics
 
 ## System Architecture
 
@@ -80,24 +104,70 @@ This project successfully implemented a high-performance Miranda CPU mesh networ
 - **Power Modeling:** Energy consumption estimation
 - **Trace Integration:** Support for various trace formats
 
-## Configuration Parameters
+## DFS Algorithm Simulation System (cpu_mesh_dfs.py)
 
-### CPU Configuration
+### Overview
+The DFS (Depth-First Search) algorithm simulation system is specifically designed to study the behavioral characteristics of depth-first search algorithms in mesh networks.
+
+### Key Features
+- **Algorithm-Oriented:** Specialized for DFS algorithm memory access patterns
+- **Grid Traversal:** Simulates depth-first traversal in 4x4 grid networks
+- **Unified Configuration:** All CPU cores use the same DFS access pattern
+- **Optimized Connections:** Special connection configuration to resolve port conflicts
+
+### DFS Workload Configuration
 ```python
-# Miranda CPU Parameters
-"verbose": 1,
-"printStats": 1,
-"clock": "2.4GHz",
-"max_reqs_cycle": 2
+# DFS core configuration - unified across all cores
+cpu_core.addParams({
+    "verbose": "1",
+    "printStats": "1", 
+    "clock": "2.4GHz",
+    "max_reqs_cycle": "2",
+    # Use GUPS generator to simulate DFS behavior
+    "generator": "miranda.GUPSGenerator",
+    "generatorParams.verbose": "1",
+    "generatorParams.count": "1000",        # DFS operation count
+    "generatorParams.max_address": "524288", # 512KB address space
+    "generatorParams.min_address": "0",
+})
 ```
 
-### Network Configuration
-```python
-# Mesh Network Parameters
-"topology": "merlin.mesh",
-"mesh_size": "4x4",
-"link_bw": "16GB/s",
-"flit_size": "16B",
+### Technical Highlights
+1. **Port Conflict Resolution:** CPU 15 cache connection changed to port0 to avoid memory controller conflicts
+2. **Unified Access Pattern:** All cores use identical parameters to simulate DFS traversal behavior
+3. **Grid Topology Utilization:** Fully leverages 4x4 grid structure characteristics
+4. **Specialized Output:** Generates dedicated DFS simulation statistics
+
+## Usage Guidelines
+
+### System Selection Recommendations
+1. **Quick Validation:** Use simplified system (`cpu_mesh_simplified.py`)
+2. **Complete Research:** Use complete system (`cpu_mesh_miranda.py`)
+3. **Graph Algorithm Research:** Use DFS system (`cpu_mesh_dfs.py`)
+
+### Execution Commands
+```bash
+cd 02_Core_Systems/
+
+# Simplified system (recommended for daily use)
+sst cpu_mesh_simplified.py
+
+# Complete system (full feature research)
+sst cpu_mesh_miranda.py
+
+# DFS algorithm simulation system (graph algorithm research)
+sst cpu_mesh_dfs.py
+```
+
+### Output File Management
+All system outputs are centrally stored in the `03_Output_Data/` directory:
+```bash
+# View output results
+ls -la ../03_Output_Data/
+cat ../03_Output_Data/simplified_miranda_stats.csv  # Simplified system results
+cat ../03_Output_Data/miranda_mesh_stats.csv        # Complete system results  
+cat ../03_Output_Data/dfs_simulation_stats.csv      # DFS system results
+```
 "buffer_size": "16KB"
 ```
 

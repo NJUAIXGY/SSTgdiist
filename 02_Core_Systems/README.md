@@ -48,6 +48,33 @@
 **cpu_mesh_dfs.py** - 用于DFS算法模拟的系统
 ```
 🎯 特点：
+  • 专门为深度优先搜索算法设计
+  • 4x4网格拓扑，16个Miranda CPU核心
+  • 统一的DFS访问模式配置
+  • 解决端口冲突的优化连接
+  • 图算法研究专用平台
+
+🏗️ 系统架构：
+  • CPU模拟器: Miranda BaseCPU (DFS算法导向)
+  • 内存模型: 共享内存控制器 + L1缓存
+  • 网络拓扑: 2D Mesh优化DFS遍历
+  • 链路性能: 40GiB/s 带宽, 50ps 延迟
+
+🧠 DFS工作负载：
+  • 所有核心: GUPS生成器模拟DFS行为
+  • 统一配置: 1000次DFS操作，512KB地址空间
+  • 特殊优化: CPU 15端口连接避免冲突
+  • 输出数据: dfs_simulation_stats.csv
+```
+
+**DFS_IMPLEMENTATION.md** - DFS算法实现详细指南
+```
+📖 内容包括：
+  • DFS算法特点和在网格网络中的模拟
+  • 自定义生成器实现步骤
+  • 当前实现方案说明
+  • 扩展建议和优化方向
+```
   • 专门用于模拟深度优先搜索(DFS)算法
   • 基于完整系统的架构设计
   • 使用GUPS生成器模拟DFS访问模式
@@ -100,12 +127,30 @@ LINK_LATENCY = "50ps"       # 链路延迟
 "max_reqs_cycle": "2"       # 每周期最大请求数
 ```
 
-## 输出文件
+## 输出文件管理
 
-### 统计数据
+### 统一输出目录
+所有系统的输出文件现在统一存放在 `../03_Output_Data/` 目录中：
+
+### 统计数据文件
 - `simplified_miranda_stats.csv` - 简化系统统计数据
-- `miranda_mesh_stats.csv` - 完整系统统计数据
+- `miranda_mesh_stats.csv` - 完整系统统计数据  
 - `dfs_simulation_stats.csv` - DFS模拟统计数据
+
+### 查看输出结果
+```bash
+# 查看输出目录
+ls -la ../03_Output_Data/
+
+# 查看简化版系统结果
+head ../03_Output_Data/simplified_miranda_stats.csv
+
+# 查看完整版系统结果  
+head ../03_Output_Data/miranda_mesh_stats.csv
+
+# 查看DFS版系统结果
+head ../03_Output_Data/dfs_simulation_stats.csv
+```
 
 ### 关键指标
 - CPU周期数和IPC
