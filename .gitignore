@@ -1,0 +1,75 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# SST 仿真输出文件
+*.csv
+*.out
+*.log
+sst-*.txt
+*.stat
+*.trace
+
+# 仿真结果（保留一些示例数据，忽略大文件）
+*.dat
+*.bin
+simulation_output/
+temp_results/
+
+# IDE 和编辑器
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# 临时文件
+*.tmp
+*.temp
+.cache/
+
+# 构建和安装
+Makefile.in
+aclocal.m4
+autom4te.cache/
+config.h.in
+configure
+depcomp
+install-sh
+missing
+
+# 操作系统
+Thumbs.db
+.DS_Store
+
+# 文档构建
+docs/_build/
+docs/build/
+
+# 本地配置
+local_config.py
+config.local
+
+# 大型结果文件（超过100MB）
+*_large_results.csv
+*_full_simulation.out
