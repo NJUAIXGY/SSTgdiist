@@ -165,7 +165,7 @@ print("✓ 共享内存控制器连接到网络节点15")
 print("\n=== 配置DFS算法模拟统计 ===")
 
 sst.setStatisticLoadLevel(5)
-sst.setStatisticOutput("sst.statOutputCSV", {"filepath": "../03_Output_Data/dfs_simulation_stats.csv"})
+sst.setStatisticOutput("sst.statOutputCSV", {"filepath": "./dfs_simulation_stats.csv"})
 
 # 启用统计
 sst.enableAllStatisticsForComponentType("miranda.BaseCPU")

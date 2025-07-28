@@ -10,6 +10,7 @@ LINK_BANDWIDTH = "40GiB/s"
 LINK_LATENCY = "50ps"
 
 routers = []
+l1_caches = []  # 存储L1缓存引用
 
 print("=== 构建基于Miranda CPU的4x4 Mesh系统 ===")
 print("使用Miranda CPU模拟器生成真实的网络流量")
@@ -20,7 +21,7 @@ for i in range(TOTAL_NODES):
     router = sst.Component(f"router_{i}", "merlin.hr_router")
     router.addParams({
         "id": i,
-        "num_ports": "6",  # 4个网络方向 + 2个本地端口
+        "num_ports": "5",  # 4个网络方向 + 1个本地端口
         "link_bw": LINK_BANDWIDTH,
         "flit_size": "8B",
         "xbar_bw": LINK_BANDWIDTH,
@@ -108,7 +109,7 @@ for i in range(TOTAL_NODES):
     # 创建内存接口
     mem_iface = cpu_core.setSubComponent("memory", "memHierarchy.standardInterface")
     
-    # 创建L1缓存（简化设计，只连接到网络）
+    # 创建L1缓存
     l1_cache = sst.Component(f"l1cache_{i}", "memHierarchy.Cache")
     l1_cache.addParams({
         "cache_frequency": "2.4GHz",
@@ -121,35 +122,39 @@ for i in range(TOTAL_NODES):
         "replacement_policy": "lru",
     })
     
-    # 创建网络端口子组件
-    net_iface = l1_cache.setSubComponent("lowlink", "memHierarchy.MemNIC")
-    net_iface.addParams({
-        "group": "1",
-        "destinations": [str(j) for j in range(TOTAL_NODES) if j != i],  # 其他所有节点
-    })
-    
     # 连接CPU到L1缓存
     cpu_cache_link = sst.Link(f"cpu_cache_link_{i}")
     cpu_cache_link.connect(
-        (mem_iface, "port", "50ps"),
+        (mem_iface, "lowlink", "50ps"),
         (l1_cache, "high_network_0", "50ps")
     )
     
-    # 连接L1缓存到网络路由器
-    cache_router_link = sst.Link(f"cache_router_link_{i}")
-    # 解决端口冲突：将CPU 15的缓存连接从port4改为port0，避免与内存控制器冲突
-    if i == 15:
-        cache_router_link.connect(
-            (net_iface, "port", LINK_LATENCY),
-            (router, "port0", LINK_LATENCY)  # 更改端口以避免冲突
-        )
-    else:
-        cache_router_link.connect(
-            (net_iface, "port", LINK_LATENCY),
-            (router, "port4", LINK_LATENCY)  # 本地端口
-        )
+    # 为每个L1缓存连接一个本地内存控制器（分布式内存）
+    local_mem_ctrl = sst.Component(f"local_mem_ctrl_{i}", "memHierarchy.MemController")
+    local_mem_ctrl.addParams({
+        "clock": "1GHz",
+        "backing": "none",
+        "verbose": "0",
+        "addr_range_start": "0",
+        "addr_range_end": "134217727",  # 128MB地址空间
+    })
+    
+    # 创建本地内存后端
+    local_mem_backend = local_mem_ctrl.setSubComponent("backend", "memHierarchy.simpleMem")
+    local_mem_backend.addParams({
+        "access_time": "100ns",
+        "mem_size": "128MiB",
+    })
+    
+    # 连接L1缓存到本地内存控制器
+    l1_mem_link = sst.Link(f"l1_mem_link_{i}")
+    l1_mem_link.connect(
+        (l1_cache, "low_network_0", "20ns"),
+        (local_mem_ctrl, "highlink", "20ns")
+    )
 
     routers.append(router)
+    l1_caches.append(l1_cache)  # 保存L1缓存引用
 
 # --- 构建4x4 mesh网络连接 ---
 print("\n=== 构建4x4 Mesh网络连接 ===")
@@ -179,41 +184,20 @@ for y in range(MESH_SIZE_Y):
 
 print(f"✓ 创建了 {link_count} 条双向链路")
 
-# --- 创建共享内存系统 ---
-print("\n=== 创建共享内存系统 ===")
-
-# 创建内存控制器
-memory_controller = sst.Component("memory_controller", "memHierarchy.MemController")
-memory_controller.addParams({
-    "clock": "1GHz",
-    "backing": "none",
-    "verbose": "0",
-    "addr_range_start": "0",
-    "addr_range_end": "2147483647",  # 2GB地址空间
-})
-
-# 创建共享内存后端
-shared_memory = memory_controller.setSubComponent("backend", "memHierarchy.simpleMem")
-shared_memory.addParams({
-    "access_time": "100ns",
-    "mem_size": "2GiB",
-})
-
-# 连接内存控制器到网络
-# 我们将内存控制器作为一个虚拟节点连接到网络中的一个路由器
-memory_router_link = sst.Link("memory_router_link")
-memory_router_link.connect(
-    (memory_controller, "direct_link", LINK_LATENCY),
-    (routers[15], "port4", LINK_LATENCY)  # 连接到角落的路由器
-)
-
-print("✓ 共享内存控制器连接到网络节点15")
+print(f"\n✓ 每个CPU核心都有L1缓存(32KB)和本地内存(128MB)")
 
 # --- 配置统计收集 ---
 print("\n=== 配置Miranda CPU系统统计 ===")
 
+# 检查输出目录是否存在
+import os
+output_dir = "/home/anarchy/SST/sst_output_data"
+if not os.path.exists(output_dir):
+    os.makedirs(output_dir)
+    print(f"✓ 创建输出目录: {output_dir}")
+
 sst.setStatisticLoadLevel(5)
-sst.setStatisticOutput("sst.statOutputCSV", {"filepath": "../03_Output_Data/miranda_mesh_stats.csv"})
+sst.setStatisticOutput("sst.statOutputCSV", {"filepath": "/home/anarchy/SST/sst_output_data/miranda_mesh_stats.csv"})
 
 # 启用Miranda CPU统计
 sst.enableAllStatisticsForComponentType("miranda.BaseCPU")
@@ -243,7 +227,8 @@ print(f"\n=== Miranda CPU系统配置总结 ===")
 print(f"🏗️  系统架构:")
 print(f"   • 网格规模: {MESH_SIZE_X}×{MESH_SIZE_Y} = {TOTAL_NODES} 个Miranda CPU核心")
 print(f"   • CPU模拟器: Miranda BaseCPU (真实指令执行)")
-print(f"   • 网络拓扑: 2D Mesh + 内存接口")
+print(f"   • 网络拓扑: 2D Mesh (用于CPU间通信)")
+print(f"   • 内存层次: L1缓存(32KB) + 本地内存控制器(128MB)")
 print(f"   • 链路性能: {LINK_BANDWIDTH} 带宽, {LINK_LATENCY} 延迟")
 
 print(f"\n🧠 CPU工作负载分布:")
@@ -254,3 +239,13 @@ print(f"   • 计算核心: GUPS基准测试 (随机访问性能)")
 
 print(f"\n🚀 开始Miranda CPU系统仿真...")
 print("   Miranda将生成真实的内存访问和网络流量")
+
+# --- 设置仿真时间 ---
+# 设置仿真时钟和停止条件
+print(f"\n⏱️  仿真配置:")
+print(f"   • 仿真时钟: 100μs (足够完成所有基准测试)")
+print(f"   • 统计输出: {output_dir}/miranda_mesh_stats.csv")
+print(f"   • 详细日志: 所有组件启用")
+
+# 设置仿真时间限制 - 100微秒应该足够运行基准测试
+sst.setProgramOption("stop-at", "100us")

@@ -173,7 +173,7 @@ print(f"✓ 创建了 {link_count} 条双向链路")
 print("\n=== 配置简化Miranda CPU系统统计 ===")
 
 sst.setStatisticLoadLevel(5)
-sst.setStatisticOutput("sst.statOutputCSV", {"filepath": "../03_Output_Data/simplified_miranda_stats.csv"})
+sst.setStatisticOutput("sst.statOutputCSV", {"filepath": "./simplified_miranda_stats.csv"})
 
 # 启用Miranda CPU统计
 sst.enableAllStatisticsForComponentType("miranda.BaseCPU")
