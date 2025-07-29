@@ -1,35 +1,11 @@
-# 核心系统类
+# NoC核心系统类
 
 ## 概述
-本目录包含SST仿真系统的核心类实现，提供可复用的组件封装，包括NoC节点类和Miranda CPU Mesh系统类。
+本目录包含片上网络(NoC)系统的核心类实现，提供可复用的组件封装。
 
 ## 核心文件
 
-### Miranda CPU Mesh系统 (新增)
-
-#### `miranda_cpu_mesh_system.py`
-封装的Miranda CPU Mesh系统类，提供：
-- 完整的4x4或自定义大小的Mesh网络系统
-- 基于Miranda CPU模拟器的真实工作负载
-- 可配置的内存层次结构和网络参数
-- 灵活的工作负载配置（STREAM、GUPS、随机访问等）
-- 统计收集和输出管理
-
-#### `cpu_mesh_miranda_class_based.py`
-基于类的Miranda CPU Mesh系统实现，直接替换原始脚本版本。
-
-#### `example_usage.py`
-详细的使用示例，展示如何使用封装的类创建不同配置的系统。
-
-#### `test_class_functionality.py`
-完整的测试套件，验证类的各项功能。
-
-#### `README_CLASS_USAGE.md`
-Miranda CPU Mesh系统类的详细使用文档。
-
-### NoC节点类
-
-#### `noc_node_class.py`
+### `noc_node_class.py`
 包含两个主要类：
 
 #### `NoCNode` - NoC节点类

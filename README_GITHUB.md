@@ -1,18 +1,20 @@
-# Miranda CPU Mesh System
+# SSTgdiist - Miranda CPU Mesh System v3.0
 
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 ![Python](https://img.shields.io/badge/python-3.8+-green.svg)
 ![SST](https://img.shields.io/badge/SST-13.0+-orange.svg)
+![Version](https://img.shields.io/badge/version-v3.0-success.svg)
 
-一个基于SST（Structural Simulation Toolkit）框架的Miranda CPU网格系统仿真项目，实现了4×4网格拓扑的多核处理器系统仿真。
+一个基于SST（Structural Simulation Toolkit）框架的Miranda CPU网格系统仿真项目，实现了可复用的面向对象类架构，支持灵活配置的多核处理器系统仿真。
 
-## 🚀 项目特点
+## 🚀 v3.0 项目特点
 
-- **真实CPU仿真**: 使用Miranda BaseCPU进行指令级仿真
-- **网格拓扑**: 4×4 mesh网络，16个CPU核心
-- **多种工作负载**: STREAM、GUPS、随机访问等基准测试
-- **完整分析工具**: 性能分析、数据可视化、统计报告
-- **专业文档**: 中英文技术文档和使用指南
+- **🏗️ 完全类封装**: `MirandaCPUMeshSystem` 可复用类架构
+- **🎮 简化使用**: 一行代码构建完整系统
+- **⚙️ 灵活配置**: 支持任意网格大小和系统参数
+- **🧪 完整测试**: 5个测试场景全部通过验证
+- **📚 详细文档**: 类使用指南和多个示例
+- **🔧 模块化设计**: 易于扩展和维护的架构
 
 ## 📋 系统要求
 
@@ -32,22 +34,42 @@
 
 ### 1. 克隆项目
 ```bash
-git clone https://github.com/YOUR_USERNAME/miranda-cpu-mesh-system.git
-cd miranda-cpu-mesh-system
+git clone https://github.com/NJUAIXGY/SSTgdiist.git
+cd SSTgdiist
 ```
 
-### 2. 检查依赖
+### 2. 使用新的类架构（推荐）
 ```bash
-# 检查SST安装
-sst --version
+# 运行基于类的版本
+sst 02_Core_Systems/cpu_mesh_miranda_class_based.py
 
-# 检查Miranda组件
-sst-info miranda
+# 查看使用示例
+sst 02_Core_Systems/example_usage.py
+
+# 测试类功能（非SST环境）
+python3 02_Core_Systems/test_class_functionality.py
 ```
 
-### 3. 运行仿真
-```bash
-# 使用快速启动脚本
+### 3. 在代码中使用
+```python
+from miranda_cpu_mesh_system import MirandaCPUMeshSystem
+
+# 基本使用
+system = MirandaCPUMeshSystem()
+system.build_system()
+system.configure_simulation()
+
+# 自定义配置
+system = MirandaCPUMeshSystem(
+    mesh_size_x=8, mesh_size_y=8,
+    link_bandwidth="100GiB/s",
+    cpu_clock="4.0GHz"
+)
+
+# 便利函数（一行代码）
+from miranda_cpu_mesh_system import build_and_configure_system
+system = build_and_configure_system(mesh_size_x=6, mesh_size_y=4)
+```
 ./quick_start.sh
 
 # 或手动运行主系统
