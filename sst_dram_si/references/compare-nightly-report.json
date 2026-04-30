@@ -1,0 +1,106 @@
+{
+  "schema_version": 1,
+  "artifact_role": "stable_top_level_gate",
+  "authority_scope": "experimental_gate_authority",
+  "gate_name": "mesh_exec_mode_compare_acceptance",
+  "gate_version": "1.0",
+  "generated_utc": "2026-04-07T05:02:10.469983+00:00",
+  "required_cases": [
+    "gas",
+    "naive_raw",
+    "naive_opt"
+  ],
+  "missing_cases": [],
+  "gate_ok": true,
+  "gate_reasons": [],
+  "latest_matrix": {
+    "date": "2026-04-07",
+    "matrix_run_id": "20260407-125958",
+    "summary_path": "/home/xgy/remote/sst_dram_si/outputs_large/paper2/dram_mesh_4x4_exec_mode_compare/matrix/20260407-125958/summary.json",
+    "all_ok": true
+  },
+  "history": {
+    "path": "/home/xgy/remote/sst_dram_si/references/compare-smoke-history.json",
+    "entry_count": 2,
+    "latest_date": "2026-04-07",
+    "all_dates_ok": true,
+    "latest_recovered_date": null,
+    "freshness_mode": "since_latest_recovery",
+    "effective_entry_count": 2,
+    "effective_all_dates_ok": true,
+    "max_age_days": 2,
+    "latest_age_days": 0,
+    "stale": false
+  },
+  "stable_surfaces": {
+    "report_path": "/home/xgy/remote/sst_dram_si/references/compare-nightly-report.json",
+    "observer_summary_path": "/home/xgy/remote/sst_dram_si/references/compare-nightly-observer-summary.json",
+    "summary_md_path": "/home/xgy/remote/sst_dram_si/references/compare-nightly-summary.md",
+    "current_mainline_status_path": "/home/xgy/remote/sst_dram_si/references/compare-current-status.md"
+  },
+  "latest_case_rollups": {
+    "gas": {
+      "label": "gas",
+      "present": true,
+      "run_dir": "/home/xgy/remote/sst_dram_si/outputs_large/paper2/dram_mesh_4x4_exec_mode_compare/gas/20260407-125958",
+      "requested_exec_mode": "gas",
+      "effective_exec_mode": "gas",
+      "compare_role": "smoke",
+      "bounded_validation": true,
+      "validator": {
+        "fail": 0,
+        "warn": 0,
+        "strict": 0
+      },
+      "memory": {
+        "memory_requests": 5954.0,
+        "memory_bytes": 381056.0,
+        "nonzero": true
+      },
+      "ok": true,
+      "reasons": []
+    },
+    "naive_raw": {
+      "label": "naive_raw",
+      "present": true,
+      "run_dir": "/home/xgy/remote/sst_dram_si/outputs_large/paper2/dram_mesh_4x4_exec_mode_compare/naive_raw/20260407-130035",
+      "requested_exec_mode": "naive_raw",
+      "effective_exec_mode": "naive_raw",
+      "compare_role": "smoke",
+      "bounded_validation": true,
+      "validator": {
+        "fail": 0,
+        "warn": 0,
+        "strict": 0
+      },
+      "memory": {
+        "memory_requests": 11524.0,
+        "memory_bytes": 737536.0,
+        "nonzero": true
+      },
+      "ok": true,
+      "reasons": []
+    },
+    "naive_opt": {
+      "label": "naive_opt",
+      "present": true,
+      "run_dir": "/home/xgy/remote/sst_dram_si/outputs_large/paper2/dram_mesh_4x4_exec_mode_compare/naive_raw/20260407-130124",
+      "requested_exec_mode": "naive_opt",
+      "effective_exec_mode": "naive_raw",
+      "compare_role": "smoke",
+      "bounded_validation": true,
+      "validator": {
+        "fail": 0,
+        "warn": 0,
+        "strict": 0
+      },
+      "memory": {
+        "memory_requests": 11524.0,
+        "memory_bytes": 737536.0,
+        "nonzero": true
+      },
+      "ok": true,
+      "reasons": []
+    }
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "case_ids": [
+    "full_3d_snn_window",
+    "full_3d_snn_window_bundle_v3",
+    "full_3d_snn_window_monolithic_proxy"
+  ],
+  "run_tags": [
+    "matrix23_phase2_fixed_step_4_10us"
+  ],
+  "sst_smoke": false,
+  "runs": [
+    {
+      "run_tag": "matrix23_phase2_fixed_step_4_10us",
+      "step_budget": 4,
+      "stop_at": "10us",
+      "spike_budget_label": "default",
+      "spike_budget_override": 0,
+      "case_id": "full_3d_snn_window",
+      "status": "composed",
+      "run_root": "/home/xgy/remote/snn3dexp/runs/full_3d_snn_window/matrix23_phase2_fixed_step_4_10us",
+      "analysis_root": "/home/xgy/remote/snn3dexp/analysis/full_3d_snn_window/matrix23_phase2_fixed_step_4_10us",
+      "phase2_case_summary_path": "/home/xgy/remote/snn3dexp/analysis/full_3d_snn_window/matrix23_phase2_fixed_step_4_10us/phase2_case_summary.json",
+      "effective_config_path": "",
+      "stack_nmc_summary_path": "",
+      "route_memory_joint_summary_path": "",
+      "runtime_summary_path": "/home/xgy/remote/snn3dexp/analysis/full_3d_snn_window/matrix23_phase2_fixed_step_4_10us/runtime_summary.json"
+    },
+    {
+      "run_tag": "matrix23_phase2_fixed_step_4_10us",
+      "step_budget": 4,
+      "stop_at": "10us",
+      "spike_budget_label": "default",
+      "spike_budget_override": 0,
+      "case_id": "full_3d_snn_window_bundle_v3",
+      "status": "composed",
+      "run_root": "/home/xgy/remote/snn3dexp/runs/full_3d_snn_window_bundle_v3/matrix23_phase2_fixed_step_4_10us",
+      "analysis_root": "/home/xgy/remote/snn3dexp/analysis/full_3d_snn_window_bundle_v3/matrix23_phase2_fixed_step_4_10us",
+      "phase2_case_summary_path": "/home/xgy/remote/snn3dexp/analysis/full_3d_snn_window_bundle_v3/matrix23_phase2_fixed_step_4_10us/phase2_case_summary.json",
+      "effective_config_path": "",
+      "stack_nmc_summary_path": "",
+      "route_memory_joint_summary_path": "",
+      "runtime_summary_path": "/home/xgy/remote/snn3dexp/analysis/full_3d_snn_window_bundle_v3/matrix23_phase2_fixed_step_4_10us/runtime_summary.json"
+    },
+    {
+      "run_tag": "matrix23_phase2_fixed_step_4_10us",
+      "step_budget": 4,
+      "stop_at": "10us",
+      "spike_budget_label": "default",
+      "spike_budget_override": 0,
+      "case_id": "full_3d_snn_window_monolithic_proxy",
+      "status": "composed",
+      "run_root": "/home/xgy/remote/snn3dexp/runs/full_3d_snn_window_monolithic_proxy/matrix23_phase2_fixed_step_4_10us",
+      "analysis_root": "/home/xgy/remote/snn3dexp/analysis/full_3d_snn_window_monolithic_proxy/matrix23_phase2_fixed_step_4_10us",
+      "phase2_case_summary_path": "/home/xgy/remote/snn3dexp/analysis/full_3d_snn_window_monolithic_proxy/matrix23_phase2_fixed_step_4_10us/phase2_case_summary.json",
+      "effective_config_path": "",
+      "stack_nmc_summary_path": "",
+      "route_memory_joint_summary_path": "",
+      "runtime_summary_path": "/home/xgy/remote/snn3dexp/analysis/full_3d_snn_window_monolithic_proxy/matrix23_phase2_fixed_step_4_10us/runtime_summary.json"
+    }
+  ],
+  "run_tag_manifests": [
+    {
+      "run_tag": "matrix23_phase2_fixed_step_4_10us",
+      "step_budget": 4,
+      "stop_at": "10us",
+      "spike_budget_label": "default",
+      "spike_budget_override": 0,
+      "path": "/home/xgy/remote/snn3dexp/analysis/codesign_matrix/matrix23_phase2_mainline_smoke/fixed_step_execution/run_tag_manifests/matrix23_phase2_fixed_step_4_10us.json",
+      "run_tags_by_case": {
+        "full_3d_snn_window": "matrix23_phase2_fixed_step_4_10us",
+        "full_3d_snn_window_bundle_v3": "matrix23_phase2_fixed_step_4_10us",
+        "full_3d_snn_window_monolithic_proxy": "matrix23_phase2_fixed_step_4_10us"
+      }
+    }
+  ],
+  "outputs": {
+    "summary_json": "/home/xgy/remote/snn3dexp/analysis/codesign_matrix/matrix23_phase2_mainline_smoke/fixed_step_execution/fixed_step_multicase_sweep_summary.json",
+    "csv": "/home/xgy/remote/snn3dexp/analysis/codesign_matrix/matrix23_phase2_mainline_smoke/fixed_step_execution/fixed_step_multicase_sweep_runs.csv",
+    "run_tag_manifests": [
+      "/home/xgy/remote/snn3dexp/analysis/codesign_matrix/matrix23_phase2_mainline_smoke/fixed_step_execution/run_tag_manifests/matrix23_phase2_fixed_step_4_10us.json"
+    ]
+  }
+}

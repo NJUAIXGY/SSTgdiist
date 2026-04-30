@@ -1,0 +1,1662 @@
+{
+  "case_id": "full_3d_monolithic_proxy",
+  "run_root": "/home/xgy/remote/snn3dexp/runs/full_3d_monolithic_proxy/archsum_matrix_smoke",
+  "mesh_shape": "4x4x2",
+  "route": {
+    "native_3d_active": true,
+    "vertical_route_order": "zxy",
+    "multicast_block_shape": [
+      2,
+      2,
+      2
+    ],
+    "source_semantics": {
+      "workload_impl": "traffic_mem",
+      "mapping_mode": "edges_csv",
+      "mapping_edges_file": "/home/xgy/remote/snn3dexp/runs/full_3d_monolithic_proxy/archsum_matrix_smoke/assets/traffic_mem_edges.csv",
+      "mapping_edges_file_exists": true,
+      "synapse_route_impl": "native_3d",
+      "native_bootstrap_source": "edges_csv",
+      "native_bootstrap_ready": true,
+      "weights_template_configured": false,
+      "enable_weight_fetch": false,
+      "gas_enable": false,
+      "real_synapse_source_count": 32,
+      "real_synapse_inputs_available": true,
+      "semantic_addressing_enabled": true,
+      "bootstrap_dependency_active": true,
+      "primary_source_kind": "edges_csv_bootstrap",
+      "native_synapse_source_candidate": false,
+      "route_memory_overlap_mode": "bootstrap_bound",
+      "native_synapse_overlap_ratio": 0.0
+    },
+    "active_route_node_count": 32,
+    "ingress_replication_cost": 1.1875,
+    "inter_die_multicast_fanout": 0.5,
+    "die_local_replication_cost": 1.5,
+    "average_vertical_subtree_depth": 1.0,
+    "packet_versions": {
+      "tx_spikekey_v4_pkts_total": 608,
+      "tx_spiketilekey_v4_pkts_total": 0,
+      "tx_bundle_v1_pkts_total": 0,
+      "tx_bundle_v2_pkts_total": 0,
+      "tx_bundle_v3_pkts_total": 0,
+      "rx_spikekey_v4_total": 1024,
+      "rx_spiketilekey_v4_total": 0,
+      "router_bundle_v1_rx_total": 0,
+      "router_bundle_v2_rx_total": 0,
+      "router_bundle_v3_rx_total": 0
+    },
+    "router_anomalies": {
+      "bundle_v3_invalid_shape_total": 0,
+      "bundle_v3_block_z_mismatch_total": 0,
+      "bundle_v3_ingress_out_of_block_total": 0,
+      "bundle_v3_rebuild_fail_total": 0
+    },
+    "derived_metrics": {
+      "direct_v4_share": 1.0,
+      "tile_bundle_v3_share": 0.0,
+      "bundle_v3_router_rx_per_tx": 0.0,
+      "tilekey_rx_per_bundle_v3_tx": 0.0,
+      "router_anomaly_density": 0.0,
+      "spikekey_v4_rx_per_direct_v4_tx": 1.6842105263157894
+    },
+    "native_runtime": {
+      "activation_total": 1024,
+      "gating_activation_total": 0,
+      "direct_activation_total": 1024,
+      "unique_sources_total": 127
+    }
+  },
+  "memory": {
+    "kind": "monolithic_like",
+    "graph_type": "memHierarchy_tier_local_stack",
+    "real_synapse_sources": 32,
+    "active_memory_node_count": 32,
+    "remote_home_active_node_count": 0,
+    "memory_requests_total": 6144,
+    "remote_home_memory_requests_total": 0,
+    "active_stack_count": 8,
+    "semantic_addressing": {
+      "enabled": true,
+      "stack_region_bytes": 1048576,
+      "slot_bytes": 16384,
+      "region_layout": {
+        "stack_region_bytes": 1048576,
+        "slot_count": 4,
+        "metadata": {
+          "base_offset": 0,
+          "size_bytes": 65536,
+          "slot_bytes": 16384
+        },
+        "gather": {
+          "base_offset": 65536,
+          "size_bytes": 655360,
+          "slot_bytes": 163840
+        },
+        "stream": {
+          "base_offset": 720896,
+          "size_bytes": 262144,
+          "slot_bytes": 65536
+        },
+        "writeback": {
+          "base_offset": 983040,
+          "size_bytes": 65536,
+          "slot_bytes": 16384
+        },
+        "slot_bytes": 16384
+      }
+    },
+    "access_semantics": {
+      "tier_local_home_access_count": 16,
+      "same_xy_cross_tier_access_count": 16,
+      "remote_home_access_count": 32,
+      "tier_local_home_access_ratio": 0.25,
+      "same_xy_cross_tier_access_ratio": 0.25,
+      "remote_home_access_ratio": 0.5
+    },
+    "synapse_semantics": {
+      "synapse_gather_reads": 1024,
+      "synapse_gather_region_reads": 1024,
+      "sparse_window_streams": 1024,
+      "sparse_window_stream_region_writes": 1024,
+      "metadata_lookup_reads": 512,
+      "metadata_lookup_region_reads": 512,
+      "writeback_region_writes": 512
+    },
+    "processing_runtime_mode": "traffic_semantic",
+    "traffic_driven_runtime": {
+      "enabled": true,
+      "metadata_lookup_demands": 512,
+      "synapse_gather_demands": 1024,
+      "stream_region_demands": 1024,
+      "writeback_region_demands": 512,
+      "metadata_lookup_issued": 512,
+      "synapse_gather_issued": 1024,
+      "stream_region_issued": 1024,
+      "writeback_region_issued": 512,
+      "metadata_lookup_backlog": 0,
+      "synapse_gather_backlog": 0,
+      "stream_region_backlog": 0,
+      "writeback_region_backlog": 0,
+      "regions": {
+        "metadata_lookup": {
+          "demand": 512,
+          "issued": 512,
+          "backlog": 0,
+          "issue_efficiency": 1.0,
+          "backlog_ratio": 0.0,
+          "service_deficit": 0
+        },
+        "synapse_gather": {
+          "demand": 1024,
+          "issued": 1024,
+          "backlog": 0,
+          "issue_efficiency": 1.0,
+          "backlog_ratio": 0.0,
+          "service_deficit": 0
+        },
+        "stream_region": {
+          "demand": 1024,
+          "issued": 1024,
+          "backlog": 0,
+          "issue_efficiency": 1.0,
+          "backlog_ratio": 0.0,
+          "service_deficit": 0
+        },
+        "writeback_region": {
+          "demand": 512,
+          "issued": 512,
+          "backlog": 0,
+          "issue_efficiency": 1.0,
+          "backlog_ratio": 0.0,
+          "service_deficit": 0
+        }
+      },
+      "total_service_deficit": 0,
+      "most_pressured_region": "metadata_lookup"
+    },
+    "snn_window_runtime": {
+      "enabled": false,
+      "weight_dense_reqs_total": 0,
+      "weight_rowptr_reqs_total": 0,
+      "weight_colidx_reqs_total": 0,
+      "weight_blockdata_reqs_total": 0,
+      "weight_gcss_reqs_total": 0,
+      "weight_dense_bytes_total": 0,
+      "weight_rowptr_bytes_total": 0,
+      "weight_colidx_bytes_total": 0,
+      "weight_blockdata_bytes_total": 0,
+      "weight_gcss_bytes_total": 0,
+      "weight_metadata_requests_total": 0,
+      "weight_payload_requests_total": 0,
+      "weight_metadata_bytes_total": 0,
+      "weight_payload_bytes_total": 0,
+      "weight_requests_total": 0,
+      "weight_bytes_total": 0,
+      "gas_unique_reads_total": 0,
+      "gas_unique_bytes_total": 0,
+      "gas_frontend_staged_reads_total": 0,
+      "gas_frontend_granules_built_total": 0,
+      "gas_apply_acc_updates_total": 0,
+      "gas_acc_posts_touched_total": 0,
+      "gas_scatter_spikes_emitted_total": 0,
+      "snn_tx_bundle_v3_packets_total": 0,
+      "snn_tx_spikekey_v4_packets_total": 0,
+      "snn_rx_spikekey_v4_total": 0,
+      "derived_metrics": {
+        "payload_bytes_per_unique_read": 0.0,
+        "unique_read_capture_ratio": 0.0,
+        "weight_metadata_share": 0.0,
+        "weight_payload_share": 0.0,
+        "dominant_weight_request_class": ""
+      }
+    },
+    "home_access_pressure": {
+      "enabled": true,
+      "classes": {
+        "tier_local_home": {
+          "metadata_lookup_demands_total": 0,
+          "gather_demands_total": 256,
+          "stream_demands_total": 256,
+          "writeback_demands_total": 0,
+          "total_demands": 512,
+          "demand_share": 0.25,
+          "region_service_deficit_attribution": {
+            "metadata_lookup": 0.0,
+            "synapse_gather": 0.0,
+            "stream_region": 0.0,
+            "writeback_region": 0.0
+          },
+          "service_deficit_attribution": 0.0
+        },
+        "same_xy_cross_tier": {
+          "metadata_lookup_demands_total": 0,
+          "gather_demands_total": 672,
+          "stream_demands_total": 672,
+          "writeback_demands_total": 0,
+          "total_demands": 1344,
+          "demand_share": 0.65625,
+          "region_service_deficit_attribution": {
+            "metadata_lookup": 0.0,
+            "synapse_gather": 0.0,
+            "stream_region": 0.0,
+            "writeback_region": 0.0
+          },
+          "service_deficit_attribution": 0.0
+        },
+        "remote_home": {
+          "metadata_lookup_demands_total": 0,
+          "gather_demands_total": 96,
+          "stream_demands_total": 96,
+          "writeback_demands_total": 0,
+          "total_demands": 192,
+          "demand_share": 0.09375,
+          "region_service_deficit_attribution": {
+            "metadata_lookup": 0.0,
+            "synapse_gather": 0.0,
+            "stream_region": 0.0,
+            "writeback_region": 0.0
+          },
+          "service_deficit_attribution": 0.0
+        }
+      },
+      "total_home_access_demands": 2048,
+      "dominant_home_access_class": "same_xy_cross_tier",
+      "dominant_pressure_region": "metadata_lookup",
+      "attributed_service_deficit_total": 0.0,
+      "unattributed_service_deficit": 0.0
+    },
+    "real_controller_pressure": {
+      "available": true,
+      "controller_count": 16,
+      "active_controller_count": 16,
+      "stack_controller_map": [
+        {
+          "stack_id": 0,
+          "controller_ids": [
+            0,
+            1
+          ],
+          "controller_names": [
+            "mono_memctrl_0_0",
+            "mono_memctrl_0_1"
+          ]
+        },
+        {
+          "stack_id": 1,
+          "controller_ids": [
+            2,
+            3
+          ],
+          "controller_names": [
+            "mono_memctrl_1_0",
+            "mono_memctrl_1_1"
+          ]
+        },
+        {
+          "stack_id": 2,
+          "controller_ids": [
+            4,
+            5
+          ],
+          "controller_names": [
+            "mono_memctrl_2_0",
+            "mono_memctrl_2_1"
+          ]
+        },
+        {
+          "stack_id": 3,
+          "controller_ids": [
+            6,
+            7
+          ],
+          "controller_names": [
+            "mono_memctrl_3_0",
+            "mono_memctrl_3_1"
+          ]
+        },
+        {
+          "stack_id": 4,
+          "controller_ids": [
+            8,
+            9
+          ],
+          "controller_names": [
+            "mono_memctrl_4_0",
+            "mono_memctrl_4_1"
+          ]
+        },
+        {
+          "stack_id": 5,
+          "controller_ids": [
+            10,
+            11
+          ],
+          "controller_names": [
+            "mono_memctrl_5_0",
+            "mono_memctrl_5_1"
+          ]
+        },
+        {
+          "stack_id": 6,
+          "controller_ids": [
+            12,
+            13
+          ],
+          "controller_names": [
+            "mono_memctrl_6_0",
+            "mono_memctrl_6_1"
+          ]
+        },
+        {
+          "stack_id": 7,
+          "controller_ids": [
+            14,
+            15
+          ],
+          "controller_names": [
+            "mono_memctrl_7_0",
+            "mono_memctrl_7_1"
+          ]
+        }
+      ],
+      "controller_rows": [
+        {
+          "controller_id": 0,
+          "stack_id": 0,
+          "channel_id": 0,
+          "controller_name": "mono_memctrl_0_0",
+          "requests_received_total": 387,
+          "outstanding_requests_accum": 4379,
+          "outstanding_requests_samples": 20000,
+          "max_outstanding_requests": 16,
+          "cycles_attempted_issue_but_rejected": 0,
+          "total_cycles": 20000,
+          "issue_reject_ratio": 0.0
+        },
+        {
+          "controller_id": 1,
+          "stack_id": 0,
+          "channel_id": 1,
+          "controller_name": "mono_memctrl_0_1",
+          "requests_received_total": 384,
+          "outstanding_requests_accum": 4224,
+          "outstanding_requests_samples": 20000,
+          "max_outstanding_requests": 11,
+          "cycles_attempted_issue_but_rejected": 0,
+          "total_cycles": 20000,
+          "issue_reject_ratio": 0.0
+        },
+        {
+          "controller_id": 2,
+          "stack_id": 1,
+          "channel_id": 0,
+          "controller_name": "mono_memctrl_1_0",
+          "requests_received_total": 387,
+          "outstanding_requests_accum": 4379,
+          "outstanding_requests_samples": 20000,
+          "max_outstanding_requests": 16,
+          "cycles_attempted_issue_but_rejected": 0,
+          "total_cycles": 20000,
+          "issue_reject_ratio": 0.0
+        },
+        {
+          "controller_id": 3,
+          "stack_id": 1,
+          "channel_id": 1,
+          "controller_name": "mono_memctrl_1_1",
+          "requests_received_total": 384,
+          "outstanding_requests_accum": 4224,
+          "outstanding_requests_samples": 20000,
+          "max_outstanding_requests": 11,
+          "cycles_attempted_issue_but_rejected": 0,
+          "total_cycles": 20000,
+          "issue_reject_ratio": 0.0
+        },
+        {
+          "controller_id": 4,
+          "stack_id": 2,
+          "channel_id": 0,
+          "controller_name": "mono_memctrl_2_0",
+          "requests_received_total": 387,
+          "outstanding_requests_accum": 4379,
+          "outstanding_requests_samples": 20000,
+          "max_outstanding_requests": 16,
+          "cycles_attempted_issue_but_rejected": 0,
+          "total_cycles": 20000,
+          "issue_reject_ratio": 0.0
+        },
+        {
+          "controller_id": 5,
+          "stack_id": 2,
+          "channel_id": 1,
+          "controller_name": "mono_memctrl_2_1",
+          "requests_received_total": 384,
+          "outstanding_requests_accum": 4224,
+          "outstanding_requests_samples": 20000,
+          "max_outstanding_requests": 11,
+          "cycles_attempted_issue_but_rejected": 0,
+          "total_cycles": 20000,
+          "issue_reject_ratio": 0.0
+        },
+        {
+          "controller_id": 6,
+          "stack_id": 3,
+          "channel_id": 0,
+          "controller_name": "mono_memctrl_3_0",
+          "requests_received_total": 387,
+          "outstanding_requests_accum": 4379,
+          "outstanding_requests_samples": 20000,
+          "max_outstanding_requests": 16,
+          "cycles_attempted_issue_but_rejected": 0,
+          "total_cycles": 20000,
+          "issue_reject_ratio": 0.0
+        },
+        {
+          "controller_id": 7,
+          "stack_id": 3,
+          "channel_id": 1,
+          "controller_name": "mono_memctrl_3_1",
+          "requests_received_total": 384,
+          "outstanding_requests_accum": 4224,
+          "outstanding_requests_samples": 20000,
+          "max_outstanding_requests": 11,
+          "cycles_attempted_issue_but_rejected": 0,
+          "total_cycles": 20000,
+          "issue_reject_ratio": 0.0
+        },
+        {
+          "controller_id": 8,
+          "stack_id": 4,
+          "channel_id": 0,
+          "controller_name": "mono_memctrl_4_0",
+          "requests_received_total": 387,
+          "outstanding_requests_accum": 4379,
+          "outstanding_requests_samples": 20000,
+          "max_outstanding_requests": 16,
+          "cycles_attempted_issue_but_rejected": 0,
+          "total_cycles": 20000,
+          "issue_reject_ratio": 0.0
+        },
+        {
+          "controller_id": 9,
+          "stack_id": 4,
+          "channel_id": 1,
+          "controller_name": "mono_memctrl_4_1",
+          "requests_received_total": 384,
+          "outstanding_requests_accum": 4224,
+          "outstanding_requests_samples": 20000,
+          "max_outstanding_requests": 11,
+          "cycles_attempted_issue_but_rejected": 0,
+          "total_cycles": 20000,
+          "issue_reject_ratio": 0.0
+        },
+        {
+          "controller_id": 10,
+          "stack_id": 5,
+          "channel_id": 0,
+          "controller_name": "mono_memctrl_5_0",
+          "requests_received_total": 387,
+          "outstanding_requests_accum": 4379,
+          "outstanding_requests_samples": 20000,
+          "max_outstanding_requests": 16,
+          "cycles_attempted_issue_but_rejected": 0,
+          "total_cycles": 20000,
+          "issue_reject_ratio": 0.0
+        },
+        {
+          "controller_id": 11,
+          "stack_id": 5,
+          "channel_id": 1,
+          "controller_name": "mono_memctrl_5_1",
+          "requests_received_total": 384,
+          "outstanding_requests_accum": 4224,
+          "outstanding_requests_samples": 20000,
+          "max_outstanding_requests": 11,
+          "cycles_attempted_issue_but_rejected": 0,
+          "total_cycles": 20000,
+          "issue_reject_ratio": 0.0
+        },
+        {
+          "controller_id": 12,
+          "stack_id": 6,
+          "channel_id": 0,
+          "controller_name": "mono_memctrl_6_0",
+          "requests_received_total": 387,
+          "outstanding_requests_accum": 4379,
+          "outstanding_requests_samples": 20000,
+          "max_outstanding_requests": 16,
+          "cycles_attempted_issue_but_rejected": 0,
+          "total_cycles": 20000,
+          "issue_reject_ratio": 0.0
+        },
+        {
+          "controller_id": 13,
+          "stack_id": 6,
+          "channel_id": 1,
+          "controller_name": "mono_memctrl_6_1",
+          "requests_received_total": 384,
+          "outstanding_requests_accum": 4224,
+          "outstanding_requests_samples": 20000,
+          "max_outstanding_requests": 11,
+          "cycles_attempted_issue_but_rejected": 0,
+          "total_cycles": 20000,
+          "issue_reject_ratio": 0.0
+        },
+        {
+          "controller_id": 14,
+          "stack_id": 7,
+          "channel_id": 0,
+          "controller_name": "mono_memctrl_7_0",
+          "requests_received_total": 387,
+          "outstanding_requests_accum": 4379,
+          "outstanding_requests_samples": 20000,
+          "max_outstanding_requests": 16,
+          "cycles_attempted_issue_but_rejected": 0,
+          "total_cycles": 20000,
+          "issue_reject_ratio": 0.0
+        },
+        {
+          "controller_id": 15,
+          "stack_id": 7,
+          "channel_id": 1,
+          "controller_name": "mono_memctrl_7_1",
+          "requests_received_total": 384,
+          "outstanding_requests_accum": 4224,
+          "outstanding_requests_samples": 20000,
+          "max_outstanding_requests": 11,
+          "cycles_attempted_issue_but_rejected": 0,
+          "total_cycles": 20000,
+          "issue_reject_ratio": 0.0
+        }
+      ],
+      "most_pressured_controller_id": 0,
+      "most_pressured_controller_name": "mono_memctrl_0_0",
+      "most_pressured_stack_id": 0,
+      "max_outstanding_requests_accum": 4379,
+      "max_cycles_attempted_issue_but_rejected": 0,
+      "total_requests_received": 6168,
+      "total_cycles_attempted_issue_but_rejected": 0,
+      "most_pressured_controller_outstanding_requests_accum": 4379,
+      "most_pressured_controller_outstanding_requests_samples": 20000,
+      "most_pressured_controller_avg_outstanding_requests": 0.21895,
+      "most_pressured_controller_max_outstanding_requests": 16,
+      "most_pressured_controller_total_cycles": 20000,
+      "most_pressured_controller_issue_reject_ratio": 0.0
+    },
+    "home_stack_controller_proxy": {
+      "available": true,
+      "controller_count": 16,
+      "stack_controller_map": [
+        {
+          "stack_id": 0,
+          "channels_per_stack": 2,
+          "controller_ids": [
+            0,
+            1
+          ],
+          "controller_names": [
+            "mono_memctrl_0_0",
+            "mono_memctrl_0_1"
+          ]
+        },
+        {
+          "stack_id": 1,
+          "channels_per_stack": 2,
+          "controller_ids": [
+            2,
+            3
+          ],
+          "controller_names": [
+            "mono_memctrl_1_0",
+            "mono_memctrl_1_1"
+          ]
+        },
+        {
+          "stack_id": 2,
+          "channels_per_stack": 2,
+          "controller_ids": [
+            4,
+            5
+          ],
+          "controller_names": [
+            "mono_memctrl_2_0",
+            "mono_memctrl_2_1"
+          ]
+        },
+        {
+          "stack_id": 3,
+          "channels_per_stack": 2,
+          "controller_ids": [
+            6,
+            7
+          ],
+          "controller_names": [
+            "mono_memctrl_3_0",
+            "mono_memctrl_3_1"
+          ]
+        },
+        {
+          "stack_id": 4,
+          "channels_per_stack": 2,
+          "controller_ids": [
+            8,
+            9
+          ],
+          "controller_names": [
+            "mono_memctrl_4_0",
+            "mono_memctrl_4_1"
+          ]
+        },
+        {
+          "stack_id": 5,
+          "channels_per_stack": 2,
+          "controller_ids": [
+            10,
+            11
+          ],
+          "controller_names": [
+            "mono_memctrl_5_0",
+            "mono_memctrl_5_1"
+          ]
+        },
+        {
+          "stack_id": 6,
+          "channels_per_stack": 2,
+          "controller_ids": [
+            12,
+            13
+          ],
+          "controller_names": [
+            "mono_memctrl_6_0",
+            "mono_memctrl_6_1"
+          ]
+        },
+        {
+          "stack_id": 7,
+          "channels_per_stack": 2,
+          "controller_ids": [
+            14,
+            15
+          ],
+          "controller_names": [
+            "mono_memctrl_7_0",
+            "mono_memctrl_7_1"
+          ]
+        }
+      ],
+      "path_authority_kind": "real_home_stack_binding",
+      "controller_pressure_authority_kind": "runtime_controller",
+      "runtime_authority_available": true,
+      "classes": {
+        "tier_local_home": {
+          "active_stack_ids": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "active_controller_ids": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "stack_weights": {
+            "0": 4,
+            "1": 4,
+            "2": 4,
+            "3": 4
+          },
+          "dominant_stack_id": 0,
+          "dominant_stack_total_demands": 128,
+          "dominant_stack_demand_share": 0.25,
+          "dominant_controller_ids": [
+            0,
+            1
+          ]
+        },
+        "same_xy_cross_tier": {
+          "active_stack_ids": [
+            4,
+            5,
+            6,
+            7
+          ],
+          "active_controller_ids": [
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "stack_weights": {
+            "4": 4,
+            "5": 4,
+            "6": 4,
+            "7": 4
+          },
+          "dominant_stack_id": 4,
+          "dominant_stack_total_demands": 336,
+          "dominant_stack_demand_share": 0.25,
+          "dominant_controller_ids": [
+            8,
+            9
+          ]
+        },
+        "remote_home": {
+          "active_stack_ids": [
+            1,
+            2,
+            3,
+            5,
+            6,
+            7
+          ],
+          "active_controller_ids": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "stack_weights": {
+            "1": 4,
+            "5": 4,
+            "2": 4,
+            "3": 8,
+            "7": 8,
+            "6": 4
+          },
+          "dominant_stack_id": 3,
+          "dominant_stack_total_demands": 48,
+          "dominant_stack_demand_share": 0.25,
+          "dominant_controller_ids": [
+            6,
+            7
+          ]
+        }
+      },
+      "dominant_home_access_class": "same_xy_cross_tier",
+      "dominant_home_stack_id": 4,
+      "dominant_home_controller_ids": [
+        8,
+        9
+      ],
+      "most_pressured_stack_id": 0,
+      "most_pressured_stack_controller_ids": [
+        0,
+        1
+      ],
+      "most_pressured_controller_count": 2,
+      "most_pressured_controller_service_deficit_proxy": 0.0,
+      "most_pressured_controller_backpressure_proxy": 0.21895,
+      "most_pressured_controller_memory_pressure_proxy": 0.21895,
+      "memory_pressure_proxy_source": "backpressure",
+      "runtime_summary_source": "controller_summary",
+      "real_pressure_available": true,
+      "most_pressured_runtime_stack_id": 0,
+      "most_pressured_runtime_controller_id": 0,
+      "most_pressured_runtime_controller_name": "mono_memctrl_0_0"
+    },
+    "home_stack_dataflow": {
+      "available": true,
+      "path_authority_kind": "real_home_stack_binding",
+      "controller_pressure_authority_kind": "runtime_controller",
+      "runtime_authority_available": true,
+      "stage_breakdown_authority_kind": "proxy_projection",
+      "initiator_groups": {
+        "pe_nic_to_home_stack": {
+          "regions": {
+            "metadata_lookup": {
+              "demand": 512,
+              "issued": 512,
+              "service_deficit": 0,
+              "issue_efficiency": 1.0,
+              "backlog_ratio": 0.0
+            },
+            "stream_region": {
+              "demand": 1024,
+              "issued": 1024,
+              "service_deficit": 0,
+              "issue_efficiency": 1.0,
+              "backlog_ratio": 0.0
+            },
+            "writeback_region": {
+              "demand": 512,
+              "issued": 512,
+              "service_deficit": 0,
+              "issue_efficiency": 1.0,
+              "backlog_ratio": 0.0
+            }
+          },
+          "demand_total": 2048,
+          "issued_total": 2048,
+          "service_deficit_total": 0,
+          "dominant_region": "stream_region",
+          "dominant_stack_id": 7,
+          "dominant_stack_demand_share": 0.1875,
+          "dominant_controller_ids": [
+            14,
+            15
+          ],
+          "dominant_stack_runtime_hotspot_overlap": false,
+          "stack_rows": [
+            {
+              "stack_id": 7,
+              "controller_ids": [
+                14,
+                15
+              ],
+              "demand_proxy": 384.0,
+              "demand_share": 0.1875,
+              "service_deficit_proxy": 0.0,
+              "stack_service_deficit_total": 0,
+              "is_dominant_stack": true,
+              "runtime_hotspot_overlap": false,
+              "demand_total": 2048
+            },
+            {
+              "stack_id": 5,
+              "controller_ids": [
+                10,
+                11
+              ],
+              "demand_proxy": 360.0,
+              "demand_share": 0.17578125,
+              "service_deficit_proxy": 0.0,
+              "stack_service_deficit_total": 0,
+              "is_dominant_stack": false,
+              "runtime_hotspot_overlap": false,
+              "demand_total": 2048
+            },
+            {
+              "stack_id": 6,
+              "controller_ids": [
+                12,
+                13
+              ],
+              "demand_proxy": 360.0,
+              "demand_share": 0.17578125,
+              "service_deficit_proxy": 0.0,
+              "stack_service_deficit_total": 0,
+              "is_dominant_stack": false,
+              "runtime_hotspot_overlap": false,
+              "demand_total": 2048
+            },
+            {
+              "stack_id": 4,
+              "controller_ids": [
+                8,
+                9
+              ],
+              "demand_proxy": 336.0,
+              "demand_share": 0.1640625,
+              "service_deficit_proxy": 0.0,
+              "stack_service_deficit_total": 0,
+              "is_dominant_stack": false,
+              "runtime_hotspot_overlap": false,
+              "demand_total": 2048
+            },
+            {
+              "stack_id": 3,
+              "controller_ids": [
+                6,
+                7
+              ],
+              "demand_proxy": 176.0,
+              "demand_share": 0.0859375,
+              "service_deficit_proxy": 0.0,
+              "stack_service_deficit_total": 0,
+              "is_dominant_stack": false,
+              "runtime_hotspot_overlap": false,
+              "demand_total": 2048
+            },
+            {
+              "stack_id": 1,
+              "controller_ids": [
+                2,
+                3
+              ],
+              "demand_proxy": 152.0,
+              "demand_share": 0.07421875,
+              "service_deficit_proxy": 0.0,
+              "stack_service_deficit_total": 0,
+              "is_dominant_stack": false,
+              "runtime_hotspot_overlap": false,
+              "demand_total": 2048
+            },
+            {
+              "stack_id": 2,
+              "controller_ids": [
+                4,
+                5
+              ],
+              "demand_proxy": 152.0,
+              "demand_share": 0.07421875,
+              "service_deficit_proxy": 0.0,
+              "stack_service_deficit_total": 0,
+              "is_dominant_stack": false,
+              "runtime_hotspot_overlap": false,
+              "demand_total": 2048
+            },
+            {
+              "stack_id": 0,
+              "controller_ids": [
+                0,
+                1
+              ],
+              "demand_proxy": 128.0,
+              "demand_share": 0.0625,
+              "service_deficit_proxy": 0.0,
+              "stack_service_deficit_total": 0,
+              "is_dominant_stack": false,
+              "runtime_hotspot_overlap": true,
+              "demand_total": 2048
+            }
+          ],
+          "controller_rows": [
+            {
+              "controller_id": 14,
+              "stack_id": 7,
+              "controller_name": "mono_memctrl_7_0",
+              "requests_received_total": 387,
+              "outstanding_requests_accum": 4379,
+              "cycles_attempted_issue_but_rejected": 0,
+              "issue_reject_ratio": 0.0,
+              "belongs_to_dominant_initiator_stack": true,
+              "runtime_hotspot_overlap": false,
+              "is_runtime_hotspot_controller": false
+            },
+            {
+              "controller_id": 15,
+              "stack_id": 7,
+              "controller_name": "mono_memctrl_7_1",
+              "requests_received_total": 384,
+              "outstanding_requests_accum": 4224,
+              "cycles_attempted_issue_but_rejected": 0,
+              "issue_reject_ratio": 0.0,
+              "belongs_to_dominant_initiator_stack": true,
+              "runtime_hotspot_overlap": false,
+              "is_runtime_hotspot_controller": false
+            },
+            {
+              "controller_id": 0,
+              "stack_id": 0,
+              "controller_name": "mono_memctrl_0_0",
+              "requests_received_total": 387,
+              "outstanding_requests_accum": 4379,
+              "cycles_attempted_issue_but_rejected": 0,
+              "issue_reject_ratio": 0.0,
+              "belongs_to_dominant_initiator_stack": false,
+              "runtime_hotspot_overlap": true,
+              "is_runtime_hotspot_controller": true
+            },
+            {
+              "controller_id": 1,
+              "stack_id": 0,
+              "controller_name": "mono_memctrl_0_1",
+              "requests_received_total": 384,
+              "outstanding_requests_accum": 4224,
+              "cycles_attempted_issue_but_rejected": 0,
+              "issue_reject_ratio": 0.0,
+              "belongs_to_dominant_initiator_stack": false,
+              "runtime_hotspot_overlap": true,
+              "is_runtime_hotspot_controller": false
+            },
+            {
+              "controller_id": 2,
+              "stack_id": 1,
+              "controller_name": "mono_memctrl_1_0",
+              "requests_received_total": 387,
+              "outstanding_requests_accum": 4379,
+              "cycles_attempted_issue_but_rejected": 0,
+              "issue_reject_ratio": 0.0,
+              "belongs_to_dominant_initiator_stack": false,
+              "runtime_hotspot_overlap": false,
+              "is_runtime_hotspot_controller": false
+            },
+            {
+              "controller_id": 4,
+              "stack_id": 2,
+              "controller_name": "mono_memctrl_2_0",
+              "requests_received_total": 387,
+              "outstanding_requests_accum": 4379,
+              "cycles_attempted_issue_but_rejected": 0,
+              "issue_reject_ratio": 0.0,
+              "belongs_to_dominant_initiator_stack": false,
+              "runtime_hotspot_overlap": false,
+              "is_runtime_hotspot_controller": false
+            },
+            {
+              "controller_id": 6,
+              "stack_id": 3,
+              "controller_name": "mono_memctrl_3_0",
+              "requests_received_total": 387,
+              "outstanding_requests_accum": 4379,
+              "cycles_attempted_issue_but_rejected": 0,
+              "issue_reject_ratio": 0.0,
+              "belongs_to_dominant_initiator_stack": false,
+              "runtime_hotspot_overlap": false,
+              "is_runtime_hotspot_controller": false
+            },
+            {
+              "controller_id": 8,
+              "stack_id": 4,
+              "controller_name": "mono_memctrl_4_0",
+              "requests_received_total": 387,
+              "outstanding_requests_accum": 4379,
+              "cycles_attempted_issue_but_rejected": 0,
+              "issue_reject_ratio": 0.0,
+              "belongs_to_dominant_initiator_stack": false,
+              "runtime_hotspot_overlap": false,
+              "is_runtime_hotspot_controller": false
+            },
+            {
+              "controller_id": 10,
+              "stack_id": 5,
+              "controller_name": "mono_memctrl_5_0",
+              "requests_received_total": 387,
+              "outstanding_requests_accum": 4379,
+              "cycles_attempted_issue_but_rejected": 0,
+              "issue_reject_ratio": 0.0,
+              "belongs_to_dominant_initiator_stack": false,
+              "runtime_hotspot_overlap": false,
+              "is_runtime_hotspot_controller": false
+            },
+            {
+              "controller_id": 12,
+              "stack_id": 6,
+              "controller_name": "mono_memctrl_6_0",
+              "requests_received_total": 387,
+              "outstanding_requests_accum": 4379,
+              "cycles_attempted_issue_but_rejected": 0,
+              "issue_reject_ratio": 0.0,
+              "belongs_to_dominant_initiator_stack": false,
+              "runtime_hotspot_overlap": false,
+              "is_runtime_hotspot_controller": false
+            },
+            {
+              "controller_id": 3,
+              "stack_id": 1,
+              "controller_name": "mono_memctrl_1_1",
+              "requests_received_total": 384,
+              "outstanding_requests_accum": 4224,
+              "cycles_attempted_issue_but_rejected": 0,
+              "issue_reject_ratio": 0.0,
+              "belongs_to_dominant_initiator_stack": false,
+              "runtime_hotspot_overlap": false,
+              "is_runtime_hotspot_controller": false
+            },
+            {
+              "controller_id": 5,
+              "stack_id": 2,
+              "controller_name": "mono_memctrl_2_1",
+              "requests_received_total": 384,
+              "outstanding_requests_accum": 4224,
+              "cycles_attempted_issue_but_rejected": 0,
+              "issue_reject_ratio": 0.0,
+              "belongs_to_dominant_initiator_stack": false,
+              "runtime_hotspot_overlap": false,
+              "is_runtime_hotspot_controller": false
+            },
+            {
+              "controller_id": 7,
+              "stack_id": 3,
+              "controller_name": "mono_memctrl_3_1",
+              "requests_received_total": 384,
+              "outstanding_requests_accum": 4224,
+              "cycles_attempted_issue_but_rejected": 0,
+              "issue_reject_ratio": 0.0,
+              "belongs_to_dominant_initiator_stack": false,
+              "runtime_hotspot_overlap": false,
+              "is_runtime_hotspot_controller": false
+            },
+            {
+              "controller_id": 9,
+              "stack_id": 4,
+              "controller_name": "mono_memctrl_4_1",
+              "requests_received_total": 384,
+              "outstanding_requests_accum": 4224,
+              "cycles_attempted_issue_but_rejected": 0,
+              "issue_reject_ratio": 0.0,
+              "belongs_to_dominant_initiator_stack": false,
+              "runtime_hotspot_overlap": false,
+              "is_runtime_hotspot_controller": false
+            },
+            {
+              "controller_id": 11,
+              "stack_id": 5,
+              "controller_name": "mono_memctrl_5_1",
+              "requests_received_total": 384,
+              "outstanding_requests_accum": 4224,
+              "cycles_attempted_issue_but_rejected": 0,
+              "issue_reject_ratio": 0.0,
+              "belongs_to_dominant_initiator_stack": false,
+              "runtime_hotspot_overlap": false,
+              "is_runtime_hotspot_controller": false
+            },
+            {
+              "controller_id": 13,
+              "stack_id": 6,
+              "controller_name": "mono_memctrl_6_1",
+              "requests_received_total": 384,
+              "outstanding_requests_accum": 4224,
+              "cycles_attempted_issue_but_rejected": 0,
+              "issue_reject_ratio": 0.0,
+              "belongs_to_dominant_initiator_stack": false,
+              "runtime_hotspot_overlap": false,
+              "is_runtime_hotspot_controller": false
+            }
+          ],
+          "path_authority_kind": "real_home_stack_binding",
+          "controller_pressure_authority_kind": "runtime_controller",
+          "real_path_available": true,
+          "proxy_projection_active": true,
+          "stage_breakdown_authority_kind": "proxy_projection",
+          "controller_pressure_summary": {
+            "available": true,
+            "stack_id": 7,
+            "controller_ids": [
+              14,
+              15
+            ],
+            "controller_count": 2,
+            "requests_received_total": 771,
+            "outstanding_requests_accum": 8603,
+            "cycles_attempted_issue_but_rejected": 0,
+            "max_issue_reject_ratio": 0.0,
+            "runtime_hotspot_overlap": false
+          },
+          "home_path_summary": {
+            "available": true,
+            "stack_id": 7,
+            "path_authority_kind": "real_home_stack_binding",
+            "real_path_available": true,
+            "proxy_projection_active": true,
+            "stage_breakdown_authority_kind": "proxy_projection",
+            "path_signature": "metadata_lookup->stream_region->writeback_region",
+            "demand_total": 256,
+            "issued_total": 256,
+            "service_deficit_total": 0,
+            "issue_efficiency": 1.0,
+            "dominant_stage": "stream_region",
+            "stage_rows": [
+              {
+                "region": "metadata_lookup",
+                "demand": 64,
+                "issued": 64,
+                "service_deficit": 0,
+                "issue_efficiency": 1.0,
+                "backlog_ratio": 0.0
+              },
+              {
+                "region": "stream_region",
+                "demand": 128,
+                "issued": 128,
+                "service_deficit": 0,
+                "issue_efficiency": 1.0,
+                "backlog_ratio": 0.0
+              },
+              {
+                "region": "writeback_region",
+                "demand": 64,
+                "issued": 64,
+                "service_deficit": 0,
+                "issue_efficiency": 1.0,
+                "backlog_ratio": 0.0
+              }
+            ]
+          },
+          "demand_share": 0.6666666666666666,
+          "service_deficit_share": 0.0
+        },
+        "synapse_source_to_home_stack": {
+          "regions": {
+            "synapse_gather": {
+              "demand": 1024,
+              "issued": 1024,
+              "service_deficit": 0,
+              "issue_efficiency": 1.0,
+              "backlog_ratio": 0.0
+            }
+          },
+          "demand_total": 1024,
+          "issued_total": 1024,
+          "service_deficit_total": 0,
+          "dominant_region": "synapse_gather",
+          "dominant_stack_id": 0,
+          "dominant_stack_demand_share": 0.125,
+          "dominant_controller_ids": [
+            0,
+            1
+          ],
+          "dominant_stack_runtime_hotspot_overlap": true,
+          "stack_rows": [
+            {
+              "stack_id": 0,
+              "controller_ids": [
+                0,
+                1
+              ],
+              "demand_proxy": 128.0,
+              "demand_share": 0.125,
+              "service_deficit_proxy": 0.0,
+              "stack_service_deficit_total": 0,
+              "is_dominant_stack": true,
+              "runtime_hotspot_overlap": true,
+              "demand_total": 1024
+            },
+            {
+              "stack_id": 1,
+              "controller_ids": [
+                2,
+                3
+              ],
+              "demand_proxy": 128.0,
+              "demand_share": 0.125,
+              "service_deficit_proxy": 0.0,
+              "stack_service_deficit_total": 0,
+              "is_dominant_stack": false,
+              "runtime_hotspot_overlap": false,
+              "demand_total": 1024
+            },
+            {
+              "stack_id": 2,
+              "controller_ids": [
+                4,
+                5
+              ],
+              "demand_proxy": 128.0,
+              "demand_share": 0.125,
+              "service_deficit_proxy": 0.0,
+              "stack_service_deficit_total": 0,
+              "is_dominant_stack": false,
+              "runtime_hotspot_overlap": false,
+              "demand_total": 1024
+            },
+            {
+              "stack_id": 3,
+              "controller_ids": [
+                6,
+                7
+              ],
+              "demand_proxy": 128.0,
+              "demand_share": 0.125,
+              "service_deficit_proxy": 0.0,
+              "stack_service_deficit_total": 0,
+              "is_dominant_stack": false,
+              "runtime_hotspot_overlap": false,
+              "demand_total": 1024
+            },
+            {
+              "stack_id": 4,
+              "controller_ids": [
+                8,
+                9
+              ],
+              "demand_proxy": 128.0,
+              "demand_share": 0.125,
+              "service_deficit_proxy": 0.0,
+              "stack_service_deficit_total": 0,
+              "is_dominant_stack": false,
+              "runtime_hotspot_overlap": false,
+              "demand_total": 1024
+            },
+            {
+              "stack_id": 5,
+              "controller_ids": [
+                10,
+                11
+              ],
+              "demand_proxy": 128.0,
+              "demand_share": 0.125,
+              "service_deficit_proxy": 0.0,
+              "stack_service_deficit_total": 0,
+              "is_dominant_stack": false,
+              "runtime_hotspot_overlap": false,
+              "demand_total": 1024
+            },
+            {
+              "stack_id": 6,
+              "controller_ids": [
+                12,
+                13
+              ],
+              "demand_proxy": 128.0,
+              "demand_share": 0.125,
+              "service_deficit_proxy": 0.0,
+              "stack_service_deficit_total": 0,
+              "is_dominant_stack": false,
+              "runtime_hotspot_overlap": false,
+              "demand_total": 1024
+            },
+            {
+              "stack_id": 7,
+              "controller_ids": [
+                14,
+                15
+              ],
+              "demand_proxy": 128.0,
+              "demand_share": 0.125,
+              "service_deficit_proxy": 0.0,
+              "stack_service_deficit_total": 0,
+              "is_dominant_stack": false,
+              "runtime_hotspot_overlap": false,
+              "demand_total": 1024
+            }
+          ],
+          "controller_rows": [
+            {
+              "controller_id": 0,
+              "stack_id": 0,
+              "controller_name": "mono_memctrl_0_0",
+              "requests_received_total": 387,
+              "outstanding_requests_accum": 4379,
+              "cycles_attempted_issue_but_rejected": 0,
+              "issue_reject_ratio": 0.0,
+              "belongs_to_dominant_initiator_stack": true,
+              "runtime_hotspot_overlap": true,
+              "is_runtime_hotspot_controller": true
+            },
+            {
+              "controller_id": 1,
+              "stack_id": 0,
+              "controller_name": "mono_memctrl_0_1",
+              "requests_received_total": 384,
+              "outstanding_requests_accum": 4224,
+              "cycles_attempted_issue_but_rejected": 0,
+              "issue_reject_ratio": 0.0,
+              "belongs_to_dominant_initiator_stack": true,
+              "runtime_hotspot_overlap": true,
+              "is_runtime_hotspot_controller": false
+            },
+            {
+              "controller_id": 2,
+              "stack_id": 1,
+              "controller_name": "mono_memctrl_1_0",
+              "requests_received_total": 387,
+              "outstanding_requests_accum": 4379,
+              "cycles_attempted_issue_but_rejected": 0,
+              "issue_reject_ratio": 0.0,
+              "belongs_to_dominant_initiator_stack": false,
+              "runtime_hotspot_overlap": false,
+              "is_runtime_hotspot_controller": false
+            },
+            {
+              "controller_id": 4,
+              "stack_id": 2,
+              "controller_name": "mono_memctrl_2_0",
+              "requests_received_total": 387,
+              "outstanding_requests_accum": 4379,
+              "cycles_attempted_issue_but_rejected": 0,
+              "issue_reject_ratio": 0.0,
+              "belongs_to_dominant_initiator_stack": false,
+              "runtime_hotspot_overlap": false,
+              "is_runtime_hotspot_controller": false
+            },
+            {
+              "controller_id": 6,
+              "stack_id": 3,
+              "controller_name": "mono_memctrl_3_0",
+              "requests_received_total": 387,
+              "outstanding_requests_accum": 4379,
+              "cycles_attempted_issue_but_rejected": 0,
+              "issue_reject_ratio": 0.0,
+              "belongs_to_dominant_initiator_stack": false,
+              "runtime_hotspot_overlap": false,
+              "is_runtime_hotspot_controller": false
+            },
+            {
+              "controller_id": 8,
+              "stack_id": 4,
+              "controller_name": "mono_memctrl_4_0",
+              "requests_received_total": 387,
+              "outstanding_requests_accum": 4379,
+              "cycles_attempted_issue_but_rejected": 0,
+              "issue_reject_ratio": 0.0,
+              "belongs_to_dominant_initiator_stack": false,
+              "runtime_hotspot_overlap": false,
+              "is_runtime_hotspot_controller": false
+            },
+            {
+              "controller_id": 10,
+              "stack_id": 5,
+              "controller_name": "mono_memctrl_5_0",
+              "requests_received_total": 387,
+              "outstanding_requests_accum": 4379,
+              "cycles_attempted_issue_but_rejected": 0,
+              "issue_reject_ratio": 0.0,
+              "belongs_to_dominant_initiator_stack": false,
+              "runtime_hotspot_overlap": false,
+              "is_runtime_hotspot_controller": false
+            },
+            {
+              "controller_id": 12,
+              "stack_id": 6,
+              "controller_name": "mono_memctrl_6_0",
+              "requests_received_total": 387,
+              "outstanding_requests_accum": 4379,
+              "cycles_attempted_issue_but_rejected": 0,
+              "issue_reject_ratio": 0.0,
+              "belongs_to_dominant_initiator_stack": false,
+              "runtime_hotspot_overlap": false,
+              "is_runtime_hotspot_controller": false
+            },
+            {
+              "controller_id": 14,
+              "stack_id": 7,
+              "controller_name": "mono_memctrl_7_0",
+              "requests_received_total": 387,
+              "outstanding_requests_accum": 4379,
+              "cycles_attempted_issue_but_rejected": 0,
+              "issue_reject_ratio": 0.0,
+              "belongs_to_dominant_initiator_stack": false,
+              "runtime_hotspot_overlap": false,
+              "is_runtime_hotspot_controller": false
+            },
+            {
+              "controller_id": 3,
+              "stack_id": 1,
+              "controller_name": "mono_memctrl_1_1",
+              "requests_received_total": 384,
+              "outstanding_requests_accum": 4224,
+              "cycles_attempted_issue_but_rejected": 0,
+              "issue_reject_ratio": 0.0,
+              "belongs_to_dominant_initiator_stack": false,
+              "runtime_hotspot_overlap": false,
+              "is_runtime_hotspot_controller": false
+            },
+            {
+              "controller_id": 5,
+              "stack_id": 2,
+              "controller_name": "mono_memctrl_2_1",
+              "requests_received_total": 384,
+              "outstanding_requests_accum": 4224,
+              "cycles_attempted_issue_but_rejected": 0,
+              "issue_reject_ratio": 0.0,
+              "belongs_to_dominant_initiator_stack": false,
+              "runtime_hotspot_overlap": false,
+              "is_runtime_hotspot_controller": false
+            },
+            {
+              "controller_id": 7,
+              "stack_id": 3,
+              "controller_name": "mono_memctrl_3_1",
+              "requests_received_total": 384,
+              "outstanding_requests_accum": 4224,
+              "cycles_attempted_issue_but_rejected": 0,
+              "issue_reject_ratio": 0.0,
+              "belongs_to_dominant_initiator_stack": false,
+              "runtime_hotspot_overlap": false,
+              "is_runtime_hotspot_controller": false
+            },
+            {
+              "controller_id": 9,
+              "stack_id": 4,
+              "controller_name": "mono_memctrl_4_1",
+              "requests_received_total": 384,
+              "outstanding_requests_accum": 4224,
+              "cycles_attempted_issue_but_rejected": 0,
+              "issue_reject_ratio": 0.0,
+              "belongs_to_dominant_initiator_stack": false,
+              "runtime_hotspot_overlap": false,
+              "is_runtime_hotspot_controller": false
+            },
+            {
+              "controller_id": 11,
+              "stack_id": 5,
+              "controller_name": "mono_memctrl_5_1",
+              "requests_received_total": 384,
+              "outstanding_requests_accum": 4224,
+              "cycles_attempted_issue_but_rejected": 0,
+              "issue_reject_ratio": 0.0,
+              "belongs_to_dominant_initiator_stack": false,
+              "runtime_hotspot_overlap": false,
+              "is_runtime_hotspot_controller": false
+            },
+            {
+              "controller_id": 13,
+              "stack_id": 6,
+              "controller_name": "mono_memctrl_6_1",
+              "requests_received_total": 384,
+              "outstanding_requests_accum": 4224,
+              "cycles_attempted_issue_but_rejected": 0,
+              "issue_reject_ratio": 0.0,
+              "belongs_to_dominant_initiator_stack": false,
+              "runtime_hotspot_overlap": false,
+              "is_runtime_hotspot_controller": false
+            },
+            {
+              "controller_id": 15,
+              "stack_id": 7,
+              "controller_name": "mono_memctrl_7_1",
+              "requests_received_total": 384,
+              "outstanding_requests_accum": 4224,
+              "cycles_attempted_issue_but_rejected": 0,
+              "issue_reject_ratio": 0.0,
+              "belongs_to_dominant_initiator_stack": false,
+              "runtime_hotspot_overlap": false,
+              "is_runtime_hotspot_controller": false
+            }
+          ],
+          "path_authority_kind": "real_home_stack_binding",
+          "controller_pressure_authority_kind": "runtime_controller",
+          "real_path_available": true,
+          "proxy_projection_active": true,
+          "stage_breakdown_authority_kind": "proxy_projection",
+          "controller_pressure_summary": {
+            "available": true,
+            "stack_id": 0,
+            "controller_ids": [
+              0,
+              1
+            ],
+            "controller_count": 2,
+            "requests_received_total": 771,
+            "outstanding_requests_accum": 8603,
+            "cycles_attempted_issue_but_rejected": 0,
+            "max_issue_reject_ratio": 0.0,
+            "runtime_hotspot_overlap": true
+          },
+          "home_path_summary": {
+            "available": true,
+            "stack_id": 0,
+            "path_authority_kind": "real_home_stack_binding",
+            "real_path_available": true,
+            "proxy_projection_active": true,
+            "stage_breakdown_authority_kind": "proxy_projection",
+            "path_signature": "synapse_gather",
+            "demand_total": 128,
+            "issued_total": 128,
+            "service_deficit_total": 0,
+            "issue_efficiency": 1.0,
+            "dominant_stage": "synapse_gather",
+            "stage_rows": [
+              {
+                "region": "synapse_gather",
+                "demand": 128,
+                "issued": 128,
+                "service_deficit": 0,
+                "issue_efficiency": 1.0,
+                "backlog_ratio": 0.0
+              }
+            ]
+          },
+          "demand_share": 0.3333333333333333,
+          "service_deficit_share": 0.0
+        }
+      },
+      "total_demand": 3072,
+      "total_service_deficit": 0,
+      "dominant_initiator_kind": "pe_nic_to_home_stack",
+      "dominant_initiator_region": "stream_region",
+      "dominant_home_access_class": "same_xy_cross_tier",
+      "dominant_home_stack_id": 4,
+      "dominant_home_controller_ids": [
+        8,
+        9
+      ],
+      "most_pressured_stack_id": 0,
+      "runtime_hotspot_alignment": {
+        "runtime_available": true,
+        "dominant_home_access_class": "same_xy_cross_tier",
+        "dominant_home_stack_id": 4,
+        "dominant_home_controller_ids": [
+          8,
+          9
+        ],
+        "runtime_home_access_class": "tier_local_home",
+        "most_pressured_runtime_stack_id": 0,
+        "most_pressured_runtime_controller_id": 0,
+        "most_pressured_runtime_controller_name": "mono_memctrl_0_0",
+        "same_controller_overlap": false,
+        "same_stack_overlap": false,
+        "same_class_overlap": false,
+        "controller_alignment_kind": "cross_class_transfer"
+      }
+    }
+  },
+  "joint": {
+    "vertical_hops_ratio": 0.0,
+    "remote_home_ratio": 0.0,
+    "route_memory_overlap": 1.0
+  },
+  "thermal": {
+    "enabled": true,
+    "tier_activity_source": "runtime",
+    "tier_activity": [
+      {
+        "z": 0,
+        "activity": 7216.0
+      },
+      {
+        "z": 1,
+        "activity": 7216.0
+      }
+    ],
+    "thermal_hotspot_score": 1.25,
+    "vertical_link_pressure": 0.15,
+    "stack_hotspot_penalty": 0.004739336492890933,
+    "physical_model_version": "v2",
+    "vertical_bandwidth_budget": 3.5,
+    "tsv_miv_budget_pressure": 0.05357142857142857,
+    "power_density_score": 2.0172689573459714,
+    "reliability_penalty": 0.48723531651997287
+  }
+}

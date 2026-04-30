@@ -1,0 +1,612 @@
+{
+  "matrix_label": "archsum_matrix_smoke",
+  "baseline_run_tag": "archsum_matrix_smoke",
+  "fixed_step_run_tags": [
+    "task_fixed_step_4_10us",
+    "task_fixed_step_4_10us_sp64",
+    "task_fixed_step_8_20us",
+    "task_fixed_step_8_20us_sp64",
+    "task_fixed_step_16_40us",
+    "task_fixed_step_16_40us_sp64"
+  ],
+  "sources": {
+    "baseline_ablation_path": "/home/xgy/remote/snn3dexp/analysis/codesign_matrix/archsum_matrix_smoke/traffic_baseline_ablation.json",
+    "baseline_run_tag": "archsum_matrix_smoke",
+    "surface_label": "archsum_matrix_smoke",
+    "baseline_overlay_ablation_paths": [],
+    "fixed_step_summary_path": "/home/xgy/remote/snn3dexp/analysis/codesign_matrix/archsum_matrix_smoke/fixed_step_analysis/fixed_step_sweep_summary.json",
+    "fixed_step_run_tags": [
+      "task_fixed_step_4_10us",
+      "task_fixed_step_4_10us_sp64",
+      "task_fixed_step_8_20us",
+      "task_fixed_step_8_20us_sp64",
+      "task_fixed_step_16_40us",
+      "task_fixed_step_16_40us_sp64"
+    ],
+    "stop_window_ablation_paths": [],
+    "stop_window_run_tags": [],
+    "hotspot_runtime_summary_path": "",
+    "hotspot_run_tag": ""
+  },
+  "traffic_route_diffs": [
+    {
+      "matrix_group": "traffic_route",
+      "compare_kind": "traffic_mem_bundle_vs_direct",
+      "run_tag": "",
+      "base_case_id": "full_3d",
+      "compare_case_id": "full_3d_tile_bundle_v3",
+      "dominant_home_runtime_controller_overlap_delta": 0,
+      "pe_nic_real_home_path_service_deficit_total_delta": 0,
+      "synapse_real_home_path_service_deficit_total_delta": 0,
+      "base_real_home_traffic_signal_level": "runtime_controller",
+      "compare_real_home_traffic_signal_level": "runtime_controller"
+    }
+  ],
+  "window_route_diffs": [
+    {
+      "matrix_group": "window_route",
+      "compare_kind": "",
+      "run_tag": "task_fixed_step_4_10us",
+      "base_case_id": "full_3d_snn_window",
+      "compare_case_id": "full_3d_snn_window_bundle_v3",
+      "dataflow_controller_alignment_transition": "alignment_improved",
+      "dataflow_controller_alignment_rank_delta": 4,
+      "memory_requests_per_completed_step_delta": 478.66666666666663,
+      "stall_on_step_gate_cycles_per_completed_step_delta": 13576.666666666668,
+      "pe_nic_dominant_controller_outstanding_requests_accum_delta": -356163,
+      "synapse_dominant_controller_outstanding_requests_accum_delta": -355581,
+      "pe_nic_dominant_controller_cycles_attempted_issue_but_rejected_delta": -529,
+      "synapse_dominant_controller_cycles_attempted_issue_but_rejected_delta": -529,
+      "pe_nic_real_home_path_service_deficit_total_delta": 0,
+      "synapse_real_home_path_service_deficit_total_delta": 0,
+      "base_pe_nic_real_home_path_dominant_stage": "stream_region",
+      "compare_pe_nic_real_home_path_dominant_stage": "stream_region",
+      "base_synapse_real_home_path_dominant_stage": "synapse_gather",
+      "compare_synapse_real_home_path_dominant_stage": "synapse_gather",
+      "controller_outstanding_delta_total": -711744,
+      "controller_issue_reject_delta_total": -1058,
+      "real_home_path_service_deficit_total_delta": 0,
+      "pe_nic_real_home_path_stage_transition": "stream_region->stream_region",
+      "synapse_real_home_path_stage_transition": "synapse_gather->synapse_gather",
+      "dominant_mechanism_axis": "controller_outstanding"
+    },
+    {
+      "matrix_group": "window_route",
+      "compare_kind": "",
+      "run_tag": "task_fixed_step_4_10us_sp64",
+      "base_case_id": "full_3d_snn_window",
+      "compare_case_id": "full_3d_snn_window_bundle_v3",
+      "dataflow_controller_alignment_transition": "stable",
+      "dataflow_controller_alignment_rank_delta": 0,
+      "memory_requests_per_completed_step_delta": 730.6666666666666,
+      "stall_on_step_gate_cycles_per_completed_step_delta": 6584.666666666668,
+      "pe_nic_dominant_controller_outstanding_requests_accum_delta": -2368,
+      "synapse_dominant_controller_outstanding_requests_accum_delta": -3856,
+      "pe_nic_dominant_controller_cycles_attempted_issue_but_rejected_delta": -153,
+      "synapse_dominant_controller_cycles_attempted_issue_but_rejected_delta": -153,
+      "pe_nic_real_home_path_service_deficit_total_delta": 0,
+      "synapse_real_home_path_service_deficit_total_delta": 0,
+      "base_pe_nic_real_home_path_dominant_stage": "stream_region",
+      "compare_pe_nic_real_home_path_dominant_stage": "stream_region",
+      "base_synapse_real_home_path_dominant_stage": "synapse_gather",
+      "compare_synapse_real_home_path_dominant_stage": "synapse_gather",
+      "controller_outstanding_delta_total": -6224,
+      "controller_issue_reject_delta_total": -306,
+      "real_home_path_service_deficit_total_delta": 0,
+      "pe_nic_real_home_path_stage_transition": "stream_region->stream_region",
+      "synapse_real_home_path_stage_transition": "synapse_gather->synapse_gather",
+      "dominant_mechanism_axis": "step_gate_stall"
+    },
+    {
+      "matrix_group": "window_route",
+      "compare_kind": "",
+      "run_tag": "task_fixed_step_8_20us",
+      "base_case_id": "full_3d_snn_window",
+      "compare_case_id": "full_3d_snn_window_bundle_v3",
+      "dataflow_controller_alignment_transition": "stable",
+      "dataflow_controller_alignment_rank_delta": 0,
+      "memory_requests_per_completed_step_delta": 129.5,
+      "stall_on_step_gate_cycles_per_completed_step_delta": 9602.625,
+      "pe_nic_dominant_controller_outstanding_requests_accum_delta": -1181289,
+      "synapse_dominant_controller_outstanding_requests_accum_delta": -1180707,
+      "pe_nic_dominant_controller_cycles_attempted_issue_but_rejected_delta": -5044,
+      "synapse_dominant_controller_cycles_attempted_issue_but_rejected_delta": -5044,
+      "pe_nic_real_home_path_service_deficit_total_delta": 0,
+      "synapse_real_home_path_service_deficit_total_delta": 0,
+      "base_pe_nic_real_home_path_dominant_stage": "stream_region",
+      "compare_pe_nic_real_home_path_dominant_stage": "stream_region",
+      "base_synapse_real_home_path_dominant_stage": "synapse_gather",
+      "compare_synapse_real_home_path_dominant_stage": "synapse_gather",
+      "controller_outstanding_delta_total": -2361996,
+      "controller_issue_reject_delta_total": -10088,
+      "real_home_path_service_deficit_total_delta": 0,
+      "pe_nic_real_home_path_stage_transition": "stream_region->stream_region",
+      "synapse_real_home_path_stage_transition": "synapse_gather->synapse_gather",
+      "dominant_mechanism_axis": "controller_outstanding"
+    },
+    {
+      "matrix_group": "window_route",
+      "compare_kind": "",
+      "run_tag": "task_fixed_step_8_20us_sp64",
+      "base_case_id": "full_3d_snn_window",
+      "compare_case_id": "full_3d_snn_window_bundle_v3",
+      "dataflow_controller_alignment_transition": "stable",
+      "dataflow_controller_alignment_rank_delta": 0,
+      "memory_requests_per_completed_step_delta": 168.0,
+      "stall_on_step_gate_cycles_per_completed_step_delta": 2469.375,
+      "pe_nic_dominant_controller_outstanding_requests_accum_delta": 107851,
+      "synapse_dominant_controller_outstanding_requests_accum_delta": 105481,
+      "pe_nic_dominant_controller_cycles_attempted_issue_but_rejected_delta": 219,
+      "synapse_dominant_controller_cycles_attempted_issue_but_rejected_delta": 219,
+      "pe_nic_real_home_path_service_deficit_total_delta": 0,
+      "synapse_real_home_path_service_deficit_total_delta": 0,
+      "base_pe_nic_real_home_path_dominant_stage": "stream_region",
+      "compare_pe_nic_real_home_path_dominant_stage": "stream_region",
+      "base_synapse_real_home_path_dominant_stage": "synapse_gather",
+      "compare_synapse_real_home_path_dominant_stage": "synapse_gather",
+      "controller_outstanding_delta_total": 213332,
+      "controller_issue_reject_delta_total": 438,
+      "real_home_path_service_deficit_total_delta": 0,
+      "pe_nic_real_home_path_stage_transition": "stream_region->stream_region",
+      "synapse_real_home_path_stage_transition": "synapse_gather->synapse_gather",
+      "dominant_mechanism_axis": "controller_outstanding"
+    },
+    {
+      "matrix_group": "window_route",
+      "compare_kind": "",
+      "run_tag": "task_fixed_step_16_40us",
+      "base_case_id": "full_3d_snn_window",
+      "compare_case_id": "full_3d_snn_window_bundle_v3",
+      "dataflow_controller_alignment_transition": "stable",
+      "dataflow_controller_alignment_rank_delta": 0,
+      "memory_requests_per_completed_step_delta": 64.75,
+      "stall_on_step_gate_cycles_per_completed_step_delta": 4801.3125,
+      "pe_nic_dominant_controller_outstanding_requests_accum_delta": -1181289,
+      "synapse_dominant_controller_outstanding_requests_accum_delta": -1180707,
+      "pe_nic_dominant_controller_cycles_attempted_issue_but_rejected_delta": -5044,
+      "synapse_dominant_controller_cycles_attempted_issue_but_rejected_delta": -5044,
+      "pe_nic_real_home_path_service_deficit_total_delta": 0,
+      "synapse_real_home_path_service_deficit_total_delta": 0,
+      "base_pe_nic_real_home_path_dominant_stage": "stream_region",
+      "compare_pe_nic_real_home_path_dominant_stage": "stream_region",
+      "base_synapse_real_home_path_dominant_stage": "synapse_gather",
+      "compare_synapse_real_home_path_dominant_stage": "synapse_gather",
+      "controller_outstanding_delta_total": -2361996,
+      "controller_issue_reject_delta_total": -10088,
+      "real_home_path_service_deficit_total_delta": 0,
+      "pe_nic_real_home_path_stage_transition": "stream_region->stream_region",
+      "synapse_real_home_path_stage_transition": "synapse_gather->synapse_gather",
+      "dominant_mechanism_axis": "controller_outstanding"
+    },
+    {
+      "matrix_group": "window_route",
+      "compare_kind": "",
+      "run_tag": "task_fixed_step_16_40us_sp64",
+      "base_case_id": "full_3d_snn_window",
+      "compare_case_id": "full_3d_snn_window_bundle_v3",
+      "dataflow_controller_alignment_transition": "stable",
+      "dataflow_controller_alignment_rank_delta": 0,
+      "memory_requests_per_completed_step_delta": 84.0,
+      "stall_on_step_gate_cycles_per_completed_step_delta": 1234.6875,
+      "pe_nic_dominant_controller_outstanding_requests_accum_delta": 107851,
+      "synapse_dominant_controller_outstanding_requests_accum_delta": 105481,
+      "pe_nic_dominant_controller_cycles_attempted_issue_but_rejected_delta": 219,
+      "synapse_dominant_controller_cycles_attempted_issue_but_rejected_delta": 219,
+      "pe_nic_real_home_path_service_deficit_total_delta": 0,
+      "synapse_real_home_path_service_deficit_total_delta": 0,
+      "base_pe_nic_real_home_path_dominant_stage": "stream_region",
+      "compare_pe_nic_real_home_path_dominant_stage": "stream_region",
+      "base_synapse_real_home_path_dominant_stage": "synapse_gather",
+      "compare_synapse_real_home_path_dominant_stage": "synapse_gather",
+      "controller_outstanding_delta_total": 213332,
+      "controller_issue_reject_delta_total": 438,
+      "real_home_path_service_deficit_total_delta": 0,
+      "pe_nic_real_home_path_stage_transition": "stream_region->stream_region",
+      "synapse_real_home_path_stage_transition": "synapse_gather->synapse_gather",
+      "dominant_mechanism_axis": "controller_outstanding"
+    }
+  ],
+  "window_route_mechanism_summary": {
+    "row_count": 6,
+    "alignment_transition_counts": {
+      "alignment_improved": 1,
+      "stable": 5
+    },
+    "dominant_axis_counts": {
+      "controller_outstanding": 5,
+      "step_gate_stall": 1
+    },
+    "stall_on_step_gate_cycles_per_completed_step_delta_sum": 38269.333333333336,
+    "memory_requests_per_completed_step_delta_sum": 1655.5833333333333,
+    "controller_outstanding_delta_total_sum": -5015296,
+    "controller_issue_reject_delta_total_sum": -20664,
+    "real_home_path_service_deficit_total_delta_sum": 0,
+    "top_stall_rows": [
+      {
+        "run_tag": "task_fixed_step_4_10us",
+        "base_case_id": "full_3d_snn_window",
+        "compare_case_id": "full_3d_snn_window_bundle_v3",
+        "stall_on_step_gate_cycles_per_completed_step_delta": 13576.666666666668,
+        "memory_requests_per_completed_step_delta": 478.66666666666663,
+        "controller_outstanding_delta_total": -711744,
+        "real_home_path_service_deficit_total_delta": 0,
+        "dataflow_controller_alignment_transition": "alignment_improved",
+        "dominant_mechanism_axis": "controller_outstanding"
+      },
+      {
+        "run_tag": "task_fixed_step_8_20us",
+        "base_case_id": "full_3d_snn_window",
+        "compare_case_id": "full_3d_snn_window_bundle_v3",
+        "stall_on_step_gate_cycles_per_completed_step_delta": 9602.625,
+        "memory_requests_per_completed_step_delta": 129.5,
+        "controller_outstanding_delta_total": -2361996,
+        "real_home_path_service_deficit_total_delta": 0,
+        "dataflow_controller_alignment_transition": "stable",
+        "dominant_mechanism_axis": "controller_outstanding"
+      },
+      {
+        "run_tag": "task_fixed_step_4_10us_sp64",
+        "base_case_id": "full_3d_snn_window",
+        "compare_case_id": "full_3d_snn_window_bundle_v3",
+        "stall_on_step_gate_cycles_per_completed_step_delta": 6584.666666666668,
+        "memory_requests_per_completed_step_delta": 730.6666666666666,
+        "controller_outstanding_delta_total": -6224,
+        "real_home_path_service_deficit_total_delta": 0,
+        "dataflow_controller_alignment_transition": "stable",
+        "dominant_mechanism_axis": "step_gate_stall"
+      },
+      {
+        "run_tag": "task_fixed_step_16_40us",
+        "base_case_id": "full_3d_snn_window",
+        "compare_case_id": "full_3d_snn_window_bundle_v3",
+        "stall_on_step_gate_cycles_per_completed_step_delta": 4801.3125,
+        "memory_requests_per_completed_step_delta": 64.75,
+        "controller_outstanding_delta_total": -2361996,
+        "real_home_path_service_deficit_total_delta": 0,
+        "dataflow_controller_alignment_transition": "stable",
+        "dominant_mechanism_axis": "controller_outstanding"
+      },
+      {
+        "run_tag": "task_fixed_step_8_20us_sp64",
+        "base_case_id": "full_3d_snn_window",
+        "compare_case_id": "full_3d_snn_window_bundle_v3",
+        "stall_on_step_gate_cycles_per_completed_step_delta": 2469.375,
+        "memory_requests_per_completed_step_delta": 168.0,
+        "controller_outstanding_delta_total": 213332,
+        "real_home_path_service_deficit_total_delta": 0,
+        "dataflow_controller_alignment_transition": "stable",
+        "dominant_mechanism_axis": "controller_outstanding"
+      }
+    ]
+  },
+  "window_stop_route_diffs": [],
+  "window_stop_mechanism_summary": {
+    "row_count": 0,
+    "compare_kind_counts": {},
+    "dominant_axis_counts": {},
+    "stop_at_values": [],
+    "earliest_same_controller_overlap_stop_at": "",
+    "max_steps_completed_delta": 0,
+    "max_abs_stall_on_step_gate_cycles_per_completed_step_delta": 0.0,
+    "top_stall_rows": []
+  },
+  "runtime_compare_diffs": [
+    {
+      "matrix_group": "runtime_compare",
+      "compare_kind": "runtime_adaptive_vs_full_3d",
+      "run_tag": "archsum_matrix_smoke",
+      "base_case_id": "full_3d",
+      "compare_case_id": "full_3d_runtime_adaptive",
+      "vertical_link_pressure_delta": 0.0,
+      "stack_hotspot_penalty_delta": 0.0,
+      "route_thermal_coupling_score_delta": 0.10163175207756231,
+      "memory_thermal_coupling_proxy_delta": -0.1724321052631579,
+      "memory_barrier_coupling_proxy_delta": 69704.0,
+      "homeroute_adjustment_count_delta": 2.0,
+      "thermal_guard_actions_delta": 2.0,
+      "base_control_decision": "disabled",
+      "compare_control_decision": "executed_control",
+      "base_control_decision_source": "",
+      "compare_control_decision_source": "hybrid",
+      "base_control_artifact_path": "",
+      "compare_control_artifact_path": "/home/xgy/remote/snn3dexp/analysis/full_3d_runtime_adaptive/archsum_matrix_smoke/runtime_control_next_window.json",
+      "base_executed_control": false,
+      "compare_executed_control": true,
+      "decision_source_transition": "none->hybrid",
+      "base_control_trigger_signals": [],
+      "compare_control_trigger_signals": [
+        "memory_barrier_coupling_proxy",
+        "memory_thermal_coupling_proxy",
+        "route_memory_overlap",
+        "vertical_link_pressure"
+      ],
+      "hottest_layer_peak_c_delta": 1.5116359370000012,
+      "hottest_tile_peak_c_delta": 1.5116359370000012,
+      "base_control_trigger_signals_csv": "",
+      "compare_control_trigger_signals_csv": "memory_barrier_coupling_proxy|memory_thermal_coupling_proxy|route_memory_overlap|vertical_link_pressure",
+      "compare_control_trigger_signal_count": 4,
+      "dominant_runtime_axis": "memory_barrier_coupling_proxy"
+    }
+  ],
+  "runtime_compare_summary": {
+    "row_count": 1,
+    "compare_kind_counts": {
+      "runtime_adaptive_vs_full_3d": 1
+    },
+    "dominant_axis_counts": {
+      "memory_barrier_coupling_proxy": 1
+    },
+    "compare_control_decision_counts": {
+      "executed_control": 1
+    },
+    "compare_control_decision_source_counts": {
+      "hybrid": 1
+    },
+    "compare_control_trigger_signal_counts": {
+      "memory_barrier_coupling_proxy": 1,
+      "memory_thermal_coupling_proxy": 1,
+      "route_memory_overlap": 1,
+      "vertical_link_pressure": 1
+    },
+    "vertical_link_pressure_delta_sum": 0.0,
+    "stack_hotspot_penalty_delta_sum": 0.0,
+    "route_thermal_coupling_score_delta_sum": 0.10163175207756231,
+    "memory_thermal_coupling_proxy_delta_sum": -0.1724321052631579,
+    "memory_barrier_coupling_proxy_delta_sum": 69704.0,
+    "homeroute_adjustment_count_delta_sum": 2.0,
+    "thermal_guard_actions_delta_sum": 2.0
+  },
+  "mechanism_progression_summary": {
+    "window_route_dominant_axis": "controller_outstanding",
+    "window_route_dominant_axis_counts": {
+      "controller_outstanding": 5,
+      "step_gate_stall": 1
+    },
+    "window_stop_dominant_axis": "unavailable",
+    "window_stop_dominant_axis_counts": {},
+    "earliest_same_controller_overlap_stop_at": "",
+    "runtime_compare_dominant_axis": "memory_barrier_coupling_proxy",
+    "runtime_compare_dominant_axis_counts": {
+      "memory_barrier_coupling_proxy": 1
+    },
+    "progression_signature": "controller_outstanding -> unavailable -> memory_barrier_coupling_proxy",
+    "phase_transition_flags": {
+      "route_to_stop_axis_shift": false,
+      "stop_to_runtime_axis_shift": false,
+      "route_to_runtime_axis_shift": true,
+      "same_controller_overlap_emerged": false
+    },
+    "phase_rows": [
+      {
+        "phase": "window_route",
+        "row_count": 6,
+        "dominant_axis": "controller_outstanding",
+        "key_signal": "alignment={\"alignment_improved\": 1, \"stable\": 5}"
+      },
+      {
+        "phase": "window_stop",
+        "row_count": 0,
+        "dominant_axis": "unavailable",
+        "key_signal": "same_controller_overlap@unavailable"
+      },
+      {
+        "phase": "runtime_compare",
+        "row_count": 1,
+        "dominant_axis": "memory_barrier_coupling_proxy",
+        "key_signal": "compare_kinds={\"runtime_adaptive_vs_full_3d\": 1}"
+      }
+    ],
+    "progression_interpretation": "fixed-step window-route is dominated by controller_outstanding; stop-window evidence is unavailable; runtime compare is dominated by memory_barrier_coupling_proxy."
+  },
+  "mechanism_progression_rows": [
+    {
+      "row_family": "mechanism_progression",
+      "phase_order": 1,
+      "phase": "window_route",
+      "row_count": 6,
+      "dominant_axis": "controller_outstanding",
+      "dominant_axis_counts_json": "{\"controller_outstanding\": 5, \"step_gate_stall\": 1}",
+      "key_signal": "alignment={\"alignment_improved\": 1, \"stable\": 5}",
+      "progression_signature": "controller_outstanding -> unavailable -> memory_barrier_coupling_proxy",
+      "phase_transition_from_previous": "no",
+      "earliest_same_controller_overlap_stop_at": ""
+    },
+    {
+      "row_family": "mechanism_progression",
+      "phase_order": 2,
+      "phase": "window_stop",
+      "row_count": 0,
+      "dominant_axis": "unavailable",
+      "dominant_axis_counts_json": "{}",
+      "key_signal": "same_controller_overlap@unavailable",
+      "progression_signature": "controller_outstanding -> unavailable -> memory_barrier_coupling_proxy",
+      "phase_transition_from_previous": "no",
+      "earliest_same_controller_overlap_stop_at": ""
+    },
+    {
+      "row_family": "mechanism_progression",
+      "phase_order": 3,
+      "phase": "runtime_compare",
+      "row_count": 1,
+      "dominant_axis": "memory_barrier_coupling_proxy",
+      "dominant_axis_counts_json": "{\"memory_barrier_coupling_proxy\": 1}",
+      "key_signal": "compare_kinds={\"runtime_adaptive_vs_full_3d\": 1}",
+      "progression_signature": "controller_outstanding -> unavailable -> memory_barrier_coupling_proxy",
+      "phase_transition_from_previous": "no",
+      "earliest_same_controller_overlap_stop_at": ""
+    }
+  ],
+  "route_memory_joint_pressure_rows": [
+    {
+      "row_family": "route_memory_joint_pressure",
+      "compare_kind": "traffic_mem_bundle_vs_direct",
+      "run_tag": "archsum_matrix_smoke",
+      "base_case_id": "full_3d",
+      "compare_case_id": "full_3d_tile_bundle_v3",
+      "progression_signature": "controller_outstanding -> unavailable -> memory_barrier_coupling_proxy",
+      "window_route_anchor_axis": "controller_outstanding",
+      "runtime_compare_anchor_axis": "memory_barrier_coupling_proxy",
+      "dominant_endpoint_pressure_side": "pe_nic",
+      "pe_nic_pressure_score": 79117,
+      "synapse_pressure_score": 71961,
+      "dominant_memory_axis": "controller_memory_pressure_proxy",
+      "dominant_memory_axis_raw_value": 3.8785499999999997,
+      "dominant_memory_axis_score": 581.7824999999999,
+      "dominant_backlog_region": "unavailable",
+      "dominant_home_access_class": "same_xy_cross_tier",
+      "base_memory_pressure_proxy_source": "backpressure",
+      "compare_memory_pressure_proxy_source": "backpressure",
+      "memory_pressure_proxy_source_transition": "backpressure->backpressure",
+      "base_most_pressured_controller_backpressure_proxy": 5.24045,
+      "compare_most_pressured_controller_backpressure_proxy": 9.119,
+      "most_pressured_controller_backpressure_proxy_delta": 3.8785499999999997,
+      "base_most_pressured_controller_memory_pressure_proxy": 5.24045,
+      "compare_most_pressured_controller_memory_pressure_proxy": 9.119,
+      "most_pressured_controller_memory_pressure_proxy_delta": 3.8785499999999997,
+      "controller_pressure_narrative": "backpressure-backed composite (source=backpressure->backpressure, backpressure-delta=3.879, composite-delta=3.879)",
+      "dataflow_controller_alignment_transition": "stable",
+      "same_controller_overlap_delta": 0,
+      "same_stack_overlap_delta": 0,
+      "joint_interpretation": "traffic_mem_bundle_vs_direct is dominated by pe_nic endpoint pressure, controller_memory_pressure_proxy on the memory side, backlog centered on unavailable, home-access=same_xy_cross_tier, controller-pressure=backpressure-backed composite (source=backpressure->backpressure, backpressure-delta=3.879, composite-delta=3.879), and same-controller overlap stays flat."
+    },
+    {
+      "row_family": "route_memory_joint_pressure",
+      "compare_kind": "traffic_mem_monolithic_vs_hbm",
+      "run_tag": "archsum_matrix_smoke",
+      "base_case_id": "full_3d",
+      "compare_case_id": "full_3d_monolithic_proxy",
+      "progression_signature": "controller_outstanding -> unavailable -> memory_barrier_coupling_proxy",
+      "window_route_anchor_axis": "controller_outstanding",
+      "runtime_compare_anchor_axis": "memory_barrier_coupling_proxy",
+      "dominant_endpoint_pressure_side": "mixed",
+      "pe_nic_pressure_score": 64215,
+      "synapse_pressure_score": 64215,
+      "dominant_memory_axis": "controller_memory_pressure_proxy",
+      "dominant_memory_axis_raw_value": 5.0215,
+      "dominant_memory_axis_score": 753.2249999999999,
+      "dominant_backlog_region": "unavailable",
+      "dominant_home_access_class": "same_xy_cross_tier",
+      "base_memory_pressure_proxy_source": "backpressure",
+      "compare_memory_pressure_proxy_source": "backpressure",
+      "memory_pressure_proxy_source_transition": "backpressure->backpressure",
+      "base_most_pressured_controller_backpressure_proxy": 5.24045,
+      "compare_most_pressured_controller_backpressure_proxy": 0.21895,
+      "most_pressured_controller_backpressure_proxy_delta": -5.0215,
+      "base_most_pressured_controller_memory_pressure_proxy": 5.24045,
+      "compare_most_pressured_controller_memory_pressure_proxy": 0.21895,
+      "most_pressured_controller_memory_pressure_proxy_delta": -5.0215,
+      "controller_pressure_narrative": "backpressure-backed composite (source=backpressure->backpressure, backpressure-delta=-5.021, composite-delta=-5.021)",
+      "dataflow_controller_alignment_transition": "alignment_improved",
+      "same_controller_overlap_delta": 0,
+      "same_stack_overlap_delta": 0,
+      "joint_interpretation": "traffic_mem_monolithic_vs_hbm is dominated by mixed endpoint pressure, controller_memory_pressure_proxy on the memory side, backlog centered on unavailable, home-access=same_xy_cross_tier, controller-pressure=backpressure-backed composite (source=backpressure->backpressure, backpressure-delta=-5.021, composite-delta=-5.021), and same-controller overlap stays flat."
+    }
+  ],
+  "route_memory_joint_pressure_summary": {
+    "row_count": 2,
+    "compare_kind_counts": {
+      "traffic_mem_bundle_vs_direct": 1,
+      "traffic_mem_monolithic_vs_hbm": 1
+    },
+    "dominant_endpoint_counts": {
+      "pe_nic": 1,
+      "mixed": 1
+    },
+    "dominant_memory_axis_counts": {
+      "controller_memory_pressure_proxy": 2
+    },
+    "dominant_backlog_region_counts": {
+      "unavailable": 2
+    },
+    "base_memory_pressure_proxy_source_counts": {
+      "backpressure": 2
+    },
+    "compare_memory_pressure_proxy_source_counts": {
+      "backpressure": 2
+    },
+    "memory_pressure_proxy_source_transition_counts": {
+      "backpressure->backpressure": 2
+    },
+    "most_pressured_controller_backpressure_proxy_delta_sum": -1.14295,
+    "most_pressured_controller_memory_pressure_proxy_delta_sum": -1.14295,
+    "top_joint_rows": [
+      {
+        "compare_kind": "traffic_mem_monolithic_vs_hbm",
+        "dominant_endpoint_pressure_side": "mixed",
+        "dominant_memory_axis": "controller_memory_pressure_proxy",
+        "dominant_backlog_region": "unavailable",
+        "compare_memory_pressure_proxy_source": "backpressure",
+        "controller_pressure_narrative": "backpressure-backed composite (source=backpressure->backpressure, backpressure-delta=-5.021, composite-delta=-5.021)",
+        "most_pressured_controller_backpressure_proxy_delta": -5.0215,
+        "most_pressured_controller_memory_pressure_proxy_delta": -5.0215,
+        "joint_interpretation": "traffic_mem_monolithic_vs_hbm is dominated by mixed endpoint pressure, controller_memory_pressure_proxy on the memory side, backlog centered on unavailable, home-access=same_xy_cross_tier, controller-pressure=backpressure-backed composite (source=backpressure->backpressure, backpressure-delta=-5.021, composite-delta=-5.021), and same-controller overlap stays flat."
+      },
+      {
+        "compare_kind": "traffic_mem_bundle_vs_direct",
+        "dominant_endpoint_pressure_side": "pe_nic",
+        "dominant_memory_axis": "controller_memory_pressure_proxy",
+        "dominant_backlog_region": "unavailable",
+        "compare_memory_pressure_proxy_source": "backpressure",
+        "controller_pressure_narrative": "backpressure-backed composite (source=backpressure->backpressure, backpressure-delta=3.879, composite-delta=3.879)",
+        "most_pressured_controller_backpressure_proxy_delta": 3.8785499999999997,
+        "most_pressured_controller_memory_pressure_proxy_delta": 3.8785499999999997,
+        "joint_interpretation": "traffic_mem_bundle_vs_direct is dominated by pe_nic endpoint pressure, controller_memory_pressure_proxy on the memory side, backlog centered on unavailable, home-access=same_xy_cross_tier, controller-pressure=backpressure-backed composite (source=backpressure->backpressure, backpressure-delta=3.879, composite-delta=3.879), and same-controller overlap stays flat."
+      }
+    ]
+  },
+  "runtime_control_closure_rows": [
+    {
+      "row_family": "runtime_control_closure",
+      "runtime_compare_kind": "runtime_adaptive_vs_full_3d",
+      "route_compare_kind": "traffic_mem_monolithic_vs_hbm",
+      "route_compare_case_id": "full_3d_monolithic_proxy",
+      "route_dominant_memory_axis": "controller_memory_pressure_proxy",
+      "route_controller_pressure_narrative": "backpressure-backed composite (source=backpressure->backpressure, backpressure-delta=-5.021, composite-delta=-5.021)",
+      "route_memory_pressure_proxy_source": "backpressure",
+      "compare_control_decision": "executed_control",
+      "compare_control_decision_source": "hybrid",
+      "compare_control_trigger_signals_csv": "memory_barrier_coupling_proxy|memory_thermal_coupling_proxy|route_memory_overlap|vertical_link_pressure",
+      "trigger_alignment": "controller_pressure_to_memory_coupling_trigger",
+      "dominant_runtime_axis": "memory_barrier_coupling_proxy",
+      "memory_thermal_coupling_proxy_delta": -0.1724321052631579,
+      "memory_barrier_coupling_proxy_delta": 69704.0,
+      "homeroute_adjustment_count_delta": 2.0,
+      "thermal_guard_actions_delta": 2.0,
+      "closure_interpretation": "pressure -> runtime decision -> outcome: traffic_mem_monolithic_vs_hbm exposes backpressure-backed composite (source=backpressure->backpressure, backpressure-delta=-5.021, composite-delta=-5.021); runtime runtime_adaptive_vs_full_3d selects executed_control via hybrid, triggers=memory_barrier_coupling_proxy|memory_thermal_coupling_proxy|route_memory_overlap|vertical_link_pressure, and lands on memory_barrier_coupling_proxy (memory_thermal_delta=-0.172, memory_barrier_delta=69704.000, homeroute_delta=2.000, thermal_guard_delta=2.000); alignment=controller_pressure_to_memory_coupling_trigger."
+    }
+  ],
+  "runtime_control_closure_summary": {
+    "row_count": 1,
+    "compare_control_decision_counts": {
+      "executed_control": 1
+    },
+    "compare_control_decision_source_counts": {
+      "hybrid": 1
+    },
+    "trigger_alignment_counts": {
+      "controller_pressure_to_memory_coupling_trigger": 1
+    },
+    "dominant_runtime_axis_counts": {
+      "memory_barrier_coupling_proxy": 1
+    },
+    "top_closure_rows": [
+      {
+        "runtime_compare_kind": "runtime_adaptive_vs_full_3d",
+        "route_compare_kind": "traffic_mem_monolithic_vs_hbm",
+        "route_dominant_memory_axis": "controller_memory_pressure_proxy",
+        "compare_control_decision": "executed_control",
+        "compare_control_decision_source": "hybrid",
+        "trigger_alignment": "controller_pressure_to_memory_coupling_trigger",
+        "closure_interpretation": "pressure -> runtime decision -> outcome: traffic_mem_monolithic_vs_hbm exposes backpressure-backed composite (source=backpressure->backpressure, backpressure-delta=-5.021, composite-delta=-5.021); runtime runtime_adaptive_vs_full_3d selects executed_control via hybrid, triggers=memory_barrier_coupling_proxy|memory_thermal_coupling_proxy|route_memory_overlap|vertical_link_pressure, and lands on memory_barrier_coupling_proxy (memory_thermal_delta=-0.172, memory_barrier_delta=69704.000, homeroute_delta=2.000, thermal_guard_delta=2.000); alignment=controller_pressure_to_memory_coupling_trigger."
+      }
+    ]
+  },
+  "outputs": {
+    "summary_json": "/home/xgy/remote/snn3dexp/analysis/codesign_matrix/archsum_matrix_smoke/route_runtime_diff/memory_nmc_route_runtime_diff_summary.json",
+    "csv": "/home/xgy/remote/snn3dexp/analysis/codesign_matrix/archsum_matrix_smoke/route_runtime_diff/memory_nmc_route_runtime_diff.csv",
+    "markdown": "/home/xgy/remote/snn3dexp/analysis/codesign_matrix/archsum_matrix_smoke/route_runtime_diff/memory_nmc_route_runtime_diff.md",
+    "mechanism_progression_csv": "/home/xgy/remote/snn3dexp/analysis/codesign_matrix/archsum_matrix_smoke/route_runtime_diff/memory_nmc_route_runtime_mechanism_progression.csv",
+    "route_memory_joint_pressure_csv": "/home/xgy/remote/snn3dexp/analysis/codesign_matrix/archsum_matrix_smoke/route_runtime_diff/memory_nmc_route_runtime_joint_pressure.csv",
+    "runtime_control_closure_csv": "/home/xgy/remote/snn3dexp/analysis/codesign_matrix/archsum_matrix_smoke/route_runtime_diff/memory_nmc_route_runtime_control_closure.csv"
+  }
+}

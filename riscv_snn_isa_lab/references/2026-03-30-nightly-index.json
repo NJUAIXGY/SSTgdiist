@@ -1,0 +1,163 @@
+{
+  "all_ok": true,
+  "artifact_role": "dated_nightly_index",
+  "authority_scope": "builder_toolchain_audit_only",
+  "builder_summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-03-30-builder-regress-matrix.json",
+  "canonical_surface": true,
+  "count": 6,
+  "families": [
+    {
+      "audit": {
+        "latest_manifest": "/home/xgy/remote/riscv_snn_isa_lab/runs/2026-03-30-barrier-wfi-order-ref-toolchain-smoke.md",
+        "manifest_match": true,
+        "manifest_run_dir": "/home/xgy/remote/riscv_snn_isa_lab/runtime_runs/mainline_hardening_rebuild_closure/20260330-122957",
+        "ok": true,
+        "program": "barrier_wfi_order_ref_toolchain"
+      },
+      "builder": {
+        "manifest_path": "/home/xgy/remote/riscv_snn_isa_lab/runs/2026-03-30-barrier-wfi-order-ref-smoke.md",
+        "program": "barrier_wfi_order_ref",
+        "run_dir": "/home/xgy/remote/riscv_snn_isa_lab/runtime_runs/mainline_hardening_rebuild_closure/20260330-122650",
+        "run_id": "20260330-122650"
+      },
+      "family": "barrier_wfi_order_ref",
+      "toolchain": {
+        "manifest_path": "/home/xgy/remote/riscv_snn_isa_lab/runs/2026-03-30-barrier-wfi-order-ref-toolchain-smoke.md",
+        "program": "barrier_wfi_order_ref_toolchain",
+        "run_dir": "/home/xgy/remote/riscv_snn_isa_lab/runtime_runs/mainline_hardening_rebuild_closure/20260330-122957",
+        "run_id": "20260330-122957"
+      }
+    },
+    {
+      "audit": {
+        "latest_manifest": "/home/xgy/remote/riscv_snn_isa_lab/runs/2026-03-30-external-dyn-desc-bad-policy-ref-toolchain-smoke.md",
+        "manifest_match": true,
+        "manifest_run_dir": "/home/xgy/remote/riscv_snn_isa_lab/runtime_runs/mainline_hardening_rebuild_closure/20260330-122827",
+        "ok": true,
+        "program": "external_dyn_desc_bad_policy_ref_toolchain"
+      },
+      "builder": {
+        "manifest_path": "/home/xgy/remote/riscv_snn_isa_lab/runs/2026-03-30-external-dyn-desc-bad-policy-ref-smoke.md",
+        "program": "external_dyn_desc_bad_policy_ref",
+        "run_dir": "/home/xgy/remote/riscv_snn_isa_lab/runtime_runs/mainline_hardening_rebuild_closure/20260330-122526",
+        "run_id": "20260330-122526"
+      },
+      "family": "external_dyn_desc_bad_policy_ref",
+      "toolchain": {
+        "manifest_path": "/home/xgy/remote/riscv_snn_isa_lab/runs/2026-03-30-external-dyn-desc-bad-policy-ref-toolchain-smoke.md",
+        "program": "external_dyn_desc_bad_policy_ref_toolchain",
+        "run_dir": "/home/xgy/remote/riscv_snn_isa_lab/runtime_runs/mainline_hardening_rebuild_closure/20260330-122827",
+        "run_id": "20260330-122827"
+      }
+    },
+    {
+      "audit": {
+        "latest_manifest": "/home/xgy/remote/riscv_snn_isa_lab/runs/2026-03-30-external-dyn-desc-fault-overwrite-chain-ref-toolchain-smoke.md",
+        "manifest_match": true,
+        "manifest_run_dir": "/home/xgy/remote/riscv_snn_isa_lab/runtime_runs/mainline_hardening_rebuild_closure/20260330-122927",
+        "ok": true,
+        "program": "external_dyn_desc_fault_overwrite_chain_ref_toolchain"
+      },
+      "builder": {
+        "manifest_path": "/home/xgy/remote/riscv_snn_isa_lab/runs/2026-03-30-external-dyn-desc-fault-overwrite-chain-ref-smoke.md",
+        "program": "external_dyn_desc_fault_overwrite_chain_ref",
+        "run_dir": "/home/xgy/remote/riscv_snn_isa_lab/runtime_runs/mainline_hardening_rebuild_closure/20260330-122619",
+        "run_id": "20260330-122619"
+      },
+      "family": "external_dyn_desc_fault_overwrite_chain_ref",
+      "toolchain": {
+        "manifest_path": "/home/xgy/remote/riscv_snn_isa_lab/runs/2026-03-30-external-dyn-desc-fault-overwrite-chain-ref-toolchain-smoke.md",
+        "program": "external_dyn_desc_fault_overwrite_chain_ref_toolchain",
+        "run_dir": "/home/xgy/remote/riscv_snn_isa_lab/runtime_runs/mainline_hardening_rebuild_closure/20260330-122927",
+        "run_id": "20260330-122927"
+      }
+    },
+    {
+      "audit": {
+        "latest_manifest": "/home/xgy/remote/riscv_snn_isa_lab/runs/2026-03-30-external-dyn-desc-fault-rearm-ref-toolchain-smoke.md",
+        "manifest_match": true,
+        "manifest_run_dir": "/home/xgy/remote/riscv_snn_isa_lab/runtime_runs/mainline_hardening_rebuild_closure/20260330-122857",
+        "ok": true,
+        "program": "external_dyn_desc_fault_rearm_ref_toolchain"
+      },
+      "builder": {
+        "manifest_path": "/home/xgy/remote/riscv_snn_isa_lab/runs/2026-03-30-external-dyn-desc-fault-rearm-ref-smoke.md",
+        "program": "external_dyn_desc_fault_rearm_ref",
+        "run_dir": "/home/xgy/remote/riscv_snn_isa_lab/runtime_runs/mainline_hardening_rebuild_closure/20260330-122553",
+        "run_id": "20260330-122553"
+      },
+      "family": "external_dyn_desc_fault_rearm_ref",
+      "toolchain": {
+        "manifest_path": "/home/xgy/remote/riscv_snn_isa_lab/runs/2026-03-30-external-dyn-desc-fault-rearm-ref-toolchain-smoke.md",
+        "program": "external_dyn_desc_fault_rearm_ref_toolchain",
+        "run_dir": "/home/xgy/remote/riscv_snn_isa_lab/runtime_runs/mainline_hardening_rebuild_closure/20260330-122857",
+        "run_id": "20260330-122857"
+      }
+    },
+    {
+      "audit": {
+        "latest_manifest": "/home/xgy/remote/riscv_snn_isa_lab/runs/2026-03-30-external-dyn-desc-fault-ref-toolchain-smoke.md",
+        "manifest_match": true,
+        "manifest_run_dir": "/home/xgy/remote/riscv_snn_isa_lab/runtime_runs/mainline_hardening_rebuild_closure/20260330-122754",
+        "ok": true,
+        "program": "external_dyn_desc_fault_ref_toolchain"
+      },
+      "builder": {
+        "manifest_path": "/home/xgy/remote/riscv_snn_isa_lab/runs/2026-03-30-external-dyn-desc-fault-ref-smoke.md",
+        "program": "external_dyn_desc_fault_ref",
+        "run_dir": "/home/xgy/remote/riscv_snn_isa_lab/runtime_runs/mainline_hardening_rebuild_closure/20260330-122500",
+        "run_id": "20260330-122500"
+      },
+      "family": "external_dyn_desc_fault_ref",
+      "toolchain": {
+        "manifest_path": "/home/xgy/remote/riscv_snn_isa_lab/runs/2026-03-30-external-dyn-desc-fault-ref-toolchain-smoke.md",
+        "program": "external_dyn_desc_fault_ref_toolchain",
+        "run_dir": "/home/xgy/remote/riscv_snn_isa_lab/runtime_runs/mainline_hardening_rebuild_closure/20260330-122754",
+        "run_id": "20260330-122754"
+      }
+    },
+    {
+      "audit": {
+        "latest_manifest": "/home/xgy/remote/riscv_snn_isa_lab/runs/2026-03-30-external-dyn-desc-ref-toolchain-smoke.md",
+        "manifest_match": true,
+        "manifest_run_dir": "/home/xgy/remote/riscv_snn_isa_lab/runtime_runs/mainline_hardening_rebuild_closure/20260330-122723",
+        "ok": true,
+        "program": "external_dyn_desc_ref_toolchain"
+      },
+      "builder": {
+        "manifest_path": "/home/xgy/remote/riscv_snn_isa_lab/runs/2026-03-30-external-dyn-desc-ref-smoke.md",
+        "program": "external_dyn_desc_ref",
+        "run_dir": "/home/xgy/remote/riscv_snn_isa_lab/runtime_runs/mainline_hardening_rebuild_closure/20260330-122437",
+        "run_id": "20260330-122437"
+      },
+      "family": "external_dyn_desc_ref",
+      "toolchain": {
+        "manifest_path": "/home/xgy/remote/riscv_snn_isa_lab/runs/2026-03-30-external-dyn-desc-ref-toolchain-smoke.md",
+        "program": "external_dyn_desc_ref_toolchain",
+        "run_dir": "/home/xgy/remote/riscv_snn_isa_lab/runtime_runs/mainline_hardening_rebuild_closure/20260330-122723",
+        "run_id": "20260330-122723"
+      }
+    }
+  ],
+  "generated_utc": "2026-03-30T04:30:30.768791+00:00",
+  "producer": "riscv_snn_lab.build_nightly_index",
+  "requested_builder_programs": [
+    "external_dyn_desc_ref",
+    "external_dyn_desc_fault_ref",
+    "external_dyn_desc_bad_policy_ref",
+    "external_dyn_desc_fault_rearm_ref",
+    "external_dyn_desc_fault_overwrite_chain_ref",
+    "barrier_wfi_order_ref"
+  ],
+  "requested_toolchain_programs": [
+    "external_dyn_desc_ref_toolchain",
+    "external_dyn_desc_fault_ref_toolchain",
+    "external_dyn_desc_bad_policy_ref_toolchain",
+    "external_dyn_desc_fault_rearm_ref_toolchain",
+    "external_dyn_desc_fault_overwrite_chain_ref_toolchain",
+    "barrier_wfi_order_ref_toolchain"
+  ],
+  "schema_version": 2,
+  "toolchain_audit_summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-03-30-toolchain-bridge-audit.json",
+  "toolchain_summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-03-30-toolchain-regress-matrix.json"
+}

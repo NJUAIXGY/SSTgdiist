@@ -1,0 +1,131 @@
+{
+  "case_id": "full_3d_runtime_adaptive",
+  "run_tag": "hotspot_real_phase6_multicase_20260320_174519",
+  "status": "composed",
+  "runtime_enabled": true,
+  "control_mode": "adaptive_control",
+  "case_role": "calibration_only",
+  "paths": {
+    "effective_config_path": "/home/xgy/remote/snn3dexp/runs/full_3d_runtime_adaptive/hotspot_real_phase6_multicase_20260320_174519/effective_config.json",
+    "platform_summary_path": "/home/xgy/remote/snn3dexp/runs/full_3d_runtime_adaptive/hotspot_real_phase6_multicase_20260320_174519/platform_summary.json",
+    "stack_nmc_summary_path": "",
+    "route_memory_joint_summary_path": "",
+    "runtime_summary_path": "/home/xgy/remote/snn3dexp/analysis/full_3d_runtime_adaptive/hotspot_real_phase6_multicase_20260320_174519/runtime_summary.json"
+  },
+  "thermal_input": {
+    "input_source_kind": "external_summary_replay",
+    "summary_path": "/home/xgy/remote/tmp/thermal_contract_suite_v1/thermal_3d_grid_base/runs/20260320-133539/thermal/summary/thermal_summary.json",
+    "summary_exists": true,
+    "window_power_samples_path": "/home/xgy/remote/tmp/thermal_contract_suite_v1/thermal_3d_grid_base/runs/20260320-133539/thermal/summary/window_power_samples.jsonl",
+    "window_power_samples_exists": true,
+    "window_power_sample_count": 1,
+    "trace_sources": [
+      "average_power"
+    ],
+    "shared_input_key": "/home/xgy/remote/tmp/thermal_contract_suite_v1/thermal_3d_grid_base/runs/20260320-133539/thermal/summary/thermal_summary.json"
+  },
+  "mapping": {
+    "policy": "3d_aware",
+    "score": 0.0234375,
+    "same_home_stack_ratio": 0.90625,
+    "vertical_target_ratio": 0.40625
+  },
+  "joint": {
+    "vertical_hops_ratio": 0.0,
+    "remote_home_ratio": 0.0,
+    "route_memory_overlap": 0.0
+  },
+  "thermal": {
+    "thermal_hotspot_score": 1.25,
+    "vertical_link_pressure": 0.24375,
+    "stack_hotspot_penalty": 0.25,
+    "vertical_bandwidth_budget": 2.0,
+    "tsv_miv_budget_pressure": 0.17138671875,
+    "power_density_score": 1.7578125,
+    "reliability_penalty": 0.4352783203125,
+    "thermal_state_source": "online_rc_estimator",
+    "peak_temperature_c": 47.765124,
+    "avg_temperature_c": 45.151608906250004,
+    "vertical_gradient_c": 1.382562,
+    "hotspot_block_count": 96,
+    "hotspot_layer_count": 2,
+    "thermal_replay_sample_count": 1,
+    "hotspot_driver_status": "ran",
+    "hotspot_model_type": "grid",
+    "hotspot_temperature_source": "hotspot_steady_temp",
+    "hotspot_peak_temperature_c": 45.05000000000001,
+    "hotspot_avg_temperature_c": 45.015937500000085,
+    "hotspot_peak_delta_c": 2.7151239999999888,
+    "hotspot_avg_delta_c": 0.13567140624991936,
+    "hotspot_block_delta": 96,
+    "hotspot_layer_delta": 2,
+    "hotspot_artifacts": {
+      "floorplan": "/home/xgy/remote/snn3dexp/runs/full_3d_runtime_adaptive/hotspot_real_phase6_multicase_20260320_174519/thermal_sidecar/hotspot/snndl_mesh.lcf",
+      "ptrace": "/home/xgy/remote/snn3dexp/runs/full_3d_runtime_adaptive/hotspot_real_phase6_multicase_20260320_174519/thermal_sidecar/hotspot/snndl_mesh.ptrace",
+      "hotspot_config": "/home/xgy/remote/snn3dexp/runs/full_3d_runtime_adaptive/hotspot_real_phase6_multicase_20260320_174519/thermal_sidecar/hotspot/hotspot.config",
+      "window_power_samples_jsonl": "/home/xgy/remote/snn3dexp/runs/full_3d_runtime_adaptive/hotspot_real_phase6_multicase_20260320_174519/thermal_sidecar/summary/window_power_samples.jsonl",
+      "tile_temperature_summary_csv": "/home/xgy/remote/snn3dexp/runs/full_3d_runtime_adaptive/hotspot_real_phase6_multicase_20260320_174519/thermal_sidecar/summary/tile_temperature_summary.csv",
+      "thermal_summary_json": "/home/xgy/remote/snn3dexp/runs/full_3d_runtime_adaptive/hotspot_real_phase6_multicase_20260320_174519/thermal_sidecar/summary/thermal_summary.json",
+      "steady_temp": "/home/xgy/remote/snn3dexp/runs/full_3d_runtime_adaptive/hotspot_real_phase6_multicase_20260320_174519/thermal_sidecar/hotspot/steady.temp",
+      "transient_temp": "/home/xgy/remote/snn3dexp/runs/full_3d_runtime_adaptive/hotspot_real_phase6_multicase_20260320_174519/thermal_sidecar/hotspot/transient.temp",
+      "lcf": "/home/xgy/remote/snn3dexp/runs/full_3d_runtime_adaptive/hotspot_real_phase6_multicase_20260320_174519/thermal_sidecar/hotspot/snndl_mesh.lcf",
+      "layer_floorplans": [
+        "/home/xgy/remote/snn3dexp/runs/full_3d_runtime_adaptive/hotspot_real_phase6_multicase_20260320_174519/thermal_sidecar/hotspot/layer_00_compute_top.flp",
+        "/home/xgy/remote/snn3dexp/runs/full_3d_runtime_adaptive/hotspot_real_phase6_multicase_20260320_174519/thermal_sidecar/hotspot/layer_01_tim_mid.flp",
+        "/home/xgy/remote/snn3dexp/runs/full_3d_runtime_adaptive/hotspot_real_phase6_multicase_20260320_174519/thermal_sidecar/hotspot/layer_02_compute_bottom.flp"
+      ]
+    }
+  },
+  "runtime": {
+    "enabled": true,
+    "policy": "adaptive_3d",
+    "signal_source": "predictive_static",
+    "thermal_signal_source": "thermal_hooks",
+    "thermal_state_source": "online_rc_estimator",
+    "route_memory_overlap": 0.0,
+    "vertical_link_pressure": 0.24375,
+    "stack_hotspot_penalty": 0.25,
+    "remap_epoch": 256,
+    "homeroute_adjustment_count": 2,
+    "thermal_guard_actions": 2,
+    "thermal_observability": {
+      "peak_temperature_c": 47.765124,
+      "avg_temperature_c": 45.151608906250004,
+      "hotspot_block_count": 96,
+      "hotspot_layer_count": 2,
+      "vertical_gradient_c": 1.382562,
+      "top_layer_peak_c": 47.765124,
+      "bottom_layer_peak_c": 46.382562,
+      "thermal_hotspot_score": 1.25
+    },
+    "recommended_actions": [
+      {
+        "label": "rebalance_home_route",
+        "kind": "mapping_rebalance",
+        "reason": "route_memory_overlap threshold exceeded",
+        "metric": "route_memory_overlap",
+        "observed": 0.556875,
+        "threshold": 0.4,
+        "execute": false
+      },
+      {
+        "label": "raise_vertical_penalty",
+        "kind": "thermal_vertical_relief",
+        "reason": "vertical_link_pressure threshold exceeded",
+        "metric": "vertical_link_pressure",
+        "observed": 0.24375,
+        "threshold": 0.15,
+        "execute": false
+      },
+      {
+        "label": "diffuse_stack_hotspot",
+        "kind": "stack_hotspot_diffusion",
+        "reason": "stack_hotspot_penalty threshold exceeded",
+        "metric": "stack_hotspot_penalty",
+        "observed": 0.25,
+        "threshold": 0.15,
+        "execute": false
+      }
+    ]
+  }
+}

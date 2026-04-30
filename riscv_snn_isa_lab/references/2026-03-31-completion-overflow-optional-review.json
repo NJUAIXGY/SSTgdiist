@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "artifact_role": "dated_optional_group_review",
+  "authority_scope": "research_only_nonblocking",
+  "generated_utc": "2026-03-31T12:00:00+08:00",
+  "group": "completion_overflow_optional",
+  "families": [
+    "completion_queue_overflow_ref"
+  ],
+  "reviewer": "riscv_snn_isa_lab",
+  "decision": "approved",
+  "review_date": "2026-03-31",
+  "notes": [
+    "completion_overflow_optional 维持 singleton-family、research-only、non-blocking，不自动进入 mainline required_families。",
+    "当前显式 review 确认 singleton fallback history、admission contract 与 observer rollup 已具备冻结条件。"
+  ]
+}

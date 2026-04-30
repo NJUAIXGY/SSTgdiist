@@ -1,0 +1,70 @@
+{
+  "run_tag": "task9_phase2_smoke",
+  "case_order": [
+    "baseline_2d",
+    "memory_only_3d",
+    "noc_only_3d",
+    "full_3d",
+    "full_3d_mapping",
+    "full_3d_thermal_guard"
+  ],
+  "focus_cases": [
+    "full_3d",
+    "full_3d_mapping",
+    "full_3d_thermal_guard"
+  ],
+  "comparisons": {
+    "mapping_vs_full_3d": {
+      "mapping_score_delta": 0.7734375,
+      "same_home_stack_ratio_delta": 0.40625,
+      "vertical_target_ratio_delta": 0.40625,
+      "vertical_hops_ratio_delta": 0.0,
+      "remote_home_ratio_delta": 0.0,
+      "route_memory_overlap_delta": 0.0,
+      "vertical_link_pressure_delta": 0.24375000000000002,
+      "thermal_hotspot_score_delta": -0.00029985007496247107,
+      "stack_hotspot_penalty_delta": 0.018181818181818077
+    },
+    "thermal_guard_vs_mapping": {
+      "mapping_score_delta": -0.3671875,
+      "same_home_stack_ratio_delta": -0.15625,
+      "vertical_target_ratio_delta": -0.15625,
+      "vertical_hops_ratio_delta": 0.0,
+      "remote_home_ratio_delta": 0.0,
+      "route_memory_overlap_delta": 0.0,
+      "vertical_link_pressure_delta": -0.09375,
+      "thermal_hotspot_score_delta": 0.0,
+      "stack_hotspot_penalty_delta": 0.0
+    }
+  },
+  "focus_metrics": [
+    {
+      "case_id": "full_3d",
+      "same_home_stack_ratio": 0.5,
+      "vertical_target_ratio": 0.0,
+      "vertical_link_pressure": 0.2,
+      "thermal_hotspot_score": 1.2155172413793103
+    },
+    {
+      "case_id": "full_3d_mapping",
+      "same_home_stack_ratio": 0.90625,
+      "vertical_target_ratio": 0.40625,
+      "vertical_link_pressure": 0.44375000000000003,
+      "thermal_hotspot_score": 1.2152173913043478
+    },
+    {
+      "case_id": "full_3d_thermal_guard",
+      "same_home_stack_ratio": 0.75,
+      "vertical_target_ratio": 0.25,
+      "vertical_link_pressure": 0.35000000000000003,
+      "thermal_hotspot_score": 1.2152173913043478
+    }
+  ],
+  "outputs": {
+    "csv": "/home/xgy/remote/snn3dexp/analysis/paper_artifacts/task9_phase2_smoke/phase2_runtime_baseline_table.csv",
+    "markdown": "/home/xgy/remote/snn3dexp/analysis/paper_artifacts/task9_phase2_smoke/phase2_runtime_baseline_table.md",
+    "latex": "/home/xgy/remote/snn3dexp/analysis/paper_artifacts/task9_phase2_smoke/phase2_runtime_baseline_table.tex",
+    "svg": "/home/xgy/remote/snn3dexp/analysis/paper_artifacts/task9_phase2_smoke/phase2_runtime_focus_metrics.svg",
+    "summary_json": "/home/xgy/remote/snn3dexp/analysis/paper_artifacts/task9_phase2_smoke/phase2_runtime_summary.json"
+  }
+}

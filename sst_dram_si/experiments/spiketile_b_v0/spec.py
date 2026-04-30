@@ -1,0 +1,1074 @@
+from __future__ import annotations
+
+import json
+from dataclasses import dataclass
+from pathlib import Path
+from typing import Any, Dict, List, Optional
+
+from .utils import parse_time_to_ns
+
+
+class SpecError(ValueError):
+    pass
+
+
+try:
+    from snndl_spec.component_roles import SUPPORTED_COMPONENT_ROLES as SUPPORTED_COMPONENT_ROLES_V2
+except Exception:
+    SUPPORTED_COMPONENT_ROLES_V2: set[str] = {
+        "router",
+        "router.topology",
+        "global_step_controller",
+        "pe_mem_controller",
+        "pe_mem_controller.backend",
+        "pe_mem_bus",
+        "weight_loader",
+        "weight_loader.memory_if",
+        "pe",
+        "pe.nic",
+        "pe.core",
+        "pe.core.memory_if",
+        "pe.l1_cache",
+    }
+
+
+def _as_dict(v: Any) -> Dict[str, Any]:
+    return v if isinstance(v, dict) else {}
+
+
+def _as_list(v: Any) -> List[Any]:
+    return v if isinstance(v, list) else []
+
+
+def _as_str(v: Any, default: str = "") -> str:
+    s = str(v).strip() if v is not None else ""
+    return s if s else default
+
+
+def _as_int(v: Any, default: int = 0) -> int:
+    try:
+        return int(v)
+    except Exception:
+        return int(default)
+
+
+def _as_bool(v: Any, default: bool = False) -> bool:
+    if v is None:
+        return bool(default)
+    if isinstance(v, bool):
+        return v
+    s = str(v).strip().lower()
+    if s in ("1", "true", "yes", "y", "on"):
+        return True
+    if s in ("0", "false", "no", "n", "off"):
+        return False
+    return bool(default)
+
+
+def _reject_unknown_keys(
+    *,
+    obj: Dict[str, Any],
+    allowed: set[str],
+    ctx: str,
+    allow_unknown_fields: bool,
+) -> None:
+    if allow_unknown_fields:
+        return
+    unknown = sorted(k for k in obj.keys() if k not in allowed)
+    if unknown:
+        raise SpecError(f"unknown fields in {ctx}: {unknown}")
+
+
+def load_spec(path: str) -> Dict[str, Any]:
+    p = Path(path).expanduser().resolve()
+    if not p.exists():
+        raise SpecError(f"spec file not found: {p}")
+    try:
+        obj = json.loads(p.read_text(encoding="utf-8"))
+    except Exception as e:
+        raise SpecError(f"invalid spec json: {e}") from e
+    if not isinstance(obj, dict):
+        raise SpecError("spec must be a json object")
+    return obj
+
+
+@dataclass(frozen=True)
+class ResolvedSpec:
+    raw: Dict[str, Any]
+    state: Dict[str, Any]
+    overrides: List[Dict[str, Any]]
+
+
+def resolve_spec(raw: Dict[str, Any], *, defaults_state: Dict[str, Any]) -> Dict[str, Any]:
+    """
+    Resolve a spec-first MeshSystemSpec into legacy `state` overrides consumed by runtime/build.
+
+    This function is pure-Python and must NOT read environment variables.
+    """
+    if not isinstance(raw, dict):
+        raise SpecError("spec must be a dict")
+
+    schema_version = raw.get("schema_version")
+    if schema_version not in (1, 2, 3):
+        raise SpecError(f"unsupported schema_version={schema_version!r} (expected 1, 2, or 3)")
+
+    state = dict(defaults_state)
+
+    validate = _as_dict(raw.get("validate"))
+    allow_unknown_fields = _as_bool(validate.get("allow_unknown_fields"), False)
+    allowed_spec_keys = {
+        "model",
+        "schema_version",
+        "platform",
+        "noc",
+        "memory",
+        "pe",
+        "workload",
+        "control",
+        "gas",
+        "step",
+        "routing",
+        "loader",
+        "debug",
+        "validate",
+        "overrides",
+    }
+    if int(schema_version) in (2, 3):
+        allowed_spec_keys.add("components")
+    _reject_unknown_keys(
+        obj=raw,
+        allowed=allowed_spec_keys,
+        ctx="spec",
+        allow_unknown_fields=allow_unknown_fields,
+    )
+
+    platform = _as_dict(raw.get("platform"))
+    allowed_platform_keys = {"mesh_size", "node_limit", "exec_mode", "stop"}
+    if int(schema_version) == 3:
+        allowed_platform_keys.add("flags")
+    _reject_unknown_keys(
+        obj=platform,
+        allowed=allowed_platform_keys,
+        ctx="platform",
+        allow_unknown_fields=allow_unknown_fields,
+    )
+    if "mesh_size" in platform:
+        mesh_size = _as_int(platform.get("mesh_size"), state.get("MESH_SIZE", 4))
+        if mesh_size < 1:
+            raise SpecError(f"invalid platform.mesh_size={mesh_size!r} (expected >=1)")
+        state["MESH_SIZE"] = int(mesh_size)
+    mesh_size_value = int(state.get("MESH_SIZE", 4) or 4)
+    if "node_limit" in platform:
+        node_limit = _as_int(platform.get("node_limit"), 0)
+        if node_limit != 0:
+            total_nodes = int(mesh_size_value) * int(mesh_size_value)
+            if node_limit < 1 or node_limit > total_nodes:
+                raise SpecError(f"invalid platform.node_limit={node_limit!r} (expected 1..{total_nodes} or 0)")
+        state["SPEC_NODE_LIMIT"] = int(node_limit)
+
+    if "exec_mode" in platform:
+        exec_mode = _as_str(platform.get("exec_mode"), state.get("SPEC_EXEC_MODE", "gas")).lower()
+        if exec_mode not in ("gas", "naive_raw", "naive_opt"):
+            raise SpecError(f"invalid platform.exec_mode={exec_mode!r} (expected gas|naive_raw|naive_opt)")
+        state["SPEC_EXEC_MODE"] = exec_mode
+
+    stop = _as_dict(platform.get("stop"))
+    _reject_unknown_keys(
+        obj=stop,
+        allowed={"mode", "max_steps", "simulation_time"},
+        ctx="platform.stop",
+        allow_unknown_fields=allow_unknown_fields,
+    )
+    stop_mode = _as_str(stop.get("mode"), "").lower()
+    if stop_mode == "step_limited":
+        max_steps = _as_int(stop.get("max_steps"), 0)
+        if max_steps <= 0:
+            raise SpecError(f"invalid platform.stop.max_steps={max_steps!r} (expected >0 when mode=step_limited)")
+        state["SPEC_MAX_STEPS"] = int(max_steps)
+    elif stop_mode == "time":
+        state["SPEC_MAX_STEPS"] = 0
+    elif stop_mode:
+        raise SpecError(f"invalid platform.stop.mode={stop_mode!r} (expected step_limited|time)")
+    else:
+        # Keep legacy default (0 -> time-based via SIMULATION_TIME).
+        state.setdefault("SPEC_MAX_STEPS", 0)
+
+    if "simulation_time" in stop:
+        sim_time = _as_str(stop.get("simulation_time"), "")
+        if not sim_time:
+            raise SpecError("invalid platform.stop.simulation_time='' (expected non-empty)")
+        if parse_time_to_ns(sim_time) <= 0:
+            raise SpecError(f"invalid platform.stop.simulation_time={sim_time!r} (expected time string like '200us')")
+        state["SIMULATION_TIME"] = sim_time
+
+    if int(schema_version) == 3:
+        flags = _as_dict(platform.get("flags"))
+        _reject_unknown_keys(
+            obj=flags,
+            allowed={
+                "disable_network",
+                "export_spike_csv",
+                "enable_node_summary",
+                "enable_test_traffic",
+                "record_edge_apply_enable",
+                "record_edge_idle_enable",
+                "record_edge_scatter_enable",
+            },
+            ctx="platform.flags",
+            allow_unknown_fields=allow_unknown_fields,
+        )
+        if "disable_network" in flags:
+            state["DISABLE_NETWORK"] = _as_bool(flags.get("disable_network"), bool(state.get("DISABLE_NETWORK", False)))
+        if "export_spike_csv" in flags:
+            state["EXPORT_SPIKE_CSV"] = _as_bool(flags.get("export_spike_csv"), bool(state.get("EXPORT_SPIKE_CSV", False)))
+        if "enable_node_summary" in flags:
+            state["ENABLE_NODE_SUMMARY"] = _as_bool(
+                flags.get("enable_node_summary"), bool(state.get("ENABLE_NODE_SUMMARY", False))
+            )
+        if "enable_test_traffic" in flags:
+            state["ENABLE_TEST_TRAFFIC"] = _as_bool(flags.get("enable_test_traffic"), bool(state.get("ENABLE_TEST_TRAFFIC", False)))
+
+        if "record_edge_apply_enable" in flags:
+            state["RECORD_EDGE_APPLY_ENABLE"] = 1 if _as_bool(flags.get("record_edge_apply_enable"), True) else 0
+        if "record_edge_idle_enable" in flags:
+            state["RECORD_EDGE_IDLE_ENABLE"] = 1 if _as_bool(flags.get("record_edge_idle_enable"), True) else 0
+        if "record_edge_scatter_enable" in flags:
+            state["RECORD_EDGE_SCATTER_ENABLE"] = 1 if _as_bool(flags.get("record_edge_scatter_enable"), True) else 0
+
+    noc = _as_dict(raw.get("noc"))
+    _reject_unknown_keys(
+        obj=noc,
+        allowed={"type", "params"},
+        ctx="noc",
+        allow_unknown_fields=allow_unknown_fields,
+    )
+    noc_type = _as_str(noc.get("type"), "").strip().lower()
+    if noc_type:
+        if noc_type in ("merlin_mesh", "mesh", "merlin.mesh"):
+            noc_type = "merlin_mesh"
+        elif noc_type in ("merlin_torus", "torus", "merlin.torus"):
+            noc_type = "merlin_torus"
+        else:
+            raise SpecError(f"invalid noc.type={noc_type!r} (expected merlin_mesh|merlin_torus)")
+        state["SPEC_NOC_TYPE"] = noc_type
+    noc_params = _as_dict(noc.get("params"))
+    _reject_unknown_keys(
+        obj=noc_params,
+        allowed={"link_bw", "buffer_size", "nic_buffer_size", "router_buffer_size", "num_vns"},
+        ctx="noc.params",
+        allow_unknown_fields=allow_unknown_fields,
+    )
+    if "link_bw" in noc_params:
+        state["NETWORK_BANDWIDTH"] = _as_str(noc_params.get("link_bw"), state.get("NETWORK_BANDWIDTH", "40GiB/s"))
+    if "nic_buffer_size" in noc_params:
+        state["BUFFER_SIZE"] = _as_str(noc_params.get("nic_buffer_size"), state.get("BUFFER_SIZE", "8KiB"))
+    elif "buffer_size" in noc_params:
+        # Backward-compatible alias: noc.params.buffer_size controls NIC buffer by default.
+        state["BUFFER_SIZE"] = _as_str(noc_params.get("buffer_size"), state.get("BUFFER_SIZE", "8KiB"))
+    if "router_buffer_size" in noc_params:
+        state["ROUTER_BUFFER_SIZE"] = _as_str(noc_params.get("router_buffer_size"), state.get("ROUTER_BUFFER_SIZE", "4KiB"))
+    if "num_vns" in noc_params:
+        num_vns = _as_int(noc_params.get("num_vns"), 2)
+        if num_vns < 1:
+            raise SpecError(f"invalid noc.params.num_vns={num_vns!r} (expected >=1)")
+        state["SPEC_NETWORK_NUM_VNS"] = int(num_vns)
+
+    memory = _as_dict(raw.get("memory"))
+    allowed_memory_keys = {"type", "backend"}
+    if int(schema_version) == 3:
+        allowed_memory_keys.add("params")
+    _reject_unknown_keys(
+        obj=memory,
+        allowed=allowed_memory_keys,
+        ctx="memory",
+        allow_unknown_fields=allow_unknown_fields,
+    )
+    mem_system = _as_str(memory.get("type"), "").strip().lower()
+    if mem_system:
+        if mem_system in ("memhierarchy", "memhierarchy_per_pe", "per_pe", "per-pe"):
+            mem_system = "memhierarchy_per_pe"
+        elif mem_system in ("memhierarchy_shared", "shared", "shared_bus", "shared-bus"):
+            mem_system = "memhierarchy_shared"
+        else:
+            raise SpecError(f"invalid memory.type={mem_system!r} (expected memHierarchy|per_pe|shared)")
+        state["SPEC_MEMORY_SYSTEM"] = mem_system
+    backend = _as_dict(memory.get("backend"))
+    _reject_unknown_keys(
+        obj=backend,
+        allowed={"type", "access_time", "config_file"},
+        ctx="memory.backend",
+        allow_unknown_fields=allow_unknown_fields,
+    )
+    backend_type = _as_str(backend.get("type"), "").lower()
+    mem_params = _as_dict(memory.get("params")) if int(schema_version) == 3 else {}
+    if int(schema_version) == 3:
+        _reject_unknown_keys(
+            obj=mem_params,
+            allowed={"mem_access_time", "core_mem_region_bytes"},
+            ctx="memory.params",
+            allow_unknown_fields=allow_unknown_fields,
+        )
+    if backend_type:
+        if backend_type in ("simplemem", "simple_mem"):
+            backend_type = "simple"
+        if backend_type in ("ram2",):
+            backend_type = "ramulator2"
+        if backend_type not in ("simple", "ramulator2"):
+            raise SpecError(f"invalid memory.backend.type={backend_type!r} (expected simple|ramulator2)")
+
+        state["MEM_BACKEND"] = backend_type
+        if backend_type == "simple":
+            if "access_time" in backend:
+                state["SIMPLEMEM_ACCESS_TIME"] = _as_str(backend.get("access_time"), state.get("SIMPLEMEM_ACCESS_TIME", "100ns"))
+            elif "mem_access_time" in mem_params:
+                state["SIMPLEMEM_ACCESS_TIME"] = _as_str(mem_params.get("mem_access_time"), state.get("SIMPLEMEM_ACCESS_TIME", "100ns"))
+        else:
+            cfg_file = _as_str(backend.get("config_file"), "")
+            if not cfg_file:
+                raise SpecError("memory.backend.type=ramulator2 requires non-empty backend.config_file")
+            state["RAMULATOR2_CONFIG_FILE"] = cfg_file
+
+    pe = _as_dict(raw.get("pe"))
+    allowed_pe_keys = {
+        "cores_per_pe",
+        "neurons_per_core",
+        "l1",
+        "subcomp_line_bytes",
+        "minimal_core_params",
+        "readonly_freeze",
+        "core",
+    }
+    if int(schema_version) == 3:
+        allowed_pe_keys.add("num_cores_per_pe")
+        allowed_pe_keys.add("state_layout")
+    _reject_unknown_keys(
+        obj=pe,
+        allowed=allowed_pe_keys,
+        ctx="pe",
+        allow_unknown_fields=allow_unknown_fields,
+    )
+    if "cores_per_pe" in pe:
+        state["NUM_CORES_PER_PE"] = _as_int(pe.get("cores_per_pe"), state.get("NUM_CORES_PER_PE", 4))
+    elif int(schema_version) == 3 and "num_cores_per_pe" in pe:
+        state["NUM_CORES_PER_PE"] = _as_int(pe.get("num_cores_per_pe"), state.get("NUM_CORES_PER_PE", 4))
+    if "neurons_per_core" in pe:
+        state["NEURONS_PER_CORE"] = _as_int(pe.get("neurons_per_core"), state.get("NEURONS_PER_CORE", 4))
+    if "minimal_core_params" in pe:
+        state["SPEC_MINIMAL_CORE_PARAMS"] = _as_bool(pe.get("minimal_core_params"), False)
+
+    l1 = _as_dict(pe.get("l1"))
+    _reject_unknown_keys(
+        obj=l1,
+        allowed={"enable", "size", "assoc", "line_bytes"},
+        ctx="pe.l1",
+        allow_unknown_fields=allow_unknown_fields,
+    )
+    l1_line_bytes: Optional[int] = None
+    if "enable" in l1:
+        state["L1_ENABLE"] = _as_bool(l1.get("enable"), bool(state.get("L1_ENABLE", False)))
+    if "size" in l1:
+        state["L1_SIZE_STR"] = _as_str(l1.get("size"), state.get("L1_SIZE_STR", "16KiB"))
+    if "assoc" in l1:
+        state["L1_ASSOC"] = _as_int(l1.get("assoc"), state.get("L1_ASSOC", 8))
+    if "line_bytes" in l1:
+        lb = _as_int(l1.get("line_bytes"), 64)
+        if lb <= 0:
+            raise SpecError(f"invalid pe.l1.line_bytes={lb!r} (expected >0)")
+        l1_line_bytes = int(lb)
+        state["L1_LINE_BYTES_STR"] = str(int(lb))
+        state["SUBCOMP_LINE_BYTES"] = int(lb)
+
+    if "subcomp_line_bytes" in pe:
+        lb = _as_int(pe.get("subcomp_line_bytes"), state.get("SUBCOMP_LINE_BYTES", 64))
+        if lb <= 0:
+            raise SpecError(f"invalid pe.subcomp_line_bytes={lb!r} (expected >0)")
+        if l1_line_bytes is not None and int(lb) != int(l1_line_bytes):
+            raise SpecError(f"pe.subcomp_line_bytes={int(lb)!r} conflicts with pe.l1.line_bytes={int(l1_line_bytes)!r}")
+        state["SUBCOMP_LINE_BYTES"] = int(lb)
+        state["L1_LINE_BYTES_STR"] = str(int(lb))
+
+    readonly_freeze = _as_dict(pe.get("readonly_freeze"))
+    _reject_unknown_keys(
+        obj=readonly_freeze,
+        allowed={"enable", "v_thresh", "tau_mem"},
+        ctx="pe.readonly_freeze",
+        allow_unknown_fields=allow_unknown_fields,
+    )
+    if "enable" in readonly_freeze:
+        state["SPEC_READONLY_FREEZE_ENABLE"] = _as_bool(readonly_freeze.get("enable"), False)
+    if "v_thresh" in readonly_freeze:
+        try:
+            state["SPEC_READONLY_V_THRESH"] = float(readonly_freeze.get("v_thresh"))
+        except Exception:
+            raise SpecError(f"invalid pe.readonly_freeze.v_thresh={readonly_freeze.get('v_thresh')!r} (expected float)")
+    if "tau_mem" in readonly_freeze:
+        try:
+            state["SPEC_READONLY_TAU_MEM"] = float(readonly_freeze.get("tau_mem"))
+        except Exception:
+            raise SpecError(f"invalid pe.readonly_freeze.tau_mem={readonly_freeze.get('tau_mem')!r} (expected float)")
+
+    if int(schema_version) == 3:
+        state_layout = _as_dict(pe.get("state_layout"))
+        _reject_unknown_keys(
+            obj=state_layout,
+            allowed={"use_soa", "use_aosoa", "aosoa_block_rows"},
+            ctx="pe.state_layout",
+            allow_unknown_fields=allow_unknown_fields,
+        )
+        if "use_soa" in state_layout:
+            state["USE_SOA_STATE"] = 1 if _as_bool(state_layout.get("use_soa"), False) else 0
+        if "use_aosoa" in state_layout:
+            state["USE_AOSOA_STATE"] = 1 if _as_bool(state_layout.get("use_aosoa"), False) else 0
+        if int(state.get("USE_SOA_STATE", 0) or 0) != 0 and int(state.get("USE_AOSOA_STATE", 0) or 0) != 0:
+            raise SpecError("pe.state_layout.use_soa and pe.state_layout.use_aosoa are mutually exclusive")
+        if "aosoa_block_rows" in state_layout:
+            abr = _as_int(state_layout.get("aosoa_block_rows"), state.get("AOSOA_BLOCK_ROWS", 16))
+            if abr <= 0:
+                raise SpecError(f"invalid pe.state_layout.aosoa_block_rows={abr!r} (expected >0)")
+            state["AOSOA_BLOCK_ROWS"] = int(abr)
+
+    pe_core = _as_dict(pe.get("core"))
+    pe_core_allowed = {"apply_dense_acc_enable", "acc_shadow_verify_enable"}
+    if int(schema_version) == 3:
+        pe_core_allowed |= {"memory_warmup_cycles", "loader_barrier_cycles"}
+    _reject_unknown_keys(
+        obj=pe_core,
+        allowed=pe_core_allowed,
+        ctx="pe.core",
+        allow_unknown_fields=allow_unknown_fields,
+    )
+    if "apply_dense_acc_enable" in pe_core:
+        state["SPEC_APPLY_DENSE_ACC_ENABLE"] = _as_bool(pe_core.get("apply_dense_acc_enable"), True)
+    if "acc_shadow_verify_enable" in pe_core:
+        state["SPEC_ACC_SHADOW_VERIFY_ENABLE"] = _as_bool(pe_core.get("acc_shadow_verify_enable"), False)
+    if int(schema_version) == 3:
+        if "memory_warmup_cycles" in pe_core:
+            v = _as_int(pe_core.get("memory_warmup_cycles"), state.get("CORE_MEMORY_WARMUP_CYCLES", 200))
+            if v < 0:
+                raise SpecError(f"invalid pe.core.memory_warmup_cycles={v!r} (expected >=0)")
+            state["CORE_MEMORY_WARMUP_CYCLES"] = int(v)
+        if "loader_barrier_cycles" in pe_core:
+            v = _as_int(pe_core.get("loader_barrier_cycles"), state.get("CORE_LOADER_BARRIER_CYCLES", 0))
+            if v < 0:
+                raise SpecError(f"invalid pe.core.loader_barrier_cycles={v!r} (expected >=0)")
+            state["CORE_LOADER_BARRIER_CYCLES"] = int(v)
+
+    workload = _as_dict(raw.get("workload"))
+    allowed_workload_keys = {"impl", "stats_modules"}
+    if int(schema_version) == 3:
+        allowed_workload_keys |= {"type", "params", "spike_source"}
+    _reject_unknown_keys(
+        obj=workload,
+        allowed=allowed_workload_keys,
+        ctx="workload",
+        allow_unknown_fields=allow_unknown_fields,
+    )
+    wl_params = _as_dict(workload.get("params")) if int(schema_version) == 3 else {}
+    if int(schema_version) == 3:
+        _reject_unknown_keys(
+            obj=wl_params,
+            allowed={"tau_mem", "thresholds", "t_ref", "init_default_weight", "class_freqs"},
+            ctx="workload.params",
+            allow_unknown_fields=allow_unknown_fields,
+        )
+    wl_type = _as_str(workload.get("type"), "").lower() if int(schema_version) == 3 else ""
+    wl_impl = wl_type or _as_str(workload.get("impl"), "").lower()
+    if wl_impl:
+        state["SPEC_WORKLOAD_IMPL"] = wl_impl
+    wl_stats = _as_str(workload.get("stats_modules"), "")
+    if wl_stats:
+        state["SPEC_WORKLOAD_STATS_MODULES"] = wl_stats
+    if int(schema_version) == 3:
+        if "tau_mem" in wl_params and wl_params.get("tau_mem") is not None:
+            try:
+                state["CORE_TAU_MEM"] = float(wl_params.get("tau_mem"))
+            except Exception as e:
+                raise SpecError(f"invalid workload.params.tau_mem={wl_params.get('tau_mem')!r} (expected float)") from e
+
+        if "thresholds" in wl_params:
+            thresholds = wl_params.get("thresholds")
+            if thresholds is None:
+                state["THRESHOLDS"] = None
+            elif isinstance(thresholds, dict):
+                _reject_unknown_keys(
+                    obj=thresholds,
+                    allowed={"input", "hidden1", "hidden2", "output"},
+                    ctx="workload.params.thresholds",
+                    allow_unknown_fields=allow_unknown_fields,
+                )
+                parsed: Dict[str, float] = {}
+                for key in ("input", "hidden1", "hidden2", "output"):
+                    if key not in thresholds:
+                        continue
+                    raw_val = thresholds.get(key)
+                    if raw_val is None:
+                        continue
+                    try:
+                        parsed[key] = float(raw_val)
+                    except Exception as e:
+                        raise SpecError(
+                            f"invalid workload.params.thresholds.{key}={raw_val!r} (expected float)"
+                        ) from e
+                state["THRESHOLDS"] = parsed
+            else:
+                raise SpecError(
+                    f"invalid workload.params.thresholds={thresholds!r} "
+                    "(expected object like {input,hidden1,hidden2,output} or null)"
+                )
+
+        if "t_ref" in wl_params and wl_params.get("t_ref") is not None:
+            t_ref = _as_int(wl_params.get("t_ref"), int(state.get("CORE_T_REF", 2) or 2))
+            if t_ref < 0:
+                raise SpecError(f"invalid workload.params.t_ref={t_ref!r} (expected >=0)")
+            state["CORE_T_REF"] = int(t_ref)
+
+        if "init_default_weight" in wl_params and wl_params.get("init_default_weight") is not None:
+            try:
+                state["CORE_INIT_DEFAULT_WEIGHT"] = float(wl_params.get("init_default_weight"))
+            except Exception as e:
+                raise SpecError(
+                    f"invalid workload.params.init_default_weight={wl_params.get('init_default_weight')!r} (expected float)"
+                ) from e
+
+        if "class_freqs" in wl_params:
+            class_freqs = wl_params.get("class_freqs")
+            if class_freqs is None:
+                state["SPEC_CLASS_FREQS"] = None
+            elif isinstance(class_freqs, list):
+                if len(class_freqs) != 4:
+                    raise SpecError(
+                        f"invalid workload.params.class_freqs={class_freqs!r} (expected list of 4 numbers)"
+                    )
+                parsed_freqs: List[int] = []
+                for idx, raw_val in enumerate(class_freqs):
+                    if raw_val is None:
+                        raise SpecError(
+                            f"invalid workload.params.class_freqs[{idx}]={raw_val!r} (expected number)"
+                        )
+                    try:
+                        parsed_freqs.append(int(raw_val))
+                    except Exception as e:
+                        raise SpecError(
+                            f"invalid workload.params.class_freqs[{idx}]={raw_val!r} (expected number)"
+                        ) from e
+                state["SPEC_CLASS_FREQS"] = parsed_freqs
+            else:
+                raise SpecError(
+                    f"invalid workload.params.class_freqs={class_freqs!r} (expected list of 4 numbers or null)"
+                )
+
+        spike_source = _as_dict(workload.get("spike_source"))
+        _reject_unknown_keys(
+            obj=spike_source,
+            allowed={"enable"},
+            ctx="workload.spike_source",
+            allow_unknown_fields=allow_unknown_fields,
+        )
+        if "enable" in spike_source:
+            state["ENABLE_SPIKE_SOURCE_FLAG"] = _as_bool(
+                spike_source.get("enable"), bool(state.get("ENABLE_SPIKE_SOURCE_FLAG", False))
+            )
+
+    control = _as_dict(raw.get("control"))
+    _reject_unknown_keys(
+        obj=control,
+        allowed={
+            "global_step_sync_enable",
+            "gas_step_seq_gate_enable",
+            "global_step_ready_delay_cycles",
+            "global_step_done",
+            "global_step_ctrl",
+        },
+        ctx="control",
+        allow_unknown_fields=allow_unknown_fields,
+    )
+    if "global_step_sync_enable" in control:
+        state["GLOBAL_STEP_SYNC_ENABLE"] = _as_bool(control.get("global_step_sync_enable"), bool(state.get("GLOBAL_STEP_SYNC_ENABLE", True)))
+    if "gas_step_seq_gate_enable" in control:
+        state["SPEC_GAS_STEP_SEQ_GATE_ENABLE"] = _as_bool(control.get("gas_step_seq_gate_enable"), False)
+    if "global_step_ready_delay_cycles" in control:
+        state["SPEC_GLOBAL_STEP_READY_DELAY_CYCLES"] = _as_int(control.get("global_step_ready_delay_cycles"), 0)
+
+    gdone = _as_dict(control.get("global_step_done"))
+    _reject_unknown_keys(
+        obj=gdone,
+        allowed={"policy", "drain_min_cycles", "quiescent_min_cycles", "fixed_cycles"},
+        ctx="control.global_step_done",
+        allow_unknown_fields=allow_unknown_fields,
+    )
+    pol = _as_str(gdone.get("policy"), "").strip().lower()
+    if pol and pol not in (
+        "drain",
+        "drain_based",
+        "drainbased",
+        "quiescent",
+        "quiet",
+        "fixed",
+        "fixed_cycles",
+        "timer",
+    ):
+        raise SpecError(f"invalid control.global_step_done.policy={pol!r}")
+    if pol:
+        state["SPEC_GLOBAL_STEP_DONE_POLICY"] = pol
+    if "drain_min_cycles" in gdone:
+        state["SPEC_GLOBAL_STEP_DRAIN_MIN_CYCLES"] = _as_int(gdone.get("drain_min_cycles"), 0)
+    if "quiescent_min_cycles" in gdone:
+        state["SPEC_GLOBAL_STEP_QUIESCENT_MIN_CYCLES"] = _as_int(gdone.get("quiescent_min_cycles"), 0)
+    if "fixed_cycles" in gdone:
+        state["SPEC_GLOBAL_STEP_FIXED_CYCLES"] = _as_int(gdone.get("fixed_cycles"), 0)
+    gctrl = _as_dict(control.get("global_step_ctrl"))
+    _reject_unknown_keys(
+        obj=gctrl,
+        allowed={"verbose", "require_all_ready", "strict_seq_check"},
+        ctx="control.global_step_ctrl",
+        allow_unknown_fields=allow_unknown_fields,
+    )
+    if "verbose" in gctrl:
+        state["GLOBAL_STEP_CTRL_VERBOSE"] = _as_int(gctrl.get("verbose"), state.get("GLOBAL_STEP_CTRL_VERBOSE", 0))
+    if "require_all_ready" in gctrl:
+        state["SPEC_GLOBAL_STEP_REQUIRE_ALL_READY"] = _as_int(gctrl.get("require_all_ready"), 1)
+    if "strict_seq_check" in gctrl:
+        state["SPEC_GLOBAL_STEP_STRICT_SEQ_CHECK"] = _as_int(gctrl.get("strict_seq_check"), 0)
+
+    gas = _as_dict(raw.get("gas"))
+    _reject_unknown_keys(
+        obj=gas,
+        allowed={
+            "merge_policy",
+            "gap_k_bytes",
+            "lmax_bytes",
+            "max_inflight",
+            "row_window_bytes",
+            "row_window_timeout_ns",
+            "apply_issue_policy",
+            "apply_frags_per_issue",
+            "apply_bank_credit",
+            "apply_age_fair_ns",
+            "window_cycles",
+            "gather_quiesce_cycles",
+            "gather_min_cycles",
+            "dense_strict_cacheline",
+            "force_defer",
+        },
+        ctx="gas",
+        allow_unknown_fields=allow_unknown_fields,
+    )
+    if "merge_policy" in gas:
+        mp = _as_str(gas.get("merge_policy"), "").lower()
+        if mp and mp not in ("auto", "row", "cacheline", "none"):
+            raise SpecError(f"invalid gas.merge_policy={mp!r} (expected auto|row|cacheline|none)")
+        if mp:
+            state["_GAS_MERGE_POLICY"] = mp
+    if "gap_k_bytes" in gas:
+        v = _as_int(gas.get("gap_k_bytes"), state.get("_GAS_GAP_K_BYTES", 2048))
+        if v < 0:
+            raise SpecError(f"invalid gas.gap_k_bytes={v!r} (expected >=0)")
+        state["_GAS_GAP_K_BYTES"] = int(v)
+    if "lmax_bytes" in gas:
+        v = _as_int(gas.get("lmax_bytes"), state.get("_GAS_LMAX_BYTES", 65536))
+        if v <= 0:
+            raise SpecError(f"invalid gas.lmax_bytes={v!r} (expected >0)")
+        state["_GAS_LMAX_BYTES"] = int(v)
+    if "max_inflight" in gas:
+        v = _as_int(gas.get("max_inflight"), state.get("_GAS_MAX_INFLIGHT", 128))
+        if v <= 0:
+            raise SpecError(f"invalid gas.max_inflight={v!r} (expected >0)")
+        state["_GAS_MAX_INFLIGHT"] = int(v)
+    if "row_window_bytes" in gas:
+        v = _as_int(gas.get("row_window_bytes"), state.get("_GAS_ROW_WINDOW_BYTES", 0))
+        if v < 0:
+            raise SpecError(f"invalid gas.row_window_bytes={v!r} (expected >=0)")
+        state["_GAS_ROW_WINDOW_BYTES"] = int(v)
+    if "row_window_timeout_ns" in gas:
+        v = _as_int(gas.get("row_window_timeout_ns"), state.get("_GAS_ROW_WINDOW_TIMEOUT_NS", 0))
+        if v < 0:
+            raise SpecError(f"invalid gas.row_window_timeout_ns={v!r} (expected >=0)")
+        state["_GAS_ROW_WINDOW_TIMEOUT_NS"] = int(v)
+
+    if "apply_issue_policy" in gas:
+        p = _as_str(gas.get("apply_issue_policy"), "").strip().lower()
+        if p and p not in ("order", "bank_rr_row_sticky_age"):
+            raise SpecError(f"invalid gas.apply_issue_policy={p!r} (expected order|bank_rr_row_sticky_age)")
+        if p:
+            state["_GAS_APPLY_ISSUE_POLICY"] = p
+    if "apply_frags_per_issue" in gas:
+        v = _as_int(gas.get("apply_frags_per_issue"), state.get("_GAS_APPLY_FRAGS_PER_ISSUE", 1))
+        if v < 0:
+            raise SpecError(f"invalid gas.apply_frags_per_issue={v!r} (expected >=0)")
+        state["_GAS_APPLY_FRAGS_PER_ISSUE"] = int(v)
+    if "apply_bank_credit" in gas:
+        v = _as_int(gas.get("apply_bank_credit"), state.get("_GAS_APPLY_BANK_CREDIT", 1))
+        if v < 0:
+            raise SpecError(f"invalid gas.apply_bank_credit={v!r} (expected >=0)")
+        state["_GAS_APPLY_BANK_CREDIT"] = int(v)
+    if "apply_age_fair_ns" in gas:
+        v = _as_int(gas.get("apply_age_fair_ns"), state.get("_GAS_APPLY_AGE_FAIR_NS", 2000))
+        if v < 0:
+            raise SpecError(f"invalid gas.apply_age_fair_ns={v!r} (expected >=0)")
+        state["_GAS_APPLY_AGE_FAIR_NS"] = int(v)
+
+    window_cycles = _as_dict(gas.get("window_cycles"))
+    _reject_unknown_keys(
+        obj=window_cycles,
+        allowed={"gather", "apply", "scatter"},
+        ctx="gas.window_cycles",
+        allow_unknown_fields=allow_unknown_fields,
+    )
+    if window_cycles:
+        base_wc = dict(state.get("_GAS_WINDOW_CYCLES", {}) or {})
+        for k in ("gather", "apply", "scatter"):
+            if k in window_cycles:
+                v = _as_int(window_cycles.get(k), base_wc.get(k, 0))
+                if v < 0:
+                    raise SpecError(f"invalid gas.window_cycles.{k}={v!r} (expected >=0)")
+                base_wc[k] = int(v)
+        state["_GAS_WINDOW_CYCLES"] = base_wc
+
+    if "gather_quiesce_cycles" in gas:
+        v = _as_int(gas.get("gather_quiesce_cycles"), 0)
+        if v < 0:
+            raise SpecError(f"invalid gas.gather_quiesce_cycles={v!r} (expected >=0)")
+        state["SPEC_GAS_GATHER_QUIESCE_CYCLES"] = int(v)
+    if "gather_min_cycles" in gas:
+        v = _as_int(gas.get("gather_min_cycles"), 0)
+        if v < 0:
+            raise SpecError(f"invalid gas.gather_min_cycles={v!r} (expected >=0)")
+        state["SPEC_GAS_GATHER_MIN_CYCLES"] = int(v)
+    if "dense_strict_cacheline" in gas:
+        state["SPEC_GAS_DENSE_STRICT_CACHELINE"] = _as_bool(gas.get("dense_strict_cacheline"), False)
+    if "force_defer" in gas:
+        state["SPEC_GAS_FORCE_DEFER"] = _as_bool(gas.get("force_defer"), False)
+
+    step = _as_dict(raw.get("step"))
+    _reject_unknown_keys(
+        obj=step,
+        allowed={
+            "random_activation_enable",
+            "activation_period_cycles",
+            "activation_fraction",
+            "activation_fanout",
+            "activation_seed",
+            "activation_event_weight",
+            "activation_trigger_core",
+            "activation_use_bcsr_routes",
+            "activation_template",
+            "reset_mem_each_step",
+            "bcsr",
+        },
+        ctx="step",
+        allow_unknown_fields=allow_unknown_fields,
+    )
+    if "random_activation_enable" in step:
+        state["STEP_RANDOM_ACT_ENABLE"] = _as_int(step.get("random_activation_enable"), state.get("STEP_RANDOM_ACT_ENABLE", 0))
+    if "activation_period_cycles" in step:
+        state["STEP_ACTIVATION_PERIOD_CYCLES"] = _as_int(step.get("activation_period_cycles"), state.get("STEP_ACTIVATION_PERIOD_CYCLES", 0))
+    if "activation_fraction" in step:
+        try:
+            state["STEP_ACTIVATION_FRACTION"] = float(step.get("activation_fraction"))
+        except Exception:
+            state["STEP_ACTIVATION_FRACTION"] = float(state.get("STEP_ACTIVATION_FRACTION", 0.0))
+    if "activation_fanout" in step:
+        state["STEP_ACTIVATION_FANOUT"] = _as_int(step.get("activation_fanout"), state.get("STEP_ACTIVATION_FANOUT", 0))
+    if "activation_seed" in step:
+        state["STEP_ACTIVATION_SEED"] = _as_int(step.get("activation_seed"), state.get("STEP_ACTIVATION_SEED", 0))
+    if "activation_event_weight" in step:
+        try:
+            state["STEP_ACTIVATION_EVENT_WEIGHT"] = float(step.get("activation_event_weight"))
+        except Exception:
+            state["STEP_ACTIVATION_EVENT_WEIGHT"] = float(state.get("STEP_ACTIVATION_EVENT_WEIGHT", 0.0))
+    if "activation_trigger_core" in step:
+        state["STEP_ACTIVATION_TRIGGER_CORE"] = _as_int(step.get("activation_trigger_core"), state.get("STEP_ACTIVATION_TRIGGER_CORE", 0))
+    if "activation_use_bcsr_routes" in step:
+        state["STEP_ACTIVATION_USE_BCSR_ROUTES"] = _as_bool(step.get("activation_use_bcsr_routes"), bool(state.get("STEP_ACTIVATION_USE_BCSR_ROUTES", 0)))
+    if "activation_template" in step:
+        state["STEP_ACTIVATION_BCSR_TEMPLATE_OVERRIDE"] = _as_str(step.get("activation_template"), state.get("STEP_ACTIVATION_BCSR_TEMPLATE_OVERRIDE", ""))
+    if "reset_mem_each_step" in step:
+        state["STEP_RESET_MEM_EACH_STEP"] = _as_int(step.get("reset_mem_each_step"), state.get("STEP_RESET_MEM_EACH_STEP", 0))
+
+    step_bcsr = _as_dict(step.get("bcsr"))
+    _reject_unknown_keys(
+        obj=step_bcsr,
+        allowed={
+            "weight_epsilon",
+            "rowptr_offset",
+            "colidx_offset",
+            "blockdata_offset",
+            "blockids_offset",
+            "br",
+            "bc",
+            "idx_bytes",
+            "val_bytes",
+        },
+        ctx="step.bcsr",
+        allow_unknown_fields=allow_unknown_fields,
+    )
+    if "weight_epsilon" in step_bcsr:
+        try:
+            state["STEP_ACTIVATION_BCSR_WEIGHT_EPS"] = float(step_bcsr.get("weight_epsilon"))
+        except Exception:
+            state["STEP_ACTIVATION_BCSR_WEIGHT_EPS"] = float(state.get("STEP_ACTIVATION_BCSR_WEIGHT_EPS", 0.0))
+
+    offset_values = [
+        step_bcsr.get("rowptr_offset"),
+        step_bcsr.get("colidx_offset"),
+        step_bcsr.get("blockdata_offset"),
+        step_bcsr.get("blockids_offset"),
+    ]
+    if any(v is not None for v in offset_values) and not all(v is not None for v in offset_values):
+        raise SpecError("step.bcsr offsets must be all-or-none")
+
+    for key, st_key in (
+        ("rowptr_offset", "STEP_ACTIVATION_BCSR_ROWPTR_OFFSET"),
+        ("colidx_offset", "STEP_ACTIVATION_BCSR_COLIDX_OFFSET"),
+        ("blockdata_offset", "STEP_ACTIVATION_BCSR_BLOCKDATA_OFFSET"),
+        ("blockids_offset", "STEP_ACTIVATION_BCSR_BLOCKIDS_OFFSET"),
+        ("br", "STEP_ACTIVATION_BCSR_BR"),
+        ("bc", "STEP_ACTIVATION_BCSR_BC"),
+        ("idx_bytes", "STEP_ACTIVATION_BCSR_IDX_BYTES"),
+        ("val_bytes", "STEP_ACTIVATION_BCSR_VAL_BYTES"),
+    ):
+        if key in step_bcsr:
+            val = step_bcsr.get(key)
+            state[st_key] = None if val is None else _as_int(val, state.get(st_key, 0) or 0)
+
+    routing = _as_dict(raw.get("routing"))
+    _reject_unknown_keys(
+        obj=routing,
+        allowed={"mode", "epsilon", "topk_per_pe", "topk", "mapping_mode", "verify_enable"},
+        ctx="routing",
+        allow_unknown_fields=allow_unknown_fields,
+    )
+    if "mode" in routing:
+        mode = _as_str(routing.get("mode"), "").strip().lower()
+        if mode and mode not in ("fixed", "weight_driven", "hierarchical"):
+            raise SpecError(f"invalid routing.mode={mode!r} (expected fixed|weight_driven|hierarchical)")
+        if mode:
+            state["ROUTING_MODE"] = mode
+    if "mapping_mode" in routing:
+        mm = _as_str(routing.get("mapping_mode"), "").strip().lower()
+        if mm and mm not in ("post", "pre"):
+            raise SpecError(f"invalid routing.mapping_mode={mm!r} (expected post|pre)")
+        if mm:
+            state["SPEC_MAPPING_MODE"] = mm
+    if "epsilon" in routing:
+        try:
+            eps = float(routing.get("epsilon"))
+        except Exception:
+            raise SpecError(f"invalid routing.epsilon={routing.get('epsilon')!r} (expected float)")
+        if eps < 0.0 or eps > 1.0:
+            raise SpecError(f"invalid routing.epsilon={eps!r} (expected 0<=x<=1)")
+        state["ROUT_EPS"] = float(eps)
+    if "topk_per_pe" in routing:
+        v = _as_int(routing.get("topk_per_pe"), state.get("ROUT_TOPK_PER_PE", 2))
+        if v < 1:
+            raise SpecError(f"invalid routing.topk_per_pe={v!r} (expected >=1)")
+        state["ROUT_TOPK_PER_PE"] = int(v)
+    if "topk" in routing:
+        v = _as_int(routing.get("topk"), state.get("ROUT_TOPK", 12))
+        if v < 1:
+            raise SpecError(f"invalid routing.topk={v!r} (expected >=1)")
+        state["ROUT_TOPK"] = int(v)
+    if "verify_enable" in routing:
+        state["VERIFY_ROUTING"] = 1 if _as_bool(routing.get("verify_enable"), False) else 0
+
+    loader = _as_dict(raw.get("loader"))
+    _reject_unknown_keys(
+        obj=loader,
+        allowed={
+            "verbose",
+            "chunk_bytes",
+            "timed_seed_enable",
+            "timed_seed_allow_cache",
+            "verify_readback",
+            "verify_bytes",
+            "verify_mode",
+            "verify_samples",
+            "verify_seed",
+            "verify_colidx_start",
+            "diag_timed_read",
+            "diag_timed_read_colidx_start",
+            "write_pattern_mode",
+            "write_pattern_row_scale",
+        },
+        ctx="loader",
+        allow_unknown_fields=allow_unknown_fields,
+    )
+    if "verbose" in loader:
+        state["LOADER_VERBOSE"] = _as_int(loader.get("verbose"), state.get("LOADER_VERBOSE", 0))
+    if "chunk_bytes" in loader:
+        v = _as_int(loader.get("chunk_bytes"), state.get("LOADER_CHUNK_BYTES", 64))
+        if v <= 0:
+            raise SpecError(f"invalid loader.chunk_bytes={v!r} (expected >0)")
+        state["LOADER_CHUNK_BYTES"] = int(v)
+    if "timed_seed_enable" in loader:
+        state["LOADER_TIMED_SEED_ENABLE"] = 1 if _as_bool(loader.get("timed_seed_enable"), False) else 0
+    if "timed_seed_allow_cache" in loader:
+        state["LOADER_TIMED_SEED_ALLOW_CACHE"] = 1 if _as_bool(loader.get("timed_seed_allow_cache"), False) else 0
+    if "verify_readback" in loader:
+        state["LOADER_VERIFY_READBACK"] = 1 if _as_bool(loader.get("verify_readback"), False) else 0
+    if "verify_bytes" in loader:
+        v = _as_int(loader.get("verify_bytes"), state.get("LOADER_VERIFY_BYTES", 64))
+        if v <= 0:
+            raise SpecError(f"invalid loader.verify_bytes={v!r} (expected >0)")
+        state["LOADER_VERIFY_BYTES"] = int(v)
+    if "verify_mode" in loader:
+        mode = _as_str(loader.get("verify_mode"), "").strip().lower()
+        if mode not in ("", "raw_bcsr", "dense_rowcol_v1"):
+            raise SpecError(f"invalid loader.verify_mode={mode!r} (expected ''|raw_bcsr|dense_rowcol_v1)")
+        state["LOADER_VERIFY_MODE"] = mode
+    if "verify_samples" in loader:
+        v = _as_int(loader.get("verify_samples"), 0)
+        if v < 0:
+            raise SpecError(f"invalid loader.verify_samples={v!r} (expected >=0)")
+        state["LOADER_VERIFY_SAMPLES"] = int(v)
+    if "verify_seed" in loader:
+        v = _as_int(loader.get("verify_seed"), 0)
+        if v < 0:
+            raise SpecError(f"invalid loader.verify_seed={v!r} (expected >=0)")
+        state["LOADER_VERIFY_SEED"] = int(v)
+    if "verify_colidx_start" in loader:
+        v = _as_int(loader.get("verify_colidx_start"), state.get("LOADER_VERIFY_COLIDX_START", 441))
+        if v < 0:
+            raise SpecError(f"invalid loader.verify_colidx_start={v!r} (expected >=0)")
+        state["LOADER_VERIFY_COLIDX_START"] = int(v)
+    if "diag_timed_read" in loader:
+        state["LOADER_DIAG_TIMED_READ"] = 1 if _as_bool(loader.get("diag_timed_read"), False) else 0
+    if "diag_timed_read_colidx_start" in loader:
+        v = _as_int(
+            loader.get("diag_timed_read_colidx_start"),
+            state.get("LOADER_DIAG_TIMED_READ_COLIDX_START", state.get("LOADER_VERIFY_COLIDX_START", 441)),
+        )
+        if v < 0:
+            raise SpecError(f"invalid loader.diag_timed_read_colidx_start={v!r} (expected >=0)")
+        state["LOADER_DIAG_TIMED_READ_COLIDX_START"] = int(v)
+    if "write_pattern_mode" in loader:
+        mode = _as_str(loader.get("write_pattern_mode"), "").strip().lower()
+        if mode not in ("", "const", "dense_rowcol_v1"):
+            raise SpecError(f"invalid loader.write_pattern_mode={mode!r} (expected ''|const|dense_rowcol_v1)")
+        state["LOADER_WRITE_PATTERN_MODE"] = mode
+    if "write_pattern_row_scale" in loader:
+        v = _as_int(loader.get("write_pattern_row_scale"), 1024)
+        if v < 0:
+            raise SpecError(f"invalid loader.write_pattern_row_scale={v!r} (expected >=0)")
+        state["LOADER_WRITE_PATTERN_ROW_SCALE"] = int(v)
+
+    debug = _as_dict(raw.get("debug"))
+    _reject_unknown_keys(
+        obj=debug,
+        allowed={
+            "sentinel_enable",
+            "progress_log_interval_ns",
+            "progress_log_node",
+            "window_read_debug",
+            "window_read_debug_all_cores",
+            "debug_target_pe",
+            "debug_target_core",
+            "node_verbose",
+            "core_verbose",
+            "diag_fire_log",
+            "bcsr_merge_read_verify_enable",
+            "bcsr_merge_read_verify_sample_bytes",
+            "bcsr_merge_read_verify_max_resps",
+            "bcsr_merge_read_verify_target_pe",
+            "bcsr_merge_read_verify_target_core",
+        },
+        ctx="debug",
+        allow_unknown_fields=allow_unknown_fields,
+    )
+    if "sentinel_enable" in debug:
+        state["SENTINEL_ENABLE"] = _as_bool(debug.get("sentinel_enable"), bool(state.get("SENTINEL_ENABLE", False)))
+    if "progress_log_interval_ns" in debug:
+        state["PROGRESS_LOG_INTERVAL_NS"] = _as_int(debug.get("progress_log_interval_ns"), state.get("PROGRESS_LOG_INTERVAL_NS", 0))
+    if "progress_log_node" in debug:
+        state["PROGRESS_LOG_NODE"] = _as_int(debug.get("progress_log_node"), state.get("PROGRESS_LOG_NODE", -1))
+    if "window_read_debug" in debug:
+        state["WINDOW_READ_DEBUG"] = _as_bool(debug.get("window_read_debug"), bool(state.get("WINDOW_READ_DEBUG", False)))
+    if "window_read_debug_all_cores" in debug:
+        state["WINDOW_READ_DEBUG_ALL"] = _as_bool(debug.get("window_read_debug_all_cores"), bool(state.get("WINDOW_READ_DEBUG_ALL", False)))
+    if "debug_target_pe" in debug:
+        state["DEBUG_TARGET_PE"] = _as_int(debug.get("debug_target_pe"), state.get("DEBUG_TARGET_PE", 0))
+    if "debug_target_core" in debug:
+        state["DEBUG_TARGET_CORE"] = _as_int(debug.get("debug_target_core"), state.get("DEBUG_TARGET_CORE", 0))
+    if "node_verbose" in debug:
+        state["NODE_VERBOSE"] = _as_int(debug.get("node_verbose"), state.get("NODE_VERBOSE", 0))
+    if "core_verbose" in debug:
+        state["CORE_VERBOSE"] = _as_int(debug.get("core_verbose"), state.get("CORE_VERBOSE", 0))
+    if "diag_fire_log" in debug:
+        state["DIAG_FIRE_LOG"] = _as_bool(debug.get("diag_fire_log"), bool(state.get("DIAG_FIRE_LOG", False)))
+    if "bcsr_merge_read_verify_enable" in debug:
+        state["BCSR_MERGE_READ_VERIFY_ENABLE"] = _as_bool(debug.get("bcsr_merge_read_verify_enable"), False)
+    if "bcsr_merge_read_verify_sample_bytes" in debug:
+        state["BCSR_MERGE_READ_VERIFY_SAMPLE_BYTES"] = _as_int(debug.get("bcsr_merge_read_verify_sample_bytes"), 64)
+    if "bcsr_merge_read_verify_max_resps" in debug:
+        state["BCSR_MERGE_READ_VERIFY_MAX_RESPS"] = _as_int(debug.get("bcsr_merge_read_verify_max_resps"), 8)
+    if "bcsr_merge_read_verify_target_pe" in debug:
+        state["BCSR_MERGE_READ_VERIFY_TARGET_PE"] = _as_int(debug.get("bcsr_merge_read_verify_target_pe"), 0)
+    if "bcsr_merge_read_verify_target_core" in debug:
+        state["BCSR_MERGE_READ_VERIFY_TARGET_CORE"] = _as_int(debug.get("bcsr_merge_read_verify_target_core"), 0)
+
+    _reject_unknown_keys(
+        obj=validate,
+        allowed={"profile", "allow_unknown_fields"},
+        ctx="validate",
+        allow_unknown_fields=allow_unknown_fields,
+    )
+
+    # Fill spec-only keys with deterministic defaults (so downstream code can rely on presence).
+    state.setdefault("SPEC_NETWORK_NUM_VNS", 2)
+    state.setdefault("SPEC_WORKLOAD_IMPL", "snn")
+    state.setdefault("SPEC_WORKLOAD_STATS_MODULES", "")
+    state.setdefault("SPEC_GLOBAL_STEP_REQUIRE_ALL_READY", 1)
+    state.setdefault("SPEC_GLOBAL_STEP_STRICT_SEQ_CHECK", 0)
+    state.setdefault("SPEC_EXEC_MODE", "gas")
+    state.setdefault("SPEC_MAX_STEPS", 0)
+    state.setdefault("SPEC_NOC_TYPE", "merlin_mesh")
+    state.setdefault("ROUTER_BUFFER_SIZE", "4KiB")
+    state.setdefault("SPEC_MEMORY_SYSTEM", "memhierarchy_per_pe")
+    state.setdefault("SPEC_MAPPING_MODE", "post")
+    state.setdefault("SPEC_MINIMAL_CORE_PARAMS", False)
+    state.setdefault("SPEC_READONLY_FREEZE_ENABLE", False)
+    state.setdefault("SPEC_READONLY_V_THRESH", 1.0e9)
+    state.setdefault("SPEC_READONLY_TAU_MEM", 0.001)
+    state.setdefault("SPEC_APPLY_DENSE_ACC_ENABLE", True)
+    state.setdefault("SPEC_ACC_SHADOW_VERIFY_ENABLE", False)
+
+    overrides = _as_list(raw.get("overrides"))
+    if not all(isinstance(x, dict) for x in overrides):
+        raise SpecError("overrides must be a list of objects")
+
+    if int(schema_version) in (2, 3):
+        components = raw.get("components")
+        if components is None:
+            components = {}
+        if not isinstance(components, dict):
+            raise SpecError("components must be an object (role -> params)")
+
+        component_rules: List[Dict[str, Any]] = []
+        for role in sorted(components.keys()):
+            params = components.get(role)
+            if not isinstance(role, str) or not role.strip():
+                raise SpecError(f"invalid components role={role!r} (expected non-empty string)")
+            role = role.strip()
+            if (role not in SUPPORTED_COMPONENT_ROLES_V2) and (not allow_unknown_fields):
+                raise SpecError(f"unknown components role={role!r} (supported: {sorted(SUPPORTED_COMPONENT_ROLES_V2)})")
+            if params is None:
+                continue
+            if not isinstance(params, dict):
+                raise SpecError(f"invalid components[{role!r}] (expected params object)")
+            if not all(isinstance(k, str) for k in params.keys()):
+                raise SpecError(f"invalid components[{role!r}] params keys (expected strings)")
+            bad_values = []
+            for k, v in params.items():
+                if v is None or isinstance(v, (str, int, float, bool)):
+                    continue
+                bad_values.append(k)
+            if bad_values:
+                raise SpecError(
+                    f"invalid components[{role!r}] param values for keys {sorted(bad_values)!r} "
+                    "(expected scalar JSON values: string/number/bool/null)"
+                )
+            component_rules.append({"match": {"role": role}, "params": dict(params)})
+        overrides = component_rules + overrides
+
+    rs = ResolvedSpec(raw=dict(raw), state=state, overrides=[dict(x) for x in overrides])  # type: ignore[arg-type]
+    return {"raw": rs.raw, "state": rs.state, "overrides": rs.overrides}

@@ -1,0 +1,171 @@
+{
+  "all_dates_ok": false,
+  "all_ok_latest": true,
+  "artifact_role": "stable_observer_full_equivalence_history",
+  "authority_scope": "research_surface_rollup_only",
+  "compacted_entries": [
+    {
+      "all_ok": false,
+      "canonical_surface": true,
+      "count": 8,
+      "date": "2026-04-01",
+      "family_names": [
+        "barrier_wfi_order_ref",
+        "completion_queue_overflow_ref",
+        "external_dyn_desc_bad_policy_ref",
+        "external_dyn_desc_fault_overwrite_chain_ref",
+        "external_dyn_desc_fault_rearm_ref",
+        "external_dyn_desc_fault_ref",
+        "external_dyn_desc_ref",
+        "queue_backpressure_ref"
+      ],
+      "reason": "compacted_before_latest_recovery",
+      "requested_group": "all",
+      "sample_generated_utc": "2026-04-01T04:05:30.365038+00:00",
+      "sample_key": "2026-04-01T04:05:30.365038+00:00",
+      "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-04-01-equiv-matrix.json"
+    },
+    {
+      "all_ok": true,
+      "canonical_surface": true,
+      "count": 8,
+      "date": "2026-03-30",
+      "family_names": [
+        "barrier_wfi_order_ref",
+        "completion_queue_overflow_ref",
+        "external_dyn_desc_bad_policy_ref",
+        "external_dyn_desc_fault_overwrite_chain_ref",
+        "external_dyn_desc_fault_rearm_ref",
+        "external_dyn_desc_fault_ref",
+        "external_dyn_desc_ref",
+        "queue_backpressure_ref"
+      ],
+      "reason": "compacted_before_latest_recovery",
+      "requested_group": "all",
+      "sample_generated_utc": "2026-03-30T06:58:41.238013+00:00",
+      "sample_key": "2026-03-30T06:58:41.238013+00:00",
+      "summary_path": "/home/xgy/remote/.observer_recover_lab/references/2026-03-30-equiv-matrix.json"
+    },
+    {
+      "all_ok": false,
+      "canonical_surface": true,
+      "count": 8,
+      "date": "2026-03-30",
+      "family_names": [
+        "barrier_wfi_order_ref",
+        "completion_queue_overflow_ref",
+        "external_dyn_desc_bad_policy_ref",
+        "external_dyn_desc_fault_overwrite_chain_ref",
+        "external_dyn_desc_fault_rearm_ref",
+        "external_dyn_desc_fault_ref",
+        "external_dyn_desc_ref",
+        "queue_backpressure_ref"
+      ],
+      "reason": "compacted_before_latest_recovery",
+      "requested_group": "all",
+      "sample_generated_utc": "2026-03-30T06:37:04.030637+00:00",
+      "sample_key": "2026-03-30T06:37:04.030637+00:00",
+      "summary_path": "/home/xgy/remote/.observer_fail_lab/references/2026-03-30-equiv-matrix.json"
+    }
+  ],
+  "compacted_entry_count": 3,
+  "effective_all_dates_ok": true,
+  "effective_entry_count": 1,
+  "entries": [
+    {
+      "all_ok": true,
+      "canonical_surface": true,
+      "count": 8,
+      "date": "2026-04-02",
+      "family_names": [
+        "barrier_wfi_order_ref",
+        "completion_queue_overflow_ref",
+        "external_dyn_desc_bad_policy_ref",
+        "external_dyn_desc_fault_overwrite_chain_ref",
+        "external_dyn_desc_fault_rearm_ref",
+        "external_dyn_desc_fault_ref",
+        "external_dyn_desc_ref",
+        "queue_backpressure_ref"
+      ],
+      "generated_utc": "2026-04-02T12:56:39.376726+00:00",
+      "requested_group": "all",
+      "sample_generated_utc": "2026-04-02T12:56:39.376726+00:00",
+      "sample_key": "2026-04-02T12:56:39.376726+00:00",
+      "source_kind": "group_matrix",
+      "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-04-02-equiv-matrix.json"
+    },
+    {
+      "all_ok": false,
+      "canonical_surface": true,
+      "count": 8,
+      "date": "2026-04-01",
+      "family_names": [
+        "barrier_wfi_order_ref",
+        "completion_queue_overflow_ref",
+        "external_dyn_desc_bad_policy_ref",
+        "external_dyn_desc_fault_overwrite_chain_ref",
+        "external_dyn_desc_fault_rearm_ref",
+        "external_dyn_desc_fault_ref",
+        "external_dyn_desc_ref",
+        "queue_backpressure_ref"
+      ],
+      "requested_group": "all",
+      "sample_generated_utc": "2026-04-01T04:05:30.365038+00:00",
+      "sample_key": "2026-04-01T04:05:30.365038+00:00",
+      "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-04-01-equiv-matrix.json"
+    },
+    {
+      "all_ok": true,
+      "canonical_surface": true,
+      "count": 8,
+      "date": "2026-03-30",
+      "family_names": [
+        "barrier_wfi_order_ref",
+        "completion_queue_overflow_ref",
+        "external_dyn_desc_bad_policy_ref",
+        "external_dyn_desc_fault_overwrite_chain_ref",
+        "external_dyn_desc_fault_rearm_ref",
+        "external_dyn_desc_fault_ref",
+        "external_dyn_desc_ref",
+        "queue_backpressure_ref"
+      ],
+      "requested_group": "all",
+      "sample_generated_utc": "2026-03-30T06:58:41.238013+00:00",
+      "sample_key": "2026-03-30T06:58:41.238013+00:00",
+      "summary_path": "/home/xgy/remote/.observer_recover_lab/references/2026-03-30-equiv-matrix.json"
+    },
+    {
+      "all_ok": false,
+      "canonical_surface": true,
+      "count": 8,
+      "date": "2026-03-30",
+      "family_names": [
+        "barrier_wfi_order_ref",
+        "completion_queue_overflow_ref",
+        "external_dyn_desc_bad_policy_ref",
+        "external_dyn_desc_fault_overwrite_chain_ref",
+        "external_dyn_desc_fault_rearm_ref",
+        "external_dyn_desc_fault_ref",
+        "external_dyn_desc_ref",
+        "queue_backpressure_ref"
+      ],
+      "requested_group": "all",
+      "sample_generated_utc": "2026-03-30T06:37:04.030637+00:00",
+      "sample_key": "2026-03-30T06:37:04.030637+00:00",
+      "summary_path": "/home/xgy/remote/.observer_fail_lab/references/2026-03-30-equiv-matrix.json"
+    }
+  ],
+  "entry_count": 4,
+  "excluded_entries": [],
+  "excluded_entry_count": 0,
+  "first_fail_date": "2026-03-30",
+  "generated_utc": "2026-04-08T04:31:24.726222+00:00",
+  "history_contract": "observer_sample_sequence_v1",
+  "latest_date": "2026-04-02",
+  "latest_recovered_date": "2026-04-02",
+  "latest_summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-04-02-equiv-matrix.json",
+  "producer": "riscv_snn_lab.refresh_observer_full_equivalence_history",
+  "refresh_mode": "compact_latest_recovery",
+  "schema_version": 2,
+  "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/observer-full-equivalence-history.json"
+}

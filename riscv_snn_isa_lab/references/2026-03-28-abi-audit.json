@@ -1,0 +1,93 @@
+{
+  "all_ok": true,
+  "artifact_role": "dated_abi_authority_audit",
+  "authority_include": "/home/xgy/remote/riscv_snn_isa_lab/spec_authority/riscv_snn_accel_v1.inc",
+  "authority_json": "/home/xgy/remote/riscv_snn_isa_lab/spec_authority/riscv_snn_accel_v1.json",
+  "authority_scope": "single_abi_authority_surface",
+  "generated_include_matches_checked_in": true,
+  "generated_utc": "2026-03-28T07:41:13.023077+00:00",
+  "producer": "riscv_snn_lab.audit_abi_surface",
+  "schema_version": 2,
+  "toolchain_all_ok": true,
+  "toolchain_count": 6,
+  "toolchain_programs": [
+    {
+      "abi_bridge_exists": true,
+      "abi_bridge_line": ".include \"../../spec_authority/riscv_snn_accel_v1.inc\"",
+      "abi_bridge_matches_authority": true,
+      "abi_bridge_resolved": "/home/xgy/remote/riscv_snn_isa_lab/spec_authority/riscv_snn_accel_v1.inc",
+      "abi_bridge_target": "../../spec_authority/riscv_snn_accel_v1.inc",
+      "abi_path": "/home/xgy/remote/riscv_snn_isa_lab/firmware_src/external_dyn_desc_ref_toolchain/abi.inc",
+      "main_path": "/home/xgy/remote/riscv_snn_isa_lab/firmware_src/external_dyn_desc_ref_toolchain/main.S",
+      "main_uses_abi_bridge": true,
+      "ok": true,
+      "program": "external_dyn_desc_ref_toolchain",
+      "toolchain_dir": "/home/xgy/remote/riscv_snn_isa_lab/firmware_src/external_dyn_desc_ref_toolchain"
+    },
+    {
+      "abi_bridge_exists": true,
+      "abi_bridge_line": ".include \"../../spec_authority/riscv_snn_accel_v1.inc\"",
+      "abi_bridge_matches_authority": true,
+      "abi_bridge_resolved": "/home/xgy/remote/riscv_snn_isa_lab/spec_authority/riscv_snn_accel_v1.inc",
+      "abi_bridge_target": "../../spec_authority/riscv_snn_accel_v1.inc",
+      "abi_path": "/home/xgy/remote/riscv_snn_isa_lab/firmware_src/external_dyn_desc_fault_ref_toolchain/abi.inc",
+      "main_path": "/home/xgy/remote/riscv_snn_isa_lab/firmware_src/external_dyn_desc_fault_ref_toolchain/main.S",
+      "main_uses_abi_bridge": true,
+      "ok": true,
+      "program": "external_dyn_desc_fault_ref_toolchain",
+      "toolchain_dir": "/home/xgy/remote/riscv_snn_isa_lab/firmware_src/external_dyn_desc_fault_ref_toolchain"
+    },
+    {
+      "abi_bridge_exists": true,
+      "abi_bridge_line": ".include \"../../spec_authority/riscv_snn_accel_v1.inc\"",
+      "abi_bridge_matches_authority": true,
+      "abi_bridge_resolved": "/home/xgy/remote/riscv_snn_isa_lab/spec_authority/riscv_snn_accel_v1.inc",
+      "abi_bridge_target": "../../spec_authority/riscv_snn_accel_v1.inc",
+      "abi_path": "/home/xgy/remote/riscv_snn_isa_lab/firmware_src/external_dyn_desc_bad_policy_ref_toolchain/abi.inc",
+      "main_path": "/home/xgy/remote/riscv_snn_isa_lab/firmware_src/external_dyn_desc_bad_policy_ref_toolchain/main.S",
+      "main_uses_abi_bridge": true,
+      "ok": true,
+      "program": "external_dyn_desc_bad_policy_ref_toolchain",
+      "toolchain_dir": "/home/xgy/remote/riscv_snn_isa_lab/firmware_src/external_dyn_desc_bad_policy_ref_toolchain"
+    },
+    {
+      "abi_bridge_exists": true,
+      "abi_bridge_line": ".include \"../../spec_authority/riscv_snn_accel_v1.inc\"",
+      "abi_bridge_matches_authority": true,
+      "abi_bridge_resolved": "/home/xgy/remote/riscv_snn_isa_lab/spec_authority/riscv_snn_accel_v1.inc",
+      "abi_bridge_target": "../../spec_authority/riscv_snn_accel_v1.inc",
+      "abi_path": "/home/xgy/remote/riscv_snn_isa_lab/firmware_src/external_dyn_desc_fault_rearm_ref_toolchain/abi.inc",
+      "main_path": "/home/xgy/remote/riscv_snn_isa_lab/firmware_src/external_dyn_desc_fault_rearm_ref_toolchain/main.S",
+      "main_uses_abi_bridge": true,
+      "ok": true,
+      "program": "external_dyn_desc_fault_rearm_ref_toolchain",
+      "toolchain_dir": "/home/xgy/remote/riscv_snn_isa_lab/firmware_src/external_dyn_desc_fault_rearm_ref_toolchain"
+    },
+    {
+      "abi_bridge_exists": true,
+      "abi_bridge_line": ".include \"../../spec_authority/riscv_snn_accel_v1.inc\"",
+      "abi_bridge_matches_authority": true,
+      "abi_bridge_resolved": "/home/xgy/remote/riscv_snn_isa_lab/spec_authority/riscv_snn_accel_v1.inc",
+      "abi_bridge_target": "../../spec_authority/riscv_snn_accel_v1.inc",
+      "abi_path": "/home/xgy/remote/riscv_snn_isa_lab/firmware_src/external_dyn_desc_fault_overwrite_chain_ref_toolchain/abi.inc",
+      "main_path": "/home/xgy/remote/riscv_snn_isa_lab/firmware_src/external_dyn_desc_fault_overwrite_chain_ref_toolchain/main.S",
+      "main_uses_abi_bridge": true,
+      "ok": true,
+      "program": "external_dyn_desc_fault_overwrite_chain_ref_toolchain",
+      "toolchain_dir": "/home/xgy/remote/riscv_snn_isa_lab/firmware_src/external_dyn_desc_fault_overwrite_chain_ref_toolchain"
+    },
+    {
+      "abi_bridge_exists": true,
+      "abi_bridge_line": ".include \"../../spec_authority/riscv_snn_accel_v1.inc\"",
+      "abi_bridge_matches_authority": true,
+      "abi_bridge_resolved": "/home/xgy/remote/riscv_snn_isa_lab/spec_authority/riscv_snn_accel_v1.inc",
+      "abi_bridge_target": "../../spec_authority/riscv_snn_accel_v1.inc",
+      "abi_path": "/home/xgy/remote/riscv_snn_isa_lab/firmware_src/barrier_wfi_order_ref_toolchain/abi.inc",
+      "main_path": "/home/xgy/remote/riscv_snn_isa_lab/firmware_src/barrier_wfi_order_ref_toolchain/main.S",
+      "main_uses_abi_bridge": true,
+      "ok": true,
+      "program": "barrier_wfi_order_ref_toolchain",
+      "toolchain_dir": "/home/xgy/remote/riscv_snn_isa_lab/firmware_src/barrier_wfi_order_ref_toolchain"
+    }
+  ]
+}

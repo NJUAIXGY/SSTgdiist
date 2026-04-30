@@ -1,0 +1,30 @@
+{
+  "enabled": false,
+  "policy": "disabled",
+  "signal_source": "disabled",
+  "thermal_signal_source": "disabled",
+  "thermal_state_source": "disabled",
+  "route_memory_overlap": 0.0,
+  "vertical_link_pressure": 0.0,
+  "stack_hotspot_penalty": 0.0,
+  "remap_epoch": 0,
+  "homeroute_adjustment_count": 0,
+  "thermal_guard_actions": 0,
+  "action_labels": [],
+  "recommended_actions": [],
+  "recommended_weights": {
+    "mapping_route_weight": 1.0,
+    "mapping_stack_home_weight": 1.5,
+    "mapping_vertical_penalty": 0.75
+  },
+  "thermal_observability": {
+    "peak_temperature_c": null,
+    "avg_temperature_c": null,
+    "hotspot_block_count": 0,
+    "hotspot_layer_count": 0,
+    "vertical_gradient_c": 0.0,
+    "top_layer_peak_c": null,
+    "bottom_layer_peak_c": null,
+    "thermal_hotspot_score": 0.0
+  }
+}

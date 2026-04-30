@@ -1,0 +1,1808 @@
+{
+  "run_tag": "task4_window_stop_runtime_closure_mainline",
+  "requested_run_tags_by_case": {
+    "baseline_2d": "task4_window_stop_runtime_closure_mainline",
+    "memory_only_3d": "task4_window_stop_runtime_closure_mainline",
+    "noc_only_3d": "task4_window_stop_runtime_closure_mainline",
+    "full_3d": "task4_window_stop_runtime_closure_mainline",
+    "full_3d_monolithic_proxy": "task4_window_stop_runtime_closure_mainline",
+    "full_3d_tile_bundle_v3": "task4_window_stop_runtime_closure_mainline",
+    "full_3d_runtime_adaptive": "task4_window_stop_runtime_closure_mainline"
+  },
+  "case_order": [
+    "baseline_2d",
+    "memory_only_3d",
+    "noc_only_3d",
+    "full_3d",
+    "full_3d_monolithic_proxy",
+    "full_3d_tile_bundle_v3",
+    "full_3d_runtime_adaptive"
+  ],
+  "focus_cases": [
+    "full_3d",
+    "full_3d_mapping",
+    "full_3d_thermal_guard"
+  ],
+  "comparisons": {
+    "mapping_vs_full_3d": {
+      "mapping_score_delta": 0.75,
+      "same_home_stack_ratio_delta": -0.5,
+      "vertical_target_ratio_delta": 0.0,
+      "vertical_hops_ratio_delta": 0.0,
+      "remote_home_ratio_delta": 0.0,
+      "route_memory_overlap_delta": 0.0,
+      "vertical_link_pressure_delta": 0.0,
+      "thermal_hotspot_score_delta": -1.25,
+      "stack_hotspot_penalty_delta": 0.0,
+      "vertical_bandwidth_budget_delta": -2.0,
+      "tsv_miv_budget_pressure_delta": 0.0,
+      "power_density_score_delta": -1.5625,
+      "reliability_penalty_delta": -0.253125,
+      "remap_epoch_delta": 0.0,
+      "homeroute_adjustment_count_delta": 0.0,
+      "thermal_guard_actions_delta": 0.0
+    },
+    "thermal_guard_vs_mapping": {
+      "mapping_score_delta": 0.0,
+      "same_home_stack_ratio_delta": 0.0,
+      "vertical_target_ratio_delta": 0.0,
+      "vertical_hops_ratio_delta": 0.0,
+      "remote_home_ratio_delta": 0.0,
+      "route_memory_overlap_delta": 0.0,
+      "vertical_link_pressure_delta": 0.0,
+      "thermal_hotspot_score_delta": 0.0,
+      "stack_hotspot_penalty_delta": 0.0,
+      "vertical_bandwidth_budget_delta": 0.0,
+      "tsv_miv_budget_pressure_delta": 0.0,
+      "power_density_score_delta": 0.0,
+      "reliability_penalty_delta": 0.0,
+      "remap_epoch_delta": 0.0,
+      "homeroute_adjustment_count_delta": 0.0,
+      "thermal_guard_actions_delta": 0.0
+    }
+  },
+  "focus_metrics": [
+    {
+      "case_id": "full_3d",
+      "same_home_stack_ratio": 0.5,
+      "vertical_target_ratio": 0.0,
+      "vertical_link_pressure": 0.0,
+      "thermal_hotspot_score": 1.25
+    }
+  ],
+  "runtime_focus_cases": [
+    "full_3d_runtime_adaptive"
+  ],
+  "runtime_focus_metrics": [
+    {
+      "case_id": "full_3d_runtime_adaptive",
+      "runtime_enabled": true,
+      "control_mode": "adaptive_control",
+      "case_role": "calibration_only",
+      "runtime_policy": "adaptive_3d",
+      "runtime_signal_source": "predictive_static",
+      "thermal_state_source": "online_rc_estimator",
+      "control_decision": "executed_control",
+      "control_decision_source": "hybrid",
+      "control_trigger_signals": [
+        "route_memory_overlap",
+        "stack_hotspot_penalty",
+        "vertical_link_pressure"
+      ],
+      "observe_only": false,
+      "recommend_only": false,
+      "executed_control": true,
+      "thermal_input_source_kind": "local_hotspot_sidecar",
+      "hotspot_threshold_c": 70.0,
+      "hotspot_threshold_source": "effective_config.thermal.hotspot_threshold_c",
+      "route_memory_overlap": 0.0,
+      "vertical_link_pressure": 0.24375,
+      "stack_hotspot_penalty": 0.25,
+      "route_thermal_coupling_score": 0.0,
+      "memory_thermal_coupling_proxy": 0.0,
+      "route_barrier_coupling_proxy": 0.0,
+      "memory_barrier_coupling_proxy": 0.0,
+      "closed_loop_candidate": false,
+      "remap_epoch": 256,
+      "homeroute_adjustment_count": 2,
+      "thermal_guard_actions": 2,
+      "peak_temperature_c": 48.313510937000004,
+      "avg_temperature_c": 46.304185742187514,
+      "vertical_gradient_c": 0.0,
+      "hotspot_block_count": 0,
+      "hotspot_layer_count": 0,
+      "thermal_replay_sample_count": 1,
+      "hotspot_driver_status": "ran",
+      "hotspot_model_type": "grid",
+      "hotspot_temperature_source": "hotspot_steady_temp",
+      "hotspot_peak_temperature_c": 45.03000000000003,
+      "hotspot_avg_temperature_c": 45.029999999999966,
+      "hotspot_peak_delta_c": 3.283510936999974,
+      "hotspot_avg_delta_c": 1.274185742187548,
+      "hotspot_block_delta": 0,
+      "hotspot_layer_delta": 0
+    }
+  ],
+  "runtime_comparisons": {
+    "runtime_adaptive_vs_full_3d": {
+      "mapping_score_delta": 0.7734375,
+      "same_home_stack_ratio_delta": 0.40625,
+      "vertical_target_ratio_delta": 0.40625,
+      "vertical_hops_ratio_delta": 0.0,
+      "remote_home_ratio_delta": 0.0,
+      "route_memory_overlap_delta": 0.0,
+      "vertical_link_pressure_delta": 0.24375,
+      "thermal_hotspot_score_delta": 0.0,
+      "stack_hotspot_penalty_delta": 0.25,
+      "vertical_bandwidth_budget_delta": 0.0,
+      "tsv_miv_budget_pressure_delta": 0.17138671875,
+      "power_density_score_delta": 0.1953125,
+      "reliability_penalty_delta": 0.18215332031250003,
+      "remap_epoch_delta": 256.0,
+      "homeroute_adjustment_count_delta": 2.0,
+      "thermal_guard_actions_delta": 2.0,
+      "base_case_id": "full_3d",
+      "compare_case_id": "full_3d_runtime_adaptive",
+      "route_thermal_coupling_score_delta": 0.0,
+      "memory_thermal_coupling_proxy_delta": 0.0,
+      "route_barrier_coupling_proxy_delta": 0.0,
+      "memory_barrier_coupling_proxy_delta": 0.0,
+      "closed_loop_candidate_delta": 0,
+      "base_control_decision": "disabled",
+      "compare_control_decision": "executed_control",
+      "base_control_decision_source": "",
+      "compare_control_decision_source": "hybrid",
+      "decision_source_transition": "none->hybrid",
+      "base_control_trigger_signals": [],
+      "compare_control_trigger_signals": [
+        "route_memory_overlap",
+        "stack_hotspot_penalty",
+        "vertical_link_pressure"
+      ],
+      "base_closed_loop_candidate": false,
+      "compare_closed_loop_candidate": false
+    }
+  },
+  "route_memory_comparisons": {
+    "direct_v4_vs_bundle_v3": {
+      "available": true,
+      "base_case_id": "full_3d",
+      "compare_case_id": "full_3d_tile_bundle_v3",
+      "base": {
+        "case_id": "full_3d",
+        "direct_v4_share": 0.0,
+        "tile_bundle_v3_share": 0.0,
+        "bundle_v3_router_rx_per_tx": 0.0,
+        "tilekey_rx_per_bundle_v3_tx": 0.0,
+        "memory_requests_total": 0,
+        "total_service_deficit": 0,
+        "most_pressured_region": "metadata_lookup",
+        "synapse_gather_backlog": 0,
+        "stream_region_backlog": 0,
+        "dominant_home_access_class": "",
+        "dominant_home_stack_id": -1,
+        "attributed_service_deficit_total": 0.0,
+        "tier_local_home_total_demands": 0,
+        "same_xy_cross_tier_total_demands": 0,
+        "remote_home_total_demands": 0,
+        "tier_local_home_service_deficit_attribution": 0.0,
+        "same_xy_cross_tier_service_deficit_attribution": 0.0,
+        "remote_home_service_deficit_attribution": 0.0,
+        "active_stack_utilization": 0.0,
+        "most_pressured_stack_id": -1,
+        "most_pressured_stack_service_deficit": 0,
+        "most_pressured_controller_service_deficit_proxy": 0.0,
+        "stack_memory_request_skew": 0.0,
+        "stack_service_deficit_skew": 0.0
+      },
+      "compare": {
+        "case_id": "full_3d_tile_bundle_v3",
+        "direct_v4_share": 0.0,
+        "tile_bundle_v3_share": 0.0,
+        "bundle_v3_router_rx_per_tx": 0.0,
+        "tilekey_rx_per_bundle_v3_tx": 0.0,
+        "memory_requests_total": 0,
+        "total_service_deficit": 0,
+        "most_pressured_region": "metadata_lookup",
+        "synapse_gather_backlog": 0,
+        "stream_region_backlog": 0,
+        "dominant_home_access_class": "",
+        "dominant_home_stack_id": -1,
+        "attributed_service_deficit_total": 0.0,
+        "tier_local_home_total_demands": 0,
+        "same_xy_cross_tier_total_demands": 0,
+        "remote_home_total_demands": 0,
+        "tier_local_home_service_deficit_attribution": 0.0,
+        "same_xy_cross_tier_service_deficit_attribution": 0.0,
+        "remote_home_service_deficit_attribution": 0.0,
+        "active_stack_utilization": 0.0,
+        "most_pressured_stack_id": -1,
+        "most_pressured_stack_service_deficit": 0,
+        "most_pressured_controller_service_deficit_proxy": 0.0,
+        "stack_memory_request_skew": 0.0,
+        "stack_service_deficit_skew": 0.0
+      },
+      "deltas": {
+        "direct_v4_share": 0.0,
+        "tile_bundle_v3_share": 0.0,
+        "memory_requests_total": 0,
+        "total_service_deficit": 0,
+        "synapse_gather_backlog": 0,
+        "stream_region_backlog": 0,
+        "attributed_service_deficit_total": 0.0,
+        "tier_local_home_total_demands": 0,
+        "same_xy_cross_tier_total_demands": 0,
+        "remote_home_total_demands": 0,
+        "tier_local_home_service_deficit_attribution": 0.0,
+        "same_xy_cross_tier_service_deficit_attribution": 0.0,
+        "remote_home_service_deficit_attribution": 0.0,
+        "active_stack_utilization": 0.0,
+        "most_pressured_stack_service_deficit": 0,
+        "most_pressured_controller_service_deficit_proxy": 0.0,
+        "stack_memory_request_skew": 0.0,
+        "stack_service_deficit_skew": 0.0
+      }
+    },
+    "snn_window_direct_v4_vs_bundle_v3": {
+      "available": false,
+      "base_case_id": "full_3d_snn_window",
+      "compare_case_id": "full_3d_snn_window_bundle_v3",
+      "base": {},
+      "compare": {},
+      "deltas": {}
+    }
+  },
+  "memory_model_focus_cases": [
+    "full_3d",
+    "full_3d_monolithic_proxy"
+  ],
+  "memory_model_focus_metrics": [
+    {
+      "case_id": "full_3d",
+      "case_label": "Full 3D",
+      "run_tag": "task4_window_stop_runtime_closure_mainline",
+      "memory_kind": "hbm_like",
+      "memory_model_family": "hbm_like",
+      "memory_graph_type": "memHierarchy_shared_stack",
+      "memory_requests_total": 0,
+      "vertical_hops_ratio": 0.0,
+      "remote_home_ratio": 0.0,
+      "vertical_link_pressure": 0.0,
+      "reliability_penalty": 0.253125,
+      "dominant_home_access_class": "",
+      "dominant_home_stack_id": -1,
+      "total_service_deficit": 0,
+      "controller_steps_completed_total": 0,
+      "completed_step_normalization_available": false,
+      "memory_requests_per_completed_step": 0.0,
+      "total_service_deficit_per_completed_step": 0.0,
+      "stall_on_step_gate_cycles_total": 0,
+      "stall_on_step_gate_cycles_per_completed_step": 0.0,
+      "tier_local_home_total_demands": 0,
+      "same_xy_cross_tier_total_demands": 0,
+      "remote_home_total_demands": 0,
+      "tier_local_home_service_deficit_attribution": 0.0,
+      "same_xy_cross_tier_service_deficit_attribution": 0.0,
+      "remote_home_service_deficit_attribution": 0.0,
+      "active_stack_utilization": 0.0,
+      "most_pressured_stack_id": -1,
+      "most_pressured_stack_service_deficit": 0,
+      "most_pressured_controller_service_deficit_proxy": 0.0,
+      "stack_memory_request_skew": 0.0,
+      "stack_service_deficit_skew": 0.0,
+      "tier_balance": {
+        "active_tier_ids": [],
+        "memory_requests_imbalance_ratio": 0.0,
+        "service_deficit_imbalance_ratio": 0.0,
+        "hot_memory_tier_ids": [],
+        "hot_service_deficit_tier_ids": []
+      },
+      "tier_totals": []
+    },
+    {
+      "case_id": "full_3d_monolithic_proxy",
+      "case_label": "Full 3D + Monolithic Proxy",
+      "run_tag": "task4_window_stop_runtime_closure_mainline",
+      "memory_kind": "monolithic_like",
+      "memory_model_family": "monolithic_like",
+      "memory_graph_type": "memHierarchy_tier_local_stack",
+      "memory_requests_total": 0,
+      "vertical_hops_ratio": 0.0,
+      "remote_home_ratio": 0.0,
+      "vertical_link_pressure": 0.15,
+      "reliability_penalty": 0.5638392857142858,
+      "dominant_home_access_class": "",
+      "dominant_home_stack_id": -1,
+      "total_service_deficit": 0,
+      "controller_steps_completed_total": 0,
+      "completed_step_normalization_available": false,
+      "memory_requests_per_completed_step": 0.0,
+      "total_service_deficit_per_completed_step": 0.0,
+      "stall_on_step_gate_cycles_total": 0,
+      "stall_on_step_gate_cycles_per_completed_step": 0.0,
+      "tier_local_home_total_demands": 0,
+      "same_xy_cross_tier_total_demands": 0,
+      "remote_home_total_demands": 0,
+      "tier_local_home_service_deficit_attribution": 0.0,
+      "same_xy_cross_tier_service_deficit_attribution": 0.0,
+      "remote_home_service_deficit_attribution": 0.0,
+      "active_stack_utilization": 0.0,
+      "most_pressured_stack_id": -1,
+      "most_pressured_stack_service_deficit": 0,
+      "most_pressured_controller_service_deficit_proxy": 0.0,
+      "stack_memory_request_skew": 0.0,
+      "stack_service_deficit_skew": 0.0,
+      "tier_balance": {
+        "active_tier_ids": [],
+        "memory_requests_imbalance_ratio": 0.0,
+        "service_deficit_imbalance_ratio": 0.0,
+        "hot_memory_tier_ids": [],
+        "hot_service_deficit_tier_ids": []
+      },
+      "tier_totals": []
+    }
+  ],
+  "memory_model_comparisons": {
+    "hbm_like_vs_monolithic_like": {
+      "available": true,
+      "base_case_id": "full_3d",
+      "compare_case_id": "full_3d_monolithic_proxy",
+      "base": {
+        "case_id": "full_3d",
+        "memory_model_family": "hbm_like",
+        "memory_kind": "hbm_like",
+        "memory_graph_type": "memHierarchy_shared_stack",
+        "memory_requests_total": 0,
+        "memory_requests_per_completed_step": 0.0,
+        "vertical_hops_ratio": 0.0,
+        "remote_home_ratio": 0.0,
+        "total_service_deficit": 0,
+        "total_service_deficit_per_completed_step": 0.0,
+        "stall_on_step_gate_cycles_per_completed_step": 0.0,
+        "vertical_link_pressure": 0.0,
+        "reliability_penalty": 0.253125,
+        "dominant_home_access_class": "",
+        "dominant_home_stack_id": -1,
+        "completed_step_normalization_available": false,
+        "tier_local_home_total_demands": 0,
+        "same_xy_cross_tier_total_demands": 0,
+        "remote_home_total_demands": 0,
+        "tier_local_home_service_deficit_attribution": 0.0,
+        "same_xy_cross_tier_service_deficit_attribution": 0.0,
+        "remote_home_service_deficit_attribution": 0.0,
+        "active_stack_utilization": 0.0,
+        "most_pressured_stack_id": -1,
+        "most_pressured_stack_service_deficit": 0,
+        "most_pressured_controller_service_deficit_proxy": 0.0,
+        "stack_memory_request_skew": 0.0,
+        "stack_service_deficit_skew": 0.0
+      },
+      "compare": {
+        "case_id": "full_3d_monolithic_proxy",
+        "memory_model_family": "monolithic_like",
+        "memory_kind": "monolithic_like",
+        "memory_graph_type": "memHierarchy_tier_local_stack",
+        "memory_requests_total": 0,
+        "memory_requests_per_completed_step": 0.0,
+        "vertical_hops_ratio": 0.0,
+        "remote_home_ratio": 0.0,
+        "total_service_deficit": 0,
+        "total_service_deficit_per_completed_step": 0.0,
+        "stall_on_step_gate_cycles_per_completed_step": 0.0,
+        "vertical_link_pressure": 0.15,
+        "reliability_penalty": 0.5638392857142858,
+        "dominant_home_access_class": "",
+        "dominant_home_stack_id": -1,
+        "completed_step_normalization_available": false,
+        "tier_local_home_total_demands": 0,
+        "same_xy_cross_tier_total_demands": 0,
+        "remote_home_total_demands": 0,
+        "tier_local_home_service_deficit_attribution": 0.0,
+        "same_xy_cross_tier_service_deficit_attribution": 0.0,
+        "remote_home_service_deficit_attribution": 0.0,
+        "active_stack_utilization": 0.0,
+        "most_pressured_stack_id": -1,
+        "most_pressured_stack_service_deficit": 0,
+        "most_pressured_controller_service_deficit_proxy": 0.0,
+        "stack_memory_request_skew": 0.0,
+        "stack_service_deficit_skew": 0.0
+      },
+      "deltas": {
+        "memory_requests_total": 0,
+        "memory_requests_per_completed_step": 0.0,
+        "vertical_hops_ratio": 0.0,
+        "remote_home_ratio": 0.0,
+        "total_service_deficit": 0,
+        "total_service_deficit_per_completed_step": 0.0,
+        "stall_on_step_gate_cycles_per_completed_step": 0.0,
+        "vertical_link_pressure": 0.15,
+        "reliability_penalty": 0.3107142857142858,
+        "tier_local_home_total_demands": 0,
+        "same_xy_cross_tier_total_demands": 0,
+        "remote_home_total_demands": 0,
+        "tier_local_home_service_deficit_attribution": 0.0,
+        "same_xy_cross_tier_service_deficit_attribution": 0.0,
+        "remote_home_service_deficit_attribution": 0.0,
+        "active_stack_utilization": 0.0,
+        "most_pressured_stack_service_deficit": 0,
+        "most_pressured_controller_service_deficit_proxy": 0.0,
+        "stack_memory_request_skew": 0.0,
+        "stack_service_deficit_skew": 0.0
+      },
+      "base_case_tier_balance": {
+        "active_tier_ids": [],
+        "memory_requests_imbalance_ratio": 0.0,
+        "service_deficit_imbalance_ratio": 0.0,
+        "hot_memory_tier_ids": [],
+        "hot_service_deficit_tier_ids": []
+      },
+      "compare_case_tier_balance": {
+        "active_tier_ids": [],
+        "memory_requests_imbalance_ratio": 0.0,
+        "service_deficit_imbalance_ratio": 0.0,
+        "hot_memory_tier_ids": [],
+        "hot_service_deficit_tier_ids": []
+      },
+      "base_case_tier_totals": [],
+      "compare_case_tier_totals": []
+    }
+  },
+  "memory_home_stack_codesign": {
+    "available": true,
+    "case_ids": [
+      "full_3d",
+      "full_3d_monolithic_proxy"
+    ],
+    "case_count": 2,
+    "rows": [
+      {
+        "case_id": "full_3d",
+        "case_label": "Full 3D",
+        "run_tag": "task4_window_stop_runtime_closure_mainline",
+        "memory_model_family": "hbm_like",
+        "memory_graph_type": "memHierarchy_shared_stack",
+        "dominant_home_access_class": "",
+        "dominant_home_stack_id": -1,
+        "tier_local_home_total_demands": 0,
+        "same_xy_cross_tier_total_demands": 0,
+        "remote_home_total_demands": 0,
+        "tier_local_home_service_deficit_attribution": 0.0,
+        "same_xy_cross_tier_service_deficit_attribution": 0.0,
+        "remote_home_service_deficit_attribution": 0.0,
+        "active_stack_utilization": 0.0,
+        "most_pressured_stack_id": -1,
+        "most_pressured_stack_service_deficit": 0,
+        "most_pressured_controller_service_deficit_proxy": 0.0,
+        "stack_memory_request_skew": 0.0,
+        "stack_service_deficit_skew": 0.0,
+        "memory_requests_total": 0,
+        "vertical_hops_ratio": 0.0,
+        "remote_home_ratio": 0.0
+      },
+      {
+        "case_id": "full_3d_monolithic_proxy",
+        "case_label": "Full 3D + Monolithic Proxy",
+        "run_tag": "task4_window_stop_runtime_closure_mainline",
+        "memory_model_family": "monolithic_like",
+        "memory_graph_type": "memHierarchy_tier_local_stack",
+        "dominant_home_access_class": "",
+        "dominant_home_stack_id": -1,
+        "tier_local_home_total_demands": 0,
+        "same_xy_cross_tier_total_demands": 0,
+        "remote_home_total_demands": 0,
+        "tier_local_home_service_deficit_attribution": 0.0,
+        "same_xy_cross_tier_service_deficit_attribution": 0.0,
+        "remote_home_service_deficit_attribution": 0.0,
+        "active_stack_utilization": 0.0,
+        "most_pressured_stack_id": -1,
+        "most_pressured_stack_service_deficit": 0,
+        "most_pressured_controller_service_deficit_proxy": 0.0,
+        "stack_memory_request_skew": 0.0,
+        "stack_service_deficit_skew": 0.0,
+        "memory_requests_total": 0,
+        "vertical_hops_ratio": 0.0,
+        "remote_home_ratio": 0.0
+      }
+    ],
+    "bundle_vs_direct": {
+      "tier_local_home_total_demands_delta": 0,
+      "same_xy_cross_tier_total_demands_delta": 0,
+      "remote_home_total_demands_delta": 0,
+      "tier_local_home_service_deficit_attribution_delta": 0.0,
+      "same_xy_cross_tier_service_deficit_attribution_delta": 0.0,
+      "remote_home_service_deficit_attribution_delta": 0.0,
+      "active_stack_utilization_delta": 0.0,
+      "most_pressured_stack_service_deficit_delta": 0,
+      "most_pressured_controller_service_deficit_proxy_delta": 0.0,
+      "stack_memory_request_skew_delta": 0.0,
+      "stack_service_deficit_skew_delta": 0.0
+    },
+    "monolithic_vs_hbm": {
+      "tier_local_home_total_demands_delta": 0,
+      "same_xy_cross_tier_total_demands_delta": 0,
+      "remote_home_total_demands_delta": 0,
+      "tier_local_home_service_deficit_attribution_delta": 0.0,
+      "same_xy_cross_tier_service_deficit_attribution_delta": 0.0,
+      "remote_home_service_deficit_attribution_delta": 0.0,
+      "active_stack_utilization_delta": 0.0,
+      "most_pressured_stack_service_deficit_delta": 0,
+      "most_pressured_controller_service_deficit_proxy_delta": 0.0,
+      "stack_memory_request_skew_delta": 0.0,
+      "stack_service_deficit_skew_delta": 0.0
+    },
+    "outputs": {
+      "csv": "/home/xgy/remote/snn3dexp/analysis/codesign_matrix/task4_window_stop_runtime_closure_mainline/phase2_artifacts/phase2_memory_home_stack_codesign.csv",
+      "markdown": "/home/xgy/remote/snn3dexp/analysis/codesign_matrix/task4_window_stop_runtime_closure_mainline/phase2_artifacts/phase2_memory_home_stack_codesign.md",
+      "latex": "/home/xgy/remote/snn3dexp/analysis/codesign_matrix/task4_window_stop_runtime_closure_mainline/phase2_artifacts/phase2_memory_home_stack_codesign.tex"
+    }
+  },
+  "thermal_calibration": {
+    "available": true,
+    "filter": {
+      "hotspot_driver_status": "ran"
+    },
+    "summary": {
+      "eligible_case_count": 2,
+      "eligible_case_ids": [
+        "full_3d",
+        "full_3d_runtime_adaptive"
+      ],
+      "excluded_case_ids": [
+        "baseline_2d",
+        "full_3d_monolithic_proxy",
+        "full_3d_tile_bundle_v3",
+        "memory_only_3d",
+        "noc_only_3d"
+      ],
+      "hotspot_status_counts": {
+        "disabled": 5,
+        "ran": 2
+      },
+      "hotspot_temperature_source_counts": {
+        "hotspot_steady_temp": 2
+      },
+      "runtime_state_source_counts": {
+        "thermal_hooks": 5,
+        "online_rc_estimator": 2
+      },
+      "hotspot_threshold_c_counts": {
+        "70.0": 7
+      },
+      "hotspot_threshold_source_counts": {
+        "effective_config.thermal.hotspot_threshold_c": 7
+      },
+      "hotspot_threshold_profile_count": 1,
+      "hotspot_threshold_consistent": true,
+      "hotspot_threshold_profiles": [
+        {
+          "hotspot_threshold_c": 70.0,
+          "hotspot_threshold_source": "effective_config.thermal.hotspot_threshold_c",
+          "case_count": 7
+        }
+      ]
+    },
+    "cases": [
+      {
+        "case_id": "full_3d",
+        "run_tag": "task4_window_stop_runtime_closure_mainline",
+        "runtime_enabled": false,
+        "control_mode": "observe_only",
+        "case_role": "calibration_only",
+        "hotspot_driver_status": "ran",
+        "hotspot_temperature_source": "hotspot_steady_temp",
+        "runtime_state_source": "online_rc_estimator",
+        "runtime_peak_temperature_c": 46.801875,
+        "hotspot_peak_temperature_c": 45.02000000000004,
+        "hotspot_peak_delta_c": 1.781874999999964,
+        "runtime_avg_temperature_c": 45.79454583333335,
+        "hotspot_avg_temperature_c": 45.02000000000023,
+        "hotspot_avg_delta_c": 0.7745458333331214,
+        "runtime_hotspot_block_count": 0,
+        "hotspot_block_count": 0,
+        "hotspot_block_delta": 0,
+        "runtime_hotspot_layer_count": 0,
+        "hotspot_layer_count": 0,
+        "hotspot_layer_delta": 0,
+        "hotspot_threshold_c": 70.0,
+        "hotspot_threshold_source": "effective_config.thermal.hotspot_threshold_c"
+      },
+      {
+        "case_id": "full_3d_runtime_adaptive",
+        "run_tag": "task4_window_stop_runtime_closure_mainline",
+        "runtime_enabled": true,
+        "control_mode": "adaptive_control",
+        "case_role": "calibration_only",
+        "hotspot_driver_status": "ran",
+        "hotspot_temperature_source": "hotspot_steady_temp",
+        "runtime_state_source": "online_rc_estimator",
+        "runtime_peak_temperature_c": 48.313510937000004,
+        "hotspot_peak_temperature_c": 45.03000000000003,
+        "hotspot_peak_delta_c": 3.283510936999974,
+        "runtime_avg_temperature_c": 46.304185742187514,
+        "hotspot_avg_temperature_c": 45.029999999999966,
+        "hotspot_avg_delta_c": 1.274185742187548,
+        "runtime_hotspot_block_count": 0,
+        "hotspot_block_count": 0,
+        "hotspot_block_delta": 0,
+        "runtime_hotspot_layer_count": 0,
+        "hotspot_layer_count": 0,
+        "hotspot_layer_delta": 0,
+        "hotspot_threshold_c": 70.0,
+        "hotspot_threshold_source": "effective_config.thermal.hotspot_threshold_c"
+      }
+    ],
+    "metrics": {
+      "hotspot_peak_delta_c": {
+        "count": 2,
+        "mean": 2.532692968499969,
+        "abs_mean": 2.532692968499969,
+        "min": 1.781874999999964,
+        "max": 3.283510936999974,
+        "max_abs": 3.283510936999974,
+        "min_case_id": "full_3d",
+        "max_case_id": "full_3d_runtime_adaptive",
+        "max_abs_case_id": "full_3d_runtime_adaptive",
+        "min_run_tag": "task4_window_stop_runtime_closure_mainline",
+        "max_run_tag": "task4_window_stop_runtime_closure_mainline",
+        "max_abs_run_tag": "task4_window_stop_runtime_closure_mainline"
+      },
+      "hotspot_avg_delta_c": {
+        "count": 2,
+        "mean": 1.0243657877603347,
+        "abs_mean": 1.0243657877603347,
+        "min": 0.7745458333331214,
+        "max": 1.274185742187548,
+        "max_abs": 1.274185742187548,
+        "min_case_id": "full_3d",
+        "max_case_id": "full_3d_runtime_adaptive",
+        "max_abs_case_id": "full_3d_runtime_adaptive",
+        "min_run_tag": "task4_window_stop_runtime_closure_mainline",
+        "max_run_tag": "task4_window_stop_runtime_closure_mainline",
+        "max_abs_run_tag": "task4_window_stop_runtime_closure_mainline"
+      },
+      "hotspot_block_delta": {
+        "count": 2,
+        "mean": 0.0,
+        "abs_mean": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "max_abs": 0.0,
+        "min_case_id": "full_3d",
+        "max_case_id": "full_3d",
+        "max_abs_case_id": "full_3d_runtime_adaptive",
+        "min_run_tag": "task4_window_stop_runtime_closure_mainline",
+        "max_run_tag": "task4_window_stop_runtime_closure_mainline",
+        "max_abs_run_tag": "task4_window_stop_runtime_closure_mainline"
+      },
+      "hotspot_layer_delta": {
+        "count": 2,
+        "mean": 0.0,
+        "abs_mean": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "max_abs": 0.0,
+        "min_case_id": "full_3d",
+        "max_case_id": "full_3d",
+        "max_abs_case_id": "full_3d_runtime_adaptive",
+        "min_run_tag": "task4_window_stop_runtime_closure_mainline",
+        "max_run_tag": "task4_window_stop_runtime_closure_mainline",
+        "max_abs_run_tag": "task4_window_stop_runtime_closure_mainline"
+      }
+    },
+    "groups": {
+      "control_mode": {
+        "adaptive_control": {
+          "available": true,
+          "summary": {
+            "eligible_case_count": 1,
+            "eligible_case_ids": [
+              "full_3d_runtime_adaptive"
+            ],
+            "excluded_case_ids": [
+              "full_3d_tile_bundle_v3"
+            ],
+            "hotspot_status_counts": {
+              "ran": 1,
+              "disabled": 1
+            },
+            "hotspot_temperature_source_counts": {
+              "hotspot_steady_temp": 1
+            },
+            "runtime_state_source_counts": {
+              "online_rc_estimator": 1,
+              "thermal_hooks": 1
+            },
+            "hotspot_threshold_c_counts": {
+              "70.0": 2
+            },
+            "hotspot_threshold_source_counts": {
+              "effective_config.thermal.hotspot_threshold_c": 2
+            },
+            "hotspot_threshold_profile_count": 1,
+            "hotspot_threshold_consistent": true,
+            "hotspot_threshold_profiles": [
+              {
+                "hotspot_threshold_c": 70.0,
+                "hotspot_threshold_source": "effective_config.thermal.hotspot_threshold_c",
+                "case_count": 2
+              }
+            ]
+          },
+          "cases": [
+            {
+              "case_id": "full_3d_runtime_adaptive",
+              "run_tag": "task4_window_stop_runtime_closure_mainline",
+              "runtime_enabled": true,
+              "control_mode": "adaptive_control",
+              "case_role": "calibration_only",
+              "hotspot_driver_status": "ran",
+              "hotspot_temperature_source": "hotspot_steady_temp",
+              "runtime_state_source": "online_rc_estimator",
+              "runtime_peak_temperature_c": 48.313510937000004,
+              "hotspot_peak_temperature_c": 45.03000000000003,
+              "hotspot_peak_delta_c": 3.283510936999974,
+              "runtime_avg_temperature_c": 46.304185742187514,
+              "hotspot_avg_temperature_c": 45.029999999999966,
+              "hotspot_avg_delta_c": 1.274185742187548,
+              "runtime_hotspot_block_count": 0,
+              "hotspot_block_count": 0,
+              "hotspot_block_delta": 0,
+              "runtime_hotspot_layer_count": 0,
+              "hotspot_layer_count": 0,
+              "hotspot_layer_delta": 0,
+              "hotspot_threshold_c": 70.0,
+              "hotspot_threshold_source": "effective_config.thermal.hotspot_threshold_c"
+            }
+          ],
+          "metrics": {
+            "hotspot_peak_delta_c": {
+              "count": 1,
+              "mean": 3.283510936999974,
+              "abs_mean": 3.283510936999974,
+              "min": 3.283510936999974,
+              "max": 3.283510936999974,
+              "max_abs": 3.283510936999974,
+              "min_case_id": "full_3d_runtime_adaptive",
+              "max_case_id": "full_3d_runtime_adaptive",
+              "max_abs_case_id": "full_3d_runtime_adaptive",
+              "min_run_tag": "task4_window_stop_runtime_closure_mainline",
+              "max_run_tag": "task4_window_stop_runtime_closure_mainline",
+              "max_abs_run_tag": "task4_window_stop_runtime_closure_mainline"
+            },
+            "hotspot_avg_delta_c": {
+              "count": 1,
+              "mean": 1.274185742187548,
+              "abs_mean": 1.274185742187548,
+              "min": 1.274185742187548,
+              "max": 1.274185742187548,
+              "max_abs": 1.274185742187548,
+              "min_case_id": "full_3d_runtime_adaptive",
+              "max_case_id": "full_3d_runtime_adaptive",
+              "max_abs_case_id": "full_3d_runtime_adaptive",
+              "min_run_tag": "task4_window_stop_runtime_closure_mainline",
+              "max_run_tag": "task4_window_stop_runtime_closure_mainline",
+              "max_abs_run_tag": "task4_window_stop_runtime_closure_mainline"
+            },
+            "hotspot_block_delta": {
+              "count": 1,
+              "mean": 0.0,
+              "abs_mean": 0.0,
+              "min": 0.0,
+              "max": 0.0,
+              "max_abs": 0.0,
+              "min_case_id": "full_3d_runtime_adaptive",
+              "max_case_id": "full_3d_runtime_adaptive",
+              "max_abs_case_id": "full_3d_runtime_adaptive",
+              "min_run_tag": "task4_window_stop_runtime_closure_mainline",
+              "max_run_tag": "task4_window_stop_runtime_closure_mainline",
+              "max_abs_run_tag": "task4_window_stop_runtime_closure_mainline"
+            },
+            "hotspot_layer_delta": {
+              "count": 1,
+              "mean": 0.0,
+              "abs_mean": 0.0,
+              "min": 0.0,
+              "max": 0.0,
+              "max_abs": 0.0,
+              "min_case_id": "full_3d_runtime_adaptive",
+              "max_case_id": "full_3d_runtime_adaptive",
+              "max_abs_case_id": "full_3d_runtime_adaptive",
+              "min_run_tag": "task4_window_stop_runtime_closure_mainline",
+              "max_run_tag": "task4_window_stop_runtime_closure_mainline",
+              "max_abs_run_tag": "task4_window_stop_runtime_closure_mainline"
+            }
+          }
+        },
+        "observe_only": {
+          "available": true,
+          "summary": {
+            "eligible_case_count": 1,
+            "eligible_case_ids": [
+              "full_3d"
+            ],
+            "excluded_case_ids": [
+              "baseline_2d",
+              "full_3d_monolithic_proxy",
+              "memory_only_3d",
+              "noc_only_3d"
+            ],
+            "hotspot_status_counts": {
+              "disabled": 4,
+              "ran": 1
+            },
+            "hotspot_temperature_source_counts": {
+              "hotspot_steady_temp": 1
+            },
+            "runtime_state_source_counts": {
+              "thermal_hooks": 4,
+              "online_rc_estimator": 1
+            },
+            "hotspot_threshold_c_counts": {
+              "70.0": 5
+            },
+            "hotspot_threshold_source_counts": {
+              "effective_config.thermal.hotspot_threshold_c": 5
+            },
+            "hotspot_threshold_profile_count": 1,
+            "hotspot_threshold_consistent": true,
+            "hotspot_threshold_profiles": [
+              {
+                "hotspot_threshold_c": 70.0,
+                "hotspot_threshold_source": "effective_config.thermal.hotspot_threshold_c",
+                "case_count": 5
+              }
+            ]
+          },
+          "cases": [
+            {
+              "case_id": "full_3d",
+              "run_tag": "task4_window_stop_runtime_closure_mainline",
+              "runtime_enabled": false,
+              "control_mode": "observe_only",
+              "case_role": "calibration_only",
+              "hotspot_driver_status": "ran",
+              "hotspot_temperature_source": "hotspot_steady_temp",
+              "runtime_state_source": "online_rc_estimator",
+              "runtime_peak_temperature_c": 46.801875,
+              "hotspot_peak_temperature_c": 45.02000000000004,
+              "hotspot_peak_delta_c": 1.781874999999964,
+              "runtime_avg_temperature_c": 45.79454583333335,
+              "hotspot_avg_temperature_c": 45.02000000000023,
+              "hotspot_avg_delta_c": 0.7745458333331214,
+              "runtime_hotspot_block_count": 0,
+              "hotspot_block_count": 0,
+              "hotspot_block_delta": 0,
+              "runtime_hotspot_layer_count": 0,
+              "hotspot_layer_count": 0,
+              "hotspot_layer_delta": 0,
+              "hotspot_threshold_c": 70.0,
+              "hotspot_threshold_source": "effective_config.thermal.hotspot_threshold_c"
+            }
+          ],
+          "metrics": {
+            "hotspot_peak_delta_c": {
+              "count": 1,
+              "mean": 1.781874999999964,
+              "abs_mean": 1.781874999999964,
+              "min": 1.781874999999964,
+              "max": 1.781874999999964,
+              "max_abs": 1.781874999999964,
+              "min_case_id": "full_3d",
+              "max_case_id": "full_3d",
+              "max_abs_case_id": "full_3d",
+              "min_run_tag": "task4_window_stop_runtime_closure_mainline",
+              "max_run_tag": "task4_window_stop_runtime_closure_mainline",
+              "max_abs_run_tag": "task4_window_stop_runtime_closure_mainline"
+            },
+            "hotspot_avg_delta_c": {
+              "count": 1,
+              "mean": 0.7745458333331214,
+              "abs_mean": 0.7745458333331214,
+              "min": 0.7745458333331214,
+              "max": 0.7745458333331214,
+              "max_abs": 0.7745458333331214,
+              "min_case_id": "full_3d",
+              "max_case_id": "full_3d",
+              "max_abs_case_id": "full_3d",
+              "min_run_tag": "task4_window_stop_runtime_closure_mainline",
+              "max_run_tag": "task4_window_stop_runtime_closure_mainline",
+              "max_abs_run_tag": "task4_window_stop_runtime_closure_mainline"
+            },
+            "hotspot_block_delta": {
+              "count": 1,
+              "mean": 0.0,
+              "abs_mean": 0.0,
+              "min": 0.0,
+              "max": 0.0,
+              "max_abs": 0.0,
+              "min_case_id": "full_3d",
+              "max_case_id": "full_3d",
+              "max_abs_case_id": "full_3d",
+              "min_run_tag": "task4_window_stop_runtime_closure_mainline",
+              "max_run_tag": "task4_window_stop_runtime_closure_mainline",
+              "max_abs_run_tag": "task4_window_stop_runtime_closure_mainline"
+            },
+            "hotspot_layer_delta": {
+              "count": 1,
+              "mean": 0.0,
+              "abs_mean": 0.0,
+              "min": 0.0,
+              "max": 0.0,
+              "max_abs": 0.0,
+              "min_case_id": "full_3d",
+              "max_case_id": "full_3d",
+              "max_abs_case_id": "full_3d",
+              "min_run_tag": "task4_window_stop_runtime_closure_mainline",
+              "max_run_tag": "task4_window_stop_runtime_closure_mainline",
+              "max_abs_run_tag": "task4_window_stop_runtime_closure_mainline"
+            }
+          }
+        }
+      },
+      "case_role": {
+        "calibration_only": {
+          "available": true,
+          "summary": {
+            "eligible_case_count": 2,
+            "eligible_case_ids": [
+              "full_3d",
+              "full_3d_runtime_adaptive"
+            ],
+            "excluded_case_ids": [
+              "baseline_2d",
+              "full_3d_monolithic_proxy",
+              "full_3d_tile_bundle_v3",
+              "memory_only_3d",
+              "noc_only_3d"
+            ],
+            "hotspot_status_counts": {
+              "disabled": 5,
+              "ran": 2
+            },
+            "hotspot_temperature_source_counts": {
+              "hotspot_steady_temp": 2
+            },
+            "runtime_state_source_counts": {
+              "thermal_hooks": 5,
+              "online_rc_estimator": 2
+            },
+            "hotspot_threshold_c_counts": {
+              "70.0": 7
+            },
+            "hotspot_threshold_source_counts": {
+              "effective_config.thermal.hotspot_threshold_c": 7
+            },
+            "hotspot_threshold_profile_count": 1,
+            "hotspot_threshold_consistent": true,
+            "hotspot_threshold_profiles": [
+              {
+                "hotspot_threshold_c": 70.0,
+                "hotspot_threshold_source": "effective_config.thermal.hotspot_threshold_c",
+                "case_count": 7
+              }
+            ]
+          },
+          "cases": [
+            {
+              "case_id": "full_3d",
+              "run_tag": "task4_window_stop_runtime_closure_mainline",
+              "runtime_enabled": false,
+              "control_mode": "observe_only",
+              "case_role": "calibration_only",
+              "hotspot_driver_status": "ran",
+              "hotspot_temperature_source": "hotspot_steady_temp",
+              "runtime_state_source": "online_rc_estimator",
+              "runtime_peak_temperature_c": 46.801875,
+              "hotspot_peak_temperature_c": 45.02000000000004,
+              "hotspot_peak_delta_c": 1.781874999999964,
+              "runtime_avg_temperature_c": 45.79454583333335,
+              "hotspot_avg_temperature_c": 45.02000000000023,
+              "hotspot_avg_delta_c": 0.7745458333331214,
+              "runtime_hotspot_block_count": 0,
+              "hotspot_block_count": 0,
+              "hotspot_block_delta": 0,
+              "runtime_hotspot_layer_count": 0,
+              "hotspot_layer_count": 0,
+              "hotspot_layer_delta": 0,
+              "hotspot_threshold_c": 70.0,
+              "hotspot_threshold_source": "effective_config.thermal.hotspot_threshold_c"
+            },
+            {
+              "case_id": "full_3d_runtime_adaptive",
+              "run_tag": "task4_window_stop_runtime_closure_mainline",
+              "runtime_enabled": true,
+              "control_mode": "adaptive_control",
+              "case_role": "calibration_only",
+              "hotspot_driver_status": "ran",
+              "hotspot_temperature_source": "hotspot_steady_temp",
+              "runtime_state_source": "online_rc_estimator",
+              "runtime_peak_temperature_c": 48.313510937000004,
+              "hotspot_peak_temperature_c": 45.03000000000003,
+              "hotspot_peak_delta_c": 3.283510936999974,
+              "runtime_avg_temperature_c": 46.304185742187514,
+              "hotspot_avg_temperature_c": 45.029999999999966,
+              "hotspot_avg_delta_c": 1.274185742187548,
+              "runtime_hotspot_block_count": 0,
+              "hotspot_block_count": 0,
+              "hotspot_block_delta": 0,
+              "runtime_hotspot_layer_count": 0,
+              "hotspot_layer_count": 0,
+              "hotspot_layer_delta": 0,
+              "hotspot_threshold_c": 70.0,
+              "hotspot_threshold_source": "effective_config.thermal.hotspot_threshold_c"
+            }
+          ],
+          "metrics": {
+            "hotspot_peak_delta_c": {
+              "count": 2,
+              "mean": 2.532692968499969,
+              "abs_mean": 2.532692968499969,
+              "min": 1.781874999999964,
+              "max": 3.283510936999974,
+              "max_abs": 3.283510936999974,
+              "min_case_id": "full_3d",
+              "max_case_id": "full_3d_runtime_adaptive",
+              "max_abs_case_id": "full_3d_runtime_adaptive",
+              "min_run_tag": "task4_window_stop_runtime_closure_mainline",
+              "max_run_tag": "task4_window_stop_runtime_closure_mainline",
+              "max_abs_run_tag": "task4_window_stop_runtime_closure_mainline"
+            },
+            "hotspot_avg_delta_c": {
+              "count": 2,
+              "mean": 1.0243657877603347,
+              "abs_mean": 1.0243657877603347,
+              "min": 0.7745458333331214,
+              "max": 1.274185742187548,
+              "max_abs": 1.274185742187548,
+              "min_case_id": "full_3d",
+              "max_case_id": "full_3d_runtime_adaptive",
+              "max_abs_case_id": "full_3d_runtime_adaptive",
+              "min_run_tag": "task4_window_stop_runtime_closure_mainline",
+              "max_run_tag": "task4_window_stop_runtime_closure_mainline",
+              "max_abs_run_tag": "task4_window_stop_runtime_closure_mainline"
+            },
+            "hotspot_block_delta": {
+              "count": 2,
+              "mean": 0.0,
+              "abs_mean": 0.0,
+              "min": 0.0,
+              "max": 0.0,
+              "max_abs": 0.0,
+              "min_case_id": "full_3d",
+              "max_case_id": "full_3d",
+              "max_abs_case_id": "full_3d_runtime_adaptive",
+              "min_run_tag": "task4_window_stop_runtime_closure_mainline",
+              "max_run_tag": "task4_window_stop_runtime_closure_mainline",
+              "max_abs_run_tag": "task4_window_stop_runtime_closure_mainline"
+            },
+            "hotspot_layer_delta": {
+              "count": 2,
+              "mean": 0.0,
+              "abs_mean": 0.0,
+              "min": 0.0,
+              "max": 0.0,
+              "max_abs": 0.0,
+              "min_case_id": "full_3d",
+              "max_case_id": "full_3d",
+              "max_abs_case_id": "full_3d_runtime_adaptive",
+              "min_run_tag": "task4_window_stop_runtime_closure_mainline",
+              "max_run_tag": "task4_window_stop_runtime_closure_mainline",
+              "max_abs_run_tag": "task4_window_stop_runtime_closure_mainline"
+            }
+          }
+        }
+      }
+    }
+  },
+  "thermal_input_preparation": {
+    "available": true,
+    "summary": {
+      "case_count": 7,
+      "cases_with_summary_path": 2,
+      "cases_with_window_power_samples_path": 2,
+      "shared_summary_case_ids": [],
+      "shared_window_power_sample_case_ids": [],
+      "independent_candidate_case_ids": [
+        "full_3d",
+        "full_3d_runtime_adaptive"
+      ],
+      "blocked_case_ids": [
+        "baseline_2d",
+        "full_3d_monolithic_proxy",
+        "full_3d_tile_bundle_v3",
+        "memory_only_3d",
+        "noc_only_3d"
+      ]
+    },
+    "cases": [
+      {
+        "case_id": "baseline_2d",
+        "run_tag": "task4_window_stop_runtime_closure_mainline",
+        "runtime_enabled": false,
+        "control_mode": "observe_only",
+        "case_role": "calibration_only",
+        "input_source_kind": "runtime_observability_only",
+        "summary_path": "",
+        "summary_exists": false,
+        "window_power_samples_path": "",
+        "window_power_samples_exists": false,
+        "window_power_sample_count": 0,
+        "trace_sources": [],
+        "shared_input_key": "",
+        "shared_summary_path": false,
+        "shared_window_power_samples_path": false,
+        "independent_candidate": false,
+        "blocking_reasons": [
+          "missing_replay_artifacts"
+        ]
+      },
+      {
+        "case_id": "full_3d",
+        "run_tag": "task4_window_stop_runtime_closure_mainline",
+        "runtime_enabled": false,
+        "control_mode": "observe_only",
+        "case_role": "calibration_only",
+        "input_source_kind": "local_hotspot_sidecar",
+        "summary_path": "/home/xgy/remote/snn3dexp/runs/full_3d/task4_window_stop_runtime_closure_mainline/thermal_sidecar/summary/thermal_summary.json",
+        "summary_exists": true,
+        "window_power_samples_path": "/home/xgy/remote/snn3dexp/runs/full_3d/task4_window_stop_runtime_closure_mainline/thermal_sidecar/summary/window_power_samples.jsonl",
+        "window_power_samples_exists": true,
+        "window_power_sample_count": 1,
+        "trace_sources": [
+          "proxy_synthesized"
+        ],
+        "shared_input_key": "/home/xgy/remote/snn3dexp/runs/full_3d/task4_window_stop_runtime_closure_mainline/thermal_sidecar/summary/thermal_summary.json",
+        "shared_summary_path": false,
+        "shared_window_power_samples_path": false,
+        "independent_candidate": true,
+        "blocking_reasons": []
+      },
+      {
+        "case_id": "full_3d_monolithic_proxy",
+        "run_tag": "task4_window_stop_runtime_closure_mainline",
+        "runtime_enabled": false,
+        "control_mode": "observe_only",
+        "case_role": "calibration_only",
+        "input_source_kind": "runtime_observability_only",
+        "summary_path": "",
+        "summary_exists": false,
+        "window_power_samples_path": "",
+        "window_power_samples_exists": false,
+        "window_power_sample_count": 0,
+        "trace_sources": [],
+        "shared_input_key": "",
+        "shared_summary_path": false,
+        "shared_window_power_samples_path": false,
+        "independent_candidate": false,
+        "blocking_reasons": [
+          "missing_replay_artifacts"
+        ]
+      },
+      {
+        "case_id": "full_3d_runtime_adaptive",
+        "run_tag": "task4_window_stop_runtime_closure_mainline",
+        "runtime_enabled": true,
+        "control_mode": "adaptive_control",
+        "case_role": "calibration_only",
+        "input_source_kind": "local_hotspot_sidecar",
+        "summary_path": "/home/xgy/remote/snn3dexp/runs/full_3d_runtime_adaptive/task4_window_stop_runtime_closure_mainline/thermal_sidecar/summary/thermal_summary.json",
+        "summary_exists": true,
+        "window_power_samples_path": "/home/xgy/remote/snn3dexp/runs/full_3d_runtime_adaptive/task4_window_stop_runtime_closure_mainline/thermal_sidecar/summary/window_power_samples.jsonl",
+        "window_power_samples_exists": true,
+        "window_power_sample_count": 1,
+        "trace_sources": [
+          "proxy_runtime_policy"
+        ],
+        "shared_input_key": "/home/xgy/remote/snn3dexp/runs/full_3d_runtime_adaptive/task4_window_stop_runtime_closure_mainline/thermal_sidecar/summary/thermal_summary.json",
+        "shared_summary_path": false,
+        "shared_window_power_samples_path": false,
+        "independent_candidate": true,
+        "blocking_reasons": []
+      },
+      {
+        "case_id": "full_3d_tile_bundle_v3",
+        "run_tag": "task4_window_stop_runtime_closure_mainline",
+        "runtime_enabled": true,
+        "control_mode": "adaptive_control",
+        "case_role": "calibration_only",
+        "input_source_kind": "runtime_observability_only",
+        "summary_path": "",
+        "summary_exists": false,
+        "window_power_samples_path": "",
+        "window_power_samples_exists": false,
+        "window_power_sample_count": 0,
+        "trace_sources": [],
+        "shared_input_key": "",
+        "shared_summary_path": false,
+        "shared_window_power_samples_path": false,
+        "independent_candidate": false,
+        "blocking_reasons": [
+          "missing_replay_artifacts"
+        ]
+      },
+      {
+        "case_id": "memory_only_3d",
+        "run_tag": "task4_window_stop_runtime_closure_mainline",
+        "runtime_enabled": false,
+        "control_mode": "observe_only",
+        "case_role": "calibration_only",
+        "input_source_kind": "runtime_observability_only",
+        "summary_path": "",
+        "summary_exists": false,
+        "window_power_samples_path": "",
+        "window_power_samples_exists": false,
+        "window_power_sample_count": 0,
+        "trace_sources": [],
+        "shared_input_key": "",
+        "shared_summary_path": false,
+        "shared_window_power_samples_path": false,
+        "independent_candidate": false,
+        "blocking_reasons": [
+          "missing_replay_artifacts"
+        ]
+      },
+      {
+        "case_id": "noc_only_3d",
+        "run_tag": "task4_window_stop_runtime_closure_mainline",
+        "runtime_enabled": false,
+        "control_mode": "observe_only",
+        "case_role": "calibration_only",
+        "input_source_kind": "runtime_observability_only",
+        "summary_path": "",
+        "summary_exists": false,
+        "window_power_samples_path": "",
+        "window_power_samples_exists": false,
+        "window_power_sample_count": 0,
+        "trace_sources": [],
+        "shared_input_key": "",
+        "shared_summary_path": false,
+        "shared_window_power_samples_path": false,
+        "independent_candidate": false,
+        "blocking_reasons": [
+          "missing_replay_artifacts"
+        ]
+      }
+    ],
+    "prepared_manifest": {
+      "case_ids": [
+        "full_3d",
+        "full_3d_runtime_adaptive"
+      ],
+      "run_tags_by_case": {
+        "full_3d": "task4_window_stop_runtime_closure_mainline",
+        "full_3d_runtime_adaptive": "task4_window_stop_runtime_closure_mainline"
+      }
+    }
+  },
+  "realism_focus_metrics": [
+    {
+      "case_id": "full_3d",
+      "vertical_bandwidth_budget": 2.0,
+      "tsv_miv_budget_pressure": 0.0,
+      "power_density_score": 1.5625,
+      "reliability_penalty": 0.253125
+    }
+  ],
+  "outputs": {
+    "csv": "/home/xgy/remote/snn3dexp/analysis/codesign_matrix/task4_window_stop_runtime_closure_mainline/phase2_artifacts/phase2_runtime_baseline_table.csv",
+    "markdown": "/home/xgy/remote/snn3dexp/analysis/codesign_matrix/task4_window_stop_runtime_closure_mainline/phase2_artifacts/phase2_runtime_baseline_table.md",
+    "latex": "/home/xgy/remote/snn3dexp/analysis/codesign_matrix/task4_window_stop_runtime_closure_mainline/phase2_artifacts/phase2_runtime_baseline_table.tex",
+    "svg": "/home/xgy/remote/snn3dexp/analysis/codesign_matrix/task4_window_stop_runtime_closure_mainline/phase2_artifacts/phase2_runtime_focus_metrics.svg",
+    "route_memory_compare_svg": "/home/xgy/remote/snn3dexp/analysis/codesign_matrix/task4_window_stop_runtime_closure_mainline/phase2_artifacts/phase2_route_memory_compare.svg",
+    "snn_window_route_memory_compare_svg": "/home/xgy/remote/snn3dexp/analysis/codesign_matrix/task4_window_stop_runtime_closure_mainline/phase2_artifacts/phase2_snn_window_route_memory_compare.svg",
+    "snn_window_route_memory_compare_csv": "/home/xgy/remote/snn3dexp/analysis/codesign_matrix/task4_window_stop_runtime_closure_mainline/phase2_artifacts/phase2_snn_window_route_memory_compare.csv",
+    "memory_model_compare_svg": "/home/xgy/remote/snn3dexp/analysis/codesign_matrix/task4_window_stop_runtime_closure_mainline/phase2_artifacts/phase2_memory_model_compare.svg",
+    "memory_tier_csv": "/home/xgy/remote/snn3dexp/analysis/codesign_matrix/task4_window_stop_runtime_closure_mainline/phase2_artifacts/phase2_memory_tier_table.csv",
+    "thermal_calibration_csv": "/home/xgy/remote/snn3dexp/analysis/codesign_matrix/task4_window_stop_runtime_closure_mainline/phase2_artifacts/phase2_thermal_calibration_table.csv",
+    "thermal_calibration_svg": "/home/xgy/remote/snn3dexp/analysis/codesign_matrix/task4_window_stop_runtime_closure_mainline/phase2_artifacts/phase2_thermal_calibration_compare.svg",
+    "memory_home_stack_codesign_csv": "/home/xgy/remote/snn3dexp/analysis/codesign_matrix/task4_window_stop_runtime_closure_mainline/phase2_artifacts/phase2_memory_home_stack_codesign.csv",
+    "memory_home_stack_codesign_markdown": "/home/xgy/remote/snn3dexp/analysis/codesign_matrix/task4_window_stop_runtime_closure_mainline/phase2_artifacts/phase2_memory_home_stack_codesign.md",
+    "memory_home_stack_codesign_latex": "/home/xgy/remote/snn3dexp/analysis/codesign_matrix/task4_window_stop_runtime_closure_mainline/phase2_artifacts/phase2_memory_home_stack_codesign.tex",
+    "summary_json": "/home/xgy/remote/snn3dexp/analysis/codesign_matrix/task4_window_stop_runtime_closure_mainline/phase2_artifacts/phase2_runtime_summary.json",
+    "memory_nmc_codesign_surface_summary_json": "/home/xgy/remote/snn3dexp/analysis/codesign_matrix/task4_window_stop_runtime_closure_mainline/phase2_artifacts/codesign_surface/memory_nmc_codesign_surface_summary.json",
+    "memory_nmc_codesign_surface_csv": "/home/xgy/remote/snn3dexp/analysis/codesign_matrix/task4_window_stop_runtime_closure_mainline/phase2_artifacts/codesign_surface/memory_nmc_codesign_surface.csv",
+    "memory_nmc_codesign_surface_markdown": "/home/xgy/remote/snn3dexp/analysis/codesign_matrix/task4_window_stop_runtime_closure_mainline/phase2_artifacts/codesign_surface/memory_nmc_codesign_surface.md",
+    "route_runtime_diff_summary_json": "/home/xgy/remote/snn3dexp/analysis/codesign_matrix/task4_window_stop_runtime_closure_mainline/phase2_artifacts/route_runtime_diff/memory_nmc_route_runtime_diff_summary.json",
+    "route_runtime_diff_csv": "/home/xgy/remote/snn3dexp/analysis/codesign_matrix/task4_window_stop_runtime_closure_mainline/phase2_artifacts/route_runtime_diff/memory_nmc_route_runtime_diff.csv",
+    "route_runtime_diff_markdown": "/home/xgy/remote/snn3dexp/analysis/codesign_matrix/task4_window_stop_runtime_closure_mainline/phase2_artifacts/route_runtime_diff/memory_nmc_route_runtime_diff.md",
+    "route_runtime_diff_mechanism_progression_csv": "/home/xgy/remote/snn3dexp/analysis/codesign_matrix/task4_window_stop_runtime_closure_mainline/phase2_artifacts/route_runtime_diff/memory_nmc_route_runtime_mechanism_progression.csv",
+    "route_runtime_diff_joint_pressure_csv": "/home/xgy/remote/snn3dexp/analysis/codesign_matrix/task4_window_stop_runtime_closure_mainline/phase2_artifacts/route_runtime_diff/memory_nmc_route_runtime_joint_pressure.csv",
+    "route_runtime_diff_runtime_control_closure_csv": "/home/xgy/remote/snn3dexp/analysis/codesign_matrix/task4_window_stop_runtime_closure_mainline/phase2_artifacts/route_runtime_diff/memory_nmc_route_runtime_control_closure.csv"
+  },
+  "thermal_evidence_readiness": {
+    "available": true,
+    "run_tag": "task4_window_stop_runtime_closure_mainline",
+    "manifest_path": "",
+    "run_root": "",
+    "refresh_probe_available": false,
+    "refresh_probe_error": "",
+    "summary": {
+      "focus_case_count": 1,
+      "runtime_observability_only_case_ids": [],
+      "local_hotspot_sidecar_case_ids": [
+        "full_3d_runtime_adaptive"
+      ],
+      "refreshable_case_ids": [],
+      "blocked_case_ids": [],
+      "blocking_reason_counts": {},
+      "refresh_probe_status_counts": {},
+      "refresh_probe_error_kind_counts": {}
+    },
+    "focus_cases": [
+      {
+        "case_id": "full_3d_runtime_adaptive",
+        "runtime_enabled": true,
+        "control_mode": "adaptive_control",
+        "case_role": "calibration_only",
+        "runtime_policy": "adaptive_3d",
+        "thermal_input_source_kind": "local_hotspot_sidecar",
+        "hotspot_driver_status": "ran",
+        "thermal_replay_sample_count": 1,
+        "blocking_reasons": [],
+        "independent_candidate": true,
+        "refresh_probe_status": "",
+        "refresh_probe_run_tag": "",
+        "refresh_probe_error_kind": "",
+        "refresh_probe_error": ""
+      }
+    ],
+    "refresh_probe": {
+      "requested_run_tag": "",
+      "requested_run_tags_by_case": {},
+      "requested_case_ids": [],
+      "summary": {}
+    }
+  },
+  "canonical_metric_planes": {
+    "contract_version": "v1",
+    "route_home_placement": {
+      "focus_cases": [
+        "full_3d",
+        "full_3d_mapping",
+        "full_3d_thermal_guard"
+      ],
+      "fields": [
+        "same_home_stack_ratio",
+        "vertical_target_ratio",
+        "vertical_link_pressure"
+      ],
+      "rows": [
+        {
+          "case_id": "full_3d",
+          "same_home_stack_ratio": 0.5,
+          "vertical_target_ratio": 0.0,
+          "vertical_link_pressure": 0.0
+        }
+      ]
+    },
+    "memory_realism": {
+      "compare_key": "hbm_like_vs_monolithic_like",
+      "fields": [
+        "vertical_hops_ratio",
+        "remote_home_ratio",
+        "total_service_deficit",
+        "reliability_penalty"
+      ],
+      "deltas": {
+        "vertical_hops_ratio": 0.0,
+        "remote_home_ratio": 0.0,
+        "total_service_deficit": 0,
+        "reliability_penalty": 0.3107142857142858
+      }
+    },
+    "thermal_runtime_control": {
+      "focus_cases": [
+        "full_3d_runtime_adaptive"
+      ],
+      "fields": [
+        "thermal_input_source_kind",
+        "hotspot_peak_temperature_c",
+        "remap_epoch",
+        "homeroute_adjustment_count",
+        "thermal_guard_actions",
+        "control_decision_source",
+        "closed_loop_candidate"
+      ],
+      "rows": [
+        {
+          "case_id": "full_3d_runtime_adaptive",
+          "thermal_input_source_kind": "local_hotspot_sidecar",
+          "hotspot_peak_temperature_c": 45.03000000000003,
+          "remap_epoch": 256,
+          "homeroute_adjustment_count": 2,
+          "thermal_guard_actions": 2,
+          "control_decision_source": "hybrid",
+          "closed_loop_candidate": false
+        }
+      ],
+      "summary": {
+        "runtime_observability_only_case_ids": [],
+        "local_hotspot_sidecar_case_ids": [
+          "full_3d_runtime_adaptive"
+        ],
+        "refreshable_case_ids": [],
+        "blocking_reason_counts": {},
+        "refresh_probe_status_counts": {},
+        "refresh_probe_error_kind_counts": {}
+      }
+    },
+    "mechanism_progression": {
+      "fields": [
+        "window_route_dominant_axis",
+        "runtime_compare_dominant_axis",
+        "progression_signature"
+      ],
+      "summary": {
+        "window_route_dominant_axis": "controller_outstanding",
+        "runtime_compare_dominant_axis": "thermal_guard_actions",
+        "progression_signature": "controller_outstanding -> stable_or_zero -> thermal_guard_actions"
+      }
+    }
+  },
+  "canonical_mainline": {
+    "contract_version": "v1",
+    "run_tag": "task4_window_stop_runtime_closure_mainline",
+    "phase2_summary_path": "/home/xgy/remote/snn3dexp/analysis/codesign_matrix/task4_window_stop_runtime_closure_mainline/phase2_artifacts/phase2_runtime_summary.json",
+    "codesign_surface_summary_path": "/home/xgy/remote/snn3dexp/analysis/codesign_matrix/task4_window_stop_runtime_closure_mainline/phase2_artifacts/codesign_surface/memory_nmc_codesign_surface_summary.json",
+    "route_runtime_diff_summary_path": "/home/xgy/remote/snn3dexp/analysis/codesign_matrix/task4_window_stop_runtime_closure_mainline/phase2_artifacts/route_runtime_diff/memory_nmc_route_runtime_diff_summary.json",
+    "canonical_surface_label": "task4_window_stop_runtime_closure_mainline",
+    "surface_baseline_run_tag": "task4_window_stop_runtime_closure_mainline",
+    "surface_hotspot_run_tag": "task4_window_stop_runtime_closure_mainline",
+    "baseline_overlay_attached": false,
+    "baseline_overlay_path_count": 0,
+    "window_stop_compare_row_count": 6,
+    "mechanism_progression_summary_present": true,
+    "runtime_compare_dominant_axis": "thermal_guard_actions",
+    "runtime_control_closure_summary_present": true,
+    "runtime_control_closure_row_count": 1
+  },
+  "memory_nmc_codesign_surface": {
+    "available": true,
+    "surface_label": "task4_window_stop_runtime_closure_mainline",
+    "outputs": {
+      "summary_json": "/home/xgy/remote/snn3dexp/analysis/codesign_matrix/task4_window_stop_runtime_closure_mainline/phase2_artifacts/codesign_surface/memory_nmc_codesign_surface_summary.json",
+      "csv": "/home/xgy/remote/snn3dexp/analysis/codesign_matrix/task4_window_stop_runtime_closure_mainline/phase2_artifacts/codesign_surface/memory_nmc_codesign_surface.csv",
+      "markdown": "/home/xgy/remote/snn3dexp/analysis/codesign_matrix/task4_window_stop_runtime_closure_mainline/phase2_artifacts/codesign_surface/memory_nmc_codesign_surface.md"
+    },
+    "sources": {
+      "baseline_ablation_path": "/home/xgy/remote/snn3dexp/analysis/codesign_matrix/task4_window_stop_runtime_closure_mainline/traffic_baseline_ablation.json",
+      "baseline_run_tag": "task4_window_stop_runtime_closure_mainline",
+      "surface_label": "task4_window_stop_runtime_closure_mainline",
+      "baseline_overlay_ablation_paths": [],
+      "fixed_step_summary_path": "/home/xgy/remote/snn3dexp/analysis/codesign_matrix/task4_window_stop_runtime_closure_mainline/fixed_step_analysis/fixed_step_sweep_summary.json",
+      "fixed_step_run_tags": [
+        "task_fixed_step_4_10us",
+        "task_fixed_step_4_10us_sp64",
+        "task_fixed_step_8_20us",
+        "task_fixed_step_8_20us_sp64",
+        "task_fixed_step_16_40us",
+        "task_fixed_step_16_40us_sp64"
+      ],
+      "stop_window_ablation_paths": [
+        "/home/xgy/remote/snn3dexp/analysis/codesign_matrix/task4_window_stop_runtime_closure_mainline/window_stop_analysis/window_stop_2us_ablation.json",
+        "/home/xgy/remote/snn3dexp/analysis/codesign_matrix/task4_window_stop_runtime_closure_mainline/window_stop_analysis/window_stop_5us_ablation.json",
+        "/home/xgy/remote/snn3dexp/analysis/codesign_matrix/task4_window_stop_runtime_closure_mainline/window_stop_analysis/window_stop_10us_ablation.json"
+      ],
+      "stop_window_run_tags": [
+        "task4_window_stop_runtime_closure_mainline_window_stop_2us",
+        "task4_window_stop_runtime_closure_mainline_window_stop_5us",
+        "task4_window_stop_runtime_closure_mainline_window_stop_10us"
+      ],
+      "hotspot_runtime_summary_path": "/home/xgy/remote/snn3dexp/analysis/codesign_matrix/task4_window_stop_runtime_closure_mainline/phase2_artifacts/phase2_runtime_summary.json",
+      "hotspot_run_tag": "task4_window_stop_runtime_closure_mainline"
+    },
+    "traffic_mem_baseline_row_count": 7,
+    "traffic_mem_compare_row_count": 2,
+    "window_baseline_row_count": 12,
+    "window_bundle_breakdown_row_count": 6,
+    "window_gating_breakdown_row_count": 6,
+    "window_memory_model_breakdown_row_count": 6,
+    "window_spike_sensitivity_row_count": 12,
+    "window_stop_baseline_row_count": 9,
+    "window_stop_compare_row_count": 6,
+    "hotspot_runtime_run_tag": "task4_window_stop_runtime_closure_mainline"
+  },
+  "route_runtime_diff": {
+    "available": true,
+    "path": "/home/xgy/remote/snn3dexp/analysis/codesign_matrix/task4_window_stop_runtime_closure_mainline/phase2_artifacts/route_runtime_diff/memory_nmc_route_runtime_diff_summary.json",
+    "outputs": {
+      "summary_json": "/home/xgy/remote/snn3dexp/analysis/codesign_matrix/task4_window_stop_runtime_closure_mainline/phase2_artifacts/route_runtime_diff/memory_nmc_route_runtime_diff_summary.json",
+      "csv": "/home/xgy/remote/snn3dexp/analysis/codesign_matrix/task4_window_stop_runtime_closure_mainline/phase2_artifacts/route_runtime_diff/memory_nmc_route_runtime_diff.csv",
+      "markdown": "/home/xgy/remote/snn3dexp/analysis/codesign_matrix/task4_window_stop_runtime_closure_mainline/phase2_artifacts/route_runtime_diff/memory_nmc_route_runtime_diff.md",
+      "mechanism_progression_csv": "/home/xgy/remote/snn3dexp/analysis/codesign_matrix/task4_window_stop_runtime_closure_mainline/phase2_artifacts/route_runtime_diff/memory_nmc_route_runtime_mechanism_progression.csv",
+      "route_memory_joint_pressure_csv": "/home/xgy/remote/snn3dexp/analysis/codesign_matrix/task4_window_stop_runtime_closure_mainline/phase2_artifacts/route_runtime_diff/memory_nmc_route_runtime_joint_pressure.csv",
+      "runtime_control_closure_csv": "/home/xgy/remote/snn3dexp/analysis/codesign_matrix/task4_window_stop_runtime_closure_mainline/phase2_artifacts/route_runtime_diff/memory_nmc_route_runtime_control_closure.csv"
+    },
+    "traffic_route_diff_row_count": 1,
+    "window_route_diff_row_count": 6,
+    "window_route_mechanism_summary": {
+      "row_count": 6,
+      "alignment_transition_counts": {
+        "alignment_improved": 1,
+        "stable": 5
+      },
+      "dominant_axis_counts": {
+        "controller_outstanding": 5,
+        "step_gate_stall": 1
+      },
+      "stall_on_step_gate_cycles_per_completed_step_delta_sum": 38269.333333333336,
+      "memory_requests_per_completed_step_delta_sum": 1655.5833333333333,
+      "controller_outstanding_delta_total_sum": -5015296,
+      "controller_issue_reject_delta_total_sum": -20664,
+      "real_home_path_service_deficit_total_delta_sum": 0,
+      "top_stall_rows": [
+        {
+          "run_tag": "task_fixed_step_4_10us",
+          "base_case_id": "full_3d_snn_window",
+          "compare_case_id": "full_3d_snn_window_bundle_v3",
+          "stall_on_step_gate_cycles_per_completed_step_delta": 13576.666666666668,
+          "memory_requests_per_completed_step_delta": 478.66666666666663,
+          "controller_outstanding_delta_total": -711744,
+          "real_home_path_service_deficit_total_delta": 0,
+          "dataflow_controller_alignment_transition": "alignment_improved",
+          "dominant_mechanism_axis": "controller_outstanding"
+        },
+        {
+          "run_tag": "task_fixed_step_8_20us",
+          "base_case_id": "full_3d_snn_window",
+          "compare_case_id": "full_3d_snn_window_bundle_v3",
+          "stall_on_step_gate_cycles_per_completed_step_delta": 9602.625,
+          "memory_requests_per_completed_step_delta": 129.5,
+          "controller_outstanding_delta_total": -2361996,
+          "real_home_path_service_deficit_total_delta": 0,
+          "dataflow_controller_alignment_transition": "stable",
+          "dominant_mechanism_axis": "controller_outstanding"
+        },
+        {
+          "run_tag": "task_fixed_step_4_10us_sp64",
+          "base_case_id": "full_3d_snn_window",
+          "compare_case_id": "full_3d_snn_window_bundle_v3",
+          "stall_on_step_gate_cycles_per_completed_step_delta": 6584.666666666668,
+          "memory_requests_per_completed_step_delta": 730.6666666666666,
+          "controller_outstanding_delta_total": -6224,
+          "real_home_path_service_deficit_total_delta": 0,
+          "dataflow_controller_alignment_transition": "stable",
+          "dominant_mechanism_axis": "step_gate_stall"
+        },
+        {
+          "run_tag": "task_fixed_step_16_40us",
+          "base_case_id": "full_3d_snn_window",
+          "compare_case_id": "full_3d_snn_window_bundle_v3",
+          "stall_on_step_gate_cycles_per_completed_step_delta": 4801.3125,
+          "memory_requests_per_completed_step_delta": 64.75,
+          "controller_outstanding_delta_total": -2361996,
+          "real_home_path_service_deficit_total_delta": 0,
+          "dataflow_controller_alignment_transition": "stable",
+          "dominant_mechanism_axis": "controller_outstanding"
+        },
+        {
+          "run_tag": "task_fixed_step_8_20us_sp64",
+          "base_case_id": "full_3d_snn_window",
+          "compare_case_id": "full_3d_snn_window_bundle_v3",
+          "stall_on_step_gate_cycles_per_completed_step_delta": 2469.375,
+          "memory_requests_per_completed_step_delta": 168.0,
+          "controller_outstanding_delta_total": 213332,
+          "real_home_path_service_deficit_total_delta": 0,
+          "dataflow_controller_alignment_transition": "stable",
+          "dominant_mechanism_axis": "controller_outstanding"
+        }
+      ]
+    },
+    "window_stop_diff_row_count": 6,
+    "window_stop_mechanism_summary": {
+      "row_count": 6,
+      "compare_kind_counts": {
+        "window_stop_bundle_vs_direct": 3,
+        "window_stop_monolithic_vs_direct": 3
+      },
+      "dominant_axis_counts": {
+        "stable_or_zero": 6
+      },
+      "stop_at_values": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "earliest_same_controller_overlap_stop_at": "",
+      "max_steps_completed_delta": 0,
+      "max_abs_stall_on_step_gate_cycles_per_completed_step_delta": 0.0,
+      "top_stall_rows": [
+        {
+          "compare_kind": "window_stop_bundle_vs_direct",
+          "stop_at": "",
+          "stall_on_step_gate_cycles_per_completed_step_delta": 0.0,
+          "memory_requests_per_completed_step_delta": 0.0,
+          "steps_completed_delta": 0,
+          "same_controller_overlap_delta": 0,
+          "dominant_mechanism_axis": "stable_or_zero"
+        },
+        {
+          "compare_kind": "window_stop_monolithic_vs_direct",
+          "stop_at": "",
+          "stall_on_step_gate_cycles_per_completed_step_delta": 0.0,
+          "memory_requests_per_completed_step_delta": 0.0,
+          "steps_completed_delta": 0,
+          "same_controller_overlap_delta": 0,
+          "dominant_mechanism_axis": "stable_or_zero"
+        },
+        {
+          "compare_kind": "window_stop_bundle_vs_direct",
+          "stop_at": "",
+          "stall_on_step_gate_cycles_per_completed_step_delta": 0.0,
+          "memory_requests_per_completed_step_delta": 0.0,
+          "steps_completed_delta": 0,
+          "same_controller_overlap_delta": 0,
+          "dominant_mechanism_axis": "stable_or_zero"
+        },
+        {
+          "compare_kind": "window_stop_monolithic_vs_direct",
+          "stop_at": "",
+          "stall_on_step_gate_cycles_per_completed_step_delta": 0.0,
+          "memory_requests_per_completed_step_delta": 0.0,
+          "steps_completed_delta": 0,
+          "same_controller_overlap_delta": 0,
+          "dominant_mechanism_axis": "stable_or_zero"
+        },
+        {
+          "compare_kind": "window_stop_bundle_vs_direct",
+          "stop_at": "",
+          "stall_on_step_gate_cycles_per_completed_step_delta": 0.0,
+          "memory_requests_per_completed_step_delta": 0.0,
+          "steps_completed_delta": 0,
+          "same_controller_overlap_delta": 0,
+          "dominant_mechanism_axis": "stable_or_zero"
+        }
+      ]
+    },
+    "runtime_compare_row_count": 1,
+    "runtime_compare_summary": {
+      "row_count": 1,
+      "compare_kind_counts": {
+        "runtime_adaptive_vs_full_3d": 1
+      },
+      "dominant_axis_counts": {
+        "thermal_guard_actions": 1
+      },
+      "compare_control_decision_counts": {
+        "executed_control": 1
+      },
+      "compare_control_decision_source_counts": {
+        "hybrid": 1
+      },
+      "compare_control_trigger_signal_counts": {
+        "route_memory_overlap": 1,
+        "stack_hotspot_penalty": 1,
+        "vertical_link_pressure": 1
+      },
+      "vertical_link_pressure_delta_sum": 0.24375,
+      "stack_hotspot_penalty_delta_sum": 0.25,
+      "route_thermal_coupling_score_delta_sum": 0.0,
+      "memory_thermal_coupling_proxy_delta_sum": 0.0,
+      "memory_barrier_coupling_proxy_delta_sum": 0.0,
+      "homeroute_adjustment_count_delta_sum": 2.0,
+      "thermal_guard_actions_delta_sum": 2.0
+    },
+    "mechanism_progression_summary": {
+      "window_route_dominant_axis": "controller_outstanding",
+      "window_route_dominant_axis_counts": {
+        "controller_outstanding": 5,
+        "step_gate_stall": 1
+      },
+      "window_stop_dominant_axis": "stable_or_zero",
+      "window_stop_dominant_axis_counts": {
+        "stable_or_zero": 6
+      },
+      "earliest_same_controller_overlap_stop_at": "",
+      "runtime_compare_dominant_axis": "thermal_guard_actions",
+      "runtime_compare_dominant_axis_counts": {
+        "thermal_guard_actions": 1
+      },
+      "progression_signature": "controller_outstanding -> stable_or_zero -> thermal_guard_actions",
+      "phase_transition_flags": {
+        "route_to_stop_axis_shift": true,
+        "stop_to_runtime_axis_shift": true,
+        "route_to_runtime_axis_shift": true,
+        "same_controller_overlap_emerged": false
+      },
+      "phase_rows": [
+        {
+          "phase": "window_route",
+          "row_count": 6,
+          "dominant_axis": "controller_outstanding",
+          "key_signal": "alignment={\"alignment_improved\": 1, \"stable\": 5}"
+        },
+        {
+          "phase": "window_stop",
+          "row_count": 6,
+          "dominant_axis": "stable_or_zero",
+          "key_signal": "same_controller_overlap@unavailable"
+        },
+        {
+          "phase": "runtime_compare",
+          "row_count": 1,
+          "dominant_axis": "thermal_guard_actions",
+          "key_signal": "compare_kinds={\"runtime_adaptive_vs_full_3d\": 1}"
+        }
+      ],
+      "progression_interpretation": "fixed-step window-route is dominated by controller_outstanding; stop-window shifts to stable_or_zero, without same-controller overlap; runtime compare shifts to thermal_guard_actions."
+    },
+    "mechanism_progression_row_count": 3,
+    "route_memory_joint_pressure_row_count": 2,
+    "route_memory_joint_pressure_summary": {
+      "row_count": 2,
+      "compare_kind_counts": {
+        "traffic_mem_bundle_vs_direct": 1,
+        "traffic_mem_monolithic_vs_hbm": 1
+      },
+      "dominant_endpoint_counts": {
+        "unavailable": 2
+      },
+      "dominant_memory_axis_counts": {
+        "unavailable": 1,
+        "reliability_penalty": 1
+      },
+      "dominant_backlog_region_counts": {
+        "unavailable": 2
+      },
+      "base_memory_pressure_proxy_source_counts": {},
+      "compare_memory_pressure_proxy_source_counts": {},
+      "memory_pressure_proxy_source_transition_counts": {},
+      "most_pressured_controller_backpressure_proxy_delta_sum": 0.0,
+      "most_pressured_controller_memory_pressure_proxy_delta_sum": 0.0,
+      "top_joint_rows": [
+        {
+          "compare_kind": "traffic_mem_monolithic_vs_hbm",
+          "dominant_endpoint_pressure_side": "unavailable",
+          "dominant_memory_axis": "reliability_penalty",
+          "dominant_backlog_region": "unavailable",
+          "compare_memory_pressure_proxy_source": "",
+          "controller_pressure_narrative": "secondary controller pressure (source=unavailable, backpressure-delta=0.000, composite-delta=0.000)",
+          "most_pressured_controller_backpressure_proxy_delta": 0.0,
+          "most_pressured_controller_memory_pressure_proxy_delta": 0.0,
+          "joint_interpretation": "traffic_mem_monolithic_vs_hbm is dominated by unavailable endpoint pressure, reliability_penalty on the memory side, backlog centered on unavailable, home-access=unavailable, controller-pressure=secondary controller pressure (source=unavailable, backpressure-delta=0.000, composite-delta=0.000), and same-controller overlap stays flat."
+        },
+        {
+          "compare_kind": "traffic_mem_bundle_vs_direct",
+          "dominant_endpoint_pressure_side": "unavailable",
+          "dominant_memory_axis": "unavailable",
+          "dominant_backlog_region": "unavailable",
+          "compare_memory_pressure_proxy_source": "",
+          "controller_pressure_narrative": "secondary controller pressure (source=unavailable, backpressure-delta=0.000, composite-delta=0.000)",
+          "most_pressured_controller_backpressure_proxy_delta": 0.0,
+          "most_pressured_controller_memory_pressure_proxy_delta": 0.0,
+          "joint_interpretation": "traffic_mem_bundle_vs_direct is dominated by unavailable endpoint pressure, unavailable on the memory side, backlog centered on unavailable, home-access=unavailable, controller-pressure=secondary controller pressure (source=unavailable, backpressure-delta=0.000, composite-delta=0.000), and same-controller overlap stays flat."
+        }
+      ]
+    },
+    "runtime_control_closure_row_count": 1,
+    "runtime_control_closure_summary": {
+      "row_count": 1,
+      "compare_control_decision_counts": {
+        "executed_control": 1
+      },
+      "compare_control_decision_source_counts": {
+        "hybrid": 1
+      },
+      "trigger_alignment_counts": {
+        "unclosed_or_unavailable": 1
+      },
+      "dominant_runtime_axis_counts": {
+        "thermal_guard_actions": 1
+      },
+      "top_closure_rows": [
+        {
+          "runtime_compare_kind": "runtime_adaptive_vs_full_3d",
+          "route_compare_kind": "traffic_mem_monolithic_vs_hbm",
+          "route_dominant_memory_axis": "reliability_penalty",
+          "compare_control_decision": "executed_control",
+          "compare_control_decision_source": "hybrid",
+          "trigger_alignment": "unclosed_or_unavailable",
+          "closure_interpretation": "pressure -> runtime decision -> outcome: traffic_mem_monolithic_vs_hbm exposes secondary controller pressure (source=unavailable, backpressure-delta=0.000, composite-delta=0.000); runtime runtime_adaptive_vs_full_3d selects executed_control via hybrid, triggers=route_memory_overlap|stack_hotspot_penalty|vertical_link_pressure, and lands on thermal_guard_actions (memory_thermal_delta=0.000, memory_barrier_delta=0.000, homeroute_delta=2.000, thermal_guard_delta=2.000); alignment=unclosed_or_unavailable."
+        }
+      ]
+    }
+  }
+}

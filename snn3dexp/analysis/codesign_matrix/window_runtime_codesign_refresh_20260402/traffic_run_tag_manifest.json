@@ -1,0 +1,29 @@
+{
+  "case_ids": [
+    "baseline_2d",
+    "memory_only_3d",
+    "noc_only_3d",
+    "full_3d",
+    "full_3d_monolithic_proxy",
+    "full_3d_tile_bundle_v3",
+    "full_3d_runtime_adaptive"
+  ],
+  "run_tags_by_case": {
+    "baseline_2d": "window_runtime_codesign_refresh_20260402",
+    "memory_only_3d": "window_runtime_codesign_refresh_20260402",
+    "noc_only_3d": "window_runtime_codesign_refresh_20260402",
+    "full_3d": "window_runtime_codesign_refresh_20260402",
+    "full_3d_monolithic_proxy": "window_runtime_codesign_refresh_20260402",
+    "full_3d_tile_bundle_v3": "window_runtime_codesign_refresh_20260402",
+    "full_3d_runtime_adaptive": "window_runtime_codesign_refresh_20260402"
+  },
+  "stop_at_by_case": {
+    "baseline_2d": "2us",
+    "memory_only_3d": "2us",
+    "noc_only_3d": "2us",
+    "full_3d": "2us",
+    "full_3d_monolithic_proxy": "2us",
+    "full_3d_tile_bundle_v3": "2us",
+    "full_3d_runtime_adaptive": "2us"
+  }
+}

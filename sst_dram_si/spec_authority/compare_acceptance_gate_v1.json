@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "gate_name": "mesh_exec_mode_compare_acceptance",
+  "gate_version": "1.0",
+  "artifact_role": "stable_top_level_gate",
+  "authority_scope": "experimental_gate_authority",
+  "required_cases": [
+    "gas",
+    "naive_raw",
+    "naive_opt"
+  ],
+  "case_contract": {
+    "compare_role": "smoke",
+    "bounded_validation": true,
+    "validator_fail_max": 0,
+    "memory_nonzero_required": true
+  },
+  "freshness": {
+    "max_age_days": 2,
+    "multi_date_freshness_mode": "since_latest_recovery"
+  },
+  "paths": {
+    "matrix_root": "outputs_large/paper2/dram_mesh_4x4_exec_mode_compare/matrix",
+    "history_path": "references/compare-smoke-history.json",
+    "report_path": "references/compare-nightly-report.json",
+    "observer_summary_path": "references/compare-nightly-observer-summary.json",
+    "summary_md_path": "references/compare-nightly-summary.md",
+    "current_mainline_status_path": "references/compare-current-status.md"
+  }
+}

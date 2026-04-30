@@ -1,0 +1,17 @@
+{
+  "enabled": false,
+  "policy": "disabled",
+  "signal_source": "disabled",
+  "route_memory_overlap": 0.0,
+  "vertical_link_pressure": 0.0,
+  "stack_hotspot_penalty": 0.0,
+  "remap_epoch": 0,
+  "homeroute_adjustment_count": 0,
+  "thermal_guard_actions": 0,
+  "action_labels": [],
+  "recommended_weights": {
+    "mapping_route_weight": 1.0,
+    "mapping_stack_home_weight": 1.5,
+    "mapping_vertical_penalty": 1.75
+  }
+}

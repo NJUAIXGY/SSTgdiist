@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="616" viewBox="0 0 1280 616">
+<rect width="100%" height="100%" fill="#fcfbf7"/>
+<text x="40" y="38" font-family="Helvetica, Arial, sans-serif" font-size="24" font-weight="700" fill="#111827">Thermal Calibration Summary</text>
+<text x="40" y="62" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#4b5563">Multi-case RC vs HotSpot delta aggregation from the phase2 ablation summary</text>
+<text x="40" y="84" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#6b7280">Run tag: task_fixed_step_8_20us_sp64</text>
+<text x="40" y="104" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#6b7280">Eligible cases: 0</text>
+<text x="40" y="124" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#6b7280">Filter: hotspot_driver_status == ran</text>
+<text x="430" y="136" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#374151">Mean</text>
+<text x="680" y="136" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#374151">Abs Mean</text>
+<text x="930" y="136" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#374151">Max Abs</text>
+<text x="1110" y="136" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#374151">Worst Case</text>
+<rect x="28" y="134" width="1224" height="58" rx="10" fill="#ffffff" stroke="#e5e7eb"/>
+<text x="42" y="174" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#111827">Peak Delta (C)</text>
+<text x="42" y="192" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#6b7280">hotspot_peak_delta_c</text>
+<rect x="430" y="152" width="170" height="14" rx="7" fill="#e5e7eb"/>
+<rect x="430" y="152" width="0.00" height="14" rx="7" fill="#4f46e5"/>
+<text x="430" y="186" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#374151">+0.000</text>
+<rect x="680" y="152" width="170" height="14" rx="7" fill="#e5e7eb"/>
+<rect x="680" y="152" width="0.00" height="14" rx="7" fill="#0f766e"/>
+<text x="680" y="186" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#374151">0.000</text>
+<rect x="930" y="152" width="170" height="14" rx="7" fill="#e5e7eb"/>
+<rect x="930" y="152" width="0.00" height="14" rx="7" fill="#dc2626"/>
+<text x="930" y="186" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#374151">0.000</text>
+<text x="1110" y="174" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#111827"></text>
+<rect x="28" y="220" width="1224" height="58" rx="10" fill="#ffffff" stroke="#e5e7eb"/>
+<text x="42" y="260" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#111827">Average Delta (C)</text>
+<text x="42" y="278" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#6b7280">hotspot_avg_delta_c</text>
+<rect x="430" y="238" width="170" height="14" rx="7" fill="#e5e7eb"/>
+<rect x="430" y="238" width="0.00" height="14" rx="7" fill="#4f46e5"/>
+<text x="430" y="272" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#374151">+0.000</text>
+<rect x="680" y="238" width="170" height="14" rx="7" fill="#e5e7eb"/>
+<rect x="680" y="238" width="0.00" height="14" rx="7" fill="#0f766e"/>
+<text x="680" y="272" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#374151">0.000</text>
+<rect x="930" y="238" width="170" height="14" rx="7" fill="#e5e7eb"/>
+<rect x="930" y="238" width="0.00" height="14" rx="7" fill="#dc2626"/>
+<text x="930" y="272" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#374151">0.000</text>
+<text x="1110" y="260" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#111827"></text>
+<rect x="28" y="306" width="1224" height="58" rx="10" fill="#ffffff" stroke="#e5e7eb"/>
+<text x="42" y="346" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#111827">Hotspot Block Delta</text>
+<text x="42" y="364" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#6b7280">hotspot_block_delta</text>
+<rect x="430" y="324" width="170" height="14" rx="7" fill="#e5e7eb"/>
+<rect x="430" y="324" width="0.00" height="14" rx="7" fill="#4f46e5"/>
+<text x="430" y="358" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#374151">+0.000</text>
+<rect x="680" y="324" width="170" height="14" rx="7" fill="#e5e7eb"/>
+<rect x="680" y="324" width="0.00" height="14" rx="7" fill="#0f766e"/>
+<text x="680" y="358" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#374151">0.000</text>
+<rect x="930" y="324" width="170" height="14" rx="7" fill="#e5e7eb"/>
+<rect x="930" y="324" width="0.00" height="14" rx="7" fill="#dc2626"/>
+<text x="930" y="358" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#374151">0.000</text>
+<text x="1110" y="346" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#111827"></text>
+<rect x="28" y="392" width="1224" height="58" rx="10" fill="#ffffff" stroke="#e5e7eb"/>
+<text x="42" y="432" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#111827">Hotspot Layer Delta</text>
+<text x="42" y="450" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#6b7280">hotspot_layer_delta</text>
+<rect x="430" y="410" width="170" height="14" rx="7" fill="#e5e7eb"/>
+<rect x="430" y="410" width="0.00" height="14" rx="7" fill="#4f46e5"/>
+<text x="430" y="444" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#374151">+0.000</text>
+<rect x="680" y="410" width="170" height="14" rx="7" fill="#e5e7eb"/>
+<rect x="680" y="410" width="0.00" height="14" rx="7" fill="#0f766e"/>
+<text x="680" y="444" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#374151">0.000</text>
+<rect x="930" y="410" width="170" height="14" rx="7" fill="#e5e7eb"/>
+<rect x="930" y="410" width="0.00" height="14" rx="7" fill="#dc2626"/>
+<text x="930" y="444" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#374151">0.000</text>
+<text x="1110" y="432" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#111827"></text>
+</svg>

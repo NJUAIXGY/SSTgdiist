@@ -1,0 +1,71 @@
+{
+  "artifact_role": "dated_reference_compare_family_surface",
+  "authority_scope": "reference_compare_only",
+  "comparison": {
+    "allowed_divergence_points": [
+      "queue_occupancy"
+    ],
+    "fabric_stage_alignment": true,
+    "gate_ok": true,
+    "gate_reasons": [],
+    "invalid_divergence_points": [],
+    "memory_domain_alignment": true,
+    "reference_fabric_stages": [
+      "ingress_receive",
+      "execution_consume"
+    ],
+    "reference_memory_domains": [
+      "ControlMemory"
+    ],
+    "reference_terminal_state": "Faulted",
+    "runtime_fabric_stages": [
+      "ingress_receive",
+      "execution_consume"
+    ],
+    "runtime_memory_domains": [
+      "ControlMemory"
+    ],
+    "runtime_terminal_state": "Faulted",
+    "status": "allowed_divergence",
+    "terminal_state_match": true
+  },
+  "equiv_summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-04-02-external-dyn-desc-fault-overwrite-chain-ref-equiv.json",
+  "family": "external_dyn_desc_fault_overwrite_chain_ref",
+  "gate_ok": true,
+  "gate_reasons": [],
+  "generated_utc": "2026-04-18T12:56:43.313694+00:00",
+  "producer": "riscv_snn_lab.run_reference_compare_family",
+  "reference_terminal_state": "Faulted",
+  "runtime_policy": {
+    "allowed_completion_signature": "accepted-fault completion progress is allowed while visible fault snapshots are overwritten across retired completions",
+    "allowed_fault_signature": "accepted faults may overwrite msnnfault after clear, but every observed fault must keep a visible snapshot",
+    "fault_lifecycle_mode": "overwrite_chain",
+    "fault_mode": "accepted_fault_required",
+    "progress_mode": "fault_lifecycle_surface",
+    "reference_program_profile": "overwrite_chain",
+    "required_checks": [
+      "provider_bound_visible",
+      "fused_step_completion_visible",
+      "completion_visible",
+      "completion_consumed_covers_visible",
+      "fault_observed",
+      "fault_snapshot_consistent"
+    ]
+  },
+  "runtime_summary": {
+    "divergence_points": [
+      "queue_occupancy"
+    ],
+    "fabric_stages": [
+      "ingress_receive",
+      "execution_consume"
+    ],
+    "family": "external_dyn_desc_fault_overwrite_chain_ref",
+    "memory_domains": [
+      "ControlMemory"
+    ],
+    "terminal_state": "Faulted"
+  },
+  "schema_version": 2,
+  "status": "allowed_divergence"
+}

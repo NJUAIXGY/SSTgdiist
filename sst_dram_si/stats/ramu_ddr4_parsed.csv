@@ -1,0 +1,2 @@
+backend,total_num_read_requests,memory_system_cycles,avg_read_latency_0,row_hits_0,row_misses_0,row_conflicts_0
+DDR4,13,999999,42.2307701,4,9,0

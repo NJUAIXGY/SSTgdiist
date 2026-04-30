@@ -1,0 +1,125 @@
+{
+  "all_ok": true,
+  "artifact_role": "dated_family_lane_matrix",
+  "authority_scope": "research_subset_lane_matrix",
+  "canonical_surface": false,
+  "count": 3,
+  "families": [
+    {
+      "family": "barrier_wfi_order_ref",
+      "gate_reasons": [],
+      "lane_id": "81195537dfe4",
+      "lane_overrides": {
+        "local_mem_bytes": 131072
+      },
+      "lane_root": "/home/xgy/remote/riscv_snn_isa_lab/family_lanes/barrier_wfi_order_ref/81195537dfe4",
+      "runtime_bridge_build_preflight_rollup": {
+        "contract_key": "riscv_snn.runtime_bridge.runtime_consumers",
+        "contract_version": 1,
+        "dependency_count": 2,
+        "enabled": true,
+        "fingerprint_match": true,
+        "full_rebuild_required": false,
+        "lineage_status": "ok",
+        "missing_target_count": 0,
+        "reporting_scope": "research_only_nonblocking",
+        "required_action": "none",
+        "required_target_count": 9,
+        "stale_target_count": 0,
+        "status": "ok"
+      },
+      "status": "PASS",
+      "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-04-03-family-lane-barrier-wfi-order-ref-subset-81195537dfe4.json"
+    },
+    {
+      "family": "external_dyn_desc_fault_ref",
+      "gate_reasons": [],
+      "lane_id": "46f3039c2bee",
+      "lane_overrides": {
+        "local_mem_bytes": 131072
+      },
+      "lane_root": "/home/xgy/remote/riscv_snn_isa_lab/family_lanes/external_dyn_desc_fault_ref/46f3039c2bee",
+      "runtime_bridge_build_preflight_rollup": {
+        "contract_key": "riscv_snn.runtime_bridge.runtime_consumers",
+        "contract_version": 1,
+        "dependency_count": 2,
+        "enabled": true,
+        "fingerprint_match": true,
+        "full_rebuild_required": false,
+        "lineage_status": "ok",
+        "missing_target_count": 0,
+        "reporting_scope": "research_only_nonblocking",
+        "required_action": "none",
+        "required_target_count": 9,
+        "stale_target_count": 0,
+        "status": "ok"
+      },
+      "status": "PASS",
+      "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-04-03-family-lane-external-dyn-desc-fault-ref-subset-46f3039c2bee.json"
+    },
+    {
+      "family": "queue_backpressure_ref",
+      "gate_reasons": [],
+      "lane_id": "c58e6ff048c3",
+      "lane_overrides": {
+        "local_mem_bytes": 131072
+      },
+      "lane_root": "/home/xgy/remote/riscv_snn_isa_lab/family_lanes/queue_backpressure_ref/c58e6ff048c3",
+      "runtime_bridge_build_preflight_rollup": {
+        "contract_key": "riscv_snn.runtime_bridge.runtime_consumers",
+        "contract_version": 1,
+        "dependency_count": 2,
+        "enabled": true,
+        "fingerprint_match": true,
+        "full_rebuild_required": false,
+        "lineage_status": "ok",
+        "missing_target_count": 0,
+        "reporting_scope": "research_only_nonblocking",
+        "required_action": "none",
+        "required_target_count": 9,
+        "stale_target_count": 0,
+        "status": "ok"
+      },
+      "status": "PASS",
+      "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-04-03-family-lane-queue-backpressure-ref-subset-c58e6ff048c3.json"
+    }
+  ],
+  "gate_name": "riscv_snn_family_lane_matrix",
+  "generated_utc": "2026-04-03T08:07:13.220999+00:00",
+  "lane_matrix_id": "8da87fc55d0c",
+  "lane_overrides": {
+    "local_mem_bytes": 131072
+  },
+  "producer": "riscv_snn_lab.run_family_lane_matrix",
+  "requested_families": [
+    "barrier_wfi_order_ref",
+    "external_dyn_desc_fault_ref",
+    "queue_backpressure_ref"
+  ],
+  "runtime_bridge_build_preflight_rollup": {
+    "all_ok": true,
+    "contract_keys": [
+      "riscv_snn.runtime_bridge.runtime_consumers"
+    ],
+    "contract_versions": [
+      1
+    ],
+    "enabled": true,
+    "family_count": 3,
+    "fingerprint_mismatch_family_count": 0,
+    "full_rebuild_required_family_count": 0,
+    "lineage_status_counts": {
+      "ok": 3
+    },
+    "missing_family_count": 0,
+    "reporting_scope": "research_only_nonblocking",
+    "required_action_counts": {
+      "none": 3
+    },
+    "stale_family_count": 0,
+    "status_counts": {
+      "ok": 3
+    }
+  },
+  "schema_version": 2
+}

@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "artifact_role": "stable_compare_sidecar_report",
+  "authority_scope": "compare_smoke_gate_authority",
+  "producer": "refresh_mesh_compare_surfaces.py",
+  "generated_utc": "2026-04-07T04:26:34.492340+00:00",
+  "summary_path": "/home/xgy/remote/sst_dram_si/references/mesh-compare-sidecar-report.json",
+  "source_matrix_summary_path": "/home/xgy/remote/sst_dram_si/outputs_large/paper2/dram_mesh_4x4_exec_mode_compare/matrix/20260407-114554/summary.json",
+  "source_matrix_run_id": "20260407-114554",
+  "required_cases": [
+    "gas",
+    "naive_raw",
+    "naive_opt"
+  ],
+  "missing_cases": [],
+  "latest_all_green": true,
+  "gate_ok": true,
+  "gate_reasons": [],
+  "freshness": {
+    "freshness_mode": "latest_only",
+    "latest_generated_utc": "2026-04-07T03:48:04.644089+00:00",
+    "latest_date": "2026-04-07",
+    "stale_after_hours": 48.0,
+    "latest_age_hours": 0.641625,
+    "stale": false,
+    "history_entry_count": 1,
+    "all_green_history": true
+  },
+  "history_path": "/home/xgy/remote/sst_dram_si/references/mesh-compare-history.json",
+  "current_mainline_status_path": "/home/xgy/remote/sst_dram_si/references/mesh-compare-current-mainline-status.md",
+  "summary_md_path": "/home/xgy/remote/sst_dram_si/references/mesh-compare-sidecar-summary.md",
+  "cases": {
+    "gas": {
+      "label": "gas",
+      "run_dir": "/home/xgy/remote/sst_dram_si/outputs_large/paper2/dram_mesh_4x4_exec_mode_compare/gas/20260407-114554",
+      "requested_exec_mode": "gas",
+      "effective_exec_mode": "gas",
+      "compare_role": "smoke",
+      "bounded_validation": true,
+      "validator": {
+        "fail": 0,
+        "warn": 0,
+        "strict": 0
+      },
+      "memory": {
+        "memory_requests": 5954.0,
+        "memory_bytes": 381056.0,
+        "nonzero": true
+      },
+      "gate_ok": true,
+      "gate_reasons": []
+    },
+    "naive_raw": {
+      "label": "naive_raw",
+      "run_dir": "/home/xgy/remote/sst_dram_si/outputs_large/paper2/dram_mesh_4x4_exec_mode_compare/naive_raw/20260407-114630",
+      "requested_exec_mode": "naive_raw",
+      "effective_exec_mode": "naive_raw",
+      "compare_role": "smoke",
+      "bounded_validation": true,
+      "validator": {
+        "fail": 0,
+        "warn": 0,
+        "strict": 0
+      },
+      "memory": {
+        "memory_requests": 11524.0,
+        "memory_bytes": 737536.0,
+        "nonzero": true
+      },
+      "gate_ok": true,
+      "gate_reasons": []
+    },
+    "naive_opt": {
+      "label": "naive_opt",
+      "run_dir": "/home/xgy/remote/sst_dram_si/outputs_large/paper2/dram_mesh_4x4_exec_mode_compare/naive_raw/20260407-114716",
+      "requested_exec_mode": "naive_opt",
+      "effective_exec_mode": "naive_raw",
+      "compare_role": "smoke",
+      "bounded_validation": true,
+      "validator": {
+        "fail": 0,
+        "warn": 0,
+        "strict": 0
+      },
+      "memory": {
+        "memory_requests": 11524.0,
+        "memory_bytes": 737536.0,
+        "nonzero": true
+      },
+      "gate_ok": true,
+      "gate_reasons": []
+    }
+  },
+  "stable_surface_refresh": {
+    "refreshed_utc": "2026-04-07T04:26:34.492340+00:00",
+    "history_path": "/home/xgy/remote/sst_dram_si/references/mesh-compare-history.json",
+    "current_mainline_status_path": "/home/xgy/remote/sst_dram_si/references/mesh-compare-current-mainline-status.md",
+    "summary_md_path": "/home/xgy/remote/sst_dram_si/references/mesh-compare-sidecar-summary.md"
+  }
+}

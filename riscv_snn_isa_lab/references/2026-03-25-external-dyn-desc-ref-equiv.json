@@ -1,0 +1,255 @@
+{
+  "baseline": {
+    "equiv_validation": {
+      "allowed_fail_checks": [
+        "step_activation.invocations_vs_windows"
+      ],
+      "blocked_fail_checks": [],
+      "ok": true,
+      "raw_summary": "failed",
+      "summary": "passed_with_waiver",
+      "waived_fail_checks": [
+        "step_activation.invocations_vs_windows"
+      ],
+      "waiver_applied": true,
+      "waiver_name": "external_dyn_desc_ref_step_activation_window_alignment"
+    },
+    "role": "snn_baseline",
+    "run_dir": "/home/xgy/remote/sst_dram_si/outputs_large/paper2/dram_mesh_4x4/20260325-163855",
+    "smoke_returncode": 1,
+    "spec_path": "/home/xgy/remote/riscv_snn_isa_lab/specs/external_dyn_desc_ref_snn_baseline.json",
+    "validation": "failed",
+    "validation_detail": {
+      "fail_checks": [
+        "step_activation.invocations_vs_windows"
+      ],
+      "fail_lines": [
+        "[val] FAIL step_activation.invocations_vs_windows: invocations=51 windows=59"
+      ],
+      "pass_checks": [
+        "contracts.present",
+        "contracts.strict_repro_same_post_deterministic",
+        "contracts.strict_repro_global_total_order_required",
+        "contracts.gas_semantic_ready_before_commit",
+        "contracts.gas_semantic_drain_before_scatter",
+        "contracts.apply_issue_policy_matches_effective_config",
+        "contracts.experimental_retire_policy_matches_effective_config",
+        "contracts.retire_policy_scope_consistent",
+        "contracts.experimental_gcss_phase_breakdown_enable_matches_effective_config",
+        "contracts.experimental_retire_shadow_per_post_enable_matches_effective_config",
+        "contracts.experimental_gcss_vlf_queue_policy_matches_effective_config",
+        "contracts.experimental_gcss_vlf_fair_band_size_matches_effective_config",
+        "run.log.exists",
+        "run.no_emergency_shutdown",
+        "model.num_pes",
+        "model.neurons_total",
+        "model.neurons_per_pe_formula",
+        "model.bcsr_rows_match_neurons_per_core",
+        "model.bcsr_meta_path_exists",
+        "model.exec_mode_infer",
+        "gas.windows_accounting",
+        "step_activation.firing_total_eq_pre_selected",
+        "step_activation.fanout_effective_le_config",
+        "step_activation.spike_attempts_arith",
+        "step_activation.injection_vs_route_hits",
+        "step_activation.attempts_eq_hits_miss_drops",
+        "step_activation.pre_population_infer",
+        "step_activation.firing_rate_formula",
+        "gas.gsops_step_formula",
+        "spike_activity.neurons_fired_total_nonzero",
+        "spike_activity.fired_vs_scatter_emitted",
+        "snn_rx.packet_accounting",
+        "snn_tx.nonzero",
+        "snn_txrx.key_visibility",
+        "snn_txrx.key_visibility_step_deferral",
+        "memory.nonzero",
+        "memhierarchy.line_size_bytes_nonzero",
+        "memhierarchy.memctrl.req_total_matches_sum",
+        "memhierarchy.memctrl.bytes_est_total_formula",
+        "memhierarchy.memctrl.req_GetS_minus_loader_bounds",
+        "memhierarchy.l1.req_total_matches_sum",
+        "memhierarchy.l1.bytes_est_total_formula",
+        "info.infer_global_step_sync"
+      ],
+      "pass_lines": [
+        "[val] PASS contracts.present: summary.contracts present",
+        "[val] PASS contracts.gas_semantic_ready_before_commit: value=True",
+        "[val] PASS contracts.gas_semantic_drain_before_scatter: value=True",
+        "[val] PASS snn_rx.packet_accounting: rx_packets=2872 key_packets=0 fastpath=0 fallback=0",
+        "[val] PASS snn_tx.nonzero: tx_packets=8837 tx_spike=8837 tx_spikekey=0 tx_spiketilekey=0",
+        "[val] PASS memory.nonzero: memory_requests=878 memory_bytes=304086"
+      ],
+      "summary": "failed",
+      "warn_checks": [
+        "gas.features.merge_enabled_bcsr"
+      ],
+      "warn_lines": [
+        "[val] WARN gas.features.merge_enabled_bcsr: gap_k=0 lmax=65536 row_window_bytes=0 row_window_timeout_ns=0"
+      ]
+    },
+    "workload_impl": "snn"
+  },
+  "compare": {
+    "strict": [
+      {
+        "baseline": 2,
+        "field": "schema_version",
+        "match": true,
+        "runtime_bridge": 2
+      },
+      {
+        "baseline": "gas",
+        "field": "model.exec_mode",
+        "match": true,
+        "runtime_bridge": "gas"
+      },
+      {
+        "baseline": 4,
+        "field": "model.mesh_size",
+        "match": true,
+        "runtime_bridge": 4
+      },
+      {
+        "baseline": true,
+        "field": "contracts.gas_semantic_ready_before_commit",
+        "match": true,
+        "runtime_bridge": true
+      },
+      {
+        "baseline": true,
+        "field": "contracts.gas_semantic_drain_before_scatter",
+        "match": true,
+        "runtime_bridge": true
+      }
+    ],
+    "trend": [
+      {
+        "baseline": 878.0,
+        "delta": -814.0,
+        "field": "memory.memory_requests",
+        "runtime_bridge": 64.0
+      },
+      {
+        "baseline": 304086.0,
+        "delta": -175830.0,
+        "field": "memory.memory_bytes",
+        "runtime_bridge": 128256.0
+      },
+      {
+        "baseline": 59,
+        "delta": 5,
+        "field": "gas.windows",
+        "runtime_bridge": 64
+      },
+      {
+        "baseline": 27,
+        "delta": 5,
+        "field": "gas.windows_done",
+        "runtime_bridge": 32
+      },
+      {
+        "baseline": 0,
+        "delta": 0,
+        "field": "step.global_steps_done",
+        "runtime_bridge": 0
+      },
+      {
+        "baseline": 8837.0,
+        "delta": null,
+        "field": "snn_tx.spike_packets_total",
+        "runtime_bridge": null
+      },
+      {
+        "baseline": 2872.0,
+        "delta": null,
+        "field": "snn_rx.spike_packets_total",
+        "runtime_bridge": null
+      }
+    ]
+  },
+  "family": "external_dyn_desc_ref",
+  "gate_reasons": [],
+  "generated_utc": "2026-03-25T08:39:40.075847+00:00",
+  "runtime_bridge": {
+    "equiv_validation": {
+      "allowed_fail_checks": [],
+      "blocked_fail_checks": [],
+      "ok": true,
+      "raw_summary": "passed_with_warning",
+      "summary": "passed_with_warning",
+      "waived_fail_checks": [],
+      "waiver_applied": false,
+      "waiver_name": null
+    },
+    "role": "runtime_bridge",
+    "run_dir": "/home/xgy/remote/sst_dram_si/outputs_large/paper2/dram_mesh_4x4/20260325-163924",
+    "runtime_stats": {
+      "riscv_snn_accepted_commands": 64.0,
+      "riscv_snn_backend_runtime_bridge": 64.0,
+      "riscv_snn_backend_runtime_bridge_provider_bound": 64.0,
+      "riscv_snn_completion_consumed_count": 64.0,
+      "riscv_snn_completion_visible_count": 64.0,
+      "riscv_snn_fault_count": 0.0,
+      "riscv_snn_firmware_elf_present": 64.0,
+      "riscv_snn_firmware_loaded": 64.0,
+      "riscv_snn_firmware_started_count": 64.0,
+      "riscv_snn_fused_step_completion_count": 64.0,
+      "riscv_snn_last_completion_status": 0.0,
+      "riscv_snn_last_fault_csr": 0.0,
+      "riscv_snn_submitted_commands": 64.0
+    },
+    "smoke_returncode": 0,
+    "spec_path": "/home/xgy/remote/riscv_snn_isa_lab/specs/external_dyn_desc_ref_runtime_bridge.json",
+    "validation": "passed_with_warning",
+    "validation_detail": {
+      "fail_checks": [],
+      "fail_lines": [],
+      "pass_checks": [
+        "contracts.present",
+        "contracts.strict_repro_same_post_deterministic",
+        "contracts.strict_repro_global_total_order_required",
+        "contracts.gas_semantic_ready_before_commit",
+        "contracts.gas_semantic_drain_before_scatter",
+        "contracts.apply_issue_policy_matches_effective_config",
+        "contracts.experimental_retire_policy_matches_effective_config",
+        "contracts.retire_policy_scope_consistent",
+        "contracts.experimental_gcss_phase_breakdown_enable_matches_effective_config",
+        "contracts.experimental_retire_shadow_per_post_enable_matches_effective_config",
+        "contracts.experimental_gcss_vlf_queue_policy_matches_effective_config",
+        "contracts.experimental_gcss_vlf_fair_band_size_matches_effective_config",
+        "run.log.exists",
+        "run.no_emergency_shutdown",
+        "model.num_pes",
+        "model.neurons_total",
+        "model.neurons_per_pe_formula",
+        "model.bcsr_rows_match_neurons_per_core",
+        "model.bcsr_meta_path_exists",
+        "model.exec_mode_infer",
+        "gas.windows_accounting",
+        "memory.nonzero",
+        "memhierarchy.line_size_bytes_nonzero",
+        "memhierarchy.memctrl.req_total_matches_sum",
+        "memhierarchy.memctrl.bytes_est_total_formula",
+        "memhierarchy.memctrl.req_GetS_minus_loader_bounds",
+        "memhierarchy.l1.req_total_matches_sum",
+        "memhierarchy.l1.bytes_est_total_formula",
+        "info.infer_global_step_sync"
+      ],
+      "pass_lines": [
+        "[val] PASS contracts.present: summary.contracts present",
+        "[val] PASS contracts.gas_semantic_ready_before_commit: value=True",
+        "[val] PASS contracts.gas_semantic_drain_before_scatter: value=True",
+        "[val] PASS memory.nonzero: memory_requests=64 memory_bytes=128256"
+      ],
+      "summary": "passed_with_warning",
+      "warn_checks": [
+        "gas.features.merge_enabled_bcsr"
+      ],
+      "warn_lines": [
+        "[val] WARN gas.features.merge_enabled_bcsr: gap_k=0 lmax=65536 row_window_bytes=0 row_window_timeout_ns=0"
+      ]
+    },
+    "workload_impl": "riscv_snn"
+  },
+  "status": "PASS"
+}

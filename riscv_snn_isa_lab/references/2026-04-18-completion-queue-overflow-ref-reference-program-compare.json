@@ -1,0 +1,290 @@
+{
+  "artifact_role": "dated_reference_program_compare_family_surface",
+  "authority_scope": "reference_program_compare_only",
+  "comparison": {
+    "allowed_divergence_points": [],
+    "barrier_wait_step_indices_match": true,
+    "clear_fault_before_step_indices_match": true,
+    "completion_step_indices_match": true,
+    "fault_snapshot_sequence_match": true,
+    "fault_step_indices_match": true,
+    "gate_ok": true,
+    "gate_reasons": [],
+    "invalid_divergence_points": [],
+    "overwrite_fault_step_indices_match": true,
+    "reference_barrier_wait_step_indices": [],
+    "reference_clear_fault_before_step_indices": [],
+    "reference_completion_step_indices": [],
+    "reference_fault_snapshot_sequence": [
+      "fault_step_0"
+    ],
+    "reference_fault_step_indices": [
+      0
+    ],
+    "reference_overwrite_fault_step_indices": [],
+    "reference_terminal_states": [
+      "Faulted"
+    ],
+    "runtime_barrier_wait_step_indices": [],
+    "runtime_clear_fault_before_step_indices": [],
+    "runtime_completion_step_indices": [],
+    "runtime_fault_snapshot_sequence": [
+      "fault_step_0"
+    ],
+    "runtime_fault_step_indices": [
+      0
+    ],
+    "runtime_overwrite_fault_step_indices": [],
+    "runtime_terminal_states": [
+      "Faulted"
+    ],
+    "status": "aligned",
+    "step_comparisons": [
+      {
+        "allowed_divergence_points": [],
+        "fabric_stage_alignment": true,
+        "gate_ok": true,
+        "gate_reasons": [],
+        "invalid_divergence_points": [],
+        "memory_domain_alignment": true,
+        "reference_fabric_stages": [
+          "ingress_receive",
+          "execution_consume"
+        ],
+        "reference_memory_domains": [
+          "ControlMemory"
+        ],
+        "reference_terminal_state": "Faulted",
+        "runtime_fabric_stages": [
+          "ingress_receive",
+          "execution_consume"
+        ],
+        "runtime_memory_domains": [
+          "ControlMemory"
+        ],
+        "runtime_terminal_state": "Faulted",
+        "status": "aligned",
+        "step_index": 0,
+        "step_name": "program_step_0",
+        "terminal_state_match": true
+      }
+    ],
+    "step_count_match": true,
+    "terminal_state_sequence_match": true
+  },
+  "equiv_summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-04-04-completion-queue-overflow-ref-equiv.json",
+  "evidence_rows": [
+    {
+      "comparison": {
+        "allowed_divergence_points": [],
+        "barrier_wait_step_indices_match": true,
+        "clear_fault_before_step_indices_match": true,
+        "completion_step_indices_match": true,
+        "fault_snapshot_sequence_match": true,
+        "fault_step_indices_match": true,
+        "gate_ok": true,
+        "gate_reasons": [],
+        "invalid_divergence_points": [],
+        "overwrite_fault_step_indices_match": true,
+        "reference_barrier_wait_step_indices": [],
+        "reference_clear_fault_before_step_indices": [],
+        "reference_completion_step_indices": [],
+        "reference_fault_snapshot_sequence": [
+          "fault_step_0"
+        ],
+        "reference_fault_step_indices": [
+          0
+        ],
+        "reference_overwrite_fault_step_indices": [],
+        "reference_terminal_states": [
+          "Faulted"
+        ],
+        "runtime_barrier_wait_step_indices": [],
+        "runtime_clear_fault_before_step_indices": [],
+        "runtime_completion_step_indices": [],
+        "runtime_fault_snapshot_sequence": [
+          "fault_step_0"
+        ],
+        "runtime_fault_step_indices": [
+          0
+        ],
+        "runtime_overwrite_fault_step_indices": [],
+        "runtime_terminal_states": [
+          "Faulted"
+        ],
+        "status": "aligned",
+        "step_comparisons": [
+          {
+            "allowed_divergence_points": [],
+            "fabric_stage_alignment": true,
+            "gate_ok": true,
+            "gate_reasons": [],
+            "invalid_divergence_points": [],
+            "memory_domain_alignment": true,
+            "reference_fabric_stages": [
+              "ingress_receive",
+              "execution_consume"
+            ],
+            "reference_memory_domains": [
+              "ControlMemory"
+            ],
+            "reference_terminal_state": "Faulted",
+            "runtime_fabric_stages": [
+              "ingress_receive",
+              "execution_consume"
+            ],
+            "runtime_memory_domains": [
+              "ControlMemory"
+            ],
+            "runtime_terminal_state": "Faulted",
+            "status": "aligned",
+            "step_index": 0,
+            "step_name": "program_step_0",
+            "terminal_state_match": true
+          }
+        ],
+        "step_count_match": true,
+        "terminal_state_sequence_match": true
+      },
+      "evidence_gate_reasons": [],
+      "evidence_ok": true,
+      "evidence_source_path": "/home/xgy/remote/riscv_snn_isa_lab/smoke_runs/completion_queue_overflow_ref_runtime_bridge/20260404-015546",
+      "gate_ok": true,
+      "gate_reasons": [],
+      "program_name": "completion_queue_overflow_ref",
+      "runtime_program_summary": {
+        "barrier_wait_step_indices": [],
+        "clear_fault_before_step_indices": [],
+        "command_kind_sequence": [
+          "fused_step"
+        ],
+        "completion_step_indices": [],
+        "evidence_contract_name": "program_runtime_evidence_contract",
+        "evidence_contract_version": "1.0",
+        "evidence_origin": "runtime_bridge_equiv",
+        "evidence_source_kind": "runtime_bridge_run_dir",
+        "evidence_source_path": "/home/xgy/remote/riscv_snn_isa_lab/smoke_runs/completion_queue_overflow_ref_runtime_bridge/20260404-015546",
+        "family": "completion_queue_overflow_ref",
+        "fault_snapshot_sequence": [
+          "fault_step_0"
+        ],
+        "fault_step_indices": [
+          0
+        ],
+        "overwrite_fault_step_indices": [],
+        "reference_program_profile": "accepted_fault_single_step",
+        "snapshot_signature_sequence": [],
+        "snapshot_step_indices": [],
+        "snapshot_summary_sequence": [],
+        "step_count": 1,
+        "steps": [
+          {
+            "command_kind": "fused_step",
+            "control_events": [
+              "fault_snapshot_visible"
+            ],
+            "divergence_points": [],
+            "fabric_stages": [
+              "ingress_receive",
+              "execution_consume"
+            ],
+            "memory_domains": [
+              "ControlMemory"
+            ],
+            "step_name": "program_step_0",
+            "terminal_state": "Faulted"
+          }
+        ],
+        "terminal_state": "Faulted",
+        "terminal_states": [
+          "Faulted"
+        ]
+      },
+      "source_equiv_status": "PASS",
+      "source_equiv_summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-04-04-completion-queue-overflow-ref-equiv.json",
+      "source_kind": "runtime_bridge_run_dir",
+      "source_origin": "runtime_bridge_equiv",
+      "status": "aligned"
+    }
+  ],
+  "evidence_source_count": 1,
+  "family": "completion_queue_overflow_ref",
+  "gate_ok": true,
+  "gate_reasons": [],
+  "generated_utc": "2026-04-18T12:56:43.420819+00:00",
+  "producer": "riscv_snn_lab.run_reference_program_compare_family",
+  "reference_terminal_states": [
+    "Faulted"
+  ],
+  "runtime_policy": {
+    "allowed_completion_signature": "one software-visible completion may remain intentionally unconsumed when cmpq-full fault retires",
+    "allowed_fault_signature": "last_fault_csr must equal fault_count * 0x0000000100000211",
+    "fault_lifecycle_mode": "single_fault",
+    "fault_mode": "accepted_fault_required",
+    "progress_mode": "completion_queue_fault_surface",
+    "queue_mode": "completion_queue_overflow_after_visible_completion",
+    "reference_program_profile": "accepted_fault_single_step",
+    "required_checks": [
+      "provider_bound_visible",
+      "fused_step_completion_visible",
+      "completion_visible",
+      "completion_consumed_covers_visible",
+      "fault_observed",
+      "completion_queue_fault_signature",
+      "fault_snapshot_consistent"
+    ]
+  },
+  "runtime_program_summary": {
+    "barrier_wait_step_indices": [],
+    "clear_fault_before_step_indices": [],
+    "command_kind_sequence": [
+      "fused_step"
+    ],
+    "completion_step_indices": [],
+    "evidence_contract_name": "program_runtime_evidence_contract",
+    "evidence_contract_version": "1.0",
+    "evidence_origin": "runtime_bridge_equiv",
+    "evidence_source_kind": "runtime_bridge_run_dir",
+    "evidence_source_path": "/home/xgy/remote/riscv_snn_isa_lab/smoke_runs/completion_queue_overflow_ref_runtime_bridge/20260404-015546",
+    "family": "completion_queue_overflow_ref",
+    "fault_snapshot_sequence": [
+      "fault_step_0"
+    ],
+    "fault_step_indices": [
+      0
+    ],
+    "overwrite_fault_step_indices": [],
+    "reference_program_profile": "accepted_fault_single_step",
+    "snapshot_signature_sequence": [],
+    "snapshot_step_indices": [],
+    "snapshot_summary_sequence": [],
+    "step_count": 1,
+    "steps": [
+      {
+        "command_kind": "fused_step",
+        "control_events": [
+          "fault_snapshot_visible"
+        ],
+        "divergence_points": [],
+        "fabric_stages": [
+          "ingress_receive",
+          "execution_consume"
+        ],
+        "memory_domains": [
+          "ControlMemory"
+        ],
+        "step_name": "program_step_0",
+        "terminal_state": "Faulted"
+      }
+    ],
+    "terminal_state": "Faulted",
+    "terminal_states": [
+      "Faulted"
+    ]
+  },
+  "schema_version": 2,
+  "source_input_kind": "equiv_summary",
+  "source_input_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-04-04-completion-queue-overflow-ref-equiv.json",
+  "source_input_status": "PASS",
+  "status": "aligned"
+}

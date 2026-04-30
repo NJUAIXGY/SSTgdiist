@@ -1,0 +1,65 @@
+{
+  "all_ok": true,
+  "artifact_role": "stable_artifact_isolation_check",
+  "authority_scope": "artifact_surface_isolation_observer",
+  "builder_programs": [
+    "external_dyn_desc_ref"
+  ],
+  "generated_utc": "2026-03-28T16:02:17.310617+00:00",
+  "producer": "riscv_snn_lab.run_artifact_isolation_check",
+  "schema_version": 2,
+  "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/artifact-isolation-report.json",
+  "surfaces": {
+    "builder": {
+      "canonical_exists_after": false,
+      "canonical_exists_before": false,
+      "canonical_mtime_ns_after": null,
+      "canonical_mtime_ns_before": null,
+      "canonical_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-03-29-builder-regress-matrix.json",
+      "canonical_unchanged": true,
+      "subset_canonical_surface": false,
+      "subset_path_differs_from_canonical": true,
+      "subset_summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-03-29-builder-regress-matrix-subset-d746e9504cc4.json",
+      "subset_surface": "subset"
+    },
+    "nightly": {
+      "canonical_exists_after": false,
+      "canonical_exists_before": false,
+      "canonical_mtime_ns_after": null,
+      "canonical_mtime_ns_before": null,
+      "canonical_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-03-29-nightly-index.json",
+      "canonical_unchanged": true,
+      "subset_canonical_surface": false,
+      "subset_path_differs_from_canonical": true,
+      "subset_summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-03-29-nightly-index-subset-e64390052e2e.json",
+      "subset_surface": "subset"
+    },
+    "toolchain": {
+      "canonical_exists_after": false,
+      "canonical_exists_before": false,
+      "canonical_mtime_ns_after": null,
+      "canonical_mtime_ns_before": null,
+      "canonical_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-03-29-toolchain-regress-matrix.json",
+      "canonical_unchanged": true,
+      "subset_canonical_surface": false,
+      "subset_path_differs_from_canonical": true,
+      "subset_summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-03-29-toolchain-regress-matrix-subset-b8cba2a66013.json",
+      "subset_surface": "subset"
+    },
+    "toolchain_audit": {
+      "canonical_exists_after": false,
+      "canonical_exists_before": false,
+      "canonical_mtime_ns_after": null,
+      "canonical_mtime_ns_before": null,
+      "canonical_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-03-29-toolchain-bridge-audit.json",
+      "canonical_unchanged": true,
+      "subset_canonical_surface": false,
+      "subset_path_differs_from_canonical": true,
+      "subset_summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-03-29-toolchain-bridge-audit-subset-b8cba2a66013.json",
+      "subset_surface": "subset"
+    }
+  },
+  "toolchain_programs": [
+    "external_dyn_desc_ref_toolchain"
+  ]
+}

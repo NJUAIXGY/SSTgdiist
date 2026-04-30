@@ -1,0 +1,4 @@
+window_start_us,window_end_us,read_count,avg_read_latency_cycles,issue_count,avg_req_size_bytes,avg_outstanding
+0,20,408,82.0931,0,0,0
+40,60,2,28.5,0,0,0
+100,120,2,28.5,0,0,0

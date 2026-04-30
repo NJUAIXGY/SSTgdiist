@@ -1,0 +1,454 @@
+{
+  "all_ok_all": true,
+  "all_ok_latest": true,
+  "artifact_role": "stable_history_rollup",
+  "authority_scope": "historical_rollup_only",
+  "count": 6,
+  "entries": [
+    {
+      "all_ok": true,
+      "builder_summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-04-02-builder-regress-matrix.json",
+      "count": 6,
+      "date": "2026-04-02",
+      "drift_families": [],
+      "failed_families": [],
+      "healthy": true,
+      "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-04-02-nightly-index.json",
+      "toolchain_audit_summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-04-02-toolchain-bridge-audit.json",
+      "toolchain_summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-04-02-toolchain-regress-matrix.json"
+    },
+    {
+      "all_ok": true,
+      "builder_summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-04-01-builder-regress-matrix.json",
+      "count": 6,
+      "date": "2026-04-01",
+      "drift_families": [],
+      "failed_families": [],
+      "healthy": true,
+      "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-04-01-nightly-index.json",
+      "toolchain_audit_summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-04-01-toolchain-bridge-audit.json",
+      "toolchain_summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-04-01-toolchain-regress-matrix.json"
+    },
+    {
+      "all_ok": true,
+      "builder_summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-03-30-builder-regress-matrix.json",
+      "count": 6,
+      "date": "2026-03-30",
+      "drift_families": [],
+      "failed_families": [],
+      "healthy": true,
+      "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-03-30-nightly-index.json",
+      "toolchain_audit_summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-03-30-toolchain-bridge-audit.json",
+      "toolchain_summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-03-30-toolchain-regress-matrix.json"
+    },
+    {
+      "all_ok": true,
+      "builder_summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-03-28-builder-regress-matrix.json",
+      "count": 6,
+      "date": "2026-03-28",
+      "drift_families": [],
+      "failed_families": [],
+      "healthy": true,
+      "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-03-28-nightly-index.json",
+      "toolchain_audit_summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-03-28-toolchain-bridge-audit.json",
+      "toolchain_summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-03-28-toolchain-regress-matrix.json"
+    },
+    {
+      "all_ok": true,
+      "builder_summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-03-27-builder-regress-matrix.json",
+      "count": 6,
+      "date": "2026-03-27",
+      "drift_families": [],
+      "failed_families": [],
+      "healthy": true,
+      "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-03-27-nightly-index.json",
+      "toolchain_audit_summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-03-27-toolchain-bridge-audit.json",
+      "toolchain_summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-03-27-toolchain-regress-matrix.json"
+    },
+    {
+      "all_ok": true,
+      "builder_summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-03-25-builder-regress-matrix.json",
+      "count": 5,
+      "date": "2026-03-25",
+      "drift_families": [],
+      "failed_families": [],
+      "healthy": true,
+      "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-03-25-nightly-index.json",
+      "toolchain_audit_summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-03-25-toolchain-bridge-audit.json",
+      "toolchain_summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-03-25-toolchain-regress-matrix.json"
+    }
+  ],
+  "family_history": [
+    {
+      "days": [
+        {
+          "audit_ok": true,
+          "builder_run_id": "20260402-204246",
+          "date": "2026-04-02",
+          "healthy": true,
+          "manifest_match": true,
+          "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-04-02-nightly-index.json",
+          "toolchain_run_id": "20260402-204516"
+        },
+        {
+          "audit_ok": true,
+          "builder_run_id": "20260401-115154",
+          "date": "2026-04-01",
+          "healthy": true,
+          "manifest_match": true,
+          "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-04-01-nightly-index.json",
+          "toolchain_run_id": "20260401-115421"
+        },
+        {
+          "audit_ok": true,
+          "builder_run_id": "20260330-122650",
+          "date": "2026-03-30",
+          "healthy": true,
+          "manifest_match": true,
+          "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-03-30-nightly-index.json",
+          "toolchain_run_id": "20260330-122957"
+        },
+        {
+          "audit_ok": true,
+          "builder_run_id": "20260328-234359",
+          "date": "2026-03-28",
+          "healthy": true,
+          "manifest_match": true,
+          "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-03-28-nightly-index.json",
+          "toolchain_run_id": "20260328-234622"
+        },
+        {
+          "audit_ok": true,
+          "builder_run_id": "20260327-174544",
+          "date": "2026-03-27",
+          "healthy": true,
+          "manifest_match": true,
+          "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-03-27-nightly-index.json",
+          "toolchain_run_id": "20260327-174804"
+        }
+      ],
+      "family": "barrier_wfi_order_ref",
+      "first_drift_date": null,
+      "first_fail_date": null,
+      "latest_recovered_date": null
+    },
+    {
+      "days": [
+        {
+          "audit_ok": true,
+          "builder_run_id": "20260402-204134",
+          "date": "2026-04-02",
+          "healthy": true,
+          "manifest_match": true,
+          "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-04-02-nightly-index.json",
+          "toolchain_run_id": "20260402-204401"
+        },
+        {
+          "audit_ok": true,
+          "builder_run_id": "20260401-115042",
+          "date": "2026-04-01",
+          "healthy": true,
+          "manifest_match": true,
+          "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-04-01-nightly-index.json",
+          "toolchain_run_id": "20260401-115310"
+        },
+        {
+          "audit_ok": true,
+          "builder_run_id": "20260330-122526",
+          "date": "2026-03-30",
+          "healthy": true,
+          "manifest_match": true,
+          "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-03-30-nightly-index.json",
+          "toolchain_run_id": "20260330-122827"
+        },
+        {
+          "audit_ok": true,
+          "builder_run_id": "20260328-234230",
+          "date": "2026-03-28",
+          "healthy": true,
+          "manifest_match": true,
+          "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-03-28-nightly-index.json",
+          "toolchain_run_id": "20260328-234514"
+        },
+        {
+          "audit_ok": true,
+          "builder_run_id": "20260327-174433",
+          "date": "2026-03-27",
+          "healthy": true,
+          "manifest_match": true,
+          "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-03-27-nightly-index.json",
+          "toolchain_run_id": "20260327-174654"
+        },
+        {
+          "audit_ok": true,
+          "builder_run_id": "20260325-113950",
+          "date": "2026-03-25",
+          "healthy": true,
+          "manifest_match": true,
+          "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-03-25-nightly-index.json",
+          "toolchain_run_id": "20260325-114145"
+        }
+      ],
+      "family": "external_dyn_desc_bad_policy_ref",
+      "first_drift_date": null,
+      "first_fail_date": null,
+      "latest_recovered_date": null
+    },
+    {
+      "days": [
+        {
+          "audit_ok": true,
+          "builder_run_id": "20260402-204222",
+          "date": "2026-04-02",
+          "healthy": true,
+          "manifest_match": true,
+          "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-04-02-nightly-index.json",
+          "toolchain_run_id": "20260402-204451"
+        },
+        {
+          "audit_ok": true,
+          "builder_run_id": "20260401-115131",
+          "date": "2026-04-01",
+          "healthy": true,
+          "manifest_match": true,
+          "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-04-01-nightly-index.json",
+          "toolchain_run_id": "20260401-115357"
+        },
+        {
+          "audit_ok": true,
+          "builder_run_id": "20260330-122619",
+          "date": "2026-03-30",
+          "healthy": true,
+          "manifest_match": true,
+          "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-03-30-nightly-index.json",
+          "toolchain_run_id": "20260330-122927"
+        },
+        {
+          "audit_ok": true,
+          "builder_run_id": "20260328-234333",
+          "date": "2026-03-28",
+          "healthy": true,
+          "manifest_match": true,
+          "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-03-28-nightly-index.json",
+          "toolchain_run_id": "20260328-234558"
+        },
+        {
+          "audit_ok": true,
+          "builder_run_id": "20260327-174520",
+          "date": "2026-03-27",
+          "healthy": true,
+          "manifest_match": true,
+          "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-03-27-nightly-index.json",
+          "toolchain_run_id": "20260327-174740"
+        },
+        {
+          "audit_ok": true,
+          "builder_run_id": "20260325-114035",
+          "date": "2026-03-25",
+          "healthy": true,
+          "manifest_match": true,
+          "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-03-25-nightly-index.json",
+          "toolchain_run_id": "20260325-114230"
+        }
+      ],
+      "family": "external_dyn_desc_fault_overwrite_chain_ref",
+      "first_drift_date": null,
+      "first_fail_date": null,
+      "latest_recovered_date": null
+    },
+    {
+      "days": [
+        {
+          "audit_ok": true,
+          "builder_run_id": "20260402-204158",
+          "date": "2026-04-02",
+          "healthy": true,
+          "manifest_match": true,
+          "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-04-02-nightly-index.json",
+          "toolchain_run_id": "20260402-204427"
+        },
+        {
+          "audit_ok": true,
+          "builder_run_id": "20260401-115107",
+          "date": "2026-04-01",
+          "healthy": true,
+          "manifest_match": true,
+          "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-04-01-nightly-index.json",
+          "toolchain_run_id": "20260401-115335"
+        },
+        {
+          "audit_ok": true,
+          "builder_run_id": "20260330-122553",
+          "date": "2026-03-30",
+          "healthy": true,
+          "manifest_match": true,
+          "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-03-30-nightly-index.json",
+          "toolchain_run_id": "20260330-122857"
+        },
+        {
+          "audit_ok": true,
+          "builder_run_id": "20260328-234305",
+          "date": "2026-03-28",
+          "healthy": true,
+          "manifest_match": true,
+          "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-03-28-nightly-index.json",
+          "toolchain_run_id": "20260328-234536"
+        },
+        {
+          "audit_ok": true,
+          "builder_run_id": "20260327-174457",
+          "date": "2026-03-27",
+          "healthy": true,
+          "manifest_match": true,
+          "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-03-27-nightly-index.json",
+          "toolchain_run_id": "20260327-174717"
+        },
+        {
+          "audit_ok": true,
+          "builder_run_id": "20260325-114011",
+          "date": "2026-03-25",
+          "healthy": true,
+          "manifest_match": true,
+          "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-03-25-nightly-index.json",
+          "toolchain_run_id": "20260325-114209"
+        }
+      ],
+      "family": "external_dyn_desc_fault_rearm_ref",
+      "first_drift_date": null,
+      "first_fail_date": null,
+      "latest_recovered_date": null
+    },
+    {
+      "days": [
+        {
+          "audit_ok": true,
+          "builder_run_id": "20260402-204110",
+          "date": "2026-04-02",
+          "healthy": true,
+          "manifest_match": true,
+          "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-04-02-nightly-index.json",
+          "toolchain_run_id": "20260402-204337"
+        },
+        {
+          "audit_ok": true,
+          "builder_run_id": "20260401-115019",
+          "date": "2026-04-01",
+          "healthy": true,
+          "manifest_match": true,
+          "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-04-01-nightly-index.json",
+          "toolchain_run_id": "20260401-115246"
+        },
+        {
+          "audit_ok": true,
+          "builder_run_id": "20260330-122500",
+          "date": "2026-03-30",
+          "healthy": true,
+          "manifest_match": true,
+          "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-03-30-nightly-index.json",
+          "toolchain_run_id": "20260330-122754"
+        },
+        {
+          "audit_ok": true,
+          "builder_run_id": "20260328-234205",
+          "date": "2026-03-28",
+          "healthy": true,
+          "manifest_match": true,
+          "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-03-28-nightly-index.json",
+          "toolchain_run_id": "20260328-234449"
+        },
+        {
+          "audit_ok": true,
+          "builder_run_id": "20260327-174410",
+          "date": "2026-03-27",
+          "healthy": true,
+          "manifest_match": true,
+          "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-03-27-nightly-index.json",
+          "toolchain_run_id": "20260327-174632"
+        },
+        {
+          "audit_ok": true,
+          "builder_run_id": "20260325-113926",
+          "date": "2026-03-25",
+          "healthy": true,
+          "manifest_match": true,
+          "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-03-25-nightly-index.json",
+          "toolchain_run_id": "20260325-114123"
+        }
+      ],
+      "family": "external_dyn_desc_fault_ref",
+      "first_drift_date": null,
+      "first_fail_date": null,
+      "latest_recovered_date": null
+    },
+    {
+      "days": [
+        {
+          "audit_ok": true,
+          "builder_run_id": "20260402-204044",
+          "date": "2026-04-02",
+          "healthy": true,
+          "manifest_match": true,
+          "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-04-02-nightly-index.json",
+          "toolchain_run_id": "20260402-204314"
+        },
+        {
+          "audit_ok": true,
+          "builder_run_id": "20260401-114955",
+          "date": "2026-04-01",
+          "healthy": true,
+          "manifest_match": true,
+          "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-04-01-nightly-index.json",
+          "toolchain_run_id": "20260401-115223"
+        },
+        {
+          "audit_ok": true,
+          "builder_run_id": "20260330-122437",
+          "date": "2026-03-30",
+          "healthy": true,
+          "manifest_match": true,
+          "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-03-30-nightly-index.json",
+          "toolchain_run_id": "20260330-122723"
+        },
+        {
+          "audit_ok": true,
+          "builder_run_id": "20260328-234141",
+          "date": "2026-03-28",
+          "healthy": true,
+          "manifest_match": true,
+          "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-03-28-nightly-index.json",
+          "toolchain_run_id": "20260328-234426"
+        },
+        {
+          "audit_ok": true,
+          "builder_run_id": "20260327-174347",
+          "date": "2026-03-27",
+          "healthy": true,
+          "manifest_match": true,
+          "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-03-27-nightly-index.json",
+          "toolchain_run_id": "20260327-174610"
+        },
+        {
+          "audit_ok": true,
+          "builder_run_id": "20260325-113904",
+          "date": "2026-03-25",
+          "healthy": true,
+          "manifest_match": true,
+          "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-03-25-nightly-index.json",
+          "toolchain_run_id": "20260325-114100"
+        }
+      ],
+      "family": "external_dyn_desc_ref",
+      "first_drift_date": null,
+      "first_fail_date": null,
+      "latest_recovered_date": null
+    }
+  ],
+  "first_drift_date": null,
+  "first_fail_date": null,
+  "generated_utc": "2026-04-02T12:45:41.141339+00:00",
+  "latest_date": "2026-04-02",
+  "latest_recovered_date": null,
+  "latest_summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-04-02-nightly-index.json",
+  "producer": "riscv_snn_lab.build_history_index",
+  "schema_version": 2
+}

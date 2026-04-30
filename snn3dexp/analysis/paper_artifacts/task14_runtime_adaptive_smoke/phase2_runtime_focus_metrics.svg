@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="540" viewBox="0 0 1040 540">
+<rect width="100%" height="100%" fill="#fcfbf7"/>
+<text x="52" y="32" font-family="Helvetica, Arial, sans-serif" font-size="22" font-weight="700" fill="#1f2937">Phase2 Runtime Focus Metrics</text>
+<text x="52" y="52" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#4b5563">Derived from task14_runtime_adaptive_smoke runtime ablation summary</text>
+<line x1="96" y1="454.00" x2="1004" y2="454.00" stroke="#d1d5db" stroke-width="1"/>
+<text x="86" y="458.00" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#6b7280">0.00</text>
+<line x1="96" y1="373.60" x2="1004" y2="373.60" stroke="#d1d5db" stroke-width="1"/>
+<text x="86" y="377.60" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#6b7280">0.30</text>
+<line x1="96" y1="293.20" x2="1004" y2="293.20" stroke="#d1d5db" stroke-width="1"/>
+<text x="86" y="297.20" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#6b7280">0.60</text>
+<line x1="96" y1="212.80" x2="1004" y2="212.80" stroke="#d1d5db" stroke-width="1"/>
+<text x="86" y="216.80" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#6b7280">0.90</text>
+<line x1="96" y1="132.40" x2="1004" y2="132.40" stroke="#d1d5db" stroke-width="1"/>
+<text x="86" y="136.40" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#6b7280">1.20</text>
+<line x1="96" y1="52.00" x2="1004" y2="52.00" stroke="#d1d5db" stroke-width="1"/>
+<text x="86" y="56.00" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#6b7280">1.50</text>
+<text x="209.50" y="502" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#374151">Same-Home Ratio</text>
+<rect x="120.00" y="320.00" width="42.00" height="134.00" rx="4" fill="#264653"/>
+<text x="141.00" y="314.00" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#111827">0.500</text>
+<rect x="174.00" y="211.13" width="42.00" height="242.87" rx="4" fill="#2A9D8F"/>
+<text x="195.00" y="205.13" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#111827">0.906</text>
+<rect x="228.00" y="253.00" width="42.00" height="201.00" rx="4" fill="#E76F51"/>
+<text x="249.00" y="247.00" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#111827">0.750</text>
+<text x="436.50" y="502" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#374151">Vertical Target Ratio</text>
+<rect x="347.00" y="454.00" width="42.00" height="0.00" rx="4" fill="#264653"/>
+<text x="368.00" y="448.00" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#111827">0.000</text>
+<rect x="401.00" y="345.12" width="42.00" height="108.87" rx="4" fill="#2A9D8F"/>
+<text x="422.00" y="339.12" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#111827">0.406</text>
+<rect x="455.00" y="387.00" width="42.00" height="67.00" rx="4" fill="#E76F51"/>
+<text x="476.00" y="381.00" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#111827">0.250</text>
+<text x="663.50" y="502" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#374151">Vertical Link Pressure</text>
+<rect x="574.00" y="400.40" width="42.00" height="53.60" rx="4" fill="#264653"/>
+<text x="595.00" y="394.40" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#111827">0.200</text>
+<rect x="628.00" y="335.07" width="42.00" height="118.92" rx="4" fill="#2A9D8F"/>
+<text x="649.00" y="329.07" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#111827">0.444</text>
+<rect x="682.00" y="360.20" width="42.00" height="93.80" rx="4" fill="#E76F51"/>
+<text x="703.00" y="354.20" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#111827">0.350</text>
+<text x="890.50" y="502" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#374151">Thermal Hotspot Score</text>
+<rect x="801.00" y="128.24" width="42.00" height="325.76" rx="4" fill="#264653"/>
+<text x="822.00" y="122.24" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#111827">1.216</text>
+<rect x="855.00" y="128.32" width="42.00" height="325.68" rx="4" fill="#2A9D8F"/>
+<text x="876.00" y="122.32" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#111827">1.215</text>
+<rect x="909.00" y="128.32" width="42.00" height="325.68" rx="4" fill="#E76F51"/>
+<text x="930.00" y="122.32" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#111827">1.215</text>
+<rect x="740" y="72" width="14" height="14" rx="3" fill="#264653"/>
+<text x="762" y="83" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#374151">Full 3D</text>
+<rect x="740" y="94" width="14" height="14" rx="3" fill="#2A9D8F"/>
+<text x="762" y="105" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#374151">Full 3D + 3D-Aware Mapping</text>
+<rect x="740" y="116" width="14" height="14" rx="3" fill="#E76F51"/>
+<text x="762" y="127" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#374151">Full 3D + Thermal Guard</text>
+</svg>

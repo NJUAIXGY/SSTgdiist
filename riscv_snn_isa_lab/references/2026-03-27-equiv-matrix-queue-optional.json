@@ -1,0 +1,30 @@
+{
+  "all_ok": true,
+  "artifact_role": "dated_equivalence_matrix",
+  "authority_scope": "family_level_equivalence_authority",
+  "canonical_surface": true,
+  "count": 2,
+  "families": [
+    {
+      "family": "queue_backpressure_ref",
+      "gate_reasons": [],
+      "status": "PASS",
+      "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-03-27-queue-backpressure-ref-equiv.json"
+    },
+    {
+      "family": "completion_queue_overflow_ref",
+      "gate_reasons": [],
+      "status": "PASS",
+      "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-03-27-completion-queue-overflow-ref-equiv.json"
+    }
+  ],
+  "gate_name": "riscv_snn_equiv_matrix",
+  "generated_utc": "2026-03-27T09:54:24.159522+00:00",
+  "producer": "riscv_snn_lab.run_equiv_matrix",
+  "requested_families": [
+    "queue_backpressure_ref",
+    "completion_queue_overflow_ref"
+  ],
+  "requested_group": "queue_optional",
+  "schema_version": 2
+}

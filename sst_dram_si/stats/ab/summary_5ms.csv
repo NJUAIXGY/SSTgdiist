@@ -1,0 +1,6 @@
+stats_csv,unique_reads,unique_bytes,bursts,payload,avg_burst_bytes,req_bytes,total_mib,reqs_per_mib,rowwin_triggers,rowwin_bytes,rowwin_share,avg_read_latency_0
+sst_dram_si/sst_dram_si/stats/ab/s1_5ms.csv,0,0,0,0,0.00,75497472,72.000000,0.00,0,0,0.0000,31.69
+stats_csv,unique_reads,unique_bytes,bursts,payload,avg_burst_bytes,req_bytes,total_mib,reqs_per_mib,rowwin_triggers,rowwin_bytes,rowwin_share,avg_read_latency_0
+sst_dram_si/sst_dram_si/stats/ab/gas_nowin_5ms.csv,512,497024,1736,3606528,2077.49,4190208,3.996094,128.13,0,0,0.0000,38.98
+stats_csv,unique_reads,unique_bytes,bursts,payload,avg_burst_bytes,req_bytes,total_mib,reqs_per_mib,rowwin_triggers,rowwin_bytes,rowwin_share,avg_read_latency_0
+sst_dram_si/sst_dram_si/stats/ab/gas_rowwin16k_t0_5ms.csv,511,524928,1747,3635200,2080.82,4192256,3.998047,127.81,2,16384,0.0312,39.00

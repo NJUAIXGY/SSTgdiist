@@ -1,0 +1,2 @@
+stats_csv,unique_reads,unique_bytes,bursts,payload,avg_burst_bytes,req_bytes,total_mib,reqs_per_mib,rowwin_triggers,rowwin_bytes,rowwin_share,avg_read_latency_0,energy_total,energy_cmd,energy_bg,sim_time_s,avg_power
+sst_dram_si/stats/energy_probe_100us.csv,142,86464,1231,2564096,2082.94,2783232,2.654297,53.50,0,0,0.0000,38.41,16565.188773,4908.950634,11656.238139,0.000100000,165651887.730000

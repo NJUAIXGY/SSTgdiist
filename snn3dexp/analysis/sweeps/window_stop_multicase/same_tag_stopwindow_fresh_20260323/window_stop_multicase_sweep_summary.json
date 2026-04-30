@@ -1,0 +1,179 @@
+{
+  "case_ids": [
+    "full_3d_snn_window",
+    "full_3d_snn_window_bundle_v3",
+    "full_3d_snn_window_monolithic_proxy"
+  ],
+  "stop_ats": [
+    "2us",
+    "10us",
+    "20us"
+  ],
+  "run_tag_prefix": "same_tag_stopwindow_fresh_20260323",
+  "sst_smoke": true,
+  "run_tags_by_stop": {
+    "2us": "same_tag_stopwindow_fresh_20260323_2us",
+    "10us": "same_tag_stopwindow_fresh_20260323_10us",
+    "20us": "same_tag_stopwindow_fresh_20260323_20us"
+  },
+  "stop_manifests": [
+    {
+      "stop_at": "2us",
+      "run_tag": "same_tag_stopwindow_fresh_20260323_2us",
+      "path": "/home/xgy/remote/snn3dexp/analysis/sweeps/window_stop_multicase/same_tag_stopwindow_fresh_20260323/run_tag_manifests/2us.json",
+      "run_tags_by_case": {
+        "full_3d_snn_window": "same_tag_stopwindow_fresh_20260323_2us",
+        "full_3d_snn_window_bundle_v3": "same_tag_stopwindow_fresh_20260323_2us",
+        "full_3d_snn_window_monolithic_proxy": "same_tag_stopwindow_fresh_20260323_2us"
+      }
+    },
+    {
+      "stop_at": "10us",
+      "run_tag": "same_tag_stopwindow_fresh_20260323_10us",
+      "path": "/home/xgy/remote/snn3dexp/analysis/sweeps/window_stop_multicase/same_tag_stopwindow_fresh_20260323/run_tag_manifests/10us.json",
+      "run_tags_by_case": {
+        "full_3d_snn_window": "same_tag_stopwindow_fresh_20260323_10us",
+        "full_3d_snn_window_bundle_v3": "same_tag_stopwindow_fresh_20260323_10us",
+        "full_3d_snn_window_monolithic_proxy": "same_tag_stopwindow_fresh_20260323_10us"
+      }
+    },
+    {
+      "stop_at": "20us",
+      "run_tag": "same_tag_stopwindow_fresh_20260323_20us",
+      "path": "/home/xgy/remote/snn3dexp/analysis/sweeps/window_stop_multicase/same_tag_stopwindow_fresh_20260323/run_tag_manifests/20us.json",
+      "run_tags_by_case": {
+        "full_3d_snn_window": "same_tag_stopwindow_fresh_20260323_20us",
+        "full_3d_snn_window_bundle_v3": "same_tag_stopwindow_fresh_20260323_20us",
+        "full_3d_snn_window_monolithic_proxy": "same_tag_stopwindow_fresh_20260323_20us"
+      }
+    }
+  ],
+  "runs": [
+    {
+      "stop_at": "2us",
+      "case_id": "full_3d_snn_window",
+      "run_tag": "same_tag_stopwindow_fresh_20260323_2us",
+      "status": "smoke_passed",
+      "run_root": "/home/xgy/remote/snn3dexp/runs/full_3d_snn_window/same_tag_stopwindow_fresh_20260323_2us",
+      "analysis_root": "/home/xgy/remote/snn3dexp/analysis/full_3d_snn_window/same_tag_stopwindow_fresh_20260323_2us",
+      "phase2_case_summary_path": "/home/xgy/remote/snn3dexp/analysis/full_3d_snn_window/same_tag_stopwindow_fresh_20260323_2us/phase2_case_summary.json",
+      "effective_config_path": "",
+      "stack_nmc_summary_path": "/home/xgy/remote/snn3dexp/analysis/full_3d_snn_window/same_tag_stopwindow_fresh_20260323_2us/stack_nmc_summary.json",
+      "route_memory_joint_summary_path": "/home/xgy/remote/snn3dexp/analysis/full_3d_snn_window/same_tag_stopwindow_fresh_20260323_2us/route_memory_joint_summary.json",
+      "runtime_summary_path": "/home/xgy/remote/snn3dexp/analysis/full_3d_snn_window/same_tag_stopwindow_fresh_20260323_2us/runtime_summary.json"
+    },
+    {
+      "stop_at": "2us",
+      "case_id": "full_3d_snn_window_bundle_v3",
+      "run_tag": "same_tag_stopwindow_fresh_20260323_2us",
+      "status": "smoke_passed",
+      "run_root": "/home/xgy/remote/snn3dexp/runs/full_3d_snn_window_bundle_v3/same_tag_stopwindow_fresh_20260323_2us",
+      "analysis_root": "/home/xgy/remote/snn3dexp/analysis/full_3d_snn_window_bundle_v3/same_tag_stopwindow_fresh_20260323_2us",
+      "phase2_case_summary_path": "/home/xgy/remote/snn3dexp/analysis/full_3d_snn_window_bundle_v3/same_tag_stopwindow_fresh_20260323_2us/phase2_case_summary.json",
+      "effective_config_path": "",
+      "stack_nmc_summary_path": "/home/xgy/remote/snn3dexp/analysis/full_3d_snn_window_bundle_v3/same_tag_stopwindow_fresh_20260323_2us/stack_nmc_summary.json",
+      "route_memory_joint_summary_path": "/home/xgy/remote/snn3dexp/analysis/full_3d_snn_window_bundle_v3/same_tag_stopwindow_fresh_20260323_2us/route_memory_joint_summary.json",
+      "runtime_summary_path": "/home/xgy/remote/snn3dexp/analysis/full_3d_snn_window_bundle_v3/same_tag_stopwindow_fresh_20260323_2us/runtime_summary.json"
+    },
+    {
+      "stop_at": "2us",
+      "case_id": "full_3d_snn_window_monolithic_proxy",
+      "run_tag": "same_tag_stopwindow_fresh_20260323_2us",
+      "status": "smoke_passed",
+      "run_root": "/home/xgy/remote/snn3dexp/runs/full_3d_snn_window_monolithic_proxy/same_tag_stopwindow_fresh_20260323_2us",
+      "analysis_root": "/home/xgy/remote/snn3dexp/analysis/full_3d_snn_window_monolithic_proxy/same_tag_stopwindow_fresh_20260323_2us",
+      "phase2_case_summary_path": "/home/xgy/remote/snn3dexp/analysis/full_3d_snn_window_monolithic_proxy/same_tag_stopwindow_fresh_20260323_2us/phase2_case_summary.json",
+      "effective_config_path": "",
+      "stack_nmc_summary_path": "/home/xgy/remote/snn3dexp/analysis/full_3d_snn_window_monolithic_proxy/same_tag_stopwindow_fresh_20260323_2us/stack_nmc_summary.json",
+      "route_memory_joint_summary_path": "/home/xgy/remote/snn3dexp/analysis/full_3d_snn_window_monolithic_proxy/same_tag_stopwindow_fresh_20260323_2us/route_memory_joint_summary.json",
+      "runtime_summary_path": "/home/xgy/remote/snn3dexp/analysis/full_3d_snn_window_monolithic_proxy/same_tag_stopwindow_fresh_20260323_2us/runtime_summary.json"
+    },
+    {
+      "stop_at": "10us",
+      "case_id": "full_3d_snn_window",
+      "run_tag": "same_tag_stopwindow_fresh_20260323_10us",
+      "status": "smoke_passed",
+      "run_root": "/home/xgy/remote/snn3dexp/runs/full_3d_snn_window/same_tag_stopwindow_fresh_20260323_10us",
+      "analysis_root": "/home/xgy/remote/snn3dexp/analysis/full_3d_snn_window/same_tag_stopwindow_fresh_20260323_10us",
+      "phase2_case_summary_path": "/home/xgy/remote/snn3dexp/analysis/full_3d_snn_window/same_tag_stopwindow_fresh_20260323_10us/phase2_case_summary.json",
+      "effective_config_path": "",
+      "stack_nmc_summary_path": "/home/xgy/remote/snn3dexp/analysis/full_3d_snn_window/same_tag_stopwindow_fresh_20260323_10us/stack_nmc_summary.json",
+      "route_memory_joint_summary_path": "/home/xgy/remote/snn3dexp/analysis/full_3d_snn_window/same_tag_stopwindow_fresh_20260323_10us/route_memory_joint_summary.json",
+      "runtime_summary_path": "/home/xgy/remote/snn3dexp/analysis/full_3d_snn_window/same_tag_stopwindow_fresh_20260323_10us/runtime_summary.json"
+    },
+    {
+      "stop_at": "10us",
+      "case_id": "full_3d_snn_window_bundle_v3",
+      "run_tag": "same_tag_stopwindow_fresh_20260323_10us",
+      "status": "smoke_passed",
+      "run_root": "/home/xgy/remote/snn3dexp/runs/full_3d_snn_window_bundle_v3/same_tag_stopwindow_fresh_20260323_10us",
+      "analysis_root": "/home/xgy/remote/snn3dexp/analysis/full_3d_snn_window_bundle_v3/same_tag_stopwindow_fresh_20260323_10us",
+      "phase2_case_summary_path": "/home/xgy/remote/snn3dexp/analysis/full_3d_snn_window_bundle_v3/same_tag_stopwindow_fresh_20260323_10us/phase2_case_summary.json",
+      "effective_config_path": "",
+      "stack_nmc_summary_path": "/home/xgy/remote/snn3dexp/analysis/full_3d_snn_window_bundle_v3/same_tag_stopwindow_fresh_20260323_10us/stack_nmc_summary.json",
+      "route_memory_joint_summary_path": "/home/xgy/remote/snn3dexp/analysis/full_3d_snn_window_bundle_v3/same_tag_stopwindow_fresh_20260323_10us/route_memory_joint_summary.json",
+      "runtime_summary_path": "/home/xgy/remote/snn3dexp/analysis/full_3d_snn_window_bundle_v3/same_tag_stopwindow_fresh_20260323_10us/runtime_summary.json"
+    },
+    {
+      "stop_at": "10us",
+      "case_id": "full_3d_snn_window_monolithic_proxy",
+      "run_tag": "same_tag_stopwindow_fresh_20260323_10us",
+      "status": "smoke_passed",
+      "run_root": "/home/xgy/remote/snn3dexp/runs/full_3d_snn_window_monolithic_proxy/same_tag_stopwindow_fresh_20260323_10us",
+      "analysis_root": "/home/xgy/remote/snn3dexp/analysis/full_3d_snn_window_monolithic_proxy/same_tag_stopwindow_fresh_20260323_10us",
+      "phase2_case_summary_path": "/home/xgy/remote/snn3dexp/analysis/full_3d_snn_window_monolithic_proxy/same_tag_stopwindow_fresh_20260323_10us/phase2_case_summary.json",
+      "effective_config_path": "",
+      "stack_nmc_summary_path": "/home/xgy/remote/snn3dexp/analysis/full_3d_snn_window_monolithic_proxy/same_tag_stopwindow_fresh_20260323_10us/stack_nmc_summary.json",
+      "route_memory_joint_summary_path": "/home/xgy/remote/snn3dexp/analysis/full_3d_snn_window_monolithic_proxy/same_tag_stopwindow_fresh_20260323_10us/route_memory_joint_summary.json",
+      "runtime_summary_path": "/home/xgy/remote/snn3dexp/analysis/full_3d_snn_window_monolithic_proxy/same_tag_stopwindow_fresh_20260323_10us/runtime_summary.json"
+    },
+    {
+      "stop_at": "20us",
+      "case_id": "full_3d_snn_window",
+      "run_tag": "same_tag_stopwindow_fresh_20260323_20us",
+      "status": "smoke_passed",
+      "run_root": "/home/xgy/remote/snn3dexp/runs/full_3d_snn_window/same_tag_stopwindow_fresh_20260323_20us",
+      "analysis_root": "/home/xgy/remote/snn3dexp/analysis/full_3d_snn_window/same_tag_stopwindow_fresh_20260323_20us",
+      "phase2_case_summary_path": "/home/xgy/remote/snn3dexp/analysis/full_3d_snn_window/same_tag_stopwindow_fresh_20260323_20us/phase2_case_summary.json",
+      "effective_config_path": "",
+      "stack_nmc_summary_path": "/home/xgy/remote/snn3dexp/analysis/full_3d_snn_window/same_tag_stopwindow_fresh_20260323_20us/stack_nmc_summary.json",
+      "route_memory_joint_summary_path": "/home/xgy/remote/snn3dexp/analysis/full_3d_snn_window/same_tag_stopwindow_fresh_20260323_20us/route_memory_joint_summary.json",
+      "runtime_summary_path": "/home/xgy/remote/snn3dexp/analysis/full_3d_snn_window/same_tag_stopwindow_fresh_20260323_20us/runtime_summary.json"
+    },
+    {
+      "stop_at": "20us",
+      "case_id": "full_3d_snn_window_bundle_v3",
+      "run_tag": "same_tag_stopwindow_fresh_20260323_20us",
+      "status": "smoke_passed",
+      "run_root": "/home/xgy/remote/snn3dexp/runs/full_3d_snn_window_bundle_v3/same_tag_stopwindow_fresh_20260323_20us",
+      "analysis_root": "/home/xgy/remote/snn3dexp/analysis/full_3d_snn_window_bundle_v3/same_tag_stopwindow_fresh_20260323_20us",
+      "phase2_case_summary_path": "/home/xgy/remote/snn3dexp/analysis/full_3d_snn_window_bundle_v3/same_tag_stopwindow_fresh_20260323_20us/phase2_case_summary.json",
+      "effective_config_path": "",
+      "stack_nmc_summary_path": "/home/xgy/remote/snn3dexp/analysis/full_3d_snn_window_bundle_v3/same_tag_stopwindow_fresh_20260323_20us/stack_nmc_summary.json",
+      "route_memory_joint_summary_path": "/home/xgy/remote/snn3dexp/analysis/full_3d_snn_window_bundle_v3/same_tag_stopwindow_fresh_20260323_20us/route_memory_joint_summary.json",
+      "runtime_summary_path": "/home/xgy/remote/snn3dexp/analysis/full_3d_snn_window_bundle_v3/same_tag_stopwindow_fresh_20260323_20us/runtime_summary.json"
+    },
+    {
+      "stop_at": "20us",
+      "case_id": "full_3d_snn_window_monolithic_proxy",
+      "run_tag": "same_tag_stopwindow_fresh_20260323_20us",
+      "status": "smoke_passed",
+      "run_root": "/home/xgy/remote/snn3dexp/runs/full_3d_snn_window_monolithic_proxy/same_tag_stopwindow_fresh_20260323_20us",
+      "analysis_root": "/home/xgy/remote/snn3dexp/analysis/full_3d_snn_window_monolithic_proxy/same_tag_stopwindow_fresh_20260323_20us",
+      "phase2_case_summary_path": "/home/xgy/remote/snn3dexp/analysis/full_3d_snn_window_monolithic_proxy/same_tag_stopwindow_fresh_20260323_20us/phase2_case_summary.json",
+      "effective_config_path": "",
+      "stack_nmc_summary_path": "/home/xgy/remote/snn3dexp/analysis/full_3d_snn_window_monolithic_proxy/same_tag_stopwindow_fresh_20260323_20us/stack_nmc_summary.json",
+      "route_memory_joint_summary_path": "/home/xgy/remote/snn3dexp/analysis/full_3d_snn_window_monolithic_proxy/same_tag_stopwindow_fresh_20260323_20us/route_memory_joint_summary.json",
+      "runtime_summary_path": "/home/xgy/remote/snn3dexp/analysis/full_3d_snn_window_monolithic_proxy/same_tag_stopwindow_fresh_20260323_20us/runtime_summary.json"
+    }
+  ],
+  "outputs": {
+    "summary_json": "/home/xgy/remote/snn3dexp/analysis/sweeps/window_stop_multicase/same_tag_stopwindow_fresh_20260323/window_stop_multicase_sweep_summary.json",
+    "csv": "/home/xgy/remote/snn3dexp/analysis/sweeps/window_stop_multicase/same_tag_stopwindow_fresh_20260323/window_stop_multicase_sweep_runs.csv",
+    "run_tag_manifests": [
+      "/home/xgy/remote/snn3dexp/analysis/sweeps/window_stop_multicase/same_tag_stopwindow_fresh_20260323/run_tag_manifests/2us.json",
+      "/home/xgy/remote/snn3dexp/analysis/sweeps/window_stop_multicase/same_tag_stopwindow_fresh_20260323/run_tag_manifests/10us.json",
+      "/home/xgy/remote/snn3dexp/analysis/sweeps/window_stop_multicase/same_tag_stopwindow_fresh_20260323/run_tag_manifests/20us.json"
+    ]
+  }
+}

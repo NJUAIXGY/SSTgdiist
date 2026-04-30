@@ -1,0 +1,135 @@
+{
+  "run_root": "/home/xgy/remote/snn3dexp/runs",
+  "requested_run_tag": "hotspot_real_phase9_independent_proxy_20260320_224300",
+  "requested_run_tags_by_case": {
+    "full_3d": "hotspot_real_phase9_independent_proxy_20260320_224300",
+    "full_3d_mapping": "hotspot_real_phase9_independent_proxy_20260320_224300",
+    "full_3d_thermal_guard": "hotspot_real_phase9_independent_proxy_20260320_224300",
+    "full_3d_runtime_adaptive": "hotspot_real_phase9_independent_proxy_20260320_224300"
+  },
+  "requested_case_ids": [
+    "full_3d",
+    "full_3d_mapping",
+    "full_3d_thermal_guard",
+    "full_3d_runtime_adaptive"
+  ],
+  "dry_run": false,
+  "summary": {
+    "case_count": 4,
+    "refreshed_case_ids": [
+      "full_3d",
+      "full_3d_mapping",
+      "full_3d_thermal_guard",
+      "full_3d_runtime_adaptive"
+    ],
+    "dry_run_case_ids": [],
+    "missing_case_ids": [],
+    "error_case_ids": []
+  },
+  "cases": {
+    "full_3d": {
+      "case_id": "full_3d",
+      "run_tag": "hotspot_real_phase9_independent_proxy_20260320_224300",
+      "status": "refreshed",
+      "hotspot_threshold_c": 70.0,
+      "run_root": "/home/xgy/remote/snn3dexp/runs/full_3d/hotspot_real_phase9_independent_proxy_20260320_224300",
+      "analysis_root": "/home/xgy/remote/snn3dexp/analysis/full_3d/hotspot_real_phase9_independent_proxy_20260320_224300",
+      "runtime_hotspot_block_count_before": 0,
+      "runtime_hotspot_layer_count_before": 0,
+      "runtime_hotspot_block_count_after": 0,
+      "runtime_hotspot_layer_count_after": 0,
+      "phase2_hotspot_block_count_before": 0,
+      "phase2_hotspot_layer_count_before": 0,
+      "phase2_hotspot_block_delta_before": 0,
+      "phase2_hotspot_layer_delta_before": 0,
+      "phase2_hotspot_block_count_after": 0,
+      "phase2_hotspot_layer_count_after": 0,
+      "phase2_hotspot_block_delta_after": 0,
+      "phase2_hotspot_layer_delta_after": 0,
+      "outputs": {
+        "platform_summary_path": "/home/xgy/remote/snn3dexp/runs/full_3d/hotspot_real_phase9_independent_proxy_20260320_224300/platform_summary.json",
+        "runtime_summary_path": "/home/xgy/remote/snn3dexp/analysis/full_3d/hotspot_real_phase9_independent_proxy_20260320_224300/runtime_summary.json",
+        "phase2_case_summary_path": "/home/xgy/remote/snn3dexp/analysis/full_3d/hotspot_real_phase9_independent_proxy_20260320_224300/phase2_case_summary.json",
+        "meta_path": "/home/xgy/remote/snn3dexp/runs/full_3d/hotspot_real_phase9_independent_proxy_20260320_224300/meta.json"
+      }
+    },
+    "full_3d_mapping": {
+      "case_id": "full_3d_mapping",
+      "run_tag": "hotspot_real_phase9_independent_proxy_20260320_224300",
+      "status": "refreshed",
+      "hotspot_threshold_c": 70.0,
+      "run_root": "/home/xgy/remote/snn3dexp/runs/full_3d_mapping/hotspot_real_phase9_independent_proxy_20260320_224300",
+      "analysis_root": "/home/xgy/remote/snn3dexp/analysis/full_3d_mapping/hotspot_real_phase9_independent_proxy_20260320_224300",
+      "runtime_hotspot_block_count_before": 0,
+      "runtime_hotspot_layer_count_before": 0,
+      "runtime_hotspot_block_count_after": 0,
+      "runtime_hotspot_layer_count_after": 0,
+      "phase2_hotspot_block_count_before": 0,
+      "phase2_hotspot_layer_count_before": 0,
+      "phase2_hotspot_block_delta_before": 0,
+      "phase2_hotspot_layer_delta_before": 0,
+      "phase2_hotspot_block_count_after": 0,
+      "phase2_hotspot_layer_count_after": 0,
+      "phase2_hotspot_block_delta_after": 0,
+      "phase2_hotspot_layer_delta_after": 0,
+      "outputs": {
+        "platform_summary_path": "/home/xgy/remote/snn3dexp/runs/full_3d_mapping/hotspot_real_phase9_independent_proxy_20260320_224300/platform_summary.json",
+        "runtime_summary_path": "/home/xgy/remote/snn3dexp/analysis/full_3d_mapping/hotspot_real_phase9_independent_proxy_20260320_224300/runtime_summary.json",
+        "phase2_case_summary_path": "/home/xgy/remote/snn3dexp/analysis/full_3d_mapping/hotspot_real_phase9_independent_proxy_20260320_224300/phase2_case_summary.json",
+        "meta_path": "/home/xgy/remote/snn3dexp/runs/full_3d_mapping/hotspot_real_phase9_independent_proxy_20260320_224300/meta.json"
+      }
+    },
+    "full_3d_thermal_guard": {
+      "case_id": "full_3d_thermal_guard",
+      "run_tag": "hotspot_real_phase9_independent_proxy_20260320_224300",
+      "status": "refreshed",
+      "hotspot_threshold_c": 70.0,
+      "run_root": "/home/xgy/remote/snn3dexp/runs/full_3d_thermal_guard/hotspot_real_phase9_independent_proxy_20260320_224300",
+      "analysis_root": "/home/xgy/remote/snn3dexp/analysis/full_3d_thermal_guard/hotspot_real_phase9_independent_proxy_20260320_224300",
+      "runtime_hotspot_block_count_before": 0,
+      "runtime_hotspot_layer_count_before": 0,
+      "runtime_hotspot_block_count_after": 0,
+      "runtime_hotspot_layer_count_after": 0,
+      "phase2_hotspot_block_count_before": 0,
+      "phase2_hotspot_layer_count_before": 0,
+      "phase2_hotspot_block_delta_before": 0,
+      "phase2_hotspot_layer_delta_before": 0,
+      "phase2_hotspot_block_count_after": 0,
+      "phase2_hotspot_layer_count_after": 0,
+      "phase2_hotspot_block_delta_after": 0,
+      "phase2_hotspot_layer_delta_after": 0,
+      "outputs": {
+        "platform_summary_path": "/home/xgy/remote/snn3dexp/runs/full_3d_thermal_guard/hotspot_real_phase9_independent_proxy_20260320_224300/platform_summary.json",
+        "runtime_summary_path": "/home/xgy/remote/snn3dexp/analysis/full_3d_thermal_guard/hotspot_real_phase9_independent_proxy_20260320_224300/runtime_summary.json",
+        "phase2_case_summary_path": "/home/xgy/remote/snn3dexp/analysis/full_3d_thermal_guard/hotspot_real_phase9_independent_proxy_20260320_224300/phase2_case_summary.json",
+        "meta_path": "/home/xgy/remote/snn3dexp/runs/full_3d_thermal_guard/hotspot_real_phase9_independent_proxy_20260320_224300/meta.json"
+      }
+    },
+    "full_3d_runtime_adaptive": {
+      "case_id": "full_3d_runtime_adaptive",
+      "run_tag": "hotspot_real_phase9_independent_proxy_20260320_224300",
+      "status": "refreshed",
+      "hotspot_threshold_c": 70.0,
+      "run_root": "/home/xgy/remote/snn3dexp/runs/full_3d_runtime_adaptive/hotspot_real_phase9_independent_proxy_20260320_224300",
+      "analysis_root": "/home/xgy/remote/snn3dexp/analysis/full_3d_runtime_adaptive/hotspot_real_phase9_independent_proxy_20260320_224300",
+      "runtime_hotspot_block_count_before": 0,
+      "runtime_hotspot_layer_count_before": 0,
+      "runtime_hotspot_block_count_after": 0,
+      "runtime_hotspot_layer_count_after": 0,
+      "phase2_hotspot_block_count_before": 0,
+      "phase2_hotspot_layer_count_before": 0,
+      "phase2_hotspot_block_delta_before": 0,
+      "phase2_hotspot_layer_delta_before": 0,
+      "phase2_hotspot_block_count_after": 0,
+      "phase2_hotspot_layer_count_after": 0,
+      "phase2_hotspot_block_delta_after": 0,
+      "phase2_hotspot_layer_delta_after": 0,
+      "outputs": {
+        "platform_summary_path": "/home/xgy/remote/snn3dexp/runs/full_3d_runtime_adaptive/hotspot_real_phase9_independent_proxy_20260320_224300/platform_summary.json",
+        "runtime_summary_path": "/home/xgy/remote/snn3dexp/analysis/full_3d_runtime_adaptive/hotspot_real_phase9_independent_proxy_20260320_224300/runtime_summary.json",
+        "phase2_case_summary_path": "/home/xgy/remote/snn3dexp/analysis/full_3d_runtime_adaptive/hotspot_real_phase9_independent_proxy_20260320_224300/phase2_case_summary.json",
+        "meta_path": "/home/xgy/remote/snn3dexp/runs/full_3d_runtime_adaptive/hotspot_real_phase9_independent_proxy_20260320_224300/meta.json"
+      }
+    }
+  }
+}

@@ -1,0 +1,170 @@
+{
+  "schema_version": 1,
+  "artifact_role": "stable_history_rollup",
+  "gate_name": "mesh_exec_mode_compare_acceptance",
+  "generated_utc": "2026-04-07T05:02:10.469983+00:00",
+  "matrix_root": "/home/xgy/remote/sst_dram_si/outputs_large/paper2/dram_mesh_4x4_exec_mode_compare/matrix",
+  "entry_count": 2,
+  "required_cases": [
+    "gas",
+    "naive_raw",
+    "naive_opt"
+  ],
+  "latest_date": "2026-04-07",
+  "all_dates_ok": true,
+  "latest_recovered_date": null,
+  "freshness_mode": "since_latest_recovery",
+  "effective_entry_count": 2,
+  "effective_all_dates_ok": true,
+  "max_age_days": 2,
+  "latest_age_days": 0,
+  "stale": false,
+  "entries": [
+    {
+      "date": "2026-04-07",
+      "matrix_run_id": "20260407-125958",
+      "summary_path": "/home/xgy/remote/sst_dram_si/outputs_large/paper2/dram_mesh_4x4_exec_mode_compare/matrix/20260407-125958/summary.json",
+      "all_ok": true,
+      "missing_cases": [],
+      "failing_cases": [],
+      "cases": [
+        {
+          "label": "gas",
+          "present": true,
+          "run_dir": "/home/xgy/remote/sst_dram_si/outputs_large/paper2/dram_mesh_4x4_exec_mode_compare/gas/20260407-125958",
+          "requested_exec_mode": "gas",
+          "effective_exec_mode": "gas",
+          "compare_role": "smoke",
+          "bounded_validation": true,
+          "validator": {
+            "fail": 0,
+            "warn": 0,
+            "strict": 0
+          },
+          "memory": {
+            "memory_requests": 5954.0,
+            "memory_bytes": 381056.0,
+            "nonzero": true
+          },
+          "ok": true,
+          "reasons": []
+        },
+        {
+          "label": "naive_raw",
+          "present": true,
+          "run_dir": "/home/xgy/remote/sst_dram_si/outputs_large/paper2/dram_mesh_4x4_exec_mode_compare/naive_raw/20260407-130035",
+          "requested_exec_mode": "naive_raw",
+          "effective_exec_mode": "naive_raw",
+          "compare_role": "smoke",
+          "bounded_validation": true,
+          "validator": {
+            "fail": 0,
+            "warn": 0,
+            "strict": 0
+          },
+          "memory": {
+            "memory_requests": 11524.0,
+            "memory_bytes": 737536.0,
+            "nonzero": true
+          },
+          "ok": true,
+          "reasons": []
+        },
+        {
+          "label": "naive_opt",
+          "present": true,
+          "run_dir": "/home/xgy/remote/sst_dram_si/outputs_large/paper2/dram_mesh_4x4_exec_mode_compare/naive_raw/20260407-130124",
+          "requested_exec_mode": "naive_opt",
+          "effective_exec_mode": "naive_raw",
+          "compare_role": "smoke",
+          "bounded_validation": true,
+          "validator": {
+            "fail": 0,
+            "warn": 0,
+            "strict": 0
+          },
+          "memory": {
+            "memory_requests": 11524.0,
+            "memory_bytes": 737536.0,
+            "nonzero": true
+          },
+          "ok": true,
+          "reasons": []
+        }
+      ]
+    },
+    {
+      "date": "2026-04-07",
+      "matrix_run_id": "20260407-114554",
+      "summary_path": "/home/xgy/remote/sst_dram_si/outputs_large/paper2/dram_mesh_4x4_exec_mode_compare/matrix/20260407-114554/summary.json",
+      "all_ok": true,
+      "missing_cases": [],
+      "failing_cases": [],
+      "cases": [
+        {
+          "label": "gas",
+          "present": true,
+          "run_dir": "/home/xgy/remote/sst_dram_si/outputs_large/paper2/dram_mesh_4x4_exec_mode_compare/gas/20260407-114554",
+          "requested_exec_mode": "gas",
+          "effective_exec_mode": "gas",
+          "compare_role": "smoke",
+          "bounded_validation": true,
+          "validator": {
+            "fail": 0,
+            "warn": 0,
+            "strict": 0
+          },
+          "memory": {
+            "memory_requests": 5954.0,
+            "memory_bytes": 381056.0,
+            "nonzero": true
+          },
+          "ok": true,
+          "reasons": []
+        },
+        {
+          "label": "naive_raw",
+          "present": true,
+          "run_dir": "/home/xgy/remote/sst_dram_si/outputs_large/paper2/dram_mesh_4x4_exec_mode_compare/naive_raw/20260407-114630",
+          "requested_exec_mode": "naive_raw",
+          "effective_exec_mode": "naive_raw",
+          "compare_role": "smoke",
+          "bounded_validation": true,
+          "validator": {
+            "fail": 0,
+            "warn": 0,
+            "strict": 0
+          },
+          "memory": {
+            "memory_requests": 11524.0,
+            "memory_bytes": 737536.0,
+            "nonzero": true
+          },
+          "ok": true,
+          "reasons": []
+        },
+        {
+          "label": "naive_opt",
+          "present": true,
+          "run_dir": "/home/xgy/remote/sst_dram_si/outputs_large/paper2/dram_mesh_4x4_exec_mode_compare/naive_raw/20260407-114716",
+          "requested_exec_mode": "naive_opt",
+          "effective_exec_mode": "naive_raw",
+          "compare_role": "smoke",
+          "bounded_validation": true,
+          "validator": {
+            "fail": 0,
+            "warn": 0,
+            "strict": 0
+          },
+          "memory": {
+            "memory_requests": 11524.0,
+            "memory_bytes": 737536.0,
+            "nonzero": true
+          },
+          "ok": true,
+          "reasons": []
+        }
+      ]
+    }
+  ]
+}

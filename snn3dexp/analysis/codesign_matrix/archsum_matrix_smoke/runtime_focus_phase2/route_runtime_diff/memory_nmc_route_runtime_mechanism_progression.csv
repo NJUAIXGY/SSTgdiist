@@ -1,0 +1,4 @@
+matrix_group,compare_kind,run_tag,row_family,phase_order,phase,row_count,dominant_axis,dominant_axis_counts_json,key_signal,progression_signature,phase_transition_from_previous,earliest_same_controller_overlap_stop_at
+,,,mechanism_progression,1,window_route,6,controller_outstanding,"{""controller_outstanding"": 5, ""step_gate_stall"": 1}","alignment={""alignment_improved"": 1, ""stable"": 5}",controller_outstanding -> unavailable -> thermal_guard_actions,no,
+,,,mechanism_progression,2,window_stop,0,unavailable,{},same_controller_overlap@unavailable,controller_outstanding -> unavailable -> thermal_guard_actions,no,
+,,,mechanism_progression,3,runtime_compare,2,thermal_guard_actions,"{""thermal_guard_actions"": 2}","compare_kinds={""runtime_adaptive_vs_mapping"": 1, ""runtime_adaptive_vs_thermal_guard"": 1}",controller_outstanding -> unavailable -> thermal_guard_actions,no,

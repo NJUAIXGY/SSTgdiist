@@ -1,0 +1,10 @@
+label,stats_csv,unique_reads,unique_bytes,bursts,payload,avg_burst_bytes,req_bytes,total_mib,reqs_per_mib,rowwin_triggers,rowwin_bytes,rowwin_share,avg_read_latency_0
+rowwin_b16384_t0_2ms,sst_dram_si/stats/sweeps/rowwin_b16384_t0_2ms.csv,512,500992,1735,3608576,2079.87,4188160,3.994141,128.19,1,8192,0.0164,39.14
+rowwin_b16384_t300_2ms,sst_dram_si/stats/sweeps/rowwin_b16384_t300_2ms.csv,512,504960,1734,3606528,2079.89,4179968,3.986328,128.44,1,8192,0.0162,38.96
+rowwin_b16384_t600_2ms,sst_dram_si/stats/sweeps/rowwin_b16384_t600_2ms.csv,511,542784,1770,3684352,2081.55,4222976,4.027344,126.88,2,16384,0.0302,39.05
+rowwin_b32768_t0_2ms,sst_dram_si/stats/sweeps/rowwin_b32768_t0_2ms.csv,512,514880,1745,3627008,2078.51,4192256,3.998047,128.06,1,8192,0.0159,39.01
+rowwin_b32768_t300_2ms,sst_dram_si/stats/sweeps/rowwin_b32768_t300_2ms.csv,512,495040,1721,3577856,2078.94,4163584,3.970703,128.94,1,8192,0.0165,39.03
+rowwin_b32768_t600_2ms,sst_dram_si/stats/sweeps/rowwin_b32768_t600_2ms.csv,511,515008,1733,3604480,2079.91,4173824,3.980469,128.38,2,16384,0.0318,38.96
+rowwin_b65536_t0_2ms,sst_dram_si/stats/sweeps/rowwin_b65536_t0_2ms.csv,511,503104,1729,3598336,2081.17,4177920,3.984375,128.25,2,16384,0.0326,38.90
+rowwin_b65536_t300_2ms,sst_dram_si/stats/sweeps/rowwin_b65536_t300_2ms.csv,512,495040,1734,3604480,2078.71,4190208,3.996094,128.13,1,8192,0.0165,39.03
+rowwin_b65536_t600_2ms,sst_dram_si/stats/sweeps/rowwin_b65536_t600_2ms.csv,512,520832,1749,3637248,2079.62,4198400,4.003906,127.88,1,8192,0.0157,39.08

@@ -1,0 +1,68 @@
+{
+  "all_ok": true,
+  "canonical_surface": false,
+  "count": 1,
+  "generated_utc": "2026-03-28T16:02:17.310269+00:00",
+  "group": "toolchain",
+  "protocol_checked": false,
+  "requested_programs": [
+    "external_dyn_desc_ref_toolchain"
+  ],
+  "results": [
+    {
+      "elf": {
+        "bytes": 9600,
+        "path": "/home/xgy/remote/riscv_snn_isa_lab/firmware/external_dyn_desc_ref_toolchain.elf",
+        "sha256": "9d370126b1fe48db4143a6269f6dbe923e346eedcc74c786a0cbab6e70ed4849"
+      },
+      "is_toolchain": true,
+      "latest_manifest": "/home/xgy/remote/riscv_snn_isa_lab/runs/2026-03-28-external-dyn-desc-ref-toolchain-smoke.md",
+      "manifest_elf_match": true,
+      "manifest_match": true,
+      "manifest_run_dir": "/home/xgy/remote/sst_dram_si/outputs_large/paper2/dram_mesh_4x4/20260328-234426",
+      "manifest_spec_match": true,
+      "ok": true,
+      "program": "external_dyn_desc_ref_toolchain",
+      "source_dir": "/home/xgy/remote/riscv_snn_isa_lab/firmware_src/external_dyn_desc_ref_toolchain",
+      "source_file_count": 6,
+      "source_files": [
+        {
+          "bytes": 1192,
+          "path": "/home/xgy/remote/riscv_snn_isa_lab/firmware_src/external_dyn_desc_ref_toolchain/Makefile",
+          "sha256": "35366c434f9df00433c10595a986b1596eee4a36f9a22c34b419867f14bbad45"
+        },
+        {
+          "bytes": 55,
+          "path": "/home/xgy/remote/riscv_snn_isa_lab/firmware_src/external_dyn_desc_ref_toolchain/abi.inc",
+          "sha256": "154232ae2227e2d8c98c1780dafe1a94be6d3cfdf09205425910149e45b888e3"
+        },
+        {
+          "bytes": 108,
+          "path": "/home/xgy/remote/riscv_snn_isa_lab/firmware_src/external_dyn_desc_ref_toolchain/crt0.S",
+          "sha256": "112b0d1170357626ea05f00fe66323e5e4abc73c0092b7c71c6d4672f5f08c4e"
+        },
+        {
+          "bytes": 1943,
+          "path": "/home/xgy/remote/riscv_snn_isa_lab/firmware_src/external_dyn_desc_ref_toolchain/external_dyn_desc_ref_toolchain.map",
+          "sha256": "bce2372ef792153468142a1fe5e0e15249915fbfd1bd5ab21f70718366aadb3b"
+        },
+        {
+          "bytes": 215,
+          "path": "/home/xgy/remote/riscv_snn_isa_lab/firmware_src/external_dyn_desc_ref_toolchain/linker.ld",
+          "sha256": "4b478eb6f85c5c175032934faa8345c5a68b491bbd9ae3bdf9bfc596e05cbe5f"
+        },
+        {
+          "bytes": 1044,
+          "path": "/home/xgy/remote/riscv_snn_isa_lab/firmware_src/external_dyn_desc_ref_toolchain/main.S",
+          "sha256": "fc5a3810f8b31cd302d4ba766cde390951f5068507e6afefb2b1d0b8021bf678"
+        }
+      ],
+      "spec": {
+        "bytes": 770,
+        "path": "/home/xgy/remote/riscv_snn_isa_lab/specs/external_dyn_desc_ref_toolchain.json",
+        "sha256": "f52a42dbc2040bd1684ff11d7576dfb708dbe880fb883bb279f7fa70ec854101"
+      },
+      "suite": "toolchain"
+    }
+  ]
+}

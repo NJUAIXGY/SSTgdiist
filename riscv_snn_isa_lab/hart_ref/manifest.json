@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "profiles": {
+    "rv64im_zicsr_smoke": {
+      "description": "Minimal Spike smoke program for rv64im_zicsr hart semantics",
+      "program": "programs/rv64im_zicsr_smoke/rv64im_zicsr_smoke.elf",
+      "tags": [
+        "rv64i",
+        "zicsr",
+        "smoke"
+      ]
+    }
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "direct_case_id": "full_3d_snn_window",
+  "bundle_case_id": "full_3d_snn_window_bundle_v3",
+  "direct_run_tag_prefix": "task_real_snn_window_direct_tail_sweep_v1",
+  "bundle_run_tag_prefix": "task_real_snn_window_bundle_tail_sweep_v1",
+  "direct_tail_clear_stop_at": "2us",
+  "bundle_tail_clear_stop_at": "5us",
+  "direct_tail_clear_observed": true,
+  "bundle_tail_clear_observed": true,
+  "tail_clear_gap_ns": 3000,
+  "windows": [
+    {
+      "stop_at": "2us",
+      "stop_at_ns": 2000,
+      "direct_stream_region_backlog": 0,
+      "bundle_stream_region_backlog": 8,
+      "stream_region_backlog_delta": 8,
+      "direct_total_service_deficit": 0,
+      "bundle_total_service_deficit": 8,
+      "total_service_deficit_delta": 8,
+      "direct_run_tag": "task_real_snn_window_direct_tail_sweep_v1_2us",
+      "bundle_run_tag": "task_real_snn_window_bundle_tail_sweep_v1_2us"
+    },
+    {
+      "stop_at": "5us",
+      "stop_at_ns": 5000,
+      "direct_stream_region_backlog": 0,
+      "bundle_stream_region_backlog": 0,
+      "stream_region_backlog_delta": 0,
+      "direct_total_service_deficit": 0,
+      "bundle_total_service_deficit": 0,
+      "total_service_deficit_delta": 0,
+      "direct_run_tag": "task_real_snn_window_direct_tail_sweep_v1_5us",
+      "bundle_run_tag": "task_real_snn_window_bundle_tail_sweep_v1_5us"
+    },
+    {
+      "stop_at": "10us",
+      "stop_at_ns": 10000,
+      "direct_stream_region_backlog": 0,
+      "bundle_stream_region_backlog": 0,
+      "stream_region_backlog_delta": 0,
+      "direct_total_service_deficit": 0,
+      "bundle_total_service_deficit": 0,
+      "total_service_deficit_delta": 0,
+      "direct_run_tag": "task_real_snn_window_direct_tail_sweep_v1_10us",
+      "bundle_run_tag": "task_real_snn_window_bundle_tail_sweep_v1_10us"
+    }
+  ],
+  "source_summaries": {
+    "direct_summary_json": "/home/xgy/remote/snn3dexp/analysis/sweeps/full_3d_snn_window/task_real_snn_window_direct_tail_sweep_v1/bundle_window_sweep_summary.json",
+    "bundle_summary_json": "/home/xgy/remote/snn3dexp/analysis/sweeps/full_3d_snn_window_bundle_v3/task_real_snn_window_bundle_tail_sweep_v1/bundle_window_sweep_summary.json"
+  },
+  "outputs": {
+    "csv": "/home/xgy/remote/snn3dexp/analysis/sweeps/paper_artifacts/task_real_snn_window_tail_compare_v1/paper_artifacts/snn_window_tail_compare.csv",
+    "svg": "/home/xgy/remote/snn3dexp/analysis/sweeps/paper_artifacts/task_real_snn_window_tail_compare_v1/paper_artifacts/snn_window_tail_compare.svg",
+    "summary_json": "/home/xgy/remote/snn3dexp/analysis/sweeps/paper_artifacts/task_real_snn_window_tail_compare_v1/paper_artifacts/snn_window_tail_compare_summary.json"
+  }
+}

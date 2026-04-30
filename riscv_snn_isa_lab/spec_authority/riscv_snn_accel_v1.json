@@ -1,0 +1,418 @@
+{
+  "schema_version": 1,
+  "generated_utc": "2026-03-27T02:46:24Z",
+  "producer": "riscv_snn_isa_lab/tools/export_riscv_snn_abi.py",
+  "hart_profile": "rv64im_zicsr",
+  "csr_map": {
+    "CSR_MSNN_CFG": 3008,
+    "CSR_MSNN_STATUS": 3009,
+    "CSR_MSNN_FEAT": 3010,
+    "CSR_MSNN_HART_ID": 3011,
+    "CSR_MSNN_CMDQ_BASE": 3016,
+    "CSR_MSNN_CMDQ_SIZE": 3017,
+    "CSR_MSNN_CMDQ_HEAD": 3018,
+    "CSR_MSNN_CMDQ_TAIL": 3019,
+    "CSR_MSNN_CMPQ_BASE": 3020,
+    "CSR_MSNN_CMPQ_SIZE": 3021,
+    "CSR_MSNN_CMPQ_HEAD": 3022,
+    "CSR_MSNN_CMPQ_TAIL": 3023,
+    "CSR_MSNN_RXQ_BASE": 3024,
+    "CSR_MSNN_RXQ_SIZE": 3025,
+    "CSR_MSNN_RXQ_HEAD": 3026,
+    "CSR_MSNN_RXQ_TAIL": 3027,
+    "CSR_MSNN_EVENT_ENABLE": 3032,
+    "CSR_MSNN_EVENT_PENDING": 3033,
+    "CSR_MSNN_STEP": 3034,
+    "CSR_MSNN_FAULT": 3035
+  },
+  "event_pending_bits": {
+    "barrier_release": 1,
+    "cmd_complete": 0,
+    "debug": 5,
+    "fault": 2,
+    "prefetch_done": 4,
+    "rx_debug": 3
+  },
+  "descriptor_layout": {
+    "size_bytes": 64,
+    "fields": [
+      {
+        "name": "hdr0",
+        "offset": 0,
+        "size": 8
+      },
+      {
+        "name": "token",
+        "offset": 8,
+        "size": 8
+      },
+      {
+        "name": "arg0",
+        "offset": 16,
+        "size": 8
+      },
+      {
+        "name": "arg1",
+        "offset": 24,
+        "size": 8
+      },
+      {
+        "name": "src_addr",
+        "offset": 32,
+        "size": 8
+      },
+      {
+        "name": "dst_addr",
+        "offset": 40,
+        "size": 8
+      },
+      {
+        "name": "len_or_count",
+        "offset": 48,
+        "size": 8
+      },
+      {
+        "name": "dep_user",
+        "offset": 56,
+        "size": 8
+      }
+    ]
+  },
+  "completion_layout": {
+    "size_bytes": 16,
+    "fields": [
+      {
+        "name": "token",
+        "offset": 0,
+        "size": 4
+      },
+      {
+        "name": "status_code",
+        "offset": 4,
+        "size": 4
+      },
+      {
+        "name": "aux0",
+        "offset": 8,
+        "size": 4
+      },
+      {
+        "name": "aux1",
+        "offset": 12,
+        "size": 4
+      }
+    ]
+  },
+  "rx_debug_layout": {
+    "size_bytes": 16,
+    "fields": [
+      {
+        "name": "rx_type",
+        "offset": 0,
+        "size": 4
+      },
+      {
+        "name": "seq",
+        "offset": 4,
+        "size": 4
+      },
+      {
+        "name": "count_or_bytes",
+        "offset": 8,
+        "size": 4
+      },
+      {
+        "name": "ptr_or_aux",
+        "offset": 12,
+        "size": 4
+      }
+    ]
+  },
+  "hdr0_layout": {
+    "size_bits": 64,
+    "bitfields": [
+      {
+        "name": "version",
+        "lsb": 0,
+        "msb": 7,
+        "width_bits": 8,
+        "helper": "descriptorVersion"
+      },
+      {
+        "name": "opcode",
+        "lsb": 8,
+        "msb": 15,
+        "width_bits": 8,
+        "helper": "descriptorOpcodeRaw"
+      },
+      {
+        "name": "flags",
+        "lsb": 16,
+        "msb": 23,
+        "width_bits": 8,
+        "helper": "descriptorFlags"
+      },
+      {
+        "name": "completion_policy",
+        "lsb": 24,
+        "msb": 31,
+        "width_bits": 8,
+        "helper": "descriptorCompletionPolicy"
+      },
+      {
+        "name": "error_policy",
+        "lsb": 32,
+        "msb": 39,
+        "width_bits": 8,
+        "helper": "descriptorErrorPolicy"
+      },
+      {
+        "name": "desc_bytes",
+        "lsb": 40,
+        "msb": 47,
+        "width_bits": 8,
+        "helper": "descriptorBytes"
+      },
+      {
+        "name": "reserved_header_bits",
+        "lsb": 48,
+        "msb": 63,
+        "width_bits": 16,
+        "helper": "descriptorReservedHeaderBits"
+      }
+    ],
+    "derived_masks": [
+      {
+        "name": "reserved_flag_bits",
+        "source_field": "flags",
+        "mask": 252,
+        "helper": "descriptorReservedFlagBits"
+      }
+    ]
+  },
+  "result_surface": {
+    "status_code_layout": {
+      "size_bits": 32,
+      "bitfields": [
+        {
+          "name": "primary_status",
+          "lsb": 0,
+          "msb": 7,
+          "width_bits": 8,
+          "helper": "completionPrimaryStatus"
+        },
+        {
+          "name": "severity",
+          "lsb": 8,
+          "msb": 15,
+          "width_bits": 8,
+          "helper": "completionSeverity"
+        },
+        {
+          "name": "reserved",
+          "lsb": 16,
+          "msb": 31,
+          "width_bits": 16,
+          "helper": null
+        }
+      ]
+    },
+    "fault_csr_layout": {
+      "size_bits": 64,
+      "bitfields": [
+        {
+          "name": "fault_code",
+          "lsb": 0,
+          "msb": 7,
+          "width_bits": 8,
+          "helper": "faultCode"
+        },
+        {
+          "name": "fault_source",
+          "lsb": 8,
+          "msb": 15,
+          "width_bits": 8,
+          "helper": "faultSource"
+        },
+        {
+          "name": "slot",
+          "lsb": 16,
+          "msb": 31,
+          "width_bits": 16,
+          "helper": "faultSlot"
+        },
+        {
+          "name": "aux",
+          "lsb": 32,
+          "msb": 63,
+          "width_bits": 32,
+          "helper": "faultAux"
+        }
+      ]
+    }
+  },
+  "enum_surfaces": {
+    "CommandOpcode": {
+      "storage_bits": 8,
+      "values": {
+        "Nop": 0,
+        "PrefetchW": 1,
+        "StateLoad": 2,
+        "StateStore": 3,
+        "PhaseGather": 16,
+        "PhaseApply": 17,
+        "PhaseScatter": 18,
+        "FusedStep": 32,
+        "EgressCtrl": 48,
+        "RxDebugPop": 49,
+        "BarrierArrive": 64,
+        "StatSnapshot": 80
+      }
+    },
+    "DescriptorFlagBit": {
+      "storage_bits": 8,
+      "values": {
+        "IrqHint": 0,
+        "TraceHint": 1
+      }
+    },
+    "CompletionPrimaryStatus": {
+      "storage_bits": 8,
+      "values": {
+        "Success": 0,
+        "BadVersion": 1,
+        "BadDescBytes": 2,
+        "BadOpcode": 3,
+        "BadFlags": 4,
+        "BadAlignment": 5,
+        "BadPolicy": 6,
+        "CommandQueueOverflow": 16,
+        "CompletionQueueOverflow": 17,
+        "IllegalPhaseTransition": 32,
+        "BarrierProtocolViolation": 33,
+        "MemorySemanticFault": 48,
+        "BackendInternalError": 49
+      }
+    },
+    "CompletionSeverity": {
+      "storage_bits": 8,
+      "values": {
+        "Success": 0,
+        "RejectedBeforeAccept": 1,
+        "FaultAfterAccept": 2
+      }
+    },
+    "FaultCode": {
+      "storage_bits": 8,
+      "values": {
+        "None": 0,
+        "BadVersion": 1,
+        "BadDescBytes": 2,
+        "BadOpcode": 3,
+        "BadFlags": 4,
+        "BadAlignment": 5,
+        "BadPolicy": 6,
+        "CommandQueueOverflow": 16,
+        "CompletionQueueOverflow": 17,
+        "IllegalPhaseTransition": 32,
+        "BarrierProtocolViolation": 33,
+        "MemorySemanticFault": 48,
+        "BackendInternalError": 49
+      }
+    },
+    "FaultSource": {
+      "storage_bits": 8,
+      "values": {
+        "None": 0,
+        "Descriptor": 1,
+        "Queue": 2,
+        "Phase": 3,
+        "Barrier": 4,
+        "Memory": 5,
+        "BackendInternal": 6
+      }
+    },
+    "StatSnapshotSelector": {
+      "storage_bits": 32,
+      "values": {
+        "AcceptedCommands": 0,
+        "CompletedCommands": 1,
+        "ProviderBound": 2
+      }
+    }
+  },
+  "stat_snapshot_surface": {
+    "selector_surface": {
+      "frozen": true,
+      "selector_field": "arg0_low32",
+      "value_type": "u64_split_aux0_aux1",
+      "values": {
+        "AcceptedCommands": 0,
+        "CompletedCommands": 1,
+        "ProviderBound": 2
+      },
+      "extensible_slots": [],
+      "source_of_truth": "RiscvSnnAbi.h"
+    },
+    "result_surface": {
+      "completion_helpers": [
+        "statSnapshotResultAux0",
+        "statSnapshotResultAux1",
+        "decodeStatSnapshotResult"
+      ],
+      "success_completion_only": true,
+      "barrier_release_forbidden": true
+    }
+  },
+  "surface_framework": {
+    "include_export": {
+      "surface_kind": "shared_include_only",
+      "frozen_authority_keys": [
+        "producer",
+        "generated_utc",
+        "csr_map",
+        "event_pending_bits"
+      ]
+    },
+    "live_packed_abi": {
+      "surface_kind": "machine_readable_live_packed_abi",
+      "frozen_authority_keys": [
+        "descriptor_layout",
+        "completion_layout",
+        "rx_debug_layout",
+        "hdr0_layout",
+        "result_surface",
+        "enum_surfaces",
+        "stat_snapshot_surface"
+      ]
+    }
+  },
+  "fault_semantics": {
+    "clear": "write-zero-low16",
+    "clear_effect": "visible fault snapshot only",
+    "accepted_fault_condition": "non-zero CSR_MSNN_FAULT",
+    "snapshot_visibility": "read CSR_MSNN_FAULT after completion visibility",
+    "overwrite": "new accepted fault may overwrite visible snapshot after clear"
+  },
+  "ownership_rules": {
+    "cmd_queue": {
+      "software_tail": "writes",
+      "backend_head": "writes",
+      "software_head": "read only"
+    },
+    "cmp_queue": {
+      "backend_tail": "writes",
+      "software_head": "writes",
+      "software_tail": "read only"
+    },
+    "rx_queue": {
+      "backend_head": "writes",
+      "software_tail": "writes"
+    }
+  },
+  "doorbell_rules": {
+    "cmd_tail": "software increments tail after descriptor writes; this is the only architectural command doorbell",
+    "cmp_tail": "backend updates tail only after completion payload is stable",
+    "event_pending": "software clears W1C bits after observing completion or fault surfaces"
+  }
+}

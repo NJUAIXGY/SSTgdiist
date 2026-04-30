@@ -1,0 +1,65 @@
+{
+  "all_ok": false,
+  "artifact_role": "dated_equivalence_matrix",
+  "authority_scope": "family_level_equivalence_authority",
+  "canonical_surface": true,
+  "count": 1,
+  "families": [
+    {
+      "family": "completion_queue_overflow_ref",
+      "gate_reasons": [
+        "runtime_bridge_completion_queue_fault_signature_mismatch"
+      ],
+      "runtime_bridge_build_preflight_rollup": {
+        "contract_key": "riscv_snn.runtime_bridge.runtime_consumers",
+        "contract_version": 1,
+        "dependency_count": 2,
+        "enabled": true,
+        "fingerprint_match": true,
+        "full_rebuild_required": false,
+        "lineage_status": "ok",
+        "missing_target_count": 0,
+        "reporting_scope": "research_only_nonblocking",
+        "required_action": "none",
+        "required_target_count": 9,
+        "stale_target_count": 0,
+        "status": "ok"
+      },
+      "status": "FAIL",
+      "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-04-02-completion-queue-overflow-ref-equiv.json"
+    }
+  ],
+  "gate_name": "riscv_snn_equiv_matrix",
+  "generated_utc": "2026-04-02T13:28:38.858423+00:00",
+  "producer": "riscv_snn_lab.run_equiv_matrix",
+  "requested_families": [
+    "completion_queue_overflow_ref"
+  ],
+  "requested_group": "completion_overflow_optional",
+  "runtime_bridge_build_preflight_rollup": {
+    "all_ok": true,
+    "contract_keys": [
+      "riscv_snn.runtime_bridge.runtime_consumers"
+    ],
+    "contract_versions": [
+      1
+    ],
+    "enabled": true,
+    "family_count": 1,
+    "fingerprint_mismatch_family_count": 0,
+    "full_rebuild_required_family_count": 0,
+    "lineage_status_counts": {
+      "ok": 1
+    },
+    "missing_family_count": 0,
+    "reporting_scope": "research_only_nonblocking",
+    "required_action_counts": {
+      "none": 1
+    },
+    "stale_family_count": 0,
+    "status_counts": {
+      "ok": 1
+    }
+  },
+  "schema_version": 2
+}

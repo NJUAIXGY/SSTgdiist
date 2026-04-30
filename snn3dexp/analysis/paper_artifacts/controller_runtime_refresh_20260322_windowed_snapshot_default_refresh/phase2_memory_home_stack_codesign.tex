@@ -1,0 +1,12 @@
+\begin{table*}[t]
+  \centering
+  \caption{Home-access / stack-pressure co-design view for the memory-model focus cases. Bundle-vs-direct remote\_home\_total\_demands\_delta = -498; monolithic-vs-HBM most\_pressured\_stack\_service\_deficit\_delta = -397; monolithic-vs-HBM most\_pressured\_controller\_service\_deficit\_proxy\_delta = -99.250000.}
+  \begin{tabular}{l l l r r r r r r r r}
+  \hline
+  Case & Memory & HomeClass & DominantHomeStack & Tier-Local Home Demands & Same-XY Cross-Tier Demands & Remote-Home Demands & Active Stack Utilization & Hot-Stack Service Deficit & Controller Proxy Deficit & Stack Service-Deficit Skew \\
+  \hline
+  full\_3d & hbm\_like & remote\_home & 0 & 512 & 512 & 1024 & 1.000 & 397 & 99.250 & 1.033 \\
+  full\_3d\_monolithic\_proxy & monolithic\_like & same\_xy\_cross\_tier & 4 & 512 & 1344 & 192 & 1.000 & 0 & 0.000 & 0.000 \\
+  \hline
+  \end{tabular}
+\end{table*}

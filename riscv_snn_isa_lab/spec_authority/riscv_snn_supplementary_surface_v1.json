@@ -1,0 +1,84 @@
+{
+  "schema_version": 1,
+  "contract_name": "riscv_snn_supplementary_surface",
+  "contract_version": "1.0",
+  "history_contract": "supplementary_surface_observer_v1",
+  "surfaces": {
+    "compare": {
+      "surface_kind": "compare_exec_mode_smoke",
+      "blocking": false,
+      "source_history_mode": "source_history_passthrough",
+      "source_history_contract": "compare_source_history_passthrough_v1",
+      "required_surface_fields": [
+        "surface_kind",
+        "blocking",
+        "present",
+        "report_path",
+        "summary_md_path",
+        "current_mainline_status_path",
+        "gate_ok",
+        "latest_date",
+        "stale",
+        "freshness_mode",
+        "effective_all_dates_ok"
+      ]
+    },
+    "reference_compare": {
+      "surface_kind": "reference_compare_surface",
+      "blocking": false,
+      "source_history_mode": "source_history_passthrough",
+      "source_history_contract": "reference_compare_source_history_passthrough_v1",
+      "required_surface_fields": [
+        "surface_kind",
+        "blocking",
+        "present",
+        "report_path",
+        "summary_md_path",
+        "current_mainline_status_path",
+        "gate_ok",
+        "latest_date",
+        "stale",
+        "freshness_mode",
+        "effective_all_dates_ok"
+      ]
+    },
+    "reference_program_compare": {
+      "surface_kind": "reference_program_compare_surface",
+      "blocking": false,
+      "source_history_mode": "source_history_passthrough",
+      "source_history_contract": "reference_program_compare_source_history_passthrough_v1",
+      "required_surface_fields": [
+        "surface_kind",
+        "blocking",
+        "present",
+        "report_path",
+        "summary_md_path",
+        "current_mainline_status_path",
+        "gate_ok",
+        "latest_date",
+        "stale",
+        "freshness_mode",
+        "effective_all_dates_ok"
+      ]
+    },
+    "stat_snapshot_family": {
+      "surface_kind": "stat_snapshot_family_surface",
+      "blocking": false,
+      "source_history_mode": "source_history_passthrough",
+      "source_history_contract": "stat_snapshot_family_surface_history_v1",
+      "required_surface_fields": [
+        "surface_kind",
+        "blocking",
+        "present",
+        "report_path",
+        "summary_md_path",
+        "current_mainline_status_path",
+        "gate_ok",
+        "latest_date",
+        "stale",
+        "freshness_mode",
+        "effective_all_dates_ok"
+      ]
+    }
+  }
+}

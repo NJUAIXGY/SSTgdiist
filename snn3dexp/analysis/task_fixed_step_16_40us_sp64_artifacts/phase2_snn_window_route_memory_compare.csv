@@ -1,0 +1,17 @@
+metric_key,metric_label,value_kind,base_case_id,compare_case_id,base_value,compare_value,delta
+memory_requests_total,Memory Requests,int,full_3d_snn_window,full_3d_snn_window_bundle_v3,416,1304,888
+memory_requests_per_completed_step,Memory / Completed Step,float,full_3d_snn_window,full_3d_snn_window_bundle_v3,26.0,81.5,55.5
+total_service_deficit_per_completed_step,Service Deficit / Completed Step,float,full_3d_snn_window,full_3d_snn_window_bundle_v3,0.0,0.0,0.0
+stall_on_step_gate_cycles_per_completed_step,Step-Gate Stall / Completed Step,float,full_3d_snn_window,full_3d_snn_window_bundle_v3,8696.375,11158.3125,2461.9375
+stream_region_demands,Stream-Region Demands,int,full_3d_snn_window,full_3d_snn_window_bundle_v3,128,344,216
+stream_region_issued,Stream-Region Issued,int,full_3d_snn_window,full_3d_snn_window_bundle_v3,128,344,216
+stream_region_backlog,Stream-Region Backlog,int,full_3d_snn_window,full_3d_snn_window_bundle_v3,0,0,0
+stream_region_issue_efficiency,Stream-Region Issue Efficiency,float,full_3d_snn_window,full_3d_snn_window_bundle_v3,1.0,1.0,0.0
+stream_region_bytes_written_total,Stream-Region Bytes Written,int,full_3d_snn_window,full_3d_snn_window_bundle_v3,8192,22016,13824
+stream_region_bytes_read_total,Stream-Region Bytes Read,int,full_3d_snn_window,full_3d_snn_window_bundle_v3,8192,22016,13824
+writeback_region_demands,Writeback Demands,int,full_3d_snn_window,full_3d_snn_window_bundle_v3,48,136,88
+writeback_region_issued,Writeback Issued,int,full_3d_snn_window,full_3d_snn_window_bundle_v3,48,136,88
+writeback_region_backlog,Writeback Backlog,int,full_3d_snn_window,full_3d_snn_window_bundle_v3,0,0,0
+writeback_region_issue_efficiency,Writeback Issue Efficiency,float,full_3d_snn_window,full_3d_snn_window_bundle_v3,1.0,1.0,0.0
+writeback_region_bytes_written_total,Writeback Bytes Written,int,full_3d_snn_window,full_3d_snn_window_bundle_v3,3072,8704,5632
+writeback_region_bytes_read_total,Writeback Bytes Read,int,full_3d_snn_window,full_3d_snn_window_bundle_v3,3072,8704,5632

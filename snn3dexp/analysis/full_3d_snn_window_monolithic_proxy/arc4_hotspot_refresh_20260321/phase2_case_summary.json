@@ -1,0 +1,236 @@
+{
+  "case_id": "full_3d_snn_window_monolithic_proxy",
+  "run_tag": "arc4_hotspot_refresh_20260321",
+  "status": "smoke_passed",
+  "runtime_enabled": false,
+  "control_mode": "observe_only",
+  "case_role": "runtime_smoke",
+  "paths": {
+    "effective_config_path": "/home/xgy/remote/snn3dexp/runs/full_3d_snn_window_monolithic_proxy/arc4_hotspot_refresh_20260321/effective_config.json",
+    "platform_summary_path": "/home/xgy/remote/snn3dexp/runs/full_3d_snn_window_monolithic_proxy/arc4_hotspot_refresh_20260321/platform_summary.json",
+    "stack_nmc_summary_path": "/home/xgy/remote/snn3dexp/analysis/full_3d_snn_window_monolithic_proxy/arc4_hotspot_refresh_20260321/stack_nmc_summary.json",
+    "route_memory_joint_summary_path": "/home/xgy/remote/snn3dexp/analysis/full_3d_snn_window_monolithic_proxy/arc4_hotspot_refresh_20260321/route_memory_joint_summary.json",
+    "runtime_summary_path": "/home/xgy/remote/snn3dexp/analysis/full_3d_snn_window_monolithic_proxy/arc4_hotspot_refresh_20260321/runtime_summary.json",
+    "runtime_control_path": ""
+  },
+  "thermal_input": {
+    "input_source_kind": "local_hotspot_sidecar",
+    "summary_path": "/home/xgy/remote/snn3dexp/runs/full_3d_snn_window_monolithic_proxy/arc4_hotspot_refresh_20260321/thermal_sidecar/summary/thermal_summary.json",
+    "summary_exists": true,
+    "window_power_samples_path": "/home/xgy/remote/snn3dexp/runs/full_3d_snn_window_monolithic_proxy/arc4_hotspot_refresh_20260321/thermal_sidecar/summary/window_power_samples.jsonl",
+    "window_power_samples_exists": true,
+    "window_power_sample_count": 1,
+    "trace_sources": [
+      "proxy_synthesized"
+    ],
+    "shared_input_key": "/home/xgy/remote/snn3dexp/runs/full_3d_snn_window_monolithic_proxy/arc4_hotspot_refresh_20260321/thermal_sidecar/summary/thermal_summary.json"
+  },
+  "mapping": {
+    "policy": "3d_aware",
+    "score": -0.46875,
+    "same_home_stack_ratio": 0.5,
+    "vertical_target_ratio": 0.25
+  },
+  "route_kernel": {
+    "processing_enabled": true,
+    "routing_mode": "weight_driven",
+    "mapping_mode": "edges_csv",
+    "mapping_edges_file": "/home/xgy/remote/snn3dexp/runs/full_3d_snn_window_monolithic_proxy/arc4_hotspot_refresh_20260321/assets/traffic_mem_edges.csv",
+    "mapping_edges_file_exists": true,
+    "native_bootstrap_source": "edges_csv",
+    "native_bootstrap_ready": true,
+    "synapse_route_impl": "native_3d",
+    "route3d_native_targets": true,
+    "mesh_shape": "4x4x2",
+    "mesh_dim_z": 2,
+    "multicast_block_d": 2,
+    "multicast_die_local_only": false,
+    "expected_active": true,
+    "actual_activation_observed": true,
+    "actual_activation_source": "sst_stats_route3d_native_runtime",
+    "runtime_activation_total": 560,
+    "runtime_activation_gating_total": 0,
+    "runtime_activation_direct_total": 560,
+    "runtime_unique_sources_total": 32,
+    "runtime_marker_count": 256,
+    "runtime_marker_samples": [
+      {
+        "node": 31,
+        "core": 0,
+        "source_global": 124,
+        "fanout": 2,
+        "applied_gating": 0
+      },
+      {
+        "node": 30,
+        "core": 0,
+        "source_global": 120,
+        "fanout": 2,
+        "applied_gating": 0
+      },
+      {
+        "node": 29,
+        "core": 0,
+        "source_global": 116,
+        "fanout": 2,
+        "applied_gating": 0
+      },
+      {
+        "node": 28,
+        "core": 0,
+        "source_global": 112,
+        "fanout": 2,
+        "applied_gating": 0
+      },
+      {
+        "node": 27,
+        "core": 0,
+        "source_global": 108,
+        "fanout": 2,
+        "applied_gating": 0
+      },
+      {
+        "node": 26,
+        "core": 0,
+        "source_global": 104,
+        "fanout": 2,
+        "applied_gating": 0
+      },
+      {
+        "node": 25,
+        "core": 0,
+        "source_global": 100,
+        "fanout": 2,
+        "applied_gating": 0
+      },
+      {
+        "node": 24,
+        "core": 0,
+        "source_global": 96,
+        "fanout": 2,
+        "applied_gating": 0
+      }
+    ],
+    "unmet_conditions": []
+  },
+  "joint": {
+    "vertical_hops_ratio": 0.0,
+    "remote_home_ratio": 0.0,
+    "route_memory_overlap": 0.75
+  },
+  "thermal": {
+    "thermal_hotspot_score": 1.25,
+    "vertical_link_pressure": 0.15,
+    "stack_hotspot_penalty": 0.1923076923076923,
+    "vertical_bandwidth_budget": 3.5,
+    "tsv_miv_budget_pressure": 0.05357142857142857,
+    "power_density_score": 2.1340745192307695,
+    "reliability_penalty": 0.539797819368132,
+    "thermal_state_source": "thermal_hooks",
+    "peak_temperature_c": 0.0,
+    "avg_temperature_c": 0.0,
+    "vertical_gradient_c": 0.0,
+    "hotspot_block_count": 0,
+    "hotspot_layer_count": 0,
+    "thermal_replay_sample_count": 1,
+    "hotspot_driver_status": "ran",
+    "hotspot_model_type": "grid",
+    "hotspot_temperature_source": "hotspot_steady_temp",
+    "hotspot_peak_temperature_c": 45.02000000000004,
+    "hotspot_avg_temperature_c": 45.02000000000023,
+    "hotspot_peak_delta_c": -45.02000000000004,
+    "hotspot_avg_delta_c": -45.02000000000023,
+    "hotspot_block_delta": 0,
+    "hotspot_layer_delta": 0,
+    "hotspot_threshold_c": 70.0,
+    "hotspot_threshold_source": "effective_config.thermal.hotspot_threshold_c",
+    "hotspot_artifacts": {
+      "floorplan": "/home/xgy/remote/snn3dexp/runs/full_3d_snn_window_monolithic_proxy/arc4_hotspot_refresh_20260321/thermal_sidecar/hotspot/snndl_mesh.lcf",
+      "ptrace": "/home/xgy/remote/snn3dexp/runs/full_3d_snn_window_monolithic_proxy/arc4_hotspot_refresh_20260321/thermal_sidecar/hotspot/snndl_mesh.ptrace",
+      "hotspot_config": "/home/xgy/remote/snn3dexp/runs/full_3d_snn_window_monolithic_proxy/arc4_hotspot_refresh_20260321/thermal_sidecar/hotspot/hotspot.config",
+      "window_power_samples_jsonl": "/home/xgy/remote/snn3dexp/runs/full_3d_snn_window_monolithic_proxy/arc4_hotspot_refresh_20260321/thermal_sidecar/summary/window_power_samples.jsonl",
+      "tile_temperature_summary_csv": "/home/xgy/remote/snn3dexp/runs/full_3d_snn_window_monolithic_proxy/arc4_hotspot_refresh_20260321/thermal_sidecar/summary/tile_temperature_summary.csv",
+      "thermal_summary_json": "/home/xgy/remote/snn3dexp/runs/full_3d_snn_window_monolithic_proxy/arc4_hotspot_refresh_20260321/thermal_sidecar/summary/thermal_summary.json",
+      "steady_temp": "/home/xgy/remote/snn3dexp/runs/full_3d_snn_window_monolithic_proxy/arc4_hotspot_refresh_20260321/thermal_sidecar/hotspot/steady.temp",
+      "transient_temp": "/home/xgy/remote/snn3dexp/runs/full_3d_snn_window_monolithic_proxy/arc4_hotspot_refresh_20260321/thermal_sidecar/hotspot/transient.temp",
+      "lcf": "/home/xgy/remote/snn3dexp/runs/full_3d_snn_window_monolithic_proxy/arc4_hotspot_refresh_20260321/thermal_sidecar/hotspot/snndl_mesh.lcf",
+      "layer_floorplans": [
+        "/home/xgy/remote/snn3dexp/runs/full_3d_snn_window_monolithic_proxy/arc4_hotspot_refresh_20260321/thermal_sidecar/hotspot/layer_00_compute_top.flp",
+        "/home/xgy/remote/snn3dexp/runs/full_3d_snn_window_monolithic_proxy/arc4_hotspot_refresh_20260321/thermal_sidecar/hotspot/layer_01_compute_bottom.flp"
+      ]
+    }
+  },
+  "runtime": {
+    "enabled": false,
+    "policy": "disabled",
+    "signal_source": "disabled",
+    "thermal_signal_source": "thermal_hooks",
+    "thermal_state_source": "thermal_hooks",
+    "control_epoch_scope": "",
+    "control_execution_enabled": false,
+    "control_decision": "disabled",
+    "observe_only": true,
+    "recommend_only": false,
+    "executed_control": false,
+    "control_artifact_path": "",
+    "base_weights": {
+      "mapping_route_weight": 1.0,
+      "mapping_stack_home_weight": 1.5,
+      "mapping_vertical_penalty": 0.75
+    },
+    "route_memory_overlap": 0.0,
+    "vertical_link_pressure": 0.0,
+    "stack_hotspot_penalty": 0.0,
+    "remap_epoch": 0,
+    "homeroute_adjustment_count": 0,
+    "thermal_guard_actions": 0,
+    "hotspot_threshold_c": 70.0,
+    "hotspot_threshold_source": "effective_config.thermal.hotspot_threshold_c",
+    "thermal_observability": {
+      "peak_temperature_c": null,
+      "avg_temperature_c": null,
+      "hotspot_block_count": 0,
+      "hotspot_layer_count": 0,
+      "vertical_gradient_c": 0.0,
+      "top_layer_peak_c": null,
+      "bottom_layer_peak_c": null,
+      "thermal_hotspot_score": 1.25
+    },
+    "global_step_observability": {
+      "enabled": true,
+      "controller_present": true,
+      "controller_seq_last": 4,
+      "controller_steps_started_total": 4,
+      "controller_steps_completed_total": 4,
+      "controller_pe_ready_events_total": 32,
+      "controller_pe_done_events_total": 128,
+      "controller_warn_count_total": 0,
+      "step_start_count": 4,
+      "step_done_count": 4,
+      "pe_global_steps_done_total": 128,
+      "pe_global_steps_done_max": 4,
+      "active_step_nodes": 32,
+      "stall_on_step_gate_cycles_total": 11232,
+      "stall_on_step_gate_cycles_max": 804,
+      "step_activation_invocations_total": 0,
+      "step_activation_pre_selected_total": 0,
+      "step_activation_spike_attempts_total": 0,
+      "step_activation_spikes_injected_total": 0,
+      "step_activation_route_hits_total": 0,
+      "step_activation_route_misses_total": 0,
+      "step_activation_local_drops_total": 0
+    },
+    "recommended_actions": [],
+    "recommended_weights": {
+      "mapping_route_weight": 1.0,
+      "mapping_stack_home_weight": 1.5,
+      "mapping_vertical_penalty": 0.75
+    },
+    "applied_weights": {
+      "mapping_route_weight": 1.0,
+      "mapping_stack_home_weight": 1.5,
+      "mapping_vertical_penalty": 0.75
+    },
+    "next_window_processing_params": {}
+  }
+}

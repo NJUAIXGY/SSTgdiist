@@ -1,0 +1,103 @@
+{
+  "run_tag": "task13_phase2_compose_v2",
+  "case_order": [
+    "baseline_2d",
+    "memory_only_3d",
+    "noc_only_3d",
+    "full_3d",
+    "full_3d_mapping",
+    "full_3d_thermal_guard",
+    "full_3d_monolithic_proxy",
+    "full_3d_runtime_adaptive"
+  ],
+  "focus_cases": [
+    "full_3d",
+    "full_3d_mapping",
+    "full_3d_thermal_guard"
+  ],
+  "comparisons": {
+    "mapping_vs_full_3d": {
+      "mapping_score_delta": 0.7734375,
+      "same_home_stack_ratio_delta": 0.40625,
+      "vertical_target_ratio_delta": 0.40625,
+      "vertical_hops_ratio_delta": 0.0,
+      "remote_home_ratio_delta": 0.0,
+      "route_memory_overlap_delta": 0.0,
+      "vertical_link_pressure_delta": 0.24375,
+      "thermal_hotspot_score_delta": 0.0,
+      "stack_hotspot_penalty_delta": 0.25,
+      "vertical_bandwidth_budget_delta": 0.0,
+      "tsv_miv_budget_pressure_delta": 0.17138671875,
+      "power_density_score_delta": 0.1953125,
+      "reliability_penalty_delta": 0.18215332031250003
+    },
+    "thermal_guard_vs_mapping": {
+      "mapping_score_delta": -0.3671875,
+      "same_home_stack_ratio_delta": -0.15625,
+      "vertical_target_ratio_delta": -0.15625,
+      "vertical_hops_ratio_delta": 0.0,
+      "remote_home_ratio_delta": 0.0,
+      "route_memory_overlap_delta": 0.0,
+      "vertical_link_pressure_delta": -0.09375,
+      "thermal_hotspot_score_delta": 0.0,
+      "stack_hotspot_penalty_delta": 0.25,
+      "vertical_bandwidth_budget_delta": 0.0,
+      "tsv_miv_budget_pressure_delta": -0.07763671875,
+      "power_density_score_delta": 0.1953125,
+      "reliability_penalty_delta": 0.04519042968749998
+    }
+  },
+  "focus_metrics": [
+    {
+      "case_id": "full_3d",
+      "same_home_stack_ratio": 0.5,
+      "vertical_target_ratio": 0.0,
+      "vertical_link_pressure": 0.0,
+      "thermal_hotspot_score": 1.25
+    },
+    {
+      "case_id": "full_3d_mapping",
+      "same_home_stack_ratio": 0.90625,
+      "vertical_target_ratio": 0.40625,
+      "vertical_link_pressure": 0.24375,
+      "thermal_hotspot_score": 1.25
+    },
+    {
+      "case_id": "full_3d_thermal_guard",
+      "same_home_stack_ratio": 0.75,
+      "vertical_target_ratio": 0.25,
+      "vertical_link_pressure": 0.15,
+      "thermal_hotspot_score": 1.25
+    }
+  ],
+  "realism_focus_metrics": [
+    {
+      "case_id": "full_3d",
+      "vertical_bandwidth_budget": 2.0,
+      "tsv_miv_budget_pressure": 0.0,
+      "power_density_score": 1.5625,
+      "reliability_penalty": 0.253125
+    },
+    {
+      "case_id": "full_3d_mapping",
+      "vertical_bandwidth_budget": 2.0,
+      "tsv_miv_budget_pressure": 0.17138671875,
+      "power_density_score": 1.7578125,
+      "reliability_penalty": 0.4352783203125
+    },
+    {
+      "case_id": "full_3d_thermal_guard",
+      "vertical_bandwidth_budget": 2.0,
+      "tsv_miv_budget_pressure": 0.09375,
+      "power_density_score": 1.953125,
+      "reliability_penalty": 0.48046875
+    }
+  ],
+  "outputs": {
+    "csv": "/home/xgy/remote/snn3dexp/analysis/paper_artifacts/task13_phase2_compose_v2/phase2_runtime_baseline_table.csv",
+    "markdown": "/home/xgy/remote/snn3dexp/analysis/paper_artifacts/task13_phase2_compose_v2/phase2_runtime_baseline_table.md",
+    "latex": "/home/xgy/remote/snn3dexp/analysis/paper_artifacts/task13_phase2_compose_v2/phase2_runtime_baseline_table.tex",
+    "svg": "/home/xgy/remote/snn3dexp/analysis/paper_artifacts/task13_phase2_compose_v2/phase2_runtime_focus_metrics.svg",
+    "summary_json": "/home/xgy/remote/snn3dexp/analysis/paper_artifacts/task13_phase2_compose_v2/phase2_runtime_summary.json"
+  }
+}

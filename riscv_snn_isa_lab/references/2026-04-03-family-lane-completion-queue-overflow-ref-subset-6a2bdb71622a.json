@@ -1,0 +1,596 @@
+{
+  "artifact_role": "dated_family_lane_equivalence",
+  "authority_scope": "research_subset_lane",
+  "baseline": {
+    "equiv_validation": {
+      "allowed_fail_checks": [
+        "step_activation.invocations_vs_windows"
+      ],
+      "blocked_fail_checks": [],
+      "ok": true,
+      "raw_summary": "passed_with_warning",
+      "summary": "passed_with_warning",
+      "waived_fail_checks": [],
+      "waiver_applied": false,
+      "waiver_name": "completion_queue_overflow_ref_step_activation_window_alignment"
+    },
+    "role": "snn_baseline",
+    "run_dir": "/home/xgy/remote/riscv_snn_isa_lab/smoke_runs/completion_queue_overflow_ref_snn_baseline/20260403-160750",
+    "smoke_error": null,
+    "smoke_returncode": 0,
+    "spec_path": "/home/xgy/remote/riscv_snn_isa_lab/family_lanes/completion_queue_overflow_ref/6a2bdb71622a/completion_queue_overflow_ref_snn_baseline.json",
+    "validation": "passed_with_warning",
+    "validation_detail": {
+      "fail_checks": [],
+      "fail_lines": [],
+      "pass_checks": [
+        "contracts.present",
+        "contracts.strict_repro_same_post_deterministic",
+        "contracts.strict_repro_global_total_order_required",
+        "contracts.gas_semantic_ready_before_commit",
+        "contracts.gas_semantic_drain_before_scatter",
+        "contracts.apply_issue_policy_matches_effective_config",
+        "contracts.experimental_retire_policy_matches_effective_config",
+        "contracts.retire_policy_scope_consistent",
+        "contracts.experimental_gcss_phase_breakdown_enable_matches_effective_config",
+        "contracts.experimental_retire_shadow_per_post_enable_matches_effective_config",
+        "contracts.experimental_gcss_vlf_queue_policy_matches_effective_config",
+        "contracts.experimental_gcss_vlf_fair_band_size_matches_effective_config",
+        "run.log.exists",
+        "run.no_emergency_shutdown",
+        "model.num_pes",
+        "model.neurons_per_pe_formula",
+        "model.bcsr_rows_match_neurons_per_core",
+        "model.bcsr_meta_path_exists",
+        "model.exec_mode_infer",
+        "gas.windows_accounting",
+        "snn_rx.packet_accounting",
+        "snn_tx.nonzero",
+        "snn_txrx.key_visibility",
+        "snn_txrx.key_visibility_step_deferral",
+        "memory.nonzero",
+        "memhierarchy.line_size_bytes_nonzero",
+        "info.infer_global_step_sync"
+      ],
+      "pass_lines": [
+        "[val] PASS contracts.present: summary.contracts present",
+        "[val] PASS contracts.gas_semantic_ready_before_commit: value=True",
+        "[val] PASS contracts.gas_semantic_drain_before_scatter: value=True",
+        "[val] PASS snn_rx.packet_accounting: rx_packets=2872 key_packets=0 fastpath=0 fallback=0",
+        "[val] PASS snn_tx.nonzero: tx_packets=8837 tx_spike=8837 tx_spikekey=0 tx_spiketilekey=0",
+        "[val] PASS memory.nonzero: memory_requests=3202 memory_bytes=204928"
+      ],
+      "summary": "passed_with_warning",
+      "warn_checks": [
+        "gas.features.merge_enabled_bcsr"
+      ],
+      "warn_lines": [
+        "[val] WARN gas.features.merge_enabled_bcsr: gap_k=0 lmax=65536 row_window_bytes=0 row_window_timeout_ns=0"
+      ]
+    },
+    "workload_impl": "snn"
+  },
+  "canonical_surface": false,
+  "compare": {
+    "strict": [
+      {
+        "baseline": 1,
+        "field": "schema_version",
+        "match": true,
+        "runtime_bridge": 1
+      },
+      {
+        "baseline": "gas",
+        "field": "model.exec_mode",
+        "match": true,
+        "runtime_bridge": "gas"
+      },
+      {
+        "baseline": 4,
+        "field": "model.mesh_size",
+        "match": true,
+        "runtime_bridge": 4
+      },
+      {
+        "baseline": true,
+        "field": "contracts.gas_semantic_ready_before_commit",
+        "match": true,
+        "runtime_bridge": true
+      },
+      {
+        "baseline": true,
+        "field": "contracts.gas_semantic_drain_before_scatter",
+        "match": true,
+        "runtime_bridge": true
+      }
+    ],
+    "trend": [
+      {
+        "baseline": 3202.0,
+        "classification": "traffic_cost_delta",
+        "delta": 1080.0,
+        "delta_ratio": 0.337289,
+        "field": "memory.memory_requests",
+        "gate_level": "info",
+        "note": "Memory request totals are a datapath cost surface only; they are informative for research comparison, not a PASS blocker.",
+        "policy": {
+          "enforcement": "informational",
+          "expected_relation": "allow_divergence",
+          "policy_id": "memory_cost_research_surface",
+          "summary": "Memory request deltas are treated as research-level datapath cost drift."
+        },
+        "runtime_bridge": 4282.0
+      },
+      {
+        "baseline": 204928.0,
+        "classification": "traffic_cost_delta",
+        "delta": 69120.0,
+        "delta_ratio": 0.337289,
+        "field": "memory.memory_bytes",
+        "gate_level": "info",
+        "note": "Memory byte totals track shadow datapath cost rather than protocol equivalence; they are not a PASS blocker.",
+        "policy": {
+          "enforcement": "informational",
+          "expected_relation": "allow_divergence",
+          "policy_id": "memory_cost_research_surface",
+          "summary": "Memory byte deltas are treated as research-level datapath cost drift."
+        },
+        "runtime_bridge": 274048.0
+      },
+      {
+        "baseline": 55.0,
+        "classification": "window_accounting_delta",
+        "delta": -7.0,
+        "delta_ratio": -0.127273,
+        "field": "gas.windows",
+        "gate_level": "info",
+        "note": "GAS window counts are a high-level accounting surface; drift here is informative, not a PASS blocker.",
+        "policy": {
+          "enforcement": "informational",
+          "expected_relation": "allow_divergence",
+          "policy_id": "gas_window_accounting_surface",
+          "summary": "Window count drift is tracked as research accounting, not as a PASS blocker."
+        },
+        "runtime_bridge": 48.0
+      },
+      {
+        "baseline": 55.0,
+        "classification": "window_accounting_delta",
+        "delta": -7.0,
+        "delta_ratio": -0.127273,
+        "field": "gas.windows_done",
+        "gate_level": "info",
+        "note": "Completed GAS windows remain a research compare surface only; drift here is not a PASS blocker.",
+        "policy": {
+          "enforcement": "informational",
+          "expected_relation": "allow_divergence",
+          "policy_id": "gas_window_accounting_surface",
+          "summary": "Completed window drift is tracked as research accounting, not as a PASS blocker."
+        },
+        "runtime_bridge": 48.0
+      },
+      {
+        "baseline": 4.0,
+        "classification": "aligned",
+        "delta": 0.0,
+        "delta_ratio": 0.0,
+        "field": "step.global_steps_done",
+        "gate_level": "info",
+        "note": "This research-level trend field is aligned for the current run; it remains informational only and is not a PASS blocker.",
+        "policy": {
+          "enforcement": "informational",
+          "expected_relation": "prefer_alignment",
+          "policy_id": "step_progress_sanity_surface",
+          "summary": "Global step progress is a coarse sanity surface and remains informational."
+        },
+        "runtime_bridge": 4.0
+      },
+      {
+        "baseline": 8837.0,
+        "classification": "traffic_visibility_delta",
+        "delta": -2744.0,
+        "delta_ratio": -0.310513,
+        "field": "snn_tx.spike_packets_total",
+        "gate_level": "warn",
+        "note": "Spike TX totals depend on the current export surface; visibility gaps here are informative only, not a PASS blocker.",
+        "policy": {
+          "enforcement": "warn_on_visibility_gap",
+          "expected_relation": "require_visibility",
+          "policy_id": "transport_visibility_surface",
+          "summary": "Transport visibility should eventually be exported on both sides; missing export is a WARN gate."
+        },
+        "runtime_bridge": 6093.0
+      },
+      {
+        "baseline": 2872.0,
+        "classification": "traffic_visibility_delta",
+        "delta": -463.0,
+        "delta_ratio": -0.161212,
+        "field": "snn_rx.spike_packets_total",
+        "gate_level": "warn",
+        "note": "Spike RX totals depend on the current export surface; visibility gaps here are informative only, not a PASS blocker.",
+        "policy": {
+          "enforcement": "warn_on_visibility_gap",
+          "expected_relation": "require_visibility",
+          "policy_id": "transport_visibility_surface",
+          "summary": "Transport visibility should eventually be exported on both sides; missing export is a WARN gate."
+        },
+        "runtime_bridge": 2409.0
+      }
+    ],
+    "trend_overview": {
+      "aligned_fields": [
+        "step.global_steps_done"
+      ],
+      "diverged_fields": [
+        "memory.memory_requests",
+        "memory.memory_bytes",
+        "gas.windows",
+        "gas.windows_done",
+        "snn_tx.spike_packets_total",
+        "snn_rx.spike_packets_total"
+      ],
+      "gate_failures": [],
+      "gate_level": "info",
+      "gate_warnings": [],
+      "policy_ids": [
+        "gas_window_accounting_surface",
+        "memory_cost_research_surface",
+        "step_progress_sanity_surface",
+        "transport_visibility_surface"
+      ],
+      "status": "passed",
+      "summary_lines": [
+        "Trend rows are informational only and do not currently participate in PASS/FAIL.",
+        "Diverged fields capture high-level cost/accounting drift, while visibility_gap fields indicate missing export surface on one side."
+      ],
+      "visibility_gap_fields": []
+    }
+  },
+  "family": "completion_queue_overflow_ref",
+  "family_policy": {
+    "allowed_completion_signature": "one software-visible completion may remain intentionally unconsumed when cmpq-full fault retires",
+    "allowed_fault_signature": "last_fault_csr must equal fault_count * 0x0000000100000211",
+    "fault_lifecycle_mode": "single_fault",
+    "fault_mode": "accepted_fault_required",
+    "progress_mode": "completion_queue_fault_surface",
+    "queue_mode": "completion_queue_overflow_after_visible_completion",
+    "required_checks": [
+      "provider_bound_visible",
+      "fused_step_completion_visible",
+      "completion_visible",
+      "completion_consumed_covers_visible",
+      "fault_observed",
+      "completion_queue_fault_signature",
+      "fault_snapshot_consistent"
+    ]
+  },
+  "gate_reasons": [],
+  "generated_utc": "2026-04-03T08:08:36.755927+00:00",
+  "lane_id": "6a2bdb71622a",
+  "lane_overrides": {
+    "cmd_queue_entries": 2,
+    "cmp_queue_entries": 1
+  },
+  "lane_root": "/home/xgy/remote/riscv_snn_isa_lab/family_lanes/completion_queue_overflow_ref/6a2bdb71622a",
+  "runtime_bridge": {
+    "build_preflight": {
+      "backend_name": "runtime_bridge",
+      "contract_key": "riscv_snn.runtime_bridge.runtime_consumers",
+      "contract_version": 1,
+      "dependency_paths": [
+        "/home/xgy/remote/sst_workspace/sst-elements/src/sst/elements/SnnDL/services/synapse/weights/WeightMemorySubsystem.h",
+        "/home/xgy/remote/sst_workspace/sst-elements/src/sst/elements/SnnDL/services/memory/sram_sim/model/BankedSramModel.h"
+      ],
+      "enabled": true,
+      "fingerprint_match": true,
+      "full_rebuild_reason_ids": [],
+      "full_rebuild_required": false,
+      "installed_build_fingerprint": "55c0d471fcc5904a639dd45ea6ceeabcfd90b105fe68e7e8253a94d0b3cc3194",
+      "installed_lib_path": "/home/xgy/remote/sst_install_mpi/lib/sst-elements-library/libSnnDL.so",
+      "layout_sensitive_relpaths": [
+        ".libs/libSnnDL.so",
+        "control/.libs/SnnPEOrchestrators.o",
+        "control/.libs/SnnPESubComponent.o",
+        "control/.libs/SnnPESubComponent_bcsr.o",
+        "control/.libs/SnnPESubComponent_spike.o",
+        "services/memory/sram_sim/model/.libs/BankedSramModel.o",
+        "services/memory/sram_sim/model/BankedSramModel.h",
+        "services/synapse/stdmem/.libs/SnnPESubComponent_mem.o",
+        "services/synapse/weights/.libs/WeightMemorySubsystem.o",
+        "services/synapse/weights/WeightMemorySubsystem.h",
+        "services/workload/snn/.libs/SnnWorkload.o"
+      ],
+      "lineage_status": "ok",
+      "missing_targets": [],
+      "rebuild_command": "cd \"/home/xgy/remote/sst_workspace/sst-elements/src/sst/elements/SnnDL\"\nmake -W \"services/workload/snn/SnnWorkload.cc\" \"services/workload/snn/SnnWorkload.lo\" -W \"control/SnnPESubComponent.cc\" \"control/SnnPESubComponent.lo\" -W \"control/SnnPEOrchestrators.cc\" \"control/SnnPEOrchestrators.lo\" -W \"control/SnnPESubComponent_spike.cc\" \"control/SnnPESubComponent_spike.lo\" -W \"control/SnnPESubComponent_bcsr.cc\" \"control/SnnPESubComponent_bcsr.lo\" -W \"services/synapse/stdmem/SnnPESubComponent_mem.cc\" \"services/synapse/stdmem/SnnPESubComponent_mem.lo\" -W \"services/synapse/weights/WeightMemorySubsystem.cc\" \"services/synapse/weights/WeightMemorySubsystem.lo\" -W \"services/memory/sram_sim/model/BankedSramModel.cc\" \"services/memory/sram_sim/model/BankedSramModel.lo\" \"libSnnDL.la\"",
+      "required_action": "none",
+      "required_target_paths": [
+        "/home/xgy/remote/sst_workspace/sst-elements/src/sst/elements/SnnDL/services/workload/snn/.libs/SnnWorkload.o",
+        "/home/xgy/remote/sst_workspace/sst-elements/src/sst/elements/SnnDL/control/.libs/SnnPESubComponent.o",
+        "/home/xgy/remote/sst_workspace/sst-elements/src/sst/elements/SnnDL/control/.libs/SnnPEOrchestrators.o",
+        "/home/xgy/remote/sst_workspace/sst-elements/src/sst/elements/SnnDL/control/.libs/SnnPESubComponent_spike.o",
+        "/home/xgy/remote/sst_workspace/sst-elements/src/sst/elements/SnnDL/control/.libs/SnnPESubComponent_bcsr.o",
+        "/home/xgy/remote/sst_workspace/sst-elements/src/sst/elements/SnnDL/services/synapse/stdmem/.libs/SnnPESubComponent_mem.o",
+        "/home/xgy/remote/sst_workspace/sst-elements/src/sst/elements/SnnDL/services/synapse/weights/.libs/WeightMemorySubsystem.o",
+        "/home/xgy/remote/sst_workspace/sst-elements/src/sst/elements/SnnDL/services/memory/sram_sim/model/.libs/BankedSramModel.o",
+        "/home/xgy/remote/sst_workspace/sst-elements/src/sst/elements/SnnDL/.libs/libSnnDL.so"
+      ],
+      "snndl_root": "/home/xgy/remote/sst_workspace/sst-elements/src/sst/elements/SnnDL",
+      "spec_path": "/home/xgy/remote/riscv_snn_isa_lab/family_lanes/completion_queue_overflow_ref/6a2bdb71622a/completion_queue_overflow_ref_runtime_bridge.json",
+      "stale_targets": [],
+      "status": "ok",
+      "workload_impl": "riscv_snn",
+      "workspace_build_fingerprint": "55c0d471fcc5904a639dd45ea6ceeabcfd90b105fe68e7e8253a94d0b3cc3194",
+      "workspace_lib_path": "/home/xgy/remote/sst_workspace/sst-elements/src/sst/elements/SnnDL/.libs/libSnnDL.so"
+    },
+    "build_preflight_rollup": {
+      "contract_key": "riscv_snn.runtime_bridge.runtime_consumers",
+      "contract_version": 1,
+      "dependency_count": 2,
+      "enabled": true,
+      "fingerprint_match": true,
+      "full_rebuild_required": false,
+      "lineage_status": "ok",
+      "missing_target_count": 0,
+      "reporting_scope": "research_only_nonblocking",
+      "required_action": "none",
+      "required_target_count": 9,
+      "stale_target_count": 0,
+      "status": "ok"
+    },
+    "equiv_validation": {
+      "allowed_fail_checks": [],
+      "blocked_fail_checks": [],
+      "ok": true,
+      "raw_summary": "passed_with_warning",
+      "summary": "passed_with_warning",
+      "waived_fail_checks": [],
+      "waiver_applied": false,
+      "waiver_name": null
+    },
+    "role": "runtime_bridge",
+    "run_dir": "/home/xgy/remote/riscv_snn_isa_lab/smoke_runs/completion_queue_overflow_ref_runtime_bridge/20260403-160813",
+    "runtime_gate": {
+      "checks": [
+        {
+          "actual": 64.0,
+          "check": "provider_bound_visible",
+          "check_id": "provider_bound_visible",
+          "contract": {
+            "default_severity": "hard_fail",
+            "summary": "runtime_bridge provider binding must be visible before the family can PASS"
+          },
+          "expected": "> 0",
+          "note": "runtime_bridge should prove that the shadow provider bound successfully before this run can be treated as a strong PASS.",
+          "reason": "runtime_bridge_provider_unbound",
+          "reason_contract": {
+            "severity": "hard_fail",
+            "summary": "runtime_bridge provider binding was not visible"
+          },
+          "reason_id": "runtime_bridge_provider_unbound",
+          "severity": "hard_fail",
+          "summary": "passed"
+        },
+        {
+          "actual": 64.0,
+          "check": "fused_step_completion_visible",
+          "check_id": "fused_step_completion_visible",
+          "contract": {
+            "default_severity": "warning",
+            "summary": "fused-step completion or equivalent accepted-fault/barrier progress should be visible"
+          },
+          "expected": "> 0 or accepted-fault completion progress",
+          "note": "Completion of at least one fused step is the minimum runtime_bridge forward-progress signal, unless this family intentionally retires through accepted-fault completions or through barrier-visible completion ordering.",
+          "reason": "runtime_bridge_fused_step_completion_missing",
+          "reason_contract": {
+            "severity": "warning",
+            "summary": "no fused-step completion progress was visible on the runtime bridge path"
+          },
+          "reason_id": "runtime_bridge_fused_step_completion_missing",
+          "severity": "warning",
+          "summary": "passed"
+        },
+        {
+          "actual": 64.0,
+          "check": "completion_visible",
+          "check_id": "completion_visible",
+          "contract": {
+            "default_severity": "warning",
+            "summary": "software-visible completion count should normally be present on the runtime bridge path"
+          },
+          "expected": "> 0 or command-overdoorbell overflow family",
+          "note": "Software-visible completions should normally be present before the run is treated as a strong PASS. The command-overdoorbell queue overflow family is allowed to wake on fault before any completion becomes visible.",
+          "reason": "runtime_bridge_completion_visibility_missing",
+          "reason_contract": {
+            "severity": "warning",
+            "summary": "software-visible completion count was missing on a family that normally requires it"
+          },
+          "reason_id": "runtime_bridge_completion_visibility_missing",
+          "severity": "warning",
+          "summary": "passed"
+        },
+        {
+          "actual": 0.0,
+          "check": "completion_consumed_covers_visible",
+          "check_id": "completion_consumed_covers_visible",
+          "contract": {
+            "default_severity": "warning",
+            "summary": "completion consumption should cover every visible completion unless the family intentionally stops earlier"
+          },
+          "expected": "accepted-fault family may halt before software completion ack",
+          "note": "When completions are visible, the firmware path should consume them as well, unless this family is explicitly freezing completion visibility before software consumption or faulting before completion ack becomes part of the contract.",
+          "reason": null,
+          "reason_contract": null,
+          "reason_id": null,
+          "severity": "warning",
+          "summary": "passed"
+        },
+        {
+          "actual": 64.0,
+          "check": "fault_observed",
+          "check_id": "fault_observed",
+          "contract": {
+            "default_severity": "hard_fail",
+            "summary": "fault-reference families must surface at least one accepted fault"
+          },
+          "expected": "> 0",
+          "note": "This equivalence family expects an accepted fault to reach the architectural runtime surface.",
+          "reason": "runtime_bridge_expected_fault_missing",
+          "reason_contract": {
+            "severity": "hard_fail",
+            "summary": "accepted fault did not reach the architectural runtime surface"
+          },
+          "reason_id": "runtime_bridge_expected_fault_missing",
+          "severity": "hard_fail",
+          "summary": "passed"
+        },
+        {
+          "actual": {
+            "expected_fault_snapshot_total": 274877940800,
+            "fault_count": 64.0,
+            "last_fault_csr": 274877940800
+          },
+          "check": "completion_queue_fault_signature",
+          "check_id": "completion_queue_fault_signature",
+          "contract": {
+            "default_severity": "hard_fail",
+            "summary": "completion queue overflow family must expose the frozen aggregated cmpq-full fault snapshot"
+          },
+          "expected": "last_fault_csr == fault_count * 0x0000000100000211",
+          "note": "The completion queue overflow reference freezes a cmpq-full fault after exactly one software-visible completion remains unacked.",
+          "reason": "runtime_bridge_completion_queue_fault_signature_mismatch",
+          "reason_contract": {
+            "severity": "hard_fail",
+            "summary": "completion queue overflow fault snapshot did not match the frozen completion-overflow signature"
+          },
+          "reason_id": "runtime_bridge_completion_queue_fault_signature_mismatch",
+          "severity": "hard_fail",
+          "summary": "passed"
+        },
+        {
+          "actual": {
+            "fault_count": 64.0,
+            "last_fault_csr": 274877940800.0
+          },
+          "check": "fault_snapshot_consistent",
+          "check_id": "fault_snapshot_consistent",
+          "contract": {
+            "default_severity": "hard_fail",
+            "summary": "fault snapshots must stay architecturally visible whenever fault_count is non-zero"
+          },
+          "expected": "fault_count == 0 or last_fault_csr > 0",
+          "note": "If faults occurred, the last fault CSR snapshot must remain architecturally visible.",
+          "reason": "runtime_bridge_fault_snapshot_missing",
+          "reason_contract": {
+            "severity": "hard_fail",
+            "summary": "fault count was non-zero but the visible fault CSR snapshot was missing"
+          },
+          "reason_id": "runtime_bridge_fault_snapshot_missing",
+          "severity": "hard_fail",
+          "summary": "passed"
+        }
+      ],
+      "family": "completion_queue_overflow_ref",
+      "hard_failures": [],
+      "ok": true,
+      "policy": {
+        "allowed_completion_signature": "one software-visible completion may remain intentionally unconsumed when cmpq-full fault retires",
+        "allowed_fault_signature": "last_fault_csr must equal fault_count * 0x0000000100000211",
+        "fault_lifecycle_mode": "single_fault",
+        "fault_mode": "accepted_fault_required",
+        "progress_mode": "completion_queue_fault_surface",
+        "queue_mode": "completion_queue_overflow_after_visible_completion",
+        "required_checks": [
+          "provider_bound_visible",
+          "fused_step_completion_visible",
+          "completion_visible",
+          "completion_consumed_covers_visible",
+          "fault_observed",
+          "completion_queue_fault_signature",
+          "fault_snapshot_consistent"
+        ]
+      },
+      "summary": "passed",
+      "warnings": []
+    },
+    "runtime_stats": {
+      "riscv_snn_accepted_commands": 128.0,
+      "riscv_snn_backend_runtime_bridge": 64.0,
+      "riscv_snn_backend_runtime_bridge_provider_bound": 64.0,
+      "riscv_snn_completion_consumed_count": 0.0,
+      "riscv_snn_completion_visible_count": 64.0,
+      "riscv_snn_fault_count": 64.0,
+      "riscv_snn_firmware_elf_present": 64.0,
+      "riscv_snn_firmware_loaded": 64.0,
+      "riscv_snn_firmware_started_count": 64.0,
+      "riscv_snn_fused_step_completion_count": 64.0,
+      "riscv_snn_last_completion_status": 0.0,
+      "riscv_snn_last_fault_csr": 274877940800.0,
+      "riscv_snn_submitted_commands": 128.0,
+      "riscv_snn_workload_selected": 64.0
+    },
+    "smoke_error": null,
+    "smoke_returncode": 0,
+    "spec_path": "/home/xgy/remote/riscv_snn_isa_lab/family_lanes/completion_queue_overflow_ref/6a2bdb71622a/completion_queue_overflow_ref_runtime_bridge.json",
+    "validation": "passed_with_warning",
+    "validation_detail": {
+      "fail_checks": [],
+      "fail_lines": [],
+      "pass_checks": [
+        "contracts.present",
+        "contracts.strict_repro_same_post_deterministic",
+        "contracts.strict_repro_global_total_order_required",
+        "contracts.gas_semantic_ready_before_commit",
+        "contracts.gas_semantic_drain_before_scatter",
+        "contracts.apply_issue_policy_matches_effective_config",
+        "contracts.experimental_retire_policy_matches_effective_config",
+        "contracts.retire_policy_scope_consistent",
+        "contracts.experimental_gcss_phase_breakdown_enable_matches_effective_config",
+        "contracts.experimental_retire_shadow_per_post_enable_matches_effective_config",
+        "contracts.experimental_gcss_vlf_queue_policy_matches_effective_config",
+        "contracts.experimental_gcss_vlf_fair_band_size_matches_effective_config",
+        "run.log.exists",
+        "run.no_emergency_shutdown",
+        "model.num_pes",
+        "model.neurons_per_pe_formula",
+        "model.bcsr_rows_match_neurons_per_core",
+        "model.bcsr_meta_path_exists",
+        "model.exec_mode_infer",
+        "gas.windows_accounting",
+        "snn_rx.packet_accounting",
+        "snn_tx.nonzero",
+        "snn_txrx.key_visibility",
+        "snn_txrx.key_visibility_step_deferral",
+        "memory.nonzero",
+        "memhierarchy.line_size_bytes_nonzero",
+        "info.infer_global_step_sync"
+      ],
+      "pass_lines": [
+        "[val] PASS contracts.present: summary.contracts present",
+        "[val] PASS contracts.gas_semantic_ready_before_commit: value=True",
+        "[val] PASS contracts.gas_semantic_drain_before_scatter: value=True",
+        "[val] PASS snn_rx.packet_accounting: rx_packets=2409 key_packets=0 fastpath=0 fallback=0",
+        "[val] PASS snn_tx.nonzero: tx_packets=6093 tx_spike=6093 tx_spikekey=0 tx_spiketilekey=0",
+        "[val] PASS memory.nonzero: memory_requests=4282 memory_bytes=274048"
+      ],
+      "summary": "passed_with_warning",
+      "warn_checks": [
+        "gas.features.merge_enabled_bcsr"
+      ],
+      "warn_lines": [
+        "[val] WARN gas.features.merge_enabled_bcsr: gap_k=0 lmax=65536 row_window_bytes=0 row_window_timeout_ns=0"
+      ]
+    },
+    "workload_impl": "riscv_snn"
+  },
+  "status": "PASS",
+  "template_specs": {
+    "runtime_bridge": "/home/xgy/remote/riscv_snn_isa_lab/specs/completion_queue_overflow_ref_runtime_bridge.json",
+    "snn_baseline": "/home/xgy/remote/riscv_snn_isa_lab/specs/completion_queue_overflow_ref_snn_baseline.json"
+  },
+  "variant_specs": {
+    "runtime_bridge": "/home/xgy/remote/riscv_snn_isa_lab/family_lanes/completion_queue_overflow_ref/6a2bdb71622a/completion_queue_overflow_ref_runtime_bridge.json",
+    "snn_baseline": "/home/xgy/remote/riscv_snn_isa_lab/family_lanes/completion_queue_overflow_ref/6a2bdb71622a/completion_queue_overflow_ref_snn_baseline.json"
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "admission": {
+    "blocking": false,
+    "compatibility_aliases": {
+      "queue_optional": [
+        "queue_equivalence_path",
+        "queue_equivalence_all_ok",
+        "queue_history_path",
+        "queue_history_available",
+        "queue_history_entry_count",
+        "queue_history_all_dates_ok"
+      ]
+    },
+    "contract_primary": "group_optional_admission_v1",
+    "explicit_review_date": "2026-03-30",
+    "explicit_review_decision": "approved",
+    "explicit_review_ok": true,
+    "explicit_review_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-03-30-queue-optional-review.json",
+    "explicit_review_reviewer": "riscv_snn_isa_lab",
+    "group": "queue_optional",
+    "group_equivalence_all_ok": true,
+    "group_equivalence_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-04-02-equiv-matrix-queue-optional.json",
+    "group_history_all_dates_ok": true,
+    "group_history_effective_all_dates_ok": true,
+    "group_history_effective_entry_count": 2,
+    "group_history_entry_count": 2,
+    "group_history_freshness_mode": "since_latest_recovery",
+    "group_history_latest_recovered_date": null,
+    "group_history_path": "/home/xgy/remote/riscv_snn_isa_lab/references/queue-optional-equivalence-history.json",
+    "primary_contract_fields": [
+      "group_equivalence_path",
+      "group_equivalence_all_ok",
+      "group_history_path",
+      "group_history_available",
+      "group_history_entry_count",
+      "group_history_all_dates_ok"
+    ],
+    "promotion_ready": true,
+    "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-04-02-queue-optional-admission-audit.json"
+  },
+  "artifact_role": "optional_promotion_dossier",
+  "authority_scope": "research_only_nonblocking",
+  "blocking": false,
+  "contract_primary": "group_optional_promotion_dossier_v1",
+  "evidence": {
+    "equivalence_summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-04-02-equiv-matrix-queue-optional.json",
+    "explicit_review_ok": true,
+    "explicit_review_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-03-30-queue-optional-review.json",
+    "history_all_dates_ok": true,
+    "history_effective_all_dates_ok": true,
+    "history_effective_entry_count": 2,
+    "history_entry_count": 2,
+    "history_freshness_mode": "since_latest_recovery",
+    "history_latest_recovered_date": null,
+    "history_path": "/home/xgy/remote/riscv_snn_isa_lab/references/queue-optional-equivalence-history.json",
+    "required_contracts": {
+      "multi_date_freshness_mode": "since_latest_recovery",
+      "requires_explicit_review": true,
+      "requires_family_equiv_pass": true,
+      "requires_multi_date_freshness": true,
+      "requires_reason_taxonomy_clean": true
+    },
+    "stable_history_latest_date": "2026-04-02",
+    "stable_history_path": "/home/xgy/remote/riscv_snn_isa_lab/references/nightly-history-index.json",
+    "stable_sidecar_path": "/home/xgy/remote/riscv_snn_isa_lab/references/nightly-sidecar-report.json"
+  },
+  "families": [
+    "completion_queue_overflow_ref",
+    "queue_backpressure_ref"
+  ],
+  "generated_utc": "2026-04-02T12:52:12.329130+00:00",
+  "group": "queue_optional",
+  "producer": "riscv_snn_lab.export_optional_promotion_dossier",
+  "promotion_ready": true,
+  "schema_version": 2
+}

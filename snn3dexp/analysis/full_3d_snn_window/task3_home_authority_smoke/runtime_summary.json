@@ -1,0 +1,1176 @@
+{
+  "enabled": false,
+  "policy": "disabled",
+  "signal_source": "disabled",
+  "thermal_signal_source": "thermal_hooks",
+  "thermal_state_source": "thermal_hooks",
+  "control_epoch_scope": "",
+  "control_execution_enabled": false,
+  "control_decision": "disabled",
+  "observe_only": true,
+  "recommend_only": false,
+  "executed_control": false,
+  "base_weights": {
+    "mapping_route_weight": 1.0,
+    "mapping_stack_home_weight": 1.5,
+    "mapping_vertical_penalty": 0.75
+  },
+  "applied_weights": {
+    "mapping_route_weight": 1.0,
+    "mapping_stack_home_weight": 1.5,
+    "mapping_vertical_penalty": 0.75
+  },
+  "route_memory_overlap": 0.0,
+  "vertical_link_pressure": 0.0,
+  "stack_hotspot_penalty": 0.0,
+  "remap_epoch": 0,
+  "homeroute_adjustment_count": 0,
+  "thermal_guard_actions": 0,
+  "action_labels": [],
+  "recommended_actions": [],
+  "recommended_weights": {
+    "mapping_route_weight": 1.0,
+    "mapping_stack_home_weight": 1.5,
+    "mapping_vertical_penalty": 0.75
+  },
+  "next_window_processing_params": {},
+  "control_artifact_path": "",
+  "coupling_metrics": {
+    "source": "joint_runtime_derived",
+    "route_thermal_coupling_score": 0.22187500000000002,
+    "memory_thermal_coupling_proxy": 160.6517,
+    "route_barrier_coupling_proxy": 32.0,
+    "memory_barrier_coupling_proxy": 23170.048,
+    "closed_loop_candidate": true
+  },
+  "thermal_observability": {
+    "peak_temperature_c": null,
+    "avg_temperature_c": null,
+    "hotspot_block_count": 0,
+    "hotspot_layer_count": 0,
+    "vertical_gradient_c": 0.0,
+    "top_layer_peak_c": null,
+    "bottom_layer_peak_c": null,
+    "thermal_hotspot_score": 1.25
+  },
+  "global_step_observability": {
+    "enabled": true,
+    "controller_present": true,
+    "controller_seq_last": 1,
+    "controller_steps_started_total": 1,
+    "controller_steps_completed_total": 0,
+    "controller_pe_ready_events_total": 32,
+    "controller_pe_done_events_total": 0,
+    "controller_warn_count_total": 0,
+    "step_start_count": 1,
+    "step_done_count": 0,
+    "pe_global_steps_done_total": 0,
+    "pe_global_steps_done_max": 0,
+    "active_step_nodes": 0,
+    "stall_on_step_gate_cycles_total": 64,
+    "stall_on_step_gate_cycles_max": 2,
+    "step_activation_invocations_total": 0,
+    "step_activation_pre_selected_total": 0,
+    "step_activation_spike_attempts_total": 0,
+    "step_activation_spikes_injected_total": 0,
+    "step_activation_route_hits_total": 0,
+    "step_activation_route_misses_total": 0,
+    "step_activation_local_drops_total": 0,
+    "progress_marker_count": 0,
+    "step_progress_last_cycle": 0,
+    "step_progress_last_seq": 0,
+    "step_progress_completed": 0,
+    "step_progress_ready_count": 0,
+    "step_progress_ready_total": 0,
+    "step_progress_done_count": 0,
+    "step_progress_done_total": 0,
+    "step_progress_missing_first": []
+  },
+  "thermal_hotspot_adapter": {
+    "adapter_version": "v1",
+    "sample_id": 1,
+    "state_source": "online_rc_estimator",
+    "power_trace_source": "proxy_synthesized",
+    "block_inputs": [
+      {
+        "block_name": "L00_compute_top__tile_00_comp",
+        "layer_name": "compute_top",
+        "layer_index": 0,
+        "block_type": "comp",
+        "power_w": 0.001854609375,
+        "temperature_c": 46.854609375,
+        "temperature_valid": true,
+        "trace_source": "proxy_synthesized"
+      },
+      {
+        "block_name": "L00_compute_top__tile_00_noc",
+        "layer_name": "compute_top",
+        "layer_index": 0,
+        "block_type": "noc",
+        "power_w": 0.000608009375,
+        "temperature_c": 45.608009375,
+        "temperature_valid": true,
+        "trace_source": "proxy_synthesized"
+      },
+      {
+        "block_name": "L00_compute_top__tile_00_sram",
+        "layer_name": "compute_top",
+        "layer_index": 0,
+        "block_type": "sram",
+        "power_w": 0.000230625,
+        "temperature_c": 45.230625,
+        "temperature_valid": true,
+        "trace_source": "proxy_synthesized"
+      },
+      {
+        "block_name": "L00_compute_top__tile_01_comp",
+        "layer_name": "compute_top",
+        "layer_index": 0,
+        "block_type": "comp",
+        "power_w": 0.002349171875,
+        "temperature_c": 47.349171875,
+        "temperature_valid": true,
+        "trace_source": "proxy_synthesized"
+      },
+      {
+        "block_name": "L00_compute_top__tile_01_noc",
+        "layer_name": "compute_top",
+        "layer_index": 0,
+        "block_type": "noc",
+        "power_w": 0.001181603125,
+        "temperature_c": 46.181603125,
+        "temperature_valid": true,
+        "trace_source": "proxy_synthesized"
+      },
+      {
+        "block_name": "L00_compute_top__tile_01_sram",
+        "layer_name": "compute_top",
+        "layer_index": 0,
+        "block_type": "sram",
+        "power_w": 0.000230625,
+        "temperature_c": 45.230625,
+        "temperature_valid": true,
+        "trace_source": "proxy_synthesized"
+      },
+      {
+        "block_name": "L00_compute_top__tile_02_comp",
+        "layer_name": "compute_top",
+        "layer_index": 0,
+        "block_type": "comp",
+        "power_w": 0.001854609375,
+        "temperature_c": 46.854609375,
+        "temperature_valid": true,
+        "trace_source": "proxy_synthesized"
+      },
+      {
+        "block_name": "L00_compute_top__tile_02_noc",
+        "layer_name": "compute_top",
+        "layer_index": 0,
+        "block_type": "noc",
+        "power_w": 0.000608009375,
+        "temperature_c": 45.608009375,
+        "temperature_valid": true,
+        "trace_source": "proxy_synthesized"
+      },
+      {
+        "block_name": "L00_compute_top__tile_02_sram",
+        "layer_name": "compute_top",
+        "layer_index": 0,
+        "block_type": "sram",
+        "power_w": 0.000230625,
+        "temperature_c": 45.230625,
+        "temperature_valid": true,
+        "trace_source": "proxy_synthesized"
+      },
+      {
+        "block_name": "L00_compute_top__tile_03_comp",
+        "layer_name": "compute_top",
+        "layer_index": 0,
+        "block_type": "comp",
+        "power_w": 0.002349171875,
+        "temperature_c": 47.349171875,
+        "temperature_valid": true,
+        "trace_source": "proxy_synthesized"
+      },
+      {
+        "block_name": "L00_compute_top__tile_03_noc",
+        "layer_name": "compute_top",
+        "layer_index": 0,
+        "block_type": "noc",
+        "power_w": 0.001181603125,
+        "temperature_c": 46.181603125,
+        "temperature_valid": true,
+        "trace_source": "proxy_synthesized"
+      },
+      {
+        "block_name": "L00_compute_top__tile_03_sram",
+        "layer_name": "compute_top",
+        "layer_index": 0,
+        "block_type": "sram",
+        "power_w": 0.000230625,
+        "temperature_c": 45.230625,
+        "temperature_valid": true,
+        "trace_source": "proxy_synthesized"
+      },
+      {
+        "block_name": "L00_compute_top__tile_04_comp",
+        "layer_name": "compute_top",
+        "layer_index": 0,
+        "block_type": "comp",
+        "power_w": 0.002349171875,
+        "temperature_c": 47.349171875,
+        "temperature_valid": true,
+        "trace_source": "proxy_synthesized"
+      },
+      {
+        "block_name": "L00_compute_top__tile_04_noc",
+        "layer_name": "compute_top",
+        "layer_index": 0,
+        "block_type": "noc",
+        "power_w": 0.001181603125,
+        "temperature_c": 46.181603125,
+        "temperature_valid": true,
+        "trace_source": "proxy_synthesized"
+      },
+      {
+        "block_name": "L00_compute_top__tile_04_sram",
+        "layer_name": "compute_top",
+        "layer_index": 0,
+        "block_type": "sram",
+        "power_w": 0.000230625,
+        "temperature_c": 45.230625,
+        "temperature_valid": true,
+        "trace_source": "proxy_synthesized"
+      },
+      {
+        "block_name": "L00_compute_top__tile_05_comp",
+        "layer_name": "compute_top",
+        "layer_index": 0,
+        "block_type": "comp",
+        "power_w": 0.002002978125,
+        "temperature_c": 47.002978125,
+        "temperature_valid": true,
+        "trace_source": "proxy_synthesized"
+      },
+      {
+        "block_name": "L00_compute_top__tile_05_noc",
+        "layer_name": "compute_top",
+        "layer_index": 0,
+        "block_type": "noc",
+        "power_w": 0.001181603125,
+        "temperature_c": 46.181603125,
+        "temperature_valid": true,
+        "trace_source": "proxy_synthesized"
+      },
+      {
+        "block_name": "L00_compute_top__tile_05_sram",
+        "layer_name": "compute_top",
+        "layer_index": 0,
+        "block_type": "sram",
+        "power_w": 0.000210125,
+        "temperature_c": 45.210125,
+        "temperature_valid": true,
+        "trace_source": "proxy_synthesized"
+      },
+      {
+        "block_name": "L00_compute_top__tile_06_comp",
+        "layer_name": "compute_top",
+        "layer_index": 0,
+        "block_type": "comp",
+        "power_w": 0.002349171875,
+        "temperature_c": 47.349171875,
+        "temperature_valid": true,
+        "trace_source": "proxy_synthesized"
+      },
+      {
+        "block_name": "L00_compute_top__tile_06_noc",
+        "layer_name": "compute_top",
+        "layer_index": 0,
+        "block_type": "noc",
+        "power_w": 0.001181603125,
+        "temperature_c": 46.181603125,
+        "temperature_valid": true,
+        "trace_source": "proxy_synthesized"
+      },
+      {
+        "block_name": "L00_compute_top__tile_06_sram",
+        "layer_name": "compute_top",
+        "layer_index": 0,
+        "block_type": "sram",
+        "power_w": 0.000230625,
+        "temperature_c": 45.230625,
+        "temperature_valid": true,
+        "trace_source": "proxy_synthesized"
+      },
+      {
+        "block_name": "L00_compute_top__tile_07_comp",
+        "layer_name": "compute_top",
+        "layer_index": 0,
+        "block_type": "comp",
+        "power_w": 0.002002978125,
+        "temperature_c": 47.002978125,
+        "temperature_valid": true,
+        "trace_source": "proxy_synthesized"
+      },
+      {
+        "block_name": "L00_compute_top__tile_07_noc",
+        "layer_name": "compute_top",
+        "layer_index": 0,
+        "block_type": "noc",
+        "power_w": 0.001181603125,
+        "temperature_c": 46.181603125,
+        "temperature_valid": true,
+        "trace_source": "proxy_synthesized"
+      },
+      {
+        "block_name": "L00_compute_top__tile_07_sram",
+        "layer_name": "compute_top",
+        "layer_index": 0,
+        "block_type": "sram",
+        "power_w": 0.000210125,
+        "temperature_c": 45.210125,
+        "temperature_valid": true,
+        "trace_source": "proxy_synthesized"
+      },
+      {
+        "block_name": "L00_compute_top__tile_08_comp",
+        "layer_name": "compute_top",
+        "layer_index": 0,
+        "block_type": "comp",
+        "power_w": 0.001854609375,
+        "temperature_c": 46.854609375,
+        "temperature_valid": true,
+        "trace_source": "proxy_synthesized"
+      },
+      {
+        "block_name": "L00_compute_top__tile_08_noc",
+        "layer_name": "compute_top",
+        "layer_index": 0,
+        "block_type": "noc",
+        "power_w": 0.000608009375,
+        "temperature_c": 45.608009375,
+        "temperature_valid": true,
+        "trace_source": "proxy_synthesized"
+      },
+      {
+        "block_name": "L00_compute_top__tile_08_sram",
+        "layer_name": "compute_top",
+        "layer_index": 0,
+        "block_type": "sram",
+        "power_w": 0.000230625,
+        "temperature_c": 45.230625,
+        "temperature_valid": true,
+        "trace_source": "proxy_synthesized"
+      },
+      {
+        "block_name": "L00_compute_top__tile_09_comp",
+        "layer_name": "compute_top",
+        "layer_index": 0,
+        "block_type": "comp",
+        "power_w": 0.002349171875,
+        "temperature_c": 47.349171875,
+        "temperature_valid": true,
+        "trace_source": "proxy_synthesized"
+      },
+      {
+        "block_name": "L00_compute_top__tile_09_noc",
+        "layer_name": "compute_top",
+        "layer_index": 0,
+        "block_type": "noc",
+        "power_w": 0.001181603125,
+        "temperature_c": 46.181603125,
+        "temperature_valid": true,
+        "trace_source": "proxy_synthesized"
+      },
+      {
+        "block_name": "L00_compute_top__tile_09_sram",
+        "layer_name": "compute_top",
+        "layer_index": 0,
+        "block_type": "sram",
+        "power_w": 0.000230625,
+        "temperature_c": 45.230625,
+        "temperature_valid": true,
+        "trace_source": "proxy_synthesized"
+      },
+      {
+        "block_name": "L00_compute_top__tile_10_comp",
+        "layer_name": "compute_top",
+        "layer_index": 0,
+        "block_type": "comp",
+        "power_w": 0.001854609375,
+        "temperature_c": 46.854609375,
+        "temperature_valid": true,
+        "trace_source": "proxy_synthesized"
+      },
+      {
+        "block_name": "L00_compute_top__tile_10_noc",
+        "layer_name": "compute_top",
+        "layer_index": 0,
+        "block_type": "noc",
+        "power_w": 0.000608009375,
+        "temperature_c": 45.608009375,
+        "temperature_valid": true,
+        "trace_source": "proxy_synthesized"
+      },
+      {
+        "block_name": "L00_compute_top__tile_10_sram",
+        "layer_name": "compute_top",
+        "layer_index": 0,
+        "block_type": "sram",
+        "power_w": 0.000230625,
+        "temperature_c": 45.230625,
+        "temperature_valid": true,
+        "trace_source": "proxy_synthesized"
+      },
+      {
+        "block_name": "L00_compute_top__tile_11_comp",
+        "layer_name": "compute_top",
+        "layer_index": 0,
+        "block_type": "comp",
+        "power_w": 0.002349171875,
+        "temperature_c": 47.349171875,
+        "temperature_valid": true,
+        "trace_source": "proxy_synthesized"
+      },
+      {
+        "block_name": "L00_compute_top__tile_11_noc",
+        "layer_name": "compute_top",
+        "layer_index": 0,
+        "block_type": "noc",
+        "power_w": 0.001181603125,
+        "temperature_c": 46.181603125,
+        "temperature_valid": true,
+        "trace_source": "proxy_synthesized"
+      },
+      {
+        "block_name": "L00_compute_top__tile_11_sram",
+        "layer_name": "compute_top",
+        "layer_index": 0,
+        "block_type": "sram",
+        "power_w": 0.000230625,
+        "temperature_c": 45.230625,
+        "temperature_valid": true,
+        "trace_source": "proxy_synthesized"
+      },
+      {
+        "block_name": "L00_compute_top__tile_12_comp",
+        "layer_name": "compute_top",
+        "layer_index": 0,
+        "block_type": "comp",
+        "power_w": 0.002349171875,
+        "temperature_c": 47.349171875,
+        "temperature_valid": true,
+        "trace_source": "proxy_synthesized"
+      },
+      {
+        "block_name": "L00_compute_top__tile_12_noc",
+        "layer_name": "compute_top",
+        "layer_index": 0,
+        "block_type": "noc",
+        "power_w": 0.001181603125,
+        "temperature_c": 46.181603125,
+        "temperature_valid": true,
+        "trace_source": "proxy_synthesized"
+      },
+      {
+        "block_name": "L00_compute_top__tile_12_sram",
+        "layer_name": "compute_top",
+        "layer_index": 0,
+        "block_type": "sram",
+        "power_w": 0.000230625,
+        "temperature_c": 45.230625,
+        "temperature_valid": true,
+        "trace_source": "proxy_synthesized"
+      },
+      {
+        "block_name": "L00_compute_top__tile_13_comp",
+        "layer_name": "compute_top",
+        "layer_index": 0,
+        "block_type": "comp",
+        "power_w": 0.002002978125,
+        "temperature_c": 47.002978125,
+        "temperature_valid": true,
+        "trace_source": "proxy_synthesized"
+      },
+      {
+        "block_name": "L00_compute_top__tile_13_noc",
+        "layer_name": "compute_top",
+        "layer_index": 0,
+        "block_type": "noc",
+        "power_w": 0.001181603125,
+        "temperature_c": 46.181603125,
+        "temperature_valid": true,
+        "trace_source": "proxy_synthesized"
+      },
+      {
+        "block_name": "L00_compute_top__tile_13_sram",
+        "layer_name": "compute_top",
+        "layer_index": 0,
+        "block_type": "sram",
+        "power_w": 0.000210125,
+        "temperature_c": 45.210125,
+        "temperature_valid": true,
+        "trace_source": "proxy_synthesized"
+      },
+      {
+        "block_name": "L00_compute_top__tile_14_comp",
+        "layer_name": "compute_top",
+        "layer_index": 0,
+        "block_type": "comp",
+        "power_w": 0.002349171875,
+        "temperature_c": 47.349171875,
+        "temperature_valid": true,
+        "trace_source": "proxy_synthesized"
+      },
+      {
+        "block_name": "L00_compute_top__tile_14_noc",
+        "layer_name": "compute_top",
+        "layer_index": 0,
+        "block_type": "noc",
+        "power_w": 0.001181603125,
+        "temperature_c": 46.181603125,
+        "temperature_valid": true,
+        "trace_source": "proxy_synthesized"
+      },
+      {
+        "block_name": "L00_compute_top__tile_14_sram",
+        "layer_name": "compute_top",
+        "layer_index": 0,
+        "block_type": "sram",
+        "power_w": 0.000230625,
+        "temperature_c": 45.230625,
+        "temperature_valid": true,
+        "trace_source": "proxy_synthesized"
+      },
+      {
+        "block_name": "L00_compute_top__tile_15_comp",
+        "layer_name": "compute_top",
+        "layer_index": 0,
+        "block_type": "comp",
+        "power_w": 0.002955010938,
+        "temperature_c": 47.955010938,
+        "temperature_valid": true,
+        "trace_source": "proxy_synthesized"
+      },
+      {
+        "block_name": "L00_compute_top__tile_15_noc",
+        "layer_name": "compute_top",
+        "layer_index": 0,
+        "block_type": "noc",
+        "power_w": 0.001841235938,
+        "temperature_c": 46.841235938,
+        "temperature_valid": true,
+        "trace_source": "proxy_synthesized"
+      },
+      {
+        "block_name": "L00_compute_top__tile_15_sram",
+        "layer_name": "compute_top",
+        "layer_index": 0,
+        "block_type": "sram",
+        "power_w": 0.000230625,
+        "temperature_c": 45.230625,
+        "temperature_valid": true,
+        "trace_source": "proxy_synthesized"
+      },
+      {
+        "block_name": "L01_compute_bottom__tile_16_comp",
+        "layer_name": "compute_bottom",
+        "layer_index": 1,
+        "block_type": "comp",
+        "power_w": 0.001854609375,
+        "temperature_c": 46.854609375,
+        "temperature_valid": true,
+        "trace_source": "proxy_synthesized"
+      },
+      {
+        "block_name": "L01_compute_bottom__tile_16_noc",
+        "layer_name": "compute_bottom",
+        "layer_index": 1,
+        "block_type": "noc",
+        "power_w": 0.000608009375,
+        "temperature_c": 45.608009375,
+        "temperature_valid": true,
+        "trace_source": "proxy_synthesized"
+      },
+      {
+        "block_name": "L01_compute_bottom__tile_16_sram",
+        "layer_name": "compute_bottom",
+        "layer_index": 1,
+        "block_type": "sram",
+        "power_w": 0.000230625,
+        "temperature_c": 45.230625,
+        "temperature_valid": true,
+        "trace_source": "proxy_synthesized"
+      },
+      {
+        "block_name": "L01_compute_bottom__tile_17_comp",
+        "layer_name": "compute_bottom",
+        "layer_index": 1,
+        "block_type": "comp",
+        "power_w": 0.002349171875,
+        "temperature_c": 47.349171875,
+        "temperature_valid": true,
+        "trace_source": "proxy_synthesized"
+      },
+      {
+        "block_name": "L01_compute_bottom__tile_17_noc",
+        "layer_name": "compute_bottom",
+        "layer_index": 1,
+        "block_type": "noc",
+        "power_w": 0.001181603125,
+        "temperature_c": 46.181603125,
+        "temperature_valid": true,
+        "trace_source": "proxy_synthesized"
+      },
+      {
+        "block_name": "L01_compute_bottom__tile_17_sram",
+        "layer_name": "compute_bottom",
+        "layer_index": 1,
+        "block_type": "sram",
+        "power_w": 0.000230625,
+        "temperature_c": 45.230625,
+        "temperature_valid": true,
+        "trace_source": "proxy_synthesized"
+      },
+      {
+        "block_name": "L01_compute_bottom__tile_18_comp",
+        "layer_name": "compute_bottom",
+        "layer_index": 1,
+        "block_type": "comp",
+        "power_w": 0.001854609375,
+        "temperature_c": 46.854609375,
+        "temperature_valid": true,
+        "trace_source": "proxy_synthesized"
+      },
+      {
+        "block_name": "L01_compute_bottom__tile_18_noc",
+        "layer_name": "compute_bottom",
+        "layer_index": 1,
+        "block_type": "noc",
+        "power_w": 0.000608009375,
+        "temperature_c": 45.608009375,
+        "temperature_valid": true,
+        "trace_source": "proxy_synthesized"
+      },
+      {
+        "block_name": "L01_compute_bottom__tile_18_sram",
+        "layer_name": "compute_bottom",
+        "layer_index": 1,
+        "block_type": "sram",
+        "power_w": 0.000230625,
+        "temperature_c": 45.230625,
+        "temperature_valid": true,
+        "trace_source": "proxy_synthesized"
+      },
+      {
+        "block_name": "L01_compute_bottom__tile_19_comp",
+        "layer_name": "compute_bottom",
+        "layer_index": 1,
+        "block_type": "comp",
+        "power_w": 0.002349171875,
+        "temperature_c": 47.349171875,
+        "temperature_valid": true,
+        "trace_source": "proxy_synthesized"
+      },
+      {
+        "block_name": "L01_compute_bottom__tile_19_noc",
+        "layer_name": "compute_bottom",
+        "layer_index": 1,
+        "block_type": "noc",
+        "power_w": 0.001181603125,
+        "temperature_c": 46.181603125,
+        "temperature_valid": true,
+        "trace_source": "proxy_synthesized"
+      },
+      {
+        "block_name": "L01_compute_bottom__tile_19_sram",
+        "layer_name": "compute_bottom",
+        "layer_index": 1,
+        "block_type": "sram",
+        "power_w": 0.000230625,
+        "temperature_c": 45.230625,
+        "temperature_valid": true,
+        "trace_source": "proxy_synthesized"
+      },
+      {
+        "block_name": "L01_compute_bottom__tile_20_comp",
+        "layer_name": "compute_bottom",
+        "layer_index": 1,
+        "block_type": "comp",
+        "power_w": 0.002349171875,
+        "temperature_c": 47.349171875,
+        "temperature_valid": true,
+        "trace_source": "proxy_synthesized"
+      },
+      {
+        "block_name": "L01_compute_bottom__tile_20_noc",
+        "layer_name": "compute_bottom",
+        "layer_index": 1,
+        "block_type": "noc",
+        "power_w": 0.001181603125,
+        "temperature_c": 46.181603125,
+        "temperature_valid": true,
+        "trace_source": "proxy_synthesized"
+      },
+      {
+        "block_name": "L01_compute_bottom__tile_20_sram",
+        "layer_name": "compute_bottom",
+        "layer_index": 1,
+        "block_type": "sram",
+        "power_w": 0.000230625,
+        "temperature_c": 45.230625,
+        "temperature_valid": true,
+        "trace_source": "proxy_synthesized"
+      },
+      {
+        "block_name": "L01_compute_bottom__tile_21_comp",
+        "layer_name": "compute_bottom",
+        "layer_index": 1,
+        "block_type": "comp",
+        "power_w": 0.002002978125,
+        "temperature_c": 47.002978125,
+        "temperature_valid": true,
+        "trace_source": "proxy_synthesized"
+      },
+      {
+        "block_name": "L01_compute_bottom__tile_21_noc",
+        "layer_name": "compute_bottom",
+        "layer_index": 1,
+        "block_type": "noc",
+        "power_w": 0.001181603125,
+        "temperature_c": 46.181603125,
+        "temperature_valid": true,
+        "trace_source": "proxy_synthesized"
+      },
+      {
+        "block_name": "L01_compute_bottom__tile_21_sram",
+        "layer_name": "compute_bottom",
+        "layer_index": 1,
+        "block_type": "sram",
+        "power_w": 0.000210125,
+        "temperature_c": 45.210125,
+        "temperature_valid": true,
+        "trace_source": "proxy_synthesized"
+      },
+      {
+        "block_name": "L01_compute_bottom__tile_22_comp",
+        "layer_name": "compute_bottom",
+        "layer_index": 1,
+        "block_type": "comp",
+        "power_w": 0.002349171875,
+        "temperature_c": 47.349171875,
+        "temperature_valid": true,
+        "trace_source": "proxy_synthesized"
+      },
+      {
+        "block_name": "L01_compute_bottom__tile_22_noc",
+        "layer_name": "compute_bottom",
+        "layer_index": 1,
+        "block_type": "noc",
+        "power_w": 0.001181603125,
+        "temperature_c": 46.181603125,
+        "temperature_valid": true,
+        "trace_source": "proxy_synthesized"
+      },
+      {
+        "block_name": "L01_compute_bottom__tile_22_sram",
+        "layer_name": "compute_bottom",
+        "layer_index": 1,
+        "block_type": "sram",
+        "power_w": 0.000230625,
+        "temperature_c": 45.230625,
+        "temperature_valid": true,
+        "trace_source": "proxy_synthesized"
+      },
+      {
+        "block_name": "L01_compute_bottom__tile_23_comp",
+        "layer_name": "compute_bottom",
+        "layer_index": 1,
+        "block_type": "comp",
+        "power_w": 0.002002978125,
+        "temperature_c": 47.002978125,
+        "temperature_valid": true,
+        "trace_source": "proxy_synthesized"
+      },
+      {
+        "block_name": "L01_compute_bottom__tile_23_noc",
+        "layer_name": "compute_bottom",
+        "layer_index": 1,
+        "block_type": "noc",
+        "power_w": 0.001181603125,
+        "temperature_c": 46.181603125,
+        "temperature_valid": true,
+        "trace_source": "proxy_synthesized"
+      },
+      {
+        "block_name": "L01_compute_bottom__tile_23_sram",
+        "layer_name": "compute_bottom",
+        "layer_index": 1,
+        "block_type": "sram",
+        "power_w": 0.000210125,
+        "temperature_c": 45.210125,
+        "temperature_valid": true,
+        "trace_source": "proxy_synthesized"
+      },
+      {
+        "block_name": "L01_compute_bottom__tile_24_comp",
+        "layer_name": "compute_bottom",
+        "layer_index": 1,
+        "block_type": "comp",
+        "power_w": 0.001854609375,
+        "temperature_c": 46.854609375,
+        "temperature_valid": true,
+        "trace_source": "proxy_synthesized"
+      },
+      {
+        "block_name": "L01_compute_bottom__tile_24_noc",
+        "layer_name": "compute_bottom",
+        "layer_index": 1,
+        "block_type": "noc",
+        "power_w": 0.000608009375,
+        "temperature_c": 45.608009375,
+        "temperature_valid": true,
+        "trace_source": "proxy_synthesized"
+      },
+      {
+        "block_name": "L01_compute_bottom__tile_24_sram",
+        "layer_name": "compute_bottom",
+        "layer_index": 1,
+        "block_type": "sram",
+        "power_w": 0.000230625,
+        "temperature_c": 45.230625,
+        "temperature_valid": true,
+        "trace_source": "proxy_synthesized"
+      },
+      {
+        "block_name": "L01_compute_bottom__tile_25_comp",
+        "layer_name": "compute_bottom",
+        "layer_index": 1,
+        "block_type": "comp",
+        "power_w": 0.002349171875,
+        "temperature_c": 47.349171875,
+        "temperature_valid": true,
+        "trace_source": "proxy_synthesized"
+      },
+      {
+        "block_name": "L01_compute_bottom__tile_25_noc",
+        "layer_name": "compute_bottom",
+        "layer_index": 1,
+        "block_type": "noc",
+        "power_w": 0.001181603125,
+        "temperature_c": 46.181603125,
+        "temperature_valid": true,
+        "trace_source": "proxy_synthesized"
+      },
+      {
+        "block_name": "L01_compute_bottom__tile_25_sram",
+        "layer_name": "compute_bottom",
+        "layer_index": 1,
+        "block_type": "sram",
+        "power_w": 0.000230625,
+        "temperature_c": 45.230625,
+        "temperature_valid": true,
+        "trace_source": "proxy_synthesized"
+      },
+      {
+        "block_name": "L01_compute_bottom__tile_26_comp",
+        "layer_name": "compute_bottom",
+        "layer_index": 1,
+        "block_type": "comp",
+        "power_w": 0.001854609375,
+        "temperature_c": 46.854609375,
+        "temperature_valid": true,
+        "trace_source": "proxy_synthesized"
+      },
+      {
+        "block_name": "L01_compute_bottom__tile_26_noc",
+        "layer_name": "compute_bottom",
+        "layer_index": 1,
+        "block_type": "noc",
+        "power_w": 0.000608009375,
+        "temperature_c": 45.608009375,
+        "temperature_valid": true,
+        "trace_source": "proxy_synthesized"
+      },
+      {
+        "block_name": "L01_compute_bottom__tile_26_sram",
+        "layer_name": "compute_bottom",
+        "layer_index": 1,
+        "block_type": "sram",
+        "power_w": 0.000230625,
+        "temperature_c": 45.230625,
+        "temperature_valid": true,
+        "trace_source": "proxy_synthesized"
+      },
+      {
+        "block_name": "L01_compute_bottom__tile_27_comp",
+        "layer_name": "compute_bottom",
+        "layer_index": 1,
+        "block_type": "comp",
+        "power_w": 0.002349171875,
+        "temperature_c": 47.349171875,
+        "temperature_valid": true,
+        "trace_source": "proxy_synthesized"
+      },
+      {
+        "block_name": "L01_compute_bottom__tile_27_noc",
+        "layer_name": "compute_bottom",
+        "layer_index": 1,
+        "block_type": "noc",
+        "power_w": 0.001181603125,
+        "temperature_c": 46.181603125,
+        "temperature_valid": true,
+        "trace_source": "proxy_synthesized"
+      },
+      {
+        "block_name": "L01_compute_bottom__tile_27_sram",
+        "layer_name": "compute_bottom",
+        "layer_index": 1,
+        "block_type": "sram",
+        "power_w": 0.000230625,
+        "temperature_c": 45.230625,
+        "temperature_valid": true,
+        "trace_source": "proxy_synthesized"
+      },
+      {
+        "block_name": "L01_compute_bottom__tile_28_comp",
+        "layer_name": "compute_bottom",
+        "layer_index": 1,
+        "block_type": "comp",
+        "power_w": 0.002349171875,
+        "temperature_c": 47.349171875,
+        "temperature_valid": true,
+        "trace_source": "proxy_synthesized"
+      },
+      {
+        "block_name": "L01_compute_bottom__tile_28_noc",
+        "layer_name": "compute_bottom",
+        "layer_index": 1,
+        "block_type": "noc",
+        "power_w": 0.001181603125,
+        "temperature_c": 46.181603125,
+        "temperature_valid": true,
+        "trace_source": "proxy_synthesized"
+      },
+      {
+        "block_name": "L01_compute_bottom__tile_28_sram",
+        "layer_name": "compute_bottom",
+        "layer_index": 1,
+        "block_type": "sram",
+        "power_w": 0.000230625,
+        "temperature_c": 45.230625,
+        "temperature_valid": true,
+        "trace_source": "proxy_synthesized"
+      },
+      {
+        "block_name": "L01_compute_bottom__tile_29_comp",
+        "layer_name": "compute_bottom",
+        "layer_index": 1,
+        "block_type": "comp",
+        "power_w": 0.002002978125,
+        "temperature_c": 47.002978125,
+        "temperature_valid": true,
+        "trace_source": "proxy_synthesized"
+      },
+      {
+        "block_name": "L01_compute_bottom__tile_29_noc",
+        "layer_name": "compute_bottom",
+        "layer_index": 1,
+        "block_type": "noc",
+        "power_w": 0.001181603125,
+        "temperature_c": 46.181603125,
+        "temperature_valid": true,
+        "trace_source": "proxy_synthesized"
+      },
+      {
+        "block_name": "L01_compute_bottom__tile_29_sram",
+        "layer_name": "compute_bottom",
+        "layer_index": 1,
+        "block_type": "sram",
+        "power_w": 0.000210125,
+        "temperature_c": 45.210125,
+        "temperature_valid": true,
+        "trace_source": "proxy_synthesized"
+      },
+      {
+        "block_name": "L01_compute_bottom__tile_30_comp",
+        "layer_name": "compute_bottom",
+        "layer_index": 1,
+        "block_type": "comp",
+        "power_w": 0.002349171875,
+        "temperature_c": 47.349171875,
+        "temperature_valid": true,
+        "trace_source": "proxy_synthesized"
+      },
+      {
+        "block_name": "L01_compute_bottom__tile_30_noc",
+        "layer_name": "compute_bottom",
+        "layer_index": 1,
+        "block_type": "noc",
+        "power_w": 0.001181603125,
+        "temperature_c": 46.181603125,
+        "temperature_valid": true,
+        "trace_source": "proxy_synthesized"
+      },
+      {
+        "block_name": "L01_compute_bottom__tile_30_sram",
+        "layer_name": "compute_bottom",
+        "layer_index": 1,
+        "block_type": "sram",
+        "power_w": 0.000230625,
+        "temperature_c": 45.230625,
+        "temperature_valid": true,
+        "trace_source": "proxy_synthesized"
+      },
+      {
+        "block_name": "L01_compute_bottom__tile_31_comp",
+        "layer_name": "compute_bottom",
+        "layer_index": 1,
+        "block_type": "comp",
+        "power_w": 0.002955010938,
+        "temperature_c": 47.955010938,
+        "temperature_valid": true,
+        "trace_source": "proxy_synthesized"
+      },
+      {
+        "block_name": "L01_compute_bottom__tile_31_noc",
+        "layer_name": "compute_bottom",
+        "layer_index": 1,
+        "block_type": "noc",
+        "power_w": 0.001841235938,
+        "temperature_c": 46.841235938,
+        "temperature_valid": true,
+        "trace_source": "proxy_synthesized"
+      },
+      {
+        "block_name": "L01_compute_bottom__tile_31_sram",
+        "layer_name": "compute_bottom",
+        "layer_index": 1,
+        "block_type": "sram",
+        "power_w": 0.000230625,
+        "temperature_c": 45.230625,
+        "temperature_valid": true,
+        "trace_source": "proxy_synthesized"
+      }
+    ],
+    "layer_inputs": [
+      {
+        "layer_name": "compute_top",
+        "layer_index": 0,
+        "temp_avg_c": 46.16823261720834,
+        "temp_peak_c": 47.955010938,
+        "temp_min_c": 45.210125,
+        "valid": true
+      },
+      {
+        "layer_name": "compute_bottom",
+        "layer_index": 1,
+        "temp_avg_c": 46.16823261720834,
+        "temp_peak_c": 47.955010938,
+        "temp_min_c": 45.210125,
+        "valid": true
+      }
+    ],
+    "io_summary": {
+      "block_count": 96,
+      "layer_count": 2,
+      "has_power_trace": true,
+      "has_temperature_state": true
+    },
+    "driver": {
+      "enabled": true,
+      "status": "ran",
+      "binary": "/home/xgy/remote/externals/HotSpot-7.0/hotspot",
+      "returncode": 0,
+      "model_type": "grid",
+      "mesh_shape": "4x4x2",
+      "tile_count": 32,
+      "layer_count": 2,
+      "block_count": 192,
+      "window_count": 1,
+      "trace_mode": "proxy_synthesized",
+      "temperature_source": "hotspot_steady_temp",
+      "thermal_contract_version": "v2",
+      "backend": "hotspot_sidecar",
+      "ambient_c": 45.0,
+      "hotspot_package": {
+        "ambient_k": 318.15,
+        "s_sink": 0.06,
+        "t_sink": 0.0069,
+        "s_spreader": 0.03,
+        "t_spreader": 0.001,
+        "t_interface": 2e-05
+      },
+      "layers": [
+        {
+          "name": "compute_top",
+          "kind": "mesh_active",
+          "safe_name": "compute_top",
+          "z_um": 0,
+          "thickness_um": 1,
+          "lateral_heat_flow": true,
+          "power_dissipating": true,
+          "source_layer_index": 0,
+          "normalized_layer_index": 0,
+          "block_prefix": "L00_compute_top__"
+        },
+        {
+          "name": "compute_bottom",
+          "kind": "mesh_active",
+          "safe_name": "compute_bottom",
+          "z_um": 1,
+          "thickness_um": 1,
+          "lateral_heat_flow": true,
+          "power_dissipating": true,
+          "source_layer_index": 1,
+          "normalized_layer_index": 1,
+          "block_prefix": "L01_compute_bottom__"
+        }
+      ],
+      "metrics": {
+        "peak_temperature_c": 45.03000000000003,
+        "avg_temperature_c": 45.02776041666669,
+        "hotspot_block_count": 0,
+        "hotspot_layer_count": 0
+      },
+      "artifacts": {
+        "floorplan": "/home/xgy/remote/snn3dexp/runs/full_3d_snn_window/task3_home_authority_smoke/thermal_sidecar/hotspot/snndl_mesh.lcf",
+        "ptrace": "/home/xgy/remote/snn3dexp/runs/full_3d_snn_window/task3_home_authority_smoke/thermal_sidecar/hotspot/snndl_mesh.ptrace",
+        "hotspot_config": "/home/xgy/remote/snn3dexp/runs/full_3d_snn_window/task3_home_authority_smoke/thermal_sidecar/hotspot/hotspot.config",
+        "window_power_samples_jsonl": "/home/xgy/remote/snn3dexp/runs/full_3d_snn_window/task3_home_authority_smoke/thermal_sidecar/summary/window_power_samples.jsonl",
+        "tile_temperature_summary_csv": "/home/xgy/remote/snn3dexp/runs/full_3d_snn_window/task3_home_authority_smoke/thermal_sidecar/summary/tile_temperature_summary.csv",
+        "thermal_summary_json": "/home/xgy/remote/snn3dexp/runs/full_3d_snn_window/task3_home_authority_smoke/thermal_sidecar/summary/thermal_summary.json",
+        "steady_temp": "/home/xgy/remote/snn3dexp/runs/full_3d_snn_window/task3_home_authority_smoke/thermal_sidecar/hotspot/steady.temp",
+        "transient_temp": "/home/xgy/remote/snn3dexp/runs/full_3d_snn_window/task3_home_authority_smoke/thermal_sidecar/hotspot/transient.temp",
+        "lcf": "/home/xgy/remote/snn3dexp/runs/full_3d_snn_window/task3_home_authority_smoke/thermal_sidecar/hotspot/snndl_mesh.lcf",
+        "layer_floorplans": [
+          "/home/xgy/remote/snn3dexp/runs/full_3d_snn_window/task3_home_authority_smoke/thermal_sidecar/hotspot/layer_00_compute_top.flp",
+          "/home/xgy/remote/snn3dexp/runs/full_3d_snn_window/task3_home_authority_smoke/thermal_sidecar/hotspot/layer_01_compute_bottom.flp"
+        ]
+      },
+      "hotspot": {
+        "status": "ran",
+        "binary": "/home/xgy/remote/externals/HotSpot-7.0/hotspot",
+        "returncode": 0,
+        "stdout": "Parsing input files...\nCreating thermal circuit...\nComputing temperatures for t = 0.000000e+00...\nSimulation complete.",
+        "stderr": "Computing steady-state temperatures..."
+      }
+    }
+  },
+  "temperature_source": "hotspot_steady_temp",
+  "artifacts": {
+    "floorplan": "/home/xgy/remote/snn3dexp/runs/full_3d_snn_window/task3_home_authority_smoke/thermal_sidecar/hotspot/snndl_mesh.lcf",
+    "ptrace": "/home/xgy/remote/snn3dexp/runs/full_3d_snn_window/task3_home_authority_smoke/thermal_sidecar/hotspot/snndl_mesh.ptrace",
+    "hotspot_config": "/home/xgy/remote/snn3dexp/runs/full_3d_snn_window/task3_home_authority_smoke/thermal_sidecar/hotspot/hotspot.config",
+    "window_power_samples_jsonl": "/home/xgy/remote/snn3dexp/runs/full_3d_snn_window/task3_home_authority_smoke/thermal_sidecar/summary/window_power_samples.jsonl",
+    "tile_temperature_summary_csv": "/home/xgy/remote/snn3dexp/runs/full_3d_snn_window/task3_home_authority_smoke/thermal_sidecar/summary/tile_temperature_summary.csv",
+    "thermal_summary_json": "/home/xgy/remote/snn3dexp/runs/full_3d_snn_window/task3_home_authority_smoke/thermal_sidecar/summary/thermal_summary.json",
+    "steady_temp": "/home/xgy/remote/snn3dexp/runs/full_3d_snn_window/task3_home_authority_smoke/thermal_sidecar/hotspot/steady.temp",
+    "transient_temp": "/home/xgy/remote/snn3dexp/runs/full_3d_snn_window/task3_home_authority_smoke/thermal_sidecar/hotspot/transient.temp",
+    "lcf": "/home/xgy/remote/snn3dexp/runs/full_3d_snn_window/task3_home_authority_smoke/thermal_sidecar/hotspot/snndl_mesh.lcf",
+    "layer_floorplans": [
+      "/home/xgy/remote/snn3dexp/runs/full_3d_snn_window/task3_home_authority_smoke/thermal_sidecar/hotspot/layer_00_compute_top.flp",
+      "/home/xgy/remote/snn3dexp/runs/full_3d_snn_window/task3_home_authority_smoke/thermal_sidecar/hotspot/layer_01_compute_bottom.flp"
+    ]
+  }
+}

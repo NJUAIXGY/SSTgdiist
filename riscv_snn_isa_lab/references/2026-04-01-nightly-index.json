@@ -1,0 +1,163 @@
+{
+  "all_ok": true,
+  "artifact_role": "dated_nightly_index",
+  "authority_scope": "builder_toolchain_audit_only",
+  "builder_summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-04-01-builder-regress-matrix.json",
+  "canonical_surface": true,
+  "count": 6,
+  "families": [
+    {
+      "audit": {
+        "latest_manifest": "/home/xgy/remote/riscv_snn_isa_lab/runs/2026-04-01-barrier-wfi-order-ref-toolchain-smoke.md",
+        "manifest_match": true,
+        "manifest_run_dir": "/home/xgy/remote/sst_dram_si/outputs_large/paper2/dram_mesh_4x4/20260401-115421",
+        "ok": true,
+        "program": "barrier_wfi_order_ref_toolchain"
+      },
+      "builder": {
+        "manifest_path": "/home/xgy/remote/riscv_snn_isa_lab/runs/2026-04-01-barrier-wfi-order-ref-smoke.md",
+        "program": "barrier_wfi_order_ref",
+        "run_dir": "/home/xgy/remote/sst_dram_si/outputs_large/paper2/dram_mesh_4x4/20260401-115154",
+        "run_id": "20260401-115154"
+      },
+      "family": "barrier_wfi_order_ref",
+      "toolchain": {
+        "manifest_path": "/home/xgy/remote/riscv_snn_isa_lab/runs/2026-04-01-barrier-wfi-order-ref-toolchain-smoke.md",
+        "program": "barrier_wfi_order_ref_toolchain",
+        "run_dir": "/home/xgy/remote/sst_dram_si/outputs_large/paper2/dram_mesh_4x4/20260401-115421",
+        "run_id": "20260401-115421"
+      }
+    },
+    {
+      "audit": {
+        "latest_manifest": "/home/xgy/remote/riscv_snn_isa_lab/runs/2026-04-01-external-dyn-desc-bad-policy-ref-toolchain-smoke.md",
+        "manifest_match": true,
+        "manifest_run_dir": "/home/xgy/remote/sst_dram_si/outputs_large/paper2/dram_mesh_4x4/20260401-115310",
+        "ok": true,
+        "program": "external_dyn_desc_bad_policy_ref_toolchain"
+      },
+      "builder": {
+        "manifest_path": "/home/xgy/remote/riscv_snn_isa_lab/runs/2026-04-01-external-dyn-desc-bad-policy-ref-smoke.md",
+        "program": "external_dyn_desc_bad_policy_ref",
+        "run_dir": "/home/xgy/remote/sst_dram_si/outputs_large/paper2/dram_mesh_4x4/20260401-115042",
+        "run_id": "20260401-115042"
+      },
+      "family": "external_dyn_desc_bad_policy_ref",
+      "toolchain": {
+        "manifest_path": "/home/xgy/remote/riscv_snn_isa_lab/runs/2026-04-01-external-dyn-desc-bad-policy-ref-toolchain-smoke.md",
+        "program": "external_dyn_desc_bad_policy_ref_toolchain",
+        "run_dir": "/home/xgy/remote/sst_dram_si/outputs_large/paper2/dram_mesh_4x4/20260401-115310",
+        "run_id": "20260401-115310"
+      }
+    },
+    {
+      "audit": {
+        "latest_manifest": "/home/xgy/remote/riscv_snn_isa_lab/runs/2026-04-01-external-dyn-desc-fault-overwrite-chain-ref-toolchain-smoke.md",
+        "manifest_match": true,
+        "manifest_run_dir": "/home/xgy/remote/sst_dram_si/outputs_large/paper2/dram_mesh_4x4/20260401-115357",
+        "ok": true,
+        "program": "external_dyn_desc_fault_overwrite_chain_ref_toolchain"
+      },
+      "builder": {
+        "manifest_path": "/home/xgy/remote/riscv_snn_isa_lab/runs/2026-04-01-external-dyn-desc-fault-overwrite-chain-ref-smoke.md",
+        "program": "external_dyn_desc_fault_overwrite_chain_ref",
+        "run_dir": "/home/xgy/remote/sst_dram_si/outputs_large/paper2/dram_mesh_4x4/20260401-115131",
+        "run_id": "20260401-115131"
+      },
+      "family": "external_dyn_desc_fault_overwrite_chain_ref",
+      "toolchain": {
+        "manifest_path": "/home/xgy/remote/riscv_snn_isa_lab/runs/2026-04-01-external-dyn-desc-fault-overwrite-chain-ref-toolchain-smoke.md",
+        "program": "external_dyn_desc_fault_overwrite_chain_ref_toolchain",
+        "run_dir": "/home/xgy/remote/sst_dram_si/outputs_large/paper2/dram_mesh_4x4/20260401-115357",
+        "run_id": "20260401-115357"
+      }
+    },
+    {
+      "audit": {
+        "latest_manifest": "/home/xgy/remote/riscv_snn_isa_lab/runs/2026-04-01-external-dyn-desc-fault-rearm-ref-toolchain-smoke.md",
+        "manifest_match": true,
+        "manifest_run_dir": "/home/xgy/remote/sst_dram_si/outputs_large/paper2/dram_mesh_4x4/20260401-115335",
+        "ok": true,
+        "program": "external_dyn_desc_fault_rearm_ref_toolchain"
+      },
+      "builder": {
+        "manifest_path": "/home/xgy/remote/riscv_snn_isa_lab/runs/2026-04-01-external-dyn-desc-fault-rearm-ref-smoke.md",
+        "program": "external_dyn_desc_fault_rearm_ref",
+        "run_dir": "/home/xgy/remote/sst_dram_si/outputs_large/paper2/dram_mesh_4x4/20260401-115107",
+        "run_id": "20260401-115107"
+      },
+      "family": "external_dyn_desc_fault_rearm_ref",
+      "toolchain": {
+        "manifest_path": "/home/xgy/remote/riscv_snn_isa_lab/runs/2026-04-01-external-dyn-desc-fault-rearm-ref-toolchain-smoke.md",
+        "program": "external_dyn_desc_fault_rearm_ref_toolchain",
+        "run_dir": "/home/xgy/remote/sst_dram_si/outputs_large/paper2/dram_mesh_4x4/20260401-115335",
+        "run_id": "20260401-115335"
+      }
+    },
+    {
+      "audit": {
+        "latest_manifest": "/home/xgy/remote/riscv_snn_isa_lab/runs/2026-04-01-external-dyn-desc-fault-ref-toolchain-smoke.md",
+        "manifest_match": true,
+        "manifest_run_dir": "/home/xgy/remote/sst_dram_si/outputs_large/paper2/dram_mesh_4x4/20260401-115246",
+        "ok": true,
+        "program": "external_dyn_desc_fault_ref_toolchain"
+      },
+      "builder": {
+        "manifest_path": "/home/xgy/remote/riscv_snn_isa_lab/runs/2026-04-01-external-dyn-desc-fault-ref-smoke.md",
+        "program": "external_dyn_desc_fault_ref",
+        "run_dir": "/home/xgy/remote/sst_dram_si/outputs_large/paper2/dram_mesh_4x4/20260401-115019",
+        "run_id": "20260401-115019"
+      },
+      "family": "external_dyn_desc_fault_ref",
+      "toolchain": {
+        "manifest_path": "/home/xgy/remote/riscv_snn_isa_lab/runs/2026-04-01-external-dyn-desc-fault-ref-toolchain-smoke.md",
+        "program": "external_dyn_desc_fault_ref_toolchain",
+        "run_dir": "/home/xgy/remote/sst_dram_si/outputs_large/paper2/dram_mesh_4x4/20260401-115246",
+        "run_id": "20260401-115246"
+      }
+    },
+    {
+      "audit": {
+        "latest_manifest": "/home/xgy/remote/riscv_snn_isa_lab/runs/2026-04-01-external-dyn-desc-ref-toolchain-smoke.md",
+        "manifest_match": true,
+        "manifest_run_dir": "/home/xgy/remote/sst_dram_si/outputs_large/paper2/dram_mesh_4x4/20260401-115223",
+        "ok": true,
+        "program": "external_dyn_desc_ref_toolchain"
+      },
+      "builder": {
+        "manifest_path": "/home/xgy/remote/riscv_snn_isa_lab/runs/2026-04-01-external-dyn-desc-ref-smoke.md",
+        "program": "external_dyn_desc_ref",
+        "run_dir": "/home/xgy/remote/sst_dram_si/outputs_large/paper2/dram_mesh_4x4/20260401-114955",
+        "run_id": "20260401-114955"
+      },
+      "family": "external_dyn_desc_ref",
+      "toolchain": {
+        "manifest_path": "/home/xgy/remote/riscv_snn_isa_lab/runs/2026-04-01-external-dyn-desc-ref-toolchain-smoke.md",
+        "program": "external_dyn_desc_ref_toolchain",
+        "run_dir": "/home/xgy/remote/sst_dram_si/outputs_large/paper2/dram_mesh_4x4/20260401-115223",
+        "run_id": "20260401-115223"
+      }
+    }
+  ],
+  "generated_utc": "2026-04-01T03:54:46.780433+00:00",
+  "producer": "riscv_snn_lab.build_nightly_index",
+  "requested_builder_programs": [
+    "external_dyn_desc_ref",
+    "external_dyn_desc_fault_ref",
+    "external_dyn_desc_bad_policy_ref",
+    "external_dyn_desc_fault_rearm_ref",
+    "external_dyn_desc_fault_overwrite_chain_ref",
+    "barrier_wfi_order_ref"
+  ],
+  "requested_toolchain_programs": [
+    "external_dyn_desc_ref_toolchain",
+    "external_dyn_desc_fault_ref_toolchain",
+    "external_dyn_desc_bad_policy_ref_toolchain",
+    "external_dyn_desc_fault_rearm_ref_toolchain",
+    "external_dyn_desc_fault_overwrite_chain_ref_toolchain",
+    "barrier_wfi_order_ref_toolchain"
+  ],
+  "schema_version": 2,
+  "toolchain_audit_summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-04-01-toolchain-bridge-audit.json",
+  "toolchain_summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-04-01-toolchain-regress-matrix.json"
+}

@@ -1,0 +1,23 @@
+{
+  "all_dates_ok": true,
+  "all_ok_latest": true,
+  "effective_all_dates_ok": true,
+  "effective_entry_count": 1,
+  "entries": [
+    {
+      "covered_selector_count": 3,
+      "date": "2026-04-18",
+      "gate_ok": true,
+      "gate_reasons": [],
+      "selector_count": 3
+    }
+  ],
+  "entry_count": 1,
+  "excluded_entry_count": 0,
+  "freshness_mode": "latest_refresh_only",
+  "history_contract": "stat_snapshot_family_surface_history_v1",
+  "latest_date": "2026-04-18",
+  "latest_recovered_date": "2026-04-18",
+  "path": "/home/xgy/remote/riscv_snn_isa_lab/references/stat-snapshot-family-history.json",
+  "stale": false
+}

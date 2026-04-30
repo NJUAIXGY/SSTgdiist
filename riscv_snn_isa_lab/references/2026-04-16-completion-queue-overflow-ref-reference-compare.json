@@ -1,0 +1,69 @@
+{
+  "artifact_role": "dated_reference_compare_family_surface",
+  "authority_scope": "reference_compare_only",
+  "comparison": {
+    "allowed_divergence_points": [],
+    "fabric_stage_alignment": true,
+    "gate_ok": true,
+    "gate_reasons": [],
+    "invalid_divergence_points": [],
+    "memory_domain_alignment": true,
+    "reference_fabric_stages": [
+      "ingress_receive",
+      "execution_consume"
+    ],
+    "reference_memory_domains": [
+      "ControlMemory"
+    ],
+    "reference_terminal_state": "Faulted",
+    "runtime_fabric_stages": [
+      "ingress_receive",
+      "execution_consume"
+    ],
+    "runtime_memory_domains": [
+      "ControlMemory"
+    ],
+    "runtime_terminal_state": "Faulted",
+    "status": "aligned",
+    "terminal_state_match": true
+  },
+  "equiv_summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-04-04-completion-queue-overflow-ref-equiv.json",
+  "family": "completion_queue_overflow_ref",
+  "gate_ok": true,
+  "gate_reasons": [],
+  "generated_utc": "2026-04-16T06:55:10.929407+00:00",
+  "producer": "riscv_snn_lab.run_reference_compare_family",
+  "reference_terminal_state": "Faulted",
+  "runtime_policy": {
+    "allowed_completion_signature": "one software-visible completion may remain intentionally unconsumed when cmpq-full fault retires",
+    "allowed_fault_signature": "last_fault_csr must equal fault_count * 0x0000000100000211",
+    "fault_lifecycle_mode": "single_fault",
+    "fault_mode": "accepted_fault_required",
+    "progress_mode": "completion_queue_fault_surface",
+    "queue_mode": "completion_queue_overflow_after_visible_completion",
+    "reference_program_profile": "accepted_fault_single_step",
+    "required_checks": [
+      "provider_bound_visible",
+      "fused_step_completion_visible",
+      "completion_visible",
+      "completion_consumed_covers_visible",
+      "fault_observed",
+      "completion_queue_fault_signature",
+      "fault_snapshot_consistent"
+    ]
+  },
+  "runtime_summary": {
+    "divergence_points": [],
+    "fabric_stages": [
+      "ingress_receive",
+      "execution_consume"
+    ],
+    "family": "completion_queue_overflow_ref",
+    "memory_domains": [
+      "ControlMemory"
+    ],
+    "terminal_state": "Faulted"
+  },
+  "schema_version": 2,
+  "status": "aligned"
+}

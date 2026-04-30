@@ -1,0 +1,83 @@
+{
+  "artifact_role": "reference_compare_surface_report",
+  "authority_scope": "reference_compare_only",
+  "comparison": {
+    "allowed_divergence_points": [
+      "queue_occupancy"
+    ],
+    "fabric_stage_alignment": true,
+    "gate_ok": true,
+    "gate_reasons": [],
+    "invalid_divergence_points": [],
+    "memory_domain_alignment": true,
+    "reference_fabric_stages": [
+      "ingress_receive",
+      "execution_consume"
+    ],
+    "reference_memory_domains": [
+      "ControlMemory"
+    ],
+    "reference_terminal_state": "Completed",
+    "runtime_fabric_stages": [
+      "ingress_receive",
+      "execution_consume"
+    ],
+    "runtime_memory_domains": [
+      "ControlMemory"
+    ],
+    "runtime_terminal_state": "Completed",
+    "status": "allowed_divergence",
+    "terminal_state_match": true
+  },
+  "gate_name": "reference_model_runtime_compare",
+  "gate_ok": true,
+  "gate_reasons": [],
+  "gate_version": "1.0",
+  "generated_utc": "2026-04-18T15:10:19.545164+00:00",
+  "history": {
+    "all_dates_ok": true,
+    "all_ok_latest": true,
+    "effective_all_dates_ok": true,
+    "effective_entry_count": 1,
+    "entries": [
+      {
+        "allowed_divergence_points": [
+          "queue_occupancy"
+        ],
+        "date": "2026-04-18",
+        "gate_ok": true,
+        "gate_reasons": [],
+        "invalid_divergence_points": [],
+        "status": "allowed_divergence"
+      }
+    ],
+    "entry_count": 1,
+    "excluded_entry_count": 0,
+    "freshness_mode": "reference_compare_latest_only",
+    "history_contract": "reference_compare_source_history_passthrough_v1",
+    "latest_date": "2026-04-18",
+    "latest_recovered_date": "2026-04-18",
+    "path": "/home/xgy/remote/riscv_snn_isa_lab/references/reference-compare-history.json",
+    "stale": false
+  },
+  "producer": "riscv_snn_lab.export_reference_compare_surface",
+  "runtime_summary": {
+    "divergence_points": [
+      "queue_occupancy"
+    ],
+    "fabric_stages": [
+      "ingress_receive",
+      "execution_consume"
+    ],
+    "memory_domains": [
+      "ControlMemory"
+    ],
+    "terminal_state": "Completed"
+  },
+  "schema_version": 2,
+  "stable_surfaces": {
+    "current_mainline_status_path": "/home/xgy/remote/riscv_snn_isa_lab/references/reference-compare-current-status.md",
+    "report_path": "/home/xgy/remote/riscv_snn_isa_lab/references/reference-compare-nightly-report.json",
+    "summary_md_path": "/home/xgy/remote/riscv_snn_isa_lab/references/reference-compare-nightly-summary.md"
+  }
+}

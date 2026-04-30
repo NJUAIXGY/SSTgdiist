@@ -1,0 +1,194 @@
+{
+  "artifact_provenance": {
+    "tool": "snn3dexp.tools.analyze_window_stop_multicase_sweep",
+    "artifact_kind": "long_window_stability_summary",
+    "generated_at_utc": "2026-03-23T01:53:07Z",
+    "source_kind": "sweep_summary",
+    "sweep_summary_path": "/home/xgy/remote/snn3dexp/analysis/sweeps/window_stop_multicase/same_tag_stopwindow_fresh_20260323/window_stop_multicase_sweep_summary.json",
+    "run_root": "/home/xgy/remote/snn3dexp/runs",
+    "out_dir": "/home/xgy/remote/snn3dexp/analysis/long_window_ablation_same_tag_stopwindow_fresh_20260323"
+  },
+  "run_family": "same_tag_stopwindow_fresh_20260323",
+  "stop_ats": [
+    "2us",
+    "10us",
+    "20us"
+  ],
+  "case_ids": [
+    "full_3d_snn_window",
+    "full_3d_snn_window_bundle_v3",
+    "full_3d_snn_window_monolithic_proxy"
+  ],
+  "stop_windows": [
+    {
+      "stop_at": "2us",
+      "ablation_path": "/home/xgy/remote/snn3dexp/analysis/long_window_ablation_same_tag_stopwindow_fresh_20260323/window_stop_2us_ablation.json",
+      "requested_run_tags_by_case": {
+        "full_3d_snn_window": "same_tag_stopwindow_fresh_20260323_2us",
+        "full_3d_snn_window_bundle_v3": "same_tag_stopwindow_fresh_20260323_2us",
+        "full_3d_snn_window_monolithic_proxy": "same_tag_stopwindow_fresh_20260323_2us"
+      },
+      "cases": {
+        "full_3d_snn_window": {
+          "memory_requests_total": 234,
+          "total_service_deficit": 0,
+          "stream_region_backlog": 0,
+          "steps_completed": 1,
+          "stall_on_step_gate_cycles_total": 28324,
+          "most_pressured_controller_service_deficit_proxy": 0.0,
+          "max_controller_outstanding_requests_accum": 227669
+        },
+        "full_3d_snn_window_bundle_v3": {
+          "memory_requests_total": 912,
+          "total_service_deficit": 8,
+          "stream_region_backlog": 8,
+          "steps_completed": 1,
+          "stall_on_step_gate_cycles_total": 34852,
+          "most_pressured_controller_service_deficit_proxy": 2.0,
+          "max_controller_outstanding_requests_accum": 194169
+        },
+        "full_3d_snn_window_monolithic_proxy": {
+          "memory_requests_total": 416,
+          "total_service_deficit": 0,
+          "stream_region_backlog": 0,
+          "steps_completed": 28,
+          "stall_on_step_gate_cycles_total": 15768,
+          "most_pressured_controller_service_deficit_proxy": 0.0,
+          "max_controller_outstanding_requests_accum": 100523
+        }
+      },
+      "comparisons": {
+        "bundle_vs_direct": {
+          "memory_requests_total_delta": 678,
+          "total_service_deficit_delta": 8,
+          "steps_completed_delta": 0,
+          "stall_on_step_gate_cycles_total_delta": 6528
+        },
+        "monolithic_vs_direct": {
+          "memory_requests_total_delta": 182,
+          "total_service_deficit_delta": 0,
+          "steps_completed_delta": 27,
+          "stall_on_step_gate_cycles_total_delta": -12556
+        }
+      }
+    },
+    {
+      "stop_at": "10us",
+      "ablation_path": "/home/xgy/remote/snn3dexp/analysis/long_window_ablation_same_tag_stopwindow_fresh_20260323/window_stop_10us_ablation.json",
+      "requested_run_tags_by_case": {
+        "full_3d_snn_window": "same_tag_stopwindow_fresh_20260323_10us",
+        "full_3d_snn_window_bundle_v3": "same_tag_stopwindow_fresh_20260323_10us",
+        "full_3d_snn_window_monolithic_proxy": "same_tag_stopwindow_fresh_20260323_10us"
+      },
+      "cases": {
+        "full_3d_snn_window": {
+          "memory_requests_total": 416,
+          "total_service_deficit": 0,
+          "stream_region_backlog": 0,
+          "steps_completed": 25,
+          "stall_on_step_gate_cycles_total": 139782,
+          "most_pressured_controller_service_deficit_proxy": 0.0,
+          "max_controller_outstanding_requests_accum": 975738
+        },
+        "full_3d_snn_window_bundle_v3": {
+          "memory_requests_total": 1020,
+          "total_service_deficit": 0,
+          "stream_region_backlog": 0,
+          "steps_completed": 89,
+          "stall_on_step_gate_cycles_total": 111990,
+          "most_pressured_controller_service_deficit_proxy": 0.0,
+          "max_controller_outstanding_requests_accum": 666436
+        },
+        "full_3d_snn_window_monolithic_proxy": {
+          "memory_requests_total": 416,
+          "total_service_deficit": 0,
+          "stream_region_backlog": 0,
+          "steps_completed": 250,
+          "stall_on_step_gate_cycles_total": 29976,
+          "most_pressured_controller_service_deficit_proxy": 0.0,
+          "max_controller_outstanding_requests_accum": 100523
+        }
+      },
+      "comparisons": {
+        "bundle_vs_direct": {
+          "memory_requests_total_delta": 604,
+          "total_service_deficit_delta": 0,
+          "steps_completed_delta": 64,
+          "stall_on_step_gate_cycles_total_delta": -27792
+        },
+        "monolithic_vs_direct": {
+          "memory_requests_total_delta": 0,
+          "total_service_deficit_delta": 0,
+          "steps_completed_delta": 225,
+          "stall_on_step_gate_cycles_total_delta": -109806
+        }
+      }
+    },
+    {
+      "stop_at": "20us",
+      "ablation_path": "/home/xgy/remote/snn3dexp/analysis/long_window_ablation_same_tag_stopwindow_fresh_20260323/window_stop_20us_ablation.json",
+      "requested_run_tags_by_case": {
+        "full_3d_snn_window": "same_tag_stopwindow_fresh_20260323_20us",
+        "full_3d_snn_window_bundle_v3": "same_tag_stopwindow_fresh_20260323_20us",
+        "full_3d_snn_window_monolithic_proxy": "same_tag_stopwindow_fresh_20260323_20us"
+      },
+      "cases": {
+        "full_3d_snn_window": {
+          "memory_requests_total": 416,
+          "total_service_deficit": 0,
+          "stream_region_backlog": 0,
+          "steps_completed": 303,
+          "stall_on_step_gate_cycles_total": 157574,
+          "most_pressured_controller_service_deficit_proxy": 0.0,
+          "max_controller_outstanding_requests_accum": 975738
+        },
+        "full_3d_snn_window_bundle_v3": {
+          "memory_requests_total": 1020,
+          "total_service_deficit": 0,
+          "stream_region_backlog": 0,
+          "steps_completed": 367,
+          "stall_on_step_gate_cycles_total": 129782,
+          "most_pressured_controller_service_deficit_proxy": 0.0,
+          "max_controller_outstanding_requests_accum": 666436
+        },
+        "full_3d_snn_window_monolithic_proxy": {
+          "memory_requests_total": 416,
+          "total_service_deficit": 0,
+          "stream_region_backlog": 0,
+          "steps_completed": 528,
+          "stall_on_step_gate_cycles_total": 47768,
+          "most_pressured_controller_service_deficit_proxy": 0.0,
+          "max_controller_outstanding_requests_accum": 100523
+        }
+      },
+      "comparisons": {
+        "bundle_vs_direct": {
+          "memory_requests_total_delta": 604,
+          "total_service_deficit_delta": 0,
+          "steps_completed_delta": 64,
+          "stall_on_step_gate_cycles_total_delta": -27792
+        },
+        "monolithic_vs_direct": {
+          "memory_requests_total_delta": 0,
+          "total_service_deficit_delta": 0,
+          "steps_completed_delta": 225,
+          "stall_on_step_gate_cycles_total_delta": -109806
+        }
+      }
+    }
+  ],
+  "tail_clear": {
+    "direct_tail_clear_stop_at": "2us",
+    "bundle_tail_clear_stop_at": "10us",
+    "monolithic_tail_clear_stop_at": "2us",
+    "bundle_minus_direct_gap_ns": 8000
+  },
+  "outputs": {
+    "summary_json": "/home/xgy/remote/snn3dexp/analysis/long_window_ablation_same_tag_stopwindow_fresh_20260323/long_window_stability_summary.json",
+    "stop_window_ablation_paths": [
+      "/home/xgy/remote/snn3dexp/analysis/long_window_ablation_same_tag_stopwindow_fresh_20260323/window_stop_2us_ablation.json",
+      "/home/xgy/remote/snn3dexp/analysis/long_window_ablation_same_tag_stopwindow_fresh_20260323/window_stop_10us_ablation.json",
+      "/home/xgy/remote/snn3dexp/analysis/long_window_ablation_same_tag_stopwindow_fresh_20260323/window_stop_20us_ablation.json"
+    ]
+  }
+}

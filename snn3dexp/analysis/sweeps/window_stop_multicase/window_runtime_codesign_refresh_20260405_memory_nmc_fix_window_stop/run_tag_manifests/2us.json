@@ -1,0 +1,12 @@
+{
+  "case_ids": [
+    "full_3d_snn_window",
+    "full_3d_snn_window_bundle_v3",
+    "full_3d_snn_window_monolithic_proxy"
+  ],
+  "run_tags_by_case": {
+    "full_3d_snn_window": "window_runtime_codesign_refresh_20260405_memory_nmc_fix_window_stop_2us",
+    "full_3d_snn_window_bundle_v3": "window_runtime_codesign_refresh_20260405_memory_nmc_fix_window_stop_2us",
+    "full_3d_snn_window_monolithic_proxy": "window_runtime_codesign_refresh_20260405_memory_nmc_fix_window_stop_2us"
+  }
+}

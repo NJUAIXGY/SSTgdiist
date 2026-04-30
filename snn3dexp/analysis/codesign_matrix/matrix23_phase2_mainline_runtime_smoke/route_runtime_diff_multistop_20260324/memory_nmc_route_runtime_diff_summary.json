@@ -1,0 +1,277 @@
+{
+  "matrix_label": "matrix23_phase2_mainline_runtime_smoke",
+  "baseline_run_tag": "matrix23_phase2_mainline_runtime_traffic",
+  "fixed_step_run_tags": [
+    "matrix23_phase2_mainline_runtime_fixed_step_4_2us"
+  ],
+  "sources": {
+    "baseline_ablation_path": "/home/xgy/remote/snn3dexp/analysis/codesign_matrix/matrix23_phase2_mainline_runtime_smoke/traffic_baseline_ablation.json",
+    "baseline_run_tag": "matrix23_phase2_mainline_runtime_traffic",
+    "surface_label": "matrix23_phase2_mainline_runtime_smoke",
+    "baseline_overlay_ablation_paths": [
+      "/home/xgy/remote/snn3dexp/analysis/windowed_controller_runtime_refresh_20260322_ablation.json"
+    ],
+    "fixed_step_summary_path": "/home/xgy/remote/snn3dexp/analysis/codesign_matrix/matrix23_phase2_mainline_runtime_smoke/fixed_step_analysis/fixed_step_sweep_summary.json",
+    "fixed_step_run_tags": [
+      "matrix23_phase2_mainline_runtime_fixed_step_4_2us"
+    ],
+    "stop_window_ablation_paths": [
+      "/home/xgy/remote/snn3dexp/analysis/long_window_ablation_controller_runtime_refresh_20260322/window_stop_2us_ablation.json",
+      "/home/xgy/remote/snn3dexp/analysis/long_window_ablation_controller_runtime_refresh_20260322/window_stop_10us_ablation.json"
+    ],
+    "stop_window_run_tags": [
+      "controller_runtime_refresh_20260322_direct_stop_sweep_2us",
+      "controller_runtime_refresh_20260322_direct_stop_sweep_10us"
+    ],
+    "hotspot_runtime_summary_path": "/home/xgy/remote/snn3dexp/analysis/full_3d_runtime_adaptive/arc4_hotspot_refresh_20260321/runtime_summary.json",
+    "hotspot_run_tag": ""
+  },
+  "traffic_route_diffs": [
+    {
+      "matrix_group": "traffic_route",
+      "compare_kind": "traffic_mem_bundle_vs_direct",
+      "run_tag": "",
+      "base_case_id": "full_3d",
+      "compare_case_id": "full_3d_tile_bundle_v3",
+      "dominant_home_runtime_controller_overlap_delta": 0,
+      "pe_nic_real_home_path_service_deficit_total_delta": 845,
+      "synapse_real_home_path_service_deficit_total_delta": 465,
+      "base_real_home_traffic_signal_level": "runtime_controller",
+      "compare_real_home_traffic_signal_level": "runtime_controller"
+    }
+  ],
+  "window_route_diffs": [
+    {
+      "matrix_group": "window_route",
+      "compare_kind": "",
+      "run_tag": "matrix23_phase2_mainline_runtime_fixed_step_4_2us",
+      "base_case_id": "full_3d_snn_window",
+      "compare_case_id": "full_3d_snn_window_bundle_v3",
+      "dataflow_controller_alignment_transition": "alignment_degraded",
+      "dataflow_controller_alignment_rank_delta": -1,
+      "memory_requests_per_completed_step_delta": 678.0,
+      "stall_on_step_gate_cycles_per_completed_step_delta": 6528.0,
+      "pe_nic_dominant_controller_outstanding_requests_accum_delta": -155821,
+      "synapse_dominant_controller_outstanding_requests_accum_delta": -155821,
+      "pe_nic_dominant_controller_cycles_attempted_issue_but_rejected_delta": -1088,
+      "synapse_dominant_controller_cycles_attempted_issue_but_rejected_delta": -1088,
+      "pe_nic_real_home_path_service_deficit_total_delta": 8,
+      "synapse_real_home_path_service_deficit_total_delta": 0,
+      "base_pe_nic_real_home_path_dominant_stage": "stream_region",
+      "compare_pe_nic_real_home_path_dominant_stage": "stream_region",
+      "base_synapse_real_home_path_dominant_stage": "synapse_gather",
+      "compare_synapse_real_home_path_dominant_stage": "synapse_gather",
+      "controller_outstanding_delta_total": -311642,
+      "controller_issue_reject_delta_total": -2176,
+      "real_home_path_service_deficit_total_delta": 8,
+      "pe_nic_real_home_path_stage_transition": "stream_region->stream_region",
+      "synapse_real_home_path_stage_transition": "synapse_gather->synapse_gather",
+      "dominant_mechanism_axis": "controller_outstanding"
+    }
+  ],
+  "window_route_mechanism_summary": {
+    "row_count": 1,
+    "alignment_transition_counts": {
+      "alignment_degraded": 1
+    },
+    "dominant_axis_counts": {
+      "controller_outstanding": 1
+    },
+    "stall_on_step_gate_cycles_per_completed_step_delta_sum": 6528.0,
+    "memory_requests_per_completed_step_delta_sum": 678.0,
+    "controller_outstanding_delta_total_sum": -311642,
+    "controller_issue_reject_delta_total_sum": -2176,
+    "real_home_path_service_deficit_total_delta_sum": 8,
+    "top_stall_rows": [
+      {
+        "run_tag": "matrix23_phase2_mainline_runtime_fixed_step_4_2us",
+        "base_case_id": "full_3d_snn_window",
+        "compare_case_id": "full_3d_snn_window_bundle_v3",
+        "stall_on_step_gate_cycles_per_completed_step_delta": 6528.0,
+        "memory_requests_per_completed_step_delta": 678.0,
+        "controller_outstanding_delta_total": -311642,
+        "real_home_path_service_deficit_total_delta": 8,
+        "dataflow_controller_alignment_transition": "alignment_degraded",
+        "dominant_mechanism_axis": "controller_outstanding"
+      }
+    ]
+  },
+  "window_stop_route_diffs": [
+    {
+      "matrix_group": "window_stop",
+      "compare_kind": "window_stop_bundle_vs_direct",
+      "run_tag": "controller_runtime_refresh_20260322_direct_stop_sweep_2us",
+      "stop_at": "2us",
+      "base_case_id": "full_3d_snn_window",
+      "compare_case_id": "full_3d_snn_window_bundle_v3",
+      "steps_completed_delta": 0,
+      "same_stack_overlap_delta": 0,
+      "same_controller_overlap_delta": 0,
+      "same_class_overlap_delta": 0,
+      "dataflow_controller_alignment_transition": "alignment_degraded",
+      "dataflow_controller_alignment_rank_delta": -1,
+      "memory_requests_per_completed_step_delta": 0.0,
+      "stall_on_step_gate_cycles_per_completed_step_delta": 0.0,
+      "pe_nic_dominant_controller_outstanding_requests_accum_delta": -155821,
+      "synapse_dominant_controller_outstanding_requests_accum_delta": -155821,
+      "pe_nic_dominant_controller_cycles_attempted_issue_but_rejected_delta": -1088,
+      "synapse_dominant_controller_cycles_attempted_issue_but_rejected_delta": -1088,
+      "pe_nic_real_home_path_service_deficit_total_delta": 8,
+      "synapse_real_home_path_service_deficit_total_delta": 0,
+      "controller_outstanding_delta_total": -311642,
+      "controller_issue_reject_delta_total": -2176,
+      "real_home_path_service_deficit_total_delta": 8,
+      "dominant_mechanism_axis": "controller_outstanding"
+    },
+    {
+      "matrix_group": "window_stop",
+      "compare_kind": "window_stop_monolithic_vs_direct",
+      "run_tag": "controller_runtime_refresh_20260322_direct_stop_sweep_2us",
+      "stop_at": "2us",
+      "base_case_id": "full_3d_snn_window",
+      "compare_case_id": "full_3d_snn_window_monolithic_proxy",
+      "steps_completed_delta": 27,
+      "same_stack_overlap_delta": 0,
+      "same_controller_overlap_delta": 0,
+      "same_class_overlap_delta": 0,
+      "dataflow_controller_alignment_transition": "stable",
+      "dataflow_controller_alignment_rank_delta": 0,
+      "memory_requests_per_completed_step_delta": 0.0,
+      "stall_on_step_gate_cycles_per_completed_step_delta": 0.0,
+      "pe_nic_dominant_controller_outstanding_requests_accum_delta": -660999,
+      "synapse_dominant_controller_outstanding_requests_accum_delta": -660999,
+      "pe_nic_dominant_controller_cycles_attempted_issue_but_rejected_delta": -6549,
+      "synapse_dominant_controller_cycles_attempted_issue_but_rejected_delta": -6549,
+      "pe_nic_real_home_path_service_deficit_total_delta": 0,
+      "synapse_real_home_path_service_deficit_total_delta": 0,
+      "controller_outstanding_delta_total": -1321998,
+      "controller_issue_reject_delta_total": -13098,
+      "real_home_path_service_deficit_total_delta": 0,
+      "dominant_mechanism_axis": "controller_outstanding"
+    },
+    {
+      "matrix_group": "window_stop",
+      "compare_kind": "window_stop_bundle_vs_direct",
+      "run_tag": "controller_runtime_refresh_20260322_direct_stop_sweep_10us",
+      "stop_at": "10us",
+      "base_case_id": "full_3d_snn_window",
+      "compare_case_id": "full_3d_snn_window_bundle_v3",
+      "steps_completed_delta": 64,
+      "same_stack_overlap_delta": 1,
+      "same_controller_overlap_delta": 1,
+      "same_class_overlap_delta": 1,
+      "dataflow_controller_alignment_transition": "alignment_improved",
+      "dataflow_controller_alignment_rank_delta": 3,
+      "memory_requests_per_completed_step_delta": 0.0,
+      "stall_on_step_gate_cycles_per_completed_step_delta": 0.0,
+      "pe_nic_dominant_controller_outstanding_requests_accum_delta": -1170842,
+      "synapse_dominant_controller_outstanding_requests_accum_delta": -1170842,
+      "pe_nic_dominant_controller_cycles_attempted_issue_but_rejected_delta": -10052,
+      "synapse_dominant_controller_cycles_attempted_issue_but_rejected_delta": -10052,
+      "pe_nic_real_home_path_service_deficit_total_delta": 0,
+      "synapse_real_home_path_service_deficit_total_delta": 0,
+      "controller_outstanding_delta_total": -2341684,
+      "controller_issue_reject_delta_total": -20104,
+      "real_home_path_service_deficit_total_delta": 0,
+      "dominant_mechanism_axis": "controller_outstanding"
+    },
+    {
+      "matrix_group": "window_stop",
+      "compare_kind": "window_stop_monolithic_vs_direct",
+      "run_tag": "controller_runtime_refresh_20260322_direct_stop_sweep_10us",
+      "stop_at": "10us",
+      "base_case_id": "full_3d_snn_window",
+      "compare_case_id": "full_3d_snn_window_monolithic_proxy",
+      "steps_completed_delta": 225,
+      "same_stack_overlap_delta": 0,
+      "same_controller_overlap_delta": 0,
+      "same_class_overlap_delta": 0,
+      "dataflow_controller_alignment_transition": "stable",
+      "dataflow_controller_alignment_rank_delta": 0,
+      "memory_requests_per_completed_step_delta": 0.0,
+      "stall_on_step_gate_cycles_per_completed_step_delta": 0.0,
+      "pe_nic_dominant_controller_outstanding_requests_accum_delta": -3266002,
+      "synapse_dominant_controller_outstanding_requests_accum_delta": -3266002,
+      "pe_nic_dominant_controller_cycles_attempted_issue_but_rejected_delta": -29629,
+      "synapse_dominant_controller_cycles_attempted_issue_but_rejected_delta": -29629,
+      "pe_nic_real_home_path_service_deficit_total_delta": 0,
+      "synapse_real_home_path_service_deficit_total_delta": 0,
+      "controller_outstanding_delta_total": -6532004,
+      "controller_issue_reject_delta_total": -59258,
+      "real_home_path_service_deficit_total_delta": 0,
+      "dominant_mechanism_axis": "controller_outstanding"
+    }
+  ],
+  "window_stop_mechanism_summary": {
+    "row_count": 4,
+    "compare_kind_counts": {
+      "window_stop_bundle_vs_direct": 2,
+      "window_stop_monolithic_vs_direct": 2
+    },
+    "dominant_axis_counts": {
+      "controller_outstanding": 4
+    },
+    "stop_at_values": [
+      "2us",
+      "2us",
+      "10us",
+      "10us"
+    ],
+    "earliest_same_controller_overlap_stop_at": "10us",
+    "max_steps_completed_delta": 225,
+    "max_abs_stall_on_step_gate_cycles_per_completed_step_delta": 0.0,
+    "top_stall_rows": [
+      {
+        "compare_kind": "window_stop_monolithic_vs_direct",
+        "stop_at": "10us",
+        "stall_on_step_gate_cycles_per_completed_step_delta": 0.0,
+        "memory_requests_per_completed_step_delta": 0.0,
+        "steps_completed_delta": 225,
+        "same_controller_overlap_delta": 0,
+        "dominant_mechanism_axis": "controller_outstanding"
+      },
+      {
+        "compare_kind": "window_stop_bundle_vs_direct",
+        "stop_at": "10us",
+        "stall_on_step_gate_cycles_per_completed_step_delta": 0.0,
+        "memory_requests_per_completed_step_delta": 0.0,
+        "steps_completed_delta": 64,
+        "same_controller_overlap_delta": 1,
+        "dominant_mechanism_axis": "controller_outstanding"
+      },
+      {
+        "compare_kind": "window_stop_monolithic_vs_direct",
+        "stop_at": "2us",
+        "stall_on_step_gate_cycles_per_completed_step_delta": 0.0,
+        "memory_requests_per_completed_step_delta": 0.0,
+        "steps_completed_delta": 27,
+        "same_controller_overlap_delta": 0,
+        "dominant_mechanism_axis": "controller_outstanding"
+      },
+      {
+        "compare_kind": "window_stop_bundle_vs_direct",
+        "stop_at": "2us",
+        "stall_on_step_gate_cycles_per_completed_step_delta": 0.0,
+        "memory_requests_per_completed_step_delta": 0.0,
+        "steps_completed_delta": 0,
+        "same_controller_overlap_delta": 0,
+        "dominant_mechanism_axis": "controller_outstanding"
+      }
+    ]
+  },
+  "runtime_compare_diffs": [],
+  "runtime_compare_summary": {
+    "row_count": 0,
+    "compare_kind_counts": {},
+    "dominant_axis_counts": {},
+    "vertical_link_pressure_delta_sum": 0,
+    "stack_hotspot_penalty_delta_sum": 0,
+    "homeroute_adjustment_count_delta_sum": 0,
+    "thermal_guard_actions_delta_sum": 0
+  },
+  "outputs": {
+    "summary_json": "/home/xgy/remote/snn3dexp/analysis/codesign_matrix/matrix23_phase2_mainline_runtime_smoke/route_runtime_diff_multistop_20260324/memory_nmc_route_runtime_diff_summary.json",
+    "csv": "/home/xgy/remote/snn3dexp/analysis/codesign_matrix/matrix23_phase2_mainline_runtime_smoke/route_runtime_diff_multistop_20260324/memory_nmc_route_runtime_diff.csv",
+    "markdown": "/home/xgy/remote/snn3dexp/analysis/codesign_matrix/matrix23_phase2_mainline_runtime_smoke/route_runtime_diff_multistop_20260324/memory_nmc_route_runtime_diff.md"
+  }
+}

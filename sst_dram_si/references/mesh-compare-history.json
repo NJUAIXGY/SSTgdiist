@@ -1,0 +1,47 @@
+{
+  "artifact_role": "stable_compare_history",
+  "authority_scope": "dated_compare_smoke_rollup",
+  "history_contract": "dated_compare_matrix_v1",
+  "freshness_mode": "latest_only",
+  "entry_count": 1,
+  "latest_date": "2026-04-07",
+  "latest_generated_utc": "2026-04-07T03:48:04.644089+00:00",
+  "latest_summary_path": "/home/xgy/remote/sst_dram_si/outputs_large/paper2/dram_mesh_4x4_exec_mode_compare/matrix/20260407-114554/summary.json",
+  "latest_all_green": true,
+  "all_green_history": true,
+  "entries": [
+    {
+      "matrix_run_id": "20260407-114554",
+      "date": "2026-04-07",
+      "generated_utc": "2026-04-07T03:48:04.644089+00:00",
+      "summary_path": "/home/xgy/remote/sst_dram_si/outputs_large/paper2/dram_mesh_4x4_exec_mode_compare/matrix/20260407-114554/summary.json",
+      "all_green": true,
+      "stale": false,
+      "cases": {
+        "gas": {
+          "gate_ok": true,
+          "requested_exec_mode": "gas",
+          "effective_exec_mode": "gas",
+          "validator_fail": 0,
+          "memory_nonzero": true
+        },
+        "naive_opt": {
+          "gate_ok": true,
+          "requested_exec_mode": "naive_opt",
+          "effective_exec_mode": "naive_raw",
+          "validator_fail": 0,
+          "memory_nonzero": true
+        },
+        "naive_raw": {
+          "gate_ok": true,
+          "requested_exec_mode": "naive_raw",
+          "effective_exec_mode": "naive_raw",
+          "validator_fail": 0,
+          "memory_nonzero": true
+        }
+      }
+    }
+  ],
+  "summary_path": "/home/xgy/remote/sst_dram_si/references/mesh-compare-history.json",
+  "generated_utc": "2026-04-07T04:26:34.492340+00:00"
+}

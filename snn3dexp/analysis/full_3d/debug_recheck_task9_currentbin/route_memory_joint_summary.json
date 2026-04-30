@@ -1,0 +1,64 @@
+{
+  "case_id": "full_3d",
+  "run_root": "/home/xgy/remote/snn3dexp/runs/full_3d/debug_recheck_task9_currentbin",
+  "mesh_shape": "4x4x2",
+  "route": {
+    "native_3d_active": true,
+    "vertical_route_order": "zxy",
+    "multicast_block_shape": [
+      2,
+      2,
+      2
+    ],
+    "active_route_node_count": 32,
+    "ingress_replication_cost": 1.75,
+    "inter_die_multicast_fanout": 0.0,
+    "die_local_replication_cost": 2.0,
+    "average_vertical_subtree_depth": 0.0
+  },
+  "memory": {
+    "kind": "hbm_like",
+    "graph_type": "memHierarchy_shared_stack",
+    "real_synapse_sources": 32,
+    "active_memory_node_count": 32,
+    "remote_home_active_node_count": 16,
+    "memory_requests_total": 448,
+    "remote_home_memory_requests_total": 224,
+    "active_stack_count": 4,
+    "access_semantics": {
+      "tier_local_home_access_count": 16,
+      "same_xy_cross_tier_access_count": 16,
+      "remote_home_access_count": 32,
+      "tier_local_home_access_ratio": 0.25,
+      "same_xy_cross_tier_access_ratio": 0.25,
+      "remote_home_access_ratio": 0.5
+    },
+    "synapse_semantics": {
+      "synapse_gather_reads": 224,
+      "sparse_window_streams": 224,
+      "metadata_lookup_reads": 0
+    }
+  },
+  "joint": {
+    "vertical_hops_ratio": 0.5,
+    "remote_home_ratio": 0.5,
+    "route_memory_overlap": 1.0
+  },
+  "thermal": {
+    "enabled": true,
+    "tier_activity_source": "runtime",
+    "tier_activity": [
+      {
+        "z": 0,
+        "activity": 1056.0
+      },
+      {
+        "z": 1,
+        "activity": 800.0
+      }
+    ],
+    "thermal_hotspot_score": 1.2155172413793103,
+    "vertical_link_pressure": 0.2,
+    "stack_hotspot_penalty": 0.0
+  }
+}

@@ -1,0 +1,259 @@
+{
+  "baseline": {
+    "equiv_validation": {
+      "allowed_fail_checks": [
+        "step_activation.invocations_vs_windows"
+      ],
+      "blocked_fail_checks": [],
+      "ok": true,
+      "raw_summary": "failed",
+      "summary": "passed_with_waiver",
+      "waived_fail_checks": [
+        "step_activation.invocations_vs_windows"
+      ],
+      "waiver_applied": true,
+      "waiver_name": "external_dyn_desc_ref_step_activation_window_alignment"
+    },
+    "role": "snn_baseline",
+    "run_dir": "/home/xgy/remote/sst_dram_si/outputs_large/paper2/dram_mesh_4x4/20260401-120402",
+    "smoke_error": null,
+    "smoke_returncode": 1,
+    "spec_path": "/home/xgy/remote/riscv_snn_isa_lab/specs/external_dyn_desc_ref_snn_baseline.json",
+    "validation": "failed",
+    "validation_detail": {
+      "fail_checks": [
+        "step_activation.invocations_vs_windows"
+      ],
+      "fail_lines": [
+        "[val] FAIL step_activation.invocations_vs_windows: invocations=51 windows=59"
+      ],
+      "pass_checks": [
+        "contracts.present",
+        "contracts.strict_repro_same_post_deterministic",
+        "contracts.strict_repro_global_total_order_required",
+        "contracts.gas_semantic_ready_before_commit",
+        "contracts.gas_semantic_drain_before_scatter",
+        "contracts.apply_issue_policy_matches_effective_config",
+        "contracts.experimental_retire_policy_matches_effective_config",
+        "contracts.retire_policy_scope_consistent",
+        "contracts.experimental_gcss_phase_breakdown_enable_matches_effective_config",
+        "contracts.experimental_retire_shadow_per_post_enable_matches_effective_config",
+        "contracts.experimental_gcss_vlf_queue_policy_matches_effective_config",
+        "contracts.experimental_gcss_vlf_fair_band_size_matches_effective_config",
+        "run.log.exists",
+        "run.no_emergency_shutdown",
+        "model.num_pes",
+        "model.neurons_total",
+        "model.neurons_per_pe_formula",
+        "model.bcsr_rows_match_neurons_per_core",
+        "model.bcsr_meta_path_exists",
+        "model.exec_mode_infer",
+        "gas.windows_accounting",
+        "step_activation.firing_total_eq_pre_selected",
+        "step_activation.fanout_effective_le_config",
+        "step_activation.spike_attempts_arith",
+        "step_activation.injection_vs_route_hits",
+        "step_activation.attempts_eq_hits_miss_drops",
+        "step_activation.pre_population_infer",
+        "step_activation.firing_rate_formula",
+        "gas.gsops_step_formula",
+        "spike_activity.neurons_fired_total_nonzero",
+        "spike_activity.fired_vs_scatter_emitted",
+        "snn_rx.packet_accounting",
+        "snn_tx.nonzero",
+        "snn_txrx.key_visibility",
+        "snn_txrx.key_visibility_step_deferral",
+        "memory.nonzero",
+        "memhierarchy.line_size_bytes_nonzero",
+        "memhierarchy.memctrl.req_total_matches_sum",
+        "memhierarchy.memctrl.bytes_est_total_formula",
+        "memhierarchy.memctrl.req_GetS_minus_loader_bounds",
+        "memhierarchy.l1.req_total_matches_sum",
+        "memhierarchy.l1.bytes_est_total_formula",
+        "info.infer_global_step_sync"
+      ],
+      "pass_lines": [
+        "[val] PASS contracts.present: summary.contracts present",
+        "[val] PASS contracts.gas_semantic_ready_before_commit: value=True",
+        "[val] PASS contracts.gas_semantic_drain_before_scatter: value=True",
+        "[val] PASS snn_rx.packet_accounting: rx_packets=2872 key_packets=0 fastpath=0 fallback=0",
+        "[val] PASS snn_tx.nonzero: tx_packets=8837 tx_spike=8837 tx_spikekey=0 tx_spiketilekey=0",
+        "[val] PASS memory.nonzero: memory_requests=878 memory_bytes=304086"
+      ],
+      "summary": "failed",
+      "warn_checks": [
+        "gas.features.merge_enabled_bcsr"
+      ],
+      "warn_lines": [
+        "[val] WARN gas.features.merge_enabled_bcsr: gap_k=0 lmax=65536 row_window_bytes=0 row_window_timeout_ns=0"
+      ]
+    },
+    "workload_impl": "snn"
+  },
+  "compare": {
+    "strict": [],
+    "trend": [],
+    "trend_overview": {
+      "aligned_fields": [],
+      "diverged_fields": [],
+      "gate_failures": [],
+      "gate_level": "info",
+      "gate_warnings": [],
+      "policy_ids": [],
+      "status": "passed",
+      "summary_lines": [],
+      "visibility_gap_fields": []
+    }
+  },
+  "family": "external_dyn_desc_ref",
+  "family_policy": {
+    "allowed_completion_signature": "visible completions should be fully consumed and retire with status 0",
+    "allowed_fault_signature": "fault_count should stay zero and last_fault_csr should remain zero",
+    "fault_lifecycle_mode": "none",
+    "fault_mode": "quiescent",
+    "progress_mode": "forward_progress_expected",
+    "required_checks": [
+      "provider_bound_visible",
+      "fused_step_completion_visible",
+      "completion_visible",
+      "completion_consumed_covers_visible",
+      "fault_snapshot_consistent",
+      "fault_snapshot_quiescent",
+      "last_completion_status_clean"
+    ]
+  },
+  "gate_reasons": [
+    "runtime_bridge_smoke_failed"
+  ],
+  "generated_utc": "2026-04-01T04:04:46.097723+00:00",
+  "runtime_bridge": {
+    "build_preflight": {
+      "backend_name": "runtime_bridge",
+      "contract_key": "riscv_snn.runtime_bridge.runtime_consumers",
+      "contract_version": 1,
+      "dependency_paths": [
+        "/home/xgy/remote/sst_workspace/sst-elements/src/sst/elements/SnnDL/services/synapse/weights/WeightMemorySubsystem.h",
+        "/home/xgy/remote/sst_workspace/sst-elements/src/sst/elements/SnnDL/services/memory/sram_sim/model/BankedSramModel.h"
+      ],
+      "enabled": true,
+      "fingerprint_match": true,
+      "full_rebuild_reason_ids": [],
+      "full_rebuild_required": false,
+      "installed_build_fingerprint": "01a06d7c742ce5946be478afcf9b9551870f315a96c4276d585b114266bfa90f",
+      "installed_lib_path": "/home/xgy/remote/sst_install_mpi/lib/sst-elements-library/libSnnDL.so",
+      "layout_sensitive_relpaths": [
+        ".libs/libSnnDL.so",
+        "control/.libs/SnnPEOrchestrators.o",
+        "control/.libs/SnnPESubComponent.o",
+        "control/.libs/SnnPESubComponent_bcsr.o",
+        "control/.libs/SnnPESubComponent_spike.o",
+        "services/memory/sram_sim/model/.libs/BankedSramModel.o",
+        "services/memory/sram_sim/model/BankedSramModel.h",
+        "services/synapse/stdmem/.libs/SnnPESubComponent_mem.o",
+        "services/synapse/weights/.libs/WeightMemorySubsystem.o",
+        "services/synapse/weights/WeightMemorySubsystem.h",
+        "services/workload/snn/.libs/SnnWorkload.o"
+      ],
+      "lineage_status": "ok",
+      "missing_targets": [],
+      "rebuild_command": "cd \"/home/xgy/remote/sst_workspace/sst-elements/src/sst/elements/SnnDL\"\nmake -W \"services/workload/snn/SnnWorkload.cc\" \"services/workload/snn/SnnWorkload.lo\" -W \"control/SnnPESubComponent.cc\" \"control/SnnPESubComponent.lo\" -W \"control/SnnPEOrchestrators.cc\" \"control/SnnPEOrchestrators.lo\" -W \"control/SnnPESubComponent_spike.cc\" \"control/SnnPESubComponent_spike.lo\" -W \"control/SnnPESubComponent_bcsr.cc\" \"control/SnnPESubComponent_bcsr.lo\" -W \"services/synapse/stdmem/SnnPESubComponent_mem.cc\" \"services/synapse/stdmem/SnnPESubComponent_mem.lo\" -W \"services/synapse/weights/WeightMemorySubsystem.cc\" \"services/synapse/weights/WeightMemorySubsystem.lo\" -W \"services/memory/sram_sim/model/BankedSramModel.cc\" \"services/memory/sram_sim/model/BankedSramModel.lo\" \"libSnnDL.la\"",
+      "required_action": "none",
+      "required_target_paths": [
+        "/home/xgy/remote/sst_workspace/sst-elements/src/sst/elements/SnnDL/services/workload/snn/.libs/SnnWorkload.o",
+        "/home/xgy/remote/sst_workspace/sst-elements/src/sst/elements/SnnDL/control/.libs/SnnPESubComponent.o",
+        "/home/xgy/remote/sst_workspace/sst-elements/src/sst/elements/SnnDL/control/.libs/SnnPEOrchestrators.o",
+        "/home/xgy/remote/sst_workspace/sst-elements/src/sst/elements/SnnDL/control/.libs/SnnPESubComponent_spike.o",
+        "/home/xgy/remote/sst_workspace/sst-elements/src/sst/elements/SnnDL/control/.libs/SnnPESubComponent_bcsr.o",
+        "/home/xgy/remote/sst_workspace/sst-elements/src/sst/elements/SnnDL/services/synapse/stdmem/.libs/SnnPESubComponent_mem.o",
+        "/home/xgy/remote/sst_workspace/sst-elements/src/sst/elements/SnnDL/services/synapse/weights/.libs/WeightMemorySubsystem.o",
+        "/home/xgy/remote/sst_workspace/sst-elements/src/sst/elements/SnnDL/services/memory/sram_sim/model/.libs/BankedSramModel.o",
+        "/home/xgy/remote/sst_workspace/sst-elements/src/sst/elements/SnnDL/.libs/libSnnDL.so"
+      ],
+      "snndl_root": "/home/xgy/remote/sst_workspace/sst-elements/src/sst/elements/SnnDL",
+      "spec_path": "/home/xgy/remote/riscv_snn_isa_lab/specs/external_dyn_desc_ref_runtime_bridge.json",
+      "stale_targets": [],
+      "status": "ok",
+      "workload_impl": "riscv_snn",
+      "workspace_build_fingerprint": "01a06d7c742ce5946be478afcf9b9551870f315a96c4276d585b114266bfa90f",
+      "workspace_lib_path": "/home/xgy/remote/sst_workspace/sst-elements/src/sst/elements/SnnDL/.libs/libSnnDL.so"
+    },
+    "build_preflight_rollup": {
+      "contract_key": "riscv_snn.runtime_bridge.runtime_consumers",
+      "contract_version": 1,
+      "dependency_count": 2,
+      "enabled": true,
+      "fingerprint_match": true,
+      "full_rebuild_required": false,
+      "lineage_status": "ok",
+      "missing_target_count": 0,
+      "reporting_scope": "research_only_nonblocking",
+      "required_action": "none",
+      "required_target_count": 9,
+      "stale_target_count": 0,
+      "status": "ok"
+    },
+    "equiv_validation": {
+      "allowed_fail_checks": [],
+      "blocked_fail_checks": [
+        "smoke_failed"
+      ],
+      "ok": false,
+      "raw_summary": "smoke_failed",
+      "summary": "smoke_failed",
+      "waived_fail_checks": [],
+      "waiver_applied": false,
+      "waiver_name": null
+    },
+    "role": "runtime_bridge",
+    "run_dir": null,
+    "runtime_gate": {
+      "checks": [],
+      "family": "external_dyn_desc_ref",
+      "hard_failures": [],
+      "ok": false,
+      "policy": {
+        "allowed_completion_signature": "visible completions should be fully consumed and retire with status 0",
+        "allowed_fault_signature": "fault_count should stay zero and last_fault_csr should remain zero",
+        "fault_lifecycle_mode": "none",
+        "fault_mode": "quiescent",
+        "progress_mode": "forward_progress_expected",
+        "required_checks": [
+          "provider_bound_visible",
+          "fused_step_completion_visible",
+          "completion_visible",
+          "completion_consumed_covers_visible",
+          "fault_snapshot_consistent",
+          "fault_snapshot_quiescent",
+          "last_completion_status_clean"
+        ]
+      },
+      "summary": "not_run",
+      "warnings": []
+    },
+    "runtime_stats": {},
+    "smoke_error": "smoke /home/xgy/remote/riscv_snn_isa_lab/specs/external_dyn_desc_ref_runtime_bridge.json failed before producing a run directory\n[mesh] spec-first enabled: MESH_SPEC_JSON=/home/xgy/remote/riscv_snn_isa_lab/specs/external_dyn_desc_ref_runtime_bridge.json\n  File \"/home/xgy/remote/sst_dram_si/tools/compute_essential_summary_mesh.py\", line 5657\n    (((atlas_lookup_section or {}).get(\"premphf_base\") or {}).get(\"runtime_activity_total\", 0) or 0\n     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nSyntaxError: invalid syntax. Perhaps you forgot a comma?",
+    "smoke_returncode": 1,
+    "spec_path": "/home/xgy/remote/riscv_snn_isa_lab/specs/external_dyn_desc_ref_runtime_bridge.json",
+    "validation": "smoke_failed",
+    "validation_detail": {
+      "fail_checks": [
+        "smoke_failed"
+      ],
+      "fail_lines": [
+        "smoke /home/xgy/remote/riscv_snn_isa_lab/specs/external_dyn_desc_ref_runtime_bridge.json failed before producing a run directory",
+        "[mesh] spec-first enabled: MESH_SPEC_JSON=/home/xgy/remote/riscv_snn_isa_lab/specs/external_dyn_desc_ref_runtime_bridge.json",
+        "File \"/home/xgy/remote/sst_dram_si/tools/compute_essential_summary_mesh.py\", line 5657",
+        "(((atlas_lookup_section or {}).get(\"premphf_base\") or {}).get(\"runtime_activity_total\", 0) or 0",
+        "^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "SyntaxError: invalid syntax. Perhaps you forgot a comma?"
+      ],
+      "pass_checks": [],
+      "pass_lines": [],
+      "summary": "smoke_failed",
+      "warn_checks": [],
+      "warn_lines": []
+    },
+    "workload_impl": "riscv_snn"
+  },
+  "status": "FAIL"
+}

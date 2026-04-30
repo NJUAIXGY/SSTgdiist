@@ -1,0 +1,7 @@
+k,stats_csv,unique_reads,unique_bytes,bursts,payload,avg_burst_bytes,req_bytes,total_mib,reqs_per_mib,rowwin_triggers,rowwin_bytes,rowwin_share,avg_read_latency_0
+0,sst_dram_si/stats/kcal/k0_100us.csv,142,86464,1231,2564096,2082.94,2783232,2.654297,53.50,0,0,0.0000,38.41
+512,sst_dram_si/stats/kcal/k512_100us.csv,145,88640,1230,2562048,2082.97,2785280,2.656250,54.59,0,0,0.0000,38.41
+1024,sst_dram_si/stats/kcal/k1024_100us.csv,142,86464,1230,2562048,2082.97,2781184,2.652344,53.54,0,0,0.0000,38.41
+2048,sst_dram_si/stats/kcal/k2048_100us.csv,141,88384,1233,2568192,2082.88,2783232,2.654297,53.12,0,0,0.0000,38.41
+4096,sst_dram_si/stats/kcal/k4096_100us.csv,145,86656,1229,2560000,2082.99,2785280,2.656250,54.59,0,0,0.0000,38.41
+8192,sst_dram_si/stats/kcal/k8192_100us.csv,144,86592,1229,2560000,2082.99,2783232,2.654297,54.25,0,0,0.0000,38.41

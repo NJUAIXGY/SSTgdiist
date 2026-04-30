@@ -1,0 +1,875 @@
+{
+  "schema_version": 1,
+  "contract_name": "riscv_snn_architecture_model",
+  "contract_version": "1.0",
+  "producer": "riscv_snn_isa_lab",
+  "stage": "architecture_research_platform",
+  "authority_domain": "architecture_model_only",
+  "top_level_gate_role": "none",
+  "purpose": "Freeze the chip abstract machine taxonomy for architecture research without replacing the stable mainline gate authority.",
+  "isolation_rules": {
+    "does_not_replace_mainline_gate_authority": true,
+    "does_not_replace_runtime_gate_authority": true,
+    "does_not_replace_control_plane_abi_authority": true,
+    "default_snn_path_must_remain_unmodified": true
+  },
+  "entity_kinds": [
+    {
+      "name": "Hart",
+      "class": "control",
+      "architecturally_visible": true,
+      "microarchitecturally_modeled": false,
+      "simulator_bookkeeping_only": false
+    },
+    {
+      "name": "ProcessingElement",
+      "class": "execution",
+      "architecturally_visible": false,
+      "microarchitecturally_modeled": true,
+      "simulator_bookkeeping_only": false
+    },
+    {
+      "name": "Cluster",
+      "class": "fabric",
+      "architecturally_visible": false,
+      "microarchitecturally_modeled": true,
+      "simulator_bookkeeping_only": false
+    },
+    {
+      "name": "DispatchUnit",
+      "class": "dispatch",
+      "architecturally_visible": false,
+      "microarchitecturally_modeled": true,
+      "simulator_bookkeeping_only": false
+    },
+    {
+      "name": "EventEngine",
+      "class": "execution",
+      "architecturally_visible": false,
+      "microarchitecturally_modeled": true,
+      "simulator_bookkeeping_only": false
+    },
+    {
+      "name": "NeuronStateStore",
+      "class": "memory",
+      "architecturally_visible": false,
+      "microarchitecturally_modeled": true,
+      "simulator_bookkeeping_only": false
+    },
+    {
+      "name": "SynapseStore",
+      "class": "memory",
+      "architecturally_visible": false,
+      "microarchitecturally_modeled": true,
+      "simulator_bookkeeping_only": false
+    },
+    {
+      "name": "IngressQueue",
+      "class": "flow_control",
+      "architecturally_visible": false,
+      "microarchitecturally_modeled": true,
+      "simulator_bookkeeping_only": false
+    },
+    {
+      "name": "EgressQueue",
+      "class": "flow_control",
+      "architecturally_visible": false,
+      "microarchitecturally_modeled": true,
+      "simulator_bookkeeping_only": false
+    },
+    {
+      "name": "Router",
+      "class": "fabric",
+      "architecturally_visible": false,
+      "microarchitecturally_modeled": true,
+      "simulator_bookkeeping_only": false
+    },
+    {
+      "name": "BarrierDomain",
+      "class": "synchronization",
+      "architecturally_visible": true,
+      "microarchitecturally_modeled": true,
+      "simulator_bookkeeping_only": false
+    },
+    {
+      "name": "MemoryPort",
+      "class": "memory",
+      "architecturally_visible": false,
+      "microarchitecturally_modeled": true,
+      "simulator_bookkeeping_only": false
+    }
+  ],
+  "layer_taxonomy": [
+    {
+      "name": "isa_visible_control",
+      "description": "Hart-visible control objects such as CSR, command/completion rings, interrupts, and fault lifecycle."
+    },
+    {
+      "name": "dispatch",
+      "description": "Descriptor decode, dependency ordering, and barrier-domain admission."
+    },
+    {
+      "name": "execution",
+      "description": "Neuron update, synapse apply, and local event execution engines."
+    },
+    {
+      "name": "memory",
+      "description": "Control memory, local state memory, synapse memory, and transfer paths."
+    },
+    {
+      "name": "fabric",
+      "description": "Ingress/egress buffering, routing, multicast, and inter-PE/cluster transport."
+    }
+  ],
+  "time_taxonomy": [
+    {
+      "name": "architectural_time",
+      "description": "Epoch, barrier release, and completion visibility boundaries."
+    },
+    {
+      "name": "microarchitectural_time",
+      "description": "Queue wait, memory service, router transit, and engine occupancy timing."
+    },
+    {
+      "name": "simulator_bookkeeping_time",
+      "description": "Artifact refresh, summary rebuild, and observer/history maintenance time."
+    }
+  ],
+  "counter_taxonomy": [
+    {
+      "name": "correctness",
+      "description": "Accepted/retired command, completion, and fault lifecycle counters."
+    },
+    {
+      "name": "execution_flow",
+      "description": "Event intake, local execution, spike generation, and barrier wait counters."
+    },
+    {
+      "name": "memory",
+      "description": "Neuron-state, synapse, backing-memory, and transfer-path counters."
+    },
+    {
+      "name": "congestion",
+      "description": "Ingress/egress occupancy, router pressure, and backpressure counters."
+    }
+  ],
+  "fused_step_state_machine": {
+    "semantic_statement": "FUSED_STEP is the architectural step primitive for the riscv_snn research model and retires only after architectural state commit, local outbound handover, and barrier visibility are complete.",
+    "completion_boundary": {
+      "boundary_name": "fused_step_completion_commit",
+      "required_conditions": [
+        "architectural_state_committed",
+        "local_outbound_handover_complete",
+        "barrier_release_visible",
+        "no_higher_priority_fault_pending"
+      ]
+    },
+    "fault_boundary": {
+      "boundary_name": "fused_step_fault_commit",
+      "required_conditions": [
+        "fault_classified",
+        "fault_csr_committed",
+        "completion_suppressed_or_replaced_by_fault"
+      ]
+    },
+    "visibility_domains": {
+      "architectural_state": "software-visible state committed at completion boundary",
+      "microarchitectural_progress": "execution progress before completion remains model-visible but not software-visible",
+      "simulator_bookkeeping": "artifact refresh and report maintenance never redefine fused-step architectural completion"
+    },
+    "states": [
+      {
+        "name": "Idle",
+        "entry_condition": "No accepted fused-step command is currently active for the hart.",
+        "exit_condition": "A fused-step command is accepted from the command queue.",
+        "architecturally_visible": false,
+        "microarchitectural_only": true,
+        "simulator_bookkeeping_only": false,
+        "counter_groups": [
+          "correctness"
+        ]
+      },
+      {
+        "name": "Accepted",
+        "entry_condition": "A fused-step command becomes owned by the backend after command admission.",
+        "exit_condition": "Descriptor decode begins for the accepted fused-step command.",
+        "architecturally_visible": true,
+        "microarchitectural_only": false,
+        "simulator_bookkeeping_only": false,
+        "counter_groups": [
+          "correctness"
+        ]
+      },
+      {
+        "name": "Decoded",
+        "entry_condition": "Descriptor fields and execution intent are decoded from the accepted command.",
+        "exit_condition": "All prerequisite resources are identified and reservation is attempted.",
+        "architecturally_visible": false,
+        "microarchitectural_only": true,
+        "simulator_bookkeeping_only": false,
+        "counter_groups": [
+          "correctness",
+          "execution_flow"
+        ]
+      },
+      {
+        "name": "ResourcesReserved",
+        "entry_condition": "Execution resources, queue slots, and barrier participation are reserved for the fused-step command.",
+        "exit_condition": "The execution engine starts consuming the reserved work.",
+        "architecturally_visible": false,
+        "microarchitectural_only": true,
+        "simulator_bookkeeping_only": false,
+        "counter_groups": [
+          "execution_flow",
+          "congestion"
+        ]
+      },
+      {
+        "name": "Executing",
+        "entry_condition": "Neuron and synapse work for the current step is being processed.",
+        "exit_condition": "Execution-local work is complete and outbound spike handover begins.",
+        "architecturally_visible": false,
+        "microarchitectural_only": true,
+        "simulator_bookkeeping_only": false,
+        "counter_groups": [
+          "execution_flow",
+          "memory"
+        ]
+      },
+      {
+        "name": "OutboundDraining",
+        "entry_condition": "Locally generated outbound spikes are draining across the egress handover boundary.",
+        "exit_condition": "All local outbound traffic for the step has crossed the local egress/fabric handover boundary.",
+        "architecturally_visible": false,
+        "microarchitectural_only": true,
+        "simulator_bookkeeping_only": false,
+        "counter_groups": [
+          "execution_flow",
+          "congestion"
+        ]
+      },
+      {
+        "name": "BarrierWaiting",
+        "entry_condition": "Local execution is complete but barrier release has not yet become visible to the hart domain.",
+        "exit_condition": "Barrier release becomes visible and completion can be committed.",
+        "architecturally_visible": true,
+        "microarchitectural_only": false,
+        "simulator_bookkeeping_only": false,
+        "counter_groups": [
+          "execution_flow",
+          "correctness"
+        ]
+      },
+      {
+        "name": "Completed",
+        "entry_condition": "Completion boundary conditions are satisfied and a software-visible completion may retire.",
+        "exit_condition": "The hart consumes the completion or advances to the next accepted command.",
+        "architecturally_visible": true,
+        "microarchitectural_only": false,
+        "simulator_bookkeeping_only": false,
+        "counter_groups": [
+          "correctness",
+          "execution_flow"
+        ]
+      },
+      {
+        "name": "Faulted",
+        "entry_condition": "A higher-priority fault reaches the fused-step fault boundary before architectural completion retires.",
+        "exit_condition": "Software clears or rearms fault state according to the control-plane fault contract.",
+        "architecturally_visible": true,
+        "microarchitectural_only": false,
+        "simulator_bookkeeping_only": false,
+        "counter_groups": [
+          "correctness"
+        ]
+      }
+    ]
+  },
+  "program_control_event_taxonomy": {
+    "semantic_statement": "Program control events freeze the software-visible milestones that reference-program profiles may compose without redefining fused-step completion or fault boundaries.",
+    "events": [
+      {
+        "name": "completion_visible",
+        "description": "A software-visible completion has retired to the completion surface."
+      },
+      {
+        "name": "fault_snapshot_visible",
+        "description": "An accepted fault snapshot is architecturally visible in the fault CSR surface."
+      },
+      {
+        "name": "msnnfault_clear",
+        "description": "Software cleared the visible fault snapshot before the next architecturally relevant step."
+      },
+      {
+        "name": "fault_snapshot_overwrite_visible",
+        "description": "A later accepted fault overwrote the previously visible fault snapshot."
+      },
+      {
+        "name": "barrier_wait_visible",
+        "description": "The hart reached a barrier-wait architectural boundary before completion became visible."
+      },
+      {
+        "name": "barrier_release_visible",
+        "description": "Barrier release became visible to the hart domain and enabled completion retirement."
+      },
+      {
+        "name": "stat_snapshot_accepted_visible",
+        "description": "A program-level StatSnapshot command retired a completion carrying the accepted/basic snapshot payload."
+      },
+      {
+        "name": "stat_snapshot_completed_count_visible",
+        "description": "A program-level StatSnapshot command retired a completion carrying the completed-count snapshot payload."
+      },
+      {
+        "name": "stat_snapshot_provider_bound_visible",
+        "description": "A program-level StatSnapshot command retired a completion carrying the provider-bound snapshot payload."
+      },
+      {
+        "name": "stat_snapshot_bad_selector_fault_visible",
+        "description": "A program-level StatSnapshot command retired through an architecturally visible bad-selector fault snapshot."
+      }
+    ]
+  },
+  "program_semantic_profiles": {
+    "semantic_statement": "Program semantic profiles freeze how runtime-gate families expand into reference-program traces without allowing family-local Python helpers to redefine the architecture contract.",
+    "profiles": [
+      {
+        "profile_name": "accepted_fault_single_step",
+        "semantic_statement": "Single-step accepted-fault families retire one architecturally visible faulted step and may inherit family-local divergence points from runtime-gate policy.",
+        "step_templates": [
+          {
+            "step_name": "program_step_0",
+            "terminal_state": "Faulted",
+            "control_events": [
+              "fault_snapshot_visible"
+            ],
+            "memory_domains": [
+              "ControlMemory"
+            ],
+            "fabric_stages": [
+              "ingress_receive",
+              "execution_consume"
+            ],
+            "include_runtime_gate_divergence_points": true
+          }
+        ]
+      },
+      {
+        "profile_name": "barrier_wait_then_completion",
+        "semantic_statement": "Barrier/WFI families first expose a barrier-wait architectural state and then retire a completion only after barrier release becomes visible.",
+        "step_templates": [
+          {
+            "step_name": "barrier_wait_visible",
+            "terminal_state": "BarrierWaiting",
+            "control_events": [
+              "barrier_wait_visible"
+            ],
+            "memory_domains": [
+              "ControlMemory"
+            ],
+            "fabric_stages": [
+              "ingress_receive",
+              "execution_consume"
+            ]
+          },
+          {
+            "step_name": "completion_visible_after_wfi",
+            "terminal_state": "Completed",
+            "control_events": [
+              "barrier_release_visible",
+              "completion_visible"
+            ],
+            "memory_domains": [
+              "ControlMemory"
+            ],
+            "fabric_stages": [
+              "ingress_receive",
+              "execution_consume"
+            ],
+            "include_runtime_gate_divergence_points": true
+          }
+        ]
+      },
+      {
+        "profile_name": "clear_then_refault",
+        "semantic_statement": "Clear-then-refault families expose one accepted fault, a software-visible clear, and then a second accepted fault snapshot.",
+        "step_templates": [
+          {
+            "step_name": "fault_visible",
+            "terminal_state": "Faulted",
+            "control_events": [
+              "fault_snapshot_visible"
+            ],
+            "memory_domains": [
+              "ControlMemory"
+            ],
+            "fabric_stages": [
+              "ingress_receive",
+              "execution_consume"
+            ],
+            "include_runtime_gate_divergence_points": true
+          },
+          {
+            "step_name": "fault_rearmed_visible",
+            "terminal_state": "Faulted",
+            "control_events": [
+              "msnnfault_clear",
+              "fault_snapshot_visible"
+            ],
+            "memory_domains": [
+              "ControlMemory"
+            ],
+            "fabric_stages": [
+              "ingress_receive",
+              "execution_consume"
+            ],
+            "include_runtime_gate_divergence_points": true,
+            "clear_fault_before_step": true
+          }
+        ]
+      },
+      {
+        "profile_name": "completed_single_step",
+        "semantic_statement": "Quiescent success families retire a single software-visible completion step.",
+        "step_templates": [
+          {
+            "step_name": "program_step_0",
+            "terminal_state": "Completed",
+            "control_events": [
+              "completion_visible"
+            ],
+            "memory_domains": [
+              "ControlMemory"
+            ],
+            "fabric_stages": [
+              "ingress_receive",
+              "execution_consume"
+            ],
+            "include_runtime_gate_divergence_points": true
+          }
+        ]
+      },
+      {
+        "profile_name": "stat_snapshot_single_step",
+        "semantic_statement": "Accepted/basic StatSnapshot families retire one non-fused program-level control command whose completion payload reports the accepted-command snapshot without reusing fused-step execution semantics.",
+        "step_templates": [
+          {
+            "step_name": "stat_snapshot_accepted_visible",
+            "command_kind": "stat_snapshot",
+            "terminal_state": "Completed",
+            "control_events": [
+              "completion_visible",
+              "stat_snapshot_accepted_visible"
+            ],
+            "memory_domains": [
+              "ControlMemory"
+            ],
+            "fabric_stages": [],
+            "snapshot_summary": {
+              "snapshot_kind": "accepted_basic",
+              "selector_name": "AcceptedCommands",
+              "selector_value": 0,
+              "result_kind": "u64_counter",
+              "result_field": "accepted_commands"
+            }
+          }
+        ]
+      },
+      {
+        "profile_name": "stat_snapshot_completed_single_step",
+        "semantic_statement": "Completed-count StatSnapshot families retire one non-fused program-level control command whose completion payload reports the completed-command snapshot.",
+        "step_templates": [
+          {
+            "step_name": "stat_snapshot_completed_count_visible",
+            "command_kind": "stat_snapshot",
+            "terminal_state": "Completed",
+            "control_events": [
+              "completion_visible",
+              "stat_snapshot_completed_count_visible"
+            ],
+            "memory_domains": [
+              "ControlMemory"
+            ],
+            "fabric_stages": [],
+            "snapshot_summary": {
+              "snapshot_kind": "completed_count",
+              "selector_name": "CompletedCommands",
+              "selector_value": 1,
+              "result_kind": "u64_counter",
+              "result_field": "completed_commands"
+            }
+          }
+        ]
+      },
+      {
+        "profile_name": "stat_snapshot_provider_bound_single_step",
+        "semantic_statement": "Provider-bound StatSnapshot families retire one non-fused program-level control command whose completion payload reports the backend provider-bound snapshot.",
+        "step_templates": [
+          {
+            "step_name": "stat_snapshot_provider_bound_visible",
+            "command_kind": "stat_snapshot",
+            "terminal_state": "Completed",
+            "control_events": [
+              "completion_visible",
+              "stat_snapshot_provider_bound_visible"
+            ],
+            "memory_domains": [
+              "ControlMemory"
+            ],
+            "fabric_stages": [],
+            "snapshot_summary": {
+              "snapshot_kind": "provider_bound",
+              "selector_name": "ProviderBound",
+              "selector_value": 2,
+              "result_kind": "boolean_flag",
+              "result_field": "provider_bound"
+            }
+          }
+        ]
+      },
+      {
+        "profile_name": "stat_snapshot_bad_selector_fault",
+        "semantic_statement": "Bad-selector StatSnapshot families retire one non-fused program-level control command through an architecturally visible fault snapshot rather than a successful completion payload.",
+        "step_templates": [
+          {
+            "step_name": "stat_snapshot_bad_selector_fault_visible",
+            "command_kind": "stat_snapshot",
+            "terminal_state": "Faulted",
+            "control_events": [
+              "fault_snapshot_visible",
+              "stat_snapshot_bad_selector_fault_visible"
+            ],
+            "memory_domains": [
+              "ControlMemory"
+            ],
+            "fabric_stages": [],
+            "snapshot_summary": {
+              "snapshot_kind": "bad_selector_fault",
+              "selector_name": "InvalidSelector",
+              "selector_value": 4294967295,
+              "selector_valid": false,
+              "result_kind": "fault_snapshot",
+              "fault_reason": "bad_selector"
+            }
+          }
+        ]
+      },
+      {
+        "profile_name": "overwrite_chain",
+        "semantic_statement": "Overwrite-chain families expose an accepted fault followed by a second accepted fault that overwrites the previously visible snapshot.",
+        "step_templates": [
+          {
+            "step_name": "fault_visible",
+            "terminal_state": "Faulted",
+            "control_events": [
+              "fault_snapshot_visible"
+            ],
+            "memory_domains": [
+              "ControlMemory"
+            ],
+            "fabric_stages": [
+              "ingress_receive",
+              "execution_consume"
+            ],
+            "include_runtime_gate_divergence_points": true
+          },
+          {
+            "step_name": "fault_overwrite_visible",
+            "terminal_state": "Faulted",
+            "control_events": [
+              "fault_snapshot_overwrite_visible"
+            ],
+            "memory_domains": [
+              "ControlMemory"
+            ],
+            "fabric_stages": [
+              "ingress_receive",
+              "execution_consume"
+            ],
+            "include_runtime_gate_divergence_points": true,
+            "overwrite_visible_fault_snapshot": true
+          }
+        ]
+      }
+    ]
+  },
+  "memory_taxonomy": {
+    "semantic_statement": "Memory hierarchy for the riscv_snn architecture model is frozen as control-visible state, PE-local hot state, synapse backing, cold backing storage, and explicit transfer paths.",
+    "memory_domains": [
+      {
+        "name": "ControlMemory",
+        "contains": [
+          "csr_state",
+          "command_ring",
+          "completion_ring",
+          "fault_state",
+          "descriptor_headers"
+        ],
+        "architecturally_visible": true,
+        "shared_with": [
+          "Hart",
+          "DispatchUnit"
+        ],
+        "contention_scope": "hart_local_control_path",
+        "persistence_scope": "until_software_mutates_or_consumes",
+        "notes": "Control-plane visible storage only; does not carry neuron or synapse hot state."
+      },
+      {
+        "name": "LocalStateMemory",
+        "contains": [
+          "membrane_state",
+          "threshold_state",
+          "refractory_state",
+          "local_hot_neuron_state"
+        ],
+        "architecturally_visible": false,
+        "shared_with": [
+          "ProcessingElement",
+          "EventEngine"
+        ],
+        "contention_scope": "pe_local_execution_path",
+        "persistence_scope": "across_steps_until_updated",
+        "notes": "PE-local neuron state used during event execution."
+      },
+      {
+        "name": "SynapseMemory",
+        "contains": [
+          "synapse_weights",
+          "connectivity",
+          "fanout_metadata"
+        ],
+        "architecturally_visible": false,
+        "shared_with": [
+          "ProcessingElement",
+          "EventEngine"
+        ],
+        "contention_scope": "pe_local_synapse_service",
+        "persistence_scope": "across_steps_until_reconfigured",
+        "notes": "Synapse topology and weight state, distinct from control memory."
+      },
+      {
+        "name": "BackingMemory",
+        "contains": [
+          "dram_backing_arrays",
+          "host_seeded_images",
+          "cold_state_snapshots"
+        ],
+        "architecturally_visible": false,
+        "shared_with": [
+          "Cluster",
+          "MemoryPort"
+        ],
+        "contention_scope": "cluster_or_system_memory_service",
+        "persistence_scope": "run_or_image_lifetime",
+        "notes": "Cold storage and large-capacity backing store outside PE-local hot state."
+      },
+      {
+        "name": "TransferPath",
+        "contains": [
+          "prefetch_stream",
+          "fill_path",
+          "spill_path",
+          "dma_like_transfer_records"
+        ],
+        "architecturally_visible": false,
+        "shared_with": [
+          "DispatchUnit",
+          "MemoryPort",
+          "ProcessingElement"
+        ],
+        "contention_scope": "shared_transfer_and_memory_port_bandwidth",
+        "persistence_scope": "transaction_lifetime",
+        "notes": "Movement path for prefetch, fill, spill, and transfer scheduling; not a persistent storage pool."
+      }
+    ]
+  },
+  "fabric_taxonomy": {
+    "semantic_statement": "Fabric taxonomy is frozen as the ordered event path from local ingress receive through remote ingress commit, with divergence limited to explicitly declared microarchitectural pressure points.",
+    "stages": [
+      {
+        "name": "ingress_receive",
+        "description": "Receive local or remote events into the ingress side of the chip or processing element.",
+        "architecturally_visible": false,
+        "microarchitecturally_modeled": true,
+        "primary_counters": [
+          "execution_flow",
+          "congestion"
+        ],
+        "blocking_sources": [
+          "ingress_queue_full",
+          "router_backpressure"
+        ]
+      },
+      {
+        "name": "local_classify",
+        "description": "Classify received events by destination processing element, neuron group, and priority.",
+        "architecturally_visible": false,
+        "microarchitecturally_modeled": true,
+        "primary_counters": [
+          "execution_flow"
+        ],
+        "blocking_sources": [
+          "classifier_busy",
+          "metadata_unavailable"
+        ]
+      },
+      {
+        "name": "queue_merge",
+        "description": "Merge multiple event sources into the local execution queue or merge point.",
+        "architecturally_visible": false,
+        "microarchitecturally_modeled": true,
+        "primary_counters": [
+          "congestion",
+          "execution_flow"
+        ],
+        "blocking_sources": [
+          "queue_occupancy",
+          "priority_conflict"
+        ]
+      },
+      {
+        "name": "execution_consume",
+        "description": "Consume queued events into the local execution engine for neuron and synapse work.",
+        "architecturally_visible": false,
+        "microarchitecturally_modeled": true,
+        "primary_counters": [
+          "execution_flow",
+          "memory"
+        ],
+        "blocking_sources": [
+          "execution_slot_busy",
+          "memory_service_wait"
+        ]
+      },
+      {
+        "name": "spike_generate",
+        "description": "Generate outbound spikes or remote events after local execution completes.",
+        "architecturally_visible": false,
+        "microarchitecturally_modeled": true,
+        "primary_counters": [
+          "execution_flow"
+        ],
+        "blocking_sources": [
+          "fanout_expansion_wait",
+          "egress_credit_wait"
+        ]
+      },
+      {
+        "name": "egress_enqueue",
+        "description": "Enqueue outbound traffic into the local egress queue.",
+        "architecturally_visible": false,
+        "microarchitecturally_modeled": true,
+        "primary_counters": [
+          "congestion"
+        ],
+        "blocking_sources": [
+          "egress_queue_full",
+          "credit_exhausted"
+        ]
+      },
+      {
+        "name": "router_transit",
+        "description": "Forward traffic through cluster or router fabric toward the remote destination.",
+        "architecturally_visible": false,
+        "microarchitecturally_modeled": true,
+        "primary_counters": [
+          "congestion"
+        ],
+        "blocking_sources": [
+          "router_credit_backpressure",
+          "multicast_replication_wait"
+        ]
+      },
+      {
+        "name": "remote_ingress_commit",
+        "description": "Commit delivered traffic into the remote ingress side so remote classification may proceed.",
+        "architecturally_visible": false,
+        "microarchitecturally_modeled": true,
+        "primary_counters": [
+          "execution_flow",
+          "congestion"
+        ],
+        "blocking_sources": [
+          "remote_ingress_full",
+          "remote_classify_wait"
+        ]
+      }
+    ],
+    "allowed_divergence_points": [
+      "queue_occupancy",
+      "backpressure",
+      "multicast_expansion",
+      "memory_service_conflict"
+    ]
+  },
+  "program_runtime_evidence_contract": {
+    "semantic_statement": "Program evidence extraction consumes real run_dir artifacts, freezes one authority-backed projection into reference-program summaries, and records which control events came from direct counters versus profile-projected inference.",
+    "contract_name": "program_runtime_evidence_contract",
+    "contract_version": "1.0",
+    "source_kinds": [
+      {
+        "name": "runtime_bridge_run_dir",
+        "description": "Evidence extracted from the runtime-bridge run_dir referenced by the dated equivalence surface."
+      },
+      {
+        "name": "toolchain_run_dir",
+        "description": "Evidence extracted from the toolchain bridge run_dir registered in the dated toolchain regress matrix."
+      }
+    ],
+    "required_artifacts": [
+      "essential_summary_mesh.json",
+      "mesh_stats.csv",
+      "validation.log"
+    ],
+    "required_summary_sections": [
+      "model",
+      "step",
+      "contracts"
+    ],
+    "required_runtime_stats": [
+      "riscv_snn_submitted_commands",
+      "riscv_snn_accepted_commands",
+      "riscv_snn_completion_visible_count",
+      "riscv_snn_completion_consumed_count",
+      "riscv_snn_fused_step_completion_count",
+      "riscv_snn_fault_count",
+      "riscv_snn_last_completion_status",
+      "riscv_snn_last_fault_csr",
+      "riscv_snn_backend_runtime_bridge_provider_bound"
+    ],
+    "control_event_projection": {
+      "completion_visible": {
+        "evidence_mode": "runtime_stat_nonzero",
+        "runtime_stat": "riscv_snn_completion_visible_count"
+      },
+      "fault_snapshot_visible": {
+        "evidence_mode": "runtime_stat_nonzero",
+        "runtime_stat": "riscv_snn_fault_count"
+      },
+      "msnnfault_clear": {
+        "evidence_mode": "profile_control_event"
+      },
+      "fault_snapshot_overwrite_visible": {
+        "evidence_mode": "profile_control_event"
+      },
+      "barrier_wait_visible": {
+        "evidence_mode": "profile_control_event"
+      },
+      "barrier_release_visible": {
+        "evidence_mode": "profile_control_event"
+      },
+      "stat_snapshot_accepted_visible": {
+        "evidence_mode": "profile_control_event"
+      },
+      "stat_snapshot_completed_count_visible": {
+        "evidence_mode": "profile_control_event"
+      },
+      "stat_snapshot_provider_bound_visible": {
+        "evidence_mode": "profile_control_event"
+      },
+      "stat_snapshot_bad_selector_fault_visible": {
+        "evidence_mode": "profile_control_event"
+      }
+    }
+  }
+}

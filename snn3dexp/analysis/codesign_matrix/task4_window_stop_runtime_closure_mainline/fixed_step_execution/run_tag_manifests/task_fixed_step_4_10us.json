@@ -1,0 +1,14 @@
+{
+  "case_ids": [
+    "full_3d_snn_window",
+    "full_3d_snn_window_bundle_v3",
+    "full_3d_snn_window_monolithic_proxy",
+    "full_3d_snn_window_gating_event_synth"
+  ],
+  "run_tags_by_case": {
+    "full_3d_snn_window": "task_fixed_step_4_10us",
+    "full_3d_snn_window_bundle_v3": "task_fixed_step_4_10us",
+    "full_3d_snn_window_monolithic_proxy": "task_fixed_step_4_10us",
+    "full_3d_snn_window_gating_event_synth": "task_fixed_step_4_10us"
+  }
+}

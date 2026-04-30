@@ -1,0 +1,13 @@
+\begin{tabular}{l l l l r r r r r}
+\hline
+Case & NoC & Mem & Mapping & SameHome & VTarget & VHops & VPress & Hotspot \\
+\hline
+Baseline 2D & MulticastRouter & legacy\_per\_pe & z\_mirror & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 \\
+Memory-Only 3D & MulticastRouter & hbm\_like & xy\_neighbor & 0.500 & 0.000 & 0.500 & 0.200 & 1.250 \\
+NoC-Only 3D & MulticastRouter3DNative & legacy\_per\_pe & z\_mirror & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 \\
+Full 3D & MulticastRouter3DNative & hbm\_like & z\_blind & 0.500 & 0.000 & 0.500 & 0.200 & 1.250 \\
+Full 3D + Monolithic Proxy & MulticastRouter3DNative & monolithic\_like & 3d\_aware & 0.500 & 0.250 & 0.000 & 0.150 & 1.250 \\
+Full 3D + Tile Bundle v3 & MulticastRouter3DNative & hbm\_like & 3d\_aware & 0.906 & 0.406 & 0.500 & 0.444 & 1.250 \\
+Full 3D + Runtime Adaptive & MulticastRouter3DNative & hbm\_like & 3d\_aware & 0.906 & 0.406 & 0.461 & 0.438 & 1.230 \\
+\hline
+\end{tabular}

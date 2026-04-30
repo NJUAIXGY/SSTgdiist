@@ -1,0 +1,235 @@
+{
+  "case_id": "full_3d_monolithic_proxy",
+  "run_root": "/home/xgy/remote/snn3dexp/runs/full_3d_monolithic_proxy/task20_monolithic_proxy_runtime_smoke_v2",
+  "mesh_shape": "4x4x2",
+  "route": {
+    "native_3d_active": true,
+    "vertical_route_order": "zxy",
+    "multicast_block_shape": [
+      2,
+      2,
+      2
+    ],
+    "active_route_node_count": 32,
+    "ingress_replication_cost": 1.1875,
+    "inter_die_multicast_fanout": 0.5,
+    "die_local_replication_cost": 1.5,
+    "average_vertical_subtree_depth": 1.0,
+    "packet_versions": {
+      "tx_spikekey_v4_pkts_total": 304,
+      "tx_spiketilekey_v4_pkts_total": 0,
+      "tx_bundle_v1_pkts_total": 0,
+      "tx_bundle_v2_pkts_total": 0,
+      "tx_bundle_v3_pkts_total": 0,
+      "rx_spikekey_v4_total": 512,
+      "rx_spiketilekey_v4_total": 0,
+      "router_bundle_v1_rx_total": 0,
+      "router_bundle_v2_rx_total": 0,
+      "router_bundle_v3_rx_total": 0
+    },
+    "router_anomalies": {
+      "bundle_v3_invalid_shape_total": 0,
+      "bundle_v3_block_z_mismatch_total": 0,
+      "bundle_v3_ingress_out_of_block_total": 0,
+      "bundle_v3_rebuild_fail_total": 0
+    },
+    "derived_metrics": {
+      "direct_v4_share": 1.0,
+      "tile_bundle_v3_share": 0.0,
+      "bundle_v3_router_rx_per_tx": 0.0,
+      "tilekey_rx_per_bundle_v3_tx": 0.0,
+      "router_anomaly_density": 0.0,
+      "spikekey_v4_rx_per_direct_v4_tx": 1.6842105263157894
+    }
+  },
+  "memory": {
+    "kind": "monolithic_like",
+    "graph_type": "memHierarchy_tier_local_stack",
+    "real_synapse_sources": 32,
+    "active_memory_node_count": 32,
+    "remote_home_active_node_count": 0,
+    "memory_requests_total": 1752,
+    "remote_home_memory_requests_total": 0,
+    "active_stack_count": 0,
+    "semantic_addressing": {
+      "enabled": true,
+      "stack_region_bytes": 1048576,
+      "slot_bytes": 16384,
+      "region_layout": {
+        "stack_region_bytes": 1048576,
+        "slot_count": 4,
+        "metadata": {
+          "base_offset": 0,
+          "size_bytes": 65536,
+          "slot_bytes": 16384
+        },
+        "gather": {
+          "base_offset": 65536,
+          "size_bytes": 655360,
+          "slot_bytes": 163840
+        },
+        "stream": {
+          "base_offset": 720896,
+          "size_bytes": 262144,
+          "slot_bytes": 65536
+        },
+        "writeback": {
+          "base_offset": 983040,
+          "size_bytes": 65536,
+          "slot_bytes": 16384
+        },
+        "slot_bytes": 16384
+      }
+    },
+    "access_semantics": {
+      "tier_local_home_access_count": 16,
+      "same_xy_cross_tier_access_count": 16,
+      "remote_home_access_count": 32,
+      "tier_local_home_access_ratio": 0.25,
+      "same_xy_cross_tier_access_ratio": 0.25,
+      "remote_home_access_ratio": 0.5
+    },
+    "synapse_semantics": {
+      "synapse_gather_reads": 216,
+      "synapse_gather_region_reads": 216,
+      "sparse_window_streams": 224,
+      "sparse_window_stream_region_writes": 224,
+      "metadata_lookup_reads": 216,
+      "metadata_lookup_region_reads": 216,
+      "writeback_region_writes": 224
+    },
+    "traffic_driven_runtime": {
+      "enabled": true,
+      "metadata_lookup_demands": 256,
+      "synapse_gather_demands": 512,
+      "stream_region_demands": 512,
+      "writeback_region_demands": 256,
+      "metadata_lookup_issued": 216,
+      "synapse_gather_issued": 216,
+      "stream_region_issued": 224,
+      "writeback_region_issued": 224,
+      "metadata_lookup_backlog": 40,
+      "synapse_gather_backlog": 296,
+      "stream_region_backlog": 288,
+      "writeback_region_backlog": 32,
+      "regions": {
+        "metadata_lookup": {
+          "demand": 256,
+          "issued": 216,
+          "backlog": 40,
+          "issue_efficiency": 0.84375,
+          "backlog_ratio": 0.15625,
+          "service_deficit": 40
+        },
+        "synapse_gather": {
+          "demand": 512,
+          "issued": 216,
+          "backlog": 296,
+          "issue_efficiency": 0.421875,
+          "backlog_ratio": 0.578125,
+          "service_deficit": 296
+        },
+        "stream_region": {
+          "demand": 512,
+          "issued": 224,
+          "backlog": 288,
+          "issue_efficiency": 0.4375,
+          "backlog_ratio": 0.5625,
+          "service_deficit": 288
+        },
+        "writeback_region": {
+          "demand": 256,
+          "issued": 224,
+          "backlog": 32,
+          "issue_efficiency": 0.875,
+          "backlog_ratio": 0.125,
+          "service_deficit": 32
+        }
+      },
+      "total_service_deficit": 656,
+      "most_pressured_region": "synapse_gather"
+    },
+    "home_access_pressure": {
+      "enabled": true,
+      "classes": {
+        "tier_local_home": {
+          "metadata_lookup_demands_total": 0,
+          "gather_demands_total": 128,
+          "stream_demands_total": 128,
+          "writeback_demands_total": 0,
+          "total_demands": 256,
+          "demand_share": 0.25,
+          "region_service_deficit_attribution": {
+            "metadata_lookup": 0.0,
+            "synapse_gather": 74.0,
+            "stream_region": 72.0,
+            "writeback_region": 0.0
+          },
+          "service_deficit_attribution": 146.0
+        },
+        "same_xy_cross_tier": {
+          "metadata_lookup_demands_total": 0,
+          "gather_demands_total": 336,
+          "stream_demands_total": 336,
+          "writeback_demands_total": 0,
+          "total_demands": 672,
+          "demand_share": 0.65625,
+          "region_service_deficit_attribution": {
+            "metadata_lookup": 0.0,
+            "synapse_gather": 194.25,
+            "stream_region": 189.0,
+            "writeback_region": 0.0
+          },
+          "service_deficit_attribution": 383.25
+        },
+        "remote_home": {
+          "metadata_lookup_demands_total": 0,
+          "gather_demands_total": 48,
+          "stream_demands_total": 48,
+          "writeback_demands_total": 0,
+          "total_demands": 96,
+          "demand_share": 0.09375,
+          "region_service_deficit_attribution": {
+            "metadata_lookup": 0.0,
+            "synapse_gather": 27.75,
+            "stream_region": 27.0,
+            "writeback_region": 0.0
+          },
+          "service_deficit_attribution": 54.75
+        }
+      },
+      "total_home_access_demands": 1024,
+      "dominant_home_access_class": "same_xy_cross_tier",
+      "dominant_pressure_region": "synapse_gather",
+      "attributed_service_deficit_total": 584.0,
+      "unattributed_service_deficit": 72.0
+    }
+  },
+  "joint": {
+    "vertical_hops_ratio": 0.0,
+    "remote_home_ratio": 0.0,
+    "route_memory_overlap": 1.0
+  },
+  "thermal": {
+    "enabled": true,
+    "tier_activity_source": "runtime",
+    "tier_activity": [
+      {
+        "z": 0,
+        "activity": 2284.0
+      },
+      {
+        "z": 1,
+        "activity": 2284.0
+      }
+    ],
+    "thermal_hotspot_score": 1.25,
+    "vertical_link_pressure": 0.15,
+    "stack_hotspot_penalty": 0.5,
+    "physical_model_version": "v2",
+    "vertical_bandwidth_budget": 3.5,
+    "tsv_miv_budget_pressure": 0.05357142857142857,
+    "power_density_score": 2.515625,
+    "reliability_penalty": 0.7114955357142857
+  }
+}

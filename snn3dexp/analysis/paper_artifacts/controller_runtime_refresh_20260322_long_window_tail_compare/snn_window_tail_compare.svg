@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1160" height="700" viewBox="0 0 1160 700">
+<rect width="100%" height="100%" fill="#fcfbf7"/>
+<text x="40" y="40" font-family="Helvetica, Arial, sans-serif" font-size="24" font-weight="700" fill="#111827">SNN Window Tail-Clearance Compare</text>
+<text x="40" y="64" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#4b5563">Short-window backlog/service-deficit clearance for direct-v4 and bundle-v3 windowed SNN runtime</text>
+<text x="40" y="86" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#6b7280">direct=full_3d_snn_window | bundle=full_3d_snn_window_bundle_v3 | tail_clear_gap_ns=8000</text>
+<line x1="86" y1="590.00" x2="1124" y2="590.00" stroke="#d1d5db" stroke-width="1"/>
+<text x="74" y="594.00" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#6b7280">0.0</text>
+<line x1="86" y1="494.80" x2="1124" y2="494.80" stroke="#d1d5db" stroke-width="1"/>
+<text x="74" y="498.80" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#6b7280">2.0</text>
+<line x1="86" y1="399.60" x2="1124" y2="399.60" stroke="#d1d5db" stroke-width="1"/>
+<text x="74" y="403.60" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#6b7280">4.0</text>
+<line x1="86" y1="304.40" x2="1124" y2="304.40" stroke="#d1d5db" stroke-width="1"/>
+<text x="74" y="308.40" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#6b7280">6.0</text>
+<line x1="86" y1="209.20" x2="1124" y2="209.20" stroke="#d1d5db" stroke-width="1"/>
+<text x="74" y="213.20" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#6b7280">8.0</text>
+<line x1="86" y1="114.00" x2="1124" y2="114.00" stroke="#d1d5db" stroke-width="1"/>
+<text x="74" y="118.00" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#6b7280">10.0</text>
+<line x1="86" y1="590" x2="1124" y2="590" stroke="#9ca3af" stroke-width="1.5"/>
+<line x1="86" y1="114" x2="86" y2="590" stroke="#9ca3af" stroke-width="1.5"/>
+<line x1="86.00" y1="114" x2="86.00" y2="590" stroke="#f3f4f6" stroke-width="1"/>
+<text x="86.00" y="636" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#374151">2us</text>
+<text x="86.00" y="656" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#6b7280">2000 ns</text>
+<line x1="547.33" y1="114" x2="547.33" y2="590" stroke="#f3f4f6" stroke-width="1"/>
+<text x="547.33" y="636" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#374151">10us</text>
+<text x="547.33" y="656" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#6b7280">10000 ns</text>
+<line x1="1124.00" y1="114" x2="1124.00" y2="590" stroke="#f3f4f6" stroke-width="1"/>
+<text x="1124.00" y="636" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#374151">20us</text>
+<text x="1124.00" y="656" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#6b7280">20000 ns</text>
+<polyline points="86.00,590.00 547.33,590.00 1124.00,590.00" fill="none" stroke="#264653" stroke-width="3"/>
+<polyline points="86.00,209.20 547.33,590.00 1124.00,590.00" fill="none" stroke="#E76F51" stroke-width="3"/>
+<polyline points="86.00,590.00 547.33,590.00 1124.00,590.00" fill="none" stroke="#4C6E91" stroke-width="2" stroke-dasharray="8 6"/>
+<polyline points="86.00,209.20 547.33,590.00 1124.00,590.00" fill="none" stroke="#F4A261" stroke-width="2" stroke-dasharray="8 6"/>
+<circle cx="86.00" cy="590.00" r="4.5" fill="#264653" stroke="#ffffff" stroke-width="1.5"/>
+<circle cx="547.33" cy="590.00" r="4.5" fill="#264653" stroke="#ffffff" stroke-width="1.5"/>
+<circle cx="1124.00" cy="590.00" r="4.5" fill="#264653" stroke="#ffffff" stroke-width="1.5"/>
+<circle cx="86.00" cy="209.20" r="4.5" fill="#E76F51" stroke="#ffffff" stroke-width="1.5"/>
+<circle cx="547.33" cy="590.00" r="4.5" fill="#E76F51" stroke="#ffffff" stroke-width="1.5"/>
+<circle cx="1124.00" cy="590.00" r="4.5" fill="#E76F51" stroke="#ffffff" stroke-width="1.5"/>
+<circle cx="86.00" cy="590.00" r="4.5" fill="#4C6E91" stroke="#ffffff" stroke-width="1.5"/>
+<circle cx="547.33" cy="590.00" r="4.5" fill="#4C6E91" stroke="#ffffff" stroke-width="1.5"/>
+<circle cx="1124.00" cy="590.00" r="4.5" fill="#4C6E91" stroke="#ffffff" stroke-width="1.5"/>
+<circle cx="86.00" cy="209.20" r="4.5" fill="#F4A261" stroke="#ffffff" stroke-width="1.5"/>
+<circle cx="547.33" cy="590.00" r="4.5" fill="#F4A261" stroke="#ffffff" stroke-width="1.5"/>
+<circle cx="1124.00" cy="590.00" r="4.5" fill="#F4A261" stroke="#ffffff" stroke-width="1.5"/>
+<line x1="86.00" y1="102" x2="86.00" y2="590" stroke="#264653" stroke-width="1.5" stroke-dasharray="4 4"/>
+<text x="94.00" y="94.00" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#264653">tail_clear_stop_at=2us</text>
+<line x1="547.33" y1="102" x2="547.33" y2="590" stroke="#E76F51" stroke-width="1.5" stroke-dasharray="4 4"/>
+<text x="555.33" y="110.00" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#E76F51">tail_clear_stop_at=10us</text>
+<line x1="770" y1="612" x2="794" y2="612" stroke="#264653" stroke-width="3"/>
+<circle cx="782" cy="612" r="4" fill="#264653" stroke="#ffffff" stroke-width="1"/>
+<text x="804" y="616" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#374151">Direct tail-clearance backlog</text>
+<line x1="770" y1="632" x2="794" y2="632" stroke="#E76F51" stroke-width="3"/>
+<circle cx="782" cy="632" r="4" fill="#E76F51" stroke="#ffffff" stroke-width="1"/>
+<text x="804" y="636" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#374151">Bundle tail-clearance backlog</text>
+<line x1="770" y1="652" x2="794" y2="652" stroke="#4C6E91" stroke-width="3" stroke-dasharray="8 6"/>
+<circle cx="782" cy="652" r="4" fill="#4C6E91" stroke="#ffffff" stroke-width="1"/>
+<text x="804" y="656" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#374151">Direct total-service-deficit</text>
+<line x1="770" y1="672" x2="794" y2="672" stroke="#F4A261" stroke-width="3" stroke-dasharray="8 6"/>
+<circle cx="782" cy="672" r="4" fill="#F4A261" stroke="#ffffff" stroke-width="1"/>
+<text x="804" y="676" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#374151">Bundle total-service-deficit</text>
+<text x="40" y="674" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#6b7280">Y-axis: backlog / service deficit count; X-axis: window stop-at duration</text>
+</svg>

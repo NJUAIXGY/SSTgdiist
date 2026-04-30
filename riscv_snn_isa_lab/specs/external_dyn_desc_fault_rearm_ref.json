@@ -1,0 +1,36 @@
+{
+  "schema_version": 3,
+  "platform": {
+    "mesh_size": 4,
+    "exec_mode": "gas",
+    "stop": {
+      "mode": "time",
+      "simulation_time": "1us"
+    },
+    "flags": {
+      "enable_node_summary": true
+    }
+  },
+  "workload": {
+    "impl": "riscv_snn",
+    "params": {
+      "hart_isa": "rv64im_zicsr",
+      "local_mem_bytes": 65536,
+      "cmd_queue_entries": 64,
+      "cmp_queue_entries": 64,
+      "rx_debug_queue_entries": 16,
+      "boot_addr": 0,
+      "backend_name": "runtime_bridge",
+      "firmware_elf": "/home/xgy/remote/riscv_snn_isa_lab/firmware/external_dyn_desc_fault_rearm_ref.elf"
+    },
+    "spike_source": {
+      "enable": false
+    }
+  },
+  "control": {
+    "global_step_sync_enable": false
+  },
+  "loader": {
+    "chunk_bytes": 65536
+  }
+}

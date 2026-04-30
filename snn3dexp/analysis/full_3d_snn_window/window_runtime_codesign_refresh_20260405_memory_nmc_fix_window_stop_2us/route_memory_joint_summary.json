@@ -1,0 +1,1571 @@
+{
+  "case_id": "full_3d_snn_window",
+  "run_root": "/home/xgy/remote/snn3dexp/runs/full_3d_snn_window/window_runtime_codesign_refresh_20260405_memory_nmc_fix_window_stop_2us",
+  "mesh_shape": "4x4x2",
+  "route": {
+    "native_3d_active": true,
+    "vertical_route_order": "zxy",
+    "multicast_block_shape": [
+      2,
+      2,
+      2
+    ],
+    "source_semantics": {
+      "workload_impl": "snn",
+      "mapping_mode": "dense",
+      "mapping_edges_file": "",
+      "mapping_edges_file_exists": false,
+      "synapse_route_impl": "native_3d",
+      "source_semantics_authority": "legacy_built_routes_3d",
+      "native_bootstrap_source": "legacy_route_tables",
+      "native_bootstrap_ready": true,
+      "weights_template_configured": true,
+      "enable_weight_fetch": true,
+      "gas_enable": true,
+      "real_synapse_source_count": 32,
+      "real_synapse_inputs_available": true,
+      "semantic_addressing_enabled": true,
+      "bootstrap_dependency_active": true,
+      "primary_source_kind": "legacy_route_tables_with_real_synapse_inputs",
+      "native_synapse_source_candidate": true,
+      "native_source_fanout_active": true,
+      "native_target_synthesis_active": true,
+      "route_topology": "mesh_3d",
+      "target_semantics_authority": "native_3d_target_synthesis",
+      "route_memory_overlap_mode": "native_synapse_aligned",
+      "native_synapse_overlap_ratio": 1.0
+    },
+    "active_route_node_count": 32,
+    "ingress_replication_cost": 0.0,
+    "inter_die_multicast_fanout": 0.8125,
+    "die_local_replication_cost": 1.1875,
+    "average_vertical_subtree_depth": 1.0,
+    "packet_versions": {
+      "tx_spikekey_v4_pkts_total": 266,
+      "tx_spiketilekey_v4_pkts_total": 0,
+      "tx_bundle_v1_pkts_total": 0,
+      "tx_bundle_v2_pkts_total": 0,
+      "tx_bundle_v3_pkts_total": 0,
+      "rx_spikekey_v4_total": 564,
+      "rx_spiketilekey_v4_total": 0,
+      "router_bundle_v1_rx_total": 0,
+      "router_bundle_v2_rx_total": 0,
+      "router_bundle_v3_rx_total": 0
+    },
+    "router_anomalies": {
+      "bundle_v3_invalid_shape_total": 0,
+      "bundle_v3_block_z_mismatch_total": 0,
+      "bundle_v3_ingress_out_of_block_total": 0,
+      "bundle_v3_rebuild_fail_total": 0
+    },
+    "derived_metrics": {
+      "direct_v4_share": 1.0,
+      "tile_bundle_v3_share": 0.0,
+      "bundle_v3_router_rx_per_tx": 0.0,
+      "tilekey_rx_per_bundle_v3_tx": 0.0,
+      "router_anomaly_density": 0.0,
+      "spikekey_v4_rx_per_direct_v4_tx": 2.1203007518796992
+    },
+    "native_runtime": {
+      "activation_total": 212,
+      "gating_activation_total": 0,
+      "direct_activation_total": 212,
+      "unique_sources_total": 24
+    }
+  },
+  "memory": {
+    "kind": "hbm_like",
+    "graph_type": "memHierarchy_shared_stack",
+    "real_synapse_sources": 32,
+    "active_memory_node_count": 32,
+    "remote_home_active_node_count": 16,
+    "memory_requests_total": 232,
+    "remote_home_memory_requests_total": 104,
+    "active_stack_count": 4,
+    "semantic_addressing": {
+      "enabled": true,
+      "stack_region_bytes": 1048576,
+      "slot_bytes": 8192,
+      "region_layout": {
+        "stack_region_bytes": 1048576,
+        "slot_count": 8,
+        "metadata": {
+          "base_offset": 0,
+          "size_bytes": 65536,
+          "slot_bytes": 8192
+        },
+        "gather": {
+          "base_offset": 65536,
+          "size_bytes": 655360,
+          "slot_bytes": 81920
+        },
+        "stream": {
+          "base_offset": 720896,
+          "size_bytes": 262144,
+          "slot_bytes": 32768
+        },
+        "writeback": {
+          "base_offset": 983040,
+          "size_bytes": 65536,
+          "slot_bytes": 8192
+        },
+        "slot_bytes": 8192
+      }
+    },
+    "access_semantics": {
+      "tier_local_home_access_count": 16,
+      "same_xy_cross_tier_access_count": 42,
+      "remote_home_access_count": 6,
+      "tier_local_home_access_ratio": 0.25,
+      "same_xy_cross_tier_access_ratio": 0.65625,
+      "remote_home_access_ratio": 0.09375
+    },
+    "synapse_semantics": {
+      "synapse_gather_reads": 64,
+      "synapse_gather_region_reads": 64,
+      "sparse_window_streams": 56,
+      "sparse_window_stream_region_writes": 56,
+      "metadata_lookup_reads": 0,
+      "metadata_lookup_region_reads": 0,
+      "writeback_region_writes": 28
+    },
+    "processing_runtime_mode": "mixed",
+    "traffic_driven_runtime": {
+      "enabled": true,
+      "metadata_lookup_demands": 0,
+      "synapse_gather_demands": 64,
+      "stream_region_demands": 56,
+      "writeback_region_demands": 28,
+      "metadata_lookup_issued": 0,
+      "synapse_gather_issued": 64,
+      "stream_region_issued": 56,
+      "writeback_region_issued": 28,
+      "metadata_lookup_backlog": 0,
+      "synapse_gather_backlog": 0,
+      "stream_region_backlog": 0,
+      "writeback_region_backlog": 0,
+      "regions": {
+        "metadata_lookup": {
+          "demand": 0,
+          "issued": 0,
+          "backlog": 0,
+          "issue_efficiency": 0.0,
+          "backlog_ratio": 0.0,
+          "service_deficit": 0
+        },
+        "synapse_gather": {
+          "demand": 64,
+          "issued": 64,
+          "backlog": 0,
+          "issue_efficiency": 1.0,
+          "backlog_ratio": 0.0,
+          "service_deficit": 0
+        },
+        "stream_region": {
+          "demand": 56,
+          "issued": 56,
+          "backlog": 0,
+          "issue_efficiency": 1.0,
+          "backlog_ratio": 0.0,
+          "service_deficit": 0
+        },
+        "writeback_region": {
+          "demand": 28,
+          "issued": 28,
+          "backlog": 0,
+          "issue_efficiency": 1.0,
+          "backlog_ratio": 0.0,
+          "service_deficit": 0
+        }
+      },
+      "total_service_deficit": 0,
+      "most_pressured_region": "metadata_lookup"
+    },
+    "snn_window_runtime": {
+      "enabled": true,
+      "weight_dense_reqs_total": 64,
+      "weight_rowptr_reqs_total": 0,
+      "weight_colidx_reqs_total": 0,
+      "weight_blockdata_reqs_total": 0,
+      "weight_gcss_reqs_total": 0,
+      "weight_dense_bytes_total": 4096,
+      "weight_rowptr_bytes_total": 0,
+      "weight_colidx_bytes_total": 0,
+      "weight_blockdata_bytes_total": 0,
+      "weight_gcss_bytes_total": 0,
+      "weight_metadata_requests_total": 0,
+      "weight_payload_requests_total": 64,
+      "weight_metadata_bytes_total": 0,
+      "weight_payload_bytes_total": 4096,
+      "weight_requests_total": 64,
+      "weight_bytes_total": 4096,
+      "gas_unique_reads_total": 28,
+      "gas_unique_bytes_total": 229376,
+      "gas_frontend_staged_reads_total": 0,
+      "gas_frontend_granules_built_total": 0,
+      "gas_apply_acc_updates_total": 56,
+      "gas_acc_posts_touched_total": 28,
+      "gas_scatter_spikes_emitted_total": 28,
+      "snn_tx_bundle_v3_packets_total": 0,
+      "snn_tx_spikekey_v4_packets_total": 266,
+      "snn_rx_spikekey_v4_total": 564,
+      "derived_metrics": {
+        "payload_bytes_per_unique_read": 8192.0,
+        "unique_read_capture_ratio": 0.0,
+        "weight_metadata_share": 0.0,
+        "weight_payload_share": 1.0,
+        "dominant_weight_request_class": "dense"
+      }
+    },
+    "home_access_pressure": {
+      "enabled": true,
+      "classes": {
+        "tier_local_home": {
+          "metadata_lookup_demands_total": 0,
+          "gather_demands_total": 32,
+          "stream_demands_total": 32,
+          "writeback_demands_total": 0,
+          "total_demands": 64,
+          "demand_share": 0.5333333333333333,
+          "region_service_deficit_attribution": {
+            "metadata_lookup": 0.0,
+            "synapse_gather": 0.0,
+            "stream_region": 0.0,
+            "writeback_region": 0.0
+          },
+          "service_deficit_attribution": 0.0
+        },
+        "same_xy_cross_tier": {
+          "metadata_lookup_demands_total": 0,
+          "gather_demands_total": 32,
+          "stream_demands_total": 24,
+          "writeback_demands_total": 0,
+          "total_demands": 56,
+          "demand_share": 0.4666666666666667,
+          "region_service_deficit_attribution": {
+            "metadata_lookup": 0.0,
+            "synapse_gather": 0.0,
+            "stream_region": 0.0,
+            "writeback_region": 0.0
+          },
+          "service_deficit_attribution": 0.0
+        },
+        "remote_home": {
+          "metadata_lookup_demands_total": 0,
+          "gather_demands_total": 0,
+          "stream_demands_total": 0,
+          "writeback_demands_total": 0,
+          "total_demands": 0,
+          "demand_share": 0.0,
+          "region_service_deficit_attribution": {
+            "metadata_lookup": 0.0,
+            "synapse_gather": 0.0,
+            "stream_region": 0.0,
+            "writeback_region": 0.0
+          },
+          "service_deficit_attribution": 0.0
+        }
+      },
+      "total_home_access_demands": 120,
+      "dominant_home_access_class": "tier_local_home",
+      "dominant_pressure_region": "metadata_lookup",
+      "attributed_service_deficit_total": 0.0,
+      "unattributed_service_deficit": 0.0
+    },
+    "real_controller_pressure": {
+      "available": true,
+      "controller_count": 16,
+      "active_controller_count": 16,
+      "stack_controller_map": [
+        {
+          "stack_id": 0,
+          "controller_ids": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "controller_names": [
+            "hbm_memctrl_0_0",
+            "hbm_memctrl_0_1",
+            "hbm_memctrl_0_2",
+            "hbm_memctrl_0_3"
+          ]
+        },
+        {
+          "stack_id": 1,
+          "controller_ids": [
+            4,
+            5,
+            6,
+            7
+          ],
+          "controller_names": [
+            "hbm_memctrl_1_0",
+            "hbm_memctrl_1_1",
+            "hbm_memctrl_1_2",
+            "hbm_memctrl_1_3"
+          ]
+        },
+        {
+          "stack_id": 2,
+          "controller_ids": [
+            8,
+            9,
+            10,
+            11
+          ],
+          "controller_names": [
+            "hbm_memctrl_2_0",
+            "hbm_memctrl_2_1",
+            "hbm_memctrl_2_2",
+            "hbm_memctrl_2_3"
+          ]
+        },
+        {
+          "stack_id": 3,
+          "controller_ids": [
+            12,
+            13,
+            14,
+            15
+          ],
+          "controller_names": [
+            "hbm_memctrl_3_0",
+            "hbm_memctrl_3_1",
+            "hbm_memctrl_3_2",
+            "hbm_memctrl_3_3"
+          ]
+        }
+      ],
+      "controller_rows": [
+        {
+          "controller_id": 0,
+          "stack_id": 0,
+          "channel_id": 0,
+          "controller_name": "hbm_memctrl_0_0",
+          "requests_received_total": 280,
+          "outstanding_requests_accum": 293711,
+          "outstanding_requests_samples": 2000,
+          "max_outstanding_requests": 256,
+          "cycles_attempted_issue_but_rejected": 1893,
+          "total_cycles": 2000,
+          "issue_reject_ratio": 0.9465
+        },
+        {
+          "controller_id": 1,
+          "stack_id": 0,
+          "channel_id": 1,
+          "controller_name": "hbm_memctrl_0_1",
+          "requests_received_total": 256,
+          "outstanding_requests_accum": 276104,
+          "outstanding_requests_samples": 2000,
+          "max_outstanding_requests": 256,
+          "cycles_attempted_issue_but_rejected": 1883,
+          "total_cycles": 2000,
+          "issue_reject_ratio": 0.9415
+        },
+        {
+          "controller_id": 2,
+          "stack_id": 0,
+          "channel_id": 2,
+          "controller_name": "hbm_memctrl_0_2",
+          "requests_received_total": 256,
+          "outstanding_requests_accum": 276104,
+          "outstanding_requests_samples": 2000,
+          "max_outstanding_requests": 256,
+          "cycles_attempted_issue_but_rejected": 1883,
+          "total_cycles": 2000,
+          "issue_reject_ratio": 0.9415
+        },
+        {
+          "controller_id": 3,
+          "stack_id": 0,
+          "channel_id": 3,
+          "controller_name": "hbm_memctrl_0_3",
+          "requests_received_total": 256,
+          "outstanding_requests_accum": 276104,
+          "outstanding_requests_samples": 2000,
+          "max_outstanding_requests": 256,
+          "cycles_attempted_issue_but_rejected": 1883,
+          "total_cycles": 2000,
+          "issue_reject_ratio": 0.9415
+        },
+        {
+          "controller_id": 4,
+          "stack_id": 1,
+          "channel_id": 0,
+          "controller_name": "hbm_memctrl_1_0",
+          "requests_received_total": 280,
+          "outstanding_requests_accum": 293711,
+          "outstanding_requests_samples": 2000,
+          "max_outstanding_requests": 256,
+          "cycles_attempted_issue_but_rejected": 1893,
+          "total_cycles": 2000,
+          "issue_reject_ratio": 0.9465
+        },
+        {
+          "controller_id": 5,
+          "stack_id": 1,
+          "channel_id": 1,
+          "controller_name": "hbm_memctrl_1_1",
+          "requests_received_total": 256,
+          "outstanding_requests_accum": 276104,
+          "outstanding_requests_samples": 2000,
+          "max_outstanding_requests": 256,
+          "cycles_attempted_issue_but_rejected": 1883,
+          "total_cycles": 2000,
+          "issue_reject_ratio": 0.9415
+        },
+        {
+          "controller_id": 6,
+          "stack_id": 1,
+          "channel_id": 2,
+          "controller_name": "hbm_memctrl_1_2",
+          "requests_received_total": 256,
+          "outstanding_requests_accum": 276104,
+          "outstanding_requests_samples": 2000,
+          "max_outstanding_requests": 256,
+          "cycles_attempted_issue_but_rejected": 1883,
+          "total_cycles": 2000,
+          "issue_reject_ratio": 0.9415
+        },
+        {
+          "controller_id": 7,
+          "stack_id": 1,
+          "channel_id": 3,
+          "controller_name": "hbm_memctrl_1_3",
+          "requests_received_total": 256,
+          "outstanding_requests_accum": 276104,
+          "outstanding_requests_samples": 2000,
+          "max_outstanding_requests": 256,
+          "cycles_attempted_issue_but_rejected": 1883,
+          "total_cycles": 2000,
+          "issue_reject_ratio": 0.9415
+        },
+        {
+          "controller_id": 8,
+          "stack_id": 2,
+          "channel_id": 0,
+          "controller_name": "hbm_memctrl_2_0",
+          "requests_received_total": 280,
+          "outstanding_requests_accum": 293711,
+          "outstanding_requests_samples": 2000,
+          "max_outstanding_requests": 256,
+          "cycles_attempted_issue_but_rejected": 1893,
+          "total_cycles": 2000,
+          "issue_reject_ratio": 0.9465
+        },
+        {
+          "controller_id": 9,
+          "stack_id": 2,
+          "channel_id": 1,
+          "controller_name": "hbm_memctrl_2_1",
+          "requests_received_total": 256,
+          "outstanding_requests_accum": 276104,
+          "outstanding_requests_samples": 2000,
+          "max_outstanding_requests": 256,
+          "cycles_attempted_issue_but_rejected": 1883,
+          "total_cycles": 2000,
+          "issue_reject_ratio": 0.9415
+        },
+        {
+          "controller_id": 10,
+          "stack_id": 2,
+          "channel_id": 2,
+          "controller_name": "hbm_memctrl_2_2",
+          "requests_received_total": 256,
+          "outstanding_requests_accum": 276104,
+          "outstanding_requests_samples": 2000,
+          "max_outstanding_requests": 256,
+          "cycles_attempted_issue_but_rejected": 1883,
+          "total_cycles": 2000,
+          "issue_reject_ratio": 0.9415
+        },
+        {
+          "controller_id": 11,
+          "stack_id": 2,
+          "channel_id": 3,
+          "controller_name": "hbm_memctrl_2_3",
+          "requests_received_total": 256,
+          "outstanding_requests_accum": 276104,
+          "outstanding_requests_samples": 2000,
+          "max_outstanding_requests": 256,
+          "cycles_attempted_issue_but_rejected": 1883,
+          "total_cycles": 2000,
+          "issue_reject_ratio": 0.9415
+        },
+        {
+          "controller_id": 12,
+          "stack_id": 3,
+          "channel_id": 0,
+          "controller_name": "hbm_memctrl_3_0",
+          "requests_received_total": 280,
+          "outstanding_requests_accum": 293711,
+          "outstanding_requests_samples": 2000,
+          "max_outstanding_requests": 256,
+          "cycles_attempted_issue_but_rejected": 1893,
+          "total_cycles": 2000,
+          "issue_reject_ratio": 0.9465
+        },
+        {
+          "controller_id": 13,
+          "stack_id": 3,
+          "channel_id": 1,
+          "controller_name": "hbm_memctrl_3_1",
+          "requests_received_total": 256,
+          "outstanding_requests_accum": 276104,
+          "outstanding_requests_samples": 2000,
+          "max_outstanding_requests": 256,
+          "cycles_attempted_issue_but_rejected": 1883,
+          "total_cycles": 2000,
+          "issue_reject_ratio": 0.9415
+        },
+        {
+          "controller_id": 14,
+          "stack_id": 3,
+          "channel_id": 2,
+          "controller_name": "hbm_memctrl_3_2",
+          "requests_received_total": 256,
+          "outstanding_requests_accum": 276104,
+          "outstanding_requests_samples": 2000,
+          "max_outstanding_requests": 256,
+          "cycles_attempted_issue_but_rejected": 1883,
+          "total_cycles": 2000,
+          "issue_reject_ratio": 0.9415
+        },
+        {
+          "controller_id": 15,
+          "stack_id": 3,
+          "channel_id": 3,
+          "controller_name": "hbm_memctrl_3_3",
+          "requests_received_total": 256,
+          "outstanding_requests_accum": 276104,
+          "outstanding_requests_samples": 2000,
+          "max_outstanding_requests": 256,
+          "cycles_attempted_issue_but_rejected": 1883,
+          "total_cycles": 2000,
+          "issue_reject_ratio": 0.9415
+        }
+      ],
+      "most_pressured_controller_id": 0,
+      "most_pressured_controller_name": "hbm_memctrl_0_0",
+      "most_pressured_stack_id": 0,
+      "max_outstanding_requests_accum": 293711,
+      "max_cycles_attempted_issue_but_rejected": 1893,
+      "total_requests_received": 4192,
+      "total_cycles_attempted_issue_but_rejected": 30168,
+      "most_pressured_controller_outstanding_requests_accum": 293711,
+      "most_pressured_controller_outstanding_requests_samples": 2000,
+      "most_pressured_controller_avg_outstanding_requests": 146.8555,
+      "most_pressured_controller_max_outstanding_requests": 256,
+      "most_pressured_controller_total_cycles": 2000,
+      "most_pressured_controller_issue_reject_ratio": 0.9465
+    },
+    "home_stack_controller_proxy": {
+      "available": true,
+      "controller_count": 16,
+      "stack_controller_map": [
+        {
+          "stack_id": 0,
+          "channels_per_stack": 4,
+          "controller_ids": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "controller_names": [
+            "hbm_memctrl_0_0",
+            "hbm_memctrl_0_1",
+            "hbm_memctrl_0_2",
+            "hbm_memctrl_0_3"
+          ]
+        },
+        {
+          "stack_id": 1,
+          "channels_per_stack": 4,
+          "controller_ids": [
+            4,
+            5,
+            6,
+            7
+          ],
+          "controller_names": [
+            "hbm_memctrl_1_0",
+            "hbm_memctrl_1_1",
+            "hbm_memctrl_1_2",
+            "hbm_memctrl_1_3"
+          ]
+        },
+        {
+          "stack_id": 2,
+          "channels_per_stack": 4,
+          "controller_ids": [
+            8,
+            9,
+            10,
+            11
+          ],
+          "controller_names": [
+            "hbm_memctrl_2_0",
+            "hbm_memctrl_2_1",
+            "hbm_memctrl_2_2",
+            "hbm_memctrl_2_3"
+          ]
+        },
+        {
+          "stack_id": 3,
+          "channels_per_stack": 4,
+          "controller_ids": [
+            12,
+            13,
+            14,
+            15
+          ],
+          "controller_names": [
+            "hbm_memctrl_3_0",
+            "hbm_memctrl_3_1",
+            "hbm_memctrl_3_2",
+            "hbm_memctrl_3_3"
+          ]
+        }
+      ],
+      "path_authority_kind": "real_home_stack_binding",
+      "controller_pressure_authority_kind": "runtime_controller",
+      "runtime_authority_available": true,
+      "classes": {
+        "tier_local_home": {
+          "active_stack_ids": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "active_controller_ids": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "stack_weights": {
+            "0": 4,
+            "1": 4,
+            "2": 4,
+            "3": 4
+          },
+          "dominant_stack_id": 0,
+          "dominant_stack_total_demands": 16,
+          "dominant_stack_demand_share": 0.25,
+          "dominant_controller_ids": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        "same_xy_cross_tier": {
+          "active_stack_ids": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "active_controller_ids": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "stack_weights": {
+            "0": 10,
+            "1": 10,
+            "2": 10,
+            "3": 12
+          },
+          "dominant_stack_id": 3,
+          "dominant_stack_total_demands": 16,
+          "dominant_stack_demand_share": 0.2857142857142857,
+          "dominant_controller_ids": [
+            12,
+            13,
+            14,
+            15
+          ]
+        },
+        "remote_home": {
+          "active_stack_ids": [
+            1,
+            3
+          ],
+          "active_controller_ids": [
+            4,
+            5,
+            6,
+            7,
+            12,
+            13,
+            14,
+            15
+          ],
+          "stack_weights": {
+            "1": 2,
+            "3": 4
+          },
+          "dominant_stack_id": 3,
+          "dominant_stack_total_demands": 0,
+          "dominant_stack_demand_share": 0.6666666666666666,
+          "dominant_controller_ids": [
+            12,
+            13,
+            14,
+            15
+          ]
+        }
+      },
+      "dominant_home_access_class": "tier_local_home",
+      "dominant_home_stack_id": 0,
+      "dominant_home_controller_ids": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "most_pressured_stack_id": 0,
+      "most_pressured_stack_controller_ids": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "most_pressured_controller_count": 4,
+      "most_pressured_controller_service_deficit_proxy": 0.0,
+      "most_pressured_controller_backpressure_proxy": 389.1595,
+      "most_pressured_controller_memory_pressure_proxy": 389.1595,
+      "memory_pressure_proxy_source": "backpressure",
+      "runtime_summary_source": "controller_summary",
+      "real_pressure_available": true,
+      "most_pressured_runtime_stack_id": 0,
+      "most_pressured_runtime_controller_id": 0,
+      "most_pressured_runtime_controller_name": "hbm_memctrl_0_0"
+    },
+    "home_stack_dataflow": {
+      "available": true,
+      "path_authority_kind": "real_home_stack_binding",
+      "source_binding_authority_kind": "real_home_stack_binding",
+      "controller_pressure_authority_kind": "runtime_controller",
+      "runtime_authority_available": true,
+      "stage_breakdown_authority_kind": "proxy_projection",
+      "initiator_groups": {
+        "pe_nic_to_home_stack": {
+          "regions": {
+            "metadata_lookup": {
+              "demand": 0,
+              "issued": 0,
+              "service_deficit": 0,
+              "issue_efficiency": 0.0,
+              "backlog_ratio": 0.0
+            },
+            "stream_region": {
+              "demand": 56,
+              "issued": 56,
+              "service_deficit": 0,
+              "issue_efficiency": 1.0,
+              "backlog_ratio": 0.0
+            },
+            "writeback_region": {
+              "demand": 28,
+              "issued": 28,
+              "service_deficit": 0,
+              "issue_efficiency": 1.0,
+              "backlog_ratio": 0.0
+            }
+          },
+          "demand_total": 84,
+          "issued_total": 84,
+          "service_deficit_total": 0,
+          "dominant_region": "stream_region",
+          "dominant_region_demand": 56,
+          "dominant_region_service_deficit": 0,
+          "dominant_region_demand_share": 0.6666666666666666,
+          "dominant_region_service_deficit_share": 0.0,
+          "dominant_region_issue_efficiency": 1.0,
+          "dominant_region_backlog_ratio": 0.0,
+          "dominant_stack_id": 3,
+          "dominant_stack_demand_share": 0.26666666666666666,
+          "dominant_controller_ids": [
+            12,
+            13,
+            14,
+            15
+          ],
+          "dominant_stack_runtime_hotspot_overlap": false,
+          "dominant_region_matches_home_path_dominant_stage": true,
+          "dominant_stack_requests_share_of_runtime": 0.25,
+          "dominant_stack_outstanding_share_of_runtime": 0.25,
+          "dominant_stack_reject_share_of_runtime": 0.25,
+          "controller_region_authority_signature": "stream_region|stack:3|controllers:12,13,14,15|path_stage:stream_region",
+          "stack_rows": [
+            {
+              "stack_id": 3,
+              "controller_ids": [
+                12,
+                13,
+                14,
+                15
+              ],
+              "demand_proxy": 32.0,
+              "demand_share": 0.26666666666666666,
+              "service_deficit_proxy": 0.0,
+              "stack_service_deficit_total": 0,
+              "is_dominant_stack": true,
+              "runtime_hotspot_overlap": false,
+              "demand_total": 84
+            },
+            {
+              "stack_id": 0,
+              "controller_ids": [
+                0,
+                1,
+                2,
+                3
+              ],
+              "demand_proxy": 29.333333333333336,
+              "demand_share": 0.24444444444444446,
+              "service_deficit_proxy": 0.0,
+              "stack_service_deficit_total": 0,
+              "is_dominant_stack": false,
+              "runtime_hotspot_overlap": true,
+              "demand_total": 84
+            },
+            {
+              "stack_id": 1,
+              "controller_ids": [
+                4,
+                5,
+                6,
+                7
+              ],
+              "demand_proxy": 29.333333333333336,
+              "demand_share": 0.24444444444444446,
+              "service_deficit_proxy": 0.0,
+              "stack_service_deficit_total": 0,
+              "is_dominant_stack": false,
+              "runtime_hotspot_overlap": false,
+              "demand_total": 84
+            },
+            {
+              "stack_id": 2,
+              "controller_ids": [
+                8,
+                9,
+                10,
+                11
+              ],
+              "demand_proxy": 29.333333333333336,
+              "demand_share": 0.24444444444444446,
+              "service_deficit_proxy": 0.0,
+              "stack_service_deficit_total": 0,
+              "is_dominant_stack": false,
+              "runtime_hotspot_overlap": false,
+              "demand_total": 84
+            }
+          ],
+          "controller_rows": [
+            {
+              "controller_id": 12,
+              "stack_id": 3,
+              "controller_name": "hbm_memctrl_3_0",
+              "requests_received_total": 280,
+              "outstanding_requests_accum": 293711,
+              "cycles_attempted_issue_but_rejected": 1893,
+              "issue_reject_ratio": 0.9465,
+              "belongs_to_dominant_initiator_stack": true,
+              "runtime_hotspot_overlap": false,
+              "is_runtime_hotspot_controller": false
+            },
+            {
+              "controller_id": 13,
+              "stack_id": 3,
+              "controller_name": "hbm_memctrl_3_1",
+              "requests_received_total": 256,
+              "outstanding_requests_accum": 276104,
+              "cycles_attempted_issue_but_rejected": 1883,
+              "issue_reject_ratio": 0.9415,
+              "belongs_to_dominant_initiator_stack": true,
+              "runtime_hotspot_overlap": false,
+              "is_runtime_hotspot_controller": false
+            },
+            {
+              "controller_id": 14,
+              "stack_id": 3,
+              "controller_name": "hbm_memctrl_3_2",
+              "requests_received_total": 256,
+              "outstanding_requests_accum": 276104,
+              "cycles_attempted_issue_but_rejected": 1883,
+              "issue_reject_ratio": 0.9415,
+              "belongs_to_dominant_initiator_stack": true,
+              "runtime_hotspot_overlap": false,
+              "is_runtime_hotspot_controller": false
+            },
+            {
+              "controller_id": 15,
+              "stack_id": 3,
+              "controller_name": "hbm_memctrl_3_3",
+              "requests_received_total": 256,
+              "outstanding_requests_accum": 276104,
+              "cycles_attempted_issue_but_rejected": 1883,
+              "issue_reject_ratio": 0.9415,
+              "belongs_to_dominant_initiator_stack": true,
+              "runtime_hotspot_overlap": false,
+              "is_runtime_hotspot_controller": false
+            },
+            {
+              "controller_id": 0,
+              "stack_id": 0,
+              "controller_name": "hbm_memctrl_0_0",
+              "requests_received_total": 280,
+              "outstanding_requests_accum": 293711,
+              "cycles_attempted_issue_but_rejected": 1893,
+              "issue_reject_ratio": 0.9465,
+              "belongs_to_dominant_initiator_stack": false,
+              "runtime_hotspot_overlap": true,
+              "is_runtime_hotspot_controller": true
+            },
+            {
+              "controller_id": 1,
+              "stack_id": 0,
+              "controller_name": "hbm_memctrl_0_1",
+              "requests_received_total": 256,
+              "outstanding_requests_accum": 276104,
+              "cycles_attempted_issue_but_rejected": 1883,
+              "issue_reject_ratio": 0.9415,
+              "belongs_to_dominant_initiator_stack": false,
+              "runtime_hotspot_overlap": true,
+              "is_runtime_hotspot_controller": false
+            },
+            {
+              "controller_id": 2,
+              "stack_id": 0,
+              "controller_name": "hbm_memctrl_0_2",
+              "requests_received_total": 256,
+              "outstanding_requests_accum": 276104,
+              "cycles_attempted_issue_but_rejected": 1883,
+              "issue_reject_ratio": 0.9415,
+              "belongs_to_dominant_initiator_stack": false,
+              "runtime_hotspot_overlap": true,
+              "is_runtime_hotspot_controller": false
+            },
+            {
+              "controller_id": 3,
+              "stack_id": 0,
+              "controller_name": "hbm_memctrl_0_3",
+              "requests_received_total": 256,
+              "outstanding_requests_accum": 276104,
+              "cycles_attempted_issue_but_rejected": 1883,
+              "issue_reject_ratio": 0.9415,
+              "belongs_to_dominant_initiator_stack": false,
+              "runtime_hotspot_overlap": true,
+              "is_runtime_hotspot_controller": false
+            },
+            {
+              "controller_id": 4,
+              "stack_id": 1,
+              "controller_name": "hbm_memctrl_1_0",
+              "requests_received_total": 280,
+              "outstanding_requests_accum": 293711,
+              "cycles_attempted_issue_but_rejected": 1893,
+              "issue_reject_ratio": 0.9465,
+              "belongs_to_dominant_initiator_stack": false,
+              "runtime_hotspot_overlap": false,
+              "is_runtime_hotspot_controller": false
+            },
+            {
+              "controller_id": 8,
+              "stack_id": 2,
+              "controller_name": "hbm_memctrl_2_0",
+              "requests_received_total": 280,
+              "outstanding_requests_accum": 293711,
+              "cycles_attempted_issue_but_rejected": 1893,
+              "issue_reject_ratio": 0.9465,
+              "belongs_to_dominant_initiator_stack": false,
+              "runtime_hotspot_overlap": false,
+              "is_runtime_hotspot_controller": false
+            },
+            {
+              "controller_id": 5,
+              "stack_id": 1,
+              "controller_name": "hbm_memctrl_1_1",
+              "requests_received_total": 256,
+              "outstanding_requests_accum": 276104,
+              "cycles_attempted_issue_but_rejected": 1883,
+              "issue_reject_ratio": 0.9415,
+              "belongs_to_dominant_initiator_stack": false,
+              "runtime_hotspot_overlap": false,
+              "is_runtime_hotspot_controller": false
+            },
+            {
+              "controller_id": 6,
+              "stack_id": 1,
+              "controller_name": "hbm_memctrl_1_2",
+              "requests_received_total": 256,
+              "outstanding_requests_accum": 276104,
+              "cycles_attempted_issue_but_rejected": 1883,
+              "issue_reject_ratio": 0.9415,
+              "belongs_to_dominant_initiator_stack": false,
+              "runtime_hotspot_overlap": false,
+              "is_runtime_hotspot_controller": false
+            },
+            {
+              "controller_id": 7,
+              "stack_id": 1,
+              "controller_name": "hbm_memctrl_1_3",
+              "requests_received_total": 256,
+              "outstanding_requests_accum": 276104,
+              "cycles_attempted_issue_but_rejected": 1883,
+              "issue_reject_ratio": 0.9415,
+              "belongs_to_dominant_initiator_stack": false,
+              "runtime_hotspot_overlap": false,
+              "is_runtime_hotspot_controller": false
+            },
+            {
+              "controller_id": 9,
+              "stack_id": 2,
+              "controller_name": "hbm_memctrl_2_1",
+              "requests_received_total": 256,
+              "outstanding_requests_accum": 276104,
+              "cycles_attempted_issue_but_rejected": 1883,
+              "issue_reject_ratio": 0.9415,
+              "belongs_to_dominant_initiator_stack": false,
+              "runtime_hotspot_overlap": false,
+              "is_runtime_hotspot_controller": false
+            },
+            {
+              "controller_id": 10,
+              "stack_id": 2,
+              "controller_name": "hbm_memctrl_2_2",
+              "requests_received_total": 256,
+              "outstanding_requests_accum": 276104,
+              "cycles_attempted_issue_but_rejected": 1883,
+              "issue_reject_ratio": 0.9415,
+              "belongs_to_dominant_initiator_stack": false,
+              "runtime_hotspot_overlap": false,
+              "is_runtime_hotspot_controller": false
+            },
+            {
+              "controller_id": 11,
+              "stack_id": 2,
+              "controller_name": "hbm_memctrl_2_3",
+              "requests_received_total": 256,
+              "outstanding_requests_accum": 276104,
+              "cycles_attempted_issue_but_rejected": 1883,
+              "issue_reject_ratio": 0.9415,
+              "belongs_to_dominant_initiator_stack": false,
+              "runtime_hotspot_overlap": false,
+              "is_runtime_hotspot_controller": false
+            }
+          ],
+          "path_authority_kind": "real_home_stack_binding",
+          "source_binding_authority_kind": "real_home_stack_binding",
+          "controller_pressure_authority_kind": "runtime_controller",
+          "real_path_available": true,
+          "proxy_projection_active": true,
+          "stage_breakdown_authority_kind": "proxy_projection",
+          "controller_pressure_summary": {
+            "available": true,
+            "stack_id": 3,
+            "controller_ids": [
+              12,
+              13,
+              14,
+              15
+            ],
+            "controller_count": 4,
+            "requests_received_total": 1048,
+            "outstanding_requests_accum": 1122023,
+            "cycles_attempted_issue_but_rejected": 7542,
+            "max_issue_reject_ratio": 0.9465,
+            "runtime_hotspot_overlap": false
+          },
+          "home_path_summary": {
+            "available": true,
+            "stack_id": 3,
+            "path_authority_kind": "real_home_stack_binding",
+            "real_path_available": true,
+            "proxy_projection_active": true,
+            "stage_breakdown_authority_kind": "proxy_projection",
+            "source_binding_authority_kind": "real_home_stack_binding",
+            "path_signature": "stream_region->writeback_region",
+            "demand_total": 21,
+            "issued_total": 21,
+            "service_deficit_total": 0,
+            "issue_efficiency": 1.0,
+            "dominant_stage": "stream_region",
+            "stage_rows": [
+              {
+                "region": "metadata_lookup",
+                "demand": 0,
+                "issued": 0,
+                "service_deficit": 0,
+                "issue_efficiency": 0.0,
+                "backlog_ratio": 0.0
+              },
+              {
+                "region": "stream_region",
+                "demand": 14,
+                "issued": 14,
+                "service_deficit": 0,
+                "issue_efficiency": 1.0,
+                "backlog_ratio": 0.0
+              },
+              {
+                "region": "writeback_region",
+                "demand": 7,
+                "issued": 7,
+                "service_deficit": 0,
+                "issue_efficiency": 1.0,
+                "backlog_ratio": 0.0
+              }
+            ]
+          },
+          "demand_share": 0.5675675675675675,
+          "service_deficit_share": 0.0
+        },
+        "synapse_source_to_home_stack": {
+          "regions": {
+            "synapse_gather": {
+              "demand": 64,
+              "issued": 64,
+              "service_deficit": 0,
+              "issue_efficiency": 1.0,
+              "backlog_ratio": 0.0
+            }
+          },
+          "demand_total": 64,
+          "issued_total": 64,
+          "service_deficit_total": 0,
+          "dominant_region": "synapse_gather",
+          "dominant_region_demand": 64,
+          "dominant_region_service_deficit": 0,
+          "dominant_region_demand_share": 1.0,
+          "dominant_region_service_deficit_share": 0.0,
+          "dominant_region_issue_efficiency": 1.0,
+          "dominant_region_backlog_ratio": 0.0,
+          "dominant_stack_id": 0,
+          "dominant_stack_demand_share": 0.25,
+          "dominant_controller_ids": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "dominant_stack_runtime_hotspot_overlap": true,
+          "dominant_region_matches_home_path_dominant_stage": true,
+          "dominant_stack_requests_share_of_runtime": 0.25,
+          "dominant_stack_outstanding_share_of_runtime": 0.25,
+          "dominant_stack_reject_share_of_runtime": 0.25,
+          "controller_region_authority_signature": "synapse_gather|stack:0|controllers:0,1,2,3|path_stage:synapse_gather",
+          "stack_rows": [
+            {
+              "stack_id": 0,
+              "controller_ids": [
+                0,
+                1,
+                2,
+                3
+              ],
+              "demand_proxy": 16.0,
+              "demand_share": 0.25,
+              "service_deficit_proxy": 0.0,
+              "stack_service_deficit_total": 0,
+              "is_dominant_stack": true,
+              "runtime_hotspot_overlap": true,
+              "demand_total": 64
+            },
+            {
+              "stack_id": 1,
+              "controller_ids": [
+                4,
+                5,
+                6,
+                7
+              ],
+              "demand_proxy": 16.0,
+              "demand_share": 0.25,
+              "service_deficit_proxy": 0.0,
+              "stack_service_deficit_total": 0,
+              "is_dominant_stack": false,
+              "runtime_hotspot_overlap": false,
+              "demand_total": 64
+            },
+            {
+              "stack_id": 2,
+              "controller_ids": [
+                8,
+                9,
+                10,
+                11
+              ],
+              "demand_proxy": 16.0,
+              "demand_share": 0.25,
+              "service_deficit_proxy": 0.0,
+              "stack_service_deficit_total": 0,
+              "is_dominant_stack": false,
+              "runtime_hotspot_overlap": false,
+              "demand_total": 64
+            },
+            {
+              "stack_id": 3,
+              "controller_ids": [
+                12,
+                13,
+                14,
+                15
+              ],
+              "demand_proxy": 16.0,
+              "demand_share": 0.25,
+              "service_deficit_proxy": 0.0,
+              "stack_service_deficit_total": 0,
+              "is_dominant_stack": false,
+              "runtime_hotspot_overlap": false,
+              "demand_total": 64
+            }
+          ],
+          "controller_rows": [
+            {
+              "controller_id": 0,
+              "stack_id": 0,
+              "controller_name": "hbm_memctrl_0_0",
+              "requests_received_total": 280,
+              "outstanding_requests_accum": 293711,
+              "cycles_attempted_issue_but_rejected": 1893,
+              "issue_reject_ratio": 0.9465,
+              "belongs_to_dominant_initiator_stack": true,
+              "runtime_hotspot_overlap": true,
+              "is_runtime_hotspot_controller": true
+            },
+            {
+              "controller_id": 1,
+              "stack_id": 0,
+              "controller_name": "hbm_memctrl_0_1",
+              "requests_received_total": 256,
+              "outstanding_requests_accum": 276104,
+              "cycles_attempted_issue_but_rejected": 1883,
+              "issue_reject_ratio": 0.9415,
+              "belongs_to_dominant_initiator_stack": true,
+              "runtime_hotspot_overlap": true,
+              "is_runtime_hotspot_controller": false
+            },
+            {
+              "controller_id": 2,
+              "stack_id": 0,
+              "controller_name": "hbm_memctrl_0_2",
+              "requests_received_total": 256,
+              "outstanding_requests_accum": 276104,
+              "cycles_attempted_issue_but_rejected": 1883,
+              "issue_reject_ratio": 0.9415,
+              "belongs_to_dominant_initiator_stack": true,
+              "runtime_hotspot_overlap": true,
+              "is_runtime_hotspot_controller": false
+            },
+            {
+              "controller_id": 3,
+              "stack_id": 0,
+              "controller_name": "hbm_memctrl_0_3",
+              "requests_received_total": 256,
+              "outstanding_requests_accum": 276104,
+              "cycles_attempted_issue_but_rejected": 1883,
+              "issue_reject_ratio": 0.9415,
+              "belongs_to_dominant_initiator_stack": true,
+              "runtime_hotspot_overlap": true,
+              "is_runtime_hotspot_controller": false
+            },
+            {
+              "controller_id": 4,
+              "stack_id": 1,
+              "controller_name": "hbm_memctrl_1_0",
+              "requests_received_total": 280,
+              "outstanding_requests_accum": 293711,
+              "cycles_attempted_issue_but_rejected": 1893,
+              "issue_reject_ratio": 0.9465,
+              "belongs_to_dominant_initiator_stack": false,
+              "runtime_hotspot_overlap": false,
+              "is_runtime_hotspot_controller": false
+            },
+            {
+              "controller_id": 8,
+              "stack_id": 2,
+              "controller_name": "hbm_memctrl_2_0",
+              "requests_received_total": 280,
+              "outstanding_requests_accum": 293711,
+              "cycles_attempted_issue_but_rejected": 1893,
+              "issue_reject_ratio": 0.9465,
+              "belongs_to_dominant_initiator_stack": false,
+              "runtime_hotspot_overlap": false,
+              "is_runtime_hotspot_controller": false
+            },
+            {
+              "controller_id": 12,
+              "stack_id": 3,
+              "controller_name": "hbm_memctrl_3_0",
+              "requests_received_total": 280,
+              "outstanding_requests_accum": 293711,
+              "cycles_attempted_issue_but_rejected": 1893,
+              "issue_reject_ratio": 0.9465,
+              "belongs_to_dominant_initiator_stack": false,
+              "runtime_hotspot_overlap": false,
+              "is_runtime_hotspot_controller": false
+            },
+            {
+              "controller_id": 5,
+              "stack_id": 1,
+              "controller_name": "hbm_memctrl_1_1",
+              "requests_received_total": 256,
+              "outstanding_requests_accum": 276104,
+              "cycles_attempted_issue_but_rejected": 1883,
+              "issue_reject_ratio": 0.9415,
+              "belongs_to_dominant_initiator_stack": false,
+              "runtime_hotspot_overlap": false,
+              "is_runtime_hotspot_controller": false
+            },
+            {
+              "controller_id": 6,
+              "stack_id": 1,
+              "controller_name": "hbm_memctrl_1_2",
+              "requests_received_total": 256,
+              "outstanding_requests_accum": 276104,
+              "cycles_attempted_issue_but_rejected": 1883,
+              "issue_reject_ratio": 0.9415,
+              "belongs_to_dominant_initiator_stack": false,
+              "runtime_hotspot_overlap": false,
+              "is_runtime_hotspot_controller": false
+            },
+            {
+              "controller_id": 7,
+              "stack_id": 1,
+              "controller_name": "hbm_memctrl_1_3",
+              "requests_received_total": 256,
+              "outstanding_requests_accum": 276104,
+              "cycles_attempted_issue_but_rejected": 1883,
+              "issue_reject_ratio": 0.9415,
+              "belongs_to_dominant_initiator_stack": false,
+              "runtime_hotspot_overlap": false,
+              "is_runtime_hotspot_controller": false
+            },
+            {
+              "controller_id": 9,
+              "stack_id": 2,
+              "controller_name": "hbm_memctrl_2_1",
+              "requests_received_total": 256,
+              "outstanding_requests_accum": 276104,
+              "cycles_attempted_issue_but_rejected": 1883,
+              "issue_reject_ratio": 0.9415,
+              "belongs_to_dominant_initiator_stack": false,
+              "runtime_hotspot_overlap": false,
+              "is_runtime_hotspot_controller": false
+            },
+            {
+              "controller_id": 10,
+              "stack_id": 2,
+              "controller_name": "hbm_memctrl_2_2",
+              "requests_received_total": 256,
+              "outstanding_requests_accum": 276104,
+              "cycles_attempted_issue_but_rejected": 1883,
+              "issue_reject_ratio": 0.9415,
+              "belongs_to_dominant_initiator_stack": false,
+              "runtime_hotspot_overlap": false,
+              "is_runtime_hotspot_controller": false
+            },
+            {
+              "controller_id": 11,
+              "stack_id": 2,
+              "controller_name": "hbm_memctrl_2_3",
+              "requests_received_total": 256,
+              "outstanding_requests_accum": 276104,
+              "cycles_attempted_issue_but_rejected": 1883,
+              "issue_reject_ratio": 0.9415,
+              "belongs_to_dominant_initiator_stack": false,
+              "runtime_hotspot_overlap": false,
+              "is_runtime_hotspot_controller": false
+            },
+            {
+              "controller_id": 13,
+              "stack_id": 3,
+              "controller_name": "hbm_memctrl_3_1",
+              "requests_received_total": 256,
+              "outstanding_requests_accum": 276104,
+              "cycles_attempted_issue_but_rejected": 1883,
+              "issue_reject_ratio": 0.9415,
+              "belongs_to_dominant_initiator_stack": false,
+              "runtime_hotspot_overlap": false,
+              "is_runtime_hotspot_controller": false
+            },
+            {
+              "controller_id": 14,
+              "stack_id": 3,
+              "controller_name": "hbm_memctrl_3_2",
+              "requests_received_total": 256,
+              "outstanding_requests_accum": 276104,
+              "cycles_attempted_issue_but_rejected": 1883,
+              "issue_reject_ratio": 0.9415,
+              "belongs_to_dominant_initiator_stack": false,
+              "runtime_hotspot_overlap": false,
+              "is_runtime_hotspot_controller": false
+            },
+            {
+              "controller_id": 15,
+              "stack_id": 3,
+              "controller_name": "hbm_memctrl_3_3",
+              "requests_received_total": 256,
+              "outstanding_requests_accum": 276104,
+              "cycles_attempted_issue_but_rejected": 1883,
+              "issue_reject_ratio": 0.9415,
+              "belongs_to_dominant_initiator_stack": false,
+              "runtime_hotspot_overlap": false,
+              "is_runtime_hotspot_controller": false
+            }
+          ],
+          "path_authority_kind": "real_home_stack_binding",
+          "source_binding_authority_kind": "real_home_stack_binding",
+          "controller_pressure_authority_kind": "runtime_controller",
+          "real_path_available": true,
+          "proxy_projection_active": true,
+          "stage_breakdown_authority_kind": "proxy_projection",
+          "controller_pressure_summary": {
+            "available": true,
+            "stack_id": 0,
+            "controller_ids": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "controller_count": 4,
+            "requests_received_total": 1048,
+            "outstanding_requests_accum": 1122023,
+            "cycles_attempted_issue_but_rejected": 7542,
+            "max_issue_reject_ratio": 0.9465,
+            "runtime_hotspot_overlap": true
+          },
+          "home_path_summary": {
+            "available": true,
+            "stack_id": 0,
+            "path_authority_kind": "real_home_stack_binding",
+            "real_path_available": true,
+            "proxy_projection_active": true,
+            "stage_breakdown_authority_kind": "proxy_projection",
+            "source_binding_authority_kind": "real_home_stack_binding",
+            "path_signature": "synapse_gather",
+            "demand_total": 16,
+            "issued_total": 16,
+            "service_deficit_total": 0,
+            "issue_efficiency": 1.0,
+            "dominant_stage": "synapse_gather",
+            "stage_rows": [
+              {
+                "region": "synapse_gather",
+                "demand": 16,
+                "issued": 16,
+                "service_deficit": 0,
+                "issue_efficiency": 1.0,
+                "backlog_ratio": 0.0
+              }
+            ]
+          },
+          "demand_share": 0.43243243243243246,
+          "service_deficit_share": 0.0
+        }
+      },
+      "runtime_controller_total_requests_received": 4192,
+      "runtime_controller_total_outstanding_requests_accum": 4488092,
+      "runtime_controller_total_cycles_attempted_issue_but_rejected": 30168,
+      "total_demand": 148,
+      "total_service_deficit": 0,
+      "dominant_initiator_kind": "pe_nic_to_home_stack",
+      "dominant_initiator_region": "stream_region",
+      "dominant_controller_pressure_initiator_kind": "pe_nic_to_home_stack",
+      "dominant_controller_pressure_region": "stream_region",
+      "dominant_real_home_path_initiator_kind": "pe_nic_to_home_stack",
+      "dominant_real_home_path_region": "stream_region",
+      "dominant_home_access_class": "tier_local_home",
+      "dominant_home_stack_id": 0,
+      "dominant_home_controller_ids": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "most_pressured_stack_id": 0,
+      "runtime_hotspot_alignment": {
+        "runtime_available": true,
+        "dominant_home_access_class": "tier_local_home",
+        "dominant_home_stack_id": 0,
+        "dominant_home_controller_ids": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "runtime_home_access_class": "tier_local_home",
+        "most_pressured_runtime_stack_id": 0,
+        "most_pressured_runtime_controller_id": 0,
+        "most_pressured_runtime_controller_name": "hbm_memctrl_0_0",
+        "same_controller_overlap": true,
+        "same_stack_overlap": true,
+        "same_class_overlap": true,
+        "controller_alignment_kind": "aligned_same_controller"
+      }
+    }
+  },
+  "joint": {
+    "vertical_hops_ratio": 0.4482758620689655,
+    "remote_home_ratio": 0.5,
+    "route_memory_overlap": 1.0
+  },
+  "thermal": {
+    "enabled": true,
+    "tier_activity_source": "runtime",
+    "tier_activity": [
+      {
+        "z": 0,
+        "activity": 128.0
+      },
+      {
+        "z": 1,
+        "activity": 104.0
+      }
+    ],
+    "thermal_hotspot_score": 1.2241379310344827,
+    "vertical_link_pressure": 0.4359913793103448,
+    "stack_hotspot_penalty": 0.25,
+    "physical_model_version": "v2",
+    "vertical_bandwidth_budget": 2.0,
+    "tsv_miv_budget_pressure": 0.3065564385775862,
+    "power_density_score": 1.9796605603448272,
+    "reliability_penalty": 0.6094532933728447
+  }
+}

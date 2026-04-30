@@ -1,0 +1,23 @@
+{
+  "all_dates_ok": true,
+  "all_ok_latest": true,
+  "effective_all_dates_ok": true,
+  "effective_entry_count": 1,
+  "entries": [
+    {
+      "all_ok": true,
+      "count": 12,
+      "date": "2026-04-18",
+      "gate_reasons": [],
+      "group": "all"
+    }
+  ],
+  "entry_count": 1,
+  "excluded_entry_count": 0,
+  "freshness_mode": "reference_program_compare_latest_only",
+  "history_contract": "reference_program_compare_source_history_passthrough_v1",
+  "latest_date": "2026-04-18",
+  "latest_recovered_date": "2026-04-18",
+  "path": "/home/xgy/remote/riscv_snn_isa_lab/references/reference-program-compare-history.json",
+  "stale": false
+}

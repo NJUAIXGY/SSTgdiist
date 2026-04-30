@@ -1,0 +1,108 @@
+{
+  "run_root": "/home/xgy/remote/snn3dexp/runs",
+  "requested_run_tag": "hotspot_real_phase6_multicase_20260320_174519",
+  "requested_run_tags_by_case": {
+    "full_3d": "hotspot_real_phase6_multicase_20260320_174519",
+    "full_3d_mapping": "hotspot_real_phase6_multicase_20260320_174519",
+    "full_3d_thermal_guard": "hotspot_real_phase6_multicase_20260320_174519",
+    "full_3d_runtime_adaptive": "hotspot_real_phase6_multicase_20260320_174519"
+  },
+  "requested_case_ids": [
+    "full_3d",
+    "full_3d_mapping",
+    "full_3d_thermal_guard",
+    "full_3d_runtime_adaptive"
+  ],
+  "summary": {
+    "case_count": 4,
+    "shared_summary_case_ids": [
+      "full_3d",
+      "full_3d_mapping",
+      "full_3d_thermal_guard",
+      "full_3d_runtime_adaptive"
+    ],
+    "shared_window_power_sample_case_ids": [
+      "full_3d",
+      "full_3d_mapping",
+      "full_3d_thermal_guard",
+      "full_3d_runtime_adaptive"
+    ],
+    "independent_candidate_case_ids": [],
+    "blocked_case_ids": [
+      "full_3d",
+      "full_3d_mapping",
+      "full_3d_thermal_guard",
+      "full_3d_runtime_adaptive"
+    ]
+  },
+  "cases": {
+    "full_3d": {
+      "case_id": "full_3d",
+      "run_tag": "hotspot_real_phase6_multicase_20260320_174519",
+      "summary_path": "/home/xgy/remote/tmp/thermal_contract_suite_v1/thermal_3d_grid_base/runs/20260320-133539/thermal/summary/thermal_summary.json",
+      "summary_exists": true,
+      "window_power_samples_path": "/home/xgy/remote/tmp/thermal_contract_suite_v1/thermal_3d_grid_base/runs/20260320-133539/thermal/summary/window_power_samples.jsonl",
+      "window_power_samples_exists": true,
+      "window_power_sample_count": 1,
+      "trace_sources": [
+        "average_power"
+      ],
+      "input_source_kind": "external_summary_replay",
+      "shared_summary_path": true,
+      "shared_window_power_samples_path": true,
+      "independent_candidate": false
+    },
+    "full_3d_mapping": {
+      "case_id": "full_3d_mapping",
+      "run_tag": "hotspot_real_phase6_multicase_20260320_174519",
+      "summary_path": "/home/xgy/remote/tmp/thermal_contract_suite_v1/thermal_3d_grid_base/runs/20260320-133539/thermal/summary/thermal_summary.json",
+      "summary_exists": true,
+      "window_power_samples_path": "/home/xgy/remote/tmp/thermal_contract_suite_v1/thermal_3d_grid_base/runs/20260320-133539/thermal/summary/window_power_samples.jsonl",
+      "window_power_samples_exists": true,
+      "window_power_sample_count": 1,
+      "trace_sources": [
+        "average_power"
+      ],
+      "input_source_kind": "external_summary_replay",
+      "shared_summary_path": true,
+      "shared_window_power_samples_path": true,
+      "independent_candidate": false
+    },
+    "full_3d_thermal_guard": {
+      "case_id": "full_3d_thermal_guard",
+      "run_tag": "hotspot_real_phase6_multicase_20260320_174519",
+      "summary_path": "/home/xgy/remote/tmp/thermal_contract_suite_v1/thermal_3d_grid_base/runs/20260320-133539/thermal/summary/thermal_summary.json",
+      "summary_exists": true,
+      "window_power_samples_path": "/home/xgy/remote/tmp/thermal_contract_suite_v1/thermal_3d_grid_base/runs/20260320-133539/thermal/summary/window_power_samples.jsonl",
+      "window_power_samples_exists": true,
+      "window_power_sample_count": 1,
+      "trace_sources": [
+        "average_power"
+      ],
+      "input_source_kind": "external_summary_replay",
+      "shared_summary_path": true,
+      "shared_window_power_samples_path": true,
+      "independent_candidate": false
+    },
+    "full_3d_runtime_adaptive": {
+      "case_id": "full_3d_runtime_adaptive",
+      "run_tag": "hotspot_real_phase6_multicase_20260320_174519",
+      "summary_path": "/home/xgy/remote/tmp/thermal_contract_suite_v1/thermal_3d_grid_base/runs/20260320-133539/thermal/summary/thermal_summary.json",
+      "summary_exists": true,
+      "window_power_samples_path": "/home/xgy/remote/tmp/thermal_contract_suite_v1/thermal_3d_grid_base/runs/20260320-133539/thermal/summary/window_power_samples.jsonl",
+      "window_power_samples_exists": true,
+      "window_power_sample_count": 1,
+      "trace_sources": [
+        "average_power"
+      ],
+      "input_source_kind": "external_summary_replay",
+      "shared_summary_path": true,
+      "shared_window_power_samples_path": true,
+      "independent_candidate": false
+    }
+  },
+  "prepared_manifest": {
+    "case_ids": [],
+    "run_tags_by_case": {}
+  }
+}

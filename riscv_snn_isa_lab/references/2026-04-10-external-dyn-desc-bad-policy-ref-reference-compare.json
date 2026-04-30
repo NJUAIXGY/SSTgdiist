@@ -1,0 +1,66 @@
+{
+  "artifact_role": "dated_reference_compare_family_surface",
+  "authority_scope": "reference_compare_only",
+  "comparison": {
+    "allowed_divergence_points": [],
+    "fabric_stage_alignment": true,
+    "gate_ok": true,
+    "gate_reasons": [],
+    "invalid_divergence_points": [],
+    "memory_domain_alignment": true,
+    "reference_fabric_stages": [
+      "ingress_receive",
+      "execution_consume"
+    ],
+    "reference_memory_domains": [
+      "ControlMemory"
+    ],
+    "reference_terminal_state": "Faulted",
+    "runtime_fabric_stages": [
+      "ingress_receive",
+      "execution_consume"
+    ],
+    "runtime_memory_domains": [
+      "ControlMemory"
+    ],
+    "runtime_terminal_state": "Faulted",
+    "status": "aligned",
+    "terminal_state_match": true
+  },
+  "equiv_summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-04-02-external-dyn-desc-bad-policy-ref-equiv.json",
+  "family": "external_dyn_desc_bad_policy_ref",
+  "gate_ok": true,
+  "gate_reasons": [],
+  "generated_utc": "2026-04-10T02:50:42.062128+00:00",
+  "producer": "riscv_snn_lab.run_reference_compare_family",
+  "reference_terminal_state": "Faulted",
+  "runtime_policy": {
+    "allowed_completion_signature": "accepted-fault completion progress may satisfy the runtime bridge path even when committed progress is intentionally blocked",
+    "allowed_fault_signature": "at least one accepted fault must remain architecturally visible",
+    "fault_lifecycle_mode": "single_fault",
+    "fault_mode": "accepted_fault_required",
+    "progress_mode": "no_committed_progress_allowed",
+    "required_checks": [
+      "provider_bound_visible",
+      "fused_step_completion_visible",
+      "completion_visible",
+      "completion_consumed_covers_visible",
+      "fault_observed",
+      "fault_snapshot_consistent"
+    ]
+  },
+  "runtime_summary": {
+    "divergence_points": [],
+    "fabric_stages": [
+      "ingress_receive",
+      "execution_consume"
+    ],
+    "family": "external_dyn_desc_bad_policy_ref",
+    "memory_domains": [
+      "ControlMemory"
+    ],
+    "terminal_state": "Faulted"
+  },
+  "schema_version": 2,
+  "status": "aligned"
+}

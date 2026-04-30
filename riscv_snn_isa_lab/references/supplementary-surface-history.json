@@ -1,0 +1,291 @@
+{
+  "artifact_role": "stable_supplementary_surface_history",
+  "authority_path": "/home/xgy/remote/riscv_snn_isa_lab/spec_authority/riscv_snn_supplementary_surface_v1.json",
+  "authority_scope": "observer_surface_only",
+  "contract_name": "riscv_snn_supplementary_surface",
+  "contract_version": "1.0",
+  "generated_utc": "2026-04-18T12:56:43.961519+00:00",
+  "history_contract": "supplementary_surface_observer_v1",
+  "producer": "riscv_snn_lab.refresh_supplementary_surface_history",
+  "schema_version": 2,
+  "sidecar_path": "/home/xgy/remote/riscv_snn_isa_lab/references/nightly-sidecar-report.json",
+  "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/supplementary-surface-history.json",
+  "surface_count": 4,
+  "surfaces": {
+    "compare": {
+      "all_dates_ok": true,
+      "all_ok_latest": true,
+      "blocking": false,
+      "covered_selector_count": null,
+      "current_mainline_status_path": "/home/xgy/remote/sst_dram_si/references/compare-current-status.md",
+      "effective_all_dates_ok": true,
+      "effective_entry_count": 2,
+      "entries": [
+        {
+          "all_ok": true,
+          "cases": [
+            {
+              "bounded_validation": true,
+              "compare_role": "smoke",
+              "effective_exec_mode": "gas",
+              "label": "gas",
+              "memory": {
+                "memory_bytes": 381056.0,
+                "memory_requests": 5954.0,
+                "nonzero": true
+              },
+              "ok": true,
+              "present": true,
+              "reasons": [],
+              "requested_exec_mode": "gas",
+              "run_dir": "/home/xgy/remote/sst_dram_si/outputs_large/paper2/dram_mesh_4x4_exec_mode_compare/gas/20260407-125958",
+              "validator": {
+                "fail": 0,
+                "strict": 0,
+                "warn": 0
+              }
+            },
+            {
+              "bounded_validation": true,
+              "compare_role": "smoke",
+              "effective_exec_mode": "naive_raw",
+              "label": "naive_raw",
+              "memory": {
+                "memory_bytes": 737536.0,
+                "memory_requests": 11524.0,
+                "nonzero": true
+              },
+              "ok": true,
+              "present": true,
+              "reasons": [],
+              "requested_exec_mode": "naive_raw",
+              "run_dir": "/home/xgy/remote/sst_dram_si/outputs_large/paper2/dram_mesh_4x4_exec_mode_compare/naive_raw/20260407-130035",
+              "validator": {
+                "fail": 0,
+                "strict": 0,
+                "warn": 0
+              }
+            },
+            {
+              "bounded_validation": true,
+              "compare_role": "smoke",
+              "effective_exec_mode": "naive_raw",
+              "label": "naive_opt",
+              "memory": {
+                "memory_bytes": 737536.0,
+                "memory_requests": 11524.0,
+                "nonzero": true
+              },
+              "ok": true,
+              "present": true,
+              "reasons": [],
+              "requested_exec_mode": "naive_opt",
+              "run_dir": "/home/xgy/remote/sst_dram_si/outputs_large/paper2/dram_mesh_4x4_exec_mode_compare/naive_raw/20260407-130124",
+              "validator": {
+                "fail": 0,
+                "strict": 0,
+                "warn": 0
+              }
+            }
+          ],
+          "date": "2026-04-07",
+          "failing_cases": [],
+          "matrix_run_id": "20260407-125958",
+          "missing_cases": [],
+          "summary_path": "/home/xgy/remote/sst_dram_si/outputs_large/paper2/dram_mesh_4x4_exec_mode_compare/matrix/20260407-125958/summary.json"
+        },
+        {
+          "all_ok": true,
+          "cases": [
+            {
+              "bounded_validation": true,
+              "compare_role": "smoke",
+              "effective_exec_mode": "gas",
+              "label": "gas",
+              "memory": {
+                "memory_bytes": 381056.0,
+                "memory_requests": 5954.0,
+                "nonzero": true
+              },
+              "ok": true,
+              "present": true,
+              "reasons": [],
+              "requested_exec_mode": "gas",
+              "run_dir": "/home/xgy/remote/sst_dram_si/outputs_large/paper2/dram_mesh_4x4_exec_mode_compare/gas/20260407-114554",
+              "validator": {
+                "fail": 0,
+                "strict": 0,
+                "warn": 0
+              }
+            },
+            {
+              "bounded_validation": true,
+              "compare_role": "smoke",
+              "effective_exec_mode": "naive_raw",
+              "label": "naive_raw",
+              "memory": {
+                "memory_bytes": 737536.0,
+                "memory_requests": 11524.0,
+                "nonzero": true
+              },
+              "ok": true,
+              "present": true,
+              "reasons": [],
+              "requested_exec_mode": "naive_raw",
+              "run_dir": "/home/xgy/remote/sst_dram_si/outputs_large/paper2/dram_mesh_4x4_exec_mode_compare/naive_raw/20260407-114630",
+              "validator": {
+                "fail": 0,
+                "strict": 0,
+                "warn": 0
+              }
+            },
+            {
+              "bounded_validation": true,
+              "compare_role": "smoke",
+              "effective_exec_mode": "naive_raw",
+              "label": "naive_opt",
+              "memory": {
+                "memory_bytes": 737536.0,
+                "memory_requests": 11524.0,
+                "nonzero": true
+              },
+              "ok": true,
+              "present": true,
+              "reasons": [],
+              "requested_exec_mode": "naive_opt",
+              "run_dir": "/home/xgy/remote/sst_dram_si/outputs_large/paper2/dram_mesh_4x4_exec_mode_compare/naive_raw/20260407-114716",
+              "validator": {
+                "fail": 0,
+                "strict": 0,
+                "warn": 0
+              }
+            }
+          ],
+          "date": "2026-04-07",
+          "failing_cases": [],
+          "matrix_run_id": "20260407-114554",
+          "missing_cases": [],
+          "summary_path": "/home/xgy/remote/sst_dram_si/outputs_large/paper2/dram_mesh_4x4_exec_mode_compare/matrix/20260407-114554/summary.json"
+        }
+      ],
+      "entry_count": 2,
+      "excluded_entry_count": 0,
+      "freshness_mode": "since_latest_recovery",
+      "gate_ok": true,
+      "history_contract": "compare_source_history_passthrough_v1",
+      "history_path": "/home/xgy/remote/sst_dram_si/references/compare-smoke-history.json",
+      "latest_date": "2026-04-07",
+      "latest_recovered_date": null,
+      "load_error": null,
+      "observer_summary_path": "/home/xgy/remote/sst_dram_si/references/compare-nightly-observer-summary.json",
+      "present": true,
+      "report_path": "/home/xgy/remote/sst_dram_si/references/compare-nightly-report.json",
+      "selector_count": null,
+      "stale": false,
+      "summary_md_path": "/home/xgy/remote/sst_dram_si/references/compare-nightly-summary.md",
+      "surface_kind": "compare_exec_mode_smoke"
+    },
+    "reference_compare": {
+      "all_dates_ok": true,
+      "all_ok_latest": true,
+      "blocking": false,
+      "covered_selector_count": null,
+      "current_mainline_status_path": "/home/xgy/remote/riscv_snn_isa_lab/references/reference-compare-current-status.md",
+      "effective_all_dates_ok": true,
+      "effective_entry_count": 1,
+      "entries": [
+        {
+          "all_ok": true,
+          "count": 8,
+          "date": "2026-04-18",
+          "gate_reasons": [],
+          "group": "all"
+        }
+      ],
+      "entry_count": 1,
+      "excluded_entry_count": 0,
+      "freshness_mode": "reference_compare_latest_only",
+      "gate_ok": true,
+      "history_contract": "reference_compare_source_history_passthrough_v1",
+      "history_path": "/home/xgy/remote/riscv_snn_isa_lab/references/reference-compare-history.json",
+      "latest_date": "2026-04-18",
+      "latest_recovered_date": "2026-04-18",
+      "load_error": null,
+      "observer_summary_path": null,
+      "present": true,
+      "report_path": "/home/xgy/remote/riscv_snn_isa_lab/references/reference-compare-nightly-report.json",
+      "selector_count": null,
+      "stale": false,
+      "summary_md_path": "/home/xgy/remote/riscv_snn_isa_lab/references/reference-compare-nightly-summary.md",
+      "surface_kind": "reference_compare_surface"
+    },
+    "reference_program_compare": {
+      "all_dates_ok": true,
+      "all_ok_latest": true,
+      "blocking": false,
+      "covered_selector_count": null,
+      "current_mainline_status_path": "/home/xgy/remote/riscv_snn_isa_lab/references/reference-program-compare-current-status.md",
+      "effective_all_dates_ok": true,
+      "effective_entry_count": 1,
+      "entries": [
+        {
+          "all_ok": true,
+          "count": 12,
+          "date": "2026-04-18",
+          "gate_reasons": [],
+          "group": "all"
+        }
+      ],
+      "entry_count": 1,
+      "excluded_entry_count": 0,
+      "freshness_mode": "reference_program_compare_latest_only",
+      "gate_ok": true,
+      "history_contract": "reference_program_compare_source_history_passthrough_v1",
+      "history_path": "/home/xgy/remote/riscv_snn_isa_lab/references/reference-program-compare-history.json",
+      "latest_date": "2026-04-18",
+      "latest_recovered_date": "2026-04-18",
+      "load_error": null,
+      "observer_summary_path": null,
+      "present": true,
+      "report_path": "/home/xgy/remote/riscv_snn_isa_lab/references/reference-program-compare-nightly-report.json",
+      "selector_count": null,
+      "stale": false,
+      "summary_md_path": "/home/xgy/remote/riscv_snn_isa_lab/references/reference-program-compare-nightly-summary.md",
+      "surface_kind": "reference_program_compare_surface"
+    },
+    "stat_snapshot_family": {
+      "all_dates_ok": true,
+      "all_ok_latest": true,
+      "blocking": false,
+      "covered_selector_count": 3,
+      "current_mainline_status_path": "/home/xgy/remote/riscv_snn_isa_lab/references/stat-snapshot-family-current-status.md",
+      "effective_all_dates_ok": true,
+      "effective_entry_count": 1,
+      "entries": [
+        {
+          "covered_selector_count": 3,
+          "date": "2026-04-18",
+          "gate_ok": true,
+          "gate_reasons": [],
+          "selector_count": 3
+        }
+      ],
+      "entry_count": 1,
+      "excluded_entry_count": 0,
+      "freshness_mode": "latest_refresh_only",
+      "gate_ok": true,
+      "history_contract": "stat_snapshot_family_surface_history_v1",
+      "history_path": "/home/xgy/remote/riscv_snn_isa_lab/references/stat-snapshot-family-history.json",
+      "latest_date": "2026-04-18",
+      "latest_recovered_date": "2026-04-18",
+      "load_error": null,
+      "observer_summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/nightly-sidecar-observer-summary.json",
+      "present": true,
+      "report_path": "/home/xgy/remote/riscv_snn_isa_lab/references/stat-snapshot-family-nightly-report.json",
+      "selector_count": 3,
+      "stale": false,
+      "summary_md_path": "/home/xgy/remote/riscv_snn_isa_lab/references/stat-snapshot-family-nightly-summary.md",
+      "surface_kind": "stat_snapshot_family_surface"
+    }
+  }
+}

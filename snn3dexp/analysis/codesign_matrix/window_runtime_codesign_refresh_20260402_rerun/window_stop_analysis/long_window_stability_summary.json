@@ -1,0 +1,86 @@
+{
+  "artifact_provenance": {
+    "tool": "snn3dexp.tools.analyze_window_stop_multicase_sweep",
+    "artifact_kind": "long_window_stability_summary",
+    "generated_at_utc": "2026-04-02T13:22:16Z",
+    "source_kind": "sweep_summary",
+    "sweep_summary_path": "/home/xgy/remote/snn3dexp/analysis/sweeps/window_stop_multicase/window_runtime_codesign_refresh_20260402_rerun_window_stop/window_stop_multicase_sweep_summary.json",
+    "run_root": "/home/xgy/remote/snn3dexp/runs",
+    "out_dir": "/home/xgy/remote/snn3dexp/analysis/codesign_matrix/window_runtime_codesign_refresh_20260402_rerun/window_stop_analysis"
+  },
+  "run_family": "window_runtime_codesign_refresh_20260402_rerun_window_stop",
+  "stop_ats": [
+    "2us"
+  ],
+  "case_ids": [
+    "full_3d_snn_window",
+    "full_3d_snn_window_bundle_v3",
+    "full_3d_snn_window_monolithic_proxy"
+  ],
+  "stop_windows": [
+    {
+      "stop_at": "2us",
+      "ablation_path": "/home/xgy/remote/snn3dexp/analysis/codesign_matrix/window_runtime_codesign_refresh_20260402_rerun/window_stop_analysis/window_stop_2us_ablation.json",
+      "requested_run_tags_by_case": {
+        "full_3d_snn_window": "window_runtime_codesign_refresh_20260402_rerun_window_stop_2us",
+        "full_3d_snn_window_bundle_v3": "window_runtime_codesign_refresh_20260402_rerun_window_stop_2us",
+        "full_3d_snn_window_monolithic_proxy": "window_runtime_codesign_refresh_20260402_rerun_window_stop_2us"
+      },
+      "cases": {
+        "full_3d_snn_window": {
+          "memory_requests_total": 232,
+          "total_service_deficit": 0,
+          "stream_region_backlog": 0,
+          "steps_completed": 0,
+          "stall_on_step_gate_cycles_total": 64,
+          "most_pressured_controller_service_deficit_proxy": 0.0,
+          "max_controller_outstanding_requests_accum": 293711
+        },
+        "full_3d_snn_window_bundle_v3": {
+          "memory_requests_total": 784,
+          "total_service_deficit": 0,
+          "stream_region_backlog": 0,
+          "steps_completed": 0,
+          "stall_on_step_gate_cycles_total": 64,
+          "most_pressured_controller_service_deficit_proxy": 0.0,
+          "max_controller_outstanding_requests_accum": 321102
+        },
+        "full_3d_snn_window_monolithic_proxy": {
+          "memory_requests_total": 448,
+          "total_service_deficit": 0,
+          "stream_region_backlog": 0,
+          "steps_completed": 19,
+          "stall_on_step_gate_cycles_total": 13568,
+          "most_pressured_controller_service_deficit_proxy": 0.0,
+          "max_controller_outstanding_requests_accum": 175311
+        }
+      },
+      "comparisons": {
+        "bundle_vs_direct": {
+          "memory_requests_total_delta": 552,
+          "total_service_deficit_delta": 0,
+          "steps_completed_delta": 0,
+          "stall_on_step_gate_cycles_total_delta": 0
+        },
+        "monolithic_vs_direct": {
+          "memory_requests_total_delta": 216,
+          "total_service_deficit_delta": 0,
+          "steps_completed_delta": 19,
+          "stall_on_step_gate_cycles_total_delta": 13504
+        }
+      }
+    }
+  ],
+  "tail_clear": {
+    "direct_tail_clear_stop_at": "2us",
+    "bundle_tail_clear_stop_at": "2us",
+    "monolithic_tail_clear_stop_at": "2us",
+    "bundle_minus_direct_gap_ns": 0
+  },
+  "outputs": {
+    "summary_json": "/home/xgy/remote/snn3dexp/analysis/codesign_matrix/window_runtime_codesign_refresh_20260402_rerun/window_stop_analysis/long_window_stability_summary.json",
+    "stop_window_ablation_paths": [
+      "/home/xgy/remote/snn3dexp/analysis/codesign_matrix/window_runtime_codesign_refresh_20260402_rerun/window_stop_analysis/window_stop_2us_ablation.json"
+    ]
+  }
+}

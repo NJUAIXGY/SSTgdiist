@@ -1,0 +1,1253 @@
+{
+  "run_tag": "native_dense_fixed_step_4_10us",
+  "requested_run_tags_by_case": {
+    "full_3d_snn_window": "native_dense_fixed_step_4_10us",
+    "full_3d_snn_window_bundle_v3": "native_dense_fixed_step_4_10us",
+    "full_3d_snn_window_monolithic_proxy": "native_dense_fixed_step_4_10us"
+  },
+  "case_order": [
+    "full_3d_snn_window",
+    "full_3d_snn_window_monolithic_proxy",
+    "full_3d_snn_window_bundle_v3"
+  ],
+  "focus_cases": [
+    "full_3d",
+    "full_3d_mapping",
+    "full_3d_thermal_guard"
+  ],
+  "comparisons": {
+    "mapping_vs_full_3d": {
+      "mapping_score_delta": 0.0,
+      "same_home_stack_ratio_delta": 0.0,
+      "vertical_target_ratio_delta": 0.0,
+      "vertical_hops_ratio_delta": 0.0,
+      "remote_home_ratio_delta": 0.0,
+      "route_memory_overlap_delta": 0.0,
+      "vertical_link_pressure_delta": 0.0,
+      "thermal_hotspot_score_delta": 0.0,
+      "stack_hotspot_penalty_delta": 0.0,
+      "vertical_bandwidth_budget_delta": 0.0,
+      "tsv_miv_budget_pressure_delta": 0.0,
+      "power_density_score_delta": 0.0,
+      "reliability_penalty_delta": 0.0,
+      "remap_epoch_delta": 0.0,
+      "homeroute_adjustment_count_delta": 0.0,
+      "thermal_guard_actions_delta": 0.0
+    },
+    "thermal_guard_vs_mapping": {
+      "mapping_score_delta": 0.0,
+      "same_home_stack_ratio_delta": 0.0,
+      "vertical_target_ratio_delta": 0.0,
+      "vertical_hops_ratio_delta": 0.0,
+      "remote_home_ratio_delta": 0.0,
+      "route_memory_overlap_delta": 0.0,
+      "vertical_link_pressure_delta": 0.0,
+      "thermal_hotspot_score_delta": 0.0,
+      "stack_hotspot_penalty_delta": 0.0,
+      "vertical_bandwidth_budget_delta": 0.0,
+      "tsv_miv_budget_pressure_delta": 0.0,
+      "power_density_score_delta": 0.0,
+      "reliability_penalty_delta": 0.0,
+      "remap_epoch_delta": 0.0,
+      "homeroute_adjustment_count_delta": 0.0,
+      "thermal_guard_actions_delta": 0.0
+    }
+  },
+  "focus_metrics": [],
+  "runtime_focus_cases": [],
+  "runtime_focus_metrics": [],
+  "runtime_comparisons": {},
+  "route_memory_comparisons": {
+    "direct_v4_vs_bundle_v3": {
+      "available": false,
+      "base_case_id": "full_3d",
+      "compare_case_id": "full_3d_tile_bundle_v3",
+      "base": {},
+      "compare": {},
+      "deltas": {}
+    },
+    "snn_window_direct_v4_vs_bundle_v3": {
+      "available": true,
+      "base_case_id": "full_3d_snn_window",
+      "compare_case_id": "full_3d_snn_window_bundle_v3",
+      "base": {
+        "case_id": "full_3d_snn_window",
+        "direct_v4_share": 0.0,
+        "tile_bundle_v3_share": 0.0,
+        "memory_requests_total": 0,
+        "controller_steps_completed_total": 0,
+        "completed_step_normalization_available": false,
+        "memory_requests_per_completed_step": 0.0,
+        "total_service_deficit_per_completed_step": 0.0,
+        "stall_on_step_gate_cycles_per_completed_step": 0.0,
+        "stream_region_demands": 0,
+        "stream_region_issued": 0,
+        "stream_region_backlog": 0,
+        "stream_region_issue_efficiency": 0.0,
+        "stream_region_bytes_written_total": 0,
+        "stream_region_bytes_read_total": 0,
+        "writeback_region_demands": 0,
+        "writeback_region_issued": 0,
+        "writeback_region_backlog": 0,
+        "writeback_region_issue_efficiency": 0.0,
+        "writeback_region_bytes_written_total": 0,
+        "writeback_region_bytes_read_total": 0,
+        "most_pressured_region": "metadata_lookup"
+      },
+      "compare": {
+        "case_id": "full_3d_snn_window_bundle_v3",
+        "direct_v4_share": 0.0,
+        "tile_bundle_v3_share": 0.0,
+        "memory_requests_total": 0,
+        "controller_steps_completed_total": 0,
+        "completed_step_normalization_available": false,
+        "memory_requests_per_completed_step": 0.0,
+        "total_service_deficit_per_completed_step": 0.0,
+        "stall_on_step_gate_cycles_per_completed_step": 0.0,
+        "stream_region_demands": 0,
+        "stream_region_issued": 0,
+        "stream_region_backlog": 0,
+        "stream_region_issue_efficiency": 0.0,
+        "stream_region_bytes_written_total": 0,
+        "stream_region_bytes_read_total": 0,
+        "writeback_region_demands": 0,
+        "writeback_region_issued": 0,
+        "writeback_region_backlog": 0,
+        "writeback_region_issue_efficiency": 0.0,
+        "writeback_region_bytes_written_total": 0,
+        "writeback_region_bytes_read_total": 0,
+        "most_pressured_region": "metadata_lookup"
+      },
+      "deltas": {
+        "memory_requests_total": 0,
+        "memory_requests_per_completed_step": 0.0,
+        "total_service_deficit_per_completed_step": 0.0,
+        "stall_on_step_gate_cycles_per_completed_step": 0.0,
+        "stream_region_demands": 0,
+        "stream_region_issued": 0,
+        "stream_region_backlog": 0,
+        "stream_region_issue_efficiency": 0.0,
+        "stream_region_bytes_written_total": 0,
+        "stream_region_bytes_read_total": 0,
+        "writeback_region_demands": 0,
+        "writeback_region_issued": 0,
+        "writeback_region_backlog": 0,
+        "writeback_region_issue_efficiency": 0.0,
+        "writeback_region_bytes_written_total": 0,
+        "writeback_region_bytes_read_total": 0,
+        "direct_v4_share": 0.0,
+        "tile_bundle_v3_share": 0.0
+      }
+    }
+  },
+  "memory_model_focus_cases": [
+    "full_3d_snn_window",
+    "full_3d_snn_window_monolithic_proxy"
+  ],
+  "memory_model_focus_metrics": [
+    {
+      "case_id": "full_3d_snn_window",
+      "case_label": "Full 3D + SNN Window Direct",
+      "run_tag": "native_dense_fixed_step_4_10us",
+      "memory_kind": "hbm_like",
+      "memory_model_family": "hbm_like",
+      "memory_graph_type": "memHierarchy_shared_stack",
+      "memory_requests_total": 0,
+      "vertical_hops_ratio": 0.0,
+      "remote_home_ratio": 0.0,
+      "vertical_link_pressure": 0.24375,
+      "reliability_penalty": 0.4352783203125,
+      "dominant_home_access_class": "",
+      "dominant_home_stack_id": -1,
+      "total_service_deficit": 0,
+      "controller_steps_completed_total": 0,
+      "completed_step_normalization_available": false,
+      "memory_requests_per_completed_step": 0.0,
+      "total_service_deficit_per_completed_step": 0.0,
+      "stall_on_step_gate_cycles_total": 0,
+      "stall_on_step_gate_cycles_per_completed_step": 0.0,
+      "tier_local_home_total_demands": 0,
+      "same_xy_cross_tier_total_demands": 0,
+      "remote_home_total_demands": 0,
+      "tier_local_home_service_deficit_attribution": 0.0,
+      "same_xy_cross_tier_service_deficit_attribution": 0.0,
+      "remote_home_service_deficit_attribution": 0.0,
+      "active_stack_utilization": 0.0,
+      "most_pressured_stack_id": -1,
+      "most_pressured_stack_service_deficit": 0,
+      "most_pressured_controller_service_deficit_proxy": 0.0,
+      "stack_memory_request_skew": 0.0,
+      "stack_service_deficit_skew": 0.0,
+      "tier_balance": {
+        "active_tier_ids": [],
+        "memory_requests_imbalance_ratio": 0.0,
+        "service_deficit_imbalance_ratio": 0.0,
+        "hot_memory_tier_ids": [],
+        "hot_service_deficit_tier_ids": []
+      },
+      "tier_totals": []
+    },
+    {
+      "case_id": "full_3d_snn_window_monolithic_proxy",
+      "case_label": "Full 3D + SNN Window Monolithic Proxy",
+      "run_tag": "native_dense_fixed_step_4_10us",
+      "memory_kind": "monolithic_like",
+      "memory_model_family": "monolithic_like",
+      "memory_graph_type": "memHierarchy_tier_local_stack",
+      "memory_requests_total": 0,
+      "vertical_hops_ratio": 0.0,
+      "remote_home_ratio": 0.0,
+      "vertical_link_pressure": 0.15,
+      "reliability_penalty": 0.5638392857142858,
+      "dominant_home_access_class": "",
+      "dominant_home_stack_id": -1,
+      "total_service_deficit": 0,
+      "controller_steps_completed_total": 0,
+      "completed_step_normalization_available": false,
+      "memory_requests_per_completed_step": 0.0,
+      "total_service_deficit_per_completed_step": 0.0,
+      "stall_on_step_gate_cycles_total": 0,
+      "stall_on_step_gate_cycles_per_completed_step": 0.0,
+      "tier_local_home_total_demands": 0,
+      "same_xy_cross_tier_total_demands": 0,
+      "remote_home_total_demands": 0,
+      "tier_local_home_service_deficit_attribution": 0.0,
+      "same_xy_cross_tier_service_deficit_attribution": 0.0,
+      "remote_home_service_deficit_attribution": 0.0,
+      "active_stack_utilization": 0.0,
+      "most_pressured_stack_id": -1,
+      "most_pressured_stack_service_deficit": 0,
+      "most_pressured_controller_service_deficit_proxy": 0.0,
+      "stack_memory_request_skew": 0.0,
+      "stack_service_deficit_skew": 0.0,
+      "tier_balance": {
+        "active_tier_ids": [],
+        "memory_requests_imbalance_ratio": 0.0,
+        "service_deficit_imbalance_ratio": 0.0,
+        "hot_memory_tier_ids": [],
+        "hot_service_deficit_tier_ids": []
+      },
+      "tier_totals": []
+    }
+  ],
+  "memory_model_comparisons": {
+    "hbm_like_vs_monolithic_like": {
+      "available": true,
+      "base_case_id": "full_3d_snn_window",
+      "compare_case_id": "full_3d_snn_window_monolithic_proxy",
+      "base": {
+        "case_id": "full_3d_snn_window",
+        "memory_model_family": "hbm_like",
+        "memory_kind": "hbm_like",
+        "memory_graph_type": "memHierarchy_shared_stack",
+        "memory_requests_total": 0,
+        "memory_requests_per_completed_step": 0.0,
+        "vertical_hops_ratio": 0.0,
+        "remote_home_ratio": 0.0,
+        "total_service_deficit": 0,
+        "total_service_deficit_per_completed_step": 0.0,
+        "stall_on_step_gate_cycles_per_completed_step": 0.0,
+        "vertical_link_pressure": 0.24375,
+        "reliability_penalty": 0.4352783203125,
+        "dominant_home_access_class": "",
+        "dominant_home_stack_id": -1,
+        "completed_step_normalization_available": false,
+        "tier_local_home_total_demands": 0,
+        "same_xy_cross_tier_total_demands": 0,
+        "remote_home_total_demands": 0,
+        "tier_local_home_service_deficit_attribution": 0.0,
+        "same_xy_cross_tier_service_deficit_attribution": 0.0,
+        "remote_home_service_deficit_attribution": 0.0,
+        "active_stack_utilization": 0.0,
+        "most_pressured_stack_id": -1,
+        "most_pressured_stack_service_deficit": 0,
+        "most_pressured_controller_service_deficit_proxy": 0.0,
+        "stack_memory_request_skew": 0.0,
+        "stack_service_deficit_skew": 0.0
+      },
+      "compare": {
+        "case_id": "full_3d_snn_window_monolithic_proxy",
+        "memory_model_family": "monolithic_like",
+        "memory_kind": "monolithic_like",
+        "memory_graph_type": "memHierarchy_tier_local_stack",
+        "memory_requests_total": 0,
+        "memory_requests_per_completed_step": 0.0,
+        "vertical_hops_ratio": 0.0,
+        "remote_home_ratio": 0.0,
+        "total_service_deficit": 0,
+        "total_service_deficit_per_completed_step": 0.0,
+        "stall_on_step_gate_cycles_per_completed_step": 0.0,
+        "vertical_link_pressure": 0.15,
+        "reliability_penalty": 0.5638392857142858,
+        "dominant_home_access_class": "",
+        "dominant_home_stack_id": -1,
+        "completed_step_normalization_available": false,
+        "tier_local_home_total_demands": 0,
+        "same_xy_cross_tier_total_demands": 0,
+        "remote_home_total_demands": 0,
+        "tier_local_home_service_deficit_attribution": 0.0,
+        "same_xy_cross_tier_service_deficit_attribution": 0.0,
+        "remote_home_service_deficit_attribution": 0.0,
+        "active_stack_utilization": 0.0,
+        "most_pressured_stack_id": -1,
+        "most_pressured_stack_service_deficit": 0,
+        "most_pressured_controller_service_deficit_proxy": 0.0,
+        "stack_memory_request_skew": 0.0,
+        "stack_service_deficit_skew": 0.0
+      },
+      "deltas": {
+        "memory_requests_total": 0,
+        "memory_requests_per_completed_step": 0.0,
+        "vertical_hops_ratio": 0.0,
+        "remote_home_ratio": 0.0,
+        "total_service_deficit": 0,
+        "total_service_deficit_per_completed_step": 0.0,
+        "stall_on_step_gate_cycles_per_completed_step": 0.0,
+        "vertical_link_pressure": -0.09375,
+        "reliability_penalty": 0.12856096540178574,
+        "tier_local_home_total_demands": 0,
+        "same_xy_cross_tier_total_demands": 0,
+        "remote_home_total_demands": 0,
+        "tier_local_home_service_deficit_attribution": 0.0,
+        "same_xy_cross_tier_service_deficit_attribution": 0.0,
+        "remote_home_service_deficit_attribution": 0.0,
+        "active_stack_utilization": 0.0,
+        "most_pressured_stack_service_deficit": 0,
+        "most_pressured_controller_service_deficit_proxy": 0.0,
+        "stack_memory_request_skew": 0.0,
+        "stack_service_deficit_skew": 0.0
+      },
+      "base_case_tier_balance": {
+        "active_tier_ids": [],
+        "memory_requests_imbalance_ratio": 0.0,
+        "service_deficit_imbalance_ratio": 0.0,
+        "hot_memory_tier_ids": [],
+        "hot_service_deficit_tier_ids": []
+      },
+      "compare_case_tier_balance": {
+        "active_tier_ids": [],
+        "memory_requests_imbalance_ratio": 0.0,
+        "service_deficit_imbalance_ratio": 0.0,
+        "hot_memory_tier_ids": [],
+        "hot_service_deficit_tier_ids": []
+      },
+      "base_case_tier_totals": [],
+      "compare_case_tier_totals": []
+    }
+  },
+  "memory_home_stack_codesign": {
+    "available": true,
+    "case_ids": [
+      "full_3d_snn_window",
+      "full_3d_snn_window_monolithic_proxy"
+    ],
+    "case_count": 2,
+    "rows": [
+      {
+        "case_id": "full_3d_snn_window",
+        "case_label": "Full 3D + SNN Window Direct",
+        "run_tag": "native_dense_fixed_step_4_10us",
+        "memory_model_family": "hbm_like",
+        "memory_graph_type": "memHierarchy_shared_stack",
+        "dominant_home_access_class": "",
+        "dominant_home_stack_id": -1,
+        "tier_local_home_total_demands": 0,
+        "same_xy_cross_tier_total_demands": 0,
+        "remote_home_total_demands": 0,
+        "tier_local_home_service_deficit_attribution": 0.0,
+        "same_xy_cross_tier_service_deficit_attribution": 0.0,
+        "remote_home_service_deficit_attribution": 0.0,
+        "active_stack_utilization": 0.0,
+        "most_pressured_stack_id": -1,
+        "most_pressured_stack_service_deficit": 0,
+        "most_pressured_controller_service_deficit_proxy": 0.0,
+        "stack_memory_request_skew": 0.0,
+        "stack_service_deficit_skew": 0.0,
+        "memory_requests_total": 0,
+        "vertical_hops_ratio": 0.0,
+        "remote_home_ratio": 0.0
+      },
+      {
+        "case_id": "full_3d_snn_window_monolithic_proxy",
+        "case_label": "Full 3D + SNN Window Monolithic Proxy",
+        "run_tag": "native_dense_fixed_step_4_10us",
+        "memory_model_family": "monolithic_like",
+        "memory_graph_type": "memHierarchy_tier_local_stack",
+        "dominant_home_access_class": "",
+        "dominant_home_stack_id": -1,
+        "tier_local_home_total_demands": 0,
+        "same_xy_cross_tier_total_demands": 0,
+        "remote_home_total_demands": 0,
+        "tier_local_home_service_deficit_attribution": 0.0,
+        "same_xy_cross_tier_service_deficit_attribution": 0.0,
+        "remote_home_service_deficit_attribution": 0.0,
+        "active_stack_utilization": 0.0,
+        "most_pressured_stack_id": -1,
+        "most_pressured_stack_service_deficit": 0,
+        "most_pressured_controller_service_deficit_proxy": 0.0,
+        "stack_memory_request_skew": 0.0,
+        "stack_service_deficit_skew": 0.0,
+        "memory_requests_total": 0,
+        "vertical_hops_ratio": 0.0,
+        "remote_home_ratio": 0.0
+      }
+    ],
+    "bundle_vs_direct": {
+      "tier_local_home_total_demands_delta": 0,
+      "same_xy_cross_tier_total_demands_delta": 0,
+      "remote_home_total_demands_delta": 0,
+      "tier_local_home_service_deficit_attribution_delta": 0,
+      "same_xy_cross_tier_service_deficit_attribution_delta": 0,
+      "remote_home_service_deficit_attribution_delta": 0,
+      "active_stack_utilization_delta": 0,
+      "most_pressured_stack_service_deficit_delta": 0,
+      "most_pressured_controller_service_deficit_proxy_delta": 0,
+      "stack_memory_request_skew_delta": 0,
+      "stack_service_deficit_skew_delta": 0
+    },
+    "monolithic_vs_hbm": {
+      "tier_local_home_total_demands_delta": 0,
+      "same_xy_cross_tier_total_demands_delta": 0,
+      "remote_home_total_demands_delta": 0,
+      "tier_local_home_service_deficit_attribution_delta": 0.0,
+      "same_xy_cross_tier_service_deficit_attribution_delta": 0.0,
+      "remote_home_service_deficit_attribution_delta": 0.0,
+      "active_stack_utilization_delta": 0.0,
+      "most_pressured_stack_service_deficit_delta": 0,
+      "most_pressured_controller_service_deficit_proxy_delta": 0.0,
+      "stack_memory_request_skew_delta": 0.0,
+      "stack_service_deficit_skew_delta": 0.0
+    },
+    "outputs": {
+      "csv": "/home/xgy/remote/snn3dexp/analysis/windowed_native_dense_family/native_dense_family_compose_20260324/phase2_artifacts/phase2_memory_home_stack_codesign.csv",
+      "markdown": "/home/xgy/remote/snn3dexp/analysis/windowed_native_dense_family/native_dense_family_compose_20260324/phase2_artifacts/phase2_memory_home_stack_codesign.md",
+      "latex": "/home/xgy/remote/snn3dexp/analysis/windowed_native_dense_family/native_dense_family_compose_20260324/phase2_artifacts/phase2_memory_home_stack_codesign.tex"
+    }
+  },
+  "thermal_calibration": {
+    "available": true,
+    "filter": {
+      "hotspot_driver_status": "ran"
+    },
+    "summary": {
+      "eligible_case_count": 2,
+      "eligible_case_ids": [
+        "full_3d_snn_window",
+        "full_3d_snn_window_monolithic_proxy"
+      ],
+      "excluded_case_ids": [
+        "full_3d_snn_window_bundle_v3"
+      ],
+      "hotspot_status_counts": {
+        "ran": 2,
+        "disabled": 1
+      },
+      "hotspot_temperature_source_counts": {
+        "hotspot_steady_temp": 2
+      },
+      "runtime_state_source_counts": {
+        "online_rc_estimator": 2,
+        "thermal_hooks": 1
+      },
+      "hotspot_threshold_c_counts": {
+        "70.0": 3
+      },
+      "hotspot_threshold_source_counts": {
+        "effective_config.thermal.hotspot_threshold_c": 3
+      },
+      "hotspot_threshold_profile_count": 1,
+      "hotspot_threshold_consistent": true,
+      "hotspot_threshold_profiles": [
+        {
+          "hotspot_threshold_c": 70.0,
+          "hotspot_threshold_source": "effective_config.thermal.hotspot_threshold_c",
+          "case_count": 3
+        }
+      ]
+    },
+    "cases": [
+      {
+        "case_id": "full_3d_snn_window",
+        "run_tag": "native_dense_fixed_step_4_10us",
+        "runtime_enabled": false,
+        "control_mode": "observe_only",
+        "case_role": "calibration_only",
+        "hotspot_driver_status": "ran",
+        "hotspot_temperature_source": "hotspot_steady_temp",
+        "runtime_state_source": "online_rc_estimator",
+        "runtime_peak_temperature_c": 47.955010938,
+        "hotspot_peak_temperature_c": 45.03000000000003,
+        "hotspot_peak_delta_c": 2.9250109379999714,
+        "runtime_avg_temperature_c": 46.16823261720838,
+        "hotspot_avg_temperature_c": 45.02776041666669,
+        "hotspot_avg_delta_c": 1.1404722005416943,
+        "runtime_hotspot_block_count": 0,
+        "hotspot_block_count": 0,
+        "hotspot_block_delta": 0,
+        "runtime_hotspot_layer_count": 0,
+        "hotspot_layer_count": 0,
+        "hotspot_layer_delta": 0,
+        "hotspot_threshold_c": 70.0,
+        "hotspot_threshold_source": "effective_config.thermal.hotspot_threshold_c"
+      },
+      {
+        "case_id": "full_3d_snn_window_monolithic_proxy",
+        "run_tag": "native_dense_fixed_step_4_10us",
+        "runtime_enabled": false,
+        "control_mode": "observe_only",
+        "case_role": "calibration_only",
+        "hotspot_driver_status": "ran",
+        "hotspot_temperature_source": "hotspot_steady_temp",
+        "runtime_state_source": "online_rc_estimator",
+        "runtime_peak_temperature_c": 47.4041625,
+        "hotspot_peak_temperature_c": 45.02000000000004,
+        "hotspot_peak_delta_c": 2.3841624999999596,
+        "runtime_avg_temperature_c": 45.99489010416664,
+        "hotspot_avg_temperature_c": 45.02000000000023,
+        "hotspot_avg_delta_c": 0.9748901041664126,
+        "runtime_hotspot_block_count": 0,
+        "hotspot_block_count": 0,
+        "hotspot_block_delta": 0,
+        "runtime_hotspot_layer_count": 0,
+        "hotspot_layer_count": 0,
+        "hotspot_layer_delta": 0,
+        "hotspot_threshold_c": 70.0,
+        "hotspot_threshold_source": "effective_config.thermal.hotspot_threshold_c"
+      }
+    ],
+    "metrics": {
+      "hotspot_peak_delta_c": {
+        "count": 2,
+        "mean": 2.6545867189999655,
+        "abs_mean": 2.6545867189999655,
+        "min": 2.3841624999999596,
+        "max": 2.9250109379999714,
+        "max_abs": 2.9250109379999714,
+        "min_case_id": "full_3d_snn_window_monolithic_proxy",
+        "max_case_id": "full_3d_snn_window",
+        "max_abs_case_id": "full_3d_snn_window",
+        "min_run_tag": "native_dense_fixed_step_4_10us",
+        "max_run_tag": "native_dense_fixed_step_4_10us",
+        "max_abs_run_tag": "native_dense_fixed_step_4_10us"
+      },
+      "hotspot_avg_delta_c": {
+        "count": 2,
+        "mean": 1.0576811523540535,
+        "abs_mean": 1.0576811523540535,
+        "min": 0.9748901041664126,
+        "max": 1.1404722005416943,
+        "max_abs": 1.1404722005416943,
+        "min_case_id": "full_3d_snn_window_monolithic_proxy",
+        "max_case_id": "full_3d_snn_window",
+        "max_abs_case_id": "full_3d_snn_window",
+        "min_run_tag": "native_dense_fixed_step_4_10us",
+        "max_run_tag": "native_dense_fixed_step_4_10us",
+        "max_abs_run_tag": "native_dense_fixed_step_4_10us"
+      },
+      "hotspot_block_delta": {
+        "count": 2,
+        "mean": 0.0,
+        "abs_mean": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "max_abs": 0.0,
+        "min_case_id": "full_3d_snn_window",
+        "max_case_id": "full_3d_snn_window",
+        "max_abs_case_id": "full_3d_snn_window_monolithic_proxy",
+        "min_run_tag": "native_dense_fixed_step_4_10us",
+        "max_run_tag": "native_dense_fixed_step_4_10us",
+        "max_abs_run_tag": "native_dense_fixed_step_4_10us"
+      },
+      "hotspot_layer_delta": {
+        "count": 2,
+        "mean": 0.0,
+        "abs_mean": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "max_abs": 0.0,
+        "min_case_id": "full_3d_snn_window",
+        "max_case_id": "full_3d_snn_window",
+        "max_abs_case_id": "full_3d_snn_window_monolithic_proxy",
+        "min_run_tag": "native_dense_fixed_step_4_10us",
+        "max_run_tag": "native_dense_fixed_step_4_10us",
+        "max_abs_run_tag": "native_dense_fixed_step_4_10us"
+      }
+    },
+    "groups": {
+      "control_mode": {
+        "observe_only": {
+          "available": true,
+          "summary": {
+            "eligible_case_count": 2,
+            "eligible_case_ids": [
+              "full_3d_snn_window",
+              "full_3d_snn_window_monolithic_proxy"
+            ],
+            "excluded_case_ids": [
+              "full_3d_snn_window_bundle_v3"
+            ],
+            "hotspot_status_counts": {
+              "ran": 2,
+              "disabled": 1
+            },
+            "hotspot_temperature_source_counts": {
+              "hotspot_steady_temp": 2
+            },
+            "runtime_state_source_counts": {
+              "online_rc_estimator": 2,
+              "thermal_hooks": 1
+            },
+            "hotspot_threshold_c_counts": {
+              "70.0": 3
+            },
+            "hotspot_threshold_source_counts": {
+              "effective_config.thermal.hotspot_threshold_c": 3
+            },
+            "hotspot_threshold_profile_count": 1,
+            "hotspot_threshold_consistent": true,
+            "hotspot_threshold_profiles": [
+              {
+                "hotspot_threshold_c": 70.0,
+                "hotspot_threshold_source": "effective_config.thermal.hotspot_threshold_c",
+                "case_count": 3
+              }
+            ]
+          },
+          "cases": [
+            {
+              "case_id": "full_3d_snn_window",
+              "run_tag": "native_dense_fixed_step_4_10us",
+              "runtime_enabled": false,
+              "control_mode": "observe_only",
+              "case_role": "calibration_only",
+              "hotspot_driver_status": "ran",
+              "hotspot_temperature_source": "hotspot_steady_temp",
+              "runtime_state_source": "online_rc_estimator",
+              "runtime_peak_temperature_c": 47.955010938,
+              "hotspot_peak_temperature_c": 45.03000000000003,
+              "hotspot_peak_delta_c": 2.9250109379999714,
+              "runtime_avg_temperature_c": 46.16823261720838,
+              "hotspot_avg_temperature_c": 45.02776041666669,
+              "hotspot_avg_delta_c": 1.1404722005416943,
+              "runtime_hotspot_block_count": 0,
+              "hotspot_block_count": 0,
+              "hotspot_block_delta": 0,
+              "runtime_hotspot_layer_count": 0,
+              "hotspot_layer_count": 0,
+              "hotspot_layer_delta": 0,
+              "hotspot_threshold_c": 70.0,
+              "hotspot_threshold_source": "effective_config.thermal.hotspot_threshold_c"
+            },
+            {
+              "case_id": "full_3d_snn_window_monolithic_proxy",
+              "run_tag": "native_dense_fixed_step_4_10us",
+              "runtime_enabled": false,
+              "control_mode": "observe_only",
+              "case_role": "calibration_only",
+              "hotspot_driver_status": "ran",
+              "hotspot_temperature_source": "hotspot_steady_temp",
+              "runtime_state_source": "online_rc_estimator",
+              "runtime_peak_temperature_c": 47.4041625,
+              "hotspot_peak_temperature_c": 45.02000000000004,
+              "hotspot_peak_delta_c": 2.3841624999999596,
+              "runtime_avg_temperature_c": 45.99489010416664,
+              "hotspot_avg_temperature_c": 45.02000000000023,
+              "hotspot_avg_delta_c": 0.9748901041664126,
+              "runtime_hotspot_block_count": 0,
+              "hotspot_block_count": 0,
+              "hotspot_block_delta": 0,
+              "runtime_hotspot_layer_count": 0,
+              "hotspot_layer_count": 0,
+              "hotspot_layer_delta": 0,
+              "hotspot_threshold_c": 70.0,
+              "hotspot_threshold_source": "effective_config.thermal.hotspot_threshold_c"
+            }
+          ],
+          "metrics": {
+            "hotspot_peak_delta_c": {
+              "count": 2,
+              "mean": 2.6545867189999655,
+              "abs_mean": 2.6545867189999655,
+              "min": 2.3841624999999596,
+              "max": 2.9250109379999714,
+              "max_abs": 2.9250109379999714,
+              "min_case_id": "full_3d_snn_window_monolithic_proxy",
+              "max_case_id": "full_3d_snn_window",
+              "max_abs_case_id": "full_3d_snn_window",
+              "min_run_tag": "native_dense_fixed_step_4_10us",
+              "max_run_tag": "native_dense_fixed_step_4_10us",
+              "max_abs_run_tag": "native_dense_fixed_step_4_10us"
+            },
+            "hotspot_avg_delta_c": {
+              "count": 2,
+              "mean": 1.0576811523540535,
+              "abs_mean": 1.0576811523540535,
+              "min": 0.9748901041664126,
+              "max": 1.1404722005416943,
+              "max_abs": 1.1404722005416943,
+              "min_case_id": "full_3d_snn_window_monolithic_proxy",
+              "max_case_id": "full_3d_snn_window",
+              "max_abs_case_id": "full_3d_snn_window",
+              "min_run_tag": "native_dense_fixed_step_4_10us",
+              "max_run_tag": "native_dense_fixed_step_4_10us",
+              "max_abs_run_tag": "native_dense_fixed_step_4_10us"
+            },
+            "hotspot_block_delta": {
+              "count": 2,
+              "mean": 0.0,
+              "abs_mean": 0.0,
+              "min": 0.0,
+              "max": 0.0,
+              "max_abs": 0.0,
+              "min_case_id": "full_3d_snn_window",
+              "max_case_id": "full_3d_snn_window",
+              "max_abs_case_id": "full_3d_snn_window_monolithic_proxy",
+              "min_run_tag": "native_dense_fixed_step_4_10us",
+              "max_run_tag": "native_dense_fixed_step_4_10us",
+              "max_abs_run_tag": "native_dense_fixed_step_4_10us"
+            },
+            "hotspot_layer_delta": {
+              "count": 2,
+              "mean": 0.0,
+              "abs_mean": 0.0,
+              "min": 0.0,
+              "max": 0.0,
+              "max_abs": 0.0,
+              "min_case_id": "full_3d_snn_window",
+              "max_case_id": "full_3d_snn_window",
+              "max_abs_case_id": "full_3d_snn_window_monolithic_proxy",
+              "min_run_tag": "native_dense_fixed_step_4_10us",
+              "max_run_tag": "native_dense_fixed_step_4_10us",
+              "max_abs_run_tag": "native_dense_fixed_step_4_10us"
+            }
+          }
+        }
+      },
+      "case_role": {
+        "calibration_only": {
+          "available": true,
+          "summary": {
+            "eligible_case_count": 2,
+            "eligible_case_ids": [
+              "full_3d_snn_window",
+              "full_3d_snn_window_monolithic_proxy"
+            ],
+            "excluded_case_ids": [
+              "full_3d_snn_window_bundle_v3"
+            ],
+            "hotspot_status_counts": {
+              "ran": 2,
+              "disabled": 1
+            },
+            "hotspot_temperature_source_counts": {
+              "hotspot_steady_temp": 2
+            },
+            "runtime_state_source_counts": {
+              "online_rc_estimator": 2,
+              "thermal_hooks": 1
+            },
+            "hotspot_threshold_c_counts": {
+              "70.0": 3
+            },
+            "hotspot_threshold_source_counts": {
+              "effective_config.thermal.hotspot_threshold_c": 3
+            },
+            "hotspot_threshold_profile_count": 1,
+            "hotspot_threshold_consistent": true,
+            "hotspot_threshold_profiles": [
+              {
+                "hotspot_threshold_c": 70.0,
+                "hotspot_threshold_source": "effective_config.thermal.hotspot_threshold_c",
+                "case_count": 3
+              }
+            ]
+          },
+          "cases": [
+            {
+              "case_id": "full_3d_snn_window",
+              "run_tag": "native_dense_fixed_step_4_10us",
+              "runtime_enabled": false,
+              "control_mode": "observe_only",
+              "case_role": "calibration_only",
+              "hotspot_driver_status": "ran",
+              "hotspot_temperature_source": "hotspot_steady_temp",
+              "runtime_state_source": "online_rc_estimator",
+              "runtime_peak_temperature_c": 47.955010938,
+              "hotspot_peak_temperature_c": 45.03000000000003,
+              "hotspot_peak_delta_c": 2.9250109379999714,
+              "runtime_avg_temperature_c": 46.16823261720838,
+              "hotspot_avg_temperature_c": 45.02776041666669,
+              "hotspot_avg_delta_c": 1.1404722005416943,
+              "runtime_hotspot_block_count": 0,
+              "hotspot_block_count": 0,
+              "hotspot_block_delta": 0,
+              "runtime_hotspot_layer_count": 0,
+              "hotspot_layer_count": 0,
+              "hotspot_layer_delta": 0,
+              "hotspot_threshold_c": 70.0,
+              "hotspot_threshold_source": "effective_config.thermal.hotspot_threshold_c"
+            },
+            {
+              "case_id": "full_3d_snn_window_monolithic_proxy",
+              "run_tag": "native_dense_fixed_step_4_10us",
+              "runtime_enabled": false,
+              "control_mode": "observe_only",
+              "case_role": "calibration_only",
+              "hotspot_driver_status": "ran",
+              "hotspot_temperature_source": "hotspot_steady_temp",
+              "runtime_state_source": "online_rc_estimator",
+              "runtime_peak_temperature_c": 47.4041625,
+              "hotspot_peak_temperature_c": 45.02000000000004,
+              "hotspot_peak_delta_c": 2.3841624999999596,
+              "runtime_avg_temperature_c": 45.99489010416664,
+              "hotspot_avg_temperature_c": 45.02000000000023,
+              "hotspot_avg_delta_c": 0.9748901041664126,
+              "runtime_hotspot_block_count": 0,
+              "hotspot_block_count": 0,
+              "hotspot_block_delta": 0,
+              "runtime_hotspot_layer_count": 0,
+              "hotspot_layer_count": 0,
+              "hotspot_layer_delta": 0,
+              "hotspot_threshold_c": 70.0,
+              "hotspot_threshold_source": "effective_config.thermal.hotspot_threshold_c"
+            }
+          ],
+          "metrics": {
+            "hotspot_peak_delta_c": {
+              "count": 2,
+              "mean": 2.6545867189999655,
+              "abs_mean": 2.6545867189999655,
+              "min": 2.3841624999999596,
+              "max": 2.9250109379999714,
+              "max_abs": 2.9250109379999714,
+              "min_case_id": "full_3d_snn_window_monolithic_proxy",
+              "max_case_id": "full_3d_snn_window",
+              "max_abs_case_id": "full_3d_snn_window",
+              "min_run_tag": "native_dense_fixed_step_4_10us",
+              "max_run_tag": "native_dense_fixed_step_4_10us",
+              "max_abs_run_tag": "native_dense_fixed_step_4_10us"
+            },
+            "hotspot_avg_delta_c": {
+              "count": 2,
+              "mean": 1.0576811523540535,
+              "abs_mean": 1.0576811523540535,
+              "min": 0.9748901041664126,
+              "max": 1.1404722005416943,
+              "max_abs": 1.1404722005416943,
+              "min_case_id": "full_3d_snn_window_monolithic_proxy",
+              "max_case_id": "full_3d_snn_window",
+              "max_abs_case_id": "full_3d_snn_window",
+              "min_run_tag": "native_dense_fixed_step_4_10us",
+              "max_run_tag": "native_dense_fixed_step_4_10us",
+              "max_abs_run_tag": "native_dense_fixed_step_4_10us"
+            },
+            "hotspot_block_delta": {
+              "count": 2,
+              "mean": 0.0,
+              "abs_mean": 0.0,
+              "min": 0.0,
+              "max": 0.0,
+              "max_abs": 0.0,
+              "min_case_id": "full_3d_snn_window",
+              "max_case_id": "full_3d_snn_window",
+              "max_abs_case_id": "full_3d_snn_window_monolithic_proxy",
+              "min_run_tag": "native_dense_fixed_step_4_10us",
+              "max_run_tag": "native_dense_fixed_step_4_10us",
+              "max_abs_run_tag": "native_dense_fixed_step_4_10us"
+            },
+            "hotspot_layer_delta": {
+              "count": 2,
+              "mean": 0.0,
+              "abs_mean": 0.0,
+              "min": 0.0,
+              "max": 0.0,
+              "max_abs": 0.0,
+              "min_case_id": "full_3d_snn_window",
+              "max_case_id": "full_3d_snn_window",
+              "max_abs_case_id": "full_3d_snn_window_monolithic_proxy",
+              "min_run_tag": "native_dense_fixed_step_4_10us",
+              "max_run_tag": "native_dense_fixed_step_4_10us",
+              "max_abs_run_tag": "native_dense_fixed_step_4_10us"
+            }
+          }
+        }
+      }
+    }
+  },
+  "thermal_input_preparation": {
+    "available": true,
+    "summary": {
+      "case_count": 3,
+      "cases_with_summary_path": 2,
+      "cases_with_window_power_samples_path": 2,
+      "shared_summary_case_ids": [],
+      "shared_window_power_sample_case_ids": [],
+      "independent_candidate_case_ids": [
+        "full_3d_snn_window",
+        "full_3d_snn_window_monolithic_proxy"
+      ],
+      "blocked_case_ids": [
+        "full_3d_snn_window_bundle_v3"
+      ]
+    },
+    "cases": [
+      {
+        "case_id": "full_3d_snn_window",
+        "run_tag": "native_dense_fixed_step_4_10us",
+        "runtime_enabled": false,
+        "control_mode": "observe_only",
+        "case_role": "calibration_only",
+        "input_source_kind": "local_hotspot_sidecar",
+        "summary_path": "/home/xgy/remote/snn3dexp/runs/full_3d_snn_window/native_dense_fixed_step_4_10us/thermal_sidecar/summary/thermal_summary.json",
+        "summary_exists": true,
+        "window_power_samples_path": "/home/xgy/remote/snn3dexp/runs/full_3d_snn_window/native_dense_fixed_step_4_10us/thermal_sidecar/summary/window_power_samples.jsonl",
+        "window_power_samples_exists": true,
+        "window_power_sample_count": 1,
+        "trace_sources": [
+          "proxy_synthesized"
+        ],
+        "shared_input_key": "/home/xgy/remote/snn3dexp/runs/full_3d_snn_window/native_dense_fixed_step_4_10us/thermal_sidecar/summary/thermal_summary.json",
+        "shared_summary_path": false,
+        "shared_window_power_samples_path": false,
+        "independent_candidate": true,
+        "blocking_reasons": []
+      },
+      {
+        "case_id": "full_3d_snn_window_bundle_v3",
+        "run_tag": "native_dense_fixed_step_4_10us",
+        "runtime_enabled": false,
+        "control_mode": "observe_only",
+        "case_role": "calibration_only",
+        "input_source_kind": "runtime_observability_only",
+        "summary_path": "",
+        "summary_exists": false,
+        "window_power_samples_path": "",
+        "window_power_samples_exists": false,
+        "window_power_sample_count": 0,
+        "trace_sources": [],
+        "shared_input_key": "",
+        "shared_summary_path": false,
+        "shared_window_power_samples_path": false,
+        "independent_candidate": false,
+        "blocking_reasons": [
+          "missing_replay_artifacts"
+        ]
+      },
+      {
+        "case_id": "full_3d_snn_window_monolithic_proxy",
+        "run_tag": "native_dense_fixed_step_4_10us",
+        "runtime_enabled": false,
+        "control_mode": "observe_only",
+        "case_role": "calibration_only",
+        "input_source_kind": "local_hotspot_sidecar",
+        "summary_path": "/home/xgy/remote/snn3dexp/runs/full_3d_snn_window_monolithic_proxy/native_dense_fixed_step_4_10us/thermal_sidecar/summary/thermal_summary.json",
+        "summary_exists": true,
+        "window_power_samples_path": "/home/xgy/remote/snn3dexp/runs/full_3d_snn_window_monolithic_proxy/native_dense_fixed_step_4_10us/thermal_sidecar/summary/window_power_samples.jsonl",
+        "window_power_samples_exists": true,
+        "window_power_sample_count": 1,
+        "trace_sources": [
+          "proxy_synthesized"
+        ],
+        "shared_input_key": "/home/xgy/remote/snn3dexp/runs/full_3d_snn_window_monolithic_proxy/native_dense_fixed_step_4_10us/thermal_sidecar/summary/thermal_summary.json",
+        "shared_summary_path": false,
+        "shared_window_power_samples_path": false,
+        "independent_candidate": true,
+        "blocking_reasons": []
+      }
+    ],
+    "prepared_manifest": {
+      "case_ids": [
+        "full_3d_snn_window",
+        "full_3d_snn_window_monolithic_proxy"
+      ],
+      "run_tags_by_case": {
+        "full_3d_snn_window": "native_dense_fixed_step_4_10us",
+        "full_3d_snn_window_monolithic_proxy": "native_dense_fixed_step_4_10us"
+      }
+    }
+  },
+  "realism_focus_metrics": [],
+  "outputs": {
+    "csv": "/home/xgy/remote/snn3dexp/analysis/windowed_native_dense_family/native_dense_family_compose_20260324/phase2_artifacts/phase2_runtime_baseline_table.csv",
+    "markdown": "/home/xgy/remote/snn3dexp/analysis/windowed_native_dense_family/native_dense_family_compose_20260324/phase2_artifacts/phase2_runtime_baseline_table.md",
+    "latex": "/home/xgy/remote/snn3dexp/analysis/windowed_native_dense_family/native_dense_family_compose_20260324/phase2_artifacts/phase2_runtime_baseline_table.tex",
+    "svg": "/home/xgy/remote/snn3dexp/analysis/windowed_native_dense_family/native_dense_family_compose_20260324/phase2_artifacts/phase2_runtime_focus_metrics.svg",
+    "route_memory_compare_svg": "/home/xgy/remote/snn3dexp/analysis/windowed_native_dense_family/native_dense_family_compose_20260324/phase2_artifacts/phase2_route_memory_compare.svg",
+    "snn_window_route_memory_compare_svg": "/home/xgy/remote/snn3dexp/analysis/windowed_native_dense_family/native_dense_family_compose_20260324/phase2_artifacts/phase2_snn_window_route_memory_compare.svg",
+    "snn_window_route_memory_compare_csv": "/home/xgy/remote/snn3dexp/analysis/windowed_native_dense_family/native_dense_family_compose_20260324/phase2_artifacts/phase2_snn_window_route_memory_compare.csv",
+    "memory_model_compare_svg": "/home/xgy/remote/snn3dexp/analysis/windowed_native_dense_family/native_dense_family_compose_20260324/phase2_artifacts/phase2_memory_model_compare.svg",
+    "memory_tier_csv": "/home/xgy/remote/snn3dexp/analysis/windowed_native_dense_family/native_dense_family_compose_20260324/phase2_artifacts/phase2_memory_tier_table.csv",
+    "thermal_calibration_csv": "/home/xgy/remote/snn3dexp/analysis/windowed_native_dense_family/native_dense_family_compose_20260324/phase2_artifacts/phase2_thermal_calibration_table.csv",
+    "thermal_calibration_svg": "/home/xgy/remote/snn3dexp/analysis/windowed_native_dense_family/native_dense_family_compose_20260324/phase2_artifacts/phase2_thermal_calibration_compare.svg",
+    "memory_home_stack_codesign_csv": "/home/xgy/remote/snn3dexp/analysis/windowed_native_dense_family/native_dense_family_compose_20260324/phase2_artifacts/phase2_memory_home_stack_codesign.csv",
+    "memory_home_stack_codesign_markdown": "/home/xgy/remote/snn3dexp/analysis/windowed_native_dense_family/native_dense_family_compose_20260324/phase2_artifacts/phase2_memory_home_stack_codesign.md",
+    "memory_home_stack_codesign_latex": "/home/xgy/remote/snn3dexp/analysis/windowed_native_dense_family/native_dense_family_compose_20260324/phase2_artifacts/phase2_memory_home_stack_codesign.tex",
+    "summary_json": "/home/xgy/remote/snn3dexp/analysis/windowed_native_dense_family/native_dense_family_compose_20260324/phase2_artifacts/phase2_runtime_summary.json",
+    "memory_nmc_codesign_surface_summary_json": "/home/xgy/remote/snn3dexp/analysis/windowed_native_dense_family/native_dense_family_compose_20260324/phase2_artifacts/codesign_surface/memory_nmc_codesign_surface_summary.json",
+    "memory_nmc_codesign_surface_csv": "/home/xgy/remote/snn3dexp/analysis/windowed_native_dense_family/native_dense_family_compose_20260324/phase2_artifacts/codesign_surface/memory_nmc_codesign_surface.csv",
+    "memory_nmc_codesign_surface_markdown": "/home/xgy/remote/snn3dexp/analysis/windowed_native_dense_family/native_dense_family_compose_20260324/phase2_artifacts/codesign_surface/memory_nmc_codesign_surface.md",
+    "route_runtime_diff_summary_json": "/home/xgy/remote/snn3dexp/analysis/windowed_native_dense_family/native_dense_family_compose_20260324/phase2_artifacts/route_runtime_diff/memory_nmc_route_runtime_diff_summary.json",
+    "route_runtime_diff_csv": "/home/xgy/remote/snn3dexp/analysis/windowed_native_dense_family/native_dense_family_compose_20260324/phase2_artifacts/route_runtime_diff/memory_nmc_route_runtime_diff.csv",
+    "route_runtime_diff_markdown": "/home/xgy/remote/snn3dexp/analysis/windowed_native_dense_family/native_dense_family_compose_20260324/phase2_artifacts/route_runtime_diff/memory_nmc_route_runtime_diff.md",
+    "route_runtime_diff_mechanism_progression_csv": "/home/xgy/remote/snn3dexp/analysis/windowed_native_dense_family/native_dense_family_compose_20260324/phase2_artifacts/route_runtime_diff/memory_nmc_route_runtime_mechanism_progression.csv",
+    "route_runtime_diff_joint_pressure_csv": "/home/xgy/remote/snn3dexp/analysis/windowed_native_dense_family/native_dense_family_compose_20260324/phase2_artifacts/route_runtime_diff/memory_nmc_route_runtime_joint_pressure.csv"
+  },
+  "thermal_evidence_readiness": {
+    "available": false,
+    "run_tag": "native_dense_fixed_step_4_10us",
+    "manifest_path": "",
+    "run_root": "",
+    "refresh_probe_available": false,
+    "refresh_probe_error": "",
+    "summary": {
+      "focus_case_count": 0,
+      "runtime_observability_only_case_ids": [],
+      "local_hotspot_sidecar_case_ids": [],
+      "refreshable_case_ids": [],
+      "blocked_case_ids": [],
+      "blocking_reason_counts": {},
+      "refresh_probe_status_counts": {},
+      "refresh_probe_error_kind_counts": {}
+    },
+    "focus_cases": [],
+    "refresh_probe": {
+      "requested_run_tag": "",
+      "requested_run_tags_by_case": {},
+      "requested_case_ids": [],
+      "summary": {}
+    }
+  },
+  "canonical_metric_planes": {
+    "contract_version": "v1",
+    "route_home_placement": {
+      "focus_cases": [
+        "full_3d",
+        "full_3d_mapping",
+        "full_3d_thermal_guard"
+      ],
+      "fields": [
+        "same_home_stack_ratio",
+        "vertical_target_ratio",
+        "vertical_link_pressure"
+      ],
+      "rows": []
+    },
+    "memory_realism": {
+      "compare_key": "hbm_like_vs_monolithic_like",
+      "fields": [
+        "vertical_hops_ratio",
+        "remote_home_ratio",
+        "total_service_deficit",
+        "reliability_penalty"
+      ],
+      "deltas": {
+        "vertical_hops_ratio": 0.0,
+        "remote_home_ratio": 0.0,
+        "total_service_deficit": 0,
+        "reliability_penalty": 0.12856096540178574
+      }
+    },
+    "thermal_runtime_control": {
+      "focus_cases": [],
+      "fields": [
+        "thermal_input_source_kind",
+        "hotspot_peak_temperature_c",
+        "remap_epoch",
+        "homeroute_adjustment_count",
+        "thermal_guard_actions"
+      ],
+      "rows": [],
+      "summary": {
+        "runtime_observability_only_case_ids": [],
+        "local_hotspot_sidecar_case_ids": [],
+        "refreshable_case_ids": [],
+        "blocking_reason_counts": {},
+        "refresh_probe_status_counts": {},
+        "refresh_probe_error_kind_counts": {}
+      }
+    },
+    "mechanism_progression": {
+      "fields": [
+        "window_route_dominant_axis",
+        "runtime_compare_dominant_axis",
+        "progression_signature"
+      ],
+      "summary": {
+        "window_route_dominant_axis": "stable_or_zero",
+        "runtime_compare_dominant_axis": "unavailable",
+        "progression_signature": "stable_or_zero -> unavailable -> unavailable"
+      }
+    }
+  },
+  "canonical_mainline": {
+    "contract_version": "v1",
+    "run_tag": "native_dense_fixed_step_4_10us",
+    "phase2_summary_path": "/home/xgy/remote/snn3dexp/analysis/windowed_native_dense_family/native_dense_family_compose_20260324/phase2_artifacts/phase2_runtime_summary.json",
+    "codesign_surface_summary_path": "/home/xgy/remote/snn3dexp/analysis/windowed_native_dense_family/native_dense_family_compose_20260324/phase2_artifacts/codesign_surface/memory_nmc_codesign_surface_summary.json",
+    "route_runtime_diff_summary_path": "/home/xgy/remote/snn3dexp/analysis/windowed_native_dense_family/native_dense_family_compose_20260324/phase2_artifacts/route_runtime_diff/memory_nmc_route_runtime_diff_summary.json",
+    "canonical_surface_label": "native_dense_fixed_step_4_10us",
+    "surface_baseline_run_tag": "native_dense_fixed_step_4_10us",
+    "surface_hotspot_run_tag": "native_dense_fixed_step_4_10us",
+    "baseline_overlay_attached": false,
+    "baseline_overlay_path_count": 0,
+    "mechanism_progression_summary_present": true,
+    "runtime_compare_dominant_axis": "unavailable"
+  },
+  "memory_nmc_codesign_surface": {
+    "available": true,
+    "surface_label": "native_dense_fixed_step_4_10us",
+    "outputs": {
+      "summary_json": "/home/xgy/remote/snn3dexp/analysis/windowed_native_dense_family/native_dense_family_compose_20260324/phase2_artifacts/codesign_surface/memory_nmc_codesign_surface_summary.json",
+      "csv": "/home/xgy/remote/snn3dexp/analysis/windowed_native_dense_family/native_dense_family_compose_20260324/phase2_artifacts/codesign_surface/memory_nmc_codesign_surface.csv",
+      "markdown": "/home/xgy/remote/snn3dexp/analysis/windowed_native_dense_family/native_dense_family_compose_20260324/phase2_artifacts/codesign_surface/memory_nmc_codesign_surface.md"
+    },
+    "sources": {
+      "baseline_ablation_path": "/home/xgy/remote/snn3dexp/analysis/windowed_native_dense_family/native_dense_family_compose_20260324/window_ablation/native_dense_fixed_step_4_10us.json",
+      "baseline_run_tag": "native_dense_fixed_step_4_10us",
+      "surface_label": "native_dense_fixed_step_4_10us",
+      "baseline_overlay_ablation_paths": [],
+      "fixed_step_summary_path": "/home/xgy/remote/snn3dexp/analysis/windowed_native_dense_family/native_dense_family_compose_20260324/fixed_step_analysis/fixed_step_sweep_summary.json",
+      "fixed_step_run_tags": [
+        "native_dense_fixed_step_4_10us"
+      ],
+      "stop_window_ablation_paths": [],
+      "stop_window_run_tags": [],
+      "hotspot_runtime_summary_path": "/home/xgy/remote/snn3dexp/analysis/windowed_native_dense_family/native_dense_family_compose_20260324/phase2_artifacts/phase2_runtime_summary.json",
+      "hotspot_run_tag": "native_dense_fixed_step_4_10us"
+    },
+    "traffic_mem_baseline_row_count": 3,
+    "traffic_mem_compare_row_count": 1,
+    "window_baseline_row_count": 3,
+    "window_bundle_breakdown_row_count": 1,
+    "window_memory_model_breakdown_row_count": 1,
+    "window_spike_sensitivity_row_count": 0,
+    "window_stop_baseline_row_count": 0,
+    "window_stop_compare_row_count": 0,
+    "hotspot_runtime_run_tag": "native_dense_fixed_step_4_10us"
+  },
+  "route_runtime_diff": {
+    "available": true,
+    "outputs": {
+      "summary_json": "/home/xgy/remote/snn3dexp/analysis/windowed_native_dense_family/native_dense_family_compose_20260324/phase2_artifacts/route_runtime_diff/memory_nmc_route_runtime_diff_summary.json",
+      "csv": "/home/xgy/remote/snn3dexp/analysis/windowed_native_dense_family/native_dense_family_compose_20260324/phase2_artifacts/route_runtime_diff/memory_nmc_route_runtime_diff.csv",
+      "markdown": "/home/xgy/remote/snn3dexp/analysis/windowed_native_dense_family/native_dense_family_compose_20260324/phase2_artifacts/route_runtime_diff/memory_nmc_route_runtime_diff.md",
+      "mechanism_progression_csv": "/home/xgy/remote/snn3dexp/analysis/windowed_native_dense_family/native_dense_family_compose_20260324/phase2_artifacts/route_runtime_diff/memory_nmc_route_runtime_mechanism_progression.csv",
+      "route_memory_joint_pressure_csv": "/home/xgy/remote/snn3dexp/analysis/windowed_native_dense_family/native_dense_family_compose_20260324/phase2_artifacts/route_runtime_diff/memory_nmc_route_runtime_joint_pressure.csv"
+    },
+    "traffic_route_diff_row_count": 0,
+    "window_route_diff_row_count": 1,
+    "window_route_mechanism_summary": {
+      "row_count": 1,
+      "alignment_transition_counts": {
+        "stable": 1
+      },
+      "dominant_axis_counts": {
+        "stable_or_zero": 1
+      },
+      "stall_on_step_gate_cycles_per_completed_step_delta_sum": 0.0,
+      "memory_requests_per_completed_step_delta_sum": 0.0,
+      "controller_outstanding_delta_total_sum": 0,
+      "controller_issue_reject_delta_total_sum": 0,
+      "real_home_path_service_deficit_total_delta_sum": 0,
+      "top_stall_rows": [
+        {
+          "run_tag": "native_dense_fixed_step_4_10us",
+          "base_case_id": "full_3d_snn_window",
+          "compare_case_id": "full_3d_snn_window_bundle_v3",
+          "stall_on_step_gate_cycles_per_completed_step_delta": 0.0,
+          "memory_requests_per_completed_step_delta": 0.0,
+          "controller_outstanding_delta_total": 0,
+          "real_home_path_service_deficit_total_delta": 0,
+          "dataflow_controller_alignment_transition": "stable",
+          "dominant_mechanism_axis": "stable_or_zero"
+        }
+      ]
+    },
+    "window_stop_diff_row_count": 0,
+    "window_stop_mechanism_summary": {
+      "row_count": 0,
+      "compare_kind_counts": {},
+      "dominant_axis_counts": {},
+      "stop_at_values": [],
+      "earliest_same_controller_overlap_stop_at": "",
+      "max_steps_completed_delta": 0,
+      "max_abs_stall_on_step_gate_cycles_per_completed_step_delta": 0.0,
+      "top_stall_rows": []
+    },
+    "runtime_compare_row_count": 0,
+    "runtime_compare_summary": {
+      "row_count": 0,
+      "compare_kind_counts": {},
+      "dominant_axis_counts": {},
+      "vertical_link_pressure_delta_sum": 0,
+      "stack_hotspot_penalty_delta_sum": 0,
+      "homeroute_adjustment_count_delta_sum": 0,
+      "thermal_guard_actions_delta_sum": 0
+    },
+    "mechanism_progression_summary": {
+      "window_route_dominant_axis": "stable_or_zero",
+      "window_route_dominant_axis_counts": {
+        "stable_or_zero": 1
+      },
+      "window_stop_dominant_axis": "unavailable",
+      "window_stop_dominant_axis_counts": {},
+      "earliest_same_controller_overlap_stop_at": "",
+      "runtime_compare_dominant_axis": "unavailable",
+      "runtime_compare_dominant_axis_counts": {},
+      "progression_signature": "stable_or_zero -> unavailable -> unavailable",
+      "phase_transition_flags": {
+        "route_to_stop_axis_shift": false,
+        "stop_to_runtime_axis_shift": false,
+        "route_to_runtime_axis_shift": false,
+        "same_controller_overlap_emerged": false
+      },
+      "phase_rows": [
+        {
+          "phase": "window_route",
+          "row_count": 1,
+          "dominant_axis": "stable_or_zero",
+          "key_signal": "alignment={\"stable\": 1}"
+        },
+        {
+          "phase": "window_stop",
+          "row_count": 0,
+          "dominant_axis": "unavailable",
+          "key_signal": "same_controller_overlap@unavailable"
+        },
+        {
+          "phase": "runtime_compare",
+          "row_count": 0,
+          "dominant_axis": "unavailable",
+          "key_signal": "compare_kinds={}"
+        }
+      ],
+      "progression_interpretation": "fixed-step window-route is dominated by stable_or_zero; stop-window evidence is unavailable; runtime compare evidence is unavailable."
+    },
+    "mechanism_progression_row_count": 3,
+    "route_memory_joint_pressure_row_count": 1,
+    "route_memory_joint_pressure_summary": {
+      "row_count": 1,
+      "compare_kind_counts": {
+        "traffic_mem_monolithic_vs_hbm": 1
+      },
+      "dominant_endpoint_counts": {
+        "unavailable": 1
+      },
+      "dominant_memory_axis_counts": {
+        "reliability_penalty": 1
+      },
+      "dominant_backlog_region_counts": {
+        "unavailable": 1
+      },
+      "top_joint_rows": [
+        {
+          "compare_kind": "traffic_mem_monolithic_vs_hbm",
+          "dominant_endpoint_pressure_side": "unavailable",
+          "dominant_memory_axis": "reliability_penalty",
+          "dominant_backlog_region": "unavailable",
+          "joint_interpretation": "traffic_mem_monolithic_vs_hbm is dominated by unavailable endpoint pressure, reliability_penalty on the memory side, backlog centered on unavailable, home-access=unavailable, and same-controller overlap stays flat."
+        }
+      ]
+    }
+  }
+}

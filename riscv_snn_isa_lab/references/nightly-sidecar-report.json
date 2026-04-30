@@ -1,0 +1,1778 @@
+{
+  "abi_audit": null,
+  "actual_count": 6,
+  "artifact_isolation": null,
+  "artifact_isolation_history": null,
+  "artifact_role": "stable_top_level_gate",
+  "authority_scope": "experimental_gate_authority",
+  "current_mainline_status_path": "/home/xgy/remote/riscv_snn_isa_lab/references/current-mainline-status.md",
+  "derived_from": [
+    "dated_nightly_index",
+    "stable_history_rollup",
+    "dated_equivalence_matrix"
+  ],
+  "drift_families": [],
+  "equivalence": {
+    "all_ok": true,
+    "artifact_role": "dated_equivalence_matrix",
+    "authority_scope": "family_level_equivalence_authority",
+    "canonical_surface": false,
+    "count": 6,
+    "families": [
+      {
+        "family": "barrier_wfi_order_ref",
+        "gate_reasons": [],
+        "runtime_bridge_build_preflight_rollup": {
+          "contract_key": "riscv_snn.runtime_bridge.runtime_consumers",
+          "contract_version": 1,
+          "dependency_count": 2,
+          "enabled": true,
+          "fingerprint_match": true,
+          "full_rebuild_required": false,
+          "lineage_status": "ok",
+          "missing_target_count": 0,
+          "reporting_scope": "research_only_nonblocking",
+          "required_action": "none",
+          "required_target_count": 9,
+          "stale_target_count": 0,
+          "status": "ok"
+        },
+        "status": "PASS",
+        "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-04-02-barrier-wfi-order-ref-equiv.json"
+      },
+      {
+        "family": "external_dyn_desc_bad_policy_ref",
+        "gate_reasons": [],
+        "runtime_bridge_build_preflight_rollup": {
+          "contract_key": "riscv_snn.runtime_bridge.runtime_consumers",
+          "contract_version": 1,
+          "dependency_count": 2,
+          "enabled": true,
+          "fingerprint_match": true,
+          "full_rebuild_required": false,
+          "lineage_status": "ok",
+          "missing_target_count": 0,
+          "reporting_scope": "research_only_nonblocking",
+          "required_action": "none",
+          "required_target_count": 9,
+          "stale_target_count": 0,
+          "status": "ok"
+        },
+        "status": "PASS",
+        "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-04-02-external-dyn-desc-bad-policy-ref-equiv.json"
+      },
+      {
+        "family": "external_dyn_desc_fault_overwrite_chain_ref",
+        "gate_reasons": [],
+        "runtime_bridge_build_preflight_rollup": {
+          "contract_key": "riscv_snn.runtime_bridge.runtime_consumers",
+          "contract_version": 1,
+          "dependency_count": 2,
+          "enabled": true,
+          "fingerprint_match": true,
+          "full_rebuild_required": false,
+          "lineage_status": "ok",
+          "missing_target_count": 0,
+          "reporting_scope": "research_only_nonblocking",
+          "required_action": "none",
+          "required_target_count": 9,
+          "stale_target_count": 0,
+          "status": "ok"
+        },
+        "status": "PASS",
+        "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-04-02-external-dyn-desc-fault-overwrite-chain-ref-equiv.json"
+      },
+      {
+        "family": "external_dyn_desc_fault_rearm_ref",
+        "gate_reasons": [],
+        "runtime_bridge_build_preflight_rollup": {
+          "contract_key": "riscv_snn.runtime_bridge.runtime_consumers",
+          "contract_version": 1,
+          "dependency_count": 2,
+          "enabled": true,
+          "fingerprint_match": true,
+          "full_rebuild_required": false,
+          "lineage_status": "ok",
+          "missing_target_count": 0,
+          "reporting_scope": "research_only_nonblocking",
+          "required_action": "none",
+          "required_target_count": 9,
+          "stale_target_count": 0,
+          "status": "ok"
+        },
+        "status": "PASS",
+        "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-04-02-external-dyn-desc-fault-rearm-ref-equiv.json"
+      },
+      {
+        "family": "external_dyn_desc_fault_ref",
+        "gate_reasons": [],
+        "runtime_bridge_build_preflight_rollup": {
+          "contract_key": "riscv_snn.runtime_bridge.runtime_consumers",
+          "contract_version": 1,
+          "dependency_count": 2,
+          "enabled": true,
+          "fingerprint_match": true,
+          "full_rebuild_required": false,
+          "lineage_status": "ok",
+          "missing_target_count": 0,
+          "reporting_scope": "research_only_nonblocking",
+          "required_action": "none",
+          "required_target_count": 9,
+          "stale_target_count": 0,
+          "status": "ok"
+        },
+        "status": "PASS",
+        "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-04-02-external-dyn-desc-fault-ref-equiv.json"
+      },
+      {
+        "family": "external_dyn_desc_ref",
+        "gate_reasons": [],
+        "runtime_bridge_build_preflight_rollup": {
+          "contract_key": "riscv_snn.runtime_bridge.runtime_consumers",
+          "contract_version": 1,
+          "dependency_count": 2,
+          "enabled": true,
+          "fingerprint_match": true,
+          "full_rebuild_required": false,
+          "lineage_status": "ok",
+          "missing_target_count": 0,
+          "reporting_scope": "research_only_nonblocking",
+          "required_action": "none",
+          "required_target_count": 9,
+          "stale_target_count": 0,
+          "status": "ok"
+        },
+        "status": "PASS",
+        "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-04-02-external-dyn-desc-ref-equiv.json"
+      }
+    ],
+    "gate_name": "riscv_snn_equiv_matrix",
+    "generated_utc": "2026-04-02T12:50:20.973808+00:00",
+    "producer": "riscv_snn_lab.run_equiv_matrix",
+    "requested_families": [
+      "barrier_wfi_order_ref",
+      "external_dyn_desc_bad_policy_ref",
+      "external_dyn_desc_fault_overwrite_chain_ref",
+      "external_dyn_desc_fault_rearm_ref",
+      "external_dyn_desc_fault_ref",
+      "external_dyn_desc_ref"
+    ],
+    "requested_group": "all",
+    "runtime_bridge_build_preflight_rollup": {
+      "all_ok": true,
+      "contract_keys": [
+        "riscv_snn.runtime_bridge.runtime_consumers"
+      ],
+      "contract_versions": [
+        1
+      ],
+      "enabled": true,
+      "family_count": 6,
+      "fingerprint_mismatch_family_count": 0,
+      "full_rebuild_required_family_count": 0,
+      "lineage_status_counts": {
+        "ok": 6
+      },
+      "missing_family_count": 0,
+      "reporting_scope": "research_only_nonblocking",
+      "required_action_counts": {
+        "none": 6
+      },
+      "stale_family_count": 0,
+      "status_counts": {
+        "ok": 6
+      }
+    },
+    "schema_version": 2,
+    "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-04-02-equiv-matrix-subset-3a01206219b8.json"
+  },
+  "failed_families": [],
+  "full_equivalence": {
+    "all_ok": true,
+    "artifact_role": "dated_equivalence_matrix",
+    "authority_scope": "family_level_equivalence_authority",
+    "canonical_surface": true,
+    "count": 8,
+    "families": [
+      {
+        "family": "barrier_wfi_order_ref",
+        "gate_reasons": [],
+        "runtime_bridge_build_preflight_rollup": {
+          "contract_key": "riscv_snn.runtime_bridge.runtime_consumers",
+          "contract_version": 1,
+          "dependency_count": 2,
+          "enabled": true,
+          "fingerprint_match": true,
+          "full_rebuild_required": false,
+          "lineage_status": "ok",
+          "missing_target_count": 0,
+          "reporting_scope": "research_only_nonblocking",
+          "required_action": "none",
+          "required_target_count": 9,
+          "stale_target_count": 0,
+          "status": "ok"
+        },
+        "status": "PASS",
+        "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-04-02-barrier-wfi-order-ref-equiv.json"
+      },
+      {
+        "family": "completion_queue_overflow_ref",
+        "gate_reasons": [],
+        "runtime_bridge_build_preflight_rollup": {
+          "contract_key": "riscv_snn.runtime_bridge.runtime_consumers",
+          "contract_version": 1,
+          "dependency_count": 2,
+          "enabled": true,
+          "fingerprint_match": true,
+          "full_rebuild_required": false,
+          "lineage_status": "ok",
+          "missing_target_count": 0,
+          "reporting_scope": "research_only_nonblocking",
+          "required_action": "none",
+          "required_target_count": 9,
+          "stale_target_count": 0,
+          "status": "ok"
+        },
+        "status": "PASS",
+        "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-04-02-completion-queue-overflow-ref-equiv.json"
+      },
+      {
+        "family": "external_dyn_desc_bad_policy_ref",
+        "gate_reasons": [],
+        "runtime_bridge_build_preflight_rollup": {
+          "contract_key": "riscv_snn.runtime_bridge.runtime_consumers",
+          "contract_version": 1,
+          "dependency_count": 2,
+          "enabled": true,
+          "fingerprint_match": true,
+          "full_rebuild_required": false,
+          "lineage_status": "ok",
+          "missing_target_count": 0,
+          "reporting_scope": "research_only_nonblocking",
+          "required_action": "none",
+          "required_target_count": 9,
+          "stale_target_count": 0,
+          "status": "ok"
+        },
+        "status": "PASS",
+        "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-04-02-external-dyn-desc-bad-policy-ref-equiv.json"
+      },
+      {
+        "family": "external_dyn_desc_fault_overwrite_chain_ref",
+        "gate_reasons": [],
+        "runtime_bridge_build_preflight_rollup": {
+          "contract_key": "riscv_snn.runtime_bridge.runtime_consumers",
+          "contract_version": 1,
+          "dependency_count": 2,
+          "enabled": true,
+          "fingerprint_match": true,
+          "full_rebuild_required": false,
+          "lineage_status": "ok",
+          "missing_target_count": 0,
+          "reporting_scope": "research_only_nonblocking",
+          "required_action": "none",
+          "required_target_count": 9,
+          "stale_target_count": 0,
+          "status": "ok"
+        },
+        "status": "PASS",
+        "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-04-02-external-dyn-desc-fault-overwrite-chain-ref-equiv.json"
+      },
+      {
+        "family": "external_dyn_desc_fault_rearm_ref",
+        "gate_reasons": [],
+        "runtime_bridge_build_preflight_rollup": {
+          "contract_key": "riscv_snn.runtime_bridge.runtime_consumers",
+          "contract_version": 1,
+          "dependency_count": 2,
+          "enabled": true,
+          "fingerprint_match": true,
+          "full_rebuild_required": false,
+          "lineage_status": "ok",
+          "missing_target_count": 0,
+          "reporting_scope": "research_only_nonblocking",
+          "required_action": "none",
+          "required_target_count": 9,
+          "stale_target_count": 0,
+          "status": "ok"
+        },
+        "status": "PASS",
+        "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-04-02-external-dyn-desc-fault-rearm-ref-equiv.json"
+      },
+      {
+        "family": "external_dyn_desc_fault_ref",
+        "gate_reasons": [],
+        "runtime_bridge_build_preflight_rollup": {
+          "contract_key": "riscv_snn.runtime_bridge.runtime_consumers",
+          "contract_version": 1,
+          "dependency_count": 2,
+          "enabled": true,
+          "fingerprint_match": true,
+          "full_rebuild_required": false,
+          "lineage_status": "ok",
+          "missing_target_count": 0,
+          "reporting_scope": "research_only_nonblocking",
+          "required_action": "none",
+          "required_target_count": 9,
+          "stale_target_count": 0,
+          "status": "ok"
+        },
+        "status": "PASS",
+        "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-04-02-external-dyn-desc-fault-ref-equiv.json"
+      },
+      {
+        "family": "external_dyn_desc_ref",
+        "gate_reasons": [],
+        "runtime_bridge_build_preflight_rollup": {
+          "contract_key": "riscv_snn.runtime_bridge.runtime_consumers",
+          "contract_version": 1,
+          "dependency_count": 2,
+          "enabled": true,
+          "fingerprint_match": true,
+          "full_rebuild_required": false,
+          "lineage_status": "ok",
+          "missing_target_count": 0,
+          "reporting_scope": "research_only_nonblocking",
+          "required_action": "none",
+          "required_target_count": 9,
+          "stale_target_count": 0,
+          "status": "ok"
+        },
+        "status": "PASS",
+        "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-04-02-external-dyn-desc-ref-equiv.json"
+      },
+      {
+        "family": "queue_backpressure_ref",
+        "gate_reasons": [],
+        "runtime_bridge_build_preflight_rollup": {
+          "contract_key": "riscv_snn.runtime_bridge.runtime_consumers",
+          "contract_version": 1,
+          "dependency_count": 2,
+          "enabled": true,
+          "fingerprint_match": true,
+          "full_rebuild_required": false,
+          "lineage_status": "ok",
+          "missing_target_count": 0,
+          "reporting_scope": "research_only_nonblocking",
+          "required_action": "none",
+          "required_target_count": 9,
+          "stale_target_count": 0,
+          "status": "ok"
+        },
+        "status": "PASS",
+        "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-04-02-queue-backpressure-ref-equiv.json"
+      }
+    ],
+    "gate_name": "riscv_snn_equiv_matrix",
+    "generated_utc": "2026-04-02T12:56:39.376726+00:00",
+    "producer": "riscv_snn_lab.run_equiv_matrix",
+    "requested_families": [
+      "barrier_wfi_order_ref",
+      "completion_queue_overflow_ref",
+      "external_dyn_desc_bad_policy_ref",
+      "external_dyn_desc_fault_overwrite_chain_ref",
+      "external_dyn_desc_fault_rearm_ref",
+      "external_dyn_desc_fault_ref",
+      "external_dyn_desc_ref",
+      "queue_backpressure_ref"
+    ],
+    "requested_group": "all",
+    "runtime_bridge_build_preflight_rollup": {
+      "all_ok": true,
+      "contract_keys": [
+        "riscv_snn.runtime_bridge.runtime_consumers"
+      ],
+      "contract_versions": [
+        1
+      ],
+      "enabled": true,
+      "family_count": 8,
+      "fingerprint_mismatch_family_count": 0,
+      "full_rebuild_required_family_count": 0,
+      "lineage_status_counts": {
+        "ok": 8
+      },
+      "missing_family_count": 0,
+      "reporting_scope": "research_only_nonblocking",
+      "required_action_counts": {
+        "none": 8
+      },
+      "stale_family_count": 0,
+      "status_counts": {
+        "ok": 8
+      }
+    },
+    "schema_version": 2,
+    "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-04-02-equiv-matrix.json"
+  },
+  "full_equivalence_history": {
+    "all_dates_ok": false,
+    "all_ok_latest": true,
+    "artifact_role": "stable_full_equivalence_history",
+    "authority_scope": "research_surface_rollup_only",
+    "entries": [
+      {
+        "added_families_vs_previous": [],
+        "all_ok": true,
+        "canonical_surface": true,
+        "count": 8,
+        "date": "2026-04-02",
+        "family_names": [
+          "barrier_wfi_order_ref",
+          "completion_queue_overflow_ref",
+          "external_dyn_desc_bad_policy_ref",
+          "external_dyn_desc_fault_overwrite_chain_ref",
+          "external_dyn_desc_fault_rearm_ref",
+          "external_dyn_desc_fault_ref",
+          "external_dyn_desc_ref",
+          "queue_backpressure_ref"
+        ],
+        "generated_utc": "2026-04-02T12:56:39.376726+00:00",
+        "removed_families_vs_previous": [],
+        "requested_group": "all",
+        "source_kind": "group_matrix",
+        "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-04-02-equiv-matrix.json"
+      },
+      {
+        "added_families_vs_previous": [],
+        "all_ok": false,
+        "canonical_surface": true,
+        "count": 8,
+        "date": "2026-04-01",
+        "family_names": [
+          "barrier_wfi_order_ref",
+          "completion_queue_overflow_ref",
+          "external_dyn_desc_bad_policy_ref",
+          "external_dyn_desc_fault_overwrite_chain_ref",
+          "external_dyn_desc_fault_rearm_ref",
+          "external_dyn_desc_fault_ref",
+          "external_dyn_desc_ref",
+          "queue_backpressure_ref"
+        ],
+        "generated_utc": "2026-04-01T04:05:30.365038+00:00",
+        "removed_families_vs_previous": [],
+        "requested_group": "all",
+        "source_kind": "group_matrix",
+        "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-04-01-equiv-matrix.json"
+      },
+      {
+        "added_families_vs_previous": [],
+        "all_ok": true,
+        "canonical_surface": true,
+        "count": 8,
+        "date": "2026-03-28",
+        "family_names": [
+          "barrier_wfi_order_ref",
+          "completion_queue_overflow_ref",
+          "external_dyn_desc_bad_policy_ref",
+          "external_dyn_desc_fault_overwrite_chain_ref",
+          "external_dyn_desc_fault_rearm_ref",
+          "external_dyn_desc_fault_ref",
+          "external_dyn_desc_ref",
+          "queue_backpressure_ref"
+        ],
+        "generated_utc": "2026-03-28T15:58:55.635993+00:00",
+        "removed_families_vs_previous": [],
+        "requested_group": "all",
+        "source_kind": "group_matrix",
+        "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-03-28-equiv-matrix.json"
+      },
+      {
+        "added_families_vs_previous": [],
+        "all_ok": true,
+        "canonical_surface": true,
+        "count": 8,
+        "date": "2026-03-27",
+        "family_names": [
+          "barrier_wfi_order_ref",
+          "completion_queue_overflow_ref",
+          "external_dyn_desc_bad_policy_ref",
+          "external_dyn_desc_fault_overwrite_chain_ref",
+          "external_dyn_desc_fault_rearm_ref",
+          "external_dyn_desc_fault_ref",
+          "external_dyn_desc_ref",
+          "queue_backpressure_ref"
+        ],
+        "generated_utc": "2026-03-27T09:35:32.599088+00:00",
+        "removed_families_vs_previous": [],
+        "requested_group": "all",
+        "source_kind": "group_matrix",
+        "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-03-27-equiv-matrix.json"
+      }
+    ],
+    "entry_count": 4,
+    "excluded_entries": [
+      {
+        "all_ok": true,
+        "canonical_surface": false,
+        "count": 5,
+        "date": "2026-03-26",
+        "family_names": [
+          "external_dyn_desc_bad_policy_ref",
+          "external_dyn_desc_fault_overwrite_chain_ref",
+          "external_dyn_desc_fault_rearm_ref",
+          "external_dyn_desc_fault_ref",
+          "external_dyn_desc_ref"
+        ],
+        "generated_utc": "2026-03-26T12:52:10.874145+00:00",
+        "reason": "unexpected_artifact_role",
+        "requested_group": null,
+        "source_kind": "group_matrix",
+        "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-03-26-equiv-matrix.json"
+      }
+    ],
+    "excluded_entry_count": 1,
+    "first_fail_date": "2026-04-01",
+    "generated_utc": "2026-04-02T12:56:39.377579+00:00",
+    "history_contract": "canonical_full_all_only",
+    "latest_date": "2026-04-02",
+    "latest_recovered_date": "2026-04-02",
+    "latest_summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-04-02-equiv-matrix.json",
+    "producer": "riscv_snn_lab.refresh_full_equivalence_history",
+    "schema_version": 2,
+    "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/full-equivalence-history.json"
+  },
+  "gate_name": "riscv_snn_experimental_nightly",
+  "gate_ok": true,
+  "gate_version": "1.1",
+  "generated_utc": "2026-04-02T12:58:59.664231+00:00",
+  "history_index": {
+    "all_ok_all": true,
+    "all_ok_latest": true,
+    "artifact_role": "stable_history_rollup",
+    "authority_scope": "historical_rollup_only",
+    "count": 6,
+    "entries": [
+      {
+        "all_ok": true,
+        "builder_summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-04-02-builder-regress-matrix.json",
+        "count": 6,
+        "date": "2026-04-02",
+        "drift_families": [],
+        "failed_families": [],
+        "healthy": true,
+        "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-04-02-nightly-index.json",
+        "toolchain_audit_summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-04-02-toolchain-bridge-audit.json",
+        "toolchain_summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-04-02-toolchain-regress-matrix.json"
+      },
+      {
+        "all_ok": true,
+        "builder_summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-04-01-builder-regress-matrix.json",
+        "count": 6,
+        "date": "2026-04-01",
+        "drift_families": [],
+        "failed_families": [],
+        "healthy": true,
+        "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-04-01-nightly-index.json",
+        "toolchain_audit_summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-04-01-toolchain-bridge-audit.json",
+        "toolchain_summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-04-01-toolchain-regress-matrix.json"
+      },
+      {
+        "all_ok": true,
+        "builder_summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-03-30-builder-regress-matrix.json",
+        "count": 6,
+        "date": "2026-03-30",
+        "drift_families": [],
+        "failed_families": [],
+        "healthy": true,
+        "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-03-30-nightly-index.json",
+        "toolchain_audit_summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-03-30-toolchain-bridge-audit.json",
+        "toolchain_summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-03-30-toolchain-regress-matrix.json"
+      },
+      {
+        "all_ok": true,
+        "builder_summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-03-28-builder-regress-matrix.json",
+        "count": 6,
+        "date": "2026-03-28",
+        "drift_families": [],
+        "failed_families": [],
+        "healthy": true,
+        "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-03-28-nightly-index.json",
+        "toolchain_audit_summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-03-28-toolchain-bridge-audit.json",
+        "toolchain_summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-03-28-toolchain-regress-matrix.json"
+      },
+      {
+        "all_ok": true,
+        "builder_summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-03-27-builder-regress-matrix.json",
+        "count": 6,
+        "date": "2026-03-27",
+        "drift_families": [],
+        "failed_families": [],
+        "healthy": true,
+        "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-03-27-nightly-index.json",
+        "toolchain_audit_summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-03-27-toolchain-bridge-audit.json",
+        "toolchain_summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-03-27-toolchain-regress-matrix.json"
+      },
+      {
+        "all_ok": true,
+        "builder_summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-03-25-builder-regress-matrix.json",
+        "count": 5,
+        "date": "2026-03-25",
+        "drift_families": [],
+        "failed_families": [],
+        "healthy": true,
+        "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-03-25-nightly-index.json",
+        "toolchain_audit_summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-03-25-toolchain-bridge-audit.json",
+        "toolchain_summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-03-25-toolchain-regress-matrix.json"
+      }
+    ],
+    "family_history": [
+      {
+        "days": [
+          {
+            "audit_ok": true,
+            "builder_run_id": "20260402-204246",
+            "date": "2026-04-02",
+            "healthy": true,
+            "manifest_match": true,
+            "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-04-02-nightly-index.json",
+            "toolchain_run_id": "20260402-204516"
+          },
+          {
+            "audit_ok": true,
+            "builder_run_id": "20260401-115154",
+            "date": "2026-04-01",
+            "healthy": true,
+            "manifest_match": true,
+            "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-04-01-nightly-index.json",
+            "toolchain_run_id": "20260401-115421"
+          },
+          {
+            "audit_ok": true,
+            "builder_run_id": "20260330-122650",
+            "date": "2026-03-30",
+            "healthy": true,
+            "manifest_match": true,
+            "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-03-30-nightly-index.json",
+            "toolchain_run_id": "20260330-122957"
+          },
+          {
+            "audit_ok": true,
+            "builder_run_id": "20260328-234359",
+            "date": "2026-03-28",
+            "healthy": true,
+            "manifest_match": true,
+            "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-03-28-nightly-index.json",
+            "toolchain_run_id": "20260328-234622"
+          },
+          {
+            "audit_ok": true,
+            "builder_run_id": "20260327-174544",
+            "date": "2026-03-27",
+            "healthy": true,
+            "manifest_match": true,
+            "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-03-27-nightly-index.json",
+            "toolchain_run_id": "20260327-174804"
+          }
+        ],
+        "family": "barrier_wfi_order_ref",
+        "first_drift_date": null,
+        "first_fail_date": null,
+        "latest_recovered_date": null
+      },
+      {
+        "days": [
+          {
+            "audit_ok": true,
+            "builder_run_id": "20260402-204134",
+            "date": "2026-04-02",
+            "healthy": true,
+            "manifest_match": true,
+            "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-04-02-nightly-index.json",
+            "toolchain_run_id": "20260402-204401"
+          },
+          {
+            "audit_ok": true,
+            "builder_run_id": "20260401-115042",
+            "date": "2026-04-01",
+            "healthy": true,
+            "manifest_match": true,
+            "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-04-01-nightly-index.json",
+            "toolchain_run_id": "20260401-115310"
+          },
+          {
+            "audit_ok": true,
+            "builder_run_id": "20260330-122526",
+            "date": "2026-03-30",
+            "healthy": true,
+            "manifest_match": true,
+            "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-03-30-nightly-index.json",
+            "toolchain_run_id": "20260330-122827"
+          },
+          {
+            "audit_ok": true,
+            "builder_run_id": "20260328-234230",
+            "date": "2026-03-28",
+            "healthy": true,
+            "manifest_match": true,
+            "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-03-28-nightly-index.json",
+            "toolchain_run_id": "20260328-234514"
+          },
+          {
+            "audit_ok": true,
+            "builder_run_id": "20260327-174433",
+            "date": "2026-03-27",
+            "healthy": true,
+            "manifest_match": true,
+            "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-03-27-nightly-index.json",
+            "toolchain_run_id": "20260327-174654"
+          },
+          {
+            "audit_ok": true,
+            "builder_run_id": "20260325-113950",
+            "date": "2026-03-25",
+            "healthy": true,
+            "manifest_match": true,
+            "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-03-25-nightly-index.json",
+            "toolchain_run_id": "20260325-114145"
+          }
+        ],
+        "family": "external_dyn_desc_bad_policy_ref",
+        "first_drift_date": null,
+        "first_fail_date": null,
+        "latest_recovered_date": null
+      },
+      {
+        "days": [
+          {
+            "audit_ok": true,
+            "builder_run_id": "20260402-204222",
+            "date": "2026-04-02",
+            "healthy": true,
+            "manifest_match": true,
+            "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-04-02-nightly-index.json",
+            "toolchain_run_id": "20260402-204451"
+          },
+          {
+            "audit_ok": true,
+            "builder_run_id": "20260401-115131",
+            "date": "2026-04-01",
+            "healthy": true,
+            "manifest_match": true,
+            "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-04-01-nightly-index.json",
+            "toolchain_run_id": "20260401-115357"
+          },
+          {
+            "audit_ok": true,
+            "builder_run_id": "20260330-122619",
+            "date": "2026-03-30",
+            "healthy": true,
+            "manifest_match": true,
+            "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-03-30-nightly-index.json",
+            "toolchain_run_id": "20260330-122927"
+          },
+          {
+            "audit_ok": true,
+            "builder_run_id": "20260328-234333",
+            "date": "2026-03-28",
+            "healthy": true,
+            "manifest_match": true,
+            "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-03-28-nightly-index.json",
+            "toolchain_run_id": "20260328-234558"
+          },
+          {
+            "audit_ok": true,
+            "builder_run_id": "20260327-174520",
+            "date": "2026-03-27",
+            "healthy": true,
+            "manifest_match": true,
+            "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-03-27-nightly-index.json",
+            "toolchain_run_id": "20260327-174740"
+          },
+          {
+            "audit_ok": true,
+            "builder_run_id": "20260325-114035",
+            "date": "2026-03-25",
+            "healthy": true,
+            "manifest_match": true,
+            "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-03-25-nightly-index.json",
+            "toolchain_run_id": "20260325-114230"
+          }
+        ],
+        "family": "external_dyn_desc_fault_overwrite_chain_ref",
+        "first_drift_date": null,
+        "first_fail_date": null,
+        "latest_recovered_date": null
+      },
+      {
+        "days": [
+          {
+            "audit_ok": true,
+            "builder_run_id": "20260402-204158",
+            "date": "2026-04-02",
+            "healthy": true,
+            "manifest_match": true,
+            "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-04-02-nightly-index.json",
+            "toolchain_run_id": "20260402-204427"
+          },
+          {
+            "audit_ok": true,
+            "builder_run_id": "20260401-115107",
+            "date": "2026-04-01",
+            "healthy": true,
+            "manifest_match": true,
+            "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-04-01-nightly-index.json",
+            "toolchain_run_id": "20260401-115335"
+          },
+          {
+            "audit_ok": true,
+            "builder_run_id": "20260330-122553",
+            "date": "2026-03-30",
+            "healthy": true,
+            "manifest_match": true,
+            "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-03-30-nightly-index.json",
+            "toolchain_run_id": "20260330-122857"
+          },
+          {
+            "audit_ok": true,
+            "builder_run_id": "20260328-234305",
+            "date": "2026-03-28",
+            "healthy": true,
+            "manifest_match": true,
+            "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-03-28-nightly-index.json",
+            "toolchain_run_id": "20260328-234536"
+          },
+          {
+            "audit_ok": true,
+            "builder_run_id": "20260327-174457",
+            "date": "2026-03-27",
+            "healthy": true,
+            "manifest_match": true,
+            "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-03-27-nightly-index.json",
+            "toolchain_run_id": "20260327-174717"
+          },
+          {
+            "audit_ok": true,
+            "builder_run_id": "20260325-114011",
+            "date": "2026-03-25",
+            "healthy": true,
+            "manifest_match": true,
+            "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-03-25-nightly-index.json",
+            "toolchain_run_id": "20260325-114209"
+          }
+        ],
+        "family": "external_dyn_desc_fault_rearm_ref",
+        "first_drift_date": null,
+        "first_fail_date": null,
+        "latest_recovered_date": null
+      },
+      {
+        "days": [
+          {
+            "audit_ok": true,
+            "builder_run_id": "20260402-204110",
+            "date": "2026-04-02",
+            "healthy": true,
+            "manifest_match": true,
+            "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-04-02-nightly-index.json",
+            "toolchain_run_id": "20260402-204337"
+          },
+          {
+            "audit_ok": true,
+            "builder_run_id": "20260401-115019",
+            "date": "2026-04-01",
+            "healthy": true,
+            "manifest_match": true,
+            "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-04-01-nightly-index.json",
+            "toolchain_run_id": "20260401-115246"
+          },
+          {
+            "audit_ok": true,
+            "builder_run_id": "20260330-122500",
+            "date": "2026-03-30",
+            "healthy": true,
+            "manifest_match": true,
+            "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-03-30-nightly-index.json",
+            "toolchain_run_id": "20260330-122754"
+          },
+          {
+            "audit_ok": true,
+            "builder_run_id": "20260328-234205",
+            "date": "2026-03-28",
+            "healthy": true,
+            "manifest_match": true,
+            "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-03-28-nightly-index.json",
+            "toolchain_run_id": "20260328-234449"
+          },
+          {
+            "audit_ok": true,
+            "builder_run_id": "20260327-174410",
+            "date": "2026-03-27",
+            "healthy": true,
+            "manifest_match": true,
+            "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-03-27-nightly-index.json",
+            "toolchain_run_id": "20260327-174632"
+          },
+          {
+            "audit_ok": true,
+            "builder_run_id": "20260325-113926",
+            "date": "2026-03-25",
+            "healthy": true,
+            "manifest_match": true,
+            "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-03-25-nightly-index.json",
+            "toolchain_run_id": "20260325-114123"
+          }
+        ],
+        "family": "external_dyn_desc_fault_ref",
+        "first_drift_date": null,
+        "first_fail_date": null,
+        "latest_recovered_date": null
+      },
+      {
+        "days": [
+          {
+            "audit_ok": true,
+            "builder_run_id": "20260402-204044",
+            "date": "2026-04-02",
+            "healthy": true,
+            "manifest_match": true,
+            "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-04-02-nightly-index.json",
+            "toolchain_run_id": "20260402-204314"
+          },
+          {
+            "audit_ok": true,
+            "builder_run_id": "20260401-114955",
+            "date": "2026-04-01",
+            "healthy": true,
+            "manifest_match": true,
+            "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-04-01-nightly-index.json",
+            "toolchain_run_id": "20260401-115223"
+          },
+          {
+            "audit_ok": true,
+            "builder_run_id": "20260330-122437",
+            "date": "2026-03-30",
+            "healthy": true,
+            "manifest_match": true,
+            "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-03-30-nightly-index.json",
+            "toolchain_run_id": "20260330-122723"
+          },
+          {
+            "audit_ok": true,
+            "builder_run_id": "20260328-234141",
+            "date": "2026-03-28",
+            "healthy": true,
+            "manifest_match": true,
+            "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-03-28-nightly-index.json",
+            "toolchain_run_id": "20260328-234426"
+          },
+          {
+            "audit_ok": true,
+            "builder_run_id": "20260327-174347",
+            "date": "2026-03-27",
+            "healthy": true,
+            "manifest_match": true,
+            "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-03-27-nightly-index.json",
+            "toolchain_run_id": "20260327-174610"
+          },
+          {
+            "audit_ok": true,
+            "builder_run_id": "20260325-113904",
+            "date": "2026-03-25",
+            "healthy": true,
+            "manifest_match": true,
+            "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-03-25-nightly-index.json",
+            "toolchain_run_id": "20260325-114100"
+          }
+        ],
+        "family": "external_dyn_desc_ref",
+        "first_drift_date": null,
+        "first_fail_date": null,
+        "latest_recovered_date": null
+      }
+    ],
+    "first_drift_date": null,
+    "first_fail_date": null,
+    "generated_utc": "2026-04-02T12:45:41.141339+00:00",
+    "latest_date": "2026-04-02",
+    "latest_recovered_date": null,
+    "latest_summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-04-02-nightly-index.json",
+    "producer": "riscv_snn_lab.build_history_index",
+    "schema_version": 2,
+    "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/nightly-history-index.json"
+  },
+  "min_count": 6,
+  "missing_families": [],
+  "nightly_index": {
+    "all_ok": true,
+    "artifact_role": "dated_nightly_index",
+    "authority_scope": "builder_toolchain_audit_only",
+    "builder_summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-04-02-builder-regress-matrix.json",
+    "canonical_surface": true,
+    "count": 6,
+    "families": [
+      {
+        "audit": {
+          "latest_manifest": "/home/xgy/remote/riscv_snn_isa_lab/runs/2026-04-02-barrier-wfi-order-ref-toolchain-smoke.md",
+          "manifest_match": true,
+          "manifest_run_dir": "/home/xgy/remote/sst_dram_si/outputs_large/paper2/dram_mesh_4x4/20260402-204516",
+          "ok": true,
+          "program": "barrier_wfi_order_ref_toolchain"
+        },
+        "builder": {
+          "manifest_path": "/home/xgy/remote/riscv_snn_isa_lab/runs/2026-04-02-barrier-wfi-order-ref-smoke.md",
+          "program": "barrier_wfi_order_ref",
+          "run_dir": "/home/xgy/remote/sst_dram_si/outputs_large/paper2/dram_mesh_4x4/20260402-204246",
+          "run_id": "20260402-204246"
+        },
+        "family": "barrier_wfi_order_ref",
+        "toolchain": {
+          "manifest_path": "/home/xgy/remote/riscv_snn_isa_lab/runs/2026-04-02-barrier-wfi-order-ref-toolchain-smoke.md",
+          "program": "barrier_wfi_order_ref_toolchain",
+          "run_dir": "/home/xgy/remote/sst_dram_si/outputs_large/paper2/dram_mesh_4x4/20260402-204516",
+          "run_id": "20260402-204516"
+        }
+      },
+      {
+        "audit": {
+          "latest_manifest": "/home/xgy/remote/riscv_snn_isa_lab/runs/2026-04-02-external-dyn-desc-bad-policy-ref-toolchain-smoke.md",
+          "manifest_match": true,
+          "manifest_run_dir": "/home/xgy/remote/sst_dram_si/outputs_large/paper2/dram_mesh_4x4/20260402-204401",
+          "ok": true,
+          "program": "external_dyn_desc_bad_policy_ref_toolchain"
+        },
+        "builder": {
+          "manifest_path": "/home/xgy/remote/riscv_snn_isa_lab/runs/2026-04-02-external-dyn-desc-bad-policy-ref-smoke.md",
+          "program": "external_dyn_desc_bad_policy_ref",
+          "run_dir": "/home/xgy/remote/sst_dram_si/outputs_large/paper2/dram_mesh_4x4/20260402-204134",
+          "run_id": "20260402-204134"
+        },
+        "family": "external_dyn_desc_bad_policy_ref",
+        "toolchain": {
+          "manifest_path": "/home/xgy/remote/riscv_snn_isa_lab/runs/2026-04-02-external-dyn-desc-bad-policy-ref-toolchain-smoke.md",
+          "program": "external_dyn_desc_bad_policy_ref_toolchain",
+          "run_dir": "/home/xgy/remote/sst_dram_si/outputs_large/paper2/dram_mesh_4x4/20260402-204401",
+          "run_id": "20260402-204401"
+        }
+      },
+      {
+        "audit": {
+          "latest_manifest": "/home/xgy/remote/riscv_snn_isa_lab/runs/2026-04-02-external-dyn-desc-fault-overwrite-chain-ref-toolchain-smoke.md",
+          "manifest_match": true,
+          "manifest_run_dir": "/home/xgy/remote/sst_dram_si/outputs_large/paper2/dram_mesh_4x4/20260402-204451",
+          "ok": true,
+          "program": "external_dyn_desc_fault_overwrite_chain_ref_toolchain"
+        },
+        "builder": {
+          "manifest_path": "/home/xgy/remote/riscv_snn_isa_lab/runs/2026-04-02-external-dyn-desc-fault-overwrite-chain-ref-smoke.md",
+          "program": "external_dyn_desc_fault_overwrite_chain_ref",
+          "run_dir": "/home/xgy/remote/sst_dram_si/outputs_large/paper2/dram_mesh_4x4/20260402-204222",
+          "run_id": "20260402-204222"
+        },
+        "family": "external_dyn_desc_fault_overwrite_chain_ref",
+        "toolchain": {
+          "manifest_path": "/home/xgy/remote/riscv_snn_isa_lab/runs/2026-04-02-external-dyn-desc-fault-overwrite-chain-ref-toolchain-smoke.md",
+          "program": "external_dyn_desc_fault_overwrite_chain_ref_toolchain",
+          "run_dir": "/home/xgy/remote/sst_dram_si/outputs_large/paper2/dram_mesh_4x4/20260402-204451",
+          "run_id": "20260402-204451"
+        }
+      },
+      {
+        "audit": {
+          "latest_manifest": "/home/xgy/remote/riscv_snn_isa_lab/runs/2026-04-02-external-dyn-desc-fault-rearm-ref-toolchain-smoke.md",
+          "manifest_match": true,
+          "manifest_run_dir": "/home/xgy/remote/sst_dram_si/outputs_large/paper2/dram_mesh_4x4/20260402-204427",
+          "ok": true,
+          "program": "external_dyn_desc_fault_rearm_ref_toolchain"
+        },
+        "builder": {
+          "manifest_path": "/home/xgy/remote/riscv_snn_isa_lab/runs/2026-04-02-external-dyn-desc-fault-rearm-ref-smoke.md",
+          "program": "external_dyn_desc_fault_rearm_ref",
+          "run_dir": "/home/xgy/remote/sst_dram_si/outputs_large/paper2/dram_mesh_4x4/20260402-204158",
+          "run_id": "20260402-204158"
+        },
+        "family": "external_dyn_desc_fault_rearm_ref",
+        "toolchain": {
+          "manifest_path": "/home/xgy/remote/riscv_snn_isa_lab/runs/2026-04-02-external-dyn-desc-fault-rearm-ref-toolchain-smoke.md",
+          "program": "external_dyn_desc_fault_rearm_ref_toolchain",
+          "run_dir": "/home/xgy/remote/sst_dram_si/outputs_large/paper2/dram_mesh_4x4/20260402-204427",
+          "run_id": "20260402-204427"
+        }
+      },
+      {
+        "audit": {
+          "latest_manifest": "/home/xgy/remote/riscv_snn_isa_lab/runs/2026-04-02-external-dyn-desc-fault-ref-toolchain-smoke.md",
+          "manifest_match": true,
+          "manifest_run_dir": "/home/xgy/remote/sst_dram_si/outputs_large/paper2/dram_mesh_4x4/20260402-204337",
+          "ok": true,
+          "program": "external_dyn_desc_fault_ref_toolchain"
+        },
+        "builder": {
+          "manifest_path": "/home/xgy/remote/riscv_snn_isa_lab/runs/2026-04-02-external-dyn-desc-fault-ref-smoke.md",
+          "program": "external_dyn_desc_fault_ref",
+          "run_dir": "/home/xgy/remote/sst_dram_si/outputs_large/paper2/dram_mesh_4x4/20260402-204110",
+          "run_id": "20260402-204110"
+        },
+        "family": "external_dyn_desc_fault_ref",
+        "toolchain": {
+          "manifest_path": "/home/xgy/remote/riscv_snn_isa_lab/runs/2026-04-02-external-dyn-desc-fault-ref-toolchain-smoke.md",
+          "program": "external_dyn_desc_fault_ref_toolchain",
+          "run_dir": "/home/xgy/remote/sst_dram_si/outputs_large/paper2/dram_mesh_4x4/20260402-204337",
+          "run_id": "20260402-204337"
+        }
+      },
+      {
+        "audit": {
+          "latest_manifest": "/home/xgy/remote/riscv_snn_isa_lab/runs/2026-04-02-external-dyn-desc-ref-toolchain-smoke.md",
+          "manifest_match": true,
+          "manifest_run_dir": "/home/xgy/remote/sst_dram_si/outputs_large/paper2/dram_mesh_4x4/20260402-204314",
+          "ok": true,
+          "program": "external_dyn_desc_ref_toolchain"
+        },
+        "builder": {
+          "manifest_path": "/home/xgy/remote/riscv_snn_isa_lab/runs/2026-04-02-external-dyn-desc-ref-smoke.md",
+          "program": "external_dyn_desc_ref",
+          "run_dir": "/home/xgy/remote/sst_dram_si/outputs_large/paper2/dram_mesh_4x4/20260402-204044",
+          "run_id": "20260402-204044"
+        },
+        "family": "external_dyn_desc_ref",
+        "toolchain": {
+          "manifest_path": "/home/xgy/remote/riscv_snn_isa_lab/runs/2026-04-02-external-dyn-desc-ref-toolchain-smoke.md",
+          "program": "external_dyn_desc_ref_toolchain",
+          "run_dir": "/home/xgy/remote/sst_dram_si/outputs_large/paper2/dram_mesh_4x4/20260402-204314",
+          "run_id": "20260402-204314"
+        }
+      }
+    ],
+    "generated_utc": "2026-04-02T12:45:41.140429+00:00",
+    "producer": "riscv_snn_lab.build_nightly_index",
+    "requested_builder_programs": [
+      "external_dyn_desc_ref",
+      "external_dyn_desc_fault_ref",
+      "external_dyn_desc_bad_policy_ref",
+      "external_dyn_desc_fault_rearm_ref",
+      "external_dyn_desc_fault_overwrite_chain_ref",
+      "barrier_wfi_order_ref"
+    ],
+    "requested_toolchain_programs": [
+      "external_dyn_desc_ref_toolchain",
+      "external_dyn_desc_fault_ref_toolchain",
+      "external_dyn_desc_bad_policy_ref_toolchain",
+      "external_dyn_desc_fault_rearm_ref_toolchain",
+      "external_dyn_desc_fault_overwrite_chain_ref_toolchain",
+      "barrier_wfi_order_ref_toolchain"
+    ],
+    "schema_version": 2,
+    "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-04-02-nightly-index.json",
+    "toolchain_audit_summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-04-02-toolchain-bridge-audit.json",
+    "toolchain_summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-04-02-toolchain-regress-matrix.json"
+  },
+  "observer_adequacy_validation_path": "/home/xgy/remote/riscv_snn_isa_lab/references/observer-adequacy-validation.json",
+  "observer_full_equivalence_history": {
+    "all_dates_ok": false,
+    "all_ok_latest": true,
+    "artifact_role": "stable_observer_full_equivalence_history",
+    "authority_scope": "research_surface_rollup_only",
+    "compacted_entries": [
+      {
+        "all_ok": false,
+        "canonical_surface": true,
+        "count": 8,
+        "date": "2026-04-01",
+        "family_names": [
+          "barrier_wfi_order_ref",
+          "completion_queue_overflow_ref",
+          "external_dyn_desc_bad_policy_ref",
+          "external_dyn_desc_fault_overwrite_chain_ref",
+          "external_dyn_desc_fault_rearm_ref",
+          "external_dyn_desc_fault_ref",
+          "external_dyn_desc_ref",
+          "queue_backpressure_ref"
+        ],
+        "reason": "compacted_before_latest_recovery",
+        "requested_group": "all",
+        "sample_generated_utc": "2026-04-01T04:05:30.365038+00:00",
+        "sample_key": "2026-04-01T04:05:30.365038+00:00",
+        "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-04-01-equiv-matrix.json"
+      },
+      {
+        "all_ok": true,
+        "canonical_surface": true,
+        "count": 8,
+        "date": "2026-03-30",
+        "family_names": [
+          "barrier_wfi_order_ref",
+          "completion_queue_overflow_ref",
+          "external_dyn_desc_bad_policy_ref",
+          "external_dyn_desc_fault_overwrite_chain_ref",
+          "external_dyn_desc_fault_rearm_ref",
+          "external_dyn_desc_fault_ref",
+          "external_dyn_desc_ref",
+          "queue_backpressure_ref"
+        ],
+        "reason": "compacted_before_latest_recovery",
+        "requested_group": "all",
+        "sample_generated_utc": "2026-03-30T06:58:41.238013+00:00",
+        "sample_key": "2026-03-30T06:58:41.238013+00:00",
+        "summary_path": "/home/xgy/remote/.observer_recover_lab/references/2026-03-30-equiv-matrix.json"
+      },
+      {
+        "all_ok": false,
+        "canonical_surface": true,
+        "count": 8,
+        "date": "2026-03-30",
+        "family_names": [
+          "barrier_wfi_order_ref",
+          "completion_queue_overflow_ref",
+          "external_dyn_desc_bad_policy_ref",
+          "external_dyn_desc_fault_overwrite_chain_ref",
+          "external_dyn_desc_fault_rearm_ref",
+          "external_dyn_desc_fault_ref",
+          "external_dyn_desc_ref",
+          "queue_backpressure_ref"
+        ],
+        "reason": "compacted_before_latest_recovery",
+        "requested_group": "all",
+        "sample_generated_utc": "2026-03-30T06:37:04.030637+00:00",
+        "sample_key": "2026-03-30T06:37:04.030637+00:00",
+        "summary_path": "/home/xgy/remote/.observer_fail_lab/references/2026-03-30-equiv-matrix.json"
+      }
+    ],
+    "compacted_entry_count": 3,
+    "effective_all_dates_ok": true,
+    "effective_entry_count": 1,
+    "entries": [
+      {
+        "all_ok": true,
+        "canonical_surface": true,
+        "count": 8,
+        "date": "2026-04-02",
+        "family_names": [
+          "barrier_wfi_order_ref",
+          "completion_queue_overflow_ref",
+          "external_dyn_desc_bad_policy_ref",
+          "external_dyn_desc_fault_overwrite_chain_ref",
+          "external_dyn_desc_fault_rearm_ref",
+          "external_dyn_desc_fault_ref",
+          "external_dyn_desc_ref",
+          "queue_backpressure_ref"
+        ],
+        "generated_utc": "2026-04-02T12:56:39.376726+00:00",
+        "requested_group": "all",
+        "sample_generated_utc": "2026-04-02T12:56:39.376726+00:00",
+        "sample_key": "2026-04-02T12:56:39.376726+00:00",
+        "source_kind": "group_matrix",
+        "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-04-02-equiv-matrix.json"
+      },
+      {
+        "all_ok": false,
+        "canonical_surface": true,
+        "count": 8,
+        "date": "2026-04-01",
+        "family_names": [
+          "barrier_wfi_order_ref",
+          "completion_queue_overflow_ref",
+          "external_dyn_desc_bad_policy_ref",
+          "external_dyn_desc_fault_overwrite_chain_ref",
+          "external_dyn_desc_fault_rearm_ref",
+          "external_dyn_desc_fault_ref",
+          "external_dyn_desc_ref",
+          "queue_backpressure_ref"
+        ],
+        "requested_group": "all",
+        "sample_generated_utc": "2026-04-01T04:05:30.365038+00:00",
+        "sample_key": "2026-04-01T04:05:30.365038+00:00",
+        "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-04-01-equiv-matrix.json"
+      },
+      {
+        "all_ok": true,
+        "canonical_surface": true,
+        "count": 8,
+        "date": "2026-03-30",
+        "family_names": [
+          "barrier_wfi_order_ref",
+          "completion_queue_overflow_ref",
+          "external_dyn_desc_bad_policy_ref",
+          "external_dyn_desc_fault_overwrite_chain_ref",
+          "external_dyn_desc_fault_rearm_ref",
+          "external_dyn_desc_fault_ref",
+          "external_dyn_desc_ref",
+          "queue_backpressure_ref"
+        ],
+        "requested_group": "all",
+        "sample_generated_utc": "2026-03-30T06:58:41.238013+00:00",
+        "sample_key": "2026-03-30T06:58:41.238013+00:00",
+        "summary_path": "/home/xgy/remote/.observer_recover_lab/references/2026-03-30-equiv-matrix.json"
+      },
+      {
+        "all_ok": false,
+        "canonical_surface": true,
+        "count": 8,
+        "date": "2026-03-30",
+        "family_names": [
+          "barrier_wfi_order_ref",
+          "completion_queue_overflow_ref",
+          "external_dyn_desc_bad_policy_ref",
+          "external_dyn_desc_fault_overwrite_chain_ref",
+          "external_dyn_desc_fault_rearm_ref",
+          "external_dyn_desc_fault_ref",
+          "external_dyn_desc_ref",
+          "queue_backpressure_ref"
+        ],
+        "requested_group": "all",
+        "sample_generated_utc": "2026-03-30T06:37:04.030637+00:00",
+        "sample_key": "2026-03-30T06:37:04.030637+00:00",
+        "summary_path": "/home/xgy/remote/.observer_fail_lab/references/2026-03-30-equiv-matrix.json"
+      }
+    ],
+    "entry_count": 4,
+    "excluded_entries": [],
+    "excluded_entry_count": 0,
+    "first_fail_date": "2026-03-30",
+    "generated_utc": "2026-04-08T04:31:24.726222+00:00",
+    "history_contract": "observer_sample_sequence_v1",
+    "latest_date": "2026-04-02",
+    "latest_recovered_date": "2026-04-02",
+    "latest_summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-04-02-equiv-matrix.json",
+    "producer": "riscv_snn_lab.refresh_observer_full_equivalence_history",
+    "refresh_mode": "compact_latest_recovery",
+    "schema_version": 2,
+    "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/observer-full-equivalence-history.json"
+  },
+  "observer_summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/nightly-sidecar-observer-summary.json",
+  "optional_group_surfaces": {
+    "completion_overflow_optional": {
+      "all_ok": true,
+      "artifact_role": "dated_equivalence_family_surface",
+      "canonical_surface": true,
+      "count": 1,
+      "families": [
+        {
+          "family": "completion_queue_overflow_ref",
+          "gate_reasons": [],
+          "status": "PASS",
+          "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-04-04-completion-queue-overflow-ref-equiv.json"
+        }
+      ],
+      "generated_utc": "2026-04-03T17:56:09.798235+00:00",
+      "requested_group": "completion_overflow_optional",
+      "source_family": "completion_queue_overflow_ref",
+      "source_kind": "singleton_family_equivalence",
+      "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-04-04-completion-queue-overflow-ref-equiv.json"
+    },
+    "queue_optional": {
+      "all_ok": true,
+      "artifact_role": "dated_equivalence_matrix",
+      "authority_scope": "family_level_equivalence_authority",
+      "canonical_surface": true,
+      "count": 2,
+      "families": [
+        {
+          "family": "queue_backpressure_ref",
+          "gate_reasons": [],
+          "runtime_bridge_build_preflight_rollup": {
+            "contract_key": "riscv_snn.runtime_bridge.runtime_consumers",
+            "contract_version": 1,
+            "dependency_count": 2,
+            "enabled": true,
+            "fingerprint_match": true,
+            "full_rebuild_required": false,
+            "lineage_status": "ok",
+            "missing_target_count": 0,
+            "reporting_scope": "research_only_nonblocking",
+            "required_action": "none",
+            "required_target_count": 9,
+            "stale_target_count": 0,
+            "status": "ok"
+          },
+          "status": "PASS",
+          "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-04-04-queue-backpressure-ref-equiv.json"
+        },
+        {
+          "family": "completion_queue_overflow_ref",
+          "gate_reasons": [],
+          "runtime_bridge_build_preflight_rollup": {
+            "contract_key": "riscv_snn.runtime_bridge.runtime_consumers",
+            "contract_version": 1,
+            "dependency_count": 2,
+            "enabled": true,
+            "fingerprint_match": true,
+            "full_rebuild_required": false,
+            "lineage_status": "ok",
+            "missing_target_count": 0,
+            "reporting_scope": "research_only_nonblocking",
+            "required_action": "none",
+            "required_target_count": 9,
+            "stale_target_count": 0,
+            "status": "ok"
+          },
+          "status": "PASS",
+          "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-04-04-completion-queue-overflow-ref-equiv.json"
+        }
+      ],
+      "gate_name": "riscv_snn_equiv_matrix",
+      "generated_utc": "2026-04-03T17:56:09.799116+00:00",
+      "producer": "riscv_snn_lab.run_equiv_matrix",
+      "requested_families": [
+        "queue_backpressure_ref",
+        "completion_queue_overflow_ref"
+      ],
+      "requested_group": "queue_optional",
+      "runtime_bridge_build_preflight_rollup": {
+        "all_ok": true,
+        "contract_keys": [
+          "riscv_snn.runtime_bridge.runtime_consumers"
+        ],
+        "contract_versions": [
+          1
+        ],
+        "enabled": true,
+        "family_count": 2,
+        "fingerprint_mismatch_family_count": 0,
+        "full_rebuild_required_family_count": 0,
+        "lineage_status_counts": {
+          "ok": 2
+        },
+        "missing_family_count": 0,
+        "reporting_scope": "research_only_nonblocking",
+        "required_action_counts": {
+          "none": 2
+        },
+        "stale_family_count": 0,
+        "status_counts": {
+          "ok": 2
+        }
+      },
+      "schema_version": 2,
+      "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-04-04-equiv-matrix-queue-optional.json"
+    }
+  },
+  "producer": "riscv_snn_lab.run_ci_sidecar",
+  "queue_equivalence": {
+    "all_ok": true,
+    "artifact_role": "dated_equivalence_matrix",
+    "authority_scope": "family_level_equivalence_authority",
+    "canonical_surface": true,
+    "count": 2,
+    "families": [
+      {
+        "family": "queue_backpressure_ref",
+        "gate_reasons": [],
+        "runtime_bridge_build_preflight_rollup": {
+          "contract_key": "riscv_snn.runtime_bridge.runtime_consumers",
+          "contract_version": 1,
+          "dependency_count": 2,
+          "enabled": true,
+          "fingerprint_match": true,
+          "full_rebuild_required": false,
+          "lineage_status": "ok",
+          "missing_target_count": 0,
+          "reporting_scope": "research_only_nonblocking",
+          "required_action": "none",
+          "required_target_count": 9,
+          "stale_target_count": 0,
+          "status": "ok"
+        },
+        "status": "PASS",
+        "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-04-04-queue-backpressure-ref-equiv.json"
+      },
+      {
+        "family": "completion_queue_overflow_ref",
+        "gate_reasons": [],
+        "runtime_bridge_build_preflight_rollup": {
+          "contract_key": "riscv_snn.runtime_bridge.runtime_consumers",
+          "contract_version": 1,
+          "dependency_count": 2,
+          "enabled": true,
+          "fingerprint_match": true,
+          "full_rebuild_required": false,
+          "lineage_status": "ok",
+          "missing_target_count": 0,
+          "reporting_scope": "research_only_nonblocking",
+          "required_action": "none",
+          "required_target_count": 9,
+          "stale_target_count": 0,
+          "status": "ok"
+        },
+        "status": "PASS",
+        "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-04-04-completion-queue-overflow-ref-equiv.json"
+      }
+    ],
+    "gate_name": "riscv_snn_equiv_matrix",
+    "generated_utc": "2026-04-03T17:56:09.799116+00:00",
+    "producer": "riscv_snn_lab.run_equiv_matrix",
+    "requested_families": [
+      "queue_backpressure_ref",
+      "completion_queue_overflow_ref"
+    ],
+    "requested_group": "queue_optional",
+    "runtime_bridge_build_preflight_rollup": {
+      "all_ok": true,
+      "contract_keys": [
+        "riscv_snn.runtime_bridge.runtime_consumers"
+      ],
+      "contract_versions": [
+        1
+      ],
+      "enabled": true,
+      "family_count": 2,
+      "fingerprint_mismatch_family_count": 0,
+      "full_rebuild_required_family_count": 0,
+      "lineage_status_counts": {
+        "ok": 2
+      },
+      "missing_family_count": 0,
+      "reporting_scope": "research_only_nonblocking",
+      "required_action_counts": {
+        "none": 2
+      },
+      "stale_family_count": 0,
+      "status_counts": {
+        "ok": 2
+      }
+    },
+    "schema_version": 2,
+    "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-04-04-equiv-matrix-queue-optional.json"
+  },
+  "reasons": [],
+  "report_path": "/home/xgy/remote/riscv_snn_isa_lab/references/nightly-sidecar-report.json",
+  "required_families": [
+    "barrier_wfi_order_ref",
+    "external_dyn_desc_bad_policy_ref",
+    "external_dyn_desc_fault_overwrite_chain_ref",
+    "external_dyn_desc_fault_rearm_ref",
+    "external_dyn_desc_fault_ref",
+    "external_dyn_desc_ref"
+  ],
+  "research_report_path": "/home/xgy/remote/riscv_snn_isa_lab/references/riscv-snn-research-report.json",
+  "schema_version": 2,
+  "stable_surface_refresh": {
+    "current_mainline_status_path": "/home/xgy/remote/riscv_snn_isa_lab/references/current-mainline-status.md",
+    "observer_adequacy_validation_path": "/home/xgy/remote/riscv_snn_isa_lab/references/observer-adequacy-validation.json",
+    "observer_summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/nightly-sidecar-observer-summary.json",
+    "optional_promotion_dossier_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-04-18-completion-overflow-optional-promotion-dossier.json",
+    "refreshed_utc": "2026-04-18T12:56:43.969019+00:00",
+    "research_report_path": "/home/xgy/remote/riscv_snn_isa_lab/references/riscv-snn-research-report.json",
+    "stable_surface_refresh_audit_path": "/home/xgy/remote/riscv_snn_isa_lab/references/stable-surface-refresh-audit.json",
+    "supplementary_surface_history_path": "/home/xgy/remote/riscv_snn_isa_lab/references/supplementary-surface-history.json"
+  },
+  "stable_surface_refresh_audit_path": "/home/xgy/remote/riscv_snn_isa_lab/references/stable-surface-refresh-audit.json",
+  "summary_md_path": "/home/xgy/remote/riscv_snn_isa_lab/references/nightly-sidecar-summary.md",
+  "supplementary_surface_history_path": "/home/xgy/remote/riscv_snn_isa_lab/references/supplementary-surface-history.json",
+  "supplementary_surfaces": {
+    "compare": {
+      "artifact_role": "stable_top_level_gate",
+      "authority_scope": "experimental_gate_authority",
+      "blocking": false,
+      "covered_selector_count": null,
+      "current_mainline_status_path": "/home/xgy/remote/sst_dram_si/references/compare-current-status.md",
+      "effective_all_dates_ok": true,
+      "freshness_mode": "since_latest_recovery",
+      "gate_name": "mesh_exec_mode_compare_acceptance",
+      "gate_ok": true,
+      "gate_reasons": [],
+      "gate_version": "1.0",
+      "latest_date": "2026-04-07",
+      "load_error": null,
+      "observer_summary_path": "/home/xgy/remote/sst_dram_si/references/compare-nightly-observer-summary.json",
+      "present": true,
+      "report_path": "/home/xgy/remote/sst_dram_si/references/compare-nightly-report.json",
+      "selector_count": null,
+      "selector_rows": [],
+      "stale": false,
+      "summary_md_path": "/home/xgy/remote/sst_dram_si/references/compare-nightly-summary.md",
+      "surface_contract": null,
+      "surface_kind": "compare_exec_mode_smoke"
+    },
+    "reference_compare": {
+      "artifact_role": "reference_compare_surface_report",
+      "authority_scope": "reference_compare_only",
+      "blocking": false,
+      "covered_selector_count": null,
+      "current_mainline_status_path": "/home/xgy/remote/riscv_snn_isa_lab/references/reference-compare-current-status.md",
+      "effective_all_dates_ok": true,
+      "freshness_mode": "reference_compare_latest_only",
+      "gate_name": "reference_model_runtime_compare",
+      "gate_ok": true,
+      "gate_reasons": [],
+      "gate_version": "1.0",
+      "latest_date": "2026-04-18",
+      "load_error": null,
+      "observer_summary_path": null,
+      "present": true,
+      "report_path": "/home/xgy/remote/riscv_snn_isa_lab/references/reference-compare-nightly-report.json",
+      "selector_count": null,
+      "selector_rows": [],
+      "stale": false,
+      "summary_md_path": "/home/xgy/remote/riscv_snn_isa_lab/references/reference-compare-nightly-summary.md",
+      "surface_contract": null,
+      "surface_kind": "reference_compare_surface"
+    },
+    "reference_program_compare": {
+      "artifact_role": "reference_program_compare_surface_report",
+      "authority_scope": "reference_program_compare_only",
+      "blocking": false,
+      "covered_selector_count": null,
+      "current_mainline_status_path": "/home/xgy/remote/riscv_snn_isa_lab/references/reference-program-compare-current-status.md",
+      "effective_all_dates_ok": true,
+      "freshness_mode": "reference_program_compare_latest_only",
+      "gate_name": "reference_program_model_runtime_compare",
+      "gate_ok": true,
+      "gate_reasons": [],
+      "gate_version": "1.0",
+      "latest_date": "2026-04-18",
+      "load_error": null,
+      "observer_summary_path": null,
+      "present": true,
+      "report_path": "/home/xgy/remote/riscv_snn_isa_lab/references/reference-program-compare-nightly-report.json",
+      "selector_count": null,
+      "selector_rows": [],
+      "stale": false,
+      "summary_md_path": "/home/xgy/remote/riscv_snn_isa_lab/references/reference-program-compare-nightly-summary.md",
+      "surface_contract": null,
+      "surface_kind": "reference_program_compare_surface"
+    },
+    "stat_snapshot_family": {
+      "artifact_role": "stat_snapshot_family_surface_report",
+      "authority_scope": "stat_snapshot_family_only",
+      "blocking": false,
+      "covered_selector_count": 3,
+      "current_mainline_status_path": "/home/xgy/remote/riscv_snn_isa_lab/references/stat-snapshot-family-current-status.md",
+      "effective_all_dates_ok": true,
+      "freshness_mode": "latest_refresh_only",
+      "gate_name": "stat_snapshot_reference_coverage",
+      "gate_ok": true,
+      "gate_reasons": [],
+      "gate_version": "1.0",
+      "latest_date": "2026-04-18",
+      "load_error": null,
+      "observer_summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/nightly-sidecar-observer-summary.json",
+      "present": true,
+      "report_path": "/home/xgy/remote/riscv_snn_isa_lab/references/stat-snapshot-family-nightly-report.json",
+      "selector_count": 3,
+      "selector_rows": [
+        {
+          "candidate_programs": [
+            "stat_snapshot_accepted_commands_ref",
+            "stat_snapshot_accepted_ref",
+            "stat_snapshot_ref"
+          ],
+          "latest_source_date": "2026-04-18",
+          "missing_assets": [],
+          "program": "stat_snapshot_ref",
+          "reference_ready": true,
+          "runtime_bridge_spec_path": "/home/xgy/remote/riscv_snn_isa_lab/specs/stat_snapshot_ref_runtime_bridge.json",
+          "runtime_bridge_spec_present": true,
+          "runtime_bridge_spec_validate_error": null,
+          "runtime_bridge_spec_validate_ok": true,
+          "runtime_elf_path": "/home/xgy/remote/riscv_snn_isa_lab/firmware/stat_snapshot_ref.elf",
+          "runtime_elf_present": true,
+          "runtime_spec_path": "/home/xgy/remote/riscv_snn_isa_lab/specs/stat_snapshot_ref.json",
+          "runtime_spec_present": true,
+          "runtime_spec_validate_error": null,
+          "runtime_spec_validate_ok": true,
+          "score": 6,
+          "selector_name": "AcceptedCommands",
+          "selector_slug": "accepted_commands",
+          "selector_value": 0,
+          "toolchain_elf_path": "/home/xgy/remote/riscv_snn_isa_lab/firmware/stat_snapshot_ref_toolchain.elf",
+          "toolchain_elf_present": true,
+          "toolchain_program": "stat_snapshot_ref_toolchain",
+          "toolchain_source_path": "/home/xgy/remote/riscv_snn_isa_lab/firmware_src/stat_snapshot_ref_toolchain",
+          "toolchain_source_present": true,
+          "toolchain_spec_path": "/home/xgy/remote/riscv_snn_isa_lab/specs/stat_snapshot_ref_toolchain.json",
+          "toolchain_spec_present": true,
+          "toolchain_spec_validate_error": null,
+          "toolchain_spec_validate_ok": true,
+          "validation_failures": []
+        },
+        {
+          "candidate_programs": [
+            "stat_snapshot_completed_commands_ref",
+            "stat_snapshot_completed_ref"
+          ],
+          "latest_source_date": "2026-04-18",
+          "missing_assets": [],
+          "program": "stat_snapshot_completed_ref",
+          "reference_ready": true,
+          "runtime_bridge_spec_path": "/home/xgy/remote/riscv_snn_isa_lab/specs/stat_snapshot_completed_ref_runtime_bridge.json",
+          "runtime_bridge_spec_present": true,
+          "runtime_bridge_spec_validate_error": null,
+          "runtime_bridge_spec_validate_ok": true,
+          "runtime_elf_path": "/home/xgy/remote/riscv_snn_isa_lab/firmware/stat_snapshot_completed_ref.elf",
+          "runtime_elf_present": true,
+          "runtime_spec_path": "/home/xgy/remote/riscv_snn_isa_lab/specs/stat_snapshot_completed_ref.json",
+          "runtime_spec_present": true,
+          "runtime_spec_validate_error": null,
+          "runtime_spec_validate_ok": true,
+          "score": 6,
+          "selector_name": "CompletedCommands",
+          "selector_slug": "completed_commands",
+          "selector_value": 1,
+          "toolchain_elf_path": "/home/xgy/remote/riscv_snn_isa_lab/firmware/stat_snapshot_completed_ref_toolchain.elf",
+          "toolchain_elf_present": true,
+          "toolchain_program": "stat_snapshot_completed_ref_toolchain",
+          "toolchain_source_path": "/home/xgy/remote/riscv_snn_isa_lab/firmware_src/stat_snapshot_completed_ref_toolchain",
+          "toolchain_source_present": true,
+          "toolchain_spec_path": "/home/xgy/remote/riscv_snn_isa_lab/specs/stat_snapshot_completed_ref_toolchain.json",
+          "toolchain_spec_present": true,
+          "toolchain_spec_validate_error": null,
+          "toolchain_spec_validate_ok": true,
+          "validation_failures": []
+        },
+        {
+          "candidate_programs": [
+            "stat_snapshot_provider_bound_ref"
+          ],
+          "latest_source_date": "2026-04-18",
+          "missing_assets": [],
+          "program": "stat_snapshot_provider_bound_ref",
+          "reference_ready": true,
+          "runtime_bridge_spec_path": "/home/xgy/remote/riscv_snn_isa_lab/specs/stat_snapshot_provider_bound_ref_runtime_bridge.json",
+          "runtime_bridge_spec_present": true,
+          "runtime_bridge_spec_validate_error": null,
+          "runtime_bridge_spec_validate_ok": true,
+          "runtime_elf_path": "/home/xgy/remote/riscv_snn_isa_lab/firmware/stat_snapshot_provider_bound_ref.elf",
+          "runtime_elf_present": true,
+          "runtime_spec_path": "/home/xgy/remote/riscv_snn_isa_lab/specs/stat_snapshot_provider_bound_ref.json",
+          "runtime_spec_present": true,
+          "runtime_spec_validate_error": null,
+          "runtime_spec_validate_ok": true,
+          "score": 6,
+          "selector_name": "ProviderBound",
+          "selector_slug": "provider_bound",
+          "selector_value": 2,
+          "toolchain_elf_path": "/home/xgy/remote/riscv_snn_isa_lab/firmware/stat_snapshot_provider_bound_ref_toolchain.elf",
+          "toolchain_elf_present": true,
+          "toolchain_program": "stat_snapshot_provider_bound_ref_toolchain",
+          "toolchain_source_path": "/home/xgy/remote/riscv_snn_isa_lab/firmware_src/stat_snapshot_provider_bound_ref_toolchain",
+          "toolchain_source_present": true,
+          "toolchain_spec_path": "/home/xgy/remote/riscv_snn_isa_lab/specs/stat_snapshot_provider_bound_ref_toolchain.json",
+          "toolchain_spec_present": true,
+          "toolchain_spec_validate_error": null,
+          "toolchain_spec_validate_ok": true,
+          "validation_failures": []
+        }
+      ],
+      "stale": false,
+      "summary_md_path": "/home/xgy/remote/riscv_snn_isa_lab/references/stat-snapshot-family-nightly-summary.md",
+      "surface_contract": "stat_snapshot_family_surface_v1",
+      "surface_kind": "stat_snapshot_family_surface"
+    }
+  },
+  "timing": {
+    "blocking_elapsed_seconds": 582.438,
+    "nonblocking_elapsed_seconds": 518.689,
+    "sections": {
+      "completion_overflow_optional_equivalence_elapsed_seconds": 47.262,
+      "equivalence_elapsed_seconds": 279.832,
+      "full_equivalence_elapsed_seconds": 378.403,
+      "history_elapsed_seconds": 0.001,
+      "nightly_elapsed_seconds": 302.605,
+      "optional_group_equivalence_elapsed_seconds": 140.286,
+      "queue_equivalence_elapsed_seconds": 93.024,
+      "queue_optional_equivalence_elapsed_seconds": 93.024
+    },
+    "total_elapsed_seconds": 1101.129
+  },
+  "unexpected_families": [],
+  "with_abi_audit": false,
+  "with_artifact_isolation": false,
+  "with_equivalence": true,
+  "with_full_equivalence": true,
+  "with_optional_groups": [
+    "completion_overflow_optional",
+    "queue_optional"
+  ],
+  "with_queue_equivalence": true
+}

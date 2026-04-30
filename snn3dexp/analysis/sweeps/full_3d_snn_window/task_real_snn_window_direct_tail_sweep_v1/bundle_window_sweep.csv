@@ -1,0 +1,4 @@
+stop_at,run_tag,status,memory_requests_total,stream_region_demands,stream_region_issued,stream_region_backlog,stream_region_issue_efficiency,writeback_region_demands,writeback_region_issued,writeback_region_backlog,writeback_region_issue_efficiency,total_service_deficit,most_pressured_region,stream_region_bytes_written_total,stream_region_bytes_read_total,writeback_region_bytes_written_total,writeback_region_bytes_read_total
+2us,task_real_snn_window_direct_tail_sweep_v1_2us,smoke_passed,260,64,64,0,1.0,24,24,0,1.0,0,metadata_lookup,4096,2048,1536,768
+5us,task_real_snn_window_direct_tail_sweep_v1_5us,smoke_passed,304,64,64,0,1.0,24,24,0,1.0,0,metadata_lookup,4096,4096,1536,1536
+10us,task_real_snn_window_direct_tail_sweep_v1_10us,smoke_passed,483,129,129,0,1.0,48,48,0,1.0,0,metadata_lookup,8256,8256,3072,3072

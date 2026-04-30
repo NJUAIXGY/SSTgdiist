@@ -1,0 +1,4385 @@
+{
+  "artifact_provenance": {
+    "tool": "snn3dexp.tools.analyze_ablation",
+    "artifact_kind": "ablation_summary",
+    "generated_at_utc": "2026-03-30T04:41:19Z",
+    "source_kind": "run_root",
+    "run_root": "/home/xgy/remote/snn3dexp/runs",
+    "requested_run_tag": "task4_window_stop_runtime_closure_mainline_window_stop_2us",
+    "requested_run_tags_by_case": {
+      "full_3d_snn_window": "task4_window_stop_runtime_closure_mainline_window_stop_2us",
+      "full_3d_snn_window_bundle_v3": "task4_window_stop_runtime_closure_mainline_window_stop_2us",
+      "full_3d_snn_window_monolithic_proxy": "task4_window_stop_runtime_closure_mainline_window_stop_2us"
+    },
+    "requested_case_ids": [
+      "full_3d_snn_window",
+      "full_3d_snn_window_bundle_v3",
+      "full_3d_snn_window_monolithic_proxy"
+    ]
+  },
+  "requested_run_tag": "task4_window_stop_runtime_closure_mainline_window_stop_2us",
+  "requested_run_tags_by_case": {
+    "full_3d_snn_window": "task4_window_stop_runtime_closure_mainline_window_stop_2us",
+    "full_3d_snn_window_bundle_v3": "task4_window_stop_runtime_closure_mainline_window_stop_2us",
+    "full_3d_snn_window_monolithic_proxy": "task4_window_stop_runtime_closure_mainline_window_stop_2us"
+  },
+  "requested_case_ids": [
+    "full_3d_snn_window",
+    "full_3d_snn_window_bundle_v3",
+    "full_3d_snn_window_monolithic_proxy"
+  ],
+  "cases": {
+    "full_3d_snn_window": {
+      "case_id": "full_3d_snn_window",
+      "mesh_shape": "4x4x2",
+      "total_nodes": 32,
+      "noc_component": "SnnDL.MulticastRouter3DNative",
+      "memory_kind": "hbm_like",
+      "memory_model_family": "hbm_like",
+      "num_stacks": 4,
+      "memory_graph_type": "memHierarchy_shared_stack",
+      "memory_controller_count": 16,
+      "memory_probe_count": 4,
+      "memory_probe_rows_total": 0,
+      "run_tag": "task4_window_stop_runtime_closure_mainline_window_stop_2us",
+      "run_root": "/home/xgy/remote/snn3dexp/runs/full_3d_snn_window/task4_window_stop_runtime_closure_mainline_window_stop_2us",
+      "status": "composed",
+      "runtime_enabled": false,
+      "control_mode": "observe_only",
+      "case_role": "calibration_only",
+      "workload_impl": "snn",
+      "compare_surface": {
+        "case_id": "full_3d_snn_window",
+        "run_tag": "task4_window_stop_runtime_closure_mainline_window_stop_2us",
+        "case_role": "calibration_only",
+        "control_mode": "observe_only",
+        "runtime_enabled": false,
+        "workload_impl": "snn",
+        "memory_kind": "hbm_like",
+        "memory_model_family": "hbm_like",
+        "memory_graph_type": "memHierarchy_shared_stack",
+        "noc_component": "SnnDL.MulticastRouter3DNative"
+      },
+      "thermal_input": {
+        "input_source_kind": "local_hotspot_sidecar",
+        "summary_path": "/home/xgy/remote/snn3dexp/runs/full_3d_snn_window/task4_window_stop_runtime_closure_mainline_window_stop_2us/thermal_sidecar/summary/thermal_summary.json",
+        "summary_exists": true,
+        "window_power_samples_path": "/home/xgy/remote/snn3dexp/runs/full_3d_snn_window/task4_window_stop_runtime_closure_mainline_window_stop_2us/thermal_sidecar/summary/window_power_samples.jsonl",
+        "window_power_samples_exists": true,
+        "window_power_sample_count": 1,
+        "trace_sources": [
+          "proxy_synthesized"
+        ],
+        "shared_input_key": "/home/xgy/remote/snn3dexp/runs/full_3d_snn_window/task4_window_stop_runtime_closure_mainline_window_stop_2us/thermal_sidecar/summary/thermal_summary.json"
+      },
+      "stack_nmc_available": false,
+      "stack_nmc_summary_path": "",
+      "route_memory_joint_available": true,
+      "route_memory_joint_summary_path": "",
+      "phase2_case_summary_available": true,
+      "phase2_case_summary_path": "/home/xgy/remote/snn3dexp/analysis/full_3d_snn_window/task4_window_stop_runtime_closure_mainline_window_stop_2us/phase2_case_summary.json",
+      "architecture_summary_available": true,
+      "architecture_summary": {
+        "mesh_shape": "4x4x2",
+        "analysis_axes": [
+          "route",
+          "memory",
+          "thermal",
+          "barrier"
+        ],
+        "observability": {
+          "route_memory_joint_available": false,
+          "runtime_summary_available": true,
+          "global_step_available": true,
+          "thermal_runtime_available": true,
+          "hotspot_driver_available": true,
+          "memory_controller_proxy_available": false,
+          "route_memory_joint_summary_path": "",
+          "runtime_summary_path": "/home/xgy/remote/snn3dexp/analysis/full_3d_snn_window/task4_window_stop_runtime_closure_mainline_window_stop_2us/runtime_summary.json"
+        },
+        "route_pressure": {
+          "vertical_hops_ratio": 0.0,
+          "remote_home_ratio": 0.0,
+          "route_memory_overlap": 0.0,
+          "source_semantics_authority": "legacy_built_routes_3d",
+          "native_source_fanout_active": true,
+          "native_target_synthesis_active": true,
+          "bootstrap_dependency_active": true,
+          "native_bootstrap_source": "legacy_route_tables"
+        },
+        "memory_pressure": {
+          "memory_requests_total": 0,
+          "remote_home_memory_requests_total": 0,
+          "active_stack_count": 0,
+          "most_pressured_controller_service_deficit_proxy": 0.0,
+          "most_pressured_controller_backpressure_proxy": 0.0,
+          "most_pressured_controller_memory_pressure_proxy": 0.0,
+          "memory_pressure_proxy_source": "",
+          "home_stack_path_authority": "",
+          "home_stack_controller_pressure_authority": "",
+          "home_stack_runtime_authority_available": false,
+          "pe_nic_real_home_path_authority": "",
+          "synapse_real_home_path_authority": "",
+          "most_pressured_runtime_controller_id": -1,
+          "most_pressured_runtime_stack_id": -1
+        },
+        "thermal_pressure": {
+          "thermal_hotspot_score": 1.25,
+          "vertical_link_pressure": 0.24375,
+          "stack_hotspot_penalty": 0.25,
+          "peak_temperature_c": 47.955010938,
+          "avg_temperature_c": 46.16823261720838,
+          "vertical_gradient_c": 0.0,
+          "hotspot_block_count": 0,
+          "hotspot_layer_count": 0,
+          "has_layer_temperatures": true,
+          "has_block_temperatures": true,
+          "hottest_layer_id": 0,
+          "hottest_layer_peak_c": 47.955010938,
+          "layer_summary": [
+            {
+              "layer_id": 0,
+              "layer_name": "compute_top",
+              "layer_index": 0,
+              "avg_temperature_c": 46.16823261720834,
+              "peak_temperature_c": 47.955010938,
+              "min_temperature_c": 45.210125,
+              "source": "online_rc_estimator"
+            },
+            {
+              "layer_id": 1,
+              "layer_name": "compute_bottom",
+              "layer_index": 1,
+              "avg_temperature_c": 46.16823261720834,
+              "peak_temperature_c": 47.955010938,
+              "min_temperature_c": 45.210125,
+              "source": "online_rc_estimator"
+            }
+          ],
+          "tier_summary": {
+            "available": true,
+            "tier_count": 2,
+            "top_layer_peak_c": 47.955010938,
+            "bottom_layer_peak_c": 47.955010938,
+            "layer_peak_span_c": 0.0
+          },
+          "stack_summary": {
+            "available": true,
+            "inferred_from": "thermal_consumer_snapshot.block_temperatures.tile_id",
+            "tile_count": 32,
+            "hottest_tile_id": 15,
+            "hottest_tile_peak_c": 47.955010938,
+            "tile_peak_temperatures": [
+              {
+                "tile_id": 15,
+                "peak_temperature_c": 47.955010938,
+                "avg_temperature_c": 46.67562395866667,
+                "block_count": 3,
+                "layer_ids": [
+                  0
+                ],
+                "block_names": [
+                  "L00_compute_top__tile_15_comp",
+                  "L00_compute_top__tile_15_noc",
+                  "L00_compute_top__tile_15_sram"
+                ]
+              },
+              {
+                "tile_id": 31,
+                "peak_temperature_c": 47.955010938,
+                "avg_temperature_c": 46.67562395866667,
+                "block_count": 3,
+                "layer_ids": [
+                  1
+                ],
+                "block_names": [
+                  "L01_compute_bottom__tile_31_comp",
+                  "L01_compute_bottom__tile_31_noc",
+                  "L01_compute_bottom__tile_31_sram"
+                ]
+              },
+              {
+                "tile_id": 1,
+                "peak_temperature_c": 47.349171875,
+                "avg_temperature_c": 46.253800000000005,
+                "block_count": 3,
+                "layer_ids": [
+                  0
+                ],
+                "block_names": [
+                  "L00_compute_top__tile_01_comp",
+                  "L00_compute_top__tile_01_noc",
+                  "L00_compute_top__tile_01_sram"
+                ]
+              },
+              {
+                "tile_id": 3,
+                "peak_temperature_c": 47.349171875,
+                "avg_temperature_c": 46.253800000000005,
+                "block_count": 3,
+                "layer_ids": [
+                  0
+                ],
+                "block_names": [
+                  "L00_compute_top__tile_03_comp",
+                  "L00_compute_top__tile_03_noc",
+                  "L00_compute_top__tile_03_sram"
+                ]
+              },
+              {
+                "tile_id": 4,
+                "peak_temperature_c": 47.349171875,
+                "avg_temperature_c": 46.253800000000005,
+                "block_count": 3,
+                "layer_ids": [
+                  0
+                ],
+                "block_names": [
+                  "L00_compute_top__tile_04_comp",
+                  "L00_compute_top__tile_04_noc",
+                  "L00_compute_top__tile_04_sram"
+                ]
+              },
+              {
+                "tile_id": 6,
+                "peak_temperature_c": 47.349171875,
+                "avg_temperature_c": 46.253800000000005,
+                "block_count": 3,
+                "layer_ids": [
+                  0
+                ],
+                "block_names": [
+                  "L00_compute_top__tile_06_comp",
+                  "L00_compute_top__tile_06_noc",
+                  "L00_compute_top__tile_06_sram"
+                ]
+              },
+              {
+                "tile_id": 9,
+                "peak_temperature_c": 47.349171875,
+                "avg_temperature_c": 46.253800000000005,
+                "block_count": 3,
+                "layer_ids": [
+                  0
+                ],
+                "block_names": [
+                  "L00_compute_top__tile_09_comp",
+                  "L00_compute_top__tile_09_noc",
+                  "L00_compute_top__tile_09_sram"
+                ]
+              },
+              {
+                "tile_id": 11,
+                "peak_temperature_c": 47.349171875,
+                "avg_temperature_c": 46.253800000000005,
+                "block_count": 3,
+                "layer_ids": [
+                  0
+                ],
+                "block_names": [
+                  "L00_compute_top__tile_11_comp",
+                  "L00_compute_top__tile_11_noc",
+                  "L00_compute_top__tile_11_sram"
+                ]
+              },
+              {
+                "tile_id": 12,
+                "peak_temperature_c": 47.349171875,
+                "avg_temperature_c": 46.253800000000005,
+                "block_count": 3,
+                "layer_ids": [
+                  0
+                ],
+                "block_names": [
+                  "L00_compute_top__tile_12_comp",
+                  "L00_compute_top__tile_12_noc",
+                  "L00_compute_top__tile_12_sram"
+                ]
+              },
+              {
+                "tile_id": 14,
+                "peak_temperature_c": 47.349171875,
+                "avg_temperature_c": 46.253800000000005,
+                "block_count": 3,
+                "layer_ids": [
+                  0
+                ],
+                "block_names": [
+                  "L00_compute_top__tile_14_comp",
+                  "L00_compute_top__tile_14_noc",
+                  "L00_compute_top__tile_14_sram"
+                ]
+              },
+              {
+                "tile_id": 17,
+                "peak_temperature_c": 47.349171875,
+                "avg_temperature_c": 46.253800000000005,
+                "block_count": 3,
+                "layer_ids": [
+                  1
+                ],
+                "block_names": [
+                  "L01_compute_bottom__tile_17_comp",
+                  "L01_compute_bottom__tile_17_noc",
+                  "L01_compute_bottom__tile_17_sram"
+                ]
+              },
+              {
+                "tile_id": 19,
+                "peak_temperature_c": 47.349171875,
+                "avg_temperature_c": 46.253800000000005,
+                "block_count": 3,
+                "layer_ids": [
+                  1
+                ],
+                "block_names": [
+                  "L01_compute_bottom__tile_19_comp",
+                  "L01_compute_bottom__tile_19_noc",
+                  "L01_compute_bottom__tile_19_sram"
+                ]
+              },
+              {
+                "tile_id": 20,
+                "peak_temperature_c": 47.349171875,
+                "avg_temperature_c": 46.253800000000005,
+                "block_count": 3,
+                "layer_ids": [
+                  1
+                ],
+                "block_names": [
+                  "L01_compute_bottom__tile_20_comp",
+                  "L01_compute_bottom__tile_20_noc",
+                  "L01_compute_bottom__tile_20_sram"
+                ]
+              },
+              {
+                "tile_id": 22,
+                "peak_temperature_c": 47.349171875,
+                "avg_temperature_c": 46.253800000000005,
+                "block_count": 3,
+                "layer_ids": [
+                  1
+                ],
+                "block_names": [
+                  "L01_compute_bottom__tile_22_comp",
+                  "L01_compute_bottom__tile_22_noc",
+                  "L01_compute_bottom__tile_22_sram"
+                ]
+              },
+              {
+                "tile_id": 25,
+                "peak_temperature_c": 47.349171875,
+                "avg_temperature_c": 46.253800000000005,
+                "block_count": 3,
+                "layer_ids": [
+                  1
+                ],
+                "block_names": [
+                  "L01_compute_bottom__tile_25_comp",
+                  "L01_compute_bottom__tile_25_noc",
+                  "L01_compute_bottom__tile_25_sram"
+                ]
+              },
+              {
+                "tile_id": 27,
+                "peak_temperature_c": 47.349171875,
+                "avg_temperature_c": 46.253800000000005,
+                "block_count": 3,
+                "layer_ids": [
+                  1
+                ],
+                "block_names": [
+                  "L01_compute_bottom__tile_27_comp",
+                  "L01_compute_bottom__tile_27_noc",
+                  "L01_compute_bottom__tile_27_sram"
+                ]
+              },
+              {
+                "tile_id": 28,
+                "peak_temperature_c": 47.349171875,
+                "avg_temperature_c": 46.253800000000005,
+                "block_count": 3,
+                "layer_ids": [
+                  1
+                ],
+                "block_names": [
+                  "L01_compute_bottom__tile_28_comp",
+                  "L01_compute_bottom__tile_28_noc",
+                  "L01_compute_bottom__tile_28_sram"
+                ]
+              },
+              {
+                "tile_id": 30,
+                "peak_temperature_c": 47.349171875,
+                "avg_temperature_c": 46.253800000000005,
+                "block_count": 3,
+                "layer_ids": [
+                  1
+                ],
+                "block_names": [
+                  "L01_compute_bottom__tile_30_comp",
+                  "L01_compute_bottom__tile_30_noc",
+                  "L01_compute_bottom__tile_30_sram"
+                ]
+              },
+              {
+                "tile_id": 5,
+                "peak_temperature_c": 47.002978125,
+                "avg_temperature_c": 46.13156875000001,
+                "block_count": 3,
+                "layer_ids": [
+                  0
+                ],
+                "block_names": [
+                  "L00_compute_top__tile_05_comp",
+                  "L00_compute_top__tile_05_noc",
+                  "L00_compute_top__tile_05_sram"
+                ]
+              },
+              {
+                "tile_id": 7,
+                "peak_temperature_c": 47.002978125,
+                "avg_temperature_c": 46.13156875000001,
+                "block_count": 3,
+                "layer_ids": [
+                  0
+                ],
+                "block_names": [
+                  "L00_compute_top__tile_07_comp",
+                  "L00_compute_top__tile_07_noc",
+                  "L00_compute_top__tile_07_sram"
+                ]
+              },
+              {
+                "tile_id": 13,
+                "peak_temperature_c": 47.002978125,
+                "avg_temperature_c": 46.13156875000001,
+                "block_count": 3,
+                "layer_ids": [
+                  0
+                ],
+                "block_names": [
+                  "L00_compute_top__tile_13_comp",
+                  "L00_compute_top__tile_13_noc",
+                  "L00_compute_top__tile_13_sram"
+                ]
+              },
+              {
+                "tile_id": 21,
+                "peak_temperature_c": 47.002978125,
+                "avg_temperature_c": 46.13156875000001,
+                "block_count": 3,
+                "layer_ids": [
+                  1
+                ],
+                "block_names": [
+                  "L01_compute_bottom__tile_21_comp",
+                  "L01_compute_bottom__tile_21_noc",
+                  "L01_compute_bottom__tile_21_sram"
+                ]
+              },
+              {
+                "tile_id": 23,
+                "peak_temperature_c": 47.002978125,
+                "avg_temperature_c": 46.13156875000001,
+                "block_count": 3,
+                "layer_ids": [
+                  1
+                ],
+                "block_names": [
+                  "L01_compute_bottom__tile_23_comp",
+                  "L01_compute_bottom__tile_23_noc",
+                  "L01_compute_bottom__tile_23_sram"
+                ]
+              },
+              {
+                "tile_id": 29,
+                "peak_temperature_c": 47.002978125,
+                "avg_temperature_c": 46.13156875000001,
+                "block_count": 3,
+                "layer_ids": [
+                  1
+                ],
+                "block_names": [
+                  "L01_compute_bottom__tile_29_comp",
+                  "L01_compute_bottom__tile_29_noc",
+                  "L01_compute_bottom__tile_29_sram"
+                ]
+              },
+              {
+                "tile_id": 0,
+                "peak_temperature_c": 46.854609375,
+                "avg_temperature_c": 45.897747916666674,
+                "block_count": 3,
+                "layer_ids": [
+                  0
+                ],
+                "block_names": [
+                  "L00_compute_top__tile_00_comp",
+                  "L00_compute_top__tile_00_noc",
+                  "L00_compute_top__tile_00_sram"
+                ]
+              },
+              {
+                "tile_id": 2,
+                "peak_temperature_c": 46.854609375,
+                "avg_temperature_c": 45.897747916666674,
+                "block_count": 3,
+                "layer_ids": [
+                  0
+                ],
+                "block_names": [
+                  "L00_compute_top__tile_02_comp",
+                  "L00_compute_top__tile_02_noc",
+                  "L00_compute_top__tile_02_sram"
+                ]
+              },
+              {
+                "tile_id": 8,
+                "peak_temperature_c": 46.854609375,
+                "avg_temperature_c": 45.897747916666674,
+                "block_count": 3,
+                "layer_ids": [
+                  0
+                ],
+                "block_names": [
+                  "L00_compute_top__tile_08_comp",
+                  "L00_compute_top__tile_08_noc",
+                  "L00_compute_top__tile_08_sram"
+                ]
+              },
+              {
+                "tile_id": 10,
+                "peak_temperature_c": 46.854609375,
+                "avg_temperature_c": 45.897747916666674,
+                "block_count": 3,
+                "layer_ids": [
+                  0
+                ],
+                "block_names": [
+                  "L00_compute_top__tile_10_comp",
+                  "L00_compute_top__tile_10_noc",
+                  "L00_compute_top__tile_10_sram"
+                ]
+              },
+              {
+                "tile_id": 16,
+                "peak_temperature_c": 46.854609375,
+                "avg_temperature_c": 45.897747916666674,
+                "block_count": 3,
+                "layer_ids": [
+                  1
+                ],
+                "block_names": [
+                  "L01_compute_bottom__tile_16_comp",
+                  "L01_compute_bottom__tile_16_noc",
+                  "L01_compute_bottom__tile_16_sram"
+                ]
+              },
+              {
+                "tile_id": 18,
+                "peak_temperature_c": 46.854609375,
+                "avg_temperature_c": 45.897747916666674,
+                "block_count": 3,
+                "layer_ids": [
+                  1
+                ],
+                "block_names": [
+                  "L01_compute_bottom__tile_18_comp",
+                  "L01_compute_bottom__tile_18_noc",
+                  "L01_compute_bottom__tile_18_sram"
+                ]
+              },
+              {
+                "tile_id": 24,
+                "peak_temperature_c": 46.854609375,
+                "avg_temperature_c": 45.897747916666674,
+                "block_count": 3,
+                "layer_ids": [
+                  1
+                ],
+                "block_names": [
+                  "L01_compute_bottom__tile_24_comp",
+                  "L01_compute_bottom__tile_24_noc",
+                  "L01_compute_bottom__tile_24_sram"
+                ]
+              },
+              {
+                "tile_id": 26,
+                "peak_temperature_c": 46.854609375,
+                "avg_temperature_c": 45.897747916666674,
+                "block_count": 3,
+                "layer_ids": [
+                  1
+                ],
+                "block_names": [
+                  "L01_compute_bottom__tile_26_comp",
+                  "L01_compute_bottom__tile_26_noc",
+                  "L01_compute_bottom__tile_26_sram"
+                ]
+              }
+            ]
+          },
+          "layer_hotspot_distribution": [
+            {
+              "layer_id": 0,
+              "layer_name": "compute_top",
+              "layer_index": 0,
+              "avg_temperature_c": 46.16823261720834,
+              "peak_temperature_c": 47.955010938,
+              "min_temperature_c": 45.210125,
+              "source": "online_rc_estimator"
+            },
+            {
+              "layer_id": 1,
+              "layer_name": "compute_bottom",
+              "layer_index": 1,
+              "avg_temperature_c": 46.16823261720834,
+              "peak_temperature_c": 47.955010938,
+              "min_temperature_c": 45.210125,
+              "source": "online_rc_estimator"
+            }
+          ],
+          "tier_hotspot_summary": {
+            "available": true,
+            "tier_count": 2,
+            "top_layer_peak_c": 47.955010938,
+            "bottom_layer_peak_c": 47.955010938,
+            "layer_peak_span_c": 0.0
+          },
+          "stack_hotspot_hint": {
+            "available": true,
+            "inferred_from": "thermal_consumer_snapshot.block_temperatures.tile_id",
+            "tile_count": 32,
+            "hottest_tile_id": 15,
+            "hottest_tile_peak_c": 47.955010938,
+            "tile_peak_temperatures": [
+              {
+                "tile_id": 15,
+                "peak_temperature_c": 47.955010938,
+                "avg_temperature_c": 46.67562395866667,
+                "block_count": 3,
+                "layer_ids": [
+                  0
+                ],
+                "block_names": [
+                  "L00_compute_top__tile_15_comp",
+                  "L00_compute_top__tile_15_noc",
+                  "L00_compute_top__tile_15_sram"
+                ]
+              },
+              {
+                "tile_id": 31,
+                "peak_temperature_c": 47.955010938,
+                "avg_temperature_c": 46.67562395866667,
+                "block_count": 3,
+                "layer_ids": [
+                  1
+                ],
+                "block_names": [
+                  "L01_compute_bottom__tile_31_comp",
+                  "L01_compute_bottom__tile_31_noc",
+                  "L01_compute_bottom__tile_31_sram"
+                ]
+              },
+              {
+                "tile_id": 1,
+                "peak_temperature_c": 47.349171875,
+                "avg_temperature_c": 46.253800000000005,
+                "block_count": 3,
+                "layer_ids": [
+                  0
+                ],
+                "block_names": [
+                  "L00_compute_top__tile_01_comp",
+                  "L00_compute_top__tile_01_noc",
+                  "L00_compute_top__tile_01_sram"
+                ]
+              },
+              {
+                "tile_id": 3,
+                "peak_temperature_c": 47.349171875,
+                "avg_temperature_c": 46.253800000000005,
+                "block_count": 3,
+                "layer_ids": [
+                  0
+                ],
+                "block_names": [
+                  "L00_compute_top__tile_03_comp",
+                  "L00_compute_top__tile_03_noc",
+                  "L00_compute_top__tile_03_sram"
+                ]
+              },
+              {
+                "tile_id": 4,
+                "peak_temperature_c": 47.349171875,
+                "avg_temperature_c": 46.253800000000005,
+                "block_count": 3,
+                "layer_ids": [
+                  0
+                ],
+                "block_names": [
+                  "L00_compute_top__tile_04_comp",
+                  "L00_compute_top__tile_04_noc",
+                  "L00_compute_top__tile_04_sram"
+                ]
+              },
+              {
+                "tile_id": 6,
+                "peak_temperature_c": 47.349171875,
+                "avg_temperature_c": 46.253800000000005,
+                "block_count": 3,
+                "layer_ids": [
+                  0
+                ],
+                "block_names": [
+                  "L00_compute_top__tile_06_comp",
+                  "L00_compute_top__tile_06_noc",
+                  "L00_compute_top__tile_06_sram"
+                ]
+              },
+              {
+                "tile_id": 9,
+                "peak_temperature_c": 47.349171875,
+                "avg_temperature_c": 46.253800000000005,
+                "block_count": 3,
+                "layer_ids": [
+                  0
+                ],
+                "block_names": [
+                  "L00_compute_top__tile_09_comp",
+                  "L00_compute_top__tile_09_noc",
+                  "L00_compute_top__tile_09_sram"
+                ]
+              },
+              {
+                "tile_id": 11,
+                "peak_temperature_c": 47.349171875,
+                "avg_temperature_c": 46.253800000000005,
+                "block_count": 3,
+                "layer_ids": [
+                  0
+                ],
+                "block_names": [
+                  "L00_compute_top__tile_11_comp",
+                  "L00_compute_top__tile_11_noc",
+                  "L00_compute_top__tile_11_sram"
+                ]
+              },
+              {
+                "tile_id": 12,
+                "peak_temperature_c": 47.349171875,
+                "avg_temperature_c": 46.253800000000005,
+                "block_count": 3,
+                "layer_ids": [
+                  0
+                ],
+                "block_names": [
+                  "L00_compute_top__tile_12_comp",
+                  "L00_compute_top__tile_12_noc",
+                  "L00_compute_top__tile_12_sram"
+                ]
+              },
+              {
+                "tile_id": 14,
+                "peak_temperature_c": 47.349171875,
+                "avg_temperature_c": 46.253800000000005,
+                "block_count": 3,
+                "layer_ids": [
+                  0
+                ],
+                "block_names": [
+                  "L00_compute_top__tile_14_comp",
+                  "L00_compute_top__tile_14_noc",
+                  "L00_compute_top__tile_14_sram"
+                ]
+              },
+              {
+                "tile_id": 17,
+                "peak_temperature_c": 47.349171875,
+                "avg_temperature_c": 46.253800000000005,
+                "block_count": 3,
+                "layer_ids": [
+                  1
+                ],
+                "block_names": [
+                  "L01_compute_bottom__tile_17_comp",
+                  "L01_compute_bottom__tile_17_noc",
+                  "L01_compute_bottom__tile_17_sram"
+                ]
+              },
+              {
+                "tile_id": 19,
+                "peak_temperature_c": 47.349171875,
+                "avg_temperature_c": 46.253800000000005,
+                "block_count": 3,
+                "layer_ids": [
+                  1
+                ],
+                "block_names": [
+                  "L01_compute_bottom__tile_19_comp",
+                  "L01_compute_bottom__tile_19_noc",
+                  "L01_compute_bottom__tile_19_sram"
+                ]
+              },
+              {
+                "tile_id": 20,
+                "peak_temperature_c": 47.349171875,
+                "avg_temperature_c": 46.253800000000005,
+                "block_count": 3,
+                "layer_ids": [
+                  1
+                ],
+                "block_names": [
+                  "L01_compute_bottom__tile_20_comp",
+                  "L01_compute_bottom__tile_20_noc",
+                  "L01_compute_bottom__tile_20_sram"
+                ]
+              },
+              {
+                "tile_id": 22,
+                "peak_temperature_c": 47.349171875,
+                "avg_temperature_c": 46.253800000000005,
+                "block_count": 3,
+                "layer_ids": [
+                  1
+                ],
+                "block_names": [
+                  "L01_compute_bottom__tile_22_comp",
+                  "L01_compute_bottom__tile_22_noc",
+                  "L01_compute_bottom__tile_22_sram"
+                ]
+              },
+              {
+                "tile_id": 25,
+                "peak_temperature_c": 47.349171875,
+                "avg_temperature_c": 46.253800000000005,
+                "block_count": 3,
+                "layer_ids": [
+                  1
+                ],
+                "block_names": [
+                  "L01_compute_bottom__tile_25_comp",
+                  "L01_compute_bottom__tile_25_noc",
+                  "L01_compute_bottom__tile_25_sram"
+                ]
+              },
+              {
+                "tile_id": 27,
+                "peak_temperature_c": 47.349171875,
+                "avg_temperature_c": 46.253800000000005,
+                "block_count": 3,
+                "layer_ids": [
+                  1
+                ],
+                "block_names": [
+                  "L01_compute_bottom__tile_27_comp",
+                  "L01_compute_bottom__tile_27_noc",
+                  "L01_compute_bottom__tile_27_sram"
+                ]
+              },
+              {
+                "tile_id": 28,
+                "peak_temperature_c": 47.349171875,
+                "avg_temperature_c": 46.253800000000005,
+                "block_count": 3,
+                "layer_ids": [
+                  1
+                ],
+                "block_names": [
+                  "L01_compute_bottom__tile_28_comp",
+                  "L01_compute_bottom__tile_28_noc",
+                  "L01_compute_bottom__tile_28_sram"
+                ]
+              },
+              {
+                "tile_id": 30,
+                "peak_temperature_c": 47.349171875,
+                "avg_temperature_c": 46.253800000000005,
+                "block_count": 3,
+                "layer_ids": [
+                  1
+                ],
+                "block_names": [
+                  "L01_compute_bottom__tile_30_comp",
+                  "L01_compute_bottom__tile_30_noc",
+                  "L01_compute_bottom__tile_30_sram"
+                ]
+              },
+              {
+                "tile_id": 5,
+                "peak_temperature_c": 47.002978125,
+                "avg_temperature_c": 46.13156875000001,
+                "block_count": 3,
+                "layer_ids": [
+                  0
+                ],
+                "block_names": [
+                  "L00_compute_top__tile_05_comp",
+                  "L00_compute_top__tile_05_noc",
+                  "L00_compute_top__tile_05_sram"
+                ]
+              },
+              {
+                "tile_id": 7,
+                "peak_temperature_c": 47.002978125,
+                "avg_temperature_c": 46.13156875000001,
+                "block_count": 3,
+                "layer_ids": [
+                  0
+                ],
+                "block_names": [
+                  "L00_compute_top__tile_07_comp",
+                  "L00_compute_top__tile_07_noc",
+                  "L00_compute_top__tile_07_sram"
+                ]
+              },
+              {
+                "tile_id": 13,
+                "peak_temperature_c": 47.002978125,
+                "avg_temperature_c": 46.13156875000001,
+                "block_count": 3,
+                "layer_ids": [
+                  0
+                ],
+                "block_names": [
+                  "L00_compute_top__tile_13_comp",
+                  "L00_compute_top__tile_13_noc",
+                  "L00_compute_top__tile_13_sram"
+                ]
+              },
+              {
+                "tile_id": 21,
+                "peak_temperature_c": 47.002978125,
+                "avg_temperature_c": 46.13156875000001,
+                "block_count": 3,
+                "layer_ids": [
+                  1
+                ],
+                "block_names": [
+                  "L01_compute_bottom__tile_21_comp",
+                  "L01_compute_bottom__tile_21_noc",
+                  "L01_compute_bottom__tile_21_sram"
+                ]
+              },
+              {
+                "tile_id": 23,
+                "peak_temperature_c": 47.002978125,
+                "avg_temperature_c": 46.13156875000001,
+                "block_count": 3,
+                "layer_ids": [
+                  1
+                ],
+                "block_names": [
+                  "L01_compute_bottom__tile_23_comp",
+                  "L01_compute_bottom__tile_23_noc",
+                  "L01_compute_bottom__tile_23_sram"
+                ]
+              },
+              {
+                "tile_id": 29,
+                "peak_temperature_c": 47.002978125,
+                "avg_temperature_c": 46.13156875000001,
+                "block_count": 3,
+                "layer_ids": [
+                  1
+                ],
+                "block_names": [
+                  "L01_compute_bottom__tile_29_comp",
+                  "L01_compute_bottom__tile_29_noc",
+                  "L01_compute_bottom__tile_29_sram"
+                ]
+              },
+              {
+                "tile_id": 0,
+                "peak_temperature_c": 46.854609375,
+                "avg_temperature_c": 45.897747916666674,
+                "block_count": 3,
+                "layer_ids": [
+                  0
+                ],
+                "block_names": [
+                  "L00_compute_top__tile_00_comp",
+                  "L00_compute_top__tile_00_noc",
+                  "L00_compute_top__tile_00_sram"
+                ]
+              },
+              {
+                "tile_id": 2,
+                "peak_temperature_c": 46.854609375,
+                "avg_temperature_c": 45.897747916666674,
+                "block_count": 3,
+                "layer_ids": [
+                  0
+                ],
+                "block_names": [
+                  "L00_compute_top__tile_02_comp",
+                  "L00_compute_top__tile_02_noc",
+                  "L00_compute_top__tile_02_sram"
+                ]
+              },
+              {
+                "tile_id": 8,
+                "peak_temperature_c": 46.854609375,
+                "avg_temperature_c": 45.897747916666674,
+                "block_count": 3,
+                "layer_ids": [
+                  0
+                ],
+                "block_names": [
+                  "L00_compute_top__tile_08_comp",
+                  "L00_compute_top__tile_08_noc",
+                  "L00_compute_top__tile_08_sram"
+                ]
+              },
+              {
+                "tile_id": 10,
+                "peak_temperature_c": 46.854609375,
+                "avg_temperature_c": 45.897747916666674,
+                "block_count": 3,
+                "layer_ids": [
+                  0
+                ],
+                "block_names": [
+                  "L00_compute_top__tile_10_comp",
+                  "L00_compute_top__tile_10_noc",
+                  "L00_compute_top__tile_10_sram"
+                ]
+              },
+              {
+                "tile_id": 16,
+                "peak_temperature_c": 46.854609375,
+                "avg_temperature_c": 45.897747916666674,
+                "block_count": 3,
+                "layer_ids": [
+                  1
+                ],
+                "block_names": [
+                  "L01_compute_bottom__tile_16_comp",
+                  "L01_compute_bottom__tile_16_noc",
+                  "L01_compute_bottom__tile_16_sram"
+                ]
+              },
+              {
+                "tile_id": 18,
+                "peak_temperature_c": 46.854609375,
+                "avg_temperature_c": 45.897747916666674,
+                "block_count": 3,
+                "layer_ids": [
+                  1
+                ],
+                "block_names": [
+                  "L01_compute_bottom__tile_18_comp",
+                  "L01_compute_bottom__tile_18_noc",
+                  "L01_compute_bottom__tile_18_sram"
+                ]
+              },
+              {
+                "tile_id": 24,
+                "peak_temperature_c": 46.854609375,
+                "avg_temperature_c": 45.897747916666674,
+                "block_count": 3,
+                "layer_ids": [
+                  1
+                ],
+                "block_names": [
+                  "L01_compute_bottom__tile_24_comp",
+                  "L01_compute_bottom__tile_24_noc",
+                  "L01_compute_bottom__tile_24_sram"
+                ]
+              },
+              {
+                "tile_id": 26,
+                "peak_temperature_c": 46.854609375,
+                "avg_temperature_c": 45.897747916666674,
+                "block_count": 3,
+                "layer_ids": [
+                  1
+                ],
+                "block_names": [
+                  "L01_compute_bottom__tile_26_comp",
+                  "L01_compute_bottom__tile_26_noc",
+                  "L01_compute_bottom__tile_26_sram"
+                ]
+              }
+            ]
+          }
+        },
+        "barrier_pressure": {
+          "controller_steps_completed_total": 0,
+          "stall_on_step_gate_cycles_total": 0,
+          "stall_on_step_gate_cycles_per_completed_step": 0.0,
+          "step_progress_done_total": 0,
+          "step_progress_missing_count": 0
+        },
+        "coupling": {
+          "route_thermal_coupling_score": 0.0,
+          "memory_thermal_coupling_proxy": 0.0,
+          "route_barrier_coupling_proxy": 0.0,
+          "memory_barrier_coupling_proxy": 0.0
+        },
+        "hotspot_readiness": {
+          "thermal_summary_available": true,
+          "runtime_observability_available": true,
+          "hotspot_driver_available": true,
+          "global_step_observability_available": true,
+          "closed_loop_candidate": true
+        }
+      },
+      "window_stop_at": "",
+      "traffic_stop_cycle": null,
+      "traffic_period_cycles": null,
+      "stream_mem_period_cycles": null,
+      "stack_nmc_totals": {
+        "memory_requests_total": 0,
+        "tx_spike_pkts_total": 0,
+        "tx_spikekey_pkts_total": 0,
+        "tx_packets_total": 0,
+        "rx_spike_total": 0,
+        "rx_spikekey_total": 0,
+        "rx_packets_total": 0,
+        "stream_mem_bytes_written_total": 0,
+        "stream_mem_bytes_read_total": 0,
+        "stream_region_bytes_written_total": 0,
+        "stream_region_bytes_read_total": 0,
+        "writeback_region_bytes_written_total": 0,
+        "writeback_region_bytes_read_total": 0,
+        "router_bundle_v3_rx_total": 0,
+        "tx_bundle_v3_packets_total": 0,
+        "tx_spikekey_v4_packets_total": 0,
+        "gas_scatter_spikes_emitted_total": 0,
+        "active_stack_ids": []
+      },
+      "stack_nmc_derived_metrics": {
+        "active_stack_utilization": 0.0,
+        "most_pressured_stack_id": -1,
+        "most_pressured_stack_service_deficit": 0,
+        "stack_memory_request_skew": 0.0,
+        "stack_service_deficit_skew": 0.0
+      },
+      "stack_balance": {
+        "active_stack_count": 0,
+        "memory_requests_imbalance_ratio": 0.0,
+        "tx_packet_imbalance_ratio": 0.0,
+        "rx_packet_imbalance_ratio": 0.0,
+        "hot_memory_stack_ids": [],
+        "hot_tx_stack_ids": [],
+        "hot_rx_stack_ids": []
+      },
+      "tier_totals": [],
+      "tier_balance": {
+        "active_tier_ids": [],
+        "memory_requests_imbalance_ratio": 0.0,
+        "service_deficit_imbalance_ratio": 0.0,
+        "hot_memory_tier_ids": [],
+        "hot_service_deficit_tier_ids": []
+      },
+      "tx_packet_share_spikekey": 0.0,
+      "rx_packet_share_spikekey": 0.0,
+      "route_memory_joint": {
+        "native_3d_active": true,
+        "vertical_hops_ratio": 0.0,
+        "remote_home_ratio": 0.0,
+        "route_memory_overlap": 0.0,
+        "ingress_replication_cost": 0.0,
+        "inter_die_multicast_fanout": 0.8125,
+        "die_local_replication_cost": 1.1875,
+        "average_vertical_subtree_depth": 1.0,
+        "direct_v4_share": 0.0,
+        "tile_bundle_v3_share": 0.0,
+        "bundle_v3_router_rx_per_tx": 0.0,
+        "tilekey_rx_per_bundle_v3_tx": 0.0,
+        "router_anomaly_density": 0.0,
+        "spikekey_v4_rx_per_direct_v4_tx": 0.0,
+        "memory_requests_total": 0,
+        "metadata_lookup_demands": 0,
+        "metadata_lookup_issued": 0,
+        "synapse_gather_demands": 0,
+        "synapse_gather_issued": 0,
+        "stream_region_demands": 0,
+        "stream_region_issued": 0,
+        "writeback_region_demands": 0,
+        "writeback_region_issued": 0,
+        "total_service_deficit": 0,
+        "most_pressured_region": "metadata_lookup",
+        "metadata_lookup_backlog": 0,
+        "synapse_gather_backlog": 0,
+        "stream_region_backlog": 0,
+        "writeback_region_backlog": 0,
+        "stream_region_issue_efficiency": 0.0,
+        "writeback_region_issue_efficiency": 0.0,
+        "dominant_home_access_class": "",
+        "attributed_service_deficit_total": 0.0,
+        "unattributed_service_deficit": 0.0,
+        "tier_local_home_total_demands": 0,
+        "tier_local_home_service_deficit_attribution": 0.0,
+        "same_xy_cross_tier_total_demands": 0,
+        "same_xy_cross_tier_service_deficit_attribution": 0.0,
+        "remote_home_total_demands": 0,
+        "remote_home_service_deficit_attribution": 0.0,
+        "dominant_home_stack_id": -1,
+        "most_pressured_controller_count": 0,
+        "most_pressured_controller_service_deficit_proxy": 0.0,
+        "controller_runtime_source": "stack_proxy",
+        "real_controller_pressure_available": false,
+        "most_pressured_runtime_stack_id": -1,
+        "most_pressured_runtime_controller_id": -1,
+        "tier_local_home_dominant_stack_id": 0,
+        "same_xy_cross_tier_dominant_stack_id": 3,
+        "remote_home_dominant_stack_id": 3,
+        "active_controller_count": 0,
+        "max_controller_outstanding_requests_accum": 0,
+        "max_controller_cycles_attempted_issue_but_rejected": 0,
+        "controller_runtime_total_requests_received": 0,
+        "controller_runtime_total_cycles_attempted_issue_but_rejected": 0,
+        "tier_local_home_access_ratio": 0.25,
+        "same_xy_cross_tier_access_ratio": 0.65625,
+        "remote_home_access_ratio": 0.09375,
+        "active_stack_utilization": 0.0,
+        "most_pressured_stack_id": -1,
+        "most_pressured_stack_service_deficit": 0,
+        "stack_memory_request_skew": 0.0,
+        "stack_service_deficit_skew": 0.0
+      },
+      "mapping_summary": {
+        "policy": "3d_aware",
+        "score": 0.0234375,
+        "same_home_stack_ratio": 0.90625,
+        "vertical_target_ratio": 0.40625
+      },
+      "thermal_summary": {
+        "thermal_hotspot_score": 1.25,
+        "vertical_link_pressure": 0.24375,
+        "stack_hotspot_penalty": 0.25,
+        "peak_temperature_c": 47.955010938,
+        "avg_temperature_c": 46.16823261720838,
+        "vertical_gradient_c": 0.0,
+        "hotspot_block_count": 0,
+        "hotspot_layer_count": 0,
+        "thermal_replay_sample_count": 1,
+        "hotspot_driver_status": "ran",
+        "hotspot_model_type": "grid",
+        "hotspot_temperature_source": "hotspot_steady_temp",
+        "hotspot_peak_temperature_c": 45.03000000000003,
+        "hotspot_avg_temperature_c": 45.02776041666669,
+        "hotspot_peak_delta_c": 2.9250109379999714,
+        "hotspot_avg_delta_c": 1.1404722005416943,
+        "hotspot_block_delta": 0,
+        "hotspot_layer_delta": 0,
+        "hotspot_threshold_c": 70.0,
+        "hotspot_threshold_source": "effective_config.thermal.hotspot_threshold_c",
+        "hotspot_artifacts": {
+          "floorplan": "/home/xgy/remote/snn3dexp/runs/full_3d_snn_window/task4_window_stop_runtime_closure_mainline_window_stop_2us/thermal_sidecar/hotspot/snndl_mesh.lcf",
+          "ptrace": "/home/xgy/remote/snn3dexp/runs/full_3d_snn_window/task4_window_stop_runtime_closure_mainline_window_stop_2us/thermal_sidecar/hotspot/snndl_mesh.ptrace",
+          "hotspot_config": "/home/xgy/remote/snn3dexp/runs/full_3d_snn_window/task4_window_stop_runtime_closure_mainline_window_stop_2us/thermal_sidecar/hotspot/hotspot.config",
+          "window_power_samples_jsonl": "/home/xgy/remote/snn3dexp/runs/full_3d_snn_window/task4_window_stop_runtime_closure_mainline_window_stop_2us/thermal_sidecar/summary/window_power_samples.jsonl",
+          "tile_temperature_summary_csv": "/home/xgy/remote/snn3dexp/runs/full_3d_snn_window/task4_window_stop_runtime_closure_mainline_window_stop_2us/thermal_sidecar/summary/tile_temperature_summary.csv",
+          "thermal_summary_json": "/home/xgy/remote/snn3dexp/runs/full_3d_snn_window/task4_window_stop_runtime_closure_mainline_window_stop_2us/thermal_sidecar/summary/thermal_summary.json",
+          "steady_temp": "/home/xgy/remote/snn3dexp/runs/full_3d_snn_window/task4_window_stop_runtime_closure_mainline_window_stop_2us/thermal_sidecar/hotspot/steady.temp",
+          "transient_temp": "/home/xgy/remote/snn3dexp/runs/full_3d_snn_window/task4_window_stop_runtime_closure_mainline_window_stop_2us/thermal_sidecar/hotspot/transient.temp",
+          "lcf": "/home/xgy/remote/snn3dexp/runs/full_3d_snn_window/task4_window_stop_runtime_closure_mainline_window_stop_2us/thermal_sidecar/hotspot/snndl_mesh.lcf",
+          "layer_floorplans": [
+            "/home/xgy/remote/snn3dexp/runs/full_3d_snn_window/task4_window_stop_runtime_closure_mainline_window_stop_2us/thermal_sidecar/hotspot/layer_00_compute_top.flp",
+            "/home/xgy/remote/snn3dexp/runs/full_3d_snn_window/task4_window_stop_runtime_closure_mainline_window_stop_2us/thermal_sidecar/hotspot/layer_01_compute_bottom.flp"
+          ]
+        }
+      },
+      "physical_summary": {
+        "vertical_bandwidth_budget": 2.0,
+        "tsv_miv_budget_pressure": 0.17138671875,
+        "power_density_score": 1.7578125,
+        "reliability_penalty": 0.4352783203125
+      },
+      "global_step_observability": {
+        "controller_seq_last": 0,
+        "controller_steps_started_total": 0,
+        "controller_steps_completed_total": 0,
+        "step_start_count": 0,
+        "step_done_count": 0,
+        "pe_global_steps_done_total": 0,
+        "stall_on_step_gate_cycles_total": 0,
+        "stall_on_step_gate_cycles_max": 0
+      },
+      "runtime_summary": {
+        "enabled": false,
+        "policy": "disabled",
+        "signal_source": "disabled",
+        "thermal_signal_source": "thermal_hooks",
+        "thermal_state_source": "online_rc_estimator",
+        "control_epoch_scope": "",
+        "control_execution_enabled": false,
+        "control_decision": "disabled",
+        "control_decision_source": "",
+        "control_trigger_signals": [],
+        "observe_only": true,
+        "recommend_only": false,
+        "executed_control": false,
+        "control_artifact_path": "",
+        "route_memory_overlap": 0.0,
+        "vertical_link_pressure": 0.0,
+        "stack_hotspot_penalty": 0.0,
+        "remap_epoch": 0,
+        "homeroute_adjustment_count": 0,
+        "thermal_guard_actions": 0,
+        "hotspot_threshold_c": 70.0,
+        "hotspot_threshold_source": "effective_config.thermal.hotspot_threshold_c",
+        "coupling_metrics": {
+          "source": "legacy_summary",
+          "route_thermal_coupling_score": 0.0,
+          "memory_thermal_coupling_proxy": 0.0,
+          "route_barrier_coupling_proxy": 0.0,
+          "memory_barrier_coupling_proxy": 0.0,
+          "closed_loop_candidate": false
+        },
+        "recommended_actions": [],
+        "next_window_processing_params": {},
+        "global_step_observability": {
+          "controller_seq_last": 0,
+          "controller_steps_started_total": 0,
+          "controller_steps_completed_total": 0,
+          "step_start_count": 0,
+          "step_done_count": 0,
+          "pe_global_steps_done_total": 0,
+          "stall_on_step_gate_cycles_total": 0,
+          "stall_on_step_gate_cycles_max": 0
+        },
+        "thermal_observability": {
+          "peak_temperature_c": 47.955010938,
+          "avg_temperature_c": 46.16823261720838,
+          "hotspot_block_count": 0,
+          "hotspot_layer_count": 0,
+          "vertical_gradient_c": 0.0,
+          "top_layer_peak_c": 47.955010938,
+          "bottom_layer_peak_c": 47.955010938,
+          "thermal_hotspot_score": 1.25
+        }
+      }
+    },
+    "full_3d_snn_window_bundle_v3": {
+      "case_id": "full_3d_snn_window_bundle_v3",
+      "mesh_shape": "4x4x2",
+      "total_nodes": 32,
+      "noc_component": "SnnDL.MulticastRouter3DNative",
+      "memory_kind": "hbm_like",
+      "memory_model_family": "hbm_like",
+      "num_stacks": 4,
+      "memory_graph_type": "memHierarchy_shared_stack",
+      "memory_controller_count": 16,
+      "memory_probe_count": 4,
+      "memory_probe_rows_total": 0,
+      "run_tag": "task4_window_stop_runtime_closure_mainline_window_stop_2us",
+      "run_root": "/home/xgy/remote/snn3dexp/runs/full_3d_snn_window_bundle_v3/task4_window_stop_runtime_closure_mainline_window_stop_2us",
+      "status": "composed",
+      "runtime_enabled": false,
+      "control_mode": "observe_only",
+      "case_role": "calibration_only",
+      "workload_impl": "snn",
+      "compare_surface": {
+        "case_id": "full_3d_snn_window_bundle_v3",
+        "run_tag": "task4_window_stop_runtime_closure_mainline_window_stop_2us",
+        "case_role": "calibration_only",
+        "control_mode": "observe_only",
+        "runtime_enabled": false,
+        "workload_impl": "snn",
+        "memory_kind": "hbm_like",
+        "memory_model_family": "hbm_like",
+        "memory_graph_type": "memHierarchy_shared_stack",
+        "noc_component": "SnnDL.MulticastRouter3DNative"
+      },
+      "thermal_input": {
+        "input_source_kind": "runtime_observability_only",
+        "summary_path": "",
+        "summary_exists": false,
+        "window_power_samples_path": "",
+        "window_power_samples_exists": false,
+        "window_power_sample_count": 0,
+        "trace_sources": [],
+        "shared_input_key": ""
+      },
+      "stack_nmc_available": false,
+      "stack_nmc_summary_path": "",
+      "route_memory_joint_available": true,
+      "route_memory_joint_summary_path": "",
+      "phase2_case_summary_available": true,
+      "phase2_case_summary_path": "/home/xgy/remote/snn3dexp/analysis/full_3d_snn_window_bundle_v3/task4_window_stop_runtime_closure_mainline_window_stop_2us/phase2_case_summary.json",
+      "architecture_summary_available": true,
+      "architecture_summary": {
+        "mesh_shape": "4x4x2",
+        "analysis_axes": [
+          "route",
+          "memory",
+          "thermal",
+          "barrier"
+        ],
+        "observability": {
+          "route_memory_joint_available": false,
+          "runtime_summary_available": true,
+          "global_step_available": true,
+          "thermal_runtime_available": true,
+          "hotspot_driver_available": true,
+          "memory_controller_proxy_available": false,
+          "route_memory_joint_summary_path": "",
+          "runtime_summary_path": "/home/xgy/remote/snn3dexp/analysis/full_3d_snn_window_bundle_v3/task4_window_stop_runtime_closure_mainline_window_stop_2us/runtime_summary.json"
+        },
+        "route_pressure": {
+          "vertical_hops_ratio": 0.0,
+          "remote_home_ratio": 0.0,
+          "route_memory_overlap": 0.0,
+          "source_semantics_authority": "legacy_built_routes_3d",
+          "native_source_fanout_active": true,
+          "native_target_synthesis_active": true,
+          "bootstrap_dependency_active": true,
+          "native_bootstrap_source": "legacy_route_tables"
+        },
+        "memory_pressure": {
+          "memory_requests_total": 0,
+          "remote_home_memory_requests_total": 0,
+          "active_stack_count": 0,
+          "most_pressured_controller_service_deficit_proxy": 0.0,
+          "most_pressured_controller_backpressure_proxy": 0.0,
+          "most_pressured_controller_memory_pressure_proxy": 0.0,
+          "memory_pressure_proxy_source": "",
+          "home_stack_path_authority": "",
+          "home_stack_controller_pressure_authority": "",
+          "home_stack_runtime_authority_available": false,
+          "pe_nic_real_home_path_authority": "",
+          "synapse_real_home_path_authority": "",
+          "most_pressured_runtime_controller_id": -1,
+          "most_pressured_runtime_stack_id": -1
+        },
+        "thermal_pressure": {
+          "thermal_hotspot_score": 1.25,
+          "vertical_link_pressure": 0.24375,
+          "stack_hotspot_penalty": 0.25,
+          "peak_temperature_c": 0.0,
+          "avg_temperature_c": 0.0,
+          "vertical_gradient_c": 0.0,
+          "hotspot_block_count": 0,
+          "hotspot_layer_count": 0,
+          "has_layer_temperatures": false,
+          "has_block_temperatures": false,
+          "hottest_layer_id": -1,
+          "hottest_layer_peak_c": 0.0,
+          "layer_summary": [],
+          "tier_summary": {
+            "available": false,
+            "tier_count": 0,
+            "top_layer_peak_c": 0.0,
+            "bottom_layer_peak_c": 0.0,
+            "layer_peak_span_c": 0.0
+          },
+          "stack_summary": {
+            "available": false,
+            "inferred_from": "thermal_consumer_snapshot.block_temperatures.tile_id",
+            "tile_count": 0,
+            "hottest_tile_id": -1,
+            "hottest_tile_peak_c": 0.0,
+            "tile_peak_temperatures": []
+          },
+          "layer_hotspot_distribution": [],
+          "tier_hotspot_summary": {
+            "available": false,
+            "tier_count": 0,
+            "top_layer_peak_c": 0.0,
+            "bottom_layer_peak_c": 0.0,
+            "layer_peak_span_c": 0.0
+          },
+          "stack_hotspot_hint": {
+            "available": false,
+            "inferred_from": "thermal_consumer_snapshot.block_temperatures.tile_id",
+            "tile_count": 0,
+            "hottest_tile_id": -1,
+            "hottest_tile_peak_c": 0.0,
+            "tile_peak_temperatures": []
+          }
+        },
+        "barrier_pressure": {
+          "controller_steps_completed_total": 0,
+          "stall_on_step_gate_cycles_total": 0,
+          "stall_on_step_gate_cycles_per_completed_step": 0.0,
+          "step_progress_done_total": 0,
+          "step_progress_missing_count": 0
+        },
+        "coupling": {
+          "route_thermal_coupling_score": 0.0,
+          "memory_thermal_coupling_proxy": 0.0,
+          "route_barrier_coupling_proxy": 0.0,
+          "memory_barrier_coupling_proxy": 0.0
+        },
+        "hotspot_readiness": {
+          "thermal_summary_available": true,
+          "runtime_observability_available": true,
+          "hotspot_driver_available": true,
+          "global_step_observability_available": true,
+          "closed_loop_candidate": true
+        }
+      },
+      "window_stop_at": "",
+      "traffic_stop_cycle": null,
+      "traffic_period_cycles": null,
+      "stream_mem_period_cycles": null,
+      "stack_nmc_totals": {
+        "memory_requests_total": 0,
+        "tx_spike_pkts_total": 0,
+        "tx_spikekey_pkts_total": 0,
+        "tx_packets_total": 0,
+        "rx_spike_total": 0,
+        "rx_spikekey_total": 0,
+        "rx_packets_total": 0,
+        "stream_mem_bytes_written_total": 0,
+        "stream_mem_bytes_read_total": 0,
+        "stream_region_bytes_written_total": 0,
+        "stream_region_bytes_read_total": 0,
+        "writeback_region_bytes_written_total": 0,
+        "writeback_region_bytes_read_total": 0,
+        "router_bundle_v3_rx_total": 0,
+        "tx_bundle_v3_packets_total": 0,
+        "tx_spikekey_v4_packets_total": 0,
+        "gas_scatter_spikes_emitted_total": 0,
+        "active_stack_ids": []
+      },
+      "stack_nmc_derived_metrics": {
+        "active_stack_utilization": 0.0,
+        "most_pressured_stack_id": -1,
+        "most_pressured_stack_service_deficit": 0,
+        "stack_memory_request_skew": 0.0,
+        "stack_service_deficit_skew": 0.0
+      },
+      "stack_balance": {
+        "active_stack_count": 0,
+        "memory_requests_imbalance_ratio": 0.0,
+        "tx_packet_imbalance_ratio": 0.0,
+        "rx_packet_imbalance_ratio": 0.0,
+        "hot_memory_stack_ids": [],
+        "hot_tx_stack_ids": [],
+        "hot_rx_stack_ids": []
+      },
+      "tier_totals": [],
+      "tier_balance": {
+        "active_tier_ids": [],
+        "memory_requests_imbalance_ratio": 0.0,
+        "service_deficit_imbalance_ratio": 0.0,
+        "hot_memory_tier_ids": [],
+        "hot_service_deficit_tier_ids": []
+      },
+      "tx_packet_share_spikekey": 0.0,
+      "rx_packet_share_spikekey": 0.0,
+      "route_memory_joint": {
+        "native_3d_active": true,
+        "vertical_hops_ratio": 0.0,
+        "remote_home_ratio": 0.0,
+        "route_memory_overlap": 0.0,
+        "ingress_replication_cost": 0.0,
+        "inter_die_multicast_fanout": 0.8125,
+        "die_local_replication_cost": 1.1875,
+        "average_vertical_subtree_depth": 1.0,
+        "direct_v4_share": 0.0,
+        "tile_bundle_v3_share": 0.0,
+        "bundle_v3_router_rx_per_tx": 0.0,
+        "tilekey_rx_per_bundle_v3_tx": 0.0,
+        "router_anomaly_density": 0.0,
+        "spikekey_v4_rx_per_direct_v4_tx": 0.0,
+        "memory_requests_total": 0,
+        "metadata_lookup_demands": 0,
+        "metadata_lookup_issued": 0,
+        "synapse_gather_demands": 0,
+        "synapse_gather_issued": 0,
+        "stream_region_demands": 0,
+        "stream_region_issued": 0,
+        "writeback_region_demands": 0,
+        "writeback_region_issued": 0,
+        "total_service_deficit": 0,
+        "most_pressured_region": "metadata_lookup",
+        "metadata_lookup_backlog": 0,
+        "synapse_gather_backlog": 0,
+        "stream_region_backlog": 0,
+        "writeback_region_backlog": 0,
+        "stream_region_issue_efficiency": 0.0,
+        "writeback_region_issue_efficiency": 0.0,
+        "dominant_home_access_class": "",
+        "attributed_service_deficit_total": 0.0,
+        "unattributed_service_deficit": 0.0,
+        "tier_local_home_total_demands": 0,
+        "tier_local_home_service_deficit_attribution": 0.0,
+        "same_xy_cross_tier_total_demands": 0,
+        "same_xy_cross_tier_service_deficit_attribution": 0.0,
+        "remote_home_total_demands": 0,
+        "remote_home_service_deficit_attribution": 0.0,
+        "dominant_home_stack_id": -1,
+        "most_pressured_controller_count": 0,
+        "most_pressured_controller_service_deficit_proxy": 0.0,
+        "controller_runtime_source": "stack_proxy",
+        "real_controller_pressure_available": false,
+        "most_pressured_runtime_stack_id": -1,
+        "most_pressured_runtime_controller_id": -1,
+        "tier_local_home_dominant_stack_id": 0,
+        "same_xy_cross_tier_dominant_stack_id": 3,
+        "remote_home_dominant_stack_id": 3,
+        "active_controller_count": 0,
+        "max_controller_outstanding_requests_accum": 0,
+        "max_controller_cycles_attempted_issue_but_rejected": 0,
+        "controller_runtime_total_requests_received": 0,
+        "controller_runtime_total_cycles_attempted_issue_but_rejected": 0,
+        "tier_local_home_access_ratio": 0.25,
+        "same_xy_cross_tier_access_ratio": 0.65625,
+        "remote_home_access_ratio": 0.09375,
+        "active_stack_utilization": 0.0,
+        "most_pressured_stack_id": -1,
+        "most_pressured_stack_service_deficit": 0,
+        "stack_memory_request_skew": 0.0,
+        "stack_service_deficit_skew": 0.0
+      },
+      "mapping_summary": {
+        "policy": "3d_aware",
+        "score": 0.0234375,
+        "same_home_stack_ratio": 0.90625,
+        "vertical_target_ratio": 0.40625
+      },
+      "thermal_summary": {
+        "thermal_hotspot_score": 1.25,
+        "vertical_link_pressure": 0.24375,
+        "stack_hotspot_penalty": 0.25,
+        "peak_temperature_c": 0.0,
+        "avg_temperature_c": 0.0,
+        "vertical_gradient_c": 0.0,
+        "hotspot_block_count": 0,
+        "hotspot_layer_count": 0,
+        "thermal_replay_sample_count": 0,
+        "hotspot_driver_status": "disabled",
+        "hotspot_model_type": "",
+        "hotspot_temperature_source": "",
+        "hotspot_peak_temperature_c": 0.0,
+        "hotspot_avg_temperature_c": 0.0,
+        "hotspot_peak_delta_c": 0.0,
+        "hotspot_avg_delta_c": 0.0,
+        "hotspot_block_delta": 0,
+        "hotspot_layer_delta": 0,
+        "hotspot_threshold_c": 70.0,
+        "hotspot_threshold_source": "effective_config.thermal.hotspot_threshold_c",
+        "hotspot_artifacts": {}
+      },
+      "physical_summary": {
+        "vertical_bandwidth_budget": 2.0,
+        "tsv_miv_budget_pressure": 0.17138671875,
+        "power_density_score": 1.7578125,
+        "reliability_penalty": 0.4352783203125
+      },
+      "global_step_observability": {
+        "controller_seq_last": 0,
+        "controller_steps_started_total": 0,
+        "controller_steps_completed_total": 0,
+        "step_start_count": 0,
+        "step_done_count": 0,
+        "pe_global_steps_done_total": 0,
+        "stall_on_step_gate_cycles_total": 0,
+        "stall_on_step_gate_cycles_max": 0
+      },
+      "runtime_summary": {
+        "enabled": false,
+        "policy": "disabled",
+        "signal_source": "disabled",
+        "thermal_signal_source": "thermal_hooks",
+        "thermal_state_source": "thermal_hooks",
+        "control_epoch_scope": "",
+        "control_execution_enabled": false,
+        "control_decision": "disabled",
+        "control_decision_source": "",
+        "control_trigger_signals": [],
+        "observe_only": true,
+        "recommend_only": false,
+        "executed_control": false,
+        "control_artifact_path": "",
+        "route_memory_overlap": 0.0,
+        "vertical_link_pressure": 0.0,
+        "stack_hotspot_penalty": 0.0,
+        "remap_epoch": 0,
+        "homeroute_adjustment_count": 0,
+        "thermal_guard_actions": 0,
+        "hotspot_threshold_c": 70.0,
+        "hotspot_threshold_source": "effective_config.thermal.hotspot_threshold_c",
+        "coupling_metrics": {
+          "source": "legacy_summary",
+          "route_thermal_coupling_score": 0.0,
+          "memory_thermal_coupling_proxy": 0.0,
+          "route_barrier_coupling_proxy": 0.0,
+          "memory_barrier_coupling_proxy": 0.0,
+          "closed_loop_candidate": false
+        },
+        "recommended_actions": [],
+        "next_window_processing_params": {},
+        "global_step_observability": {
+          "controller_seq_last": 0,
+          "controller_steps_started_total": 0,
+          "controller_steps_completed_total": 0,
+          "step_start_count": 0,
+          "step_done_count": 0,
+          "pe_global_steps_done_total": 0,
+          "stall_on_step_gate_cycles_total": 0,
+          "stall_on_step_gate_cycles_max": 0
+        },
+        "thermal_observability": {
+          "peak_temperature_c": null,
+          "avg_temperature_c": null,
+          "hotspot_block_count": 0,
+          "hotspot_layer_count": 0,
+          "vertical_gradient_c": 0.0,
+          "top_layer_peak_c": null,
+          "bottom_layer_peak_c": null,
+          "thermal_hotspot_score": 1.25
+        }
+      }
+    },
+    "full_3d_snn_window_monolithic_proxy": {
+      "case_id": "full_3d_snn_window_monolithic_proxy",
+      "mesh_shape": "4x4x2",
+      "total_nodes": 32,
+      "noc_component": "SnnDL.MulticastRouter3DNative",
+      "memory_kind": "monolithic_like",
+      "memory_model_family": "monolithic_like",
+      "num_stacks": 8,
+      "memory_graph_type": "memHierarchy_tier_local_stack",
+      "memory_controller_count": 16,
+      "memory_probe_count": 8,
+      "memory_probe_rows_total": 0,
+      "run_tag": "task4_window_stop_runtime_closure_mainline_window_stop_2us",
+      "run_root": "/home/xgy/remote/snn3dexp/runs/full_3d_snn_window_monolithic_proxy/task4_window_stop_runtime_closure_mainline_window_stop_2us",
+      "status": "composed",
+      "runtime_enabled": false,
+      "control_mode": "observe_only",
+      "case_role": "calibration_only",
+      "workload_impl": "snn",
+      "compare_surface": {
+        "case_id": "full_3d_snn_window_monolithic_proxy",
+        "run_tag": "task4_window_stop_runtime_closure_mainline_window_stop_2us",
+        "case_role": "calibration_only",
+        "control_mode": "observe_only",
+        "runtime_enabled": false,
+        "workload_impl": "snn",
+        "memory_kind": "monolithic_like",
+        "memory_model_family": "monolithic_like",
+        "memory_graph_type": "memHierarchy_tier_local_stack",
+        "noc_component": "SnnDL.MulticastRouter3DNative"
+      },
+      "thermal_input": {
+        "input_source_kind": "local_hotspot_sidecar",
+        "summary_path": "/home/xgy/remote/snn3dexp/runs/full_3d_snn_window_monolithic_proxy/task4_window_stop_runtime_closure_mainline_window_stop_2us/thermal_sidecar/summary/thermal_summary.json",
+        "summary_exists": true,
+        "window_power_samples_path": "/home/xgy/remote/snn3dexp/runs/full_3d_snn_window_monolithic_proxy/task4_window_stop_runtime_closure_mainline_window_stop_2us/thermal_sidecar/summary/window_power_samples.jsonl",
+        "window_power_samples_exists": true,
+        "window_power_sample_count": 1,
+        "trace_sources": [
+          "proxy_synthesized"
+        ],
+        "shared_input_key": "/home/xgy/remote/snn3dexp/runs/full_3d_snn_window_monolithic_proxy/task4_window_stop_runtime_closure_mainline_window_stop_2us/thermal_sidecar/summary/thermal_summary.json"
+      },
+      "stack_nmc_available": false,
+      "stack_nmc_summary_path": "",
+      "route_memory_joint_available": true,
+      "route_memory_joint_summary_path": "",
+      "phase2_case_summary_available": true,
+      "phase2_case_summary_path": "/home/xgy/remote/snn3dexp/analysis/full_3d_snn_window_monolithic_proxy/task4_window_stop_runtime_closure_mainline_window_stop_2us/phase2_case_summary.json",
+      "architecture_summary_available": true,
+      "architecture_summary": {
+        "mesh_shape": "4x4x2",
+        "analysis_axes": [
+          "route",
+          "memory",
+          "thermal",
+          "barrier"
+        ],
+        "observability": {
+          "route_memory_joint_available": false,
+          "runtime_summary_available": true,
+          "global_step_available": true,
+          "thermal_runtime_available": true,
+          "hotspot_driver_available": true,
+          "memory_controller_proxy_available": false,
+          "route_memory_joint_summary_path": "",
+          "runtime_summary_path": "/home/xgy/remote/snn3dexp/analysis/full_3d_snn_window_monolithic_proxy/task4_window_stop_runtime_closure_mainline_window_stop_2us/runtime_summary.json"
+        },
+        "route_pressure": {
+          "vertical_hops_ratio": 0.0,
+          "remote_home_ratio": 0.0,
+          "route_memory_overlap": 0.0,
+          "source_semantics_authority": "legacy_built_routes_3d",
+          "native_source_fanout_active": true,
+          "native_target_synthesis_active": true,
+          "bootstrap_dependency_active": true,
+          "native_bootstrap_source": "legacy_route_tables"
+        },
+        "memory_pressure": {
+          "memory_requests_total": 0,
+          "remote_home_memory_requests_total": 0,
+          "active_stack_count": 0,
+          "most_pressured_controller_service_deficit_proxy": 0.0,
+          "most_pressured_controller_backpressure_proxy": 0.0,
+          "most_pressured_controller_memory_pressure_proxy": 0.0,
+          "memory_pressure_proxy_source": "",
+          "home_stack_path_authority": "",
+          "home_stack_controller_pressure_authority": "",
+          "home_stack_runtime_authority_available": false,
+          "pe_nic_real_home_path_authority": "",
+          "synapse_real_home_path_authority": "",
+          "most_pressured_runtime_controller_id": -1,
+          "most_pressured_runtime_stack_id": -1
+        },
+        "thermal_pressure": {
+          "thermal_hotspot_score": 1.25,
+          "vertical_link_pressure": 0.15,
+          "stack_hotspot_penalty": 0.5,
+          "peak_temperature_c": 47.4041625,
+          "avg_temperature_c": 45.99489010416664,
+          "vertical_gradient_c": 0.0,
+          "hotspot_block_count": 0,
+          "hotspot_layer_count": 0,
+          "has_layer_temperatures": true,
+          "has_block_temperatures": true,
+          "hottest_layer_id": 0,
+          "hottest_layer_peak_c": 47.4041625,
+          "layer_summary": [
+            {
+              "layer_id": 0,
+              "layer_name": "compute_top",
+              "layer_index": 0,
+              "avg_temperature_c": 45.99489010416664,
+              "peak_temperature_c": 47.4041625,
+              "min_temperature_c": 45.19425,
+              "source": "online_rc_estimator"
+            },
+            {
+              "layer_id": 1,
+              "layer_name": "compute_bottom",
+              "layer_index": 1,
+              "avg_temperature_c": 45.99489010416664,
+              "peak_temperature_c": 47.4041625,
+              "min_temperature_c": 45.19425,
+              "source": "online_rc_estimator"
+            }
+          ],
+          "tier_summary": {
+            "available": true,
+            "tier_count": 2,
+            "top_layer_peak_c": 47.4041625,
+            "bottom_layer_peak_c": 47.4041625,
+            "layer_peak_span_c": 0.0
+          },
+          "stack_summary": {
+            "available": true,
+            "inferred_from": "thermal_consumer_snapshot.block_temperatures.tile_id",
+            "tile_count": 32,
+            "hottest_tile_id": 15,
+            "hottest_tile_peak_c": 47.4041625,
+            "tile_peak_temperatures": [
+              {
+                "tile_id": 15,
+                "peak_temperature_c": 47.4041625,
+                "avg_temperature_c": 46.477374999999995,
+                "block_count": 3,
+                "layer_ids": [
+                  0
+                ],
+                "block_names": [
+                  "L00_compute_top__tile_15_comp",
+                  "L00_compute_top__tile_15_noc",
+                  "L00_compute_top__tile_15_sram"
+                ]
+              },
+              {
+                "tile_id": 31,
+                "peak_temperature_c": 47.4041625,
+                "avg_temperature_c": 46.477374999999995,
+                "block_count": 3,
+                "layer_ids": [
+                  1
+                ],
+                "block_names": [
+                  "L01_compute_bottom__tile_31_comp",
+                  "L01_compute_bottom__tile_31_noc",
+                  "L01_compute_bottom__tile_31_sram"
+                ]
+              },
+              {
+                "tile_id": 3,
+                "peak_temperature_c": 47.128275,
+                "avg_temperature_c": 46.17343333333333,
+                "block_count": 3,
+                "layer_ids": [
+                  0
+                ],
+                "block_names": [
+                  "L00_compute_top__tile_03_comp",
+                  "L00_compute_top__tile_03_noc",
+                  "L00_compute_top__tile_03_sram"
+                ]
+              },
+              {
+                "tile_id": 11,
+                "peak_temperature_c": 47.128275,
+                "avg_temperature_c": 46.17343333333333,
+                "block_count": 3,
+                "layer_ids": [
+                  0
+                ],
+                "block_names": [
+                  "L00_compute_top__tile_11_comp",
+                  "L00_compute_top__tile_11_noc",
+                  "L00_compute_top__tile_11_sram"
+                ]
+              },
+              {
+                "tile_id": 12,
+                "peak_temperature_c": 47.128275,
+                "avg_temperature_c": 46.17343333333333,
+                "block_count": 3,
+                "layer_ids": [
+                  0
+                ],
+                "block_names": [
+                  "L00_compute_top__tile_12_comp",
+                  "L00_compute_top__tile_12_noc",
+                  "L00_compute_top__tile_12_sram"
+                ]
+              },
+              {
+                "tile_id": 14,
+                "peak_temperature_c": 47.128275,
+                "avg_temperature_c": 46.17343333333333,
+                "block_count": 3,
+                "layer_ids": [
+                  0
+                ],
+                "block_names": [
+                  "L00_compute_top__tile_14_comp",
+                  "L00_compute_top__tile_14_noc",
+                  "L00_compute_top__tile_14_sram"
+                ]
+              },
+              {
+                "tile_id": 19,
+                "peak_temperature_c": 47.128275,
+                "avg_temperature_c": 46.17343333333333,
+                "block_count": 3,
+                "layer_ids": [
+                  1
+                ],
+                "block_names": [
+                  "L01_compute_bottom__tile_19_comp",
+                  "L01_compute_bottom__tile_19_noc",
+                  "L01_compute_bottom__tile_19_sram"
+                ]
+              },
+              {
+                "tile_id": 27,
+                "peak_temperature_c": 47.128275,
+                "avg_temperature_c": 46.17343333333333,
+                "block_count": 3,
+                "layer_ids": [
+                  1
+                ],
+                "block_names": [
+                  "L01_compute_bottom__tile_27_comp",
+                  "L01_compute_bottom__tile_27_noc",
+                  "L01_compute_bottom__tile_27_sram"
+                ]
+              },
+              {
+                "tile_id": 28,
+                "peak_temperature_c": 47.128275,
+                "avg_temperature_c": 46.17343333333333,
+                "block_count": 3,
+                "layer_ids": [
+                  1
+                ],
+                "block_names": [
+                  "L01_compute_bottom__tile_28_comp",
+                  "L01_compute_bottom__tile_28_noc",
+                  "L01_compute_bottom__tile_28_sram"
+                ]
+              },
+              {
+                "tile_id": 30,
+                "peak_temperature_c": 47.128275,
+                "avg_temperature_c": 46.17343333333333,
+                "block_count": 3,
+                "layer_ids": [
+                  1
+                ],
+                "block_names": [
+                  "L01_compute_bottom__tile_30_comp",
+                  "L01_compute_bottom__tile_30_noc",
+                  "L01_compute_bottom__tile_30_sram"
+                ]
+              },
+              {
+                "tile_id": 0,
+                "peak_temperature_c": 46.970625,
+                "avg_temperature_c": 45.937466666666666,
+                "block_count": 3,
+                "layer_ids": [
+                  0
+                ],
+                "block_names": [
+                  "L00_compute_top__tile_00_comp",
+                  "L00_compute_top__tile_00_noc",
+                  "L00_compute_top__tile_00_sram"
+                ]
+              },
+              {
+                "tile_id": 2,
+                "peak_temperature_c": 46.970625,
+                "avg_temperature_c": 45.937466666666666,
+                "block_count": 3,
+                "layer_ids": [
+                  0
+                ],
+                "block_names": [
+                  "L00_compute_top__tile_02_comp",
+                  "L00_compute_top__tile_02_noc",
+                  "L00_compute_top__tile_02_sram"
+                ]
+              },
+              {
+                "tile_id": 8,
+                "peak_temperature_c": 46.970625,
+                "avg_temperature_c": 45.937466666666666,
+                "block_count": 3,
+                "layer_ids": [
+                  0
+                ],
+                "block_names": [
+                  "L00_compute_top__tile_08_comp",
+                  "L00_compute_top__tile_08_noc",
+                  "L00_compute_top__tile_08_sram"
+                ]
+              },
+              {
+                "tile_id": 10,
+                "peak_temperature_c": 46.970625,
+                "avg_temperature_c": 45.937466666666666,
+                "block_count": 3,
+                "layer_ids": [
+                  0
+                ],
+                "block_names": [
+                  "L00_compute_top__tile_10_comp",
+                  "L00_compute_top__tile_10_noc",
+                  "L00_compute_top__tile_10_sram"
+                ]
+              },
+              {
+                "tile_id": 16,
+                "peak_temperature_c": 46.970625,
+                "avg_temperature_c": 45.937466666666666,
+                "block_count": 3,
+                "layer_ids": [
+                  1
+                ],
+                "block_names": [
+                  "L01_compute_bottom__tile_16_comp",
+                  "L01_compute_bottom__tile_16_noc",
+                  "L01_compute_bottom__tile_16_sram"
+                ]
+              },
+              {
+                "tile_id": 18,
+                "peak_temperature_c": 46.970625,
+                "avg_temperature_c": 45.937466666666666,
+                "block_count": 3,
+                "layer_ids": [
+                  1
+                ],
+                "block_names": [
+                  "L01_compute_bottom__tile_18_comp",
+                  "L01_compute_bottom__tile_18_noc",
+                  "L01_compute_bottom__tile_18_sram"
+                ]
+              },
+              {
+                "tile_id": 24,
+                "peak_temperature_c": 46.970625,
+                "avg_temperature_c": 45.937466666666666,
+                "block_count": 3,
+                "layer_ids": [
+                  1
+                ],
+                "block_names": [
+                  "L01_compute_bottom__tile_24_comp",
+                  "L01_compute_bottom__tile_24_noc",
+                  "L01_compute_bottom__tile_24_sram"
+                ]
+              },
+              {
+                "tile_id": 26,
+                "peak_temperature_c": 46.970625,
+                "avg_temperature_c": 45.937466666666666,
+                "block_count": 3,
+                "layer_ids": [
+                  1
+                ],
+                "block_names": [
+                  "L01_compute_bottom__tile_26_comp",
+                  "L01_compute_bottom__tile_26_noc",
+                  "L01_compute_bottom__tile_26_sram"
+                ]
+              },
+              {
+                "tile_id": 7,
+                "peak_temperature_c": 46.760425,
+                "avg_temperature_c": 46.04381666666666,
+                "block_count": 3,
+                "layer_ids": [
+                  0
+                ],
+                "block_names": [
+                  "L00_compute_top__tile_07_comp",
+                  "L00_compute_top__tile_07_noc",
+                  "L00_compute_top__tile_07_sram"
+                ]
+              },
+              {
+                "tile_id": 13,
+                "peak_temperature_c": 46.760425,
+                "avg_temperature_c": 46.04381666666666,
+                "block_count": 3,
+                "layer_ids": [
+                  0
+                ],
+                "block_names": [
+                  "L00_compute_top__tile_13_comp",
+                  "L00_compute_top__tile_13_noc",
+                  "L00_compute_top__tile_13_sram"
+                ]
+              },
+              {
+                "tile_id": 23,
+                "peak_temperature_c": 46.760425,
+                "avg_temperature_c": 46.04381666666666,
+                "block_count": 3,
+                "layer_ids": [
+                  1
+                ],
+                "block_names": [
+                  "L01_compute_bottom__tile_23_comp",
+                  "L01_compute_bottom__tile_23_noc",
+                  "L01_compute_bottom__tile_23_sram"
+                ]
+              },
+              {
+                "tile_id": 29,
+                "peak_temperature_c": 46.760425,
+                "avg_temperature_c": 46.04381666666666,
+                "block_count": 3,
+                "layer_ids": [
+                  1
+                ],
+                "block_names": [
+                  "L01_compute_bottom__tile_29_comp",
+                  "L01_compute_bottom__tile_29_noc",
+                  "L01_compute_bottom__tile_29_sram"
+                ]
+              },
+              {
+                "tile_id": 1,
+                "peak_temperature_c": 46.602775,
+                "avg_temperature_c": 45.80785,
+                "block_count": 3,
+                "layer_ids": [
+                  0
+                ],
+                "block_names": [
+                  "L00_compute_top__tile_01_comp",
+                  "L00_compute_top__tile_01_noc",
+                  "L00_compute_top__tile_01_sram"
+                ]
+              },
+              {
+                "tile_id": 4,
+                "peak_temperature_c": 46.602775,
+                "avg_temperature_c": 45.80785,
+                "block_count": 3,
+                "layer_ids": [
+                  0
+                ],
+                "block_names": [
+                  "L00_compute_top__tile_04_comp",
+                  "L00_compute_top__tile_04_noc",
+                  "L00_compute_top__tile_04_sram"
+                ]
+              },
+              {
+                "tile_id": 6,
+                "peak_temperature_c": 46.602775,
+                "avg_temperature_c": 45.80785,
+                "block_count": 3,
+                "layer_ids": [
+                  0
+                ],
+                "block_names": [
+                  "L00_compute_top__tile_06_comp",
+                  "L00_compute_top__tile_06_noc",
+                  "L00_compute_top__tile_06_sram"
+                ]
+              },
+              {
+                "tile_id": 9,
+                "peak_temperature_c": 46.602775,
+                "avg_temperature_c": 45.80785,
+                "block_count": 3,
+                "layer_ids": [
+                  0
+                ],
+                "block_names": [
+                  "L00_compute_top__tile_09_comp",
+                  "L00_compute_top__tile_09_noc",
+                  "L00_compute_top__tile_09_sram"
+                ]
+              },
+              {
+                "tile_id": 17,
+                "peak_temperature_c": 46.602775,
+                "avg_temperature_c": 45.80785,
+                "block_count": 3,
+                "layer_ids": [
+                  1
+                ],
+                "block_names": [
+                  "L01_compute_bottom__tile_17_comp",
+                  "L01_compute_bottom__tile_17_noc",
+                  "L01_compute_bottom__tile_17_sram"
+                ]
+              },
+              {
+                "tile_id": 20,
+                "peak_temperature_c": 46.602775,
+                "avg_temperature_c": 45.80785,
+                "block_count": 3,
+                "layer_ids": [
+                  1
+                ],
+                "block_names": [
+                  "L01_compute_bottom__tile_20_comp",
+                  "L01_compute_bottom__tile_20_noc",
+                  "L01_compute_bottom__tile_20_sram"
+                ]
+              },
+              {
+                "tile_id": 22,
+                "peak_temperature_c": 46.602775,
+                "avg_temperature_c": 45.80785,
+                "block_count": 3,
+                "layer_ids": [
+                  1
+                ],
+                "block_names": [
+                  "L01_compute_bottom__tile_22_comp",
+                  "L01_compute_bottom__tile_22_noc",
+                  "L01_compute_bottom__tile_22_sram"
+                ]
+              },
+              {
+                "tile_id": 25,
+                "peak_temperature_c": 46.602775,
+                "avg_temperature_c": 45.80785,
+                "block_count": 3,
+                "layer_ids": [
+                  1
+                ],
+                "block_names": [
+                  "L01_compute_bottom__tile_25_comp",
+                  "L01_compute_bottom__tile_25_noc",
+                  "L01_compute_bottom__tile_25_sram"
+                ]
+              },
+              {
+                "tile_id": 5,
+                "peak_temperature_c": 46.234925,
+                "avg_temperature_c": 45.67823333333333,
+                "block_count": 3,
+                "layer_ids": [
+                  0
+                ],
+                "block_names": [
+                  "L00_compute_top__tile_05_comp",
+                  "L00_compute_top__tile_05_noc",
+                  "L00_compute_top__tile_05_sram"
+                ]
+              },
+              {
+                "tile_id": 21,
+                "peak_temperature_c": 46.234925,
+                "avg_temperature_c": 45.67823333333333,
+                "block_count": 3,
+                "layer_ids": [
+                  1
+                ],
+                "block_names": [
+                  "L01_compute_bottom__tile_21_comp",
+                  "L01_compute_bottom__tile_21_noc",
+                  "L01_compute_bottom__tile_21_sram"
+                ]
+              }
+            ]
+          },
+          "layer_hotspot_distribution": [
+            {
+              "layer_id": 0,
+              "layer_name": "compute_top",
+              "layer_index": 0,
+              "avg_temperature_c": 45.99489010416664,
+              "peak_temperature_c": 47.4041625,
+              "min_temperature_c": 45.19425,
+              "source": "online_rc_estimator"
+            },
+            {
+              "layer_id": 1,
+              "layer_name": "compute_bottom",
+              "layer_index": 1,
+              "avg_temperature_c": 45.99489010416664,
+              "peak_temperature_c": 47.4041625,
+              "min_temperature_c": 45.19425,
+              "source": "online_rc_estimator"
+            }
+          ],
+          "tier_hotspot_summary": {
+            "available": true,
+            "tier_count": 2,
+            "top_layer_peak_c": 47.4041625,
+            "bottom_layer_peak_c": 47.4041625,
+            "layer_peak_span_c": 0.0
+          },
+          "stack_hotspot_hint": {
+            "available": true,
+            "inferred_from": "thermal_consumer_snapshot.block_temperatures.tile_id",
+            "tile_count": 32,
+            "hottest_tile_id": 15,
+            "hottest_tile_peak_c": 47.4041625,
+            "tile_peak_temperatures": [
+              {
+                "tile_id": 15,
+                "peak_temperature_c": 47.4041625,
+                "avg_temperature_c": 46.477374999999995,
+                "block_count": 3,
+                "layer_ids": [
+                  0
+                ],
+                "block_names": [
+                  "L00_compute_top__tile_15_comp",
+                  "L00_compute_top__tile_15_noc",
+                  "L00_compute_top__tile_15_sram"
+                ]
+              },
+              {
+                "tile_id": 31,
+                "peak_temperature_c": 47.4041625,
+                "avg_temperature_c": 46.477374999999995,
+                "block_count": 3,
+                "layer_ids": [
+                  1
+                ],
+                "block_names": [
+                  "L01_compute_bottom__tile_31_comp",
+                  "L01_compute_bottom__tile_31_noc",
+                  "L01_compute_bottom__tile_31_sram"
+                ]
+              },
+              {
+                "tile_id": 3,
+                "peak_temperature_c": 47.128275,
+                "avg_temperature_c": 46.17343333333333,
+                "block_count": 3,
+                "layer_ids": [
+                  0
+                ],
+                "block_names": [
+                  "L00_compute_top__tile_03_comp",
+                  "L00_compute_top__tile_03_noc",
+                  "L00_compute_top__tile_03_sram"
+                ]
+              },
+              {
+                "tile_id": 11,
+                "peak_temperature_c": 47.128275,
+                "avg_temperature_c": 46.17343333333333,
+                "block_count": 3,
+                "layer_ids": [
+                  0
+                ],
+                "block_names": [
+                  "L00_compute_top__tile_11_comp",
+                  "L00_compute_top__tile_11_noc",
+                  "L00_compute_top__tile_11_sram"
+                ]
+              },
+              {
+                "tile_id": 12,
+                "peak_temperature_c": 47.128275,
+                "avg_temperature_c": 46.17343333333333,
+                "block_count": 3,
+                "layer_ids": [
+                  0
+                ],
+                "block_names": [
+                  "L00_compute_top__tile_12_comp",
+                  "L00_compute_top__tile_12_noc",
+                  "L00_compute_top__tile_12_sram"
+                ]
+              },
+              {
+                "tile_id": 14,
+                "peak_temperature_c": 47.128275,
+                "avg_temperature_c": 46.17343333333333,
+                "block_count": 3,
+                "layer_ids": [
+                  0
+                ],
+                "block_names": [
+                  "L00_compute_top__tile_14_comp",
+                  "L00_compute_top__tile_14_noc",
+                  "L00_compute_top__tile_14_sram"
+                ]
+              },
+              {
+                "tile_id": 19,
+                "peak_temperature_c": 47.128275,
+                "avg_temperature_c": 46.17343333333333,
+                "block_count": 3,
+                "layer_ids": [
+                  1
+                ],
+                "block_names": [
+                  "L01_compute_bottom__tile_19_comp",
+                  "L01_compute_bottom__tile_19_noc",
+                  "L01_compute_bottom__tile_19_sram"
+                ]
+              },
+              {
+                "tile_id": 27,
+                "peak_temperature_c": 47.128275,
+                "avg_temperature_c": 46.17343333333333,
+                "block_count": 3,
+                "layer_ids": [
+                  1
+                ],
+                "block_names": [
+                  "L01_compute_bottom__tile_27_comp",
+                  "L01_compute_bottom__tile_27_noc",
+                  "L01_compute_bottom__tile_27_sram"
+                ]
+              },
+              {
+                "tile_id": 28,
+                "peak_temperature_c": 47.128275,
+                "avg_temperature_c": 46.17343333333333,
+                "block_count": 3,
+                "layer_ids": [
+                  1
+                ],
+                "block_names": [
+                  "L01_compute_bottom__tile_28_comp",
+                  "L01_compute_bottom__tile_28_noc",
+                  "L01_compute_bottom__tile_28_sram"
+                ]
+              },
+              {
+                "tile_id": 30,
+                "peak_temperature_c": 47.128275,
+                "avg_temperature_c": 46.17343333333333,
+                "block_count": 3,
+                "layer_ids": [
+                  1
+                ],
+                "block_names": [
+                  "L01_compute_bottom__tile_30_comp",
+                  "L01_compute_bottom__tile_30_noc",
+                  "L01_compute_bottom__tile_30_sram"
+                ]
+              },
+              {
+                "tile_id": 0,
+                "peak_temperature_c": 46.970625,
+                "avg_temperature_c": 45.937466666666666,
+                "block_count": 3,
+                "layer_ids": [
+                  0
+                ],
+                "block_names": [
+                  "L00_compute_top__tile_00_comp",
+                  "L00_compute_top__tile_00_noc",
+                  "L00_compute_top__tile_00_sram"
+                ]
+              },
+              {
+                "tile_id": 2,
+                "peak_temperature_c": 46.970625,
+                "avg_temperature_c": 45.937466666666666,
+                "block_count": 3,
+                "layer_ids": [
+                  0
+                ],
+                "block_names": [
+                  "L00_compute_top__tile_02_comp",
+                  "L00_compute_top__tile_02_noc",
+                  "L00_compute_top__tile_02_sram"
+                ]
+              },
+              {
+                "tile_id": 8,
+                "peak_temperature_c": 46.970625,
+                "avg_temperature_c": 45.937466666666666,
+                "block_count": 3,
+                "layer_ids": [
+                  0
+                ],
+                "block_names": [
+                  "L00_compute_top__tile_08_comp",
+                  "L00_compute_top__tile_08_noc",
+                  "L00_compute_top__tile_08_sram"
+                ]
+              },
+              {
+                "tile_id": 10,
+                "peak_temperature_c": 46.970625,
+                "avg_temperature_c": 45.937466666666666,
+                "block_count": 3,
+                "layer_ids": [
+                  0
+                ],
+                "block_names": [
+                  "L00_compute_top__tile_10_comp",
+                  "L00_compute_top__tile_10_noc",
+                  "L00_compute_top__tile_10_sram"
+                ]
+              },
+              {
+                "tile_id": 16,
+                "peak_temperature_c": 46.970625,
+                "avg_temperature_c": 45.937466666666666,
+                "block_count": 3,
+                "layer_ids": [
+                  1
+                ],
+                "block_names": [
+                  "L01_compute_bottom__tile_16_comp",
+                  "L01_compute_bottom__tile_16_noc",
+                  "L01_compute_bottom__tile_16_sram"
+                ]
+              },
+              {
+                "tile_id": 18,
+                "peak_temperature_c": 46.970625,
+                "avg_temperature_c": 45.937466666666666,
+                "block_count": 3,
+                "layer_ids": [
+                  1
+                ],
+                "block_names": [
+                  "L01_compute_bottom__tile_18_comp",
+                  "L01_compute_bottom__tile_18_noc",
+                  "L01_compute_bottom__tile_18_sram"
+                ]
+              },
+              {
+                "tile_id": 24,
+                "peak_temperature_c": 46.970625,
+                "avg_temperature_c": 45.937466666666666,
+                "block_count": 3,
+                "layer_ids": [
+                  1
+                ],
+                "block_names": [
+                  "L01_compute_bottom__tile_24_comp",
+                  "L01_compute_bottom__tile_24_noc",
+                  "L01_compute_bottom__tile_24_sram"
+                ]
+              },
+              {
+                "tile_id": 26,
+                "peak_temperature_c": 46.970625,
+                "avg_temperature_c": 45.937466666666666,
+                "block_count": 3,
+                "layer_ids": [
+                  1
+                ],
+                "block_names": [
+                  "L01_compute_bottom__tile_26_comp",
+                  "L01_compute_bottom__tile_26_noc",
+                  "L01_compute_bottom__tile_26_sram"
+                ]
+              },
+              {
+                "tile_id": 7,
+                "peak_temperature_c": 46.760425,
+                "avg_temperature_c": 46.04381666666666,
+                "block_count": 3,
+                "layer_ids": [
+                  0
+                ],
+                "block_names": [
+                  "L00_compute_top__tile_07_comp",
+                  "L00_compute_top__tile_07_noc",
+                  "L00_compute_top__tile_07_sram"
+                ]
+              },
+              {
+                "tile_id": 13,
+                "peak_temperature_c": 46.760425,
+                "avg_temperature_c": 46.04381666666666,
+                "block_count": 3,
+                "layer_ids": [
+                  0
+                ],
+                "block_names": [
+                  "L00_compute_top__tile_13_comp",
+                  "L00_compute_top__tile_13_noc",
+                  "L00_compute_top__tile_13_sram"
+                ]
+              },
+              {
+                "tile_id": 23,
+                "peak_temperature_c": 46.760425,
+                "avg_temperature_c": 46.04381666666666,
+                "block_count": 3,
+                "layer_ids": [
+                  1
+                ],
+                "block_names": [
+                  "L01_compute_bottom__tile_23_comp",
+                  "L01_compute_bottom__tile_23_noc",
+                  "L01_compute_bottom__tile_23_sram"
+                ]
+              },
+              {
+                "tile_id": 29,
+                "peak_temperature_c": 46.760425,
+                "avg_temperature_c": 46.04381666666666,
+                "block_count": 3,
+                "layer_ids": [
+                  1
+                ],
+                "block_names": [
+                  "L01_compute_bottom__tile_29_comp",
+                  "L01_compute_bottom__tile_29_noc",
+                  "L01_compute_bottom__tile_29_sram"
+                ]
+              },
+              {
+                "tile_id": 1,
+                "peak_temperature_c": 46.602775,
+                "avg_temperature_c": 45.80785,
+                "block_count": 3,
+                "layer_ids": [
+                  0
+                ],
+                "block_names": [
+                  "L00_compute_top__tile_01_comp",
+                  "L00_compute_top__tile_01_noc",
+                  "L00_compute_top__tile_01_sram"
+                ]
+              },
+              {
+                "tile_id": 4,
+                "peak_temperature_c": 46.602775,
+                "avg_temperature_c": 45.80785,
+                "block_count": 3,
+                "layer_ids": [
+                  0
+                ],
+                "block_names": [
+                  "L00_compute_top__tile_04_comp",
+                  "L00_compute_top__tile_04_noc",
+                  "L00_compute_top__tile_04_sram"
+                ]
+              },
+              {
+                "tile_id": 6,
+                "peak_temperature_c": 46.602775,
+                "avg_temperature_c": 45.80785,
+                "block_count": 3,
+                "layer_ids": [
+                  0
+                ],
+                "block_names": [
+                  "L00_compute_top__tile_06_comp",
+                  "L00_compute_top__tile_06_noc",
+                  "L00_compute_top__tile_06_sram"
+                ]
+              },
+              {
+                "tile_id": 9,
+                "peak_temperature_c": 46.602775,
+                "avg_temperature_c": 45.80785,
+                "block_count": 3,
+                "layer_ids": [
+                  0
+                ],
+                "block_names": [
+                  "L00_compute_top__tile_09_comp",
+                  "L00_compute_top__tile_09_noc",
+                  "L00_compute_top__tile_09_sram"
+                ]
+              },
+              {
+                "tile_id": 17,
+                "peak_temperature_c": 46.602775,
+                "avg_temperature_c": 45.80785,
+                "block_count": 3,
+                "layer_ids": [
+                  1
+                ],
+                "block_names": [
+                  "L01_compute_bottom__tile_17_comp",
+                  "L01_compute_bottom__tile_17_noc",
+                  "L01_compute_bottom__tile_17_sram"
+                ]
+              },
+              {
+                "tile_id": 20,
+                "peak_temperature_c": 46.602775,
+                "avg_temperature_c": 45.80785,
+                "block_count": 3,
+                "layer_ids": [
+                  1
+                ],
+                "block_names": [
+                  "L01_compute_bottom__tile_20_comp",
+                  "L01_compute_bottom__tile_20_noc",
+                  "L01_compute_bottom__tile_20_sram"
+                ]
+              },
+              {
+                "tile_id": 22,
+                "peak_temperature_c": 46.602775,
+                "avg_temperature_c": 45.80785,
+                "block_count": 3,
+                "layer_ids": [
+                  1
+                ],
+                "block_names": [
+                  "L01_compute_bottom__tile_22_comp",
+                  "L01_compute_bottom__tile_22_noc",
+                  "L01_compute_bottom__tile_22_sram"
+                ]
+              },
+              {
+                "tile_id": 25,
+                "peak_temperature_c": 46.602775,
+                "avg_temperature_c": 45.80785,
+                "block_count": 3,
+                "layer_ids": [
+                  1
+                ],
+                "block_names": [
+                  "L01_compute_bottom__tile_25_comp",
+                  "L01_compute_bottom__tile_25_noc",
+                  "L01_compute_bottom__tile_25_sram"
+                ]
+              },
+              {
+                "tile_id": 5,
+                "peak_temperature_c": 46.234925,
+                "avg_temperature_c": 45.67823333333333,
+                "block_count": 3,
+                "layer_ids": [
+                  0
+                ],
+                "block_names": [
+                  "L00_compute_top__tile_05_comp",
+                  "L00_compute_top__tile_05_noc",
+                  "L00_compute_top__tile_05_sram"
+                ]
+              },
+              {
+                "tile_id": 21,
+                "peak_temperature_c": 46.234925,
+                "avg_temperature_c": 45.67823333333333,
+                "block_count": 3,
+                "layer_ids": [
+                  1
+                ],
+                "block_names": [
+                  "L01_compute_bottom__tile_21_comp",
+                  "L01_compute_bottom__tile_21_noc",
+                  "L01_compute_bottom__tile_21_sram"
+                ]
+              }
+            ]
+          }
+        },
+        "barrier_pressure": {
+          "controller_steps_completed_total": 0,
+          "stall_on_step_gate_cycles_total": 0,
+          "stall_on_step_gate_cycles_per_completed_step": 0.0,
+          "step_progress_done_total": 0,
+          "step_progress_missing_count": 0
+        },
+        "coupling": {
+          "route_thermal_coupling_score": 0.0,
+          "memory_thermal_coupling_proxy": 0.0,
+          "route_barrier_coupling_proxy": 0.0,
+          "memory_barrier_coupling_proxy": 0.0
+        },
+        "hotspot_readiness": {
+          "thermal_summary_available": true,
+          "runtime_observability_available": true,
+          "hotspot_driver_available": true,
+          "global_step_observability_available": true,
+          "closed_loop_candidate": true
+        }
+      },
+      "window_stop_at": "",
+      "traffic_stop_cycle": null,
+      "traffic_period_cycles": null,
+      "stream_mem_period_cycles": null,
+      "stack_nmc_totals": {
+        "memory_requests_total": 0,
+        "tx_spike_pkts_total": 0,
+        "tx_spikekey_pkts_total": 0,
+        "tx_packets_total": 0,
+        "rx_spike_total": 0,
+        "rx_spikekey_total": 0,
+        "rx_packets_total": 0,
+        "stream_mem_bytes_written_total": 0,
+        "stream_mem_bytes_read_total": 0,
+        "stream_region_bytes_written_total": 0,
+        "stream_region_bytes_read_total": 0,
+        "writeback_region_bytes_written_total": 0,
+        "writeback_region_bytes_read_total": 0,
+        "router_bundle_v3_rx_total": 0,
+        "tx_bundle_v3_packets_total": 0,
+        "tx_spikekey_v4_packets_total": 0,
+        "gas_scatter_spikes_emitted_total": 0,
+        "active_stack_ids": []
+      },
+      "stack_nmc_derived_metrics": {
+        "active_stack_utilization": 0.0,
+        "most_pressured_stack_id": -1,
+        "most_pressured_stack_service_deficit": 0,
+        "stack_memory_request_skew": 0.0,
+        "stack_service_deficit_skew": 0.0
+      },
+      "stack_balance": {
+        "active_stack_count": 0,
+        "memory_requests_imbalance_ratio": 0.0,
+        "tx_packet_imbalance_ratio": 0.0,
+        "rx_packet_imbalance_ratio": 0.0,
+        "hot_memory_stack_ids": [],
+        "hot_tx_stack_ids": [],
+        "hot_rx_stack_ids": []
+      },
+      "tier_totals": [],
+      "tier_balance": {
+        "active_tier_ids": [],
+        "memory_requests_imbalance_ratio": 0.0,
+        "service_deficit_imbalance_ratio": 0.0,
+        "hot_memory_tier_ids": [],
+        "hot_service_deficit_tier_ids": []
+      },
+      "tx_packet_share_spikekey": 0.0,
+      "rx_packet_share_spikekey": 0.0,
+      "route_memory_joint": {
+        "native_3d_active": true,
+        "vertical_hops_ratio": 0.0,
+        "remote_home_ratio": 0.0,
+        "route_memory_overlap": 0.0,
+        "ingress_replication_cost": 0.0,
+        "inter_die_multicast_fanout": 0.5,
+        "die_local_replication_cost": 1.5,
+        "average_vertical_subtree_depth": 1.0,
+        "direct_v4_share": 0.0,
+        "tile_bundle_v3_share": 0.0,
+        "bundle_v3_router_rx_per_tx": 0.0,
+        "tilekey_rx_per_bundle_v3_tx": 0.0,
+        "router_anomaly_density": 0.0,
+        "spikekey_v4_rx_per_direct_v4_tx": 0.0,
+        "memory_requests_total": 0,
+        "metadata_lookup_demands": 0,
+        "metadata_lookup_issued": 0,
+        "synapse_gather_demands": 0,
+        "synapse_gather_issued": 0,
+        "stream_region_demands": 0,
+        "stream_region_issued": 0,
+        "writeback_region_demands": 0,
+        "writeback_region_issued": 0,
+        "total_service_deficit": 0,
+        "most_pressured_region": "metadata_lookup",
+        "metadata_lookup_backlog": 0,
+        "synapse_gather_backlog": 0,
+        "stream_region_backlog": 0,
+        "writeback_region_backlog": 0,
+        "stream_region_issue_efficiency": 0.0,
+        "writeback_region_issue_efficiency": 0.0,
+        "dominant_home_access_class": "",
+        "attributed_service_deficit_total": 0.0,
+        "unattributed_service_deficit": 0.0,
+        "tier_local_home_total_demands": 0,
+        "tier_local_home_service_deficit_attribution": 0.0,
+        "same_xy_cross_tier_total_demands": 0,
+        "same_xy_cross_tier_service_deficit_attribution": 0.0,
+        "remote_home_total_demands": 0,
+        "remote_home_service_deficit_attribution": 0.0,
+        "dominant_home_stack_id": -1,
+        "most_pressured_controller_count": 0,
+        "most_pressured_controller_service_deficit_proxy": 0.0,
+        "controller_runtime_source": "stack_proxy",
+        "real_controller_pressure_available": false,
+        "most_pressured_runtime_stack_id": -1,
+        "most_pressured_runtime_controller_id": -1,
+        "tier_local_home_dominant_stack_id": 0,
+        "same_xy_cross_tier_dominant_stack_id": 4,
+        "remote_home_dominant_stack_id": 3,
+        "active_controller_count": 0,
+        "max_controller_outstanding_requests_accum": 0,
+        "max_controller_cycles_attempted_issue_but_rejected": 0,
+        "controller_runtime_total_requests_received": 0,
+        "controller_runtime_total_cycles_attempted_issue_but_rejected": 0,
+        "tier_local_home_access_ratio": 0.25,
+        "same_xy_cross_tier_access_ratio": 0.25,
+        "remote_home_access_ratio": 0.5,
+        "active_stack_utilization": 0.0,
+        "most_pressured_stack_id": -1,
+        "most_pressured_stack_service_deficit": 0,
+        "stack_memory_request_skew": 0.0,
+        "stack_service_deficit_skew": 0.0
+      },
+      "mapping_summary": {
+        "policy": "3d_aware",
+        "score": -0.46875,
+        "same_home_stack_ratio": 0.5,
+        "vertical_target_ratio": 0.25
+      },
+      "thermal_summary": {
+        "thermal_hotspot_score": 1.25,
+        "vertical_link_pressure": 0.15,
+        "stack_hotspot_penalty": 0.5,
+        "peak_temperature_c": 47.4041625,
+        "avg_temperature_c": 45.99489010416664,
+        "vertical_gradient_c": 0.0,
+        "hotspot_block_count": 0,
+        "hotspot_layer_count": 0,
+        "thermal_replay_sample_count": 1,
+        "hotspot_driver_status": "ran",
+        "hotspot_model_type": "grid",
+        "hotspot_temperature_source": "hotspot_steady_temp",
+        "hotspot_peak_temperature_c": 45.02000000000004,
+        "hotspot_avg_temperature_c": 45.02000000000023,
+        "hotspot_peak_delta_c": 2.3841624999999596,
+        "hotspot_avg_delta_c": 0.9748901041664126,
+        "hotspot_block_delta": 0,
+        "hotspot_layer_delta": 0,
+        "hotspot_threshold_c": 70.0,
+        "hotspot_threshold_source": "effective_config.thermal.hotspot_threshold_c",
+        "hotspot_artifacts": {
+          "floorplan": "/home/xgy/remote/snn3dexp/runs/full_3d_snn_window_monolithic_proxy/task4_window_stop_runtime_closure_mainline_window_stop_2us/thermal_sidecar/hotspot/snndl_mesh.lcf",
+          "ptrace": "/home/xgy/remote/snn3dexp/runs/full_3d_snn_window_monolithic_proxy/task4_window_stop_runtime_closure_mainline_window_stop_2us/thermal_sidecar/hotspot/snndl_mesh.ptrace",
+          "hotspot_config": "/home/xgy/remote/snn3dexp/runs/full_3d_snn_window_monolithic_proxy/task4_window_stop_runtime_closure_mainline_window_stop_2us/thermal_sidecar/hotspot/hotspot.config",
+          "window_power_samples_jsonl": "/home/xgy/remote/snn3dexp/runs/full_3d_snn_window_monolithic_proxy/task4_window_stop_runtime_closure_mainline_window_stop_2us/thermal_sidecar/summary/window_power_samples.jsonl",
+          "tile_temperature_summary_csv": "/home/xgy/remote/snn3dexp/runs/full_3d_snn_window_monolithic_proxy/task4_window_stop_runtime_closure_mainline_window_stop_2us/thermal_sidecar/summary/tile_temperature_summary.csv",
+          "thermal_summary_json": "/home/xgy/remote/snn3dexp/runs/full_3d_snn_window_monolithic_proxy/task4_window_stop_runtime_closure_mainline_window_stop_2us/thermal_sidecar/summary/thermal_summary.json",
+          "steady_temp": "/home/xgy/remote/snn3dexp/runs/full_3d_snn_window_monolithic_proxy/task4_window_stop_runtime_closure_mainline_window_stop_2us/thermal_sidecar/hotspot/steady.temp",
+          "transient_temp": "/home/xgy/remote/snn3dexp/runs/full_3d_snn_window_monolithic_proxy/task4_window_stop_runtime_closure_mainline_window_stop_2us/thermal_sidecar/hotspot/transient.temp",
+          "lcf": "/home/xgy/remote/snn3dexp/runs/full_3d_snn_window_monolithic_proxy/task4_window_stop_runtime_closure_mainline_window_stop_2us/thermal_sidecar/hotspot/snndl_mesh.lcf",
+          "layer_floorplans": [
+            "/home/xgy/remote/snn3dexp/runs/full_3d_snn_window_monolithic_proxy/task4_window_stop_runtime_closure_mainline_window_stop_2us/thermal_sidecar/hotspot/layer_00_compute_top.flp",
+            "/home/xgy/remote/snn3dexp/runs/full_3d_snn_window_monolithic_proxy/task4_window_stop_runtime_closure_mainline_window_stop_2us/thermal_sidecar/hotspot/layer_01_compute_bottom.flp"
+          ]
+        }
+      },
+      "physical_summary": {
+        "vertical_bandwidth_budget": 3.5,
+        "tsv_miv_budget_pressure": 0.05357142857142857,
+        "power_density_score": 2.1875,
+        "reliability_penalty": 0.5638392857142858
+      },
+      "global_step_observability": {
+        "controller_seq_last": 0,
+        "controller_steps_started_total": 0,
+        "controller_steps_completed_total": 0,
+        "step_start_count": 0,
+        "step_done_count": 0,
+        "pe_global_steps_done_total": 0,
+        "stall_on_step_gate_cycles_total": 0,
+        "stall_on_step_gate_cycles_max": 0
+      },
+      "runtime_summary": {
+        "enabled": false,
+        "policy": "disabled",
+        "signal_source": "disabled",
+        "thermal_signal_source": "thermal_hooks",
+        "thermal_state_source": "online_rc_estimator",
+        "control_epoch_scope": "",
+        "control_execution_enabled": false,
+        "control_decision": "disabled",
+        "control_decision_source": "",
+        "control_trigger_signals": [],
+        "observe_only": true,
+        "recommend_only": false,
+        "executed_control": false,
+        "control_artifact_path": "",
+        "route_memory_overlap": 0.0,
+        "vertical_link_pressure": 0.0,
+        "stack_hotspot_penalty": 0.0,
+        "remap_epoch": 0,
+        "homeroute_adjustment_count": 0,
+        "thermal_guard_actions": 0,
+        "hotspot_threshold_c": 70.0,
+        "hotspot_threshold_source": "effective_config.thermal.hotspot_threshold_c",
+        "coupling_metrics": {
+          "source": "legacy_summary",
+          "route_thermal_coupling_score": 0.0,
+          "memory_thermal_coupling_proxy": 0.0,
+          "route_barrier_coupling_proxy": 0.0,
+          "memory_barrier_coupling_proxy": 0.0,
+          "closed_loop_candidate": false
+        },
+        "recommended_actions": [],
+        "next_window_processing_params": {},
+        "global_step_observability": {
+          "controller_seq_last": 0,
+          "controller_steps_started_total": 0,
+          "controller_steps_completed_total": 0,
+          "step_start_count": 0,
+          "step_done_count": 0,
+          "pe_global_steps_done_total": 0,
+          "stall_on_step_gate_cycles_total": 0,
+          "stall_on_step_gate_cycles_max": 0
+        },
+        "thermal_observability": {
+          "peak_temperature_c": 47.4041625,
+          "avg_temperature_c": 45.99489010416664,
+          "hotspot_block_count": 0,
+          "hotspot_layer_count": 0,
+          "vertical_gradient_c": 0.0,
+          "top_layer_peak_c": 47.4041625,
+          "bottom_layer_peak_c": 47.4041625,
+          "thermal_hotspot_score": 1.25
+        }
+      }
+    }
+  },
+  "route_memory_comparisons": {
+    "direct_v4_vs_bundle_v3": {
+      "available": false,
+      "base_case_id": "full_3d",
+      "compare_case_id": "full_3d_tile_bundle_v3",
+      "base": {},
+      "compare": {},
+      "deltas": {},
+      "mechanism": {},
+      "mechanism_rows": []
+    },
+    "snn_window_direct_v4_vs_bundle_v3": {
+      "available": true,
+      "base_case_id": "full_3d_snn_window",
+      "compare_case_id": "full_3d_snn_window_bundle_v3",
+      "base": {
+        "case_id": "full_3d_snn_window",
+        "direct_v4_share": 0.0,
+        "tile_bundle_v3_share": 0.0,
+        "bundle_v3_router_rx_per_tx": 0.0,
+        "tilekey_rx_per_bundle_v3_tx": 0.0,
+        "memory_requests_total": 0,
+        "controller_seq_last": 0,
+        "controller_steps_started_total": 0,
+        "controller_steps_completed_total": 0,
+        "step_start_count": 0,
+        "step_done_count": 0,
+        "pe_global_steps_done_total": 0,
+        "stall_on_step_gate_cycles_total": 0,
+        "stall_on_step_gate_cycles_max": 0,
+        "completed_step_normalization_available": false,
+        "memory_requests_per_completed_step": 0.0,
+        "total_service_deficit_per_completed_step": 0.0,
+        "stall_on_step_gate_cycles_per_completed_step": 0.0,
+        "metadata_lookup_demands": 0,
+        "metadata_lookup_issued": 0,
+        "metadata_lookup_backlog": 0,
+        "synapse_gather_demands": 0,
+        "synapse_gather_issued": 0,
+        "stream_region_demands": 0,
+        "stream_region_issued": 0,
+        "writeback_region_demands": 0,
+        "writeback_region_issued": 0,
+        "total_service_deficit": 0,
+        "most_pressured_region": "metadata_lookup",
+        "synapse_gather_backlog": 0,
+        "stream_region_backlog": 0,
+        "writeback_region_backlog": 0,
+        "stream_region_issue_efficiency": 0.0,
+        "writeback_region_issue_efficiency": 0.0,
+        "router_bundle_v3_rx_total": 0,
+        "tx_bundle_v3_packets_total": 0,
+        "tx_spikekey_v4_packets_total": 0,
+        "gas_scatter_spikes_emitted_total": 0,
+        "stream_region_bytes_written_total": 0,
+        "stream_region_bytes_read_total": 0,
+        "writeback_region_bytes_written_total": 0,
+        "writeback_region_bytes_read_total": 0,
+        "dominant_home_access_class": "",
+        "dominant_home_stack_id": -1,
+        "attributed_service_deficit_total": 0.0,
+        "tier_local_home_total_demands": 0,
+        "same_xy_cross_tier_total_demands": 0,
+        "remote_home_total_demands": 0,
+        "tier_local_home_dominant_stack_id": 0,
+        "same_xy_cross_tier_dominant_stack_id": 3,
+        "remote_home_dominant_stack_id": 3,
+        "tier_local_home_service_deficit_attribution": 0.0,
+        "same_xy_cross_tier_service_deficit_attribution": 0.0,
+        "remote_home_service_deficit_attribution": 0.0,
+        "active_stack_utilization": 0.0,
+        "most_pressured_stack_id": -1,
+        "most_pressured_stack_service_deficit": 0,
+        "most_pressured_controller_count": 0,
+        "most_pressured_controller_service_deficit_proxy": 0.0,
+        "stack_memory_request_skew": 0.0,
+        "stack_service_deficit_skew": 0.0
+      },
+      "compare": {
+        "case_id": "full_3d_snn_window_bundle_v3",
+        "direct_v4_share": 0.0,
+        "tile_bundle_v3_share": 0.0,
+        "bundle_v3_router_rx_per_tx": 0.0,
+        "tilekey_rx_per_bundle_v3_tx": 0.0,
+        "memory_requests_total": 0,
+        "controller_seq_last": 0,
+        "controller_steps_started_total": 0,
+        "controller_steps_completed_total": 0,
+        "step_start_count": 0,
+        "step_done_count": 0,
+        "pe_global_steps_done_total": 0,
+        "stall_on_step_gate_cycles_total": 0,
+        "stall_on_step_gate_cycles_max": 0,
+        "completed_step_normalization_available": false,
+        "memory_requests_per_completed_step": 0.0,
+        "total_service_deficit_per_completed_step": 0.0,
+        "stall_on_step_gate_cycles_per_completed_step": 0.0,
+        "metadata_lookup_demands": 0,
+        "metadata_lookup_issued": 0,
+        "metadata_lookup_backlog": 0,
+        "synapse_gather_demands": 0,
+        "synapse_gather_issued": 0,
+        "stream_region_demands": 0,
+        "stream_region_issued": 0,
+        "writeback_region_demands": 0,
+        "writeback_region_issued": 0,
+        "total_service_deficit": 0,
+        "most_pressured_region": "metadata_lookup",
+        "synapse_gather_backlog": 0,
+        "stream_region_backlog": 0,
+        "writeback_region_backlog": 0,
+        "stream_region_issue_efficiency": 0.0,
+        "writeback_region_issue_efficiency": 0.0,
+        "router_bundle_v3_rx_total": 0,
+        "tx_bundle_v3_packets_total": 0,
+        "tx_spikekey_v4_packets_total": 0,
+        "gas_scatter_spikes_emitted_total": 0,
+        "stream_region_bytes_written_total": 0,
+        "stream_region_bytes_read_total": 0,
+        "writeback_region_bytes_written_total": 0,
+        "writeback_region_bytes_read_total": 0,
+        "dominant_home_access_class": "",
+        "dominant_home_stack_id": -1,
+        "attributed_service_deficit_total": 0.0,
+        "tier_local_home_total_demands": 0,
+        "same_xy_cross_tier_total_demands": 0,
+        "remote_home_total_demands": 0,
+        "tier_local_home_dominant_stack_id": 0,
+        "same_xy_cross_tier_dominant_stack_id": 3,
+        "remote_home_dominant_stack_id": 3,
+        "tier_local_home_service_deficit_attribution": 0.0,
+        "same_xy_cross_tier_service_deficit_attribution": 0.0,
+        "remote_home_service_deficit_attribution": 0.0,
+        "active_stack_utilization": 0.0,
+        "most_pressured_stack_id": -1,
+        "most_pressured_stack_service_deficit": 0,
+        "most_pressured_controller_count": 0,
+        "most_pressured_controller_service_deficit_proxy": 0.0,
+        "stack_memory_request_skew": 0.0,
+        "stack_service_deficit_skew": 0.0
+      },
+      "deltas": {
+        "direct_v4_share": 0.0,
+        "tile_bundle_v3_share": 0.0,
+        "memory_requests_total": 0,
+        "controller_steps_started_total": 0,
+        "controller_steps_completed_total": 0,
+        "pe_global_steps_done_total": 0,
+        "stall_on_step_gate_cycles_total": 0,
+        "stall_on_step_gate_cycles_max": 0,
+        "memory_requests_per_completed_step": 0.0,
+        "total_service_deficit_per_completed_step": 0.0,
+        "stall_on_step_gate_cycles_per_completed_step": 0.0,
+        "metadata_lookup_demands": 0,
+        "metadata_lookup_issued": 0,
+        "metadata_lookup_backlog": 0,
+        "synapse_gather_demands": 0,
+        "synapse_gather_issued": 0,
+        "stream_region_demands": 0,
+        "stream_region_issued": 0,
+        "writeback_region_demands": 0,
+        "writeback_region_issued": 0,
+        "total_service_deficit": 0,
+        "synapse_gather_backlog": 0,
+        "stream_region_backlog": 0,
+        "writeback_region_backlog": 0,
+        "stream_region_issue_efficiency": 0.0,
+        "writeback_region_issue_efficiency": 0.0,
+        "stream_region_bytes_written_total": 0,
+        "stream_region_bytes_read_total": 0,
+        "writeback_region_bytes_written_total": 0,
+        "writeback_region_bytes_read_total": 0,
+        "router_bundle_v3_rx_total": 0,
+        "tx_bundle_v3_packets_total": 0,
+        "tx_spikekey_v4_packets_total": 0,
+        "gas_scatter_spikes_emitted_total": 0,
+        "tier_local_home_total_demands": 0,
+        "same_xy_cross_tier_total_demands": 0,
+        "remote_home_total_demands": 0,
+        "tier_local_home_service_deficit_attribution": 0.0,
+        "same_xy_cross_tier_service_deficit_attribution": 0.0,
+        "remote_home_service_deficit_attribution": 0.0,
+        "attributed_service_deficit_total": 0.0,
+        "most_pressured_controller_service_deficit_proxy": 0.0,
+        "active_stack_utilization": 0.0,
+        "most_pressured_stack_service_deficit": 0,
+        "stack_memory_request_skew": 0.0,
+        "stack_service_deficit_skew": 0.0
+      },
+      "mechanism": {
+        "base_most_pressured_region": "metadata_lookup",
+        "compare_most_pressured_region": "metadata_lookup",
+        "base_dominant_home_access_class": "",
+        "compare_dominant_home_access_class": "",
+        "base_most_pressured_stack_id": -1,
+        "compare_most_pressured_stack_id": -1
+      },
+      "mechanism_rows": [
+        {
+          "metric_group": "route_packetization",
+          "metric_key": "router_bundle_v3_rx_total",
+          "base_value": 0,
+          "compare_value": 0,
+          "delta": 0,
+          "amplification_ratio": null,
+          "delta_ratio": null
+        },
+        {
+          "metric_group": "route_packetization",
+          "metric_key": "tx_bundle_v3_packets_total",
+          "base_value": 0,
+          "compare_value": 0,
+          "delta": 0,
+          "amplification_ratio": null,
+          "delta_ratio": null
+        },
+        {
+          "metric_group": "route_packetization",
+          "metric_key": "tx_spikekey_v4_packets_total",
+          "base_value": 0,
+          "compare_value": 0,
+          "delta": 0,
+          "amplification_ratio": null,
+          "delta_ratio": null
+        },
+        {
+          "metric_group": "processing_writeback",
+          "metric_key": "gas_scatter_spikes_emitted_total",
+          "base_value": 0,
+          "compare_value": 0,
+          "delta": 0,
+          "amplification_ratio": null,
+          "delta_ratio": null
+        },
+        {
+          "metric_group": "memory_metadata",
+          "metric_key": "metadata_lookup_demands",
+          "base_value": 0,
+          "compare_value": 0,
+          "delta": 0,
+          "amplification_ratio": null,
+          "delta_ratio": null
+        },
+        {
+          "metric_group": "memory_metadata",
+          "metric_key": "metadata_lookup_backlog",
+          "base_value": 0,
+          "compare_value": 0,
+          "delta": 0,
+          "amplification_ratio": null,
+          "delta_ratio": null
+        },
+        {
+          "metric_group": "memory_synapse",
+          "metric_key": "synapse_gather_demands",
+          "base_value": 0,
+          "compare_value": 0,
+          "delta": 0,
+          "amplification_ratio": null,
+          "delta_ratio": null
+        },
+        {
+          "metric_group": "memory_synapse",
+          "metric_key": "synapse_gather_backlog",
+          "base_value": 0,
+          "compare_value": 0,
+          "delta": 0,
+          "amplification_ratio": null,
+          "delta_ratio": null
+        },
+        {
+          "metric_group": "memory_stream",
+          "metric_key": "stream_region_demands",
+          "base_value": 0,
+          "compare_value": 0,
+          "delta": 0,
+          "amplification_ratio": null,
+          "delta_ratio": null
+        },
+        {
+          "metric_group": "memory_stream",
+          "metric_key": "stream_region_backlog",
+          "base_value": 0,
+          "compare_value": 0,
+          "delta": 0,
+          "amplification_ratio": null,
+          "delta_ratio": null
+        },
+        {
+          "metric_group": "memory_writeback",
+          "metric_key": "writeback_region_demands",
+          "base_value": 0,
+          "compare_value": 0,
+          "delta": 0,
+          "amplification_ratio": null,
+          "delta_ratio": null
+        },
+        {
+          "metric_group": "memory_writeback",
+          "metric_key": "writeback_region_backlog",
+          "base_value": 0,
+          "compare_value": 0,
+          "delta": 0,
+          "amplification_ratio": null,
+          "delta_ratio": null
+        },
+        {
+          "metric_group": "home_access_class",
+          "metric_key": "tier_local_home_total_demands",
+          "base_value": 0,
+          "compare_value": 0,
+          "delta": 0,
+          "amplification_ratio": null,
+          "delta_ratio": null
+        },
+        {
+          "metric_group": "home_access_class",
+          "metric_key": "same_xy_cross_tier_total_demands",
+          "base_value": 0,
+          "compare_value": 0,
+          "delta": 0,
+          "amplification_ratio": null,
+          "delta_ratio": null
+        },
+        {
+          "metric_group": "home_access_class",
+          "metric_key": "remote_home_total_demands",
+          "base_value": 0,
+          "compare_value": 0,
+          "delta": 0,
+          "amplification_ratio": null,
+          "delta_ratio": null
+        },
+        {
+          "metric_group": "home_pressure",
+          "metric_key": "tier_local_home_service_deficit_attribution",
+          "base_value": 0.0,
+          "compare_value": 0.0,
+          "delta": 0.0,
+          "amplification_ratio": null,
+          "delta_ratio": null
+        },
+        {
+          "metric_group": "home_pressure",
+          "metric_key": "same_xy_cross_tier_service_deficit_attribution",
+          "base_value": 0.0,
+          "compare_value": 0.0,
+          "delta": 0.0,
+          "amplification_ratio": null,
+          "delta_ratio": null
+        },
+        {
+          "metric_group": "home_pressure",
+          "metric_key": "remote_home_service_deficit_attribution",
+          "base_value": 0.0,
+          "compare_value": 0.0,
+          "delta": 0.0,
+          "amplification_ratio": null,
+          "delta_ratio": null
+        },
+        {
+          "metric_group": "home_pressure",
+          "metric_key": "attributed_service_deficit_total",
+          "base_value": 0.0,
+          "compare_value": 0.0,
+          "delta": 0.0,
+          "amplification_ratio": null,
+          "delta_ratio": null
+        },
+        {
+          "metric_group": "stack_pressure",
+          "metric_key": "active_stack_utilization",
+          "base_value": 0.0,
+          "compare_value": 0.0,
+          "delta": 0.0,
+          "amplification_ratio": null,
+          "delta_ratio": null
+        },
+        {
+          "metric_group": "stack_pressure",
+          "metric_key": "most_pressured_stack_service_deficit",
+          "base_value": 0,
+          "compare_value": 0,
+          "delta": 0,
+          "amplification_ratio": null,
+          "delta_ratio": null
+        },
+        {
+          "metric_group": "stack_pressure",
+          "metric_key": "most_pressured_controller_service_deficit_proxy",
+          "base_value": 0.0,
+          "compare_value": 0.0,
+          "delta": 0.0,
+          "amplification_ratio": null,
+          "delta_ratio": null
+        },
+        {
+          "metric_group": "stack_pressure",
+          "metric_key": "stack_memory_request_skew",
+          "base_value": 0.0,
+          "compare_value": 0.0,
+          "delta": 0.0,
+          "amplification_ratio": null,
+          "delta_ratio": null
+        },
+        {
+          "metric_group": "stack_pressure",
+          "metric_key": "stack_service_deficit_skew",
+          "base_value": 0.0,
+          "compare_value": 0.0,
+          "delta": 0.0,
+          "amplification_ratio": null,
+          "delta_ratio": null
+        },
+        {
+          "metric_group": "service",
+          "metric_key": "total_service_deficit",
+          "base_value": 0,
+          "compare_value": 0,
+          "delta": 0,
+          "amplification_ratio": null,
+          "delta_ratio": null
+        }
+      ]
+    }
+  },
+  "memory_model_comparisons": {
+    "hbm_like_vs_monolithic_like": {
+      "available": true,
+      "base_case_id": "full_3d_snn_window",
+      "compare_case_id": "full_3d_snn_window_monolithic_proxy",
+      "base": {
+        "case_id": "full_3d_snn_window",
+        "memory_model_family": "hbm_like",
+        "memory_kind": "hbm_like",
+        "memory_graph_type": "memHierarchy_shared_stack",
+        "memory_requests_total": 0,
+        "vertical_hops_ratio": 0.0,
+        "remote_home_ratio": 0.0,
+        "total_service_deficit": 0,
+        "most_pressured_region": "metadata_lookup",
+        "vertical_link_pressure": 0.24375,
+        "reliability_penalty": 0.4352783203125,
+        "dominant_home_access_class": "",
+        "dominant_home_stack_id": -1,
+        "tier_local_home_access_ratio": 0.25,
+        "same_xy_cross_tier_access_ratio": 0.65625,
+        "remote_home_access_ratio": 0.09375,
+        "attributed_service_deficit_total": 0.0,
+        "tier_local_home_total_demands": 0,
+        "same_xy_cross_tier_total_demands": 0,
+        "remote_home_total_demands": 0,
+        "tier_local_home_dominant_stack_id": 0,
+        "same_xy_cross_tier_dominant_stack_id": 3,
+        "remote_home_dominant_stack_id": 3,
+        "tier_local_home_service_deficit_attribution": 0.0,
+        "same_xy_cross_tier_service_deficit_attribution": 0.0,
+        "remote_home_service_deficit_attribution": 0.0,
+        "active_stack_utilization": 0.0,
+        "most_pressured_stack_id": -1,
+        "most_pressured_stack_service_deficit": 0,
+        "most_pressured_controller_count": 0,
+        "most_pressured_controller_service_deficit_proxy": 0.0,
+        "stack_memory_request_skew": 0.0,
+        "stack_service_deficit_skew": 0.0,
+        "controller_seq_last": 0,
+        "controller_steps_started_total": 0,
+        "controller_steps_completed_total": 0,
+        "step_start_count": 0,
+        "step_done_count": 0,
+        "pe_global_steps_done_total": 0,
+        "stall_on_step_gate_cycles_total": 0,
+        "stall_on_step_gate_cycles_max": 0,
+        "completed_step_normalization_available": false,
+        "memory_requests_per_completed_step": 0.0,
+        "total_service_deficit_per_completed_step": 0.0,
+        "stall_on_step_gate_cycles_per_completed_step": 0.0
+      },
+      "compare": {
+        "case_id": "full_3d_snn_window_monolithic_proxy",
+        "memory_model_family": "monolithic_like",
+        "memory_kind": "monolithic_like",
+        "memory_graph_type": "memHierarchy_tier_local_stack",
+        "memory_requests_total": 0,
+        "vertical_hops_ratio": 0.0,
+        "remote_home_ratio": 0.0,
+        "total_service_deficit": 0,
+        "most_pressured_region": "metadata_lookup",
+        "vertical_link_pressure": 0.15,
+        "reliability_penalty": 0.5638392857142858,
+        "dominant_home_access_class": "",
+        "dominant_home_stack_id": -1,
+        "tier_local_home_access_ratio": 0.25,
+        "same_xy_cross_tier_access_ratio": 0.25,
+        "remote_home_access_ratio": 0.5,
+        "attributed_service_deficit_total": 0.0,
+        "tier_local_home_total_demands": 0,
+        "same_xy_cross_tier_total_demands": 0,
+        "remote_home_total_demands": 0,
+        "tier_local_home_dominant_stack_id": 0,
+        "same_xy_cross_tier_dominant_stack_id": 4,
+        "remote_home_dominant_stack_id": 3,
+        "tier_local_home_service_deficit_attribution": 0.0,
+        "same_xy_cross_tier_service_deficit_attribution": 0.0,
+        "remote_home_service_deficit_attribution": 0.0,
+        "active_stack_utilization": 0.0,
+        "most_pressured_stack_id": -1,
+        "most_pressured_stack_service_deficit": 0,
+        "most_pressured_controller_count": 0,
+        "most_pressured_controller_service_deficit_proxy": 0.0,
+        "stack_memory_request_skew": 0.0,
+        "stack_service_deficit_skew": 0.0,
+        "controller_seq_last": 0,
+        "controller_steps_started_total": 0,
+        "controller_steps_completed_total": 0,
+        "step_start_count": 0,
+        "step_done_count": 0,
+        "pe_global_steps_done_total": 0,
+        "stall_on_step_gate_cycles_total": 0,
+        "stall_on_step_gate_cycles_max": 0,
+        "completed_step_normalization_available": false,
+        "memory_requests_per_completed_step": 0.0,
+        "total_service_deficit_per_completed_step": 0.0,
+        "stall_on_step_gate_cycles_per_completed_step": 0.0
+      },
+      "deltas": {
+        "memory_requests_total": 0,
+        "vertical_hops_ratio": 0.0,
+        "remote_home_ratio": 0.0,
+        "tier_local_home_access_ratio": 0.0,
+        "same_xy_cross_tier_access_ratio": -0.40625,
+        "remote_home_access_ratio": 0.40625,
+        "total_service_deficit": 0,
+        "attributed_service_deficit_total": 0.0,
+        "tier_local_home_total_demands": 0,
+        "same_xy_cross_tier_total_demands": 0,
+        "remote_home_total_demands": 0,
+        "tier_local_home_service_deficit_attribution": 0.0,
+        "same_xy_cross_tier_service_deficit_attribution": 0.0,
+        "remote_home_service_deficit_attribution": 0.0,
+        "active_stack_utilization": 0.0,
+        "most_pressured_controller_service_deficit_proxy": 0.0,
+        "most_pressured_stack_service_deficit": 0,
+        "stack_memory_request_skew": 0.0,
+        "stack_service_deficit_skew": 0.0,
+        "vertical_link_pressure": -0.09375,
+        "reliability_penalty": 0.12856096540178574,
+        "controller_steps_started_total": 0,
+        "controller_steps_completed_total": 0,
+        "pe_global_steps_done_total": 0,
+        "stall_on_step_gate_cycles_total": 0,
+        "stall_on_step_gate_cycles_max": 0,
+        "memory_requests_per_completed_step": 0.0,
+        "total_service_deficit_per_completed_step": 0.0,
+        "stall_on_step_gate_cycles_per_completed_step": 0.0
+      },
+      "mechanism": {
+        "base_most_pressured_region": "metadata_lookup",
+        "compare_most_pressured_region": "metadata_lookup",
+        "base_dominant_home_access_class": "",
+        "compare_dominant_home_access_class": "",
+        "base_most_pressured_stack_id": -1,
+        "compare_most_pressured_stack_id": -1
+      },
+      "mechanism_rows": [
+        {
+          "metric_group": "memory_requests",
+          "metric_key": "memory_requests_total",
+          "base_value": 0,
+          "compare_value": 0,
+          "delta": 0,
+          "amplification_ratio": null,
+          "delta_ratio": null
+        },
+        {
+          "metric_group": "service",
+          "metric_key": "total_service_deficit",
+          "base_value": 0,
+          "compare_value": 0,
+          "delta": 0,
+          "amplification_ratio": null,
+          "delta_ratio": null
+        },
+        {
+          "metric_group": "topology",
+          "metric_key": "vertical_hops_ratio",
+          "base_value": 0.0,
+          "compare_value": 0.0,
+          "delta": 0.0,
+          "amplification_ratio": null,
+          "delta_ratio": null
+        },
+        {
+          "metric_group": "routing_locality",
+          "metric_key": "remote_home_ratio",
+          "base_value": 0.0,
+          "compare_value": 0.0,
+          "delta": 0.0,
+          "amplification_ratio": null,
+          "delta_ratio": null
+        },
+        {
+          "metric_group": "home_semantics",
+          "metric_key": "tier_local_home_access_ratio",
+          "base_value": 0.25,
+          "compare_value": 0.25,
+          "delta": 0.0,
+          "amplification_ratio": 1.0,
+          "delta_ratio": 0.0
+        },
+        {
+          "metric_group": "home_semantics",
+          "metric_key": "same_xy_cross_tier_access_ratio",
+          "base_value": 0.65625,
+          "compare_value": 0.25,
+          "delta": -0.40625,
+          "amplification_ratio": 0.38095238095238093,
+          "delta_ratio": -0.6190476190476191
+        },
+        {
+          "metric_group": "home_semantics",
+          "metric_key": "remote_home_access_ratio",
+          "base_value": 0.09375,
+          "compare_value": 0.5,
+          "delta": 0.40625,
+          "amplification_ratio": 5.333333333333333,
+          "delta_ratio": 4.333333333333333
+        },
+        {
+          "metric_group": "home_access_class",
+          "metric_key": "tier_local_home_total_demands",
+          "base_value": 0,
+          "compare_value": 0,
+          "delta": 0,
+          "amplification_ratio": null,
+          "delta_ratio": null
+        },
+        {
+          "metric_group": "home_access_class",
+          "metric_key": "same_xy_cross_tier_total_demands",
+          "base_value": 0,
+          "compare_value": 0,
+          "delta": 0,
+          "amplification_ratio": null,
+          "delta_ratio": null
+        },
+        {
+          "metric_group": "home_access_class",
+          "metric_key": "remote_home_total_demands",
+          "base_value": 0,
+          "compare_value": 0,
+          "delta": 0,
+          "amplification_ratio": null,
+          "delta_ratio": null
+        },
+        {
+          "metric_group": "home_pressure",
+          "metric_key": "tier_local_home_service_deficit_attribution",
+          "base_value": 0.0,
+          "compare_value": 0.0,
+          "delta": 0.0,
+          "amplification_ratio": null,
+          "delta_ratio": null
+        },
+        {
+          "metric_group": "home_pressure",
+          "metric_key": "same_xy_cross_tier_service_deficit_attribution",
+          "base_value": 0.0,
+          "compare_value": 0.0,
+          "delta": 0.0,
+          "amplification_ratio": null,
+          "delta_ratio": null
+        },
+        {
+          "metric_group": "home_pressure",
+          "metric_key": "remote_home_service_deficit_attribution",
+          "base_value": 0.0,
+          "compare_value": 0.0,
+          "delta": 0.0,
+          "amplification_ratio": null,
+          "delta_ratio": null
+        },
+        {
+          "metric_group": "home_pressure",
+          "metric_key": "attributed_service_deficit_total",
+          "base_value": 0.0,
+          "compare_value": 0.0,
+          "delta": 0.0,
+          "amplification_ratio": null,
+          "delta_ratio": null
+        },
+        {
+          "metric_group": "stack_pressure",
+          "metric_key": "active_stack_utilization",
+          "base_value": 0.0,
+          "compare_value": 0.0,
+          "delta": 0.0,
+          "amplification_ratio": null,
+          "delta_ratio": null
+        },
+        {
+          "metric_group": "stack_pressure",
+          "metric_key": "most_pressured_stack_service_deficit",
+          "base_value": 0,
+          "compare_value": 0,
+          "delta": 0,
+          "amplification_ratio": null,
+          "delta_ratio": null
+        },
+        {
+          "metric_group": "stack_pressure",
+          "metric_key": "most_pressured_controller_service_deficit_proxy",
+          "base_value": 0.0,
+          "compare_value": 0.0,
+          "delta": 0.0,
+          "amplification_ratio": null,
+          "delta_ratio": null
+        },
+        {
+          "metric_group": "stack_pressure",
+          "metric_key": "stack_memory_request_skew",
+          "base_value": 0.0,
+          "compare_value": 0.0,
+          "delta": 0.0,
+          "amplification_ratio": null,
+          "delta_ratio": null
+        },
+        {
+          "metric_group": "stack_pressure",
+          "metric_key": "stack_service_deficit_skew",
+          "base_value": 0.0,
+          "compare_value": 0.0,
+          "delta": 0.0,
+          "amplification_ratio": null,
+          "delta_ratio": null
+        },
+        {
+          "metric_group": "thermal",
+          "metric_key": "vertical_link_pressure",
+          "base_value": 0.24375,
+          "compare_value": 0.15,
+          "delta": -0.09375,
+          "amplification_ratio": 0.6153846153846154,
+          "delta_ratio": -0.38461538461538464
+        },
+        {
+          "metric_group": "reliability",
+          "metric_key": "reliability_penalty",
+          "base_value": 0.4352783203125,
+          "compare_value": 0.5638392857142858,
+          "delta": 0.12856096540178574,
+          "amplification_ratio": 1.295353477079878,
+          "delta_ratio": 0.2953534770798779
+        },
+        {
+          "metric_group": "runtime",
+          "metric_key": "memory_requests_per_completed_step",
+          "base_value": 0.0,
+          "compare_value": 0.0,
+          "delta": 0.0,
+          "amplification_ratio": null,
+          "delta_ratio": null
+        },
+        {
+          "metric_group": "runtime",
+          "metric_key": "total_service_deficit_per_completed_step",
+          "base_value": 0.0,
+          "compare_value": 0.0,
+          "delta": 0.0,
+          "amplification_ratio": null,
+          "delta_ratio": null
+        },
+        {
+          "metric_group": "runtime",
+          "metric_key": "stall_on_step_gate_cycles_per_completed_step",
+          "base_value": 0.0,
+          "compare_value": 0.0,
+          "delta": 0.0,
+          "amplification_ratio": null,
+          "delta_ratio": null
+        }
+      ]
+    }
+  },
+  "thermal_calibration": {
+    "available": true,
+    "summary": {
+      "eligible_case_count": 2,
+      "eligible_case_ids": [
+        "full_3d_snn_window",
+        "full_3d_snn_window_monolithic_proxy"
+      ],
+      "excluded_case_ids": [
+        "full_3d_snn_window_bundle_v3"
+      ],
+      "hotspot_status_counts": {
+        "ran": 2,
+        "disabled": 1
+      },
+      "hotspot_temperature_source_counts": {
+        "hotspot_steady_temp": 2
+      },
+      "runtime_state_source_counts": {
+        "online_rc_estimator": 2,
+        "thermal_hooks": 1
+      },
+      "hotspot_threshold_c_counts": {
+        "70.0": 3
+      },
+      "hotspot_threshold_source_counts": {
+        "effective_config.thermal.hotspot_threshold_c": 3
+      },
+      "hotspot_threshold_profile_count": 1,
+      "hotspot_threshold_consistent": true,
+      "hotspot_threshold_profiles": [
+        {
+          "hotspot_threshold_c": 70.0,
+          "hotspot_threshold_source": "effective_config.thermal.hotspot_threshold_c",
+          "case_count": 3
+        }
+      ]
+    },
+    "cases": [
+      {
+        "case_id": "full_3d_snn_window",
+        "run_tag": "task4_window_stop_runtime_closure_mainline_window_stop_2us",
+        "runtime_enabled": false,
+        "control_mode": "observe_only",
+        "case_role": "calibration_only",
+        "hotspot_driver_status": "ran",
+        "hotspot_temperature_source": "hotspot_steady_temp",
+        "runtime_state_source": "online_rc_estimator",
+        "runtime_peak_temperature_c": 47.955010938,
+        "hotspot_peak_temperature_c": 45.03000000000003,
+        "hotspot_peak_delta_c": 2.9250109379999714,
+        "runtime_avg_temperature_c": 46.16823261720838,
+        "hotspot_avg_temperature_c": 45.02776041666669,
+        "hotspot_avg_delta_c": 1.1404722005416943,
+        "runtime_hotspot_block_count": 0,
+        "hotspot_block_count": 0,
+        "hotspot_block_delta": 0,
+        "runtime_hotspot_layer_count": 0,
+        "hotspot_layer_count": 0,
+        "hotspot_layer_delta": 0,
+        "hotspot_threshold_c": 70.0,
+        "hotspot_threshold_source": "effective_config.thermal.hotspot_threshold_c"
+      },
+      {
+        "case_id": "full_3d_snn_window_monolithic_proxy",
+        "run_tag": "task4_window_stop_runtime_closure_mainline_window_stop_2us",
+        "runtime_enabled": false,
+        "control_mode": "observe_only",
+        "case_role": "calibration_only",
+        "hotspot_driver_status": "ran",
+        "hotspot_temperature_source": "hotspot_steady_temp",
+        "runtime_state_source": "online_rc_estimator",
+        "runtime_peak_temperature_c": 47.4041625,
+        "hotspot_peak_temperature_c": 45.02000000000004,
+        "hotspot_peak_delta_c": 2.3841624999999596,
+        "runtime_avg_temperature_c": 45.99489010416664,
+        "hotspot_avg_temperature_c": 45.02000000000023,
+        "hotspot_avg_delta_c": 0.9748901041664126,
+        "runtime_hotspot_block_count": 0,
+        "hotspot_block_count": 0,
+        "hotspot_block_delta": 0,
+        "runtime_hotspot_layer_count": 0,
+        "hotspot_layer_count": 0,
+        "hotspot_layer_delta": 0,
+        "hotspot_threshold_c": 70.0,
+        "hotspot_threshold_source": "effective_config.thermal.hotspot_threshold_c"
+      }
+    ],
+    "metrics": {
+      "hotspot_peak_delta_c": {
+        "count": 2,
+        "mean": 2.6545867189999655,
+        "abs_mean": 2.6545867189999655,
+        "min": 2.3841624999999596,
+        "max": 2.9250109379999714,
+        "max_abs": 2.9250109379999714,
+        "min_case_id": "full_3d_snn_window_monolithic_proxy",
+        "max_case_id": "full_3d_snn_window",
+        "max_abs_case_id": "full_3d_snn_window",
+        "min_run_tag": "task4_window_stop_runtime_closure_mainline_window_stop_2us",
+        "max_run_tag": "task4_window_stop_runtime_closure_mainline_window_stop_2us",
+        "max_abs_run_tag": "task4_window_stop_runtime_closure_mainline_window_stop_2us"
+      },
+      "hotspot_avg_delta_c": {
+        "count": 2,
+        "mean": 1.0576811523540535,
+        "abs_mean": 1.0576811523540535,
+        "min": 0.9748901041664126,
+        "max": 1.1404722005416943,
+        "max_abs": 1.1404722005416943,
+        "min_case_id": "full_3d_snn_window_monolithic_proxy",
+        "max_case_id": "full_3d_snn_window",
+        "max_abs_case_id": "full_3d_snn_window",
+        "min_run_tag": "task4_window_stop_runtime_closure_mainline_window_stop_2us",
+        "max_run_tag": "task4_window_stop_runtime_closure_mainline_window_stop_2us",
+        "max_abs_run_tag": "task4_window_stop_runtime_closure_mainline_window_stop_2us"
+      },
+      "hotspot_block_delta": {
+        "count": 2,
+        "mean": 0.0,
+        "abs_mean": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "max_abs": 0.0,
+        "min_case_id": "full_3d_snn_window",
+        "max_case_id": "full_3d_snn_window",
+        "max_abs_case_id": "full_3d_snn_window_monolithic_proxy",
+        "min_run_tag": "task4_window_stop_runtime_closure_mainline_window_stop_2us",
+        "max_run_tag": "task4_window_stop_runtime_closure_mainline_window_stop_2us",
+        "max_abs_run_tag": "task4_window_stop_runtime_closure_mainline_window_stop_2us"
+      },
+      "hotspot_layer_delta": {
+        "count": 2,
+        "mean": 0.0,
+        "abs_mean": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "max_abs": 0.0,
+        "min_case_id": "full_3d_snn_window",
+        "max_case_id": "full_3d_snn_window",
+        "max_abs_case_id": "full_3d_snn_window_monolithic_proxy",
+        "min_run_tag": "task4_window_stop_runtime_closure_mainline_window_stop_2us",
+        "max_run_tag": "task4_window_stop_runtime_closure_mainline_window_stop_2us",
+        "max_abs_run_tag": "task4_window_stop_runtime_closure_mainline_window_stop_2us"
+      }
+    },
+    "filter": {
+      "hotspot_driver_status": "ran"
+    },
+    "groups": {
+      "control_mode": {
+        "observe_only": {
+          "available": true,
+          "summary": {
+            "eligible_case_count": 2,
+            "eligible_case_ids": [
+              "full_3d_snn_window",
+              "full_3d_snn_window_monolithic_proxy"
+            ],
+            "excluded_case_ids": [
+              "full_3d_snn_window_bundle_v3"
+            ],
+            "hotspot_status_counts": {
+              "ran": 2,
+              "disabled": 1
+            },
+            "hotspot_temperature_source_counts": {
+              "hotspot_steady_temp": 2
+            },
+            "runtime_state_source_counts": {
+              "online_rc_estimator": 2,
+              "thermal_hooks": 1
+            },
+            "hotspot_threshold_c_counts": {
+              "70.0": 3
+            },
+            "hotspot_threshold_source_counts": {
+              "effective_config.thermal.hotspot_threshold_c": 3
+            },
+            "hotspot_threshold_profile_count": 1,
+            "hotspot_threshold_consistent": true,
+            "hotspot_threshold_profiles": [
+              {
+                "hotspot_threshold_c": 70.0,
+                "hotspot_threshold_source": "effective_config.thermal.hotspot_threshold_c",
+                "case_count": 3
+              }
+            ]
+          },
+          "cases": [
+            {
+              "case_id": "full_3d_snn_window",
+              "run_tag": "task4_window_stop_runtime_closure_mainline_window_stop_2us",
+              "runtime_enabled": false,
+              "control_mode": "observe_only",
+              "case_role": "calibration_only",
+              "hotspot_driver_status": "ran",
+              "hotspot_temperature_source": "hotspot_steady_temp",
+              "runtime_state_source": "online_rc_estimator",
+              "runtime_peak_temperature_c": 47.955010938,
+              "hotspot_peak_temperature_c": 45.03000000000003,
+              "hotspot_peak_delta_c": 2.9250109379999714,
+              "runtime_avg_temperature_c": 46.16823261720838,
+              "hotspot_avg_temperature_c": 45.02776041666669,
+              "hotspot_avg_delta_c": 1.1404722005416943,
+              "runtime_hotspot_block_count": 0,
+              "hotspot_block_count": 0,
+              "hotspot_block_delta": 0,
+              "runtime_hotspot_layer_count": 0,
+              "hotspot_layer_count": 0,
+              "hotspot_layer_delta": 0,
+              "hotspot_threshold_c": 70.0,
+              "hotspot_threshold_source": "effective_config.thermal.hotspot_threshold_c"
+            },
+            {
+              "case_id": "full_3d_snn_window_monolithic_proxy",
+              "run_tag": "task4_window_stop_runtime_closure_mainline_window_stop_2us",
+              "runtime_enabled": false,
+              "control_mode": "observe_only",
+              "case_role": "calibration_only",
+              "hotspot_driver_status": "ran",
+              "hotspot_temperature_source": "hotspot_steady_temp",
+              "runtime_state_source": "online_rc_estimator",
+              "runtime_peak_temperature_c": 47.4041625,
+              "hotspot_peak_temperature_c": 45.02000000000004,
+              "hotspot_peak_delta_c": 2.3841624999999596,
+              "runtime_avg_temperature_c": 45.99489010416664,
+              "hotspot_avg_temperature_c": 45.02000000000023,
+              "hotspot_avg_delta_c": 0.9748901041664126,
+              "runtime_hotspot_block_count": 0,
+              "hotspot_block_count": 0,
+              "hotspot_block_delta": 0,
+              "runtime_hotspot_layer_count": 0,
+              "hotspot_layer_count": 0,
+              "hotspot_layer_delta": 0,
+              "hotspot_threshold_c": 70.0,
+              "hotspot_threshold_source": "effective_config.thermal.hotspot_threshold_c"
+            }
+          ],
+          "metrics": {
+            "hotspot_peak_delta_c": {
+              "count": 2,
+              "mean": 2.6545867189999655,
+              "abs_mean": 2.6545867189999655,
+              "min": 2.3841624999999596,
+              "max": 2.9250109379999714,
+              "max_abs": 2.9250109379999714,
+              "min_case_id": "full_3d_snn_window_monolithic_proxy",
+              "max_case_id": "full_3d_snn_window",
+              "max_abs_case_id": "full_3d_snn_window",
+              "min_run_tag": "task4_window_stop_runtime_closure_mainline_window_stop_2us",
+              "max_run_tag": "task4_window_stop_runtime_closure_mainline_window_stop_2us",
+              "max_abs_run_tag": "task4_window_stop_runtime_closure_mainline_window_stop_2us"
+            },
+            "hotspot_avg_delta_c": {
+              "count": 2,
+              "mean": 1.0576811523540535,
+              "abs_mean": 1.0576811523540535,
+              "min": 0.9748901041664126,
+              "max": 1.1404722005416943,
+              "max_abs": 1.1404722005416943,
+              "min_case_id": "full_3d_snn_window_monolithic_proxy",
+              "max_case_id": "full_3d_snn_window",
+              "max_abs_case_id": "full_3d_snn_window",
+              "min_run_tag": "task4_window_stop_runtime_closure_mainline_window_stop_2us",
+              "max_run_tag": "task4_window_stop_runtime_closure_mainline_window_stop_2us",
+              "max_abs_run_tag": "task4_window_stop_runtime_closure_mainline_window_stop_2us"
+            },
+            "hotspot_block_delta": {
+              "count": 2,
+              "mean": 0.0,
+              "abs_mean": 0.0,
+              "min": 0.0,
+              "max": 0.0,
+              "max_abs": 0.0,
+              "min_case_id": "full_3d_snn_window",
+              "max_case_id": "full_3d_snn_window",
+              "max_abs_case_id": "full_3d_snn_window_monolithic_proxy",
+              "min_run_tag": "task4_window_stop_runtime_closure_mainline_window_stop_2us",
+              "max_run_tag": "task4_window_stop_runtime_closure_mainline_window_stop_2us",
+              "max_abs_run_tag": "task4_window_stop_runtime_closure_mainline_window_stop_2us"
+            },
+            "hotspot_layer_delta": {
+              "count": 2,
+              "mean": 0.0,
+              "abs_mean": 0.0,
+              "min": 0.0,
+              "max": 0.0,
+              "max_abs": 0.0,
+              "min_case_id": "full_3d_snn_window",
+              "max_case_id": "full_3d_snn_window",
+              "max_abs_case_id": "full_3d_snn_window_monolithic_proxy",
+              "min_run_tag": "task4_window_stop_runtime_closure_mainline_window_stop_2us",
+              "max_run_tag": "task4_window_stop_runtime_closure_mainline_window_stop_2us",
+              "max_abs_run_tag": "task4_window_stop_runtime_closure_mainline_window_stop_2us"
+            }
+          }
+        }
+      },
+      "case_role": {
+        "calibration_only": {
+          "available": true,
+          "summary": {
+            "eligible_case_count": 2,
+            "eligible_case_ids": [
+              "full_3d_snn_window",
+              "full_3d_snn_window_monolithic_proxy"
+            ],
+            "excluded_case_ids": [
+              "full_3d_snn_window_bundle_v3"
+            ],
+            "hotspot_status_counts": {
+              "ran": 2,
+              "disabled": 1
+            },
+            "hotspot_temperature_source_counts": {
+              "hotspot_steady_temp": 2
+            },
+            "runtime_state_source_counts": {
+              "online_rc_estimator": 2,
+              "thermal_hooks": 1
+            },
+            "hotspot_threshold_c_counts": {
+              "70.0": 3
+            },
+            "hotspot_threshold_source_counts": {
+              "effective_config.thermal.hotspot_threshold_c": 3
+            },
+            "hotspot_threshold_profile_count": 1,
+            "hotspot_threshold_consistent": true,
+            "hotspot_threshold_profiles": [
+              {
+                "hotspot_threshold_c": 70.0,
+                "hotspot_threshold_source": "effective_config.thermal.hotspot_threshold_c",
+                "case_count": 3
+              }
+            ]
+          },
+          "cases": [
+            {
+              "case_id": "full_3d_snn_window",
+              "run_tag": "task4_window_stop_runtime_closure_mainline_window_stop_2us",
+              "runtime_enabled": false,
+              "control_mode": "observe_only",
+              "case_role": "calibration_only",
+              "hotspot_driver_status": "ran",
+              "hotspot_temperature_source": "hotspot_steady_temp",
+              "runtime_state_source": "online_rc_estimator",
+              "runtime_peak_temperature_c": 47.955010938,
+              "hotspot_peak_temperature_c": 45.03000000000003,
+              "hotspot_peak_delta_c": 2.9250109379999714,
+              "runtime_avg_temperature_c": 46.16823261720838,
+              "hotspot_avg_temperature_c": 45.02776041666669,
+              "hotspot_avg_delta_c": 1.1404722005416943,
+              "runtime_hotspot_block_count": 0,
+              "hotspot_block_count": 0,
+              "hotspot_block_delta": 0,
+              "runtime_hotspot_layer_count": 0,
+              "hotspot_layer_count": 0,
+              "hotspot_layer_delta": 0,
+              "hotspot_threshold_c": 70.0,
+              "hotspot_threshold_source": "effective_config.thermal.hotspot_threshold_c"
+            },
+            {
+              "case_id": "full_3d_snn_window_monolithic_proxy",
+              "run_tag": "task4_window_stop_runtime_closure_mainline_window_stop_2us",
+              "runtime_enabled": false,
+              "control_mode": "observe_only",
+              "case_role": "calibration_only",
+              "hotspot_driver_status": "ran",
+              "hotspot_temperature_source": "hotspot_steady_temp",
+              "runtime_state_source": "online_rc_estimator",
+              "runtime_peak_temperature_c": 47.4041625,
+              "hotspot_peak_temperature_c": 45.02000000000004,
+              "hotspot_peak_delta_c": 2.3841624999999596,
+              "runtime_avg_temperature_c": 45.99489010416664,
+              "hotspot_avg_temperature_c": 45.02000000000023,
+              "hotspot_avg_delta_c": 0.9748901041664126,
+              "runtime_hotspot_block_count": 0,
+              "hotspot_block_count": 0,
+              "hotspot_block_delta": 0,
+              "runtime_hotspot_layer_count": 0,
+              "hotspot_layer_count": 0,
+              "hotspot_layer_delta": 0,
+              "hotspot_threshold_c": 70.0,
+              "hotspot_threshold_source": "effective_config.thermal.hotspot_threshold_c"
+            }
+          ],
+          "metrics": {
+            "hotspot_peak_delta_c": {
+              "count": 2,
+              "mean": 2.6545867189999655,
+              "abs_mean": 2.6545867189999655,
+              "min": 2.3841624999999596,
+              "max": 2.9250109379999714,
+              "max_abs": 2.9250109379999714,
+              "min_case_id": "full_3d_snn_window_monolithic_proxy",
+              "max_case_id": "full_3d_snn_window",
+              "max_abs_case_id": "full_3d_snn_window",
+              "min_run_tag": "task4_window_stop_runtime_closure_mainline_window_stop_2us",
+              "max_run_tag": "task4_window_stop_runtime_closure_mainline_window_stop_2us",
+              "max_abs_run_tag": "task4_window_stop_runtime_closure_mainline_window_stop_2us"
+            },
+            "hotspot_avg_delta_c": {
+              "count": 2,
+              "mean": 1.0576811523540535,
+              "abs_mean": 1.0576811523540535,
+              "min": 0.9748901041664126,
+              "max": 1.1404722005416943,
+              "max_abs": 1.1404722005416943,
+              "min_case_id": "full_3d_snn_window_monolithic_proxy",
+              "max_case_id": "full_3d_snn_window",
+              "max_abs_case_id": "full_3d_snn_window",
+              "min_run_tag": "task4_window_stop_runtime_closure_mainline_window_stop_2us",
+              "max_run_tag": "task4_window_stop_runtime_closure_mainline_window_stop_2us",
+              "max_abs_run_tag": "task4_window_stop_runtime_closure_mainline_window_stop_2us"
+            },
+            "hotspot_block_delta": {
+              "count": 2,
+              "mean": 0.0,
+              "abs_mean": 0.0,
+              "min": 0.0,
+              "max": 0.0,
+              "max_abs": 0.0,
+              "min_case_id": "full_3d_snn_window",
+              "max_case_id": "full_3d_snn_window",
+              "max_abs_case_id": "full_3d_snn_window_monolithic_proxy",
+              "min_run_tag": "task4_window_stop_runtime_closure_mainline_window_stop_2us",
+              "max_run_tag": "task4_window_stop_runtime_closure_mainline_window_stop_2us",
+              "max_abs_run_tag": "task4_window_stop_runtime_closure_mainline_window_stop_2us"
+            },
+            "hotspot_layer_delta": {
+              "count": 2,
+              "mean": 0.0,
+              "abs_mean": 0.0,
+              "min": 0.0,
+              "max": 0.0,
+              "max_abs": 0.0,
+              "min_case_id": "full_3d_snn_window",
+              "max_case_id": "full_3d_snn_window",
+              "max_abs_case_id": "full_3d_snn_window_monolithic_proxy",
+              "min_run_tag": "task4_window_stop_runtime_closure_mainline_window_stop_2us",
+              "max_run_tag": "task4_window_stop_runtime_closure_mainline_window_stop_2us",
+              "max_abs_run_tag": "task4_window_stop_runtime_closure_mainline_window_stop_2us"
+            }
+          }
+        }
+      }
+    }
+  },
+  "thermal_input_preparation": {
+    "available": true,
+    "summary": {
+      "case_count": 3,
+      "cases_with_summary_path": 2,
+      "cases_with_window_power_samples_path": 2,
+      "shared_summary_case_ids": [],
+      "shared_window_power_sample_case_ids": [],
+      "independent_candidate_case_ids": [
+        "full_3d_snn_window",
+        "full_3d_snn_window_monolithic_proxy"
+      ],
+      "blocked_case_ids": [
+        "full_3d_snn_window_bundle_v3"
+      ]
+    },
+    "cases": [
+      {
+        "case_id": "full_3d_snn_window",
+        "run_tag": "task4_window_stop_runtime_closure_mainline_window_stop_2us",
+        "runtime_enabled": false,
+        "control_mode": "observe_only",
+        "case_role": "calibration_only",
+        "input_source_kind": "local_hotspot_sidecar",
+        "summary_path": "/home/xgy/remote/snn3dexp/runs/full_3d_snn_window/task4_window_stop_runtime_closure_mainline_window_stop_2us/thermal_sidecar/summary/thermal_summary.json",
+        "summary_exists": true,
+        "window_power_samples_path": "/home/xgy/remote/snn3dexp/runs/full_3d_snn_window/task4_window_stop_runtime_closure_mainline_window_stop_2us/thermal_sidecar/summary/window_power_samples.jsonl",
+        "window_power_samples_exists": true,
+        "window_power_sample_count": 1,
+        "trace_sources": [
+          "proxy_synthesized"
+        ],
+        "shared_input_key": "/home/xgy/remote/snn3dexp/runs/full_3d_snn_window/task4_window_stop_runtime_closure_mainline_window_stop_2us/thermal_sidecar/summary/thermal_summary.json",
+        "shared_summary_path": false,
+        "shared_window_power_samples_path": false,
+        "independent_candidate": true,
+        "blocking_reasons": []
+      },
+      {
+        "case_id": "full_3d_snn_window_bundle_v3",
+        "run_tag": "task4_window_stop_runtime_closure_mainline_window_stop_2us",
+        "runtime_enabled": false,
+        "control_mode": "observe_only",
+        "case_role": "calibration_only",
+        "input_source_kind": "runtime_observability_only",
+        "summary_path": "",
+        "summary_exists": false,
+        "window_power_samples_path": "",
+        "window_power_samples_exists": false,
+        "window_power_sample_count": 0,
+        "trace_sources": [],
+        "shared_input_key": "",
+        "shared_summary_path": false,
+        "shared_window_power_samples_path": false,
+        "independent_candidate": false,
+        "blocking_reasons": [
+          "missing_replay_artifacts"
+        ]
+      },
+      {
+        "case_id": "full_3d_snn_window_monolithic_proxy",
+        "run_tag": "task4_window_stop_runtime_closure_mainline_window_stop_2us",
+        "runtime_enabled": false,
+        "control_mode": "observe_only",
+        "case_role": "calibration_only",
+        "input_source_kind": "local_hotspot_sidecar",
+        "summary_path": "/home/xgy/remote/snn3dexp/runs/full_3d_snn_window_monolithic_proxy/task4_window_stop_runtime_closure_mainline_window_stop_2us/thermal_sidecar/summary/thermal_summary.json",
+        "summary_exists": true,
+        "window_power_samples_path": "/home/xgy/remote/snn3dexp/runs/full_3d_snn_window_monolithic_proxy/task4_window_stop_runtime_closure_mainline_window_stop_2us/thermal_sidecar/summary/window_power_samples.jsonl",
+        "window_power_samples_exists": true,
+        "window_power_sample_count": 1,
+        "trace_sources": [
+          "proxy_synthesized"
+        ],
+        "shared_input_key": "/home/xgy/remote/snn3dexp/runs/full_3d_snn_window_monolithic_proxy/task4_window_stop_runtime_closure_mainline_window_stop_2us/thermal_sidecar/summary/thermal_summary.json",
+        "shared_summary_path": false,
+        "shared_window_power_samples_path": false,
+        "independent_candidate": true,
+        "blocking_reasons": []
+      }
+    ],
+    "prepared_manifest": {
+      "case_ids": [
+        "full_3d_snn_window",
+        "full_3d_snn_window_monolithic_proxy"
+      ],
+      "run_tags_by_case": {
+        "full_3d_snn_window": "task4_window_stop_runtime_closure_mainline_window_stop_2us",
+        "full_3d_snn_window_monolithic_proxy": "task4_window_stop_runtime_closure_mainline_window_stop_2us"
+      }
+    }
+  }
+}

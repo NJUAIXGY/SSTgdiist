@@ -1,0 +1,3 @@
+case_id,case_label,run_tag,requested_run_tag,memory_kind,memory_model_family,memory_graph_type,tier_id,stack_count,active_stack_count,stack_ids,active_stack_ids,memory_requests_total,probe_row_count_total,total_service_deficit
+full_3d_monolithic_proxy,Full 3D + Monolithic Proxy,authority_native_source_20260401,authority_native_source_20260401,monolithic_like,monolithic_like,memHierarchy_tier_local_stack,0,4,4,0|1|2|3,0|1|2|3,3072,4,0
+full_3d_monolithic_proxy,Full 3D + Monolithic Proxy,authority_native_source_20260401,authority_native_source_20260401,monolithic_like,monolithic_like,memHierarchy_tier_local_stack,1,4,4,4|5|6|7,4|5|6|7,3072,4,0

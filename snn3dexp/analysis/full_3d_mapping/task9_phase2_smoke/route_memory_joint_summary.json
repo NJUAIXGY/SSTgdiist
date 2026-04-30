@@ -1,0 +1,47 @@
+{
+  "case_id": "full_3d_mapping",
+  "run_root": "/home/xgy/remote/snn3dexp/runs/full_3d_mapping/task9_phase2_smoke",
+  "mesh_shape": "4x4x2",
+  "route": {
+    "native_3d_active": true,
+    "vertical_route_order": "zxy",
+    "multicast_block_shape": [
+      2,
+      2,
+      2
+    ],
+    "active_route_node_count": 32
+  },
+  "memory": {
+    "kind": "hbm_like",
+    "graph_type": "memHierarchy_shared_stack",
+    "real_synapse_sources": 32,
+    "active_memory_node_count": 32,
+    "remote_home_active_node_count": 16,
+    "memory_requests_total": 448,
+    "remote_home_memory_requests_total": 224,
+    "active_stack_count": 4
+  },
+  "joint": {
+    "vertical_hops_ratio": 0.5,
+    "remote_home_ratio": 0.5,
+    "route_memory_overlap": 1.0
+  },
+  "thermal": {
+    "enabled": true,
+    "tier_activity_source": "runtime",
+    "tier_activity": [
+      {
+        "z": 0,
+        "activity": 1048.0
+      },
+      {
+        "z": 1,
+        "activity": 792.0
+      }
+    ],
+    "thermal_hotspot_score": 1.2152173913043478,
+    "vertical_link_pressure": 0.44375000000000003,
+    "stack_hotspot_penalty": 0.018181818181818077
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "case_id": "full_3d_monolithic_proxy",
+  "run_tag": "task20_monolithic_proxy_runtime_smoke_v2",
+  "status": "smoke_failed",
+  "paths": {
+    "effective_config_path": "/home/xgy/remote/snn3dexp/runs/full_3d_monolithic_proxy/task20_monolithic_proxy_runtime_smoke_v2/effective_config.json",
+    "platform_summary_path": "/home/xgy/remote/snn3dexp/runs/full_3d_monolithic_proxy/task20_monolithic_proxy_runtime_smoke_v2/platform_summary.json",
+    "stack_nmc_summary_path": "",
+    "route_memory_joint_summary_path": "/home/xgy/remote/snn3dexp/analysis/full_3d_monolithic_proxy/task20_monolithic_proxy_runtime_smoke_v2/route_memory_joint_summary.json",
+    "runtime_summary_path": "/home/xgy/remote/snn3dexp/analysis/full_3d_monolithic_proxy/task20_monolithic_proxy_runtime_smoke_v2/runtime_summary.json"
+  },
+  "mapping": {
+    "policy": "3d_aware",
+    "score": -0.46875,
+    "same_home_stack_ratio": 0.5,
+    "vertical_target_ratio": 0.25
+  },
+  "joint": {
+    "vertical_hops_ratio": 0.0,
+    "remote_home_ratio": 0.0,
+    "route_memory_overlap": 1.0
+  },
+  "thermal": {
+    "thermal_hotspot_score": 1.25,
+    "vertical_link_pressure": 0.15,
+    "stack_hotspot_penalty": 0.5,
+    "vertical_bandwidth_budget": 3.5,
+    "tsv_miv_budget_pressure": 0.05357142857142857,
+    "power_density_score": 2.515625,
+    "reliability_penalty": 0.7114955357142857
+  },
+  "runtime": {
+    "enabled": false,
+    "policy": "disabled",
+    "signal_source": "disabled",
+    "route_memory_overlap": 0.0,
+    "vertical_link_pressure": 0.0,
+    "stack_hotspot_penalty": 0.0,
+    "remap_epoch": 0,
+    "homeroute_adjustment_count": 0,
+    "thermal_guard_actions": 0
+  }
+}

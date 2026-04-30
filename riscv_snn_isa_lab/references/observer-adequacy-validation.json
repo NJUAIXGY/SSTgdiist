@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "artifact_role": "observer_adequacy_validation_summary",
+  "authority_scope": "research_validation_only",
+  "generated_utc": "2026-04-18T12:56:58.048567+00:00",
+  "source": {
+    "path": "/home/xgy/remote/riscv_snn_isa_lab/references/riscv-snn-research-report.json",
+    "artifact_role": "research_metrics_summary",
+    "authority_scope": "research_metrics_only"
+  },
+  "observer_entrypoint": {
+    "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/nightly-sidecar-observer-summary.json",
+    "artifact_role": "stable_sidecar_observer_summary",
+    "authority_scope": "observer_surface_only",
+    "policy": "follow_stable_observer_summary_for_compact_optional_surface_rollups"
+  },
+  "observer_adequacy": {
+    "has_observer_entrypoint": true,
+    "contract_ok": true,
+    "full_equivalence_markers_present": true,
+    "real_fail_sample_present": true,
+    "real_recovery_sample_present": true,
+    "status": "ready_with_fail_recovery_sample",
+    "next_action": "validate_compact_surface_against_real_fail_recovery_sample"
+  },
+  "validation_required": true,
+  "validation_executed": true,
+  "validation_ok": true,
+  "status": "pass",
+  "next_action": "none",
+  "history_path": "/home/xgy/remote/riscv_snn_isa_lab/references/observer-full-equivalence-history.json",
+  "history_loaded": true,
+  "compact_full_equivalence_rollup": {
+    "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/observer-full-equivalence-history.json",
+    "latest_summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-04-02-equiv-matrix.json",
+    "latest_date": "2026-04-02",
+    "entry_count": 4,
+    "all_ok_latest": true,
+    "all_dates_ok": false,
+    "first_fail_date": "2026-03-30",
+    "latest_recovered_date": "2026-04-02",
+    "history_contract": "observer_sample_sequence_v1",
+    "excluded_entry_count": 0
+  },
+  "matched_field_count": 9,
+  "mismatch_count": 0,
+  "mismatches": [],
+  "validated_fields": [
+    "latest_summary_path",
+    "latest_date",
+    "entry_count",
+    "all_ok_latest",
+    "all_dates_ok",
+    "first_fail_date",
+    "latest_recovered_date",
+    "history_contract",
+    "excluded_entry_count"
+  ]
+}

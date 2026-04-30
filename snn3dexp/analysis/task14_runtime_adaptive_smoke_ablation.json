@@ -1,0 +1,797 @@
+{
+  "requested_run_tag": "task14_runtime_adaptive_smoke",
+  "cases": {
+    "baseline_2d": {
+      "mesh_shape": "4x4x1",
+      "total_nodes": 16,
+      "noc_component": "SnnDL.MulticastRouter",
+      "memory_kind": "legacy_per_pe",
+      "num_stacks": 0,
+      "memory_graph_type": "legacy_per_pe",
+      "memory_controller_count": 0,
+      "memory_probe_count": 0,
+      "memory_probe_rows_total": 0,
+      "run_tag": "task13_phase2_compose_v2",
+      "run_root": "/home/xgy/remote/snn3dexp/runs/baseline_2d/task13_phase2_compose_v2",
+      "status": "composed",
+      "stack_nmc_available": false,
+      "stack_nmc_summary_path": "",
+      "route_memory_joint_available": false,
+      "route_memory_joint_summary_path": "",
+      "phase2_case_summary_available": true,
+      "phase2_case_summary_path": "/home/xgy/remote/snn3dexp/analysis/baseline_2d/task13_phase2_compose_v2/phase2_case_summary.json",
+      "window_stop_at": "",
+      "traffic_stop_cycle": null,
+      "traffic_period_cycles": null,
+      "stream_mem_period_cycles": null,
+      "stack_nmc_totals": {
+        "memory_requests_total": 0,
+        "tx_spike_pkts_total": 0,
+        "tx_spikekey_pkts_total": 0,
+        "tx_packets_total": 0,
+        "rx_spike_total": 0,
+        "rx_spikekey_total": 0,
+        "rx_packets_total": 0,
+        "stream_mem_bytes_written_total": 0,
+        "stream_mem_bytes_read_total": 0,
+        "active_stack_ids": []
+      },
+      "stack_balance": {
+        "active_stack_count": 0,
+        "memory_requests_imbalance_ratio": 0.0,
+        "tx_packet_imbalance_ratio": 0.0,
+        "rx_packet_imbalance_ratio": 0.0,
+        "hot_memory_stack_ids": [],
+        "hot_tx_stack_ids": [],
+        "hot_rx_stack_ids": []
+      },
+      "tx_packet_share_spikekey": 0.0,
+      "rx_packet_share_spikekey": 0.0,
+      "route_memory_joint": {
+        "native_3d_active": false,
+        "vertical_hops_ratio": 0.0,
+        "remote_home_ratio": 0.0,
+        "route_memory_overlap": 0.0,
+        "ingress_replication_cost": 0.0,
+        "inter_die_multicast_fanout": 0.0,
+        "die_local_replication_cost": 0.0,
+        "average_vertical_subtree_depth": 0.0,
+        "tier_local_home_access_ratio": 0.0,
+        "same_xy_cross_tier_access_ratio": 0.0,
+        "remote_home_access_ratio": 0.0
+      },
+      "mapping_summary": {
+        "policy": "z_mirror",
+        "score": 0.0,
+        "same_home_stack_ratio": 0.0,
+        "vertical_target_ratio": 0.0
+      },
+      "thermal_summary": {
+        "thermal_hotspot_score": 0.0,
+        "vertical_link_pressure": 0.0,
+        "stack_hotspot_penalty": 0.0
+      },
+      "physical_summary": {
+        "vertical_bandwidth_budget": 4.0,
+        "tsv_miv_budget_pressure": 0.0,
+        "power_density_score": 0.0,
+        "reliability_penalty": 0.0
+      },
+      "runtime_summary": {
+        "enabled": false,
+        "policy": "disabled",
+        "signal_source": "disabled",
+        "route_memory_overlap": 0.0,
+        "vertical_link_pressure": 0.0,
+        "stack_hotspot_penalty": 0.0,
+        "remap_epoch": 0,
+        "homeroute_adjustment_count": 0,
+        "thermal_guard_actions": 0
+      }
+    },
+    "full_3d": {
+      "mesh_shape": "4x4x2",
+      "total_nodes": 32,
+      "noc_component": "SnnDL.MulticastRouter3DNative",
+      "memory_kind": "hbm_like",
+      "num_stacks": 4,
+      "memory_graph_type": "memHierarchy_shared_stack",
+      "memory_controller_count": 16,
+      "memory_probe_count": 4,
+      "memory_probe_rows_total": 4,
+      "run_tag": "debug_recheck_task9_currentbin",
+      "run_root": "/home/xgy/remote/snn3dexp/runs/full_3d/debug_recheck_task9_currentbin",
+      "status": "smoke_passed",
+      "stack_nmc_available": true,
+      "stack_nmc_summary_path": "/home/xgy/remote/snn3dexp/analysis/full_3d/debug_recheck_task9_currentbin/stack_nmc_summary.json",
+      "route_memory_joint_available": true,
+      "route_memory_joint_summary_path": "/home/xgy/remote/snn3dexp/analysis/full_3d/debug_recheck_task9_currentbin/route_memory_joint_summary.json",
+      "phase2_case_summary_available": true,
+      "phase2_case_summary_path": "/home/xgy/remote/snn3dexp/analysis/full_3d/debug_recheck_task9_currentbin/phase2_case_summary.json",
+      "window_stop_at": "250ns",
+      "traffic_stop_cycle": 512,
+      "traffic_period_cycles": 32,
+      "stream_mem_period_cycles": 32,
+      "stack_nmc_totals": {
+        "memory_requests_total": 448,
+        "tx_spike_pkts_total": 0,
+        "tx_spikekey_pkts_total": 448,
+        "tx_packets_total": 448,
+        "rx_spike_total": 0,
+        "rx_spikekey_total": 256,
+        "rx_packets_total": 256,
+        "stream_mem_bytes_written_total": 14336,
+        "stream_mem_bytes_read_total": 14336,
+        "active_stack_ids": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "stack_balance": {
+        "active_stack_count": 4,
+        "memory_requests_imbalance_ratio": 1.0,
+        "tx_packet_imbalance_ratio": 1.0,
+        "rx_packet_imbalance_ratio": 1.0,
+        "hot_memory_stack_ids": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "hot_tx_stack_ids": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "hot_rx_stack_ids": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "tx_packet_share_spikekey": 1.0,
+      "rx_packet_share_spikekey": 1.0,
+      "route_memory_joint": {
+        "native_3d_active": true,
+        "vertical_hops_ratio": 0.5,
+        "remote_home_ratio": 0.5,
+        "route_memory_overlap": 1.0,
+        "ingress_replication_cost": 1.75,
+        "inter_die_multicast_fanout": 0.0,
+        "die_local_replication_cost": 2.0,
+        "average_vertical_subtree_depth": 0.0,
+        "tier_local_home_access_ratio": 0.25,
+        "same_xy_cross_tier_access_ratio": 0.25,
+        "remote_home_access_ratio": 0.5
+      },
+      "mapping_summary": {
+        "policy": "z_blind",
+        "score": -0.75,
+        "same_home_stack_ratio": 0.5,
+        "vertical_target_ratio": 0.0
+      },
+      "thermal_summary": {
+        "thermal_hotspot_score": 1.2155172413793103,
+        "vertical_link_pressure": 0.2,
+        "stack_hotspot_penalty": 0.0
+      },
+      "physical_summary": {
+        "vertical_bandwidth_budget": 0.0,
+        "tsv_miv_budget_pressure": 0.0,
+        "power_density_score": 0.0,
+        "reliability_penalty": 0.0
+      },
+      "runtime_summary": {
+        "enabled": false,
+        "policy": "",
+        "signal_source": "",
+        "route_memory_overlap": 0.0,
+        "vertical_link_pressure": 0.0,
+        "stack_hotspot_penalty": 0.0,
+        "remap_epoch": 0,
+        "homeroute_adjustment_count": 0,
+        "thermal_guard_actions": 0
+      }
+    },
+    "full_3d_mapping": {
+      "mesh_shape": "4x4x2",
+      "total_nodes": 32,
+      "noc_component": "SnnDL.MulticastRouter3DNative",
+      "memory_kind": "hbm_like",
+      "num_stacks": 4,
+      "memory_graph_type": "memHierarchy_shared_stack",
+      "memory_controller_count": 16,
+      "memory_probe_count": 4,
+      "memory_probe_rows_total": 4,
+      "run_tag": "task9_phase2_smoke",
+      "run_root": "/home/xgy/remote/snn3dexp/runs/full_3d_mapping/task9_phase2_smoke",
+      "status": "smoke_passed",
+      "stack_nmc_available": true,
+      "stack_nmc_summary_path": "/home/xgy/remote/snn3dexp/analysis/full_3d_mapping/task9_phase2_smoke/stack_nmc_summary.json",
+      "route_memory_joint_available": true,
+      "route_memory_joint_summary_path": "/home/xgy/remote/snn3dexp/analysis/full_3d_mapping/task9_phase2_smoke/route_memory_joint_summary.json",
+      "phase2_case_summary_available": true,
+      "phase2_case_summary_path": "/home/xgy/remote/snn3dexp/analysis/full_3d_mapping/task9_phase2_smoke/phase2_case_summary.json",
+      "window_stop_at": "250ns",
+      "traffic_stop_cycle": 512,
+      "traffic_period_cycles": 32,
+      "stream_mem_period_cycles": 32,
+      "stack_nmc_totals": {
+        "memory_requests_total": 448,
+        "tx_spike_pkts_total": 0,
+        "tx_spikekey_pkts_total": 432,
+        "tx_packets_total": 432,
+        "rx_spike_total": 0,
+        "rx_spikekey_total": 256,
+        "rx_packets_total": 256,
+        "stream_mem_bytes_written_total": 14336,
+        "stream_mem_bytes_read_total": 14336,
+        "active_stack_ids": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "stack_balance": {
+        "active_stack_count": 4,
+        "memory_requests_imbalance_ratio": 1.0,
+        "tx_packet_imbalance_ratio": 1.1666666666666667,
+        "rx_packet_imbalance_ratio": 1.4285714285714286,
+        "hot_memory_stack_ids": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "hot_tx_stack_ids": [
+          0,
+          1,
+          2
+        ],
+        "hot_rx_stack_ids": [
+          3
+        ]
+      },
+      "tx_packet_share_spikekey": 1.0,
+      "rx_packet_share_spikekey": 1.0,
+      "route_memory_joint": {
+        "native_3d_active": true,
+        "vertical_hops_ratio": 0.5,
+        "remote_home_ratio": 0.5,
+        "route_memory_overlap": 1.0,
+        "ingress_replication_cost": 0.0,
+        "inter_die_multicast_fanout": 0.0,
+        "die_local_replication_cost": 0.0,
+        "average_vertical_subtree_depth": 0.0,
+        "tier_local_home_access_ratio": 0.0,
+        "same_xy_cross_tier_access_ratio": 0.0,
+        "remote_home_access_ratio": 0.0
+      },
+      "mapping_summary": {
+        "policy": "3d_aware",
+        "score": 0.0234375,
+        "same_home_stack_ratio": 0.90625,
+        "vertical_target_ratio": 0.40625
+      },
+      "thermal_summary": {
+        "thermal_hotspot_score": 1.2152173913043478,
+        "vertical_link_pressure": 0.44375000000000003,
+        "stack_hotspot_penalty": 0.018181818181818077
+      },
+      "physical_summary": {
+        "vertical_bandwidth_budget": 0.0,
+        "tsv_miv_budget_pressure": 0.0,
+        "power_density_score": 0.0,
+        "reliability_penalty": 0.0
+      },
+      "runtime_summary": {
+        "enabled": false,
+        "policy": "",
+        "signal_source": "",
+        "route_memory_overlap": 0.0,
+        "vertical_link_pressure": 0.0,
+        "stack_hotspot_penalty": 0.0,
+        "remap_epoch": 0,
+        "homeroute_adjustment_count": 0,
+        "thermal_guard_actions": 0
+      }
+    },
+    "full_3d_monolithic_proxy": {
+      "mesh_shape": "4x4x2",
+      "total_nodes": 32,
+      "noc_component": "SnnDL.MulticastRouter3DNative",
+      "memory_kind": "monolithic_like",
+      "num_stacks": 8,
+      "memory_graph_type": "memHierarchy_tier_local_stack",
+      "memory_controller_count": 16,
+      "memory_probe_count": 8,
+      "memory_probe_rows_total": 0,
+      "run_tag": "task13_phase2_compose_v2",
+      "run_root": "/home/xgy/remote/snn3dexp/runs/full_3d_monolithic_proxy/task13_phase2_compose_v2",
+      "status": "composed",
+      "stack_nmc_available": false,
+      "stack_nmc_summary_path": "",
+      "route_memory_joint_available": false,
+      "route_memory_joint_summary_path": "",
+      "phase2_case_summary_available": true,
+      "phase2_case_summary_path": "/home/xgy/remote/snn3dexp/analysis/full_3d_monolithic_proxy/task13_phase2_compose_v2/phase2_case_summary.json",
+      "window_stop_at": "",
+      "traffic_stop_cycle": null,
+      "traffic_period_cycles": null,
+      "stream_mem_period_cycles": null,
+      "stack_nmc_totals": {
+        "memory_requests_total": 0,
+        "tx_spike_pkts_total": 0,
+        "tx_spikekey_pkts_total": 0,
+        "tx_packets_total": 0,
+        "rx_spike_total": 0,
+        "rx_spikekey_total": 0,
+        "rx_packets_total": 0,
+        "stream_mem_bytes_written_total": 0,
+        "stream_mem_bytes_read_total": 0,
+        "active_stack_ids": []
+      },
+      "stack_balance": {
+        "active_stack_count": 0,
+        "memory_requests_imbalance_ratio": 0.0,
+        "tx_packet_imbalance_ratio": 0.0,
+        "rx_packet_imbalance_ratio": 0.0,
+        "hot_memory_stack_ids": [],
+        "hot_tx_stack_ids": [],
+        "hot_rx_stack_ids": []
+      },
+      "tx_packet_share_spikekey": 0.0,
+      "rx_packet_share_spikekey": 0.0,
+      "route_memory_joint": {
+        "native_3d_active": false,
+        "vertical_hops_ratio": 0.0,
+        "remote_home_ratio": 0.0,
+        "route_memory_overlap": 0.0,
+        "ingress_replication_cost": 0.0,
+        "inter_die_multicast_fanout": 0.0,
+        "die_local_replication_cost": 0.0,
+        "average_vertical_subtree_depth": 0.0,
+        "tier_local_home_access_ratio": 0.0,
+        "same_xy_cross_tier_access_ratio": 0.0,
+        "remote_home_access_ratio": 0.0
+      },
+      "mapping_summary": {
+        "policy": "3d_aware",
+        "score": -0.46875,
+        "same_home_stack_ratio": 0.5,
+        "vertical_target_ratio": 0.25
+      },
+      "thermal_summary": {
+        "thermal_hotspot_score": 1.25,
+        "vertical_link_pressure": 0.15,
+        "stack_hotspot_penalty": 0.5
+      },
+      "physical_summary": {
+        "vertical_bandwidth_budget": 3.5,
+        "tsv_miv_budget_pressure": 0.05357142857142857,
+        "power_density_score": 2.1875,
+        "reliability_penalty": 0.5638392857142858
+      },
+      "runtime_summary": {
+        "enabled": false,
+        "policy": "disabled",
+        "signal_source": "disabled",
+        "route_memory_overlap": 0.0,
+        "vertical_link_pressure": 0.0,
+        "stack_hotspot_penalty": 0.0,
+        "remap_epoch": 0,
+        "homeroute_adjustment_count": 0,
+        "thermal_guard_actions": 0
+      }
+    },
+    "full_3d_runtime_adaptive": {
+      "mesh_shape": "4x4x2",
+      "total_nodes": 32,
+      "noc_component": "SnnDL.MulticastRouter3DNative",
+      "memory_kind": "hbm_like",
+      "num_stacks": 4,
+      "memory_graph_type": "memHierarchy_shared_stack",
+      "memory_controller_count": 16,
+      "memory_probe_count": 4,
+      "memory_probe_rows_total": 4,
+      "run_tag": "task14_runtime_adaptive_smoke",
+      "run_root": "/home/xgy/remote/snn3dexp/runs/full_3d_runtime_adaptive/task14_runtime_adaptive_smoke",
+      "status": "smoke_passed",
+      "stack_nmc_available": true,
+      "stack_nmc_summary_path": "/home/xgy/remote/snn3dexp/analysis/full_3d_runtime_adaptive/task14_runtime_adaptive_smoke/stack_nmc_summary.json",
+      "route_memory_joint_available": true,
+      "route_memory_joint_summary_path": "/home/xgy/remote/snn3dexp/analysis/full_3d_runtime_adaptive/task14_runtime_adaptive_smoke/route_memory_joint_summary.json",
+      "phase2_case_summary_available": true,
+      "phase2_case_summary_path": "/home/xgy/remote/snn3dexp/analysis/full_3d_runtime_adaptive/task14_runtime_adaptive_smoke/phase2_case_summary.json",
+      "window_stop_at": "250ns",
+      "traffic_stop_cycle": 512,
+      "traffic_period_cycles": 32,
+      "stream_mem_period_cycles": 32,
+      "stack_nmc_totals": {
+        "memory_requests_total": 448,
+        "tx_spike_pkts_total": 0,
+        "tx_spikekey_pkts_total": 432,
+        "tx_packets_total": 432,
+        "rx_spike_total": 0,
+        "rx_spikekey_total": 256,
+        "rx_packets_total": 256,
+        "stream_mem_bytes_written_total": 14336,
+        "stream_mem_bytes_read_total": 14336,
+        "active_stack_ids": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "stack_balance": {
+        "active_stack_count": 4,
+        "memory_requests_imbalance_ratio": 1.0,
+        "tx_packet_imbalance_ratio": 1.1666666666666667,
+        "rx_packet_imbalance_ratio": 1.4285714285714286,
+        "hot_memory_stack_ids": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "hot_tx_stack_ids": [
+          0,
+          1,
+          2
+        ],
+        "hot_rx_stack_ids": [
+          3
+        ]
+      },
+      "tx_packet_share_spikekey": 1.0,
+      "rx_packet_share_spikekey": 1.0,
+      "route_memory_joint": {
+        "native_3d_active": true,
+        "vertical_hops_ratio": 0.5,
+        "remote_home_ratio": 0.5,
+        "route_memory_overlap": 1.0,
+        "ingress_replication_cost": 1.6875,
+        "inter_die_multicast_fanout": 0.8125,
+        "die_local_replication_cost": 1.1875,
+        "average_vertical_subtree_depth": 1.0,
+        "tier_local_home_access_ratio": 0.25,
+        "same_xy_cross_tier_access_ratio": 0.65625,
+        "remote_home_access_ratio": 0.09375
+      },
+      "mapping_summary": {
+        "policy": "3d_aware",
+        "score": 0.0234375,
+        "same_home_stack_ratio": 0.90625,
+        "vertical_target_ratio": 0.40625
+      },
+      "thermal_summary": {
+        "thermal_hotspot_score": 1.2152173913043478,
+        "vertical_link_pressure": 0.44375000000000003,
+        "stack_hotspot_penalty": 0.018181818181818077
+      },
+      "physical_summary": {
+        "vertical_bandwidth_budget": 2.0,
+        "tsv_miv_budget_pressure": 0.31201171875,
+        "power_density_score": 1.7627556818181818,
+        "reliability_penalty": 0.5148465021306818
+      },
+      "runtime_summary": {
+        "enabled": true,
+        "policy": "adaptive_3d",
+        "signal_source": "joint_runtime",
+        "route_memory_overlap": 1.0,
+        "vertical_link_pressure": 0.44375000000000003,
+        "stack_hotspot_penalty": 0.018181818181818077,
+        "remap_epoch": 256,
+        "homeroute_adjustment_count": 1,
+        "thermal_guard_actions": 1
+      }
+    },
+    "full_3d_thermal_guard": {
+      "mesh_shape": "4x4x2",
+      "total_nodes": 32,
+      "noc_component": "SnnDL.MulticastRouter3DNative",
+      "memory_kind": "hbm_like",
+      "num_stacks": 4,
+      "memory_graph_type": "memHierarchy_shared_stack",
+      "memory_controller_count": 16,
+      "memory_probe_count": 4,
+      "memory_probe_rows_total": 4,
+      "run_tag": "task9_phase2_smoke",
+      "run_root": "/home/xgy/remote/snn3dexp/runs/full_3d_thermal_guard/task9_phase2_smoke",
+      "status": "smoke_passed",
+      "stack_nmc_available": true,
+      "stack_nmc_summary_path": "/home/xgy/remote/snn3dexp/analysis/full_3d_thermal_guard/task9_phase2_smoke/stack_nmc_summary.json",
+      "route_memory_joint_available": true,
+      "route_memory_joint_summary_path": "/home/xgy/remote/snn3dexp/analysis/full_3d_thermal_guard/task9_phase2_smoke/route_memory_joint_summary.json",
+      "phase2_case_summary_available": true,
+      "phase2_case_summary_path": "/home/xgy/remote/snn3dexp/analysis/full_3d_thermal_guard/task9_phase2_smoke/phase2_case_summary.json",
+      "window_stop_at": "250ns",
+      "traffic_stop_cycle": 512,
+      "traffic_period_cycles": 32,
+      "stream_mem_period_cycles": 32,
+      "stack_nmc_totals": {
+        "memory_requests_total": 448,
+        "tx_spike_pkts_total": 0,
+        "tx_spikekey_pkts_total": 432,
+        "tx_packets_total": 432,
+        "rx_spike_total": 0,
+        "rx_spikekey_total": 256,
+        "rx_packets_total": 256,
+        "stream_mem_bytes_written_total": 14336,
+        "stream_mem_bytes_read_total": 14336,
+        "active_stack_ids": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "stack_balance": {
+        "active_stack_count": 4,
+        "memory_requests_imbalance_ratio": 1.0,
+        "tx_packet_imbalance_ratio": 1.1666666666666667,
+        "rx_packet_imbalance_ratio": 1.4285714285714286,
+        "hot_memory_stack_ids": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "hot_tx_stack_ids": [
+          0,
+          1,
+          2
+        ],
+        "hot_rx_stack_ids": [
+          3
+        ]
+      },
+      "tx_packet_share_spikekey": 1.0,
+      "rx_packet_share_spikekey": 1.0,
+      "route_memory_joint": {
+        "native_3d_active": true,
+        "vertical_hops_ratio": 0.5,
+        "remote_home_ratio": 0.5,
+        "route_memory_overlap": 1.0,
+        "ingress_replication_cost": 0.0,
+        "inter_die_multicast_fanout": 0.0,
+        "die_local_replication_cost": 0.0,
+        "average_vertical_subtree_depth": 0.0,
+        "tier_local_home_access_ratio": 0.0,
+        "same_xy_cross_tier_access_ratio": 0.0,
+        "remote_home_access_ratio": 0.0
+      },
+      "mapping_summary": {
+        "policy": "3d_aware",
+        "score": -0.34375,
+        "same_home_stack_ratio": 0.75,
+        "vertical_target_ratio": 0.25
+      },
+      "thermal_summary": {
+        "thermal_hotspot_score": 1.2152173913043478,
+        "vertical_link_pressure": 0.35000000000000003,
+        "stack_hotspot_penalty": 0.018181818181818077
+      },
+      "physical_summary": {
+        "vertical_bandwidth_budget": 0.0,
+        "tsv_miv_budget_pressure": 0.0,
+        "power_density_score": 0.0,
+        "reliability_penalty": 0.0
+      },
+      "runtime_summary": {
+        "enabled": false,
+        "policy": "",
+        "signal_source": "",
+        "route_memory_overlap": 0.0,
+        "vertical_link_pressure": 0.0,
+        "stack_hotspot_penalty": 0.0,
+        "remap_epoch": 0,
+        "homeroute_adjustment_count": 0,
+        "thermal_guard_actions": 0
+      }
+    },
+    "memory_only_3d": {
+      "mesh_shape": "4x4x2",
+      "total_nodes": 32,
+      "noc_component": "SnnDL.MulticastRouter",
+      "memory_kind": "hbm_like",
+      "num_stacks": 4,
+      "memory_graph_type": "memHierarchy_shared_stack",
+      "memory_controller_count": 16,
+      "memory_probe_count": 4,
+      "memory_probe_rows_total": 4,
+      "run_tag": "task9_phase2_smoke",
+      "run_root": "/home/xgy/remote/snn3dexp/runs/memory_only_3d/task9_phase2_smoke",
+      "status": "smoke_passed",
+      "stack_nmc_available": true,
+      "stack_nmc_summary_path": "/home/xgy/remote/snn3dexp/analysis/memory_only_3d/task9_phase2_smoke/stack_nmc_summary.json",
+      "route_memory_joint_available": true,
+      "route_memory_joint_summary_path": "/home/xgy/remote/snn3dexp/analysis/memory_only_3d/task9_phase2_smoke/route_memory_joint_summary.json",
+      "phase2_case_summary_available": true,
+      "phase2_case_summary_path": "/home/xgy/remote/snn3dexp/analysis/memory_only_3d/task9_phase2_smoke/phase2_case_summary.json",
+      "window_stop_at": "250ns",
+      "traffic_stop_cycle": 512,
+      "traffic_period_cycles": 32,
+      "stream_mem_period_cycles": 32,
+      "stack_nmc_totals": {
+        "memory_requests_total": 448,
+        "tx_spike_pkts_total": 512,
+        "tx_spikekey_pkts_total": 0,
+        "tx_packets_total": 512,
+        "rx_spike_total": 512,
+        "rx_spikekey_total": 0,
+        "rx_packets_total": 512,
+        "stream_mem_bytes_written_total": 14336,
+        "stream_mem_bytes_read_total": 14336,
+        "active_stack_ids": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "stack_balance": {
+        "active_stack_count": 4,
+        "memory_requests_imbalance_ratio": 1.0,
+        "tx_packet_imbalance_ratio": 1.0,
+        "rx_packet_imbalance_ratio": 1.0,
+        "hot_memory_stack_ids": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "hot_tx_stack_ids": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "hot_rx_stack_ids": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "tx_packet_share_spikekey": 0.0,
+      "rx_packet_share_spikekey": 0.0,
+      "route_memory_joint": {
+        "native_3d_active": false,
+        "vertical_hops_ratio": 0.5,
+        "remote_home_ratio": 0.5,
+        "route_memory_overlap": 1.0,
+        "ingress_replication_cost": 0.0,
+        "inter_die_multicast_fanout": 0.0,
+        "die_local_replication_cost": 0.0,
+        "average_vertical_subtree_depth": 0.0,
+        "tier_local_home_access_ratio": 0.0,
+        "same_xy_cross_tier_access_ratio": 0.0,
+        "remote_home_access_ratio": 0.0
+      },
+      "mapping_summary": {
+        "policy": "xy_neighbor",
+        "score": -0.75,
+        "same_home_stack_ratio": 0.5,
+        "vertical_target_ratio": 0.0
+      },
+      "thermal_summary": {
+        "thermal_hotspot_score": 1.25,
+        "vertical_link_pressure": 0.2,
+        "stack_hotspot_penalty": 0.0
+      },
+      "physical_summary": {
+        "vertical_bandwidth_budget": 0.0,
+        "tsv_miv_budget_pressure": 0.0,
+        "power_density_score": 0.0,
+        "reliability_penalty": 0.0
+      },
+      "runtime_summary": {
+        "enabled": false,
+        "policy": "",
+        "signal_source": "",
+        "route_memory_overlap": 0.0,
+        "vertical_link_pressure": 0.0,
+        "stack_hotspot_penalty": 0.0,
+        "remap_epoch": 0,
+        "homeroute_adjustment_count": 0,
+        "thermal_guard_actions": 0
+      }
+    },
+    "noc_only_3d": {
+      "mesh_shape": "4x4x2",
+      "total_nodes": 32,
+      "noc_component": "SnnDL.MulticastRouter3DNative",
+      "memory_kind": "legacy_per_pe",
+      "num_stacks": 0,
+      "memory_graph_type": "legacy_per_pe",
+      "memory_controller_count": 0,
+      "memory_probe_count": 0,
+      "memory_probe_rows_total": 0,
+      "run_tag": "task13_phase2_compose_v2",
+      "run_root": "/home/xgy/remote/snn3dexp/runs/noc_only_3d/task13_phase2_compose_v2",
+      "status": "composed",
+      "stack_nmc_available": false,
+      "stack_nmc_summary_path": "",
+      "route_memory_joint_available": false,
+      "route_memory_joint_summary_path": "",
+      "phase2_case_summary_available": true,
+      "phase2_case_summary_path": "/home/xgy/remote/snn3dexp/analysis/noc_only_3d/task13_phase2_compose_v2/phase2_case_summary.json",
+      "window_stop_at": "",
+      "traffic_stop_cycle": null,
+      "traffic_period_cycles": null,
+      "stream_mem_period_cycles": null,
+      "stack_nmc_totals": {
+        "memory_requests_total": 0,
+        "tx_spike_pkts_total": 0,
+        "tx_spikekey_pkts_total": 0,
+        "tx_packets_total": 0,
+        "rx_spike_total": 0,
+        "rx_spikekey_total": 0,
+        "rx_packets_total": 0,
+        "stream_mem_bytes_written_total": 0,
+        "stream_mem_bytes_read_total": 0,
+        "active_stack_ids": []
+      },
+      "stack_balance": {
+        "active_stack_count": 0,
+        "memory_requests_imbalance_ratio": 0.0,
+        "tx_packet_imbalance_ratio": 0.0,
+        "rx_packet_imbalance_ratio": 0.0,
+        "hot_memory_stack_ids": [],
+        "hot_tx_stack_ids": [],
+        "hot_rx_stack_ids": []
+      },
+      "tx_packet_share_spikekey": 0.0,
+      "rx_packet_share_spikekey": 0.0,
+      "route_memory_joint": {
+        "native_3d_active": false,
+        "vertical_hops_ratio": 0.0,
+        "remote_home_ratio": 0.0,
+        "route_memory_overlap": 0.0,
+        "ingress_replication_cost": 0.0,
+        "inter_die_multicast_fanout": 0.0,
+        "die_local_replication_cost": 0.0,
+        "average_vertical_subtree_depth": 0.0,
+        "tier_local_home_access_ratio": 0.0,
+        "same_xy_cross_tier_access_ratio": 0.0,
+        "remote_home_access_ratio": 0.0
+      },
+      "mapping_summary": {
+        "policy": "z_mirror",
+        "score": 0.0,
+        "same_home_stack_ratio": 0.0,
+        "vertical_target_ratio": 0.0
+      },
+      "thermal_summary": {
+        "thermal_hotspot_score": 0.0,
+        "vertical_link_pressure": 0.0,
+        "stack_hotspot_penalty": 0.0
+      },
+      "physical_summary": {
+        "vertical_bandwidth_budget": 2.0,
+        "tsv_miv_budget_pressure": 0.0,
+        "power_density_score": 0.0,
+        "reliability_penalty": 0.0
+      },
+      "runtime_summary": {
+        "enabled": false,
+        "policy": "disabled",
+        "signal_source": "disabled",
+        "route_memory_overlap": 0.0,
+        "vertical_link_pressure": 0.0,
+        "stack_hotspot_penalty": 0.0,
+        "remap_epoch": 0,
+        "homeroute_adjustment_count": 0,
+        "thermal_guard_actions": 0
+      }
+    }
+  }
+}

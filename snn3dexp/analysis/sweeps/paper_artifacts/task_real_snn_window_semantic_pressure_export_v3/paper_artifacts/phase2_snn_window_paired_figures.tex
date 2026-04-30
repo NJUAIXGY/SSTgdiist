@@ -1,0 +1,18 @@
+\begin{figure*}[t]
+% left figure: phase2_snn_window_route_memory_compare.svg
+% right figure: phase2_snn_window_tail_compare.svg
+% tail_clear_gap_ns=3000
+  \centering
+  \begin{minipage}[t]{0.49\textwidth}
+    \centering
+    \includegraphics[width=\linewidth]{phase2\_snn\_window\_route\_memory\_compare.svg}
+    \caption*{Long-window semantic pressure for direct-v4 versus bundle-v3, highlighting demand, issue efficiency, and backlog deltas in the windowed SNN runtime.}
+  \end{minipage}\hfill
+  \begin{minipage}[t]{0.49\textwidth}
+    \centering
+    \includegraphics[width=\linewidth]{phase2\_snn\_window\_tail\_compare.svg}
+    \caption*{Short-window tail-clearance compare; direct clears at 2us, bundle clears at 5us, with tail\_clear\_gap\_ns=3000.}
+  \end{minipage}
+  \caption{Paired view of SNN-window route-memory behavior: the left panel captures semantic pressure under the selected runtime window, while the right panel isolates the short-tail clearance gap that remains after bundle forwarding. Observed tail\_clear\_gap\_ns=3000 (2us -> 5us).}
+  \label{fig:snn-window-paired-route-tail}
+\end{figure*}

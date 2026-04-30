@@ -1,0 +1,24 @@
+             VMA              LMA     Size Align Out     In      Symbol
+               0                0     8000     1 . = 0x8000
+            8000             8000      144     4 .text
+            8000             8000        8     1         /tmp/crt0-a9e8fd.o:(.text.crt0)
+            8000             8000        0     1                 $x
+            8000             8000        0     1                 _start
+            8008             8008        0     4         /tmp/crt0-a9e8fd.o:(.text)
+            8008             8008      13c     4         /tmp/main-fe3e65.o:(.text)
+            8008             8008        0     1                 $x
+            8008             8008        0     1                 main
+            813c             813c        0     1                 fail
+            8144             8144      ebc     1 . = 0x9000
+            9000             9000       50     1 .rodata
+            9000             9000       50     1         /tmp/main-fe3e65.o:(.rodata)
+            9000             9000        0     1                 descriptor_header
+            9000             9000        0     1                 $d
+               0                0       31     1 .riscv.attributes
+               0                0       31     1         <internal>:(.riscv.attributes)
+               0                0      1e0     8 .symtab
+               0                0      1e0     8         <internal>:(.symtab)
+               0                0       3b     1 .shstrtab
+               0                0       3b     1         <internal>:(.shstrtab)
+               0                0       ef     1 .strtab
+               0                0       ef     1         <internal>:(.strtab)

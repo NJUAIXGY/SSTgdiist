@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="560" viewBox="0 0 1040 560">
+<rect width="100%" height="100%" fill="#fcfbf7"/>
+<text x="52" y="32" font-family="Helvetica, Arial, sans-serif" font-size="22" font-weight="700" fill="#1f2937">Phase2 Runtime Focus Metrics</text>
+<text x="52" y="52" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#4b5563">Derived from native_dense_fixed_step_4_10us runtime ablation summary</text>
+<text x="52" y="70" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#6b7280">Hotspot threshold: 70.0C via effective_config.thermal.hotspot_threshold_c (4 cases)</text>
+<line x1="96" y1="474.00" x2="1004" y2="474.00" stroke="#d1d5db" stroke-width="1"/>
+<text x="86" y="478.00" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#6b7280">0.00</text>
+<line x1="96" y1="394.40" x2="1004" y2="394.40" stroke="#d1d5db" stroke-width="1"/>
+<text x="86" y="398.40" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#6b7280">0.20</text>
+<line x1="96" y1="314.80" x2="1004" y2="314.80" stroke="#d1d5db" stroke-width="1"/>
+<text x="86" y="318.80" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#6b7280">0.40</text>
+<line x1="96" y1="235.20" x2="1004" y2="235.20" stroke="#d1d5db" stroke-width="1"/>
+<text x="86" y="239.20" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#6b7280">0.60</text>
+<line x1="96" y1="155.60" x2="1004" y2="155.60" stroke="#d1d5db" stroke-width="1"/>
+<text x="86" y="159.60" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#6b7280">0.80</text>
+<line x1="96" y1="76.00" x2="1004" y2="76.00" stroke="#d1d5db" stroke-width="1"/>
+<text x="86" y="80.00" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#6b7280">1.00</text>
+<text x="209.50" y="522" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#374151">Same-Home Ratio</text>
+<text x="436.50" y="522" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#374151">Vertical Target Ratio</text>
+<text x="663.50" y="522" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#374151">Vertical Link Pressure</text>
+<text x="890.50" y="522" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#374151">Thermal Hotspot Score</text>
+<rect x="740" y="90" width="14" height="14" rx="3" fill="#264653"/>
+<text x="762" y="101" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#374151">Full 3D</text>
+<rect x="740" y="112" width="14" height="14" rx="3" fill="#2A9D8F"/>
+<text x="762" y="123" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#374151">Full 3D + 3D-Aware Mapping</text>
+<rect x="740" y="134" width="14" height="14" rx="3" fill="#E76F51"/>
+<text x="762" y="145" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#374151">Full 3D + Thermal Guard</text>
+</svg>

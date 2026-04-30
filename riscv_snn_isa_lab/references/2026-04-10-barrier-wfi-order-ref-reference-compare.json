@@ -1,0 +1,70 @@
+{
+  "artifact_role": "dated_reference_compare_family_surface",
+  "authority_scope": "reference_compare_only",
+  "comparison": {
+    "allowed_divergence_points": [
+      "backpressure"
+    ],
+    "fabric_stage_alignment": true,
+    "gate_ok": true,
+    "gate_reasons": [],
+    "invalid_divergence_points": [],
+    "memory_domain_alignment": true,
+    "reference_fabric_stages": [
+      "ingress_receive",
+      "execution_consume"
+    ],
+    "reference_memory_domains": [
+      "ControlMemory"
+    ],
+    "reference_terminal_state": "Completed",
+    "runtime_fabric_stages": [
+      "ingress_receive",
+      "execution_consume"
+    ],
+    "runtime_memory_domains": [
+      "ControlMemory"
+    ],
+    "runtime_terminal_state": "Completed",
+    "status": "allowed_divergence",
+    "terminal_state_match": true
+  },
+  "equiv_summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-04-02-barrier-wfi-order-ref-equiv.json",
+  "family": "barrier_wfi_order_ref",
+  "gate_ok": true,
+  "gate_reasons": [],
+  "generated_utc": "2026-04-10T02:50:42.060164+00:00",
+  "producer": "riscv_snn_lab.run_reference_compare_family",
+  "reference_terminal_state": "Completed",
+  "runtime_policy": {
+    "allowed_completion_signature": "completion visibility alone may satisfy progress when barrier wakeup retires before software consumes the completion",
+    "allowed_fault_signature": "fault snapshot may remain zero or non-zero, but any observed fault must keep a visible snapshot",
+    "fault_lifecycle_mode": "none",
+    "fault_mode": "quiescent",
+    "progress_mode": "forward_progress_expected",
+    "required_checks": [
+      "provider_bound_visible",
+      "fused_step_completion_visible",
+      "completion_visible",
+      "completion_consumed_covers_visible",
+      "fault_snapshot_consistent"
+    ],
+    "timing_mode": "wfi_barrier_completion_visibility"
+  },
+  "runtime_summary": {
+    "divergence_points": [
+      "backpressure"
+    ],
+    "fabric_stages": [
+      "ingress_receive",
+      "execution_consume"
+    ],
+    "family": "barrier_wfi_order_ref",
+    "memory_domains": [
+      "ControlMemory"
+    ],
+    "terminal_state": "Completed"
+  },
+  "schema_version": 2,
+  "status": "allowed_divergence"
+}

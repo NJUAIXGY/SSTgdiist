@@ -1,0 +1,12 @@
+{
+  "case_ids": [
+    "full_3d_snn_window",
+    "full_3d_snn_window_bundle_v3",
+    "full_3d_snn_window_monolithic_proxy"
+  ],
+  "run_tags_by_case": {
+    "full_3d_snn_window": "same_tag_stopwindow_fresh_20260323_20us",
+    "full_3d_snn_window_bundle_v3": "same_tag_stopwindow_fresh_20260323_20us",
+    "full_3d_snn_window_monolithic_proxy": "same_tag_stopwindow_fresh_20260323_20us"
+  }
+}

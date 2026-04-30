@@ -1,0 +1,4 @@
+matrix_group,compare_kind,run_tag,row_family,phase_order,phase,row_count,dominant_axis,dominant_axis_counts_json,key_signal,progression_signature,phase_transition_from_previous,earliest_same_controller_overlap_stop_at
+,,,mechanism_progression,1,window_route,1,stable_or_zero,"{""stable_or_zero"": 1}","alignment={""stable"": 1}",stable_or_zero -> unavailable -> unavailable,no,
+,,,mechanism_progression,2,window_stop,0,unavailable,{},same_controller_overlap@unavailable,stable_or_zero -> unavailable -> unavailable,no,
+,,,mechanism_progression,3,runtime_compare,0,unavailable,{},compare_kinds={},stable_or_zero -> unavailable -> unavailable,no,

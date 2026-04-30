@@ -1,0 +1,18 @@
+{
+  "canonical_surface": false,
+  "count": 1,
+  "generated_utc": "2026-03-28T16:02:17.309547+00:00",
+  "group": "toolchain",
+  "register": false,
+  "requested_programs": [
+    "external_dyn_desc_ref_toolchain"
+  ],
+  "results": [
+    {
+      "manifest_path": null,
+      "program": "external_dyn_desc_ref_toolchain",
+      "run_dir": "/home/xgy/remote/sst_dram_si/outputs_large/paper2/dram_mesh_4x4/20260329-000155",
+      "suite": "toolchain"
+    }
+  ]
+}

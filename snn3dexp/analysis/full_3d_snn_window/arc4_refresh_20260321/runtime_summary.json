@@ -1,0 +1,72 @@
+{
+  "enabled": false,
+  "policy": "disabled",
+  "signal_source": "disabled",
+  "thermal_signal_source": "thermal_hooks",
+  "thermal_state_source": "thermal_hooks",
+  "control_epoch_scope": "",
+  "control_execution_enabled": false,
+  "control_decision": "disabled",
+  "observe_only": true,
+  "recommend_only": false,
+  "executed_control": false,
+  "base_weights": {
+    "mapping_route_weight": 1.0,
+    "mapping_stack_home_weight": 1.5,
+    "mapping_vertical_penalty": 0.75
+  },
+  "applied_weights": {
+    "mapping_route_weight": 1.0,
+    "mapping_stack_home_weight": 1.5,
+    "mapping_vertical_penalty": 0.75
+  },
+  "route_memory_overlap": 0.0,
+  "vertical_link_pressure": 0.0,
+  "stack_hotspot_penalty": 0.0,
+  "remap_epoch": 0,
+  "homeroute_adjustment_count": 0,
+  "thermal_guard_actions": 0,
+  "action_labels": [],
+  "recommended_actions": [],
+  "recommended_weights": {
+    "mapping_route_weight": 1.0,
+    "mapping_stack_home_weight": 1.5,
+    "mapping_vertical_penalty": 0.75
+  },
+  "next_window_processing_params": {},
+  "control_artifact_path": "",
+  "thermal_observability": {
+    "peak_temperature_c": null,
+    "avg_temperature_c": null,
+    "hotspot_block_count": 0,
+    "hotspot_layer_count": 0,
+    "vertical_gradient_c": 0.0,
+    "top_layer_peak_c": null,
+    "bottom_layer_peak_c": null,
+    "thermal_hotspot_score": 1.2435897435897436
+  },
+  "global_step_observability": {
+    "enabled": true,
+    "controller_present": true,
+    "controller_seq_last": 2,
+    "controller_steps_started_total": 2,
+    "controller_steps_completed_total": 1,
+    "controller_pe_ready_events_total": 32,
+    "controller_pe_done_events_total": 40,
+    "controller_warn_count_total": 0,
+    "step_start_count": 2,
+    "step_done_count": 1,
+    "pe_global_steps_done_total": 40,
+    "pe_global_steps_done_max": 2,
+    "active_step_nodes": 32,
+    "stall_on_step_gate_cycles_total": 28324,
+    "stall_on_step_gate_cycles_max": 1642,
+    "step_activation_invocations_total": 0,
+    "step_activation_pre_selected_total": 0,
+    "step_activation_spike_attempts_total": 0,
+    "step_activation_spikes_injected_total": 0,
+    "step_activation_route_hits_total": 0,
+    "step_activation_route_misses_total": 0,
+    "step_activation_local_drops_total": 0
+  }
+}

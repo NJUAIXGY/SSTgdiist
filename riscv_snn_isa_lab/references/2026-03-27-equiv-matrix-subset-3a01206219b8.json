@@ -1,0 +1,58 @@
+{
+  "all_ok": true,
+  "artifact_role": "dated_equivalence_matrix",
+  "authority_scope": "family_level_equivalence_authority",
+  "canonical_surface": false,
+  "count": 6,
+  "families": [
+    {
+      "family": "barrier_wfi_order_ref",
+      "gate_reasons": [],
+      "status": "PASS",
+      "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-03-27-barrier-wfi-order-ref-equiv.json"
+    },
+    {
+      "family": "external_dyn_desc_bad_policy_ref",
+      "gate_reasons": [],
+      "status": "PASS",
+      "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-03-27-external-dyn-desc-bad-policy-ref-equiv.json"
+    },
+    {
+      "family": "external_dyn_desc_fault_overwrite_chain_ref",
+      "gate_reasons": [],
+      "status": "PASS",
+      "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-03-27-external-dyn-desc-fault-overwrite-chain-ref-equiv.json"
+    },
+    {
+      "family": "external_dyn_desc_fault_rearm_ref",
+      "gate_reasons": [],
+      "status": "PASS",
+      "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-03-27-external-dyn-desc-fault-rearm-ref-equiv.json"
+    },
+    {
+      "family": "external_dyn_desc_fault_ref",
+      "gate_reasons": [],
+      "status": "PASS",
+      "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-03-27-external-dyn-desc-fault-ref-equiv.json"
+    },
+    {
+      "family": "external_dyn_desc_ref",
+      "gate_reasons": [],
+      "status": "PASS",
+      "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-03-27-external-dyn-desc-ref-equiv.json"
+    }
+  ],
+  "gate_name": "riscv_snn_equiv_matrix",
+  "generated_utc": "2026-03-27T09:52:55.313479+00:00",
+  "producer": "riscv_snn_lab.run_equiv_matrix",
+  "requested_families": [
+    "barrier_wfi_order_ref",
+    "external_dyn_desc_bad_policy_ref",
+    "external_dyn_desc_fault_overwrite_chain_ref",
+    "external_dyn_desc_fault_rearm_ref",
+    "external_dyn_desc_fault_ref",
+    "external_dyn_desc_ref"
+  ],
+  "requested_group": "all",
+  "schema_version": 2
+}

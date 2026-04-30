@@ -1,0 +1,186 @@
+{
+  "family_label": "native_dense_family_mainline_20260324",
+  "window_case_ids": [
+    "full_3d_snn_window",
+    "full_3d_snn_window_bundle_v3",
+    "full_3d_snn_window_monolithic_proxy"
+  ],
+  "fixed_step_run_tags": [
+    "native_dense_fixed_step_4_10us",
+    "native_dense_fixed_step_4_10us_sp64",
+    "native_dense_fixed_step_8_20us",
+    "native_dense_fixed_step_8_20us_sp64",
+    "native_dense_fixed_step_16_40us",
+    "native_dense_fixed_step_16_40us_sp64"
+  ],
+  "surface_run_tag": "native_dense_fixed_step_8_20us",
+  "fixed_step_execution": {
+    "path": "/home/xgy/remote/snn3dexp/analysis/windowed_native_dense_family/native_dense_family_mainline_20260324/fixed_step_execution/fixed_step_multicase_sweep_summary.json",
+    "run_tags": [
+      "native_dense_fixed_step_4_10us",
+      "native_dense_fixed_step_4_10us_sp64",
+      "native_dense_fixed_step_8_20us",
+      "native_dense_fixed_step_8_20us_sp64",
+      "native_dense_fixed_step_16_40us",
+      "native_dense_fixed_step_16_40us_sp64"
+    ],
+    "case_ids": [
+      "full_3d_snn_window",
+      "full_3d_snn_window_bundle_v3",
+      "full_3d_snn_window_monolithic_proxy"
+    ]
+  },
+  "fixed_step_analysis": {
+    "path": "/home/xgy/remote/snn3dexp/analysis/windowed_native_dense_family/native_dense_family_mainline_20260324/fixed_step_analysis/fixed_step_sweep_summary.json",
+    "run_tags": [
+      "native_dense_fixed_step_4_10us",
+      "native_dense_fixed_step_4_10us_sp64",
+      "native_dense_fixed_step_8_20us",
+      "native_dense_fixed_step_8_20us_sp64",
+      "native_dense_fixed_step_16_40us",
+      "native_dense_fixed_step_16_40us_sp64"
+    ],
+    "case_ids": [
+      "full_3d_snn_window",
+      "full_3d_snn_window_bundle_v3",
+      "full_3d_snn_window_monolithic_proxy"
+    ]
+  },
+  "window_ablation_manifests": [
+    {
+      "run_tag": "native_dense_fixed_step_4_10us",
+      "path": "/home/xgy/remote/snn3dexp/analysis/windowed_native_dense_family/native_dense_family_mainline_20260324/window_ablation/native_dense_fixed_step_4_10us.json",
+      "requested_case_ids": [
+        "full_3d_snn_window",
+        "full_3d_snn_window_bundle_v3",
+        "full_3d_snn_window_monolithic_proxy"
+      ],
+      "requested_run_tags_by_case": {
+        "full_3d_snn_window": "native_dense_fixed_step_4_10us",
+        "full_3d_snn_window_bundle_v3": "native_dense_fixed_step_4_10us",
+        "full_3d_snn_window_monolithic_proxy": "native_dense_fixed_step_4_10us"
+      }
+    },
+    {
+      "run_tag": "native_dense_fixed_step_4_10us_sp64",
+      "path": "/home/xgy/remote/snn3dexp/analysis/windowed_native_dense_family/native_dense_family_mainline_20260324/window_ablation/native_dense_fixed_step_4_10us_sp64.json",
+      "requested_case_ids": [
+        "full_3d_snn_window",
+        "full_3d_snn_window_bundle_v3",
+        "full_3d_snn_window_monolithic_proxy"
+      ],
+      "requested_run_tags_by_case": {
+        "full_3d_snn_window": "native_dense_fixed_step_4_10us_sp64",
+        "full_3d_snn_window_bundle_v3": "native_dense_fixed_step_4_10us_sp64",
+        "full_3d_snn_window_monolithic_proxy": "native_dense_fixed_step_4_10us_sp64"
+      }
+    },
+    {
+      "run_tag": "native_dense_fixed_step_8_20us",
+      "path": "/home/xgy/remote/snn3dexp/analysis/windowed_native_dense_family/native_dense_family_mainline_20260324/window_ablation/native_dense_fixed_step_8_20us.json",
+      "requested_case_ids": [
+        "full_3d_snn_window",
+        "full_3d_snn_window_bundle_v3",
+        "full_3d_snn_window_monolithic_proxy"
+      ],
+      "requested_run_tags_by_case": {
+        "full_3d_snn_window": "native_dense_fixed_step_8_20us",
+        "full_3d_snn_window_bundle_v3": "native_dense_fixed_step_8_20us",
+        "full_3d_snn_window_monolithic_proxy": "native_dense_fixed_step_8_20us"
+      }
+    },
+    {
+      "run_tag": "native_dense_fixed_step_8_20us_sp64",
+      "path": "/home/xgy/remote/snn3dexp/analysis/windowed_native_dense_family/native_dense_family_mainline_20260324/window_ablation/native_dense_fixed_step_8_20us_sp64.json",
+      "requested_case_ids": [
+        "full_3d_snn_window",
+        "full_3d_snn_window_bundle_v3",
+        "full_3d_snn_window_monolithic_proxy"
+      ],
+      "requested_run_tags_by_case": {
+        "full_3d_snn_window": "native_dense_fixed_step_8_20us_sp64",
+        "full_3d_snn_window_bundle_v3": "native_dense_fixed_step_8_20us_sp64",
+        "full_3d_snn_window_monolithic_proxy": "native_dense_fixed_step_8_20us_sp64"
+      }
+    },
+    {
+      "run_tag": "native_dense_fixed_step_16_40us",
+      "path": "/home/xgy/remote/snn3dexp/analysis/windowed_native_dense_family/native_dense_family_mainline_20260324/window_ablation/native_dense_fixed_step_16_40us.json",
+      "requested_case_ids": [
+        "full_3d_snn_window",
+        "full_3d_snn_window_bundle_v3",
+        "full_3d_snn_window_monolithic_proxy"
+      ],
+      "requested_run_tags_by_case": {
+        "full_3d_snn_window": "native_dense_fixed_step_16_40us",
+        "full_3d_snn_window_bundle_v3": "native_dense_fixed_step_16_40us",
+        "full_3d_snn_window_monolithic_proxy": "native_dense_fixed_step_16_40us"
+      }
+    },
+    {
+      "run_tag": "native_dense_fixed_step_16_40us_sp64",
+      "path": "/home/xgy/remote/snn3dexp/analysis/windowed_native_dense_family/native_dense_family_mainline_20260324/window_ablation/native_dense_fixed_step_16_40us_sp64.json",
+      "requested_case_ids": [
+        "full_3d_snn_window",
+        "full_3d_snn_window_bundle_v3",
+        "full_3d_snn_window_monolithic_proxy"
+      ],
+      "requested_run_tags_by_case": {
+        "full_3d_snn_window": "native_dense_fixed_step_16_40us_sp64",
+        "full_3d_snn_window_bundle_v3": "native_dense_fixed_step_16_40us_sp64",
+        "full_3d_snn_window_monolithic_proxy": "native_dense_fixed_step_16_40us_sp64"
+      }
+    }
+  ],
+  "surface_ablation": {
+    "run_tag": "native_dense_fixed_step_8_20us",
+    "path": "/home/xgy/remote/snn3dexp/analysis/windowed_native_dense_family/native_dense_family_mainline_20260324/window_ablation/native_dense_fixed_step_8_20us.json",
+    "requested_case_ids": [
+      "full_3d_snn_window",
+      "full_3d_snn_window_bundle_v3",
+      "full_3d_snn_window_monolithic_proxy"
+    ],
+    "requested_run_tags_by_case": {
+      "full_3d_snn_window": "native_dense_fixed_step_8_20us",
+      "full_3d_snn_window_bundle_v3": "native_dense_fixed_step_8_20us",
+      "full_3d_snn_window_monolithic_proxy": "native_dense_fixed_step_8_20us"
+    }
+  },
+  "phase2_artifacts": {
+    "available": true,
+    "path": "/home/xgy/remote/snn3dexp/analysis/windowed_native_dense_family/native_dense_family_mainline_20260324/phase2_artifacts/phase2_runtime_summary.json",
+    "outputs": {
+      "csv": "/home/xgy/remote/snn3dexp/analysis/windowed_native_dense_family/native_dense_family_mainline_20260324/phase2_artifacts/phase2_runtime_baseline_table.csv",
+      "markdown": "/home/xgy/remote/snn3dexp/analysis/windowed_native_dense_family/native_dense_family_mainline_20260324/phase2_artifacts/phase2_runtime_baseline_table.md",
+      "latex": "/home/xgy/remote/snn3dexp/analysis/windowed_native_dense_family/native_dense_family_mainline_20260324/phase2_artifacts/phase2_runtime_baseline_table.tex",
+      "svg": "/home/xgy/remote/snn3dexp/analysis/windowed_native_dense_family/native_dense_family_mainline_20260324/phase2_artifacts/phase2_runtime_focus_metrics.svg",
+      "route_memory_compare_svg": "/home/xgy/remote/snn3dexp/analysis/windowed_native_dense_family/native_dense_family_mainline_20260324/phase2_artifacts/phase2_route_memory_compare.svg",
+      "snn_window_route_memory_compare_svg": "/home/xgy/remote/snn3dexp/analysis/windowed_native_dense_family/native_dense_family_mainline_20260324/phase2_artifacts/phase2_snn_window_route_memory_compare.svg",
+      "snn_window_route_memory_compare_csv": "/home/xgy/remote/snn3dexp/analysis/windowed_native_dense_family/native_dense_family_mainline_20260324/phase2_artifacts/phase2_snn_window_route_memory_compare.csv",
+      "memory_model_compare_svg": "/home/xgy/remote/snn3dexp/analysis/windowed_native_dense_family/native_dense_family_mainline_20260324/phase2_artifacts/phase2_memory_model_compare.svg",
+      "memory_tier_csv": "/home/xgy/remote/snn3dexp/analysis/windowed_native_dense_family/native_dense_family_mainline_20260324/phase2_artifacts/phase2_memory_tier_table.csv",
+      "thermal_calibration_csv": "/home/xgy/remote/snn3dexp/analysis/windowed_native_dense_family/native_dense_family_mainline_20260324/phase2_artifacts/phase2_thermal_calibration_table.csv",
+      "thermal_calibration_svg": "/home/xgy/remote/snn3dexp/analysis/windowed_native_dense_family/native_dense_family_mainline_20260324/phase2_artifacts/phase2_thermal_calibration_compare.svg",
+      "memory_home_stack_codesign_csv": "/home/xgy/remote/snn3dexp/analysis/windowed_native_dense_family/native_dense_family_mainline_20260324/phase2_artifacts/phase2_memory_home_stack_codesign.csv",
+      "memory_home_stack_codesign_markdown": "/home/xgy/remote/snn3dexp/analysis/windowed_native_dense_family/native_dense_family_mainline_20260324/phase2_artifacts/phase2_memory_home_stack_codesign.md",
+      "memory_home_stack_codesign_latex": "/home/xgy/remote/snn3dexp/analysis/windowed_native_dense_family/native_dense_family_mainline_20260324/phase2_artifacts/phase2_memory_home_stack_codesign.tex",
+      "summary_json": "/home/xgy/remote/snn3dexp/analysis/windowed_native_dense_family/native_dense_family_mainline_20260324/phase2_artifacts/phase2_runtime_summary.json",
+      "memory_nmc_codesign_surface_summary_json": "/home/xgy/remote/snn3dexp/analysis/windowed_native_dense_family/native_dense_family_mainline_20260324/phase2_artifacts/codesign_surface/memory_nmc_codesign_surface_summary.json",
+      "memory_nmc_codesign_surface_csv": "/home/xgy/remote/snn3dexp/analysis/windowed_native_dense_family/native_dense_family_mainline_20260324/phase2_artifacts/codesign_surface/memory_nmc_codesign_surface.csv",
+      "memory_nmc_codesign_surface_markdown": "/home/xgy/remote/snn3dexp/analysis/windowed_native_dense_family/native_dense_family_mainline_20260324/phase2_artifacts/codesign_surface/memory_nmc_codesign_surface.md",
+      "route_runtime_diff_summary_json": "/home/xgy/remote/snn3dexp/analysis/windowed_native_dense_family/native_dense_family_mainline_20260324/phase2_artifacts/route_runtime_diff/memory_nmc_route_runtime_diff_summary.json",
+      "route_runtime_diff_csv": "/home/xgy/remote/snn3dexp/analysis/windowed_native_dense_family/native_dense_family_mainline_20260324/phase2_artifacts/route_runtime_diff/memory_nmc_route_runtime_diff.csv",
+      "route_runtime_diff_markdown": "/home/xgy/remote/snn3dexp/analysis/windowed_native_dense_family/native_dense_family_mainline_20260324/phase2_artifacts/route_runtime_diff/memory_nmc_route_runtime_diff.md",
+      "route_runtime_diff_mechanism_progression_csv": "/home/xgy/remote/snn3dexp/analysis/windowed_native_dense_family/native_dense_family_mainline_20260324/phase2_artifacts/route_runtime_diff/memory_nmc_route_runtime_mechanism_progression.csv",
+      "route_runtime_diff_joint_pressure_csv": "/home/xgy/remote/snn3dexp/analysis/windowed_native_dense_family/native_dense_family_mainline_20260324/phase2_artifacts/route_runtime_diff/memory_nmc_route_runtime_joint_pressure.csv"
+    }
+  },
+  "codesign_surface": {
+    "available": true,
+    "path": "/home/xgy/remote/snn3dexp/analysis/windowed_native_dense_family/native_dense_family_mainline_20260324/phase2_artifacts/codesign_surface/memory_nmc_codesign_surface_summary.json",
+    "surface_label": "native_dense_fixed_step_8_20us"
+  },
+  "outputs": {
+    "summary_json": "/home/xgy/remote/snn3dexp/analysis/windowed_native_dense_family/native_dense_family_mainline_20260324/windowed_native_dense_family_summary.json"
+  }
+}

@@ -1,0 +1,302 @@
+{
+  "run_tag": "",
+  "requested_run_tags_by_case": {
+    "full_3d_snn_window": "task_real_snn_window_semantic_runtime_v8_ablation_2us",
+    "full_3d_snn_window_bundle_v3": "task_real_snn_window_bundle_v8_ablation_2us"
+  },
+  "case_order": [
+    "full_3d_snn_window",
+    "full_3d_snn_window_bundle_v3"
+  ],
+  "focus_cases": [
+    "full_3d",
+    "full_3d_mapping",
+    "full_3d_thermal_guard"
+  ],
+  "comparisons": {
+    "mapping_vs_full_3d": {
+      "mapping_score_delta": 0.0,
+      "same_home_stack_ratio_delta": 0.0,
+      "vertical_target_ratio_delta": 0.0,
+      "vertical_hops_ratio_delta": 0.0,
+      "remote_home_ratio_delta": 0.0,
+      "route_memory_overlap_delta": 0.0,
+      "vertical_link_pressure_delta": 0.0,
+      "thermal_hotspot_score_delta": 0.0,
+      "stack_hotspot_penalty_delta": 0.0,
+      "vertical_bandwidth_budget_delta": 0.0,
+      "tsv_miv_budget_pressure_delta": 0.0,
+      "power_density_score_delta": 0.0,
+      "reliability_penalty_delta": 0.0,
+      "remap_epoch_delta": 0.0,
+      "homeroute_adjustment_count_delta": 0.0,
+      "thermal_guard_actions_delta": 0.0
+    },
+    "thermal_guard_vs_mapping": {
+      "mapping_score_delta": 0.0,
+      "same_home_stack_ratio_delta": 0.0,
+      "vertical_target_ratio_delta": 0.0,
+      "vertical_hops_ratio_delta": 0.0,
+      "remote_home_ratio_delta": 0.0,
+      "route_memory_overlap_delta": 0.0,
+      "vertical_link_pressure_delta": 0.0,
+      "thermal_hotspot_score_delta": 0.0,
+      "stack_hotspot_penalty_delta": 0.0,
+      "vertical_bandwidth_budget_delta": 0.0,
+      "tsv_miv_budget_pressure_delta": 0.0,
+      "power_density_score_delta": 0.0,
+      "reliability_penalty_delta": 0.0,
+      "remap_epoch_delta": 0.0,
+      "homeroute_adjustment_count_delta": 0.0,
+      "thermal_guard_actions_delta": 0.0
+    }
+  },
+  "focus_metrics": [],
+  "runtime_focus_cases": [],
+  "runtime_focus_metrics": [],
+  "runtime_comparisons": {},
+  "route_memory_comparisons": {
+    "direct_v4_vs_bundle_v3": {
+      "available": false,
+      "base_case_id": "full_3d",
+      "compare_case_id": "full_3d_tile_bundle_v3",
+      "base": {},
+      "compare": {},
+      "deltas": {}
+    },
+    "snn_window_direct_v4_vs_bundle_v3": {
+      "available": true,
+      "base_case_id": "full_3d_snn_window",
+      "compare_case_id": "full_3d_snn_window_bundle_v3",
+      "base": {
+        "case_id": "full_3d_snn_window",
+        "direct_v4_share": 1.0,
+        "tile_bundle_v3_share": 0.0,
+        "memory_requests_total": 260,
+        "stream_region_demands": 64,
+        "stream_region_issued": 64,
+        "stream_region_backlog": 0,
+        "stream_region_issue_efficiency": 1.0,
+        "stream_region_bytes_written_total": 4096,
+        "stream_region_bytes_read_total": 2048,
+        "writeback_region_demands": 24,
+        "writeback_region_issued": 24,
+        "writeback_region_backlog": 0,
+        "writeback_region_issue_efficiency": 1.0,
+        "writeback_region_bytes_written_total": 1536,
+        "writeback_region_bytes_read_total": 768,
+        "most_pressured_region": "metadata_lookup"
+      },
+      "compare": {
+        "case_id": "full_3d_snn_window_bundle_v3",
+        "direct_v4_share": 0.0,
+        "tile_bundle_v3_share": 1.0,
+        "memory_requests_total": 872,
+        "stream_region_demands": 256,
+        "stream_region_issued": 248,
+        "stream_region_backlog": 8,
+        "stream_region_issue_efficiency": 0.96875,
+        "stream_region_bytes_written_total": 15872,
+        "stream_region_bytes_read_total": 10752,
+        "writeback_region_demands": 96,
+        "writeback_region_issued": 96,
+        "writeback_region_backlog": 0,
+        "writeback_region_issue_efficiency": 1.0,
+        "writeback_region_bytes_written_total": 6144,
+        "writeback_region_bytes_read_total": 4096,
+        "most_pressured_region": "stream_region"
+      },
+      "deltas": {
+        "memory_requests_total": 612,
+        "stream_region_demands": 192,
+        "stream_region_issued": 184,
+        "stream_region_backlog": 8,
+        "stream_region_issue_efficiency": -0.03125,
+        "stream_region_bytes_written_total": 11776,
+        "stream_region_bytes_read_total": 8704,
+        "writeback_region_demands": 72,
+        "writeback_region_issued": 72,
+        "writeback_region_backlog": 0,
+        "writeback_region_issue_efficiency": 0.0,
+        "writeback_region_bytes_written_total": 4608,
+        "writeback_region_bytes_read_total": 3328,
+        "direct_v4_share": -1.0,
+        "tile_bundle_v3_share": 1.0
+      }
+    }
+  },
+  "memory_model_focus_cases": [],
+  "memory_model_focus_metrics": [],
+  "memory_model_comparisons": {
+    "hbm_like_vs_monolithic_like": {
+      "available": false,
+      "base_case_id": "full_3d",
+      "compare_case_id": "full_3d_monolithic_proxy",
+      "base": {},
+      "compare": {},
+      "deltas": {},
+      "base_case_tier_balance": {},
+      "compare_case_tier_balance": {},
+      "base_case_tier_totals": [],
+      "compare_case_tier_totals": []
+    }
+  },
+  "thermal_calibration": {
+    "available": false,
+    "filter": {
+      "hotspot_driver_status": "ran"
+    },
+    "summary": {
+      "eligible_case_count": 0,
+      "eligible_case_ids": [],
+      "excluded_case_ids": [
+        "full_3d_snn_window",
+        "full_3d_snn_window_bundle_v3"
+      ],
+      "hotspot_status_counts": {
+        "disabled": 2
+      },
+      "hotspot_temperature_source_counts": {},
+      "runtime_state_source_counts": {
+        "disabled": 2
+      }
+    },
+    "cases": [],
+    "metrics": {
+      "hotspot_peak_delta_c": {
+        "count": 0,
+        "mean": 0.0,
+        "abs_mean": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "max_abs": 0.0,
+        "min_case_id": "",
+        "max_case_id": "",
+        "max_abs_case_id": "",
+        "min_run_tag": "",
+        "max_run_tag": "",
+        "max_abs_run_tag": ""
+      },
+      "hotspot_avg_delta_c": {
+        "count": 0,
+        "mean": 0.0,
+        "abs_mean": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "max_abs": 0.0,
+        "min_case_id": "",
+        "max_case_id": "",
+        "max_abs_case_id": "",
+        "min_run_tag": "",
+        "max_run_tag": "",
+        "max_abs_run_tag": ""
+      },
+      "hotspot_block_delta": {
+        "count": 0,
+        "mean": 0.0,
+        "abs_mean": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "max_abs": 0.0,
+        "min_case_id": "",
+        "max_case_id": "",
+        "max_abs_case_id": "",
+        "min_run_tag": "",
+        "max_run_tag": "",
+        "max_abs_run_tag": ""
+      },
+      "hotspot_layer_delta": {
+        "count": 0,
+        "mean": 0.0,
+        "abs_mean": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "max_abs": 0.0,
+        "min_case_id": "",
+        "max_case_id": "",
+        "max_abs_case_id": "",
+        "min_run_tag": "",
+        "max_run_tag": "",
+        "max_abs_run_tag": ""
+      }
+    }
+  },
+  "realism_focus_metrics": [],
+  "snn_window_tail_compare": {
+    "available": true,
+    "direct_case_id": "full_3d_snn_window",
+    "bundle_case_id": "full_3d_snn_window_bundle_v3",
+    "direct_run_tag_prefix": "task_real_snn_window_direct_tail_sweep_v1",
+    "bundle_run_tag_prefix": "task_real_snn_window_bundle_tail_sweep_v1",
+    "direct_tail_clear_stop_at": "2us",
+    "bundle_tail_clear_stop_at": "5us",
+    "direct_tail_clear_observed": true,
+    "bundle_tail_clear_observed": true,
+    "tail_clear_gap_ns": 3000,
+    "windows": [
+      {
+        "stop_at": "2us",
+        "stop_at_ns": 2000,
+        "direct_stream_region_backlog": 0,
+        "bundle_stream_region_backlog": 8,
+        "stream_region_backlog_delta": 8,
+        "direct_total_service_deficit": 0,
+        "bundle_total_service_deficit": 8,
+        "total_service_deficit_delta": 8,
+        "direct_run_tag": "task_real_snn_window_direct_tail_sweep_v1_2us",
+        "bundle_run_tag": "task_real_snn_window_bundle_tail_sweep_v1_2us"
+      },
+      {
+        "stop_at": "5us",
+        "stop_at_ns": 5000,
+        "direct_stream_region_backlog": 0,
+        "bundle_stream_region_backlog": 0,
+        "stream_region_backlog_delta": 0,
+        "direct_total_service_deficit": 0,
+        "bundle_total_service_deficit": 0,
+        "total_service_deficit_delta": 0,
+        "direct_run_tag": "task_real_snn_window_direct_tail_sweep_v1_5us",
+        "bundle_run_tag": "task_real_snn_window_bundle_tail_sweep_v1_5us"
+      },
+      {
+        "stop_at": "10us",
+        "stop_at_ns": 10000,
+        "direct_stream_region_backlog": 0,
+        "bundle_stream_region_backlog": 0,
+        "stream_region_backlog_delta": 0,
+        "direct_total_service_deficit": 0,
+        "bundle_total_service_deficit": 0,
+        "total_service_deficit_delta": 0,
+        "direct_run_tag": "task_real_snn_window_direct_tail_sweep_v1_10us",
+        "bundle_run_tag": "task_real_snn_window_bundle_tail_sweep_v1_10us"
+      }
+    ],
+    "source_summaries": {
+      "direct_summary_json": "/home/xgy/remote/snn3dexp/analysis/sweeps/full_3d_snn_window/task_real_snn_window_direct_tail_sweep_v1/bundle_window_sweep_summary.json",
+      "bundle_summary_json": "/home/xgy/remote/snn3dexp/analysis/sweeps/full_3d_snn_window_bundle_v3/task_real_snn_window_bundle_tail_sweep_v1/bundle_window_sweep_summary.json"
+    },
+    "outputs": {
+      "csv": "/home/xgy/remote/snn3dexp/analysis/sweeps/paper_artifacts/task_real_snn_window_semantic_pressure_export_v2/paper_artifacts/phase2_snn_window_tail_compare.csv",
+      "svg": "/home/xgy/remote/snn3dexp/analysis/sweeps/paper_artifacts/task_real_snn_window_semantic_pressure_export_v2/paper_artifacts/phase2_snn_window_tail_compare.svg",
+      "summary_json": "/home/xgy/remote/snn3dexp/analysis/sweeps/paper_artifacts/task_real_snn_window_semantic_pressure_export_v2/paper_artifacts/phase2_snn_window_tail_compare_summary.json"
+    },
+    "source_summary_json": "/home/xgy/remote/snn3dexp/analysis/sweeps/paper_artifacts/task_real_snn_window_tail_compare_v1/paper_artifacts/snn_window_tail_compare_summary.json"
+  },
+  "outputs": {
+    "csv": "/home/xgy/remote/snn3dexp/analysis/sweeps/paper_artifacts/task_real_snn_window_semantic_pressure_export_v2/paper_artifacts/phase2_runtime_baseline_table.csv",
+    "markdown": "/home/xgy/remote/snn3dexp/analysis/sweeps/paper_artifacts/task_real_snn_window_semantic_pressure_export_v2/paper_artifacts/phase2_runtime_baseline_table.md",
+    "latex": "/home/xgy/remote/snn3dexp/analysis/sweeps/paper_artifacts/task_real_snn_window_semantic_pressure_export_v2/paper_artifacts/phase2_runtime_baseline_table.tex",
+    "svg": "/home/xgy/remote/snn3dexp/analysis/sweeps/paper_artifacts/task_real_snn_window_semantic_pressure_export_v2/paper_artifacts/phase2_runtime_focus_metrics.svg",
+    "route_memory_compare_svg": "/home/xgy/remote/snn3dexp/analysis/sweeps/paper_artifacts/task_real_snn_window_semantic_pressure_export_v2/paper_artifacts/phase2_route_memory_compare.svg",
+    "snn_window_route_memory_compare_svg": "/home/xgy/remote/snn3dexp/analysis/sweeps/paper_artifacts/task_real_snn_window_semantic_pressure_export_v2/paper_artifacts/phase2_snn_window_route_memory_compare.svg",
+    "snn_window_route_memory_compare_csv": "/home/xgy/remote/snn3dexp/analysis/sweeps/paper_artifacts/task_real_snn_window_semantic_pressure_export_v2/paper_artifacts/phase2_snn_window_route_memory_compare.csv",
+    "memory_model_compare_svg": "/home/xgy/remote/snn3dexp/analysis/sweeps/paper_artifacts/task_real_snn_window_semantic_pressure_export_v2/paper_artifacts/phase2_memory_model_compare.svg",
+    "memory_tier_csv": "/home/xgy/remote/snn3dexp/analysis/sweeps/paper_artifacts/task_real_snn_window_semantic_pressure_export_v2/paper_artifacts/phase2_memory_tier_table.csv",
+    "thermal_calibration_csv": "/home/xgy/remote/snn3dexp/analysis/sweeps/paper_artifacts/task_real_snn_window_semantic_pressure_export_v2/paper_artifacts/phase2_thermal_calibration_table.csv",
+    "thermal_calibration_svg": "/home/xgy/remote/snn3dexp/analysis/sweeps/paper_artifacts/task_real_snn_window_semantic_pressure_export_v2/paper_artifacts/phase2_thermal_calibration_compare.svg",
+    "summary_json": "/home/xgy/remote/snn3dexp/analysis/sweeps/paper_artifacts/task_real_snn_window_semantic_pressure_export_v2/paper_artifacts/phase2_runtime_summary.json",
+    "snn_window_tail_compare_csv": "/home/xgy/remote/snn3dexp/analysis/sweeps/paper_artifacts/task_real_snn_window_semantic_pressure_export_v2/paper_artifacts/phase2_snn_window_tail_compare.csv",
+    "snn_window_tail_compare_svg": "/home/xgy/remote/snn3dexp/analysis/sweeps/paper_artifacts/task_real_snn_window_semantic_pressure_export_v2/paper_artifacts/phase2_snn_window_tail_compare.svg",
+    "snn_window_tail_compare_summary_json": "/home/xgy/remote/snn3dexp/analysis/sweeps/paper_artifacts/task_real_snn_window_semantic_pressure_export_v2/paper_artifacts/phase2_snn_window_tail_compare_summary.json"
+  }
+}

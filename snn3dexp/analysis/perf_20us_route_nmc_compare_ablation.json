@@ -1,0 +1,548 @@
+{
+  "requested_run_tag": "perf_20us",
+  "requested_run_tags_by_case": {
+    "full_3d": "perf_20us_route_refresh_v2",
+    "full_3d_tile_bundle_v3": "perf_20us",
+    "full_3d_monolithic_proxy": "perf_20us"
+  },
+  "requested_case_ids": [
+    "full_3d",
+    "full_3d_tile_bundle_v3",
+    "full_3d_monolithic_proxy"
+  ],
+  "cases": {
+    "full_3d": {
+      "case_id": "full_3d",
+      "mesh_shape": "4x4x2",
+      "total_nodes": 32,
+      "noc_component": "SnnDL.MulticastRouter3DNative",
+      "memory_kind": "hbm_like",
+      "memory_model_family": "hbm_like",
+      "num_stacks": 4,
+      "memory_graph_type": "memHierarchy_shared_stack",
+      "memory_controller_count": 16,
+      "memory_probe_count": 4,
+      "memory_probe_rows_total": 4,
+      "run_tag": "perf_20us_route_refresh_v2",
+      "run_root": "snn3dexp/runs/full_3d/perf_20us_route_refresh_v2",
+      "status": "smoke_passed",
+      "stack_nmc_available": true,
+      "stack_nmc_summary_path": "/home/xgy/remote/snn3dexp/analysis/full_3d/perf_20us_route_refresh_v2/stack_nmc_summary.json",
+      "route_memory_joint_available": true,
+      "route_memory_joint_summary_path": "/home/xgy/remote/snn3dexp/analysis/full_3d/perf_20us_route_refresh_v2/route_memory_joint_summary.json",
+      "phase2_case_summary_available": true,
+      "phase2_case_summary_path": "/home/xgy/remote/snn3dexp/analysis/full_3d/perf_20us_route_refresh_v2/phase2_case_summary.json",
+      "window_stop_at": "20us",
+      "traffic_stop_cycle": 0,
+      "traffic_period_cycles": 32,
+      "stream_mem_period_cycles": 32,
+      "stack_nmc_totals": {
+        "memory_requests_total": 58560,
+        "tx_spike_pkts_total": 0,
+        "tx_spikekey_pkts_total": 35000,
+        "tx_packets_total": 35000,
+        "rx_spike_total": 0,
+        "rx_spikekey_total": 40000,
+        "rx_packets_total": 40000,
+        "stream_mem_bytes_written_total": 1354240,
+        "stream_mem_bytes_read_total": 1353024,
+        "active_stack_ids": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "stack_balance": {
+        "active_stack_count": 4,
+        "memory_requests_imbalance_ratio": 1.0537057676232935,
+        "tx_packet_imbalance_ratio": 1.0,
+        "rx_packet_imbalance_ratio": 1.0,
+        "hot_memory_stack_ids": [
+          2
+        ],
+        "hot_tx_stack_ids": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "hot_rx_stack_ids": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "tier_totals": [],
+      "tier_balance": {
+        "active_tier_ids": [],
+        "memory_requests_imbalance_ratio": 0.0,
+        "service_deficit_imbalance_ratio": 0.0,
+        "hot_memory_tier_ids": [],
+        "hot_service_deficit_tier_ids": []
+      },
+      "tx_packet_share_spikekey": 1.0,
+      "rx_packet_share_spikekey": 1.0,
+      "route_memory_joint": {
+        "native_3d_active": true,
+        "vertical_hops_ratio": 0.42134562841530054,
+        "remote_home_ratio": 0.5,
+        "route_memory_overlap": 1.0,
+        "ingress_replication_cost": 1.75,
+        "inter_die_multicast_fanout": 0.0,
+        "die_local_replication_cost": 2.0,
+        "average_vertical_subtree_depth": 0.0,
+        "direct_v4_share": 1.0,
+        "tile_bundle_v3_share": 0.0,
+        "bundle_v3_router_rx_per_tx": 0.0,
+        "tilekey_rx_per_bundle_v3_tx": 0.0,
+        "router_anomaly_density": 0.0,
+        "spikekey_v4_rx_per_direct_v4_tx": 1.1428571428571428,
+        "memory_requests_total": 58560,
+        "total_service_deficit": 90726,
+        "most_pressured_region": "stream_region",
+        "metadata_lookup_backlog": 9168,
+        "synapse_gather_backlog": 30663,
+        "stream_region_backlog": 34641,
+        "writeback_region_backlog": 16254,
+        "dominant_home_access_class": "remote_home",
+        "attributed_service_deficit_total": 65304.0,
+        "unattributed_service_deficit": 25422.0,
+        "tier_local_home_access_ratio": 0.25,
+        "same_xy_cross_tier_access_ratio": 0.25,
+        "remote_home_access_ratio": 0.5
+      },
+      "mapping_summary": {
+        "policy": "z_blind",
+        "score": -0.75,
+        "same_home_stack_ratio": 0.5,
+        "vertical_target_ratio": 0.0
+      },
+      "thermal_summary": {
+        "thermal_hotspot_score": 1.2282818282535417,
+        "vertical_link_pressure": 0.18820184426229508,
+        "stack_hotspot_penalty": 0.020820863616930252
+      },
+      "physical_summary": {
+        "vertical_bandwidth_budget": 2.0,
+        "tsv_miv_budget_pressure": 0.09410092213114754,
+        "power_density_score": 1.7840363604229685,
+        "reliability_penalty": 0.40457186936246703
+      },
+      "runtime_summary": {
+        "enabled": false,
+        "policy": "disabled",
+        "signal_source": "disabled",
+        "route_memory_overlap": 0.0,
+        "vertical_link_pressure": 0.0,
+        "stack_hotspot_penalty": 0.0,
+        "remap_epoch": 0,
+        "homeroute_adjustment_count": 0,
+        "thermal_guard_actions": 0
+      }
+    },
+    "full_3d_monolithic_proxy": {
+      "case_id": "full_3d_monolithic_proxy",
+      "mesh_shape": "4x4x2",
+      "total_nodes": 32,
+      "noc_component": "SnnDL.MulticastRouter3DNative",
+      "memory_kind": "monolithic_like",
+      "memory_model_family": "monolithic_like",
+      "num_stacks": 8,
+      "memory_graph_type": "memHierarchy_tier_local_stack",
+      "memory_controller_count": 16,
+      "memory_probe_count": 8,
+      "memory_probe_rows_total": 8,
+      "run_tag": "perf_20us",
+      "run_root": "snn3dexp/runs/full_3d_monolithic_proxy/perf_20us",
+      "status": "smoke_passed",
+      "stack_nmc_available": true,
+      "stack_nmc_summary_path": "/home/xgy/remote/snn3dexp/analysis/full_3d_monolithic_proxy/perf_20us/stack_nmc_summary.json",
+      "route_memory_joint_available": true,
+      "route_memory_joint_summary_path": "/home/xgy/remote/snn3dexp/analysis/full_3d_monolithic_proxy/perf_20us/route_memory_joint_summary.json",
+      "phase2_case_summary_available": true,
+      "phase2_case_summary_path": "/home/xgy/remote/snn3dexp/analysis/full_3d_monolithic_proxy/perf_20us/phase2_case_summary.json",
+      "window_stop_at": "20us",
+      "traffic_stop_cycle": 0,
+      "traffic_period_cycles": 32,
+      "stream_mem_period_cycles": 32,
+      "stack_nmc_totals": {
+        "memory_requests_total": 159744,
+        "tx_spike_pkts_total": 0,
+        "tx_spikekey_pkts_total": 23750,
+        "tx_packets_total": 23750,
+        "rx_spike_total": 0,
+        "rx_spikekey_total": 40000,
+        "rx_packets_total": 40000,
+        "stream_mem_bytes_written_total": 4153344,
+        "stream_mem_bytes_read_total": 4153344,
+        "active_stack_ids": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ]
+      },
+      "stack_balance": {
+        "active_stack_count": 8,
+        "memory_requests_imbalance_ratio": 1.0,
+        "tx_packet_imbalance_ratio": 1.25,
+        "rx_packet_imbalance_ratio": 1.4285714285714286,
+        "hot_memory_stack_ids": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "hot_tx_stack_ids": [
+          0,
+          1,
+          2,
+          4,
+          5,
+          6
+        ],
+        "hot_rx_stack_ids": [
+          3,
+          7
+        ]
+      },
+      "tier_totals": [
+        {
+          "tier_id": 0,
+          "stack_ids": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "active_stack_ids": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "stack_count": 4,
+          "active_stack_count": 4,
+          "memory_requests_total": 79872,
+          "probe_row_count_total": 4,
+          "total_service_deficit": 20064
+        },
+        {
+          "tier_id": 1,
+          "stack_ids": [
+            4,
+            5,
+            6,
+            7
+          ],
+          "active_stack_ids": [
+            4,
+            5,
+            6,
+            7
+          ],
+          "stack_count": 4,
+          "active_stack_count": 4,
+          "memory_requests_total": 79872,
+          "probe_row_count_total": 4,
+          "total_service_deficit": 20064
+        }
+      ],
+      "tier_balance": {
+        "active_tier_ids": [
+          0,
+          1
+        ],
+        "memory_requests_imbalance_ratio": 1.0,
+        "service_deficit_imbalance_ratio": 1.0,
+        "hot_memory_tier_ids": [
+          0,
+          1
+        ],
+        "hot_service_deficit_tier_ids": [
+          0,
+          1
+        ]
+      },
+      "tx_packet_share_spikekey": 1.0,
+      "rx_packet_share_spikekey": 1.0,
+      "route_memory_joint": {
+        "native_3d_active": true,
+        "vertical_hops_ratio": 0.0,
+        "remote_home_ratio": 0.0,
+        "route_memory_overlap": 1.0,
+        "ingress_replication_cost": 1.1875,
+        "inter_die_multicast_fanout": 0.5,
+        "die_local_replication_cost": 1.5,
+        "average_vertical_subtree_depth": 1.0,
+        "direct_v4_share": 1.0,
+        "tile_bundle_v3_share": 0.0,
+        "bundle_v3_router_rx_per_tx": 0.0,
+        "tilekey_rx_per_bundle_v3_tx": 0.0,
+        "router_anomaly_density": 0.0,
+        "spikekey_v4_rx_per_direct_v4_tx": 1.6842105263157894,
+        "memory_requests_total": 159744,
+        "total_service_deficit": 40128,
+        "most_pressured_region": "synapse_gather",
+        "metadata_lookup_backlog": 32,
+        "synapse_gather_backlog": 20032,
+        "stream_region_backlog": 20032,
+        "writeback_region_backlog": 32,
+        "dominant_home_access_class": "same_xy_cross_tier",
+        "attributed_service_deficit_total": 40064.0,
+        "unattributed_service_deficit": 64.0,
+        "tier_local_home_access_ratio": 0.25,
+        "same_xy_cross_tier_access_ratio": 0.25,
+        "remote_home_access_ratio": 0.5
+      },
+      "mapping_summary": {
+        "policy": "3d_aware",
+        "score": -0.46875,
+        "same_home_stack_ratio": 0.5,
+        "vertical_target_ratio": 0.25
+      },
+      "thermal_summary": {
+        "thermal_hotspot_score": 1.25,
+        "vertical_link_pressure": 0.15,
+        "stack_hotspot_penalty": 0.006812211843439053
+      },
+      "physical_summary": {
+        "vertical_bandwidth_budget": 3.5,
+        "tsv_miv_budget_pressure": 0.05357142857142857,
+        "power_density_score": 2.01935478816746,
+        "reliability_penalty": 0.48817394038964274
+      },
+      "runtime_summary": {
+        "enabled": false,
+        "policy": "disabled",
+        "signal_source": "disabled",
+        "route_memory_overlap": 0.0,
+        "vertical_link_pressure": 0.0,
+        "stack_hotspot_penalty": 0.0,
+        "remap_epoch": 0,
+        "homeroute_adjustment_count": 0,
+        "thermal_guard_actions": 0
+      }
+    },
+    "full_3d_tile_bundle_v3": {
+      "case_id": "full_3d_tile_bundle_v3",
+      "mesh_shape": "4x4x2",
+      "total_nodes": 32,
+      "noc_component": "SnnDL.MulticastRouter3DNative",
+      "memory_kind": "hbm_like",
+      "memory_model_family": "hbm_like",
+      "num_stacks": 4,
+      "memory_graph_type": "memHierarchy_shared_stack",
+      "memory_controller_count": 16,
+      "memory_probe_count": 4,
+      "memory_probe_rows_total": 4,
+      "run_tag": "perf_20us",
+      "run_root": "snn3dexp/runs/full_3d_tile_bundle_v3/perf_20us",
+      "status": "smoke_passed",
+      "stack_nmc_available": true,
+      "stack_nmc_summary_path": "/home/xgy/remote/snn3dexp/analysis/full_3d_tile_bundle_v3/perf_20us/stack_nmc_summary.json",
+      "route_memory_joint_available": true,
+      "route_memory_joint_summary_path": "/home/xgy/remote/snn3dexp/analysis/full_3d_tile_bundle_v3/perf_20us/route_memory_joint_summary.json",
+      "phase2_case_summary_available": true,
+      "phase2_case_summary_path": "/home/xgy/remote/snn3dexp/analysis/full_3d_tile_bundle_v3/perf_20us/phase2_case_summary.json",
+      "window_stop_at": "20us",
+      "traffic_stop_cycle": 0,
+      "traffic_period_cycles": 32,
+      "stream_mem_period_cycles": 32,
+      "stack_nmc_totals": {
+        "memory_requests_total": 58560,
+        "tx_spike_pkts_total": 0,
+        "tx_spikekey_pkts_total": 0,
+        "tx_packets_total": 0,
+        "rx_spike_total": 0,
+        "rx_spikekey_total": 40000,
+        "rx_packets_total": 40000,
+        "stream_mem_bytes_written_total": 1354240,
+        "stream_mem_bytes_read_total": 1353024,
+        "active_stack_ids": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "stack_balance": {
+        "active_stack_count": 4,
+        "memory_requests_imbalance_ratio": 1.0537057676232935,
+        "tx_packet_imbalance_ratio": 1.0,
+        "rx_packet_imbalance_ratio": 1.4285714285714286,
+        "hot_memory_stack_ids": [
+          2
+        ],
+        "hot_tx_stack_ids": [],
+        "hot_rx_stack_ids": [
+          3
+        ]
+      },
+      "tier_totals": [],
+      "tier_balance": {
+        "active_tier_ids": [],
+        "memory_requests_imbalance_ratio": 0.0,
+        "service_deficit_imbalance_ratio": 0.0,
+        "hot_memory_tier_ids": [],
+        "hot_service_deficit_tier_ids": []
+      },
+      "tx_packet_share_spikekey": 0.0,
+      "rx_packet_share_spikekey": 1.0,
+      "route_memory_joint": {
+        "native_3d_active": true,
+        "vertical_hops_ratio": 0.42134562841530054,
+        "remote_home_ratio": 0.5,
+        "route_memory_overlap": 1.0,
+        "ingress_replication_cost": 1.0,
+        "inter_die_multicast_fanout": 0.8125,
+        "die_local_replication_cost": 1.1875,
+        "average_vertical_subtree_depth": 1.0,
+        "direct_v4_share": 0.0,
+        "tile_bundle_v3_share": 1.0,
+        "bundle_v3_router_rx_per_tx": 2.8125,
+        "tilekey_rx_per_bundle_v3_tx": 2.0,
+        "router_anomaly_density": 0.0,
+        "spikekey_v4_rx_per_direct_v4_tx": 0.0,
+        "memory_requests_total": 58560,
+        "total_service_deficit": 298248,
+        "most_pressured_region": "stream_region",
+        "metadata_lookup_backlog": 43755,
+        "synapse_gather_backlog": 99837,
+        "stream_region_backlog": 103815,
+        "writeback_region_backlog": 50841,
+        "dominant_home_access_class": "same_xy_cross_tier",
+        "attributed_service_deficit_total": 203652.0,
+        "unattributed_service_deficit": 94596.0,
+        "tier_local_home_access_ratio": 0.25,
+        "same_xy_cross_tier_access_ratio": 0.65625,
+        "remote_home_access_ratio": 0.09375
+      },
+      "mapping_summary": {
+        "policy": "3d_aware",
+        "score": 0.0234375,
+        "same_home_stack_ratio": 0.90625,
+        "vertical_target_ratio": 0.40625
+      },
+      "thermal_summary": {
+        "thermal_hotspot_score": 1.2239900629534484,
+        "vertical_link_pressure": 0.4319518442622951,
+        "stack_hotspot_penalty": 0.03326502732240444
+      },
+      "physical_summary": {
+        "vertical_bandwidth_budget": 2.0,
+        "tsv_miv_budget_pressure": 0.30371614049692625,
+        "power_density_score": 1.7887503856952522,
+        "reliability_penalty": 0.5219815508361729
+      },
+      "runtime_summary": {
+        "enabled": true,
+        "policy": "adaptive_3d",
+        "signal_source": "joint_runtime",
+        "route_memory_overlap": 1.0,
+        "vertical_link_pressure": 0.4319518442622951,
+        "stack_hotspot_penalty": 0.03326502732240444,
+        "remap_epoch": 256,
+        "homeroute_adjustment_count": 1,
+        "thermal_guard_actions": 1
+      }
+    }
+  },
+  "route_memory_comparisons": {
+    "direct_v4_vs_bundle_v3": {
+      "available": true,
+      "base_case_id": "full_3d",
+      "compare_case_id": "full_3d_tile_bundle_v3",
+      "base": {
+        "case_id": "full_3d",
+        "direct_v4_share": 1.0,
+        "tile_bundle_v3_share": 0.0,
+        "bundle_v3_router_rx_per_tx": 0.0,
+        "tilekey_rx_per_bundle_v3_tx": 0.0,
+        "memory_requests_total": 58560,
+        "total_service_deficit": 90726,
+        "most_pressured_region": "stream_region",
+        "synapse_gather_backlog": 30663,
+        "stream_region_backlog": 34641,
+        "dominant_home_access_class": "remote_home",
+        "attributed_service_deficit_total": 65304.0
+      },
+      "compare": {
+        "case_id": "full_3d_tile_bundle_v3",
+        "direct_v4_share": 0.0,
+        "tile_bundle_v3_share": 1.0,
+        "bundle_v3_router_rx_per_tx": 2.8125,
+        "tilekey_rx_per_bundle_v3_tx": 2.0,
+        "memory_requests_total": 58560,
+        "total_service_deficit": 298248,
+        "most_pressured_region": "stream_region",
+        "synapse_gather_backlog": 99837,
+        "stream_region_backlog": 103815,
+        "dominant_home_access_class": "same_xy_cross_tier",
+        "attributed_service_deficit_total": 203652.0
+      },
+      "deltas": {
+        "direct_v4_share": -1.0,
+        "tile_bundle_v3_share": 1.0,
+        "memory_requests_total": 0,
+        "total_service_deficit": 207522,
+        "synapse_gather_backlog": 69174,
+        "stream_region_backlog": 69174,
+        "attributed_service_deficit_total": 138348.0
+      }
+    }
+  },
+  "memory_model_comparisons": {
+    "hbm_like_vs_monolithic_like": {
+      "available": true,
+      "base_case_id": "full_3d",
+      "compare_case_id": "full_3d_monolithic_proxy",
+      "base": {
+        "case_id": "full_3d",
+        "memory_model_family": "hbm_like",
+        "memory_kind": "hbm_like",
+        "memory_graph_type": "memHierarchy_shared_stack",
+        "memory_requests_total": 58560,
+        "vertical_hops_ratio": 0.42134562841530054,
+        "remote_home_ratio": 0.5,
+        "total_service_deficit": 90726,
+        "most_pressured_region": "stream_region",
+        "vertical_link_pressure": 0.18820184426229508,
+        "reliability_penalty": 0.40457186936246703,
+        "dominant_home_access_class": "remote_home"
+      },
+      "compare": {
+        "case_id": "full_3d_monolithic_proxy",
+        "memory_model_family": "monolithic_like",
+        "memory_kind": "monolithic_like",
+        "memory_graph_type": "memHierarchy_tier_local_stack",
+        "memory_requests_total": 159744,
+        "vertical_hops_ratio": 0.0,
+        "remote_home_ratio": 0.0,
+        "total_service_deficit": 40128,
+        "most_pressured_region": "synapse_gather",
+        "vertical_link_pressure": 0.15,
+        "reliability_penalty": 0.48817394038964274,
+        "dominant_home_access_class": "same_xy_cross_tier"
+      },
+      "deltas": {
+        "memory_requests_total": 101184,
+        "vertical_hops_ratio": -0.42134562841530054,
+        "remote_home_ratio": -0.5,
+        "total_service_deficit": -50598,
+        "vertical_link_pressure": -0.03820184426229509,
+        "reliability_penalty": 0.0836020710271757
+      }
+    }
+  }
+}

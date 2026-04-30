@@ -1,0 +1,47 @@
+{
+  "artifact_role": "dated_local_spike_probe",
+  "authority_scope": "local_spike_env_only",
+  "generated_utc": "2026-03-27T05:01:42.401828+00:00",
+  "local_root": "/home/xgy/remote/riscv_snn_isa_lab/external/spike-local",
+  "source_dir": "/home/xgy/remote/riscv_snn_isa_lab/external/spike-local/src/riscv-isa-sim",
+  "build_dir": "/home/xgy/remote/riscv_snn_isa_lab/external/spike-local/build",
+  "prefix_dir": "/home/xgy/remote/riscv_snn_isa_lab/external/spike-local/prefix",
+  "local_spike_candidate": "/home/xgy/remote/riscv_snn_isa_lab/external/spike-local/prefix/bin/spike",
+  "env_spike_candidate": null,
+  "path_spike_candidate": null,
+  "resolved_spike": null,
+  "resolved_origin": "missing",
+  "required_commands": {
+    "git": "/usr/bin/git",
+    "make": "/usr/bin/make",
+    "g++": "/usr/bin/g++",
+    "cmake": "/usr/local/bin/cmake",
+    "pkg-config": "/usr/bin/pkg-config",
+    "dtc": null,
+    "flex": null,
+    "bison": null
+  },
+  "missing_commands": [
+    "dtc",
+    "flex",
+    "bison"
+  ],
+  "required_packages": {
+    "libboost-regex-dev": false,
+    "libboost-system-dev": false
+  },
+  "missing_packages": [
+    "libboost-regex-dev",
+    "libboost-system-dev"
+  ],
+  "can_attempt_local_build": false,
+  "bootstrap_commands": [
+    "git clone https://github.com/riscv-software-src/riscv-isa-sim \"/home/xgy/remote/riscv_snn_isa_lab/external/spike-local/src/riscv-isa-sim\"",
+    "mkdir -p \"/home/xgy/remote/riscv_snn_isa_lab/external/spike-local/build\"",
+    "cd \"/home/xgy/remote/riscv_snn_isa_lab/external/spike-local/build\" && \"/home/xgy/remote/riscv_snn_isa_lab/external/spike-local/src/riscv-isa-sim/configure\" --prefix=\"/home/xgy/remote/riscv_snn_isa_lab/external/spike-local/prefix\"",
+    "cd \"/home/xgy/remote/riscv_snn_isa_lab/external/spike-local/build\" && make -j$(nproc)",
+    "cd \"/home/xgy/remote/riscv_snn_isa_lab/external/spike-local/build\" && make install"
+  ],
+  "all_ok": false,
+  "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-03-27-spike-local.json"
+}

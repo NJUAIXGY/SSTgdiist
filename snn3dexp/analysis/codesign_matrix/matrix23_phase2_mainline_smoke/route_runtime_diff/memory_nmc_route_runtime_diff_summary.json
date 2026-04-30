@@ -1,0 +1,54 @@
+{
+  "matrix_label": "matrix23_phase2_mainline_smoke",
+  "baseline_run_tag": "matrix23_phase2_mainline_traffic",
+  "fixed_step_run_tags": [
+    "matrix23_phase2_fixed_step_4_10us"
+  ],
+  "sources": {
+    "baseline_ablation_path": "/home/xgy/remote/snn3dexp/analysis/codesign_matrix/matrix23_phase2_mainline_smoke/traffic_baseline_ablation.json",
+    "baseline_run_tag": "matrix23_phase2_mainline_traffic",
+    "surface_label": "matrix23_phase2_mainline_smoke",
+    "baseline_overlay_ablation_paths": [],
+    "fixed_step_summary_path": "/home/xgy/remote/snn3dexp/analysis/codesign_matrix/matrix23_phase2_mainline_smoke/fixed_step_analysis/fixed_step_sweep_summary.json",
+    "fixed_step_run_tags": [
+      "matrix23_phase2_fixed_step_4_10us"
+    ],
+    "stop_window_ablation_paths": [],
+    "stop_window_run_tags": [],
+    "hotspot_runtime_summary_path": "",
+    "hotspot_run_tag": ""
+  },
+  "traffic_route_diffs": [
+    {
+      "matrix_group": "traffic_route",
+      "compare_kind": "traffic_mem_bundle_vs_direct",
+      "run_tag": "",
+      "base_case_id": "full_3d",
+      "compare_case_id": "full_3d_tile_bundle_v3",
+      "dominant_home_runtime_controller_overlap_delta": 0,
+      "pe_nic_real_home_path_service_deficit_total_delta": 0,
+      "synapse_real_home_path_service_deficit_total_delta": 0,
+      "base_real_home_traffic_signal_level": "synthetic_or_unknown",
+      "compare_real_home_traffic_signal_level": "synthetic_or_unknown"
+    }
+  ],
+  "window_route_diffs": [
+    {
+      "matrix_group": "window_route",
+      "compare_kind": "",
+      "run_tag": "matrix23_phase2_fixed_step_4_10us",
+      "base_case_id": "full_3d_snn_window",
+      "compare_case_id": "full_3d_snn_window_bundle_v3",
+      "dataflow_controller_alignment_transition": "stable",
+      "pe_nic_dominant_controller_outstanding_requests_accum_delta": 0,
+      "synapse_dominant_controller_outstanding_requests_accum_delta": 0,
+      "pe_nic_real_home_path_service_deficit_total_delta": 0,
+      "synapse_real_home_path_service_deficit_total_delta": 0
+    }
+  ],
+  "outputs": {
+    "summary_json": "/home/xgy/remote/snn3dexp/analysis/codesign_matrix/matrix23_phase2_mainline_smoke/route_runtime_diff/memory_nmc_route_runtime_diff_summary.json",
+    "csv": "/home/xgy/remote/snn3dexp/analysis/codesign_matrix/matrix23_phase2_mainline_smoke/route_runtime_diff/memory_nmc_route_runtime_diff.csv",
+    "markdown": "/home/xgy/remote/snn3dexp/analysis/codesign_matrix/matrix23_phase2_mainline_smoke/route_runtime_diff/memory_nmc_route_runtime_diff.md"
+  }
+}

@@ -1,0 +1,129 @@
+{
+  "case_id": "full_3d",
+  "run_root": "/home/xgy/remote/snn3dexp/runs/full_3d/task19_phase2_stream_writeback_smoke",
+  "mesh_shape": "4x4x2",
+  "route": {
+    "native_3d_active": true,
+    "vertical_route_order": "zxy",
+    "multicast_block_shape": [
+      2,
+      2,
+      2
+    ],
+    "active_route_node_count": 32,
+    "ingress_replication_cost": 1.75,
+    "inter_die_multicast_fanout": 0.0,
+    "die_local_replication_cost": 2.0,
+    "average_vertical_subtree_depth": 0.0,
+    "packet_versions": {
+      "tx_spikekey_v4_pkts_total": 448,
+      "tx_spiketilekey_v4_pkts_total": 0,
+      "tx_bundle_v1_pkts_total": 0,
+      "tx_bundle_v2_pkts_total": 0,
+      "tx_bundle_v3_pkts_total": 0,
+      "rx_spikekey_v4_total": 512,
+      "rx_spiketilekey_v4_total": 0,
+      "router_bundle_v1_rx_total": 0,
+      "router_bundle_v2_rx_total": 0,
+      "router_bundle_v3_rx_total": 0
+    },
+    "router_anomalies": {
+      "bundle_v3_invalid_shape_total": 0,
+      "bundle_v3_block_z_mismatch_total": 0,
+      "bundle_v3_ingress_out_of_block_total": 0,
+      "bundle_v3_rebuild_fail_total": 0
+    },
+    "derived_metrics": {
+      "direct_v4_share": 1.0,
+      "tile_bundle_v3_share": 0.0,
+      "bundle_v3_router_rx_per_tx": 0.0,
+      "tilekey_rx_per_bundle_v3_tx": 0.0,
+      "router_anomaly_density": 0.0,
+      "spikekey_v4_rx_per_direct_v4_tx": 1.1428571428571428
+    }
+  },
+  "memory": {
+    "kind": "hbm_like",
+    "graph_type": "memHierarchy_shared_stack",
+    "real_synapse_sources": 32,
+    "active_memory_node_count": 32,
+    "remote_home_active_node_count": 16,
+    "memory_requests_total": 440,
+    "remote_home_memory_requests_total": 192,
+    "active_stack_count": 4,
+    "semantic_addressing": {
+      "enabled": true,
+      "stack_region_bytes": 1048576,
+      "slot_bytes": 8192,
+      "region_layout": {
+        "stack_region_bytes": 1048576,
+        "slot_count": 8,
+        "metadata": {
+          "base_offset": 0,
+          "size_bytes": 65536,
+          "slot_bytes": 8192
+        },
+        "gather": {
+          "base_offset": 65536,
+          "size_bytes": 655360,
+          "slot_bytes": 81920
+        },
+        "stream": {
+          "base_offset": 720896,
+          "size_bytes": 262144,
+          "slot_bytes": 32768
+        },
+        "writeback": {
+          "base_offset": 983040,
+          "size_bytes": 65536,
+          "slot_bytes": 8192
+        },
+        "slot_bytes": 8192
+      }
+    },
+    "access_semantics": {
+      "tier_local_home_access_count": 16,
+      "same_xy_cross_tier_access_count": 16,
+      "remote_home_access_count": 32,
+      "tier_local_home_access_ratio": 0.25,
+      "same_xy_cross_tier_access_ratio": 0.25,
+      "remote_home_access_ratio": 0.5
+    },
+    "synapse_semantics": {
+      "synapse_gather_reads": 44,
+      "synapse_gather_region_reads": 44,
+      "sparse_window_streams": 64,
+      "sparse_window_stream_region_writes": 64,
+      "metadata_lookup_reads": 48,
+      "metadata_lookup_region_reads": 48,
+      "writeback_region_writes": 64
+    }
+  },
+  "joint": {
+    "vertical_hops_ratio": 0.43636363636363634,
+    "remote_home_ratio": 0.5,
+    "route_memory_overlap": 1.0
+  },
+  "thermal": {
+    "enabled": true,
+    "tier_activity_source": "runtime",
+    "tier_activity": [
+      {
+        "z": 0,
+        "activity": 1100.0
+      },
+      {
+        "z": 1,
+        "activity": 992.0
+      }
+    ],
+    "thermal_hotspot_score": 1.2370936902485659,
+    "vertical_link_pressure": 0.19045454545454543,
+    "stack_hotspot_penalty": 0.0,
+    "physical_model_version": "v2",
+    "vertical_bandwidth_budget": 2.0,
+    "tsv_miv_budget_pressure": 0.09522727272727272,
+    "power_density_score": 1.7783221797323132,
+    "reliability_penalty": 0.402619980879541
+  }
+}

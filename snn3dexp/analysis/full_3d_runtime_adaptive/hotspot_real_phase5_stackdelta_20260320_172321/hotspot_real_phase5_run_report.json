@@ -1,0 +1,193 @@
+{
+  "timestamp": "2026-03-20T17:23:58.312639",
+  "spec_path": "/home/xgy/remote/snn3dexp/cases/full_3d_runtime_adaptive/spec.json",
+  "thermal_summary_input": "/home/xgy/remote/tmp/thermal_contract_suite_v1/thermal_3d_grid_base/runs/20260320-133539/thermal/summary/thermal_summary.json",
+  "hotspot_bin": "/home/xgy/remote/externals/HotSpot-7.0/hotspot",
+  "run_root": "/home/xgy/remote/snn3dexp/runs/full_3d_runtime_adaptive/hotspot_real_phase5_stackdelta_20260320_172321",
+  "analysis_root": "/home/xgy/remote/snn3dexp/analysis/full_3d_runtime_adaptive/hotspot_real_phase5_stackdelta_20260320_172321",
+  "thermal_config": {
+    "enabled": true,
+    "mode": "window_power_replay",
+    "summary_path": "/home/xgy/remote/tmp/thermal_contract_suite_v1/thermal_3d_grid_base/runs/20260320-133539/thermal/summary/thermal_summary.json",
+    "ambient_c": 45.0,
+    "alpha": 1000.0,
+    "beta": 0.5,
+    "hotspot_bin": "/home/xgy/remote/externals/HotSpot-7.0/hotspot",
+    "out_dir": "thermal_sidecar",
+    "model_type": "grid",
+    "grid_rows": 64,
+    "grid_cols": 64,
+    "grid_map_mode": "center",
+    "detailed_3d": 1,
+    "hotspot_threshold_c": 70.0,
+    "layers": [
+      {
+        "name": "compute_top",
+        "kind": "mesh_active",
+        "z_um": 0,
+        "thickness_um": 150
+      },
+      {
+        "name": "tim_mid",
+        "kind": "tim",
+        "z_um": 150,
+        "thickness_um": 20
+      },
+      {
+        "name": "compute_bottom",
+        "kind": "mesh_active",
+        "z_um": 170,
+        "thickness_um": 150
+      }
+    ],
+    "hotspot_package": {}
+  },
+  "thermal_state_source": "online_rc_estimator",
+  "thermal_replay": {
+    "enabled": true,
+    "mode": "window_power_replay",
+    "summary_path": "/home/xgy/remote/tmp/thermal_contract_suite_v1/thermal_3d_grid_base/runs/20260320-133539/thermal/summary/thermal_summary.json",
+    "sample_count": 1,
+    "block_count": 96,
+    "trace_sources": [
+      "average_power"
+    ],
+    "duration_ns": 1000,
+    "ambient_c": 45.0,
+    "alpha": 1000.0,
+    "beta": 0.5
+  },
+  "hotspot_driver": {
+    "enabled": true,
+    "status": "ran",
+    "binary": "/home/xgy/remote/externals/HotSpot-7.0/hotspot",
+    "returncode": 0,
+    "model_type": "grid",
+    "mesh_shape": "4x4x2",
+    "tile_count": 16,
+    "layer_count": 3,
+    "block_count": 96,
+    "window_count": 1,
+    "trace_mode": "average",
+    "temperature_source": "hotspot_steady_temp",
+    "thermal_contract_version": "v2",
+    "backend": "hotspot_sidecar",
+    "ambient_c": 45.0,
+    "hotspot_package": {
+      "ambient_k": 318.15,
+      "s_sink": 0.06,
+      "t_sink": 0.0069,
+      "s_spreader": 0.03,
+      "t_spreader": 0.001,
+      "t_interface": 2e-05
+    },
+    "layers": [
+      {
+        "name": "compute_top",
+        "kind": "mesh_active",
+        "safe_name": "compute_top",
+        "z_um": 0,
+        "thickness_um": 150,
+        "lateral_heat_flow": true,
+        "power_dissipating": true,
+        "source_layer_index": 0,
+        "normalized_layer_index": 0,
+        "block_prefix": "L00_compute_top__"
+      },
+      {
+        "name": "tim_mid",
+        "kind": "tim",
+        "safe_name": "tim_mid",
+        "z_um": 150,
+        "thickness_um": 20,
+        "lateral_heat_flow": true,
+        "power_dissipating": false,
+        "source_layer_index": 1,
+        "normalized_layer_index": 1,
+        "block_prefix": "L01_tim_mid__"
+      },
+      {
+        "name": "compute_bottom",
+        "kind": "mesh_active",
+        "safe_name": "compute_bottom",
+        "z_um": 170,
+        "thickness_um": 150,
+        "lateral_heat_flow": true,
+        "power_dissipating": true,
+        "source_layer_index": 2,
+        "normalized_layer_index": 2,
+        "block_prefix": "L02_compute_bottom__"
+      }
+    ],
+    "metrics": {
+      "peak_temperature_c": 45.05000000000001,
+      "avg_temperature_c": 45.015937500000085,
+      "hotspot_block_count": 0,
+      "hotspot_layer_count": 0
+    },
+    "artifacts": {
+      "floorplan": "/home/xgy/remote/snn3dexp/runs/full_3d_runtime_adaptive/hotspot_real_phase5_stackdelta_20260320_172321/thermal_sidecar/hotspot/snndl_mesh.lcf",
+      "ptrace": "/home/xgy/remote/snn3dexp/runs/full_3d_runtime_adaptive/hotspot_real_phase5_stackdelta_20260320_172321/thermal_sidecar/hotspot/snndl_mesh.ptrace",
+      "hotspot_config": "/home/xgy/remote/snn3dexp/runs/full_3d_runtime_adaptive/hotspot_real_phase5_stackdelta_20260320_172321/thermal_sidecar/hotspot/hotspot.config",
+      "window_power_samples_jsonl": "/home/xgy/remote/snn3dexp/runs/full_3d_runtime_adaptive/hotspot_real_phase5_stackdelta_20260320_172321/thermal_sidecar/summary/window_power_samples.jsonl",
+      "tile_temperature_summary_csv": "/home/xgy/remote/snn3dexp/runs/full_3d_runtime_adaptive/hotspot_real_phase5_stackdelta_20260320_172321/thermal_sidecar/summary/tile_temperature_summary.csv",
+      "thermal_summary_json": "/home/xgy/remote/snn3dexp/runs/full_3d_runtime_adaptive/hotspot_real_phase5_stackdelta_20260320_172321/thermal_sidecar/summary/thermal_summary.json",
+      "steady_temp": "/home/xgy/remote/snn3dexp/runs/full_3d_runtime_adaptive/hotspot_real_phase5_stackdelta_20260320_172321/thermal_sidecar/hotspot/steady.temp",
+      "transient_temp": "/home/xgy/remote/snn3dexp/runs/full_3d_runtime_adaptive/hotspot_real_phase5_stackdelta_20260320_172321/thermal_sidecar/hotspot/transient.temp",
+      "lcf": "/home/xgy/remote/snn3dexp/runs/full_3d_runtime_adaptive/hotspot_real_phase5_stackdelta_20260320_172321/thermal_sidecar/hotspot/snndl_mesh.lcf",
+      "layer_floorplans": [
+        "/home/xgy/remote/snn3dexp/runs/full_3d_runtime_adaptive/hotspot_real_phase5_stackdelta_20260320_172321/thermal_sidecar/hotspot/layer_00_compute_top.flp",
+        "/home/xgy/remote/snn3dexp/runs/full_3d_runtime_adaptive/hotspot_real_phase5_stackdelta_20260320_172321/thermal_sidecar/hotspot/layer_01_tim_mid.flp",
+        "/home/xgy/remote/snn3dexp/runs/full_3d_runtime_adaptive/hotspot_real_phase5_stackdelta_20260320_172321/thermal_sidecar/hotspot/layer_02_compute_bottom.flp"
+      ]
+    },
+    "hotspot": {
+      "status": "ran",
+      "binary": "/home/xgy/remote/externals/HotSpot-7.0/hotspot",
+      "returncode": 0,
+      "stdout": "Parsing input files...\nCreating thermal circuit...\nComputing temperatures for t = 0.000000e+00...\nSimulation complete.",
+      "stderr": "Computing steady-state temperatures..."
+    }
+  },
+  "phase2_thermal": {
+    "thermal_hotspot_score": 1.25,
+    "vertical_link_pressure": 0.24375,
+    "stack_hotspot_penalty": 0.25,
+    "vertical_bandwidth_budget": 2.0,
+    "tsv_miv_budget_pressure": 0.17138671875,
+    "power_density_score": 1.7578125,
+    "reliability_penalty": 0.4352783203125,
+    "thermal_state_source": "online_rc_estimator",
+    "peak_temperature_c": 47.765124,
+    "avg_temperature_c": 45.151608906250004,
+    "vertical_gradient_c": 1.382562,
+    "hotspot_block_count": 96,
+    "hotspot_layer_count": 2,
+    "thermal_replay_sample_count": 1,
+    "hotspot_driver_status": "ran",
+    "hotspot_model_type": "grid",
+    "hotspot_temperature_source": "hotspot_steady_temp",
+    "hotspot_peak_temperature_c": 45.05000000000001,
+    "hotspot_avg_temperature_c": 45.015937500000085,
+    "hotspot_peak_delta_c": 2.7151239999999888,
+    "hotspot_avg_delta_c": 0.13567140624991936,
+    "hotspot_block_delta": 96,
+    "hotspot_layer_delta": 2,
+    "hotspot_artifacts": {
+      "floorplan": "/home/xgy/remote/snn3dexp/runs/full_3d_runtime_adaptive/hotspot_real_phase5_stackdelta_20260320_172321/thermal_sidecar/hotspot/snndl_mesh.lcf",
+      "ptrace": "/home/xgy/remote/snn3dexp/runs/full_3d_runtime_adaptive/hotspot_real_phase5_stackdelta_20260320_172321/thermal_sidecar/hotspot/snndl_mesh.ptrace",
+      "hotspot_config": "/home/xgy/remote/snn3dexp/runs/full_3d_runtime_adaptive/hotspot_real_phase5_stackdelta_20260320_172321/thermal_sidecar/hotspot/hotspot.config",
+      "window_power_samples_jsonl": "/home/xgy/remote/snn3dexp/runs/full_3d_runtime_adaptive/hotspot_real_phase5_stackdelta_20260320_172321/thermal_sidecar/summary/window_power_samples.jsonl",
+      "tile_temperature_summary_csv": "/home/xgy/remote/snn3dexp/runs/full_3d_runtime_adaptive/hotspot_real_phase5_stackdelta_20260320_172321/thermal_sidecar/summary/tile_temperature_summary.csv",
+      "thermal_summary_json": "/home/xgy/remote/snn3dexp/runs/full_3d_runtime_adaptive/hotspot_real_phase5_stackdelta_20260320_172321/thermal_sidecar/summary/thermal_summary.json",
+      "steady_temp": "/home/xgy/remote/snn3dexp/runs/full_3d_runtime_adaptive/hotspot_real_phase5_stackdelta_20260320_172321/thermal_sidecar/hotspot/steady.temp",
+      "transient_temp": "/home/xgy/remote/snn3dexp/runs/full_3d_runtime_adaptive/hotspot_real_phase5_stackdelta_20260320_172321/thermal_sidecar/hotspot/transient.temp",
+      "lcf": "/home/xgy/remote/snn3dexp/runs/full_3d_runtime_adaptive/hotspot_real_phase5_stackdelta_20260320_172321/thermal_sidecar/hotspot/snndl_mesh.lcf",
+      "layer_floorplans": [
+        "/home/xgy/remote/snn3dexp/runs/full_3d_runtime_adaptive/hotspot_real_phase5_stackdelta_20260320_172321/thermal_sidecar/hotspot/layer_00_compute_top.flp",
+        "/home/xgy/remote/snn3dexp/runs/full_3d_runtime_adaptive/hotspot_real_phase5_stackdelta_20260320_172321/thermal_sidecar/hotspot/layer_01_tim_mid.flp",
+        "/home/xgy/remote/snn3dexp/runs/full_3d_runtime_adaptive/hotspot_real_phase5_stackdelta_20260320_172321/thermal_sidecar/hotspot/layer_02_compute_bottom.flp"
+      ]
+    }
+  }
+}

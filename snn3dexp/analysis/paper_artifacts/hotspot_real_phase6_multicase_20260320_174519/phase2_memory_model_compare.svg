@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="670" viewBox="0 0 1180 670">
+<rect width="100%" height="100%" fill="#fcfbf7"/>
+<text x="40" y="38" font-family="Helvetica, Arial, sans-serif" font-size="24" font-weight="700" fill="#111827">HBM-like NMC vs Monolithic-like</text>
+<text x="40" y="62" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#4b5563">Memory-model long-window compare unavailable in the selected ablation summary</text>
+<text x="40" y="84" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#6b7280">Run tag: hotspot_real_phase6_multicase_20260320_174519</text>
+<text x="296" y="108" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#264653">Full 3D (full_3d)</text>
+<text x="618" y="108" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#1D3557">Full 3D + Monolithic Proxy (full_3d_monolithic_proxy)</text>
+<text x="948" y="108" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#374151">Delta</text>
+<rect x="28" y="128" width="1124" height="52" rx="10" fill="#ffffff" stroke="#e5e7eb"/>
+<text x="36" y="168" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#111827">Memory Requests</text>
+<rect x="296" y="146" width="208" height="14" rx="7" fill="#e5e7eb"/>
+<rect x="296" y="146" width="0.00" height="14" rx="7" fill="#264653"/>
+<text x="296" y="180" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#374151">0</text>
+<rect x="618" y="146" width="208" height="14" rx="7" fill="#e5e7eb"/>
+<rect x="618" y="146" width="0.00" height="14" rx="7" fill="#1D3557"/>
+<text x="618" y="180" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#374151">0</text>
+<text x="948" y="168" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#111827">+0</text>
+<rect x="28" y="196" width="1124" height="52" rx="10" fill="#ffffff" stroke="#e5e7eb"/>
+<text x="36" y="236" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#111827">Vertical Hops Ratio</text>
+<rect x="296" y="214" width="208" height="14" rx="7" fill="#e5e7eb"/>
+<rect x="296" y="214" width="0.00" height="14" rx="7" fill="#264653"/>
+<text x="296" y="248" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#374151">0.000</text>
+<rect x="618" y="214" width="208" height="14" rx="7" fill="#e5e7eb"/>
+<rect x="618" y="214" width="0.00" height="14" rx="7" fill="#1D3557"/>
+<text x="618" y="248" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#374151">0.000</text>
+<text x="948" y="236" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#111827">+0.000</text>
+<rect x="28" y="264" width="1124" height="52" rx="10" fill="#ffffff" stroke="#e5e7eb"/>
+<text x="36" y="304" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#111827">Remote-Home Ratio</text>
+<rect x="296" y="282" width="208" height="14" rx="7" fill="#e5e7eb"/>
+<rect x="296" y="282" width="0.00" height="14" rx="7" fill="#264653"/>
+<text x="296" y="316" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#374151">0.000</text>
+<rect x="618" y="282" width="208" height="14" rx="7" fill="#e5e7eb"/>
+<rect x="618" y="282" width="0.00" height="14" rx="7" fill="#1D3557"/>
+<text x="618" y="316" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#374151">0.000</text>
+<text x="948" y="304" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#111827">+0.000</text>
+<rect x="28" y="332" width="1124" height="52" rx="10" fill="#ffffff" stroke="#e5e7eb"/>
+<text x="36" y="372" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#111827">Total Service Deficit</text>
+<rect x="296" y="350" width="208" height="14" rx="7" fill="#e5e7eb"/>
+<rect x="296" y="350" width="0.00" height="14" rx="7" fill="#264653"/>
+<text x="296" y="384" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#374151">0</text>
+<rect x="618" y="350" width="208" height="14" rx="7" fill="#e5e7eb"/>
+<rect x="618" y="350" width="0.00" height="14" rx="7" fill="#1D3557"/>
+<text x="618" y="384" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#374151">0</text>
+<text x="948" y="372" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#111827">+0</text>
+<rect x="28" y="400" width="1124" height="52" rx="10" fill="#ffffff" stroke="#e5e7eb"/>
+<text x="36" y="440" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#111827">Vertical Link Pressure</text>
+<rect x="296" y="418" width="208" height="14" rx="7" fill="#e5e7eb"/>
+<rect x="296" y="418" width="0.00" height="14" rx="7" fill="#264653"/>
+<text x="296" y="452" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#374151">0.000</text>
+<rect x="618" y="418" width="208" height="14" rx="7" fill="#e5e7eb"/>
+<rect x="618" y="418" width="0.00" height="14" rx="7" fill="#1D3557"/>
+<text x="618" y="452" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#374151">0.000</text>
+<text x="948" y="440" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#111827">+0.000</text>
+<rect x="28" y="468" width="1124" height="52" rx="10" fill="#ffffff" stroke="#e5e7eb"/>
+<text x="36" y="508" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#111827">Reliability Penalty</text>
+<rect x="296" y="486" width="208" height="14" rx="7" fill="#e5e7eb"/>
+<rect x="296" y="486" width="0.00" height="14" rx="7" fill="#264653"/>
+<text x="296" y="520" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#374151">0.000</text>
+<rect x="618" y="486" width="208" height="14" rx="7" fill="#e5e7eb"/>
+<rect x="618" y="486" width="0.00" height="14" rx="7" fill="#1D3557"/>
+<text x="618" y="520" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#374151">0.000</text>
+<text x="948" y="508" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#111827">+0.000</text>
+</svg>

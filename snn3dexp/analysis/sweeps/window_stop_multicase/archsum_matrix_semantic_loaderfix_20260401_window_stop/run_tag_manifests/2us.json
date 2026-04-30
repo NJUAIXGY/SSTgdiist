@@ -1,0 +1,12 @@
+{
+  "case_ids": [
+    "full_3d_snn_window",
+    "full_3d_snn_window_bundle_v3",
+    "full_3d_snn_window_monolithic_proxy"
+  ],
+  "run_tags_by_case": {
+    "full_3d_snn_window": "archsum_matrix_semantic_loaderfix_20260401_window_stop_2us",
+    "full_3d_snn_window_bundle_v3": "archsum_matrix_semantic_loaderfix_20260401_window_stop_2us",
+    "full_3d_snn_window_monolithic_proxy": "archsum_matrix_semantic_loaderfix_20260401_window_stop_2us"
+  }
+}

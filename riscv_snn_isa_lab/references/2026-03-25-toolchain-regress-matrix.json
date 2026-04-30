@@ -1,0 +1,38 @@
+{
+  "count": 5,
+  "generated_utc": "2026-03-25T03:42:52.983408+00:00",
+  "group": "toolchain",
+  "register": true,
+  "results": [
+    {
+      "manifest_path": "/home/xgy/remote/riscv_snn_isa_lab/runs/2026-03-25-external-dyn-desc-ref-toolchain-smoke.md",
+      "program": "external_dyn_desc_ref_toolchain",
+      "run_dir": "/home/xgy/remote/sst_dram_si/outputs_large/paper2/dram_mesh_4x4/20260325-114100",
+      "suite": "toolchain"
+    },
+    {
+      "manifest_path": "/home/xgy/remote/riscv_snn_isa_lab/runs/2026-03-25-external-dyn-desc-fault-ref-toolchain-smoke.md",
+      "program": "external_dyn_desc_fault_ref_toolchain",
+      "run_dir": "/home/xgy/remote/sst_dram_si/outputs_large/paper2/dram_mesh_4x4/20260325-114123",
+      "suite": "toolchain"
+    },
+    {
+      "manifest_path": "/home/xgy/remote/riscv_snn_isa_lab/runs/2026-03-25-external-dyn-desc-bad-policy-ref-toolchain-smoke.md",
+      "program": "external_dyn_desc_bad_policy_ref_toolchain",
+      "run_dir": "/home/xgy/remote/sst_dram_si/outputs_large/paper2/dram_mesh_4x4/20260325-114145",
+      "suite": "toolchain"
+    },
+    {
+      "manifest_path": "/home/xgy/remote/riscv_snn_isa_lab/runs/2026-03-25-external-dyn-desc-fault-rearm-ref-toolchain-smoke.md",
+      "program": "external_dyn_desc_fault_rearm_ref_toolchain",
+      "run_dir": "/home/xgy/remote/sst_dram_si/outputs_large/paper2/dram_mesh_4x4/20260325-114209",
+      "suite": "toolchain"
+    },
+    {
+      "manifest_path": "/home/xgy/remote/riscv_snn_isa_lab/runs/2026-03-25-external-dyn-desc-fault-overwrite-chain-ref-toolchain-smoke.md",
+      "program": "external_dyn_desc_fault_overwrite_chain_ref_toolchain",
+      "run_dir": "/home/xgy/remote/sst_dram_si/outputs_large/paper2/dram_mesh_4x4/20260325-114230",
+      "suite": "toolchain"
+    }
+  ]
+}

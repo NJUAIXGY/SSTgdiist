@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="640" viewBox="0 0 1280 640">
+<rect width="100%" height="100%" fill="#fcfbf7"/>
+<text x="40" y="38" font-family="Helvetica, Arial, sans-serif" font-size="24" font-weight="700" fill="#111827">Thermal Calibration Summary</text>
+<text x="40" y="62" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#4b5563">Multi-case RC vs HotSpot delta aggregation from the phase2 ablation summary</text>
+<text x="40" y="84" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#6b7280">Run tag: mainline_blueprint_smoke</text>
+<text x="40" y="104" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#6b7280">Hotspot threshold: 70.0C via effective_config.thermal.hotspot_threshold_c (7 cases)</text>
+<text x="40" y="124" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#6b7280">Eligible cases: 2</text>
+<text x="40" y="144" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#6b7280">Filter: hotspot_driver_status == ran</text>
+<text x="430" y="156" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#374151">Mean</text>
+<text x="680" y="156" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#374151">Abs Mean</text>
+<text x="930" y="156" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#374151">Max Abs</text>
+<text x="1110" y="156" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#374151">Worst Case</text>
+<rect x="28" y="158" width="1224" height="58" rx="10" fill="#ffffff" stroke="#e5e7eb"/>
+<text x="42" y="198" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#111827">Peak Delta (C)</text>
+<text x="42" y="216" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#6b7280">hotspot_peak_delta_c</text>
+<rect x="430" y="176" width="170" height="14" rx="7" fill="#e5e7eb"/>
+<rect x="430" y="176" width="131.13" height="14" rx="7" fill="#4f46e5"/>
+<text x="430" y="210" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#374151">+2.533</text>
+<rect x="680" y="176" width="170" height="14" rx="7" fill="#e5e7eb"/>
+<rect x="680" y="176" width="131.13" height="14" rx="7" fill="#0f766e"/>
+<text x="680" y="210" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#374151">2.533</text>
+<rect x="930" y="176" width="170" height="14" rx="7" fill="#e5e7eb"/>
+<rect x="930" y="176" width="170.00" height="14" rx="7" fill="#dc2626"/>
+<text x="930" y="210" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#374151">3.284</text>
+<text x="1110" y="198" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#111827">full_3d_runtime_adaptive</text>
+<rect x="28" y="244" width="1224" height="58" rx="10" fill="#ffffff" stroke="#e5e7eb"/>
+<text x="42" y="284" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#111827">Average Delta (C)</text>
+<text x="42" y="302" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#6b7280">hotspot_avg_delta_c</text>
+<rect x="430" y="262" width="170" height="14" rx="7" fill="#e5e7eb"/>
+<rect x="430" y="262" width="136.67" height="14" rx="7" fill="#4f46e5"/>
+<text x="430" y="296" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#374151">+1.024</text>
+<rect x="680" y="262" width="170" height="14" rx="7" fill="#e5e7eb"/>
+<rect x="680" y="262" width="136.67" height="14" rx="7" fill="#0f766e"/>
+<text x="680" y="296" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#374151">1.024</text>
+<rect x="930" y="262" width="170" height="14" rx="7" fill="#e5e7eb"/>
+<rect x="930" y="262" width="170.00" height="14" rx="7" fill="#dc2626"/>
+<text x="930" y="296" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#374151">1.274</text>
+<text x="1110" y="284" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#111827">full_3d_runtime_adaptive</text>
+<rect x="28" y="330" width="1224" height="58" rx="10" fill="#ffffff" stroke="#e5e7eb"/>
+<text x="42" y="370" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#111827">Hotspot Block Delta</text>
+<text x="42" y="388" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#6b7280">hotspot_block_delta</text>
+<rect x="430" y="348" width="170" height="14" rx="7" fill="#e5e7eb"/>
+<rect x="430" y="348" width="0.00" height="14" rx="7" fill="#4f46e5"/>
+<text x="430" y="382" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#374151">+0.000</text>
+<rect x="680" y="348" width="170" height="14" rx="7" fill="#e5e7eb"/>
+<rect x="680" y="348" width="0.00" height="14" rx="7" fill="#0f766e"/>
+<text x="680" y="382" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#374151">0.000</text>
+<rect x="930" y="348" width="170" height="14" rx="7" fill="#e5e7eb"/>
+<rect x="930" y="348" width="0.00" height="14" rx="7" fill="#dc2626"/>
+<text x="930" y="382" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#374151">0.000</text>
+<text x="1110" y="370" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#111827">full_3d_runtime_adaptive</text>
+<rect x="28" y="416" width="1224" height="58" rx="10" fill="#ffffff" stroke="#e5e7eb"/>
+<text x="42" y="456" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#111827">Hotspot Layer Delta</text>
+<text x="42" y="474" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#6b7280">hotspot_layer_delta</text>
+<rect x="430" y="434" width="170" height="14" rx="7" fill="#e5e7eb"/>
+<rect x="430" y="434" width="0.00" height="14" rx="7" fill="#4f46e5"/>
+<text x="430" y="468" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#374151">+0.000</text>
+<rect x="680" y="434" width="170" height="14" rx="7" fill="#e5e7eb"/>
+<rect x="680" y="434" width="0.00" height="14" rx="7" fill="#0f766e"/>
+<text x="680" y="468" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#374151">0.000</text>
+<rect x="930" y="434" width="170" height="14" rx="7" fill="#e5e7eb"/>
+<rect x="930" y="434" width="0.00" height="14" rx="7" fill="#dc2626"/>
+<text x="930" y="468" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#374151">0.000</text>
+<text x="1110" y="456" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#111827">full_3d_runtime_adaptive</text>
+</svg>

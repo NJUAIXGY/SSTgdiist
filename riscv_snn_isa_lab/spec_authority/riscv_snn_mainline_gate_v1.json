@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "producer": "riscv_snn_isa_lab",
+  "required_families": [
+    "barrier_wfi_order_ref",
+    "external_dyn_desc_bad_policy_ref",
+    "external_dyn_desc_fault_overwrite_chain_ref",
+    "external_dyn_desc_fault_rearm_ref",
+    "external_dyn_desc_fault_ref",
+    "external_dyn_desc_ref"
+  ],
+  "optional_groups": {
+    "completion_overflow_optional": {
+      "families": [
+        "completion_queue_overflow_ref"
+      ],
+      "blocking": false
+    },
+    "queue_optional": {
+      "families": [
+        "queue_backpressure_ref",
+        "completion_queue_overflow_ref"
+      ],
+      "blocking": false
+    }
+  },
+  "mainline_defaults": {
+    "primary_optional_group": "completion_overflow_optional",
+    "mainline_refresh_default_group": "completion_overflow_optional"
+  },
+  "promotion_contract": {
+    "completion_overflow_optional": {
+      "requires_family_equiv_pass": true,
+      "requires_multi_date_freshness": true,
+      "multi_date_freshness_mode": "since_latest_recovery",
+      "requires_reason_taxonomy_clean": true,
+      "requires_explicit_review": true
+    },
+    "queue_optional": {
+      "requires_family_equiv_pass": true,
+      "requires_multi_date_freshness": true,
+      "multi_date_freshness_mode": "since_latest_recovery",
+      "requires_reason_taxonomy_clean": true,
+      "requires_explicit_review": true
+    }
+  }
+}

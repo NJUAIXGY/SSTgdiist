@@ -1,0 +1,101 @@
+{
+  "artifact_role": "dated_family_admission_audit",
+  "authority_scope": "research_only_nonblocking",
+  "blocking": false,
+  "compatibility_aliases": {
+    "queue_optional": [
+      "queue_equivalence_path",
+      "queue_equivalence_all_ok",
+      "queue_history_path",
+      "queue_history_available",
+      "queue_history_entry_count",
+      "queue_history_all_dates_ok"
+    ]
+  },
+  "contract_primary": "group_optional_admission_v1",
+  "current_mainline_status_path": "/home/xgy/remote/riscv_snn_isa_lab/references/current-mainline-status.md",
+  "explicit_review_date": "2026-03-30",
+  "explicit_review_decision": "approved",
+  "explicit_review_ok": true,
+  "explicit_review_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-03-30-queue-optional-review.json",
+  "explicit_review_reviewer": "riscv_snn_isa_lab",
+  "failing_reason_ids": [],
+  "families": [
+    "completion_queue_overflow_ref",
+    "queue_backpressure_ref"
+  ],
+  "generated_utc": "2026-04-14T04:31:00.865964+00:00",
+  "group": "queue_optional",
+  "group_equivalence_all_ok": true,
+  "group_equivalence_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-04-04-equiv-matrix-queue-optional.json",
+  "group_history_all_dates_ok": true,
+  "group_history_available": true,
+  "group_history_effective_all_dates_ok": true,
+  "group_history_effective_entry_count": 2,
+  "group_history_entry_count": 2,
+  "group_history_freshness_mode": "since_latest_recovery",
+  "group_history_latest_recovered_date": null,
+  "group_history_path": "/home/xgy/remote/riscv_snn_isa_lab/references/queue-optional-equivalence-history.json",
+  "latest_family_surface_paths": {
+    "completion_queue_overflow_ref": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-04-04-completion-queue-overflow-ref-equiv.json",
+    "queue_backpressure_ref": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-04-04-queue-backpressure-ref-equiv.json"
+  },
+  "mainline_gate_authority_path": "/home/xgy/remote/riscv_snn_isa_lab/spec_authority/riscv_snn_mainline_gate_v1.json",
+  "primary_contract_fields": [
+    "group_equivalence_path",
+    "group_equivalence_all_ok",
+    "group_history_path",
+    "group_history_available",
+    "group_history_entry_count",
+    "group_history_all_dates_ok"
+  ],
+  "producer": "riscv_snn_lab.run_family_admission_audit",
+  "promotion_ready": true,
+  "queue_equivalence_all_ok": true,
+  "queue_equivalence_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-04-04-equiv-matrix-queue-optional.json",
+  "queue_history_all_dates_ok": true,
+  "queue_history_available": true,
+  "queue_history_effective_all_dates_ok": true,
+  "queue_history_effective_entry_count": 2,
+  "queue_history_entry_count": 2,
+  "queue_history_freshness_mode": "since_latest_recovery",
+  "queue_history_latest_recovered_date": null,
+  "queue_history_path": "/home/xgy/remote/riscv_snn_isa_lab/references/queue-optional-equivalence-history.json",
+  "reasons": [],
+  "refreshed_surfaces": {
+    "current_mainline_status_path": "/home/xgy/remote/riscv_snn_isa_lab/references/current-mainline-status.md",
+    "observer_adequacy_validation_path": "/home/xgy/remote/riscv_snn_isa_lab/references/observer-adequacy-validation.json",
+    "observer_summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/nightly-sidecar-observer-summary.json",
+    "research_report_path": "/home/xgy/remote/riscv_snn_isa_lab/references/riscv-snn-research-report.json",
+    "stable_surface_refresh_audit_path": "/home/xgy/remote/riscv_snn_isa_lab/references/stable-surface-refresh-audit.json",
+    "summary_md_path": "/home/xgy/remote/riscv_snn_isa_lab/references/nightly-sidecar-summary.md",
+    "supplementary_surface_history_path": "/home/xgy/remote/riscv_snn_isa_lab/references/supplementary-surface-history.json"
+  },
+  "required_contracts": {
+    "multi_date_freshness_mode": "since_latest_recovery",
+    "requires_explicit_review": true,
+    "requires_family_equiv_pass": true,
+    "requires_multi_date_freshness": true,
+    "requires_reason_taxonomy_clean": true
+  },
+  "runtime_gate_authority_path": "/home/xgy/remote/riscv_snn_isa_lab/spec_authority/riscv_snn_runtime_gate_v1.json",
+  "schema_version": 2,
+  "stable_history_latest_date": "2026-04-02",
+  "stable_history_path": "/home/xgy/remote/riscv_snn_isa_lab/references/nightly-history-index.json",
+  "stable_reason_ids": [
+    "runtime_bridge_provider_unbound",
+    "runtime_bridge_fused_step_completion_missing",
+    "runtime_bridge_completion_visibility_missing",
+    "runtime_bridge_completion_not_fully_consumed",
+    "runtime_bridge_expected_fault_missing",
+    "runtime_bridge_queue_fault_signature_mismatch",
+    "runtime_bridge_completion_queue_fault_signature_mismatch",
+    "runtime_bridge_fault_snapshot_missing",
+    "runtime_bridge_fault_snapshot_stale",
+    "runtime_bridge_last_completion_nonzero"
+  ],
+  "stable_sidecar_gate_ok": true,
+  "stable_sidecar_path": "/home/xgy/remote/riscv_snn_isa_lab/references/nightly-sidecar-report.json",
+  "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-04-14-queue-optional-admission-audit.json",
+  "surface_failures": {}
+}

@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="874" viewBox="0 0 1180 874">
+<rect width="100%" height="100%" fill="#fcfbf7"/>
+<text x="40" y="38" font-family="Helvetica, Arial, sans-serif" font-size="24" font-weight="700" fill="#111827">HBM-like NMC vs Monolithic-like</text>
+<text x="40" y="62" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#4b5563">Long-window memory/NMC comparison for shared-stack HBM-like and monolithic-tier proxies</text>
+<text x="40" y="84" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#6b7280">Run tag: runtime_ablation</text>
+<text x="296" y="108" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#264653">Full 3D + SNN Window Direct (full_3d_snn_window)</text>
+<text x="618" y="108" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#1D3557">Full 3D + SNN Window Monolithic Proxy (full_3d_snn_window_monolithic_proxy)</text>
+<text x="948" y="108" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#374151">Delta</text>
+<rect x="28" y="128" width="1124" height="52" rx="10" fill="#ffffff" stroke="#e5e7eb"/>
+<text x="36" y="168" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#111827">Memory Requests</text>
+<rect x="296" y="146" width="208" height="14" rx="7" fill="#e5e7eb"/>
+<rect x="296" y="146" width="117.00" height="14" rx="7" fill="#264653"/>
+<text x="296" y="180" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#374151">234</text>
+<rect x="618" y="146" width="208" height="14" rx="7" fill="#e5e7eb"/>
+<rect x="618" y="146" width="208.00" height="14" rx="7" fill="#1D3557"/>
+<text x="618" y="180" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#374151">416</text>
+<text x="948" y="168" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#111827">+182</text>
+<rect x="28" y="196" width="1124" height="52" rx="10" fill="#ffffff" stroke="#e5e7eb"/>
+<text x="36" y="236" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#111827">Memory / Completed Step</text>
+<rect x="296" y="214" width="208" height="14" rx="7" fill="#e5e7eb"/>
+<rect x="296" y="214" width="208.00" height="14" rx="7" fill="#264653"/>
+<text x="296" y="248" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#374151">234.000</text>
+<rect x="618" y="214" width="208" height="14" rx="7" fill="#e5e7eb"/>
+<rect x="618" y="214" width="13.21" height="14" rx="7" fill="#1D3557"/>
+<text x="618" y="248" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#374151">14.857</text>
+<text x="948" y="236" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#111827">-219.143</text>
+<rect x="28" y="264" width="1124" height="52" rx="10" fill="#ffffff" stroke="#e5e7eb"/>
+<text x="36" y="304" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#111827">Vertical Hops Ratio</text>
+<rect x="296" y="282" width="208" height="14" rx="7" fill="#e5e7eb"/>
+<rect x="296" y="282" width="101.33" height="14" rx="7" fill="#264653"/>
+<text x="296" y="316" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#374151">0.487</text>
+<rect x="618" y="282" width="208" height="14" rx="7" fill="#e5e7eb"/>
+<rect x="618" y="282" width="0.00" height="14" rx="7" fill="#1D3557"/>
+<text x="618" y="316" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#374151">0.000</text>
+<text x="948" y="304" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#111827">-0.487</text>
+<rect x="28" y="332" width="1124" height="52" rx="10" fill="#ffffff" stroke="#e5e7eb"/>
+<text x="36" y="372" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#111827">Remote-Home Ratio</text>
+<rect x="296" y="350" width="208" height="14" rx="7" fill="#e5e7eb"/>
+<rect x="296" y="350" width="104.00" height="14" rx="7" fill="#264653"/>
+<text x="296" y="384" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#374151">0.500</text>
+<rect x="618" y="350" width="208" height="14" rx="7" fill="#e5e7eb"/>
+<rect x="618" y="350" width="0.00" height="14" rx="7" fill="#1D3557"/>
+<text x="618" y="384" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#374151">0.000</text>
+<text x="948" y="372" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#111827">-0.500</text>
+<rect x="28" y="400" width="1124" height="52" rx="10" fill="#ffffff" stroke="#e5e7eb"/>
+<text x="36" y="440" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#111827">Total Service Deficit</text>
+<rect x="296" y="418" width="208" height="14" rx="7" fill="#e5e7eb"/>
+<rect x="296" y="418" width="0.00" height="14" rx="7" fill="#264653"/>
+<text x="296" y="452" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#374151">0</text>
+<rect x="618" y="418" width="208" height="14" rx="7" fill="#e5e7eb"/>
+<rect x="618" y="418" width="0.00" height="14" rx="7" fill="#1D3557"/>
+<text x="618" y="452" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#374151">0</text>
+<text x="948" y="440" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#111827">+0</text>
+<rect x="28" y="468" width="1124" height="52" rx="10" fill="#ffffff" stroke="#e5e7eb"/>
+<text x="36" y="508" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#111827">Service Deficit / Completed Step</text>
+<rect x="296" y="486" width="208" height="14" rx="7" fill="#e5e7eb"/>
+<rect x="296" y="486" width="0.00" height="14" rx="7" fill="#264653"/>
+<text x="296" y="520" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#374151">0.000</text>
+<rect x="618" y="486" width="208" height="14" rx="7" fill="#e5e7eb"/>
+<rect x="618" y="486" width="0.00" height="14" rx="7" fill="#1D3557"/>
+<text x="618" y="520" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#374151">0.000</text>
+<text x="948" y="508" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#111827">+0.000</text>
+<rect x="28" y="536" width="1124" height="52" rx="10" fill="#ffffff" stroke="#e5e7eb"/>
+<text x="36" y="576" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#111827">Step-Gate Stall / Completed Step</text>
+<rect x="296" y="554" width="208" height="14" rx="7" fill="#e5e7eb"/>
+<rect x="296" y="554" width="208.00" height="14" rx="7" fill="#264653"/>
+<text x="296" y="588" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#374151">28324.000</text>
+<rect x="618" y="554" width="208" height="14" rx="7" fill="#e5e7eb"/>
+<rect x="618" y="554" width="4.14" height="14" rx="7" fill="#1D3557"/>
+<text x="618" y="588" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#374151">563.143</text>
+<text x="948" y="576" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#111827">-27760.857</text>
+<rect x="28" y="604" width="1124" height="52" rx="10" fill="#ffffff" stroke="#e5e7eb"/>
+<text x="36" y="644" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#111827">Vertical Link Pressure</text>
+<rect x="296" y="622" width="208" height="14" rx="7" fill="#e5e7eb"/>
+<rect x="296" y="622" width="91.90" height="14" rx="7" fill="#264653"/>
+<text x="296" y="656" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#374151">0.442</text>
+<rect x="618" y="622" width="208" height="14" rx="7" fill="#e5e7eb"/>
+<rect x="618" y="622" width="31.20" height="14" rx="7" fill="#1D3557"/>
+<text x="618" y="656" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#374151">0.150</text>
+<text x="948" y="644" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#111827">-0.292</text>
+<rect x="28" y="672" width="1124" height="52" rx="10" fill="#ffffff" stroke="#e5e7eb"/>
+<text x="36" y="712" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#111827">Reliability Penalty</text>
+<rect x="296" y="690" width="208" height="14" rx="7" fill="#e5e7eb"/>
+<rect x="296" y="690" width="119.72" height="14" rx="7" fill="#264653"/>
+<text x="296" y="724" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#374151">0.576</text>
+<rect x="618" y="690" width="208" height="14" rx="7" fill="#e5e7eb"/>
+<rect x="618" y="690" width="112.28" height="14" rx="7" fill="#1D3557"/>
+<text x="618" y="724" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#374151">0.540</text>
+<text x="948" y="712" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#111827">-0.036</text>
+<text x="40" y="792" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#4b5563">Dominant home-access class: base=tier_local_home; compare=tier_local_home</text>
+</svg>

@@ -1,0 +1,30 @@
+{
+  "all_dates_ok": true,
+  "all_ok_latest": true,
+  "artifact_role": "stable_artifact_isolation_history",
+  "authority_scope": "research_surface_rollup_only",
+  "entries": [
+    {
+      "all_ok": true,
+      "date": "2026-03-28",
+      "regressed_surfaces": [],
+      "subset_surfaces": {
+        "builder": "subset",
+        "nightly": "subset",
+        "toolchain": "subset",
+        "toolchain_audit": "subset"
+      },
+      "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/artifact-isolation-report.json",
+      "surface_count": 4
+    }
+  ],
+  "entry_count": 1,
+  "first_fail_date": null,
+  "generated_utc": "2026-03-28T16:02:17.310813+00:00",
+  "latest_date": "2026-03-28",
+  "latest_recovered_date": null,
+  "latest_summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/artifact-isolation-report.json",
+  "producer": "riscv_snn_lab.refresh_artifact_isolation_history",
+  "schema_version": 2,
+  "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/artifact-isolation-history.json"
+}

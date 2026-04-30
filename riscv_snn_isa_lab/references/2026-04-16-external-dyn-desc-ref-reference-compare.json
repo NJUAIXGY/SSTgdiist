@@ -1,0 +1,68 @@
+{
+  "artifact_role": "dated_reference_compare_family_surface",
+  "authority_scope": "reference_compare_only",
+  "comparison": {
+    "allowed_divergence_points": [],
+    "fabric_stage_alignment": true,
+    "gate_ok": true,
+    "gate_reasons": [],
+    "invalid_divergence_points": [],
+    "memory_domain_alignment": true,
+    "reference_fabric_stages": [
+      "ingress_receive",
+      "execution_consume"
+    ],
+    "reference_memory_domains": [
+      "ControlMemory"
+    ],
+    "reference_terminal_state": "Completed",
+    "runtime_fabric_stages": [
+      "ingress_receive",
+      "execution_consume"
+    ],
+    "runtime_memory_domains": [
+      "ControlMemory"
+    ],
+    "runtime_terminal_state": "Completed",
+    "status": "aligned",
+    "terminal_state_match": true
+  },
+  "equiv_summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-04-02-external-dyn-desc-ref-equiv.json",
+  "family": "external_dyn_desc_ref",
+  "gate_ok": true,
+  "gate_reasons": [],
+  "generated_utc": "2026-04-16T06:55:10.933964+00:00",
+  "producer": "riscv_snn_lab.run_reference_compare_family",
+  "reference_terminal_state": "Completed",
+  "runtime_policy": {
+    "allowed_completion_signature": "visible completions should be fully consumed and retire with status 0",
+    "allowed_fault_signature": "fault_count should stay zero and last_fault_csr should remain zero",
+    "fault_lifecycle_mode": "none",
+    "fault_mode": "quiescent",
+    "progress_mode": "forward_progress_expected",
+    "reference_program_profile": "completed_single_step",
+    "required_checks": [
+      "provider_bound_visible",
+      "fused_step_completion_visible",
+      "completion_visible",
+      "completion_consumed_covers_visible",
+      "fault_snapshot_consistent",
+      "fault_snapshot_quiescent",
+      "last_completion_status_clean"
+    ]
+  },
+  "runtime_summary": {
+    "divergence_points": [],
+    "fabric_stages": [
+      "ingress_receive",
+      "execution_consume"
+    ],
+    "family": "external_dyn_desc_ref",
+    "memory_domains": [
+      "ControlMemory"
+    ],
+    "terminal_state": "Completed"
+  },
+  "schema_version": 2,
+  "status": "aligned"
+}

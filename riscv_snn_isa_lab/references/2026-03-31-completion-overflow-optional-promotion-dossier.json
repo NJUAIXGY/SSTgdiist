@@ -1,0 +1,46 @@
+{
+  "admission": {
+    "blocking": false,
+    "explicit_review_date": "2026-03-31",
+    "explicit_review_decision": "approved",
+    "explicit_review_ok": true,
+    "explicit_review_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-03-31-completion-overflow-optional-review.json",
+    "explicit_review_reviewer": "riscv_snn_isa_lab",
+    "group": "completion_overflow_optional",
+    "group_equivalence_all_ok": true,
+    "group_equivalence_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-03-29-completion-queue-overflow-ref-equiv.json",
+    "group_history_all_dates_ok": true,
+    "group_history_entry_count": 3,
+    "group_history_path": "/home/xgy/remote/riscv_snn_isa_lab/references/completion-overflow-optional-equivalence-history.json",
+    "promotion_ready": true,
+    "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-03-31-completion-overflow-optional-admission-audit.json"
+  },
+  "artifact_role": "optional_promotion_dossier",
+  "authority_scope": "research_only_nonblocking",
+  "blocking": false,
+  "evidence": {
+    "equivalence_summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-03-29-completion-queue-overflow-ref-equiv.json",
+    "explicit_review_ok": true,
+    "explicit_review_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-03-31-completion-overflow-optional-review.json",
+    "history_all_dates_ok": true,
+    "history_entry_count": 3,
+    "history_path": "/home/xgy/remote/riscv_snn_isa_lab/references/completion-overflow-optional-equivalence-history.json",
+    "required_contracts": {
+      "requires_explicit_review": true,
+      "requires_family_equiv_pass": true,
+      "requires_multi_date_freshness": true,
+      "requires_reason_taxonomy_clean": true
+    },
+    "stable_history_latest_date": "2026-03-30",
+    "stable_history_path": "/home/xgy/remote/riscv_snn_isa_lab/references/nightly-history-index.json",
+    "stable_sidecar_path": "/home/xgy/remote/riscv_snn_isa_lab/references/nightly-sidecar-report.json"
+  },
+  "families": [
+    "completion_queue_overflow_ref"
+  ],
+  "generated_utc": "2026-03-31T08:06:42.056963+00:00",
+  "group": "completion_overflow_optional",
+  "producer": "riscv_snn_lab.export_optional_promotion_dossier",
+  "promotion_ready": true,
+  "schema_version": 2
+}

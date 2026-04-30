@@ -1,0 +1,65 @@
+{
+  "admission": {
+    "blocking": false,
+    "compatibility_aliases": {},
+    "contract_primary": "group_optional_admission_v1",
+    "explicit_review_date": "2026-03-31",
+    "explicit_review_decision": "approved",
+    "explicit_review_ok": true,
+    "explicit_review_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-03-31-completion-overflow-optional-review.json",
+    "explicit_review_reviewer": "riscv_snn_isa_lab",
+    "group": "completion_overflow_optional",
+    "group_equivalence_all_ok": true,
+    "group_equivalence_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-04-02-completion-queue-overflow-ref-equiv.json",
+    "group_history_all_dates_ok": true,
+    "group_history_effective_all_dates_ok": true,
+    "group_history_effective_entry_count": 5,
+    "group_history_entry_count": 5,
+    "group_history_freshness_mode": "all_dates",
+    "group_history_latest_recovered_date": null,
+    "group_history_path": "/home/xgy/remote/riscv_snn_isa_lab/references/completion-overflow-optional-equivalence-history.json",
+    "primary_contract_fields": [
+      "group_equivalence_path",
+      "group_equivalence_all_ok",
+      "group_history_path",
+      "group_history_available",
+      "group_history_entry_count",
+      "group_history_all_dates_ok"
+    ],
+    "promotion_ready": true,
+    "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-04-02-completion-overflow-optional-admission-audit.json"
+  },
+  "artifact_role": "optional_promotion_dossier",
+  "authority_scope": "research_only_nonblocking",
+  "blocking": false,
+  "contract_primary": "group_optional_promotion_dossier_v1",
+  "evidence": {
+    "equivalence_summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-04-02-completion-queue-overflow-ref-equiv.json",
+    "explicit_review_ok": true,
+    "explicit_review_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-03-31-completion-overflow-optional-review.json",
+    "history_all_dates_ok": true,
+    "history_effective_all_dates_ok": true,
+    "history_effective_entry_count": 5,
+    "history_entry_count": 5,
+    "history_freshness_mode": "all_dates",
+    "history_latest_recovered_date": null,
+    "history_path": "/home/xgy/remote/riscv_snn_isa_lab/references/completion-overflow-optional-equivalence-history.json",
+    "required_contracts": {
+      "requires_explicit_review": true,
+      "requires_family_equiv_pass": true,
+      "requires_multi_date_freshness": true,
+      "requires_reason_taxonomy_clean": true
+    },
+    "stable_history_latest_date": "2026-04-02",
+    "stable_history_path": "/home/xgy/remote/riscv_snn_isa_lab/references/nightly-history-index.json",
+    "stable_sidecar_path": "/home/xgy/remote/riscv_snn_isa_lab/references/nightly-sidecar-report.json"
+  },
+  "families": [
+    "completion_queue_overflow_ref"
+  ],
+  "generated_utc": "2026-04-02T13:01:06.542189+00:00",
+  "group": "completion_overflow_optional",
+  "producer": "riscv_snn_lab.export_optional_promotion_dossier",
+  "promotion_ready": true,
+  "schema_version": 2
+}

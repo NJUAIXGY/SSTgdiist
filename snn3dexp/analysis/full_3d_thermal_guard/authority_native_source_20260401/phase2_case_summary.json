@@ -1,0 +1,1350 @@
+{
+  "case_id": "full_3d_thermal_guard",
+  "run_tag": "authority_native_source_20260401",
+  "status": "smoke_passed",
+  "runtime_enabled": false,
+  "control_mode": "observe_only",
+  "case_role": "runtime_smoke",
+  "paths": {
+    "effective_config_path": "/home/xgy/remote/snn3dexp/runs/full_3d_thermal_guard/authority_native_source_20260401/effective_config.json",
+    "platform_summary_path": "/home/xgy/remote/snn3dexp/runs/full_3d_thermal_guard/authority_native_source_20260401/platform_summary.json",
+    "stack_nmc_summary_path": "/home/xgy/remote/snn3dexp/analysis/full_3d_thermal_guard/authority_native_source_20260401/stack_nmc_summary.json",
+    "route_memory_joint_summary_path": "/home/xgy/remote/snn3dexp/analysis/full_3d_thermal_guard/authority_native_source_20260401/route_memory_joint_summary.json",
+    "runtime_summary_path": "/home/xgy/remote/snn3dexp/analysis/full_3d_thermal_guard/authority_native_source_20260401/runtime_summary.json",
+    "runtime_control_path": ""
+  },
+  "thermal_input": {
+    "input_source_kind": "local_hotspot_sidecar",
+    "summary_path": "/home/xgy/remote/snn3dexp/runs/full_3d_thermal_guard/authority_native_source_20260401/thermal_sidecar/summary/thermal_summary.json",
+    "summary_exists": true,
+    "window_power_samples_path": "/home/xgy/remote/snn3dexp/runs/full_3d_thermal_guard/authority_native_source_20260401/thermal_sidecar/summary/window_power_samples.jsonl",
+    "window_power_samples_exists": true,
+    "window_power_sample_count": 1,
+    "trace_sources": [
+      "proxy_synthesized"
+    ],
+    "shared_input_key": "/home/xgy/remote/snn3dexp/runs/full_3d_thermal_guard/authority_native_source_20260401/thermal_sidecar/summary/thermal_summary.json"
+  },
+  "mapping": {
+    "policy": "3d_aware",
+    "score": -0.34375,
+    "same_home_stack_ratio": 0.75,
+    "vertical_target_ratio": 0.25
+  },
+  "route_kernel": {
+    "processing_enabled": true,
+    "routing_mode": "weight_driven",
+    "mapping_mode": "edges_csv",
+    "mapping_edges_file": "/home/xgy/remote/snn3dexp/runs/full_3d_thermal_guard/authority_native_source_20260401/assets/traffic_mem_edges.csv",
+    "mapping_edges_file_exists": true,
+    "native_bootstrap_source": "edges_csv",
+    "native_bootstrap_ready": true,
+    "synapse_route_impl": "native_3d",
+    "route3d_native_targets": true,
+    "source_semantics_authority": "native_3d_route_table",
+    "source_primary_kind": "edges_csv_bootstrap",
+    "real_synapse_inputs_available": false,
+    "native_synapse_source_candidate": false,
+    "native_source_fanout_active": true,
+    "native_target_synthesis_active": true,
+    "bootstrap_dependency_active": true,
+    "route_topology": "mesh_3d",
+    "target_semantics_authority": "native_3d_target_synthesis",
+    "mesh_shape": "4x4x2",
+    "mesh_dim_z": 2,
+    "multicast_block_d": 2,
+    "multicast_die_local_only": false,
+    "expected_active": true,
+    "actual_activation_observed": true,
+    "actual_activation_source": "sst_stats_route3d_native_runtime",
+    "runtime_activation_total": 1024,
+    "runtime_activation_gating_total": 0,
+    "runtime_activation_direct_total": 1024,
+    "runtime_unique_sources_total": 127,
+    "runtime_marker_count": 256,
+    "runtime_marker_samples": [
+      {
+        "node": 31,
+        "core": 0,
+        "source_global": 126,
+        "fanout": 2,
+        "applied_gating": 0
+      },
+      {
+        "node": 31,
+        "core": 0,
+        "source_global": 126,
+        "fanout": 2,
+        "applied_gating": 0
+      },
+      {
+        "node": 30,
+        "core": 0,
+        "source_global": 122,
+        "fanout": 2,
+        "applied_gating": 0
+      },
+      {
+        "node": 30,
+        "core": 0,
+        "source_global": 122,
+        "fanout": 2,
+        "applied_gating": 0
+      },
+      {
+        "node": 29,
+        "core": 0,
+        "source_global": 116,
+        "fanout": 2,
+        "applied_gating": 0
+      },
+      {
+        "node": 29,
+        "core": 0,
+        "source_global": 116,
+        "fanout": 2,
+        "applied_gating": 0
+      },
+      {
+        "node": 28,
+        "core": 0,
+        "source_global": 112,
+        "fanout": 2,
+        "applied_gating": 0
+      },
+      {
+        "node": 28,
+        "core": 0,
+        "source_global": 112,
+        "fanout": 2,
+        "applied_gating": 0
+      }
+    ],
+    "bundle_v3_diag_count": 0,
+    "bundle_v3_diag_samples": [],
+    "bundle_v3_emit_attempt_total": 0,
+    "bundle_v3_emit_success_total": 0,
+    "bundle_v3_emit_fallback_total": 0,
+    "bundle_v3_emitted_packets_total": 0,
+    "bundle_v3_tx_packets_total": 0,
+    "bundle_v3_last_cycle": 0,
+    "bundle_v3_last_step_seq": 0,
+    "unmet_conditions": [],
+    "source_semantics": {
+      "workload_impl": "traffic_mem",
+      "mapping_mode": "edges_csv",
+      "mapping_edges_file": "/home/xgy/remote/snn3dexp/runs/full_3d_thermal_guard/authority_native_source_20260401/assets/traffic_mem_edges.csv",
+      "mapping_edges_file_exists": true,
+      "synapse_route_impl": "native_3d",
+      "source_semantics_authority": "native_3d_route_table",
+      "native_bootstrap_source": "edges_csv",
+      "native_bootstrap_ready": true,
+      "weights_template_configured": false,
+      "enable_weight_fetch": false,
+      "gas_enable": false,
+      "real_synapse_source_count": 32,
+      "real_synapse_inputs_available": true,
+      "semantic_addressing_enabled": true,
+      "bootstrap_dependency_active": true,
+      "primary_source_kind": "edges_csv_bootstrap",
+      "native_synapse_source_candidate": false,
+      "native_source_fanout_active": true,
+      "native_target_synthesis_active": true,
+      "route_topology": "mesh_3d",
+      "target_semantics_authority": "native_3d_target_synthesis",
+      "route_memory_overlap_mode": "bootstrap_bound",
+      "native_synapse_overlap_ratio": 0.0
+    }
+  },
+  "joint": {
+    "vertical_hops_ratio": 0.5,
+    "remote_home_ratio": 0.5,
+    "route_memory_overlap": 1.0
+  },
+  "thermal": {
+    "thermal_hotspot_score": 1.25,
+    "vertical_link_pressure": 0.35000000000000003,
+    "stack_hotspot_penalty": 0.004739336492890933,
+    "vertical_bandwidth_budget": 2.0,
+    "tsv_miv_budget_pressure": 0.21875000000000003,
+    "power_density_score": 1.8011329976303316,
+    "reliability_penalty": 0.4808223489336493,
+    "thermal_state_source": "thermal_hooks",
+    "peak_temperature_c": 0.0,
+    "avg_temperature_c": 0.0,
+    "vertical_gradient_c": 0.0,
+    "hotspot_block_count": 0,
+    "hotspot_layer_count": 0,
+    "thermal_replay_sample_count": 1,
+    "hotspot_driver_status": "ran",
+    "hotspot_model_type": "grid",
+    "hotspot_temperature_source": "hotspot_steady_temp",
+    "hotspot_peak_temperature_c": 45.03000000000003,
+    "hotspot_avg_temperature_c": 45.02036458333355,
+    "hotspot_peak_delta_c": -45.03000000000003,
+    "hotspot_avg_delta_c": -45.02036458333355,
+    "hotspot_block_delta": 0,
+    "hotspot_layer_delta": 0,
+    "hotspot_threshold_c": 70.0,
+    "hotspot_threshold_source": "effective_config.thermal.hotspot_threshold_c",
+    "hotspot_artifacts": {
+      "floorplan": "/home/xgy/remote/snn3dexp/runs/full_3d_thermal_guard/authority_native_source_20260401/thermal_sidecar/hotspot/snndl_mesh.lcf",
+      "ptrace": "/home/xgy/remote/snn3dexp/runs/full_3d_thermal_guard/authority_native_source_20260401/thermal_sidecar/hotspot/snndl_mesh.ptrace",
+      "hotspot_config": "/home/xgy/remote/snn3dexp/runs/full_3d_thermal_guard/authority_native_source_20260401/thermal_sidecar/hotspot/hotspot.config",
+      "window_power_samples_jsonl": "/home/xgy/remote/snn3dexp/runs/full_3d_thermal_guard/authority_native_source_20260401/thermal_sidecar/summary/window_power_samples.jsonl",
+      "tile_temperature_summary_csv": "/home/xgy/remote/snn3dexp/runs/full_3d_thermal_guard/authority_native_source_20260401/thermal_sidecar/summary/tile_temperature_summary.csv",
+      "thermal_summary_json": "/home/xgy/remote/snn3dexp/runs/full_3d_thermal_guard/authority_native_source_20260401/thermal_sidecar/summary/thermal_summary.json",
+      "steady_temp": "/home/xgy/remote/snn3dexp/runs/full_3d_thermal_guard/authority_native_source_20260401/thermal_sidecar/hotspot/steady.temp",
+      "transient_temp": "/home/xgy/remote/snn3dexp/runs/full_3d_thermal_guard/authority_native_source_20260401/thermal_sidecar/hotspot/transient.temp",
+      "lcf": "/home/xgy/remote/snn3dexp/runs/full_3d_thermal_guard/authority_native_source_20260401/thermal_sidecar/hotspot/snndl_mesh.lcf",
+      "layer_floorplans": [
+        "/home/xgy/remote/snn3dexp/runs/full_3d_thermal_guard/authority_native_source_20260401/thermal_sidecar/hotspot/layer_00_compute_top.flp",
+        "/home/xgy/remote/snn3dexp/runs/full_3d_thermal_guard/authority_native_source_20260401/thermal_sidecar/hotspot/layer_01_compute_bottom.flp"
+      ]
+    }
+  },
+  "runtime": {
+    "enabled": false,
+    "policy": "disabled",
+    "signal_source": "disabled",
+    "thermal_signal_source": "thermal_hooks",
+    "thermal_state_source": "thermal_hooks",
+    "control_epoch_scope": "",
+    "control_execution_enabled": false,
+    "control_decision": "disabled",
+    "control_decision_source": "",
+    "control_trigger_signals": [],
+    "observe_only": true,
+    "recommend_only": false,
+    "executed_control": false,
+    "control_artifact_path": "",
+    "base_weights": {
+      "mapping_route_weight": 1.0,
+      "mapping_stack_home_weight": 1.5,
+      "mapping_vertical_penalty": 1.75
+    },
+    "route_memory_overlap": 1.0,
+    "vertical_link_pressure": 0.0,
+    "stack_hotspot_penalty": 0.0,
+    "remap_epoch": 0,
+    "homeroute_adjustment_count": 0,
+    "thermal_guard_actions": 0,
+    "hotspot_threshold_c": 70.0,
+    "hotspot_threshold_source": "effective_config.thermal.hotspot_threshold_c",
+    "thermal_observability": {
+      "peak_temperature_c": null,
+      "avg_temperature_c": null,
+      "hotspot_block_count": 0,
+      "hotspot_layer_count": 0,
+      "vertical_gradient_c": 0.0,
+      "top_layer_peak_c": null,
+      "bottom_layer_peak_c": null,
+      "thermal_hotspot_score": 1.25
+    },
+    "global_step_observability": {
+      "enabled": false,
+      "controller_present": false,
+      "controller_seq_last": 0,
+      "controller_steps_started_total": 0,
+      "controller_steps_completed_total": 0,
+      "controller_pe_ready_events_total": 0,
+      "controller_pe_done_events_total": 0,
+      "controller_warn_count_total": 0,
+      "step_start_count": 0,
+      "step_done_count": 0,
+      "pe_global_steps_done_total": 0,
+      "pe_global_steps_done_max": 0,
+      "active_step_nodes": 0,
+      "stall_on_step_gate_cycles_total": 0,
+      "stall_on_step_gate_cycles_max": 0,
+      "step_activation_invocations_total": 0,
+      "step_activation_pre_selected_total": 0,
+      "step_activation_spike_attempts_total": 0,
+      "step_activation_spikes_injected_total": 0,
+      "step_activation_route_hits_total": 0,
+      "step_activation_route_misses_total": 0,
+      "step_activation_local_drops_total": 0,
+      "progress_marker_count": 0,
+      "step_progress_last_cycle": 0,
+      "step_progress_last_seq": 0,
+      "step_progress_completed": 0,
+      "step_progress_ready_count": 0,
+      "step_progress_ready_total": 0,
+      "step_progress_done_count": 0,
+      "step_progress_done_total": 0,
+      "step_progress_missing_first": []
+    },
+    "recommended_actions": [],
+    "recommended_weights": {
+      "mapping_route_weight": 1.0,
+      "mapping_stack_home_weight": 1.5,
+      "mapping_vertical_penalty": 1.75
+    },
+    "applied_weights": {
+      "mapping_route_weight": 1.0,
+      "mapping_stack_home_weight": 1.5,
+      "mapping_vertical_penalty": 1.75
+    },
+    "next_window_processing_params": {},
+    "coupling_metrics": {
+      "source": "joint_runtime_derived",
+      "route_thermal_coupling_score": 0.17500000000000002,
+      "memory_thermal_coupling_proxy": 1.8341575,
+      "route_barrier_coupling_proxy": 0.0,
+      "memory_barrier_coupling_proxy": 0.0,
+      "closed_loop_candidate": true
+    }
+  },
+  "architecture": {
+    "mesh_shape": "4x4x2",
+    "analysis_axes": [
+      "route",
+      "memory",
+      "thermal",
+      "barrier"
+    ],
+    "observability": {
+      "route_memory_joint_available": true,
+      "runtime_summary_available": true,
+      "global_step_available": true,
+      "thermal_runtime_available": true,
+      "hotspot_driver_available": true,
+      "memory_controller_proxy_available": true,
+      "route_memory_joint_summary_path": "/home/xgy/remote/snn3dexp/analysis/full_3d_thermal_guard/authority_native_source_20260401/route_memory_joint_summary.json",
+      "runtime_summary_path": "/home/xgy/remote/snn3dexp/analysis/full_3d_thermal_guard/authority_native_source_20260401/runtime_summary.json"
+    },
+    "route_pressure": {
+      "vertical_hops_ratio": 0.5,
+      "remote_home_ratio": 0.5,
+      "route_memory_overlap": 1.0,
+      "source_semantics_authority": "native_3d_route_table",
+      "source_primary_kind": "edges_csv_bootstrap",
+      "real_synapse_inputs_available": false,
+      "native_synapse_source_candidate": false,
+      "native_source_fanout_active": true,
+      "native_target_synthesis_active": true,
+      "bootstrap_dependency_active": true,
+      "native_bootstrap_source": "edges_csv",
+      "route_topology": "mesh_3d",
+      "target_semantics_authority": "native_3d_target_synthesis"
+    },
+    "memory_pressure": {
+      "memory_requests_total": 6144,
+      "remote_home_memory_requests_total": 3072,
+      "active_stack_count": 4,
+      "most_pressured_controller_service_deficit_proxy": 0.0,
+      "most_pressured_controller_backpressure_proxy": 5.24045,
+      "most_pressured_controller_memory_pressure_proxy": 5.24045,
+      "memory_pressure_proxy_source": "backpressure",
+      "home_stack_path_authority": "real_home_stack_binding",
+      "home_stack_controller_pressure_authority": "runtime_controller",
+      "home_stack_runtime_authority_available": true,
+      "pe_nic_real_home_path_authority": "real_home_stack_binding",
+      "synapse_real_home_path_authority": "real_home_stack_binding",
+      "most_pressured_runtime_controller_id": 4,
+      "most_pressured_runtime_stack_id": 1
+    },
+    "thermal_pressure": {
+      "thermal_hotspot_score": 1.25,
+      "vertical_link_pressure": 0.35000000000000003,
+      "stack_hotspot_penalty": 0.004739336492890933,
+      "peak_temperature_c": 0.0,
+      "avg_temperature_c": 0.0,
+      "vertical_gradient_c": 0.0,
+      "hotspot_block_count": 0,
+      "hotspot_layer_count": 0,
+      "has_layer_temperatures": true,
+      "has_block_temperatures": true,
+      "hottest_layer_id": 0,
+      "hottest_layer_peak_c": 48.039034375,
+      "layer_summary": [
+        {
+          "layer_id": 0,
+          "layer_name": "compute_top",
+          "layer_index": 0,
+          "avg_temperature_c": 46.037681835937484,
+          "peak_temperature_c": 48.039034375,
+          "min_temperature_c": 45.19425,
+          "source": "online_rc_estimator"
+        },
+        {
+          "layer_id": 1,
+          "layer_name": "compute_bottom",
+          "layer_index": 1,
+          "avg_temperature_c": 46.037681835937484,
+          "peak_temperature_c": 48.039034375,
+          "min_temperature_c": 45.19425,
+          "source": "online_rc_estimator"
+        }
+      ],
+      "tier_summary": {
+        "available": true,
+        "tier_count": 2,
+        "top_layer_peak_c": 0.0,
+        "bottom_layer_peak_c": 0.0,
+        "layer_peak_span_c": 0.0
+      },
+      "stack_summary": {
+        "available": true,
+        "inferred_from": "thermal_consumer_snapshot.block_temperatures.tile_id",
+        "tile_count": 32,
+        "hottest_tile_id": 15,
+        "hottest_tile_peak_c": 48.039034375,
+        "tile_peak_temperatures": [
+          {
+            "tile_id": 15,
+            "peak_temperature_c": 48.039034375,
+            "avg_temperature_c": 46.70299895833333,
+            "block_count": 3,
+            "layer_ids": [
+              0
+            ],
+            "block_names": [
+              "L00_compute_top__tile_15_comp",
+              "L00_compute_top__tile_15_noc",
+              "L00_compute_top__tile_15_sram"
+            ]
+          },
+          {
+            "tile_id": 31,
+            "peak_temperature_c": 48.039034375,
+            "avg_temperature_c": 46.70299895833333,
+            "block_count": 3,
+            "layer_ids": [
+              1
+            ],
+            "block_names": [
+              "L01_compute_bottom__tile_31_comp",
+              "L01_compute_bottom__tile_31_noc",
+              "L01_compute_bottom__tile_31_sram"
+            ]
+          },
+          {
+            "tile_id": 3,
+            "peak_temperature_c": 47.41596875,
+            "avg_temperature_c": 46.27633125,
+            "block_count": 3,
+            "layer_ids": [
+              0
+            ],
+            "block_names": [
+              "L00_compute_top__tile_03_comp",
+              "L00_compute_top__tile_03_noc",
+              "L00_compute_top__tile_03_sram"
+            ]
+          },
+          {
+            "tile_id": 11,
+            "peak_temperature_c": 47.41596875,
+            "avg_temperature_c": 46.27633125,
+            "block_count": 3,
+            "layer_ids": [
+              0
+            ],
+            "block_names": [
+              "L00_compute_top__tile_11_comp",
+              "L00_compute_top__tile_11_noc",
+              "L00_compute_top__tile_11_sram"
+            ]
+          },
+          {
+            "tile_id": 12,
+            "peak_temperature_c": 47.41596875,
+            "avg_temperature_c": 46.27633125,
+            "block_count": 3,
+            "layer_ids": [
+              0
+            ],
+            "block_names": [
+              "L00_compute_top__tile_12_comp",
+              "L00_compute_top__tile_12_noc",
+              "L00_compute_top__tile_12_sram"
+            ]
+          },
+          {
+            "tile_id": 14,
+            "peak_temperature_c": 47.41596875,
+            "avg_temperature_c": 46.27633125,
+            "block_count": 3,
+            "layer_ids": [
+              0
+            ],
+            "block_names": [
+              "L00_compute_top__tile_14_comp",
+              "L00_compute_top__tile_14_noc",
+              "L00_compute_top__tile_14_sram"
+            ]
+          },
+          {
+            "tile_id": 19,
+            "peak_temperature_c": 47.41596875,
+            "avg_temperature_c": 46.27633125,
+            "block_count": 3,
+            "layer_ids": [
+              1
+            ],
+            "block_names": [
+              "L01_compute_bottom__tile_19_comp",
+              "L01_compute_bottom__tile_19_noc",
+              "L01_compute_bottom__tile_19_sram"
+            ]
+          },
+          {
+            "tile_id": 27,
+            "peak_temperature_c": 47.41596875,
+            "avg_temperature_c": 46.27633125,
+            "block_count": 3,
+            "layer_ids": [
+              1
+            ],
+            "block_names": [
+              "L01_compute_bottom__tile_27_comp",
+              "L01_compute_bottom__tile_27_noc",
+              "L01_compute_bottom__tile_27_sram"
+            ]
+          },
+          {
+            "tile_id": 28,
+            "peak_temperature_c": 47.41596875,
+            "avg_temperature_c": 46.27633125,
+            "block_count": 3,
+            "layer_ids": [
+              1
+            ],
+            "block_names": [
+              "L01_compute_bottom__tile_28_comp",
+              "L01_compute_bottom__tile_28_noc",
+              "L01_compute_bottom__tile_28_sram"
+            ]
+          },
+          {
+            "tile_id": 30,
+            "peak_temperature_c": 47.41596875,
+            "avg_temperature_c": 46.27633125,
+            "block_count": 3,
+            "layer_ids": [
+              1
+            ],
+            "block_names": [
+              "L01_compute_bottom__tile_30_comp",
+              "L01_compute_bottom__tile_30_noc",
+              "L01_compute_bottom__tile_30_sram"
+            ]
+          },
+          {
+            "tile_id": 7,
+            "peak_temperature_c": 47.05993125,
+            "avg_temperature_c": 46.150652083333334,
+            "block_count": 3,
+            "layer_ids": [
+              0
+            ],
+            "block_names": [
+              "L00_compute_top__tile_07_comp",
+              "L00_compute_top__tile_07_noc",
+              "L00_compute_top__tile_07_sram"
+            ]
+          },
+          {
+            "tile_id": 13,
+            "peak_temperature_c": 47.05993125,
+            "avg_temperature_c": 46.150652083333334,
+            "block_count": 3,
+            "layer_ids": [
+              0
+            ],
+            "block_names": [
+              "L00_compute_top__tile_13_comp",
+              "L00_compute_top__tile_13_noc",
+              "L00_compute_top__tile_13_sram"
+            ]
+          },
+          {
+            "tile_id": 23,
+            "peak_temperature_c": 47.05993125,
+            "avg_temperature_c": 46.150652083333334,
+            "block_count": 3,
+            "layer_ids": [
+              1
+            ],
+            "block_names": [
+              "L01_compute_bottom__tile_23_comp",
+              "L01_compute_bottom__tile_23_noc",
+              "L01_compute_bottom__tile_23_sram"
+            ]
+          },
+          {
+            "tile_id": 29,
+            "peak_temperature_c": 47.05993125,
+            "avg_temperature_c": 46.150652083333334,
+            "block_count": 3,
+            "layer_ids": [
+              1
+            ],
+            "block_names": [
+              "L01_compute_bottom__tile_29_comp",
+              "L01_compute_bottom__tile_29_noc",
+              "L01_compute_bottom__tile_29_sram"
+            ]
+          },
+          {
+            "tile_id": 0,
+            "peak_temperature_c": 46.90734375,
+            "avg_temperature_c": 45.91637291666666,
+            "block_count": 3,
+            "layer_ids": [
+              0
+            ],
+            "block_names": [
+              "L00_compute_top__tile_00_comp",
+              "L00_compute_top__tile_00_noc",
+              "L00_compute_top__tile_00_sram"
+            ]
+          },
+          {
+            "tile_id": 2,
+            "peak_temperature_c": 46.90734375,
+            "avg_temperature_c": 45.91637291666666,
+            "block_count": 3,
+            "layer_ids": [
+              0
+            ],
+            "block_names": [
+              "L00_compute_top__tile_02_comp",
+              "L00_compute_top__tile_02_noc",
+              "L00_compute_top__tile_02_sram"
+            ]
+          },
+          {
+            "tile_id": 8,
+            "peak_temperature_c": 46.90734375,
+            "avg_temperature_c": 45.91637291666666,
+            "block_count": 3,
+            "layer_ids": [
+              0
+            ],
+            "block_names": [
+              "L00_compute_top__tile_08_comp",
+              "L00_compute_top__tile_08_noc",
+              "L00_compute_top__tile_08_sram"
+            ]
+          },
+          {
+            "tile_id": 10,
+            "peak_temperature_c": 46.90734375,
+            "avg_temperature_c": 45.91637291666666,
+            "block_count": 3,
+            "layer_ids": [
+              0
+            ],
+            "block_names": [
+              "L00_compute_top__tile_10_comp",
+              "L00_compute_top__tile_10_noc",
+              "L00_compute_top__tile_10_sram"
+            ]
+          },
+          {
+            "tile_id": 16,
+            "peak_temperature_c": 46.90734375,
+            "avg_temperature_c": 45.91637291666666,
+            "block_count": 3,
+            "layer_ids": [
+              1
+            ],
+            "block_names": [
+              "L01_compute_bottom__tile_16_comp",
+              "L01_compute_bottom__tile_16_noc",
+              "L01_compute_bottom__tile_16_sram"
+            ]
+          },
+          {
+            "tile_id": 18,
+            "peak_temperature_c": 46.90734375,
+            "avg_temperature_c": 45.91637291666666,
+            "block_count": 3,
+            "layer_ids": [
+              1
+            ],
+            "block_names": [
+              "L01_compute_bottom__tile_18_comp",
+              "L01_compute_bottom__tile_18_noc",
+              "L01_compute_bottom__tile_18_sram"
+            ]
+          },
+          {
+            "tile_id": 24,
+            "peak_temperature_c": 46.90734375,
+            "avg_temperature_c": 45.91637291666666,
+            "block_count": 3,
+            "layer_ids": [
+              1
+            ],
+            "block_names": [
+              "L01_compute_bottom__tile_24_comp",
+              "L01_compute_bottom__tile_24_noc",
+              "L01_compute_bottom__tile_24_sram"
+            ]
+          },
+          {
+            "tile_id": 26,
+            "peak_temperature_c": 46.90734375,
+            "avg_temperature_c": 45.91637291666666,
+            "block_count": 3,
+            "layer_ids": [
+              1
+            ],
+            "block_names": [
+              "L01_compute_bottom__tile_26_comp",
+              "L01_compute_bottom__tile_26_noc",
+              "L01_compute_bottom__tile_26_sram"
+            ]
+          },
+          {
+            "tile_id": 1,
+            "peak_temperature_c": 46.55130625,
+            "avg_temperature_c": 45.79069375,
+            "block_count": 3,
+            "layer_ids": [
+              0
+            ],
+            "block_names": [
+              "L00_compute_top__tile_01_comp",
+              "L00_compute_top__tile_01_noc",
+              "L00_compute_top__tile_01_sram"
+            ]
+          },
+          {
+            "tile_id": 4,
+            "peak_temperature_c": 46.55130625,
+            "avg_temperature_c": 45.79069375,
+            "block_count": 3,
+            "layer_ids": [
+              0
+            ],
+            "block_names": [
+              "L00_compute_top__tile_04_comp",
+              "L00_compute_top__tile_04_noc",
+              "L00_compute_top__tile_04_sram"
+            ]
+          },
+          {
+            "tile_id": 6,
+            "peak_temperature_c": 46.55130625,
+            "avg_temperature_c": 45.79069375,
+            "block_count": 3,
+            "layer_ids": [
+              0
+            ],
+            "block_names": [
+              "L00_compute_top__tile_06_comp",
+              "L00_compute_top__tile_06_noc",
+              "L00_compute_top__tile_06_sram"
+            ]
+          },
+          {
+            "tile_id": 9,
+            "peak_temperature_c": 46.55130625,
+            "avg_temperature_c": 45.79069375,
+            "block_count": 3,
+            "layer_ids": [
+              0
+            ],
+            "block_names": [
+              "L00_compute_top__tile_09_comp",
+              "L00_compute_top__tile_09_noc",
+              "L00_compute_top__tile_09_sram"
+            ]
+          },
+          {
+            "tile_id": 17,
+            "peak_temperature_c": 46.55130625,
+            "avg_temperature_c": 45.79069375,
+            "block_count": 3,
+            "layer_ids": [
+              1
+            ],
+            "block_names": [
+              "L01_compute_bottom__tile_17_comp",
+              "L01_compute_bottom__tile_17_noc",
+              "L01_compute_bottom__tile_17_sram"
+            ]
+          },
+          {
+            "tile_id": 20,
+            "peak_temperature_c": 46.55130625,
+            "avg_temperature_c": 45.79069375,
+            "block_count": 3,
+            "layer_ids": [
+              1
+            ],
+            "block_names": [
+              "L01_compute_bottom__tile_20_comp",
+              "L01_compute_bottom__tile_20_noc",
+              "L01_compute_bottom__tile_20_sram"
+            ]
+          },
+          {
+            "tile_id": 22,
+            "peak_temperature_c": 46.55130625,
+            "avg_temperature_c": 45.79069375,
+            "block_count": 3,
+            "layer_ids": [
+              1
+            ],
+            "block_names": [
+              "L01_compute_bottom__tile_22_comp",
+              "L01_compute_bottom__tile_22_noc",
+              "L01_compute_bottom__tile_22_sram"
+            ]
+          },
+          {
+            "tile_id": 25,
+            "peak_temperature_c": 46.55130625,
+            "avg_temperature_c": 45.79069375,
+            "block_count": 3,
+            "layer_ids": [
+              1
+            ],
+            "block_names": [
+              "L01_compute_bottom__tile_25_comp",
+              "L01_compute_bottom__tile_25_noc",
+              "L01_compute_bottom__tile_25_sram"
+            ]
+          },
+          {
+            "tile_id": 5,
+            "peak_temperature_c": 46.19526875,
+            "avg_temperature_c": 45.665014583333324,
+            "block_count": 3,
+            "layer_ids": [
+              0
+            ],
+            "block_names": [
+              "L00_compute_top__tile_05_comp",
+              "L00_compute_top__tile_05_noc",
+              "L00_compute_top__tile_05_sram"
+            ]
+          },
+          {
+            "tile_id": 21,
+            "peak_temperature_c": 46.19526875,
+            "avg_temperature_c": 45.665014583333324,
+            "block_count": 3,
+            "layer_ids": [
+              1
+            ],
+            "block_names": [
+              "L01_compute_bottom__tile_21_comp",
+              "L01_compute_bottom__tile_21_noc",
+              "L01_compute_bottom__tile_21_sram"
+            ]
+          }
+        ]
+      },
+      "layer_hotspot_distribution": [
+        {
+          "layer_id": 0,
+          "layer_name": "compute_top",
+          "layer_index": 0,
+          "avg_temperature_c": 46.037681835937484,
+          "peak_temperature_c": 48.039034375,
+          "min_temperature_c": 45.19425,
+          "source": "online_rc_estimator"
+        },
+        {
+          "layer_id": 1,
+          "layer_name": "compute_bottom",
+          "layer_index": 1,
+          "avg_temperature_c": 46.037681835937484,
+          "peak_temperature_c": 48.039034375,
+          "min_temperature_c": 45.19425,
+          "source": "online_rc_estimator"
+        }
+      ],
+      "tier_hotspot_summary": {
+        "available": true,
+        "tier_count": 2,
+        "top_layer_peak_c": 0.0,
+        "bottom_layer_peak_c": 0.0,
+        "layer_peak_span_c": 0.0
+      },
+      "stack_hotspot_hint": {
+        "available": true,
+        "inferred_from": "thermal_consumer_snapshot.block_temperatures.tile_id",
+        "tile_count": 32,
+        "hottest_tile_id": 15,
+        "hottest_tile_peak_c": 48.039034375,
+        "tile_peak_temperatures": [
+          {
+            "tile_id": 15,
+            "peak_temperature_c": 48.039034375,
+            "avg_temperature_c": 46.70299895833333,
+            "block_count": 3,
+            "layer_ids": [
+              0
+            ],
+            "block_names": [
+              "L00_compute_top__tile_15_comp",
+              "L00_compute_top__tile_15_noc",
+              "L00_compute_top__tile_15_sram"
+            ]
+          },
+          {
+            "tile_id": 31,
+            "peak_temperature_c": 48.039034375,
+            "avg_temperature_c": 46.70299895833333,
+            "block_count": 3,
+            "layer_ids": [
+              1
+            ],
+            "block_names": [
+              "L01_compute_bottom__tile_31_comp",
+              "L01_compute_bottom__tile_31_noc",
+              "L01_compute_bottom__tile_31_sram"
+            ]
+          },
+          {
+            "tile_id": 3,
+            "peak_temperature_c": 47.41596875,
+            "avg_temperature_c": 46.27633125,
+            "block_count": 3,
+            "layer_ids": [
+              0
+            ],
+            "block_names": [
+              "L00_compute_top__tile_03_comp",
+              "L00_compute_top__tile_03_noc",
+              "L00_compute_top__tile_03_sram"
+            ]
+          },
+          {
+            "tile_id": 11,
+            "peak_temperature_c": 47.41596875,
+            "avg_temperature_c": 46.27633125,
+            "block_count": 3,
+            "layer_ids": [
+              0
+            ],
+            "block_names": [
+              "L00_compute_top__tile_11_comp",
+              "L00_compute_top__tile_11_noc",
+              "L00_compute_top__tile_11_sram"
+            ]
+          },
+          {
+            "tile_id": 12,
+            "peak_temperature_c": 47.41596875,
+            "avg_temperature_c": 46.27633125,
+            "block_count": 3,
+            "layer_ids": [
+              0
+            ],
+            "block_names": [
+              "L00_compute_top__tile_12_comp",
+              "L00_compute_top__tile_12_noc",
+              "L00_compute_top__tile_12_sram"
+            ]
+          },
+          {
+            "tile_id": 14,
+            "peak_temperature_c": 47.41596875,
+            "avg_temperature_c": 46.27633125,
+            "block_count": 3,
+            "layer_ids": [
+              0
+            ],
+            "block_names": [
+              "L00_compute_top__tile_14_comp",
+              "L00_compute_top__tile_14_noc",
+              "L00_compute_top__tile_14_sram"
+            ]
+          },
+          {
+            "tile_id": 19,
+            "peak_temperature_c": 47.41596875,
+            "avg_temperature_c": 46.27633125,
+            "block_count": 3,
+            "layer_ids": [
+              1
+            ],
+            "block_names": [
+              "L01_compute_bottom__tile_19_comp",
+              "L01_compute_bottom__tile_19_noc",
+              "L01_compute_bottom__tile_19_sram"
+            ]
+          },
+          {
+            "tile_id": 27,
+            "peak_temperature_c": 47.41596875,
+            "avg_temperature_c": 46.27633125,
+            "block_count": 3,
+            "layer_ids": [
+              1
+            ],
+            "block_names": [
+              "L01_compute_bottom__tile_27_comp",
+              "L01_compute_bottom__tile_27_noc",
+              "L01_compute_bottom__tile_27_sram"
+            ]
+          },
+          {
+            "tile_id": 28,
+            "peak_temperature_c": 47.41596875,
+            "avg_temperature_c": 46.27633125,
+            "block_count": 3,
+            "layer_ids": [
+              1
+            ],
+            "block_names": [
+              "L01_compute_bottom__tile_28_comp",
+              "L01_compute_bottom__tile_28_noc",
+              "L01_compute_bottom__tile_28_sram"
+            ]
+          },
+          {
+            "tile_id": 30,
+            "peak_temperature_c": 47.41596875,
+            "avg_temperature_c": 46.27633125,
+            "block_count": 3,
+            "layer_ids": [
+              1
+            ],
+            "block_names": [
+              "L01_compute_bottom__tile_30_comp",
+              "L01_compute_bottom__tile_30_noc",
+              "L01_compute_bottom__tile_30_sram"
+            ]
+          },
+          {
+            "tile_id": 7,
+            "peak_temperature_c": 47.05993125,
+            "avg_temperature_c": 46.150652083333334,
+            "block_count": 3,
+            "layer_ids": [
+              0
+            ],
+            "block_names": [
+              "L00_compute_top__tile_07_comp",
+              "L00_compute_top__tile_07_noc",
+              "L00_compute_top__tile_07_sram"
+            ]
+          },
+          {
+            "tile_id": 13,
+            "peak_temperature_c": 47.05993125,
+            "avg_temperature_c": 46.150652083333334,
+            "block_count": 3,
+            "layer_ids": [
+              0
+            ],
+            "block_names": [
+              "L00_compute_top__tile_13_comp",
+              "L00_compute_top__tile_13_noc",
+              "L00_compute_top__tile_13_sram"
+            ]
+          },
+          {
+            "tile_id": 23,
+            "peak_temperature_c": 47.05993125,
+            "avg_temperature_c": 46.150652083333334,
+            "block_count": 3,
+            "layer_ids": [
+              1
+            ],
+            "block_names": [
+              "L01_compute_bottom__tile_23_comp",
+              "L01_compute_bottom__tile_23_noc",
+              "L01_compute_bottom__tile_23_sram"
+            ]
+          },
+          {
+            "tile_id": 29,
+            "peak_temperature_c": 47.05993125,
+            "avg_temperature_c": 46.150652083333334,
+            "block_count": 3,
+            "layer_ids": [
+              1
+            ],
+            "block_names": [
+              "L01_compute_bottom__tile_29_comp",
+              "L01_compute_bottom__tile_29_noc",
+              "L01_compute_bottom__tile_29_sram"
+            ]
+          },
+          {
+            "tile_id": 0,
+            "peak_temperature_c": 46.90734375,
+            "avg_temperature_c": 45.91637291666666,
+            "block_count": 3,
+            "layer_ids": [
+              0
+            ],
+            "block_names": [
+              "L00_compute_top__tile_00_comp",
+              "L00_compute_top__tile_00_noc",
+              "L00_compute_top__tile_00_sram"
+            ]
+          },
+          {
+            "tile_id": 2,
+            "peak_temperature_c": 46.90734375,
+            "avg_temperature_c": 45.91637291666666,
+            "block_count": 3,
+            "layer_ids": [
+              0
+            ],
+            "block_names": [
+              "L00_compute_top__tile_02_comp",
+              "L00_compute_top__tile_02_noc",
+              "L00_compute_top__tile_02_sram"
+            ]
+          },
+          {
+            "tile_id": 8,
+            "peak_temperature_c": 46.90734375,
+            "avg_temperature_c": 45.91637291666666,
+            "block_count": 3,
+            "layer_ids": [
+              0
+            ],
+            "block_names": [
+              "L00_compute_top__tile_08_comp",
+              "L00_compute_top__tile_08_noc",
+              "L00_compute_top__tile_08_sram"
+            ]
+          },
+          {
+            "tile_id": 10,
+            "peak_temperature_c": 46.90734375,
+            "avg_temperature_c": 45.91637291666666,
+            "block_count": 3,
+            "layer_ids": [
+              0
+            ],
+            "block_names": [
+              "L00_compute_top__tile_10_comp",
+              "L00_compute_top__tile_10_noc",
+              "L00_compute_top__tile_10_sram"
+            ]
+          },
+          {
+            "tile_id": 16,
+            "peak_temperature_c": 46.90734375,
+            "avg_temperature_c": 45.91637291666666,
+            "block_count": 3,
+            "layer_ids": [
+              1
+            ],
+            "block_names": [
+              "L01_compute_bottom__tile_16_comp",
+              "L01_compute_bottom__tile_16_noc",
+              "L01_compute_bottom__tile_16_sram"
+            ]
+          },
+          {
+            "tile_id": 18,
+            "peak_temperature_c": 46.90734375,
+            "avg_temperature_c": 45.91637291666666,
+            "block_count": 3,
+            "layer_ids": [
+              1
+            ],
+            "block_names": [
+              "L01_compute_bottom__tile_18_comp",
+              "L01_compute_bottom__tile_18_noc",
+              "L01_compute_bottom__tile_18_sram"
+            ]
+          },
+          {
+            "tile_id": 24,
+            "peak_temperature_c": 46.90734375,
+            "avg_temperature_c": 45.91637291666666,
+            "block_count": 3,
+            "layer_ids": [
+              1
+            ],
+            "block_names": [
+              "L01_compute_bottom__tile_24_comp",
+              "L01_compute_bottom__tile_24_noc",
+              "L01_compute_bottom__tile_24_sram"
+            ]
+          },
+          {
+            "tile_id": 26,
+            "peak_temperature_c": 46.90734375,
+            "avg_temperature_c": 45.91637291666666,
+            "block_count": 3,
+            "layer_ids": [
+              1
+            ],
+            "block_names": [
+              "L01_compute_bottom__tile_26_comp",
+              "L01_compute_bottom__tile_26_noc",
+              "L01_compute_bottom__tile_26_sram"
+            ]
+          },
+          {
+            "tile_id": 1,
+            "peak_temperature_c": 46.55130625,
+            "avg_temperature_c": 45.79069375,
+            "block_count": 3,
+            "layer_ids": [
+              0
+            ],
+            "block_names": [
+              "L00_compute_top__tile_01_comp",
+              "L00_compute_top__tile_01_noc",
+              "L00_compute_top__tile_01_sram"
+            ]
+          },
+          {
+            "tile_id": 4,
+            "peak_temperature_c": 46.55130625,
+            "avg_temperature_c": 45.79069375,
+            "block_count": 3,
+            "layer_ids": [
+              0
+            ],
+            "block_names": [
+              "L00_compute_top__tile_04_comp",
+              "L00_compute_top__tile_04_noc",
+              "L00_compute_top__tile_04_sram"
+            ]
+          },
+          {
+            "tile_id": 6,
+            "peak_temperature_c": 46.55130625,
+            "avg_temperature_c": 45.79069375,
+            "block_count": 3,
+            "layer_ids": [
+              0
+            ],
+            "block_names": [
+              "L00_compute_top__tile_06_comp",
+              "L00_compute_top__tile_06_noc",
+              "L00_compute_top__tile_06_sram"
+            ]
+          },
+          {
+            "tile_id": 9,
+            "peak_temperature_c": 46.55130625,
+            "avg_temperature_c": 45.79069375,
+            "block_count": 3,
+            "layer_ids": [
+              0
+            ],
+            "block_names": [
+              "L00_compute_top__tile_09_comp",
+              "L00_compute_top__tile_09_noc",
+              "L00_compute_top__tile_09_sram"
+            ]
+          },
+          {
+            "tile_id": 17,
+            "peak_temperature_c": 46.55130625,
+            "avg_temperature_c": 45.79069375,
+            "block_count": 3,
+            "layer_ids": [
+              1
+            ],
+            "block_names": [
+              "L01_compute_bottom__tile_17_comp",
+              "L01_compute_bottom__tile_17_noc",
+              "L01_compute_bottom__tile_17_sram"
+            ]
+          },
+          {
+            "tile_id": 20,
+            "peak_temperature_c": 46.55130625,
+            "avg_temperature_c": 45.79069375,
+            "block_count": 3,
+            "layer_ids": [
+              1
+            ],
+            "block_names": [
+              "L01_compute_bottom__tile_20_comp",
+              "L01_compute_bottom__tile_20_noc",
+              "L01_compute_bottom__tile_20_sram"
+            ]
+          },
+          {
+            "tile_id": 22,
+            "peak_temperature_c": 46.55130625,
+            "avg_temperature_c": 45.79069375,
+            "block_count": 3,
+            "layer_ids": [
+              1
+            ],
+            "block_names": [
+              "L01_compute_bottom__tile_22_comp",
+              "L01_compute_bottom__tile_22_noc",
+              "L01_compute_bottom__tile_22_sram"
+            ]
+          },
+          {
+            "tile_id": 25,
+            "peak_temperature_c": 46.55130625,
+            "avg_temperature_c": 45.79069375,
+            "block_count": 3,
+            "layer_ids": [
+              1
+            ],
+            "block_names": [
+              "L01_compute_bottom__tile_25_comp",
+              "L01_compute_bottom__tile_25_noc",
+              "L01_compute_bottom__tile_25_sram"
+            ]
+          },
+          {
+            "tile_id": 5,
+            "peak_temperature_c": 46.19526875,
+            "avg_temperature_c": 45.665014583333324,
+            "block_count": 3,
+            "layer_ids": [
+              0
+            ],
+            "block_names": [
+              "L00_compute_top__tile_05_comp",
+              "L00_compute_top__tile_05_noc",
+              "L00_compute_top__tile_05_sram"
+            ]
+          },
+          {
+            "tile_id": 21,
+            "peak_temperature_c": 46.19526875,
+            "avg_temperature_c": 45.665014583333324,
+            "block_count": 3,
+            "layer_ids": [
+              1
+            ],
+            "block_names": [
+              "L01_compute_bottom__tile_21_comp",
+              "L01_compute_bottom__tile_21_noc",
+              "L01_compute_bottom__tile_21_sram"
+            ]
+          }
+        ]
+      }
+    },
+    "barrier_pressure": {
+      "controller_steps_completed_total": 0,
+      "stall_on_step_gate_cycles_total": 0,
+      "stall_on_step_gate_cycles_per_completed_step": 0.0,
+      "step_progress_done_total": 0,
+      "step_progress_missing_count": 0
+    },
+    "coupling": {
+      "route_thermal_coupling_score": 0.17500000000000002,
+      "memory_thermal_coupling_proxy": 1.8341575,
+      "route_barrier_coupling_proxy": 0.0,
+      "memory_barrier_coupling_proxy": 0.0
+    },
+    "hotspot_readiness": {
+      "thermal_summary_available": true,
+      "runtime_observability_available": true,
+      "hotspot_driver_available": true,
+      "global_step_observability_available": true,
+      "closed_loop_candidate": true
+    }
+  }
+}

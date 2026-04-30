@@ -1,0 +1,13 @@
+{
+  "sim_time": "5ms",
+  "num_cores_per_pe": 16,
+  "neurons_per_core": 32,
+  "dataset_path": "spike_dense_pe0_20k.txt",
+  "verify_weights": true,
+  "weight_verify_samples": 512,
+  "gas_enable": false,
+  "spike_segment_enable": true,
+  "spike_slices": 8,
+  "spike_slice_window_us": 10,
+  "spike_slice_gap_us": 15
+}

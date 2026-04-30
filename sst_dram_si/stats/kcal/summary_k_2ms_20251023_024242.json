@@ -1,0 +1,15 @@
+{
+  "k_recommended": 2048,
+  "reqs_per_mib": 128.0,
+  "avg_read_latency_0": 38.99,
+  "baseline_latency_0": 39.04,
+  "dur": "2ms",
+  "candidates": [
+    0,
+    512,
+    1024,
+    2048,
+    4096,
+    8192
+  ]
+}

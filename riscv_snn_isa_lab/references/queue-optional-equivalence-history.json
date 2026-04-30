@@ -1,0 +1,127 @@
+{
+  "all_dates_ok": true,
+  "all_ok_latest": true,
+  "artifact_role": "stable_optional_equivalence_history",
+  "authority_scope": "research_surface_rollup_only",
+  "entries": [
+    {
+      "all_ok": true,
+      "canonical_surface": true,
+      "count": 2,
+      "date": "2026-04-04",
+      "family_names": [
+        "completion_queue_overflow_ref",
+        "queue_backpressure_ref"
+      ],
+      "generated_utc": "2026-04-03T17:56:09.799116+00:00",
+      "requested_group": "queue_optional",
+      "source_kind": "group_matrix",
+      "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-04-04-equiv-matrix-queue-optional.json"
+    },
+    {
+      "all_ok": true,
+      "canonical_surface": true,
+      "count": 2,
+      "date": "2026-04-03",
+      "family_names": [
+        "completion_queue_overflow_ref",
+        "queue_backpressure_ref"
+      ],
+      "generated_utc": "2026-04-03T04:25:33.117214+00:00",
+      "requested_group": "queue_optional",
+      "source_kind": "group_matrix",
+      "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-04-03-equiv-matrix-queue-optional.json"
+    }
+  ],
+  "entry_count": 2,
+  "excluded_entries": [
+    {
+      "all_ok": false,
+      "canonical_surface": true,
+      "count": 2,
+      "date": "2026-04-02",
+      "family_names": [
+        "completion_queue_overflow_ref",
+        "queue_backpressure_ref"
+      ],
+      "generated_utc": "2026-04-02T13:30:23.996228+00:00",
+      "reason": "compacted_before_latest_recovery",
+      "requested_group": "queue_optional",
+      "source_kind": "group_matrix",
+      "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-04-02-equiv-matrix-queue-optional.json"
+    },
+    {
+      "all_ok": false,
+      "canonical_surface": true,
+      "count": 2,
+      "date": "2026-04-01",
+      "family_names": [
+        "completion_queue_overflow_ref",
+        "queue_backpressure_ref"
+      ],
+      "generated_utc": "2026-04-01T04:07:47.888028+00:00",
+      "reason": "compacted_before_latest_recovery",
+      "requested_group": "queue_optional",
+      "source_kind": "group_matrix",
+      "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-04-01-equiv-matrix-queue-optional.json"
+    },
+    {
+      "all_ok": true,
+      "canonical_surface": true,
+      "count": 2,
+      "date": "2026-03-29",
+      "family_names": [
+        "completion_queue_overflow_ref",
+        "queue_backpressure_ref"
+      ],
+      "generated_utc": "2026-03-28T16:00:29.251833+00:00",
+      "reason": "compacted_before_latest_recovery",
+      "requested_group": "queue_optional",
+      "source_kind": "group_matrix",
+      "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-03-29-equiv-matrix-queue-optional.json"
+    },
+    {
+      "all_ok": true,
+      "canonical_surface": true,
+      "count": 2,
+      "date": "2026-03-28",
+      "family_names": [
+        "completion_queue_overflow_ref",
+        "queue_backpressure_ref"
+      ],
+      "generated_utc": "2026-03-28T07:39:27.711840+00:00",
+      "reason": "compacted_before_latest_recovery",
+      "requested_group": "queue_optional",
+      "source_kind": "group_matrix",
+      "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-03-28-equiv-matrix-queue-optional.json"
+    },
+    {
+      "all_ok": true,
+      "canonical_surface": true,
+      "count": 2,
+      "date": "2026-03-27",
+      "family_names": [
+        "completion_queue_overflow_ref",
+        "queue_backpressure_ref"
+      ],
+      "generated_utc": "2026-03-27T09:54:24.159522+00:00",
+      "reason": "compacted_before_latest_recovery",
+      "requested_group": "queue_optional",
+      "source_kind": "group_matrix",
+      "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-03-27-equiv-matrix-queue-optional.json"
+    }
+  ],
+  "excluded_entry_count": 5,
+  "first_fail_date": null,
+  "generated_utc": "2026-04-03T17:56:19.311705+00:00",
+  "group": "queue_optional",
+  "history_contract": "canonical_queue_optional_only",
+  "latest_date": "2026-04-04",
+  "latest_recovered_date": null,
+  "latest_summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-04-04-equiv-matrix-queue-optional.json",
+  "producer": "riscv_snn_lab.refresh_optional_equivalence_history",
+  "refresh_mode": "compact_latest_recovery",
+  "reset_existing": false,
+  "schema_version": 2,
+  "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/queue-optional-equivalence-history.json"
+}

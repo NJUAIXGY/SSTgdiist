@@ -1,0 +1,14 @@
+{
+  "sim_time": "5ms",
+  "num_cores_per_pe": 16,
+  "neurons_per_core": 32,
+  "dataset_path": "spike_dense_pe0_20k.txt",
+  "mem_backend": "ramulator2",
+  "ramulator2_config_file": "sst_dram_si/configs/ramulator2_ddr4_openrow.cfg",
+  "verify_weights": true,
+  "weight_verify_samples": 512,
+  "gas_enable": true,
+  "gas_strict_mode": true,
+  "gas_merge_policy": "cacheline",
+  "gas_window_auto": false
+}

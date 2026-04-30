@@ -1,0 +1,53 @@
+{
+  "canonical_surface": true,
+  "count": 6,
+  "generated_utc": "2026-04-01T03:52:19.118545+00:00",
+  "group": "builder",
+  "register": true,
+  "requested_programs": [
+    "external_dyn_desc_ref",
+    "external_dyn_desc_fault_ref",
+    "external_dyn_desc_bad_policy_ref",
+    "external_dyn_desc_fault_rearm_ref",
+    "external_dyn_desc_fault_overwrite_chain_ref",
+    "barrier_wfi_order_ref"
+  ],
+  "results": [
+    {
+      "manifest_path": "/home/xgy/remote/riscv_snn_isa_lab/runs/2026-04-01-external-dyn-desc-ref-smoke.md",
+      "program": "external_dyn_desc_ref",
+      "run_dir": "/home/xgy/remote/sst_dram_si/outputs_large/paper2/dram_mesh_4x4/20260401-114955",
+      "suite": "builder"
+    },
+    {
+      "manifest_path": "/home/xgy/remote/riscv_snn_isa_lab/runs/2026-04-01-external-dyn-desc-fault-ref-smoke.md",
+      "program": "external_dyn_desc_fault_ref",
+      "run_dir": "/home/xgy/remote/sst_dram_si/outputs_large/paper2/dram_mesh_4x4/20260401-115019",
+      "suite": "builder"
+    },
+    {
+      "manifest_path": "/home/xgy/remote/riscv_snn_isa_lab/runs/2026-04-01-external-dyn-desc-bad-policy-ref-smoke.md",
+      "program": "external_dyn_desc_bad_policy_ref",
+      "run_dir": "/home/xgy/remote/sst_dram_si/outputs_large/paper2/dram_mesh_4x4/20260401-115042",
+      "suite": "builder"
+    },
+    {
+      "manifest_path": "/home/xgy/remote/riscv_snn_isa_lab/runs/2026-04-01-external-dyn-desc-fault-rearm-ref-smoke.md",
+      "program": "external_dyn_desc_fault_rearm_ref",
+      "run_dir": "/home/xgy/remote/sst_dram_si/outputs_large/paper2/dram_mesh_4x4/20260401-115107",
+      "suite": "builder"
+    },
+    {
+      "manifest_path": "/home/xgy/remote/riscv_snn_isa_lab/runs/2026-04-01-external-dyn-desc-fault-overwrite-chain-ref-smoke.md",
+      "program": "external_dyn_desc_fault_overwrite_chain_ref",
+      "run_dir": "/home/xgy/remote/sst_dram_si/outputs_large/paper2/dram_mesh_4x4/20260401-115131",
+      "suite": "builder"
+    },
+    {
+      "manifest_path": "/home/xgy/remote/riscv_snn_isa_lab/runs/2026-04-01-barrier-wfi-order-ref-smoke.md",
+      "program": "barrier_wfi_order_ref",
+      "run_dir": "/home/xgy/remote/sst_dram_si/outputs_large/paper2/dram_mesh_4x4/20260401-115154",
+      "suite": "builder"
+    }
+  ]
+}

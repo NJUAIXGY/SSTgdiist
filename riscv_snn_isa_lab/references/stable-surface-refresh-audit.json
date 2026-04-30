@@ -1,0 +1,119 @@
+{
+  "all_ok": true,
+  "artifact_role": "stable_surface_refresh_audit",
+  "authority_scope": "derived_surface_consistency_observer",
+  "checks": {
+    "current_mainline_status": {
+      "exists": true,
+      "issues": [],
+      "ok": true,
+      "path": "/home/xgy/remote/riscv_snn_isa_lab/references/current-mainline-status.md"
+    },
+    "observer_adequacy_validation": {
+      "exists": true,
+      "issues": [],
+      "ok": true,
+      "path": "/home/xgy/remote/riscv_snn_isa_lab/references/observer-adequacy-validation.json"
+    },
+    "observer_summary": {
+      "exists": true,
+      "issues": [],
+      "ok": true,
+      "path": "/home/xgy/remote/riscv_snn_isa_lab/references/nightly-sidecar-observer-summary.json"
+    },
+    "optional_group_rollups.completion_overflow_optional": {
+      "group": "completion_overflow_optional",
+      "issues": [],
+      "ok": true,
+      "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-04-04-completion-queue-overflow-ref-equiv.json"
+    },
+    "optional_group_rollups.queue_optional": {
+      "group": "queue_optional",
+      "issues": [],
+      "ok": true,
+      "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-04-04-equiv-matrix-queue-optional.json"
+    },
+    "optional_surfaces.queue_equivalence_chain": {
+      "issues": [],
+      "ok": true,
+      "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-04-04-equiv-matrix-queue-optional.json"
+    },
+    "research_report": {
+      "exists": true,
+      "issues": [],
+      "ok": true,
+      "path": "/home/xgy/remote/riscv_snn_isa_lab/references/riscv-snn-research-report.json"
+    },
+    "sidecar_refresh_metadata": {
+      "issues": [],
+      "ok": true,
+      "sidecar_path": "/home/xgy/remote/riscv_snn_isa_lab/references/nightly-sidecar-report.json"
+    },
+    "sidecar_summary_md": {
+      "exists": true,
+      "issues": [],
+      "ok": true,
+      "path": "/home/xgy/remote/riscv_snn_isa_lab/references/nightly-sidecar-summary.md"
+    },
+    "supplementary_surfaces.compare": {
+      "blocking": false,
+      "issues": [],
+      "ok": true,
+      "path": "/home/xgy/remote/sst_dram_si/references/compare-nightly-report.json",
+      "status": "pass"
+    },
+    "supplementary_surfaces.compare_chain": {
+      "issues": [],
+      "ok": true,
+      "path": "/home/xgy/remote/sst_dram_si/references/compare-nightly-report.json"
+    },
+    "supplementary_surfaces.reference_compare": {
+      "blocking": false,
+      "issues": [],
+      "ok": true,
+      "path": "/home/xgy/remote/riscv_snn_isa_lab/references/reference-compare-nightly-report.json",
+      "status": "pass"
+    },
+    "supplementary_surfaces.reference_compare_chain": {
+      "issues": [],
+      "ok": true,
+      "path": "/home/xgy/remote/riscv_snn_isa_lab/references/reference-compare-nightly-report.json"
+    },
+    "supplementary_surfaces.reference_program_compare": {
+      "blocking": false,
+      "issues": [],
+      "ok": true,
+      "path": "/home/xgy/remote/riscv_snn_isa_lab/references/reference-program-compare-nightly-report.json",
+      "status": "pass"
+    },
+    "supplementary_surfaces.reference_program_compare_chain": {
+      "issues": [],
+      "ok": true,
+      "path": "/home/xgy/remote/riscv_snn_isa_lab/references/reference-program-compare-nightly-report.json"
+    },
+    "supplementary_surfaces.stat_snapshot_family": {
+      "blocking": false,
+      "issues": [],
+      "ok": true,
+      "path": "/home/xgy/remote/riscv_snn_isa_lab/references/stat-snapshot-family-nightly-report.json",
+      "status": "pass"
+    },
+    "supplementary_surfaces.stat_snapshot_family_chain": {
+      "issues": [],
+      "ok": true,
+      "path": "/home/xgy/remote/riscv_snn_isa_lab/references/stat-snapshot-family-nightly-report.json"
+    }
+  },
+  "current_mainline_status_path": "/home/xgy/remote/riscv_snn_isa_lab/references/current-mainline-status.md",
+  "generated_utc": "2026-04-18T12:56:43.973886+00:00",
+  "observer_adequacy_validation_path": "/home/xgy/remote/riscv_snn_isa_lab/references/observer-adequacy-validation.json",
+  "observer_summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/nightly-sidecar-observer-summary.json",
+  "optional_promotion_dossier_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-04-18-completion-overflow-optional-promotion-dossier.json",
+  "producer": "riscv_snn_lab.audit_stable_surface_refresh",
+  "refreshed_at_utc": "2026-04-18T12:56:43.969019+00:00",
+  "research_report_path": "/home/xgy/remote/riscv_snn_isa_lab/references/riscv-snn-research-report.json",
+  "schema_version": 2,
+  "sidecar_path": "/home/xgy/remote/riscv_snn_isa_lab/references/nightly-sidecar-report.json",
+  "summary_md_path": "/home/xgy/remote/riscv_snn_isa_lab/references/nightly-sidecar-summary.md",
+  "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/stable-surface-refresh-audit.json"
+}

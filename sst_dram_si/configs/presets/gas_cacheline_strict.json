@@ -1,0 +1,9 @@
+{
+  "sim_time": "200us",
+  "gas_enable": true,
+  "gas_merge_policy": "cacheline",
+  "gas_row_bytes_guess": 8192,
+  "gas_sort_policy": "row",
+  "gas_strict_mode": true,
+  "gas_window_auto": false
+}

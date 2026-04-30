@@ -1,0 +1,23 @@
+{
+  "all_ok": true,
+  "artifact_role": "observer_fail_recovery_loop_summary",
+  "audit_all_ok": true,
+  "authority_scope": "observer_fail_recovery_loop_only",
+  "current_mainline_status_path": "/home/xgy/remote/riscv_snn_isa_lab/references/current-mainline-status.md",
+  "generated_utc": "2026-04-08T04:31:31.927284+00:00",
+  "group": "completion_overflow_optional",
+  "group_history_effective_all_dates_ok": true,
+  "group_history_effective_entry_count": 2,
+  "group_history_latest_recovered_date": null,
+  "group_history_refresh_mode": "compact_latest_recovery",
+  "group_history_refresh_mode_expected": "compact_latest_recovery",
+  "observer_history_path": "/home/xgy/remote/riscv_snn_isa_lab/references/observer-full-equivalence-history.json",
+  "observer_summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/nightly-sidecar-observer-summary.json",
+  "optional_history_summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/completion-overflow-optional-equivalence-history.json",
+  "optional_promotion_dossier_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-04-08-completion-overflow-optional-promotion-dossier.json",
+  "producer": "riscv_snn_lab.run_observer_fail_recovery_loop",
+  "sample_count": 0,
+  "schema_version": 2,
+  "stable_surface_refresh_audit_path": "/home/xgy/remote/riscv_snn_isa_lab/references/stable-surface-refresh-audit.json",
+  "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/observer-fail-recovery-loop-summary.json"
+}

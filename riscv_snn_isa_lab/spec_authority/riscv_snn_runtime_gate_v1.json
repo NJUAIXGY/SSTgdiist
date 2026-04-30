@@ -1,0 +1,308 @@
+{
+  "schema_version": 1,
+  "producer": "riscv_snn_isa_lab",
+  "reason_ids": [
+    "runtime_bridge_provider_unbound",
+    "runtime_bridge_fused_step_completion_missing",
+    "runtime_bridge_completion_visibility_missing",
+    "runtime_bridge_completion_not_fully_consumed",
+    "runtime_bridge_expected_fault_missing",
+    "runtime_bridge_queue_fault_signature_mismatch",
+    "runtime_bridge_completion_queue_fault_signature_mismatch",
+    "runtime_bridge_fault_snapshot_missing",
+    "runtime_bridge_fault_snapshot_stale",
+    "runtime_bridge_last_completion_nonzero"
+  ],
+  "check_ids": [
+    "provider_bound_visible",
+    "fused_step_completion_visible",
+    "completion_visible",
+    "completion_consumed_covers_visible",
+    "fault_observed",
+    "queue_fault_signature",
+    "completion_queue_fault_signature",
+    "fault_snapshot_consistent",
+    "fault_snapshot_quiescent",
+    "last_completion_status_clean"
+  ],
+  "reasons": {
+    "runtime_bridge_completion_not_fully_consumed": {
+      "severity": "warning",
+      "summary": "software-visible completions were not fully consumed before retirement"
+    },
+    "runtime_bridge_completion_queue_fault_signature_mismatch": {
+      "severity": "hard_fail",
+      "summary": "completion queue overflow fault snapshot did not match the frozen completion-overflow signature"
+    },
+    "runtime_bridge_completion_visibility_missing": {
+      "severity": "warning",
+      "summary": "software-visible completion count was missing on a family that normally requires it"
+    },
+    "runtime_bridge_expected_fault_missing": {
+      "severity": "hard_fail",
+      "summary": "accepted fault did not reach the architectural runtime surface"
+    },
+    "runtime_bridge_fault_snapshot_missing": {
+      "severity": "hard_fail",
+      "summary": "fault count was non-zero but the visible fault CSR snapshot was missing"
+    },
+    "runtime_bridge_fault_snapshot_stale": {
+      "severity": "warning",
+      "summary": "quiescent family retired with a stale non-zero fault snapshot"
+    },
+    "runtime_bridge_fused_step_completion_missing": {
+      "severity": "warning",
+      "summary": "no fused-step completion progress was visible on the runtime bridge path"
+    },
+    "runtime_bridge_last_completion_nonzero": {
+      "severity": "warning",
+      "summary": "quiescent family retired with a non-zero completion status"
+    },
+    "runtime_bridge_provider_unbound": {
+      "severity": "hard_fail",
+      "summary": "runtime_bridge provider binding was not visible"
+    },
+    "runtime_bridge_queue_fault_signature_mismatch": {
+      "severity": "hard_fail",
+      "summary": "queue backpressure fault snapshot did not match the frozen queue-overdoorbell signature"
+    }
+  },
+  "checks": {
+    "completion_consumed_covers_visible": {
+      "default_severity": "warning",
+      "summary": "completion consumption should cover every visible completion unless the family intentionally stops earlier"
+    },
+    "completion_queue_fault_signature": {
+      "default_severity": "hard_fail",
+      "summary": "completion queue overflow family must expose the frozen aggregated cmpq-full fault snapshot"
+    },
+    "completion_visible": {
+      "default_severity": "warning",
+      "summary": "software-visible completion count should normally be present on the runtime bridge path"
+    },
+    "fault_observed": {
+      "default_severity": "hard_fail",
+      "summary": "fault-reference families must surface at least one accepted fault"
+    },
+    "fault_snapshot_consistent": {
+      "default_severity": "hard_fail",
+      "summary": "fault snapshots must stay architecturally visible whenever fault_count is non-zero"
+    },
+    "fault_snapshot_quiescent": {
+      "default_severity": "warning",
+      "summary": "quiescent families should not retire with a stale fault snapshot"
+    },
+    "fused_step_completion_visible": {
+      "default_severity": "warning",
+      "summary": "fused-step completion or equivalent accepted-fault/barrier progress should be visible"
+    },
+    "last_completion_status_clean": {
+      "default_severity": "warning",
+      "summary": "quiescent success families should retire with completion status 0"
+    },
+    "provider_bound_visible": {
+      "default_severity": "hard_fail",
+      "summary": "runtime_bridge provider binding must be visible before the family can PASS"
+    },
+    "queue_fault_signature": {
+      "default_severity": "hard_fail",
+      "summary": "queue backpressure family must expose the frozen aggregated cmdq-overdoorbell fault snapshot"
+    }
+  },
+  "families": {
+    "barrier_wfi_order_ref": {
+      "fault_mode": "quiescent",
+      "progress_mode": "forward_progress_expected",
+      "fault_lifecycle_mode": "none",
+      "timing_mode": "wfi_barrier_completion_visibility",
+      "reference_program_profile": "barrier_wait_then_completion",
+      "required_checks": [
+        "provider_bound_visible",
+        "fused_step_completion_visible",
+        "completion_visible",
+        "completion_consumed_covers_visible",
+        "fault_snapshot_consistent"
+      ],
+      "allowed_completion_signature": "completion visibility alone may satisfy progress when barrier wakeup retires before software consumes the completion",
+      "allowed_fault_signature": "fault snapshot may remain zero or non-zero, but any observed fault must keep a visible snapshot"
+    },
+    "completion_queue_overflow_ref": {
+      "fault_mode": "accepted_fault_required",
+      "progress_mode": "completion_queue_fault_surface",
+      "fault_lifecycle_mode": "single_fault",
+      "queue_mode": "completion_queue_overflow_after_visible_completion",
+      "reference_program_profile": "accepted_fault_single_step",
+      "required_checks": [
+        "provider_bound_visible",
+        "fused_step_completion_visible",
+        "completion_visible",
+        "completion_consumed_covers_visible",
+        "fault_observed",
+        "completion_queue_fault_signature",
+        "fault_snapshot_consistent"
+      ],
+      "allowed_completion_signature": "one software-visible completion may remain intentionally unconsumed when cmpq-full fault retires",
+      "allowed_fault_signature": "last_fault_csr must equal fault_count * 0x0000000100000211"
+    },
+    "external_dyn_desc_bad_policy_ref": {
+      "fault_mode": "accepted_fault_required",
+      "progress_mode": "no_committed_progress_allowed",
+      "fault_lifecycle_mode": "single_fault",
+      "reference_program_profile": "accepted_fault_single_step",
+      "required_checks": [
+        "provider_bound_visible",
+        "fused_step_completion_visible",
+        "completion_visible",
+        "completion_consumed_covers_visible",
+        "fault_observed",
+        "fault_snapshot_consistent"
+      ],
+      "allowed_completion_signature": "accepted-fault completion progress may satisfy the runtime bridge path even when committed progress is intentionally blocked",
+      "allowed_fault_signature": "at least one accepted fault must remain architecturally visible"
+    },
+    "external_dyn_desc_fault_overwrite_chain_ref": {
+      "fault_mode": "accepted_fault_required",
+      "progress_mode": "fault_lifecycle_surface",
+      "fault_lifecycle_mode": "overwrite_chain",
+      "reference_program_profile": "overwrite_chain",
+      "required_checks": [
+        "provider_bound_visible",
+        "fused_step_completion_visible",
+        "completion_visible",
+        "completion_consumed_covers_visible",
+        "fault_observed",
+        "fault_snapshot_consistent"
+      ],
+      "allowed_completion_signature": "accepted-fault completion progress is allowed while visible fault snapshots are overwritten across retired completions",
+      "allowed_fault_signature": "accepted faults may overwrite msnnfault after clear, but every observed fault must keep a visible snapshot"
+    },
+    "external_dyn_desc_fault_rearm_ref": {
+      "fault_mode": "accepted_fault_required",
+      "progress_mode": "fault_lifecycle_surface",
+      "fault_lifecycle_mode": "clear_then_refault",
+      "reference_program_profile": "clear_then_refault",
+      "required_checks": [
+        "provider_bound_visible",
+        "fused_step_completion_visible",
+        "completion_visible",
+        "completion_consumed_covers_visible",
+        "fault_observed",
+        "fault_snapshot_consistent"
+      ],
+      "allowed_completion_signature": "accepted-fault completion progress is allowed while clear-then-refault lifecycle is visible",
+      "allowed_fault_signature": "accepted faults must reappear after msnnfault clear and remain architecturally visible"
+    },
+    "external_dyn_desc_fault_ref": {
+      "fault_mode": "accepted_fault_required",
+      "progress_mode": "forward_progress_expected",
+      "fault_lifecycle_mode": "single_fault",
+      "reference_program_profile": "accepted_fault_single_step",
+      "required_checks": [
+        "provider_bound_visible",
+        "fused_step_completion_visible",
+        "completion_visible",
+        "completion_consumed_covers_visible",
+        "fault_observed",
+        "fault_snapshot_consistent"
+      ],
+      "allowed_completion_signature": "accepted-fault completion progress counts as forward progress",
+      "allowed_fault_signature": "at least one accepted fault must remain architecturally visible"
+    },
+    "external_dyn_desc_ref": {
+      "fault_mode": "quiescent",
+      "progress_mode": "forward_progress_expected",
+      "fault_lifecycle_mode": "none",
+      "reference_program_profile": "completed_single_step",
+      "required_checks": [
+        "provider_bound_visible",
+        "fused_step_completion_visible",
+        "completion_visible",
+        "completion_consumed_covers_visible",
+        "fault_snapshot_consistent",
+        "fault_snapshot_quiescent",
+        "last_completion_status_clean"
+      ],
+      "allowed_completion_signature": "visible completions should be fully consumed and retire with status 0",
+      "allowed_fault_signature": "fault_count should stay zero and last_fault_csr should remain zero"
+    },
+    "stat_snapshot_bad_selector_ref": {
+      "fault_mode": "accepted_fault_required",
+      "progress_mode": "fault_lifecycle_surface",
+      "fault_lifecycle_mode": "single_fault",
+      "reference_program_profile": "stat_snapshot_bad_selector_fault",
+      "required_checks": [
+        "provider_bound_visible",
+        "fault_observed",
+        "fault_snapshot_consistent"
+      ],
+      "allowed_completion_signature": "bad-selector StatSnapshot retires through a visible fault snapshot and does not require a successful completion payload",
+      "allowed_fault_signature": "at least one bad-selector fault snapshot must remain architecturally visible"
+    },
+    "stat_snapshot_completed_ref": {
+      "fault_mode": "quiescent",
+      "progress_mode": "forward_progress_expected",
+      "fault_lifecycle_mode": "none",
+      "reference_program_profile": "stat_snapshot_completed_single_step",
+      "required_checks": [
+        "provider_bound_visible",
+        "completion_visible",
+        "completion_consumed_covers_visible",
+        "fault_snapshot_consistent",
+        "fault_snapshot_quiescent",
+        "last_completion_status_clean"
+      ],
+      "allowed_completion_signature": "completed-count StatSnapshot should retire one visible completion carrying the completed-command snapshot payload",
+      "allowed_fault_signature": "fault_count should stay zero and last_fault_csr should remain zero"
+    },
+    "stat_snapshot_provider_bound_ref": {
+      "fault_mode": "quiescent",
+      "progress_mode": "forward_progress_expected",
+      "fault_lifecycle_mode": "none",
+      "reference_program_profile": "stat_snapshot_provider_bound_single_step",
+      "required_checks": [
+        "provider_bound_visible",
+        "completion_visible",
+        "completion_consumed_covers_visible",
+        "fault_snapshot_consistent",
+        "fault_snapshot_quiescent",
+        "last_completion_status_clean"
+      ],
+      "allowed_completion_signature": "provider-bound StatSnapshot should retire one visible completion carrying the provider-bound snapshot payload",
+      "allowed_fault_signature": "fault_count should stay zero and last_fault_csr should remain zero"
+    },
+    "stat_snapshot_ref": {
+      "fault_mode": "quiescent",
+      "progress_mode": "forward_progress_expected",
+      "fault_lifecycle_mode": "none",
+      "reference_program_profile": "stat_snapshot_single_step",
+      "required_checks": [
+        "provider_bound_visible",
+        "completion_visible",
+        "completion_consumed_covers_visible",
+        "fault_snapshot_consistent",
+        "fault_snapshot_quiescent",
+        "last_completion_status_clean"
+      ],
+      "allowed_completion_signature": "accepted/basic StatSnapshot should retire one visible completion carrying the accepted-command snapshot payload",
+      "allowed_fault_signature": "fault_count should stay zero and last_fault_csr should remain zero"
+    },
+    "queue_backpressure_ref": {
+      "fault_mode": "accepted_fault_required",
+      "progress_mode": "queue_backpressure_fault_surface",
+      "fault_lifecycle_mode": "single_fault",
+      "queue_mode": "command_overdoorbell_overflow",
+      "reference_program_profile": "accepted_fault_single_step",
+      "required_checks": [
+        "provider_bound_visible",
+        "fused_step_completion_visible",
+        "completion_visible",
+        "completion_consumed_covers_visible",
+        "fault_observed",
+        "queue_fault_signature",
+        "fault_snapshot_consistent"
+      ],
+      "allowed_completion_signature": "command-overdoorbell overflow may fault before software acks the visible completion",
+      "allowed_fault_signature": "last_fault_csr must equal fault_count * 0x0000000100000210"
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "available": true,
+  "left_figure": {
+    "title": "Semantic Pressure",
+    "path": "/home/xgy/remote/snn3dexp/analysis/sweeps/paper_artifacts/task_real_snn_window_semantic_pressure_export_v3/paper_artifacts/phase2_snn_window_route_memory_compare.svg",
+    "path_basename": "phase2_snn_window_route_memory_compare.svg",
+    "caption": "Long-window semantic pressure for direct-v4 versus bundle-v3, highlighting demand, issue efficiency, and backlog deltas in the windowed SNN runtime."
+  },
+  "right_figure": {
+    "title": "Tail Clearance",
+    "path": "/home/xgy/remote/snn3dexp/analysis/sweeps/paper_artifacts/task_real_snn_window_semantic_pressure_export_v3/paper_artifacts/phase2_snn_window_tail_compare.svg",
+    "path_basename": "phase2_snn_window_tail_compare.svg",
+    "caption": "Short-window tail-clearance compare; direct clears at 2us, bundle clears at 5us, with tail_clear_gap_ns=3000."
+  },
+  "caption": "Paired view of SNN-window route-memory behavior: the left panel captures semantic pressure under the selected runtime window, while the right panel isolates the short-tail clearance gap that remains after bundle forwarding. Observed tail_clear_gap_ns=3000 (2us -> 5us).",
+  "tail_clear_gap_ns": 3000,
+  "direct_tail_clear_stop_at": "2us",
+  "bundle_tail_clear_stop_at": "5us",
+  "outputs": {
+    "markdown": "/home/xgy/remote/snn3dexp/analysis/sweeps/paper_artifacts/task_real_snn_window_semantic_pressure_export_v3/paper_artifacts/phase2_snn_window_paired_figures.md",
+    "latex": "/home/xgy/remote/snn3dexp/analysis/sweeps/paper_artifacts/task_real_snn_window_semantic_pressure_export_v3/paper_artifacts/phase2_snn_window_paired_figures.tex",
+    "json": "/home/xgy/remote/snn3dexp/analysis/sweeps/paper_artifacts/task_real_snn_window_semantic_pressure_export_v3/paper_artifacts/phase2_snn_window_paired_figures.json"
+  }
+}

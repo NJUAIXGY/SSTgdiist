@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="440" viewBox="0 0 1040 440">
+<rect width="100%" height="100%" fill="#fcfbf7"/>
+<text x="48" y="38" font-family="Helvetica, Arial, sans-serif" font-size="24" font-weight="700" fill="#111827">Window vs Traffic Runtime Trigger Boundary</text>
+<text x="48" y="62" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#4b5563">Memory/NMC pressure is visible in both adaptive cases, but trigger promotion differs between traffic and SNN-window runtime.</text>
+<text x="48" y="84" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#6b7280">Window vs traffic runtime trigger boundary for memory/NMC evidence. Traffic pressure=0.075796, window pressure=0.250000, gap=0.174204; classification=window_trigger_vs_traffic_subthreshold_evidence.</text>
+<line x1="240.00" y1="132" x2="240.00" y2="332" stroke="#e5e7eb" stroke-width="1"/>
+<text x="240.00" y="354" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#6b7280">0.00</text>
+<text x="600.00" y="376" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#374151">memory_nmc_mechanism_pressure_proxy</text>
+<line x1="384.00" y1="132" x2="384.00" y2="332" stroke="#e5e7eb" stroke-width="1"/>
+<text x="384.00" y="354" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#6b7280">0.07</text>
+<line x1="528.00" y1="132" x2="528.00" y2="332" stroke="#e5e7eb" stroke-width="1"/>
+<text x="528.00" y="354" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#6b7280">0.14</text>
+<line x1="672.00" y1="132" x2="672.00" y2="332" stroke="#e5e7eb" stroke-width="1"/>
+<text x="672.00" y="354" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#6b7280">0.21</text>
+<line x1="816.00" y1="132" x2="816.00" y2="332" stroke="#e5e7eb" stroke-width="1"/>
+<text x="816.00" y="354" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#6b7280">0.28</text>
+<line x1="960.00" y1="132" x2="960.00" y2="332" stroke="#e5e7eb" stroke-width="1"/>
+<text x="960.00" y="354" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#6b7280">0.35</text>
+<text x="48" y="160" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#111827">Full 3D + Runtime Adaptive</text>
+<text x="48" y="182" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#4b5563">signal_source=joint_runtime; decision_source=hybrid; state=sub-threshold evidence</text>
+<rect x="240" y="146" width="720" height="24" rx="12" fill="#e5e7eb"/>
+<rect x="240" y="146" width="155.92" height="24" rx="12" fill="#457B9D"/>
+<text x="407.92" y="164" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#111827">0.075796</text>
+<text x="48" y="260" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#111827">Full 3D + SNN Window Runtime Adaptive</text>
+<text x="48" y="282" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#4b5563">signal_source=joint_runtime; decision_source=hybrid; state=triggered</text>
+<rect x="240" y="246" width="720" height="24" rx="12" fill="#e5e7eb"/>
+<rect x="240" y="246" width="514.29" height="24" rx="12" fill="#F4A261"/>
+<text x="766.29" y="264" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#111827">0.250000</text>
+<text x="48" y="408" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#374151">Boundary classification: window_trigger_vs_traffic_subthreshold_evidence</text>
+</svg>

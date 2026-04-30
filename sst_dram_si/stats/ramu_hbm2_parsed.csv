@@ -1,0 +1,2 @@
+backend,total_num_read_requests,memory_system_cycles,avg_read_latency_0,row_hits_0,row_misses_0,row_conflicts_0
+HBM2,13,999999,13.6153851,11,1,1

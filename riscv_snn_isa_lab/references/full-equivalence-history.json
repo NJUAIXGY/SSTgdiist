@@ -1,0 +1,127 @@
+{
+  "all_dates_ok": false,
+  "all_ok_latest": true,
+  "artifact_role": "stable_full_equivalence_history",
+  "authority_scope": "research_surface_rollup_only",
+  "entries": [
+    {
+      "added_families_vs_previous": [],
+      "all_ok": true,
+      "canonical_surface": true,
+      "count": 8,
+      "date": "2026-04-02",
+      "family_names": [
+        "barrier_wfi_order_ref",
+        "completion_queue_overflow_ref",
+        "external_dyn_desc_bad_policy_ref",
+        "external_dyn_desc_fault_overwrite_chain_ref",
+        "external_dyn_desc_fault_rearm_ref",
+        "external_dyn_desc_fault_ref",
+        "external_dyn_desc_ref",
+        "queue_backpressure_ref"
+      ],
+      "generated_utc": "2026-04-02T12:56:39.376726+00:00",
+      "removed_families_vs_previous": [],
+      "requested_group": "all",
+      "source_kind": "group_matrix",
+      "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-04-02-equiv-matrix.json"
+    },
+    {
+      "added_families_vs_previous": [],
+      "all_ok": false,
+      "canonical_surface": true,
+      "count": 8,
+      "date": "2026-04-01",
+      "family_names": [
+        "barrier_wfi_order_ref",
+        "completion_queue_overflow_ref",
+        "external_dyn_desc_bad_policy_ref",
+        "external_dyn_desc_fault_overwrite_chain_ref",
+        "external_dyn_desc_fault_rearm_ref",
+        "external_dyn_desc_fault_ref",
+        "external_dyn_desc_ref",
+        "queue_backpressure_ref"
+      ],
+      "generated_utc": "2026-04-01T04:05:30.365038+00:00",
+      "removed_families_vs_previous": [],
+      "requested_group": "all",
+      "source_kind": "group_matrix",
+      "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-04-01-equiv-matrix.json"
+    },
+    {
+      "added_families_vs_previous": [],
+      "all_ok": true,
+      "canonical_surface": true,
+      "count": 8,
+      "date": "2026-03-28",
+      "family_names": [
+        "barrier_wfi_order_ref",
+        "completion_queue_overflow_ref",
+        "external_dyn_desc_bad_policy_ref",
+        "external_dyn_desc_fault_overwrite_chain_ref",
+        "external_dyn_desc_fault_rearm_ref",
+        "external_dyn_desc_fault_ref",
+        "external_dyn_desc_ref",
+        "queue_backpressure_ref"
+      ],
+      "generated_utc": "2026-03-28T15:58:55.635993+00:00",
+      "removed_families_vs_previous": [],
+      "requested_group": "all",
+      "source_kind": "group_matrix",
+      "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-03-28-equiv-matrix.json"
+    },
+    {
+      "added_families_vs_previous": [],
+      "all_ok": true,
+      "canonical_surface": true,
+      "count": 8,
+      "date": "2026-03-27",
+      "family_names": [
+        "barrier_wfi_order_ref",
+        "completion_queue_overflow_ref",
+        "external_dyn_desc_bad_policy_ref",
+        "external_dyn_desc_fault_overwrite_chain_ref",
+        "external_dyn_desc_fault_rearm_ref",
+        "external_dyn_desc_fault_ref",
+        "external_dyn_desc_ref",
+        "queue_backpressure_ref"
+      ],
+      "generated_utc": "2026-03-27T09:35:32.599088+00:00",
+      "removed_families_vs_previous": [],
+      "requested_group": "all",
+      "source_kind": "group_matrix",
+      "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-03-27-equiv-matrix.json"
+    }
+  ],
+  "entry_count": 4,
+  "excluded_entries": [
+    {
+      "all_ok": true,
+      "canonical_surface": false,
+      "count": 5,
+      "date": "2026-03-26",
+      "family_names": [
+        "external_dyn_desc_bad_policy_ref",
+        "external_dyn_desc_fault_overwrite_chain_ref",
+        "external_dyn_desc_fault_rearm_ref",
+        "external_dyn_desc_fault_ref",
+        "external_dyn_desc_ref"
+      ],
+      "generated_utc": "2026-03-26T12:52:10.874145+00:00",
+      "reason": "unexpected_artifact_role",
+      "requested_group": null,
+      "source_kind": "group_matrix",
+      "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-03-26-equiv-matrix.json"
+    }
+  ],
+  "excluded_entry_count": 1,
+  "first_fail_date": "2026-04-01",
+  "generated_utc": "2026-04-02T12:56:39.377579+00:00",
+  "history_contract": "canonical_full_all_only",
+  "latest_date": "2026-04-02",
+  "latest_recovered_date": "2026-04-02",
+  "latest_summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/2026-04-02-equiv-matrix.json",
+  "producer": "riscv_snn_lab.refresh_full_equivalence_history",
+  "schema_version": 2,
+  "summary_path": "/home/xgy/remote/riscv_snn_isa_lab/references/full-equivalence-history.json"
+}

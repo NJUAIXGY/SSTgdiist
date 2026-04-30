@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "artifact_role": "dated_optional_group_review",
+  "authority_scope": "research_only_nonblocking",
+  "generated_utc": "2026-03-30T12:00:00+08:00",
+  "group": "queue_optional",
+  "families": [
+    "completion_queue_overflow_ref",
+    "queue_backpressure_ref"
+  ],
+  "reviewer": "riscv_snn_isa_lab",
+  "decision": "approved",
+  "review_date": "2026-03-30",
+  "notes": [
+    "queue_optional 维持 research-only、non-blocking，不自动进入 mainline required_families。",
+    "当前显式 review 仅确认 multi-date freshness、reason taxonomy 与 admission path 已具备冻结条件。"
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "case_ids": [
+    "baseline_2d",
+    "memory_only_3d",
+    "noc_only_3d",
+    "full_3d",
+    "full_3d_monolithic_proxy",
+    "full_3d_tile_bundle_v3"
+  ],
+  "run_tags_by_case": {
+    "baseline_2d": "matrix23_runtime_smoke_traffic",
+    "memory_only_3d": "matrix23_runtime_smoke_traffic",
+    "noc_only_3d": "matrix23_runtime_smoke_traffic",
+    "full_3d": "matrix23_runtime_smoke_traffic",
+    "full_3d_monolithic_proxy": "matrix23_runtime_smoke_traffic",
+    "full_3d_tile_bundle_v3": "matrix23_runtime_smoke_traffic"
+  }
+}

@@ -1,0 +1,179 @@
+{
+  "case_ids": [
+    "full_3d_snn_window",
+    "full_3d_snn_window_bundle_v3",
+    "full_3d_snn_window_monolithic_proxy"
+  ],
+  "stop_ats": [
+    "2us",
+    "5us",
+    "10us"
+  ],
+  "run_tag_prefix": "authority_native_matrix_refresh_20260402_window_stop",
+  "sst_smoke": false,
+  "run_tags_by_stop": {
+    "2us": "authority_native_matrix_refresh_20260402_window_stop_2us",
+    "5us": "authority_native_matrix_refresh_20260402_window_stop_5us",
+    "10us": "authority_native_matrix_refresh_20260402_window_stop_10us"
+  },
+  "stop_manifests": [
+    {
+      "stop_at": "2us",
+      "run_tag": "authority_native_matrix_refresh_20260402_window_stop_2us",
+      "path": "/home/xgy/remote/snn3dexp/analysis/sweeps/window_stop_multicase/authority_native_matrix_refresh_20260402_window_stop/run_tag_manifests/2us.json",
+      "run_tags_by_case": {
+        "full_3d_snn_window": "authority_native_matrix_refresh_20260402_window_stop_2us",
+        "full_3d_snn_window_bundle_v3": "authority_native_matrix_refresh_20260402_window_stop_2us",
+        "full_3d_snn_window_monolithic_proxy": "authority_native_matrix_refresh_20260402_window_stop_2us"
+      }
+    },
+    {
+      "stop_at": "5us",
+      "run_tag": "authority_native_matrix_refresh_20260402_window_stop_5us",
+      "path": "/home/xgy/remote/snn3dexp/analysis/sweeps/window_stop_multicase/authority_native_matrix_refresh_20260402_window_stop/run_tag_manifests/5us.json",
+      "run_tags_by_case": {
+        "full_3d_snn_window": "authority_native_matrix_refresh_20260402_window_stop_5us",
+        "full_3d_snn_window_bundle_v3": "authority_native_matrix_refresh_20260402_window_stop_5us",
+        "full_3d_snn_window_monolithic_proxy": "authority_native_matrix_refresh_20260402_window_stop_5us"
+      }
+    },
+    {
+      "stop_at": "10us",
+      "run_tag": "authority_native_matrix_refresh_20260402_window_stop_10us",
+      "path": "/home/xgy/remote/snn3dexp/analysis/sweeps/window_stop_multicase/authority_native_matrix_refresh_20260402_window_stop/run_tag_manifests/10us.json",
+      "run_tags_by_case": {
+        "full_3d_snn_window": "authority_native_matrix_refresh_20260402_window_stop_10us",
+        "full_3d_snn_window_bundle_v3": "authority_native_matrix_refresh_20260402_window_stop_10us",
+        "full_3d_snn_window_monolithic_proxy": "authority_native_matrix_refresh_20260402_window_stop_10us"
+      }
+    }
+  ],
+  "runs": [
+    {
+      "stop_at": "2us",
+      "case_id": "full_3d_snn_window",
+      "run_tag": "authority_native_matrix_refresh_20260402_window_stop_2us",
+      "status": "smoke_passed",
+      "run_root": "/home/xgy/remote/snn3dexp/runs/full_3d_snn_window/authority_native_matrix_refresh_20260402_window_stop_2us",
+      "analysis_root": "/home/xgy/remote/snn3dexp/analysis/full_3d_snn_window/authority_native_matrix_refresh_20260402_window_stop_2us",
+      "phase2_case_summary_path": "/home/xgy/remote/snn3dexp/analysis/full_3d_snn_window/authority_native_matrix_refresh_20260402_window_stop_2us/phase2_case_summary.json",
+      "effective_config_path": "",
+      "stack_nmc_summary_path": "/home/xgy/remote/snn3dexp/analysis/full_3d_snn_window/authority_native_matrix_refresh_20260402_window_stop_2us/stack_nmc_summary.json",
+      "route_memory_joint_summary_path": "/home/xgy/remote/snn3dexp/analysis/full_3d_snn_window/authority_native_matrix_refresh_20260402_window_stop_2us/route_memory_joint_summary.json",
+      "runtime_summary_path": "/home/xgy/remote/snn3dexp/analysis/full_3d_snn_window/authority_native_matrix_refresh_20260402_window_stop_2us/runtime_summary.json"
+    },
+    {
+      "stop_at": "2us",
+      "case_id": "full_3d_snn_window_bundle_v3",
+      "run_tag": "authority_native_matrix_refresh_20260402_window_stop_2us",
+      "status": "smoke_passed",
+      "run_root": "/home/xgy/remote/snn3dexp/runs/full_3d_snn_window_bundle_v3/authority_native_matrix_refresh_20260402_window_stop_2us",
+      "analysis_root": "/home/xgy/remote/snn3dexp/analysis/full_3d_snn_window_bundle_v3/authority_native_matrix_refresh_20260402_window_stop_2us",
+      "phase2_case_summary_path": "/home/xgy/remote/snn3dexp/analysis/full_3d_snn_window_bundle_v3/authority_native_matrix_refresh_20260402_window_stop_2us/phase2_case_summary.json",
+      "effective_config_path": "",
+      "stack_nmc_summary_path": "/home/xgy/remote/snn3dexp/analysis/full_3d_snn_window_bundle_v3/authority_native_matrix_refresh_20260402_window_stop_2us/stack_nmc_summary.json",
+      "route_memory_joint_summary_path": "/home/xgy/remote/snn3dexp/analysis/full_3d_snn_window_bundle_v3/authority_native_matrix_refresh_20260402_window_stop_2us/route_memory_joint_summary.json",
+      "runtime_summary_path": "/home/xgy/remote/snn3dexp/analysis/full_3d_snn_window_bundle_v3/authority_native_matrix_refresh_20260402_window_stop_2us/runtime_summary.json"
+    },
+    {
+      "stop_at": "2us",
+      "case_id": "full_3d_snn_window_monolithic_proxy",
+      "run_tag": "authority_native_matrix_refresh_20260402_window_stop_2us",
+      "status": "smoke_passed",
+      "run_root": "/home/xgy/remote/snn3dexp/runs/full_3d_snn_window_monolithic_proxy/authority_native_matrix_refresh_20260402_window_stop_2us",
+      "analysis_root": "/home/xgy/remote/snn3dexp/analysis/full_3d_snn_window_monolithic_proxy/authority_native_matrix_refresh_20260402_window_stop_2us",
+      "phase2_case_summary_path": "/home/xgy/remote/snn3dexp/analysis/full_3d_snn_window_monolithic_proxy/authority_native_matrix_refresh_20260402_window_stop_2us/phase2_case_summary.json",
+      "effective_config_path": "",
+      "stack_nmc_summary_path": "/home/xgy/remote/snn3dexp/analysis/full_3d_snn_window_monolithic_proxy/authority_native_matrix_refresh_20260402_window_stop_2us/stack_nmc_summary.json",
+      "route_memory_joint_summary_path": "/home/xgy/remote/snn3dexp/analysis/full_3d_snn_window_monolithic_proxy/authority_native_matrix_refresh_20260402_window_stop_2us/route_memory_joint_summary.json",
+      "runtime_summary_path": "/home/xgy/remote/snn3dexp/analysis/full_3d_snn_window_monolithic_proxy/authority_native_matrix_refresh_20260402_window_stop_2us/runtime_summary.json"
+    },
+    {
+      "stop_at": "5us",
+      "case_id": "full_3d_snn_window",
+      "run_tag": "authority_native_matrix_refresh_20260402_window_stop_5us",
+      "status": "smoke_passed",
+      "run_root": "/home/xgy/remote/snn3dexp/runs/full_3d_snn_window/authority_native_matrix_refresh_20260402_window_stop_5us",
+      "analysis_root": "/home/xgy/remote/snn3dexp/analysis/full_3d_snn_window/authority_native_matrix_refresh_20260402_window_stop_5us",
+      "phase2_case_summary_path": "/home/xgy/remote/snn3dexp/analysis/full_3d_snn_window/authority_native_matrix_refresh_20260402_window_stop_5us/phase2_case_summary.json",
+      "effective_config_path": "",
+      "stack_nmc_summary_path": "/home/xgy/remote/snn3dexp/analysis/full_3d_snn_window/authority_native_matrix_refresh_20260402_window_stop_5us/stack_nmc_summary.json",
+      "route_memory_joint_summary_path": "/home/xgy/remote/snn3dexp/analysis/full_3d_snn_window/authority_native_matrix_refresh_20260402_window_stop_5us/route_memory_joint_summary.json",
+      "runtime_summary_path": "/home/xgy/remote/snn3dexp/analysis/full_3d_snn_window/authority_native_matrix_refresh_20260402_window_stop_5us/runtime_summary.json"
+    },
+    {
+      "stop_at": "5us",
+      "case_id": "full_3d_snn_window_bundle_v3",
+      "run_tag": "authority_native_matrix_refresh_20260402_window_stop_5us",
+      "status": "smoke_passed",
+      "run_root": "/home/xgy/remote/snn3dexp/runs/full_3d_snn_window_bundle_v3/authority_native_matrix_refresh_20260402_window_stop_5us",
+      "analysis_root": "/home/xgy/remote/snn3dexp/analysis/full_3d_snn_window_bundle_v3/authority_native_matrix_refresh_20260402_window_stop_5us",
+      "phase2_case_summary_path": "/home/xgy/remote/snn3dexp/analysis/full_3d_snn_window_bundle_v3/authority_native_matrix_refresh_20260402_window_stop_5us/phase2_case_summary.json",
+      "effective_config_path": "",
+      "stack_nmc_summary_path": "/home/xgy/remote/snn3dexp/analysis/full_3d_snn_window_bundle_v3/authority_native_matrix_refresh_20260402_window_stop_5us/stack_nmc_summary.json",
+      "route_memory_joint_summary_path": "/home/xgy/remote/snn3dexp/analysis/full_3d_snn_window_bundle_v3/authority_native_matrix_refresh_20260402_window_stop_5us/route_memory_joint_summary.json",
+      "runtime_summary_path": "/home/xgy/remote/snn3dexp/analysis/full_3d_snn_window_bundle_v3/authority_native_matrix_refresh_20260402_window_stop_5us/runtime_summary.json"
+    },
+    {
+      "stop_at": "5us",
+      "case_id": "full_3d_snn_window_monolithic_proxy",
+      "run_tag": "authority_native_matrix_refresh_20260402_window_stop_5us",
+      "status": "smoke_passed",
+      "run_root": "/home/xgy/remote/snn3dexp/runs/full_3d_snn_window_monolithic_proxy/authority_native_matrix_refresh_20260402_window_stop_5us",
+      "analysis_root": "/home/xgy/remote/snn3dexp/analysis/full_3d_snn_window_monolithic_proxy/authority_native_matrix_refresh_20260402_window_stop_5us",
+      "phase2_case_summary_path": "/home/xgy/remote/snn3dexp/analysis/full_3d_snn_window_monolithic_proxy/authority_native_matrix_refresh_20260402_window_stop_5us/phase2_case_summary.json",
+      "effective_config_path": "",
+      "stack_nmc_summary_path": "/home/xgy/remote/snn3dexp/analysis/full_3d_snn_window_monolithic_proxy/authority_native_matrix_refresh_20260402_window_stop_5us/stack_nmc_summary.json",
+      "route_memory_joint_summary_path": "/home/xgy/remote/snn3dexp/analysis/full_3d_snn_window_monolithic_proxy/authority_native_matrix_refresh_20260402_window_stop_5us/route_memory_joint_summary.json",
+      "runtime_summary_path": "/home/xgy/remote/snn3dexp/analysis/full_3d_snn_window_monolithic_proxy/authority_native_matrix_refresh_20260402_window_stop_5us/runtime_summary.json"
+    },
+    {
+      "stop_at": "10us",
+      "case_id": "full_3d_snn_window",
+      "run_tag": "authority_native_matrix_refresh_20260402_window_stop_10us",
+      "status": "smoke_passed",
+      "run_root": "/home/xgy/remote/snn3dexp/runs/full_3d_snn_window/authority_native_matrix_refresh_20260402_window_stop_10us",
+      "analysis_root": "/home/xgy/remote/snn3dexp/analysis/full_3d_snn_window/authority_native_matrix_refresh_20260402_window_stop_10us",
+      "phase2_case_summary_path": "/home/xgy/remote/snn3dexp/analysis/full_3d_snn_window/authority_native_matrix_refresh_20260402_window_stop_10us/phase2_case_summary.json",
+      "effective_config_path": "",
+      "stack_nmc_summary_path": "/home/xgy/remote/snn3dexp/analysis/full_3d_snn_window/authority_native_matrix_refresh_20260402_window_stop_10us/stack_nmc_summary.json",
+      "route_memory_joint_summary_path": "/home/xgy/remote/snn3dexp/analysis/full_3d_snn_window/authority_native_matrix_refresh_20260402_window_stop_10us/route_memory_joint_summary.json",
+      "runtime_summary_path": "/home/xgy/remote/snn3dexp/analysis/full_3d_snn_window/authority_native_matrix_refresh_20260402_window_stop_10us/runtime_summary.json"
+    },
+    {
+      "stop_at": "10us",
+      "case_id": "full_3d_snn_window_bundle_v3",
+      "run_tag": "authority_native_matrix_refresh_20260402_window_stop_10us",
+      "status": "smoke_passed",
+      "run_root": "/home/xgy/remote/snn3dexp/runs/full_3d_snn_window_bundle_v3/authority_native_matrix_refresh_20260402_window_stop_10us",
+      "analysis_root": "/home/xgy/remote/snn3dexp/analysis/full_3d_snn_window_bundle_v3/authority_native_matrix_refresh_20260402_window_stop_10us",
+      "phase2_case_summary_path": "/home/xgy/remote/snn3dexp/analysis/full_3d_snn_window_bundle_v3/authority_native_matrix_refresh_20260402_window_stop_10us/phase2_case_summary.json",
+      "effective_config_path": "",
+      "stack_nmc_summary_path": "/home/xgy/remote/snn3dexp/analysis/full_3d_snn_window_bundle_v3/authority_native_matrix_refresh_20260402_window_stop_10us/stack_nmc_summary.json",
+      "route_memory_joint_summary_path": "/home/xgy/remote/snn3dexp/analysis/full_3d_snn_window_bundle_v3/authority_native_matrix_refresh_20260402_window_stop_10us/route_memory_joint_summary.json",
+      "runtime_summary_path": "/home/xgy/remote/snn3dexp/analysis/full_3d_snn_window_bundle_v3/authority_native_matrix_refresh_20260402_window_stop_10us/runtime_summary.json"
+    },
+    {
+      "stop_at": "10us",
+      "case_id": "full_3d_snn_window_monolithic_proxy",
+      "run_tag": "authority_native_matrix_refresh_20260402_window_stop_10us",
+      "status": "smoke_passed",
+      "run_root": "/home/xgy/remote/snn3dexp/runs/full_3d_snn_window_monolithic_proxy/authority_native_matrix_refresh_20260402_window_stop_10us",
+      "analysis_root": "/home/xgy/remote/snn3dexp/analysis/full_3d_snn_window_monolithic_proxy/authority_native_matrix_refresh_20260402_window_stop_10us",
+      "phase2_case_summary_path": "/home/xgy/remote/snn3dexp/analysis/full_3d_snn_window_monolithic_proxy/authority_native_matrix_refresh_20260402_window_stop_10us/phase2_case_summary.json",
+      "effective_config_path": "",
+      "stack_nmc_summary_path": "/home/xgy/remote/snn3dexp/analysis/full_3d_snn_window_monolithic_proxy/authority_native_matrix_refresh_20260402_window_stop_10us/stack_nmc_summary.json",
+      "route_memory_joint_summary_path": "/home/xgy/remote/snn3dexp/analysis/full_3d_snn_window_monolithic_proxy/authority_native_matrix_refresh_20260402_window_stop_10us/route_memory_joint_summary.json",
+      "runtime_summary_path": "/home/xgy/remote/snn3dexp/analysis/full_3d_snn_window_monolithic_proxy/authority_native_matrix_refresh_20260402_window_stop_10us/runtime_summary.json"
+    }
+  ],
+  "outputs": {
+    "summary_json": "/home/xgy/remote/snn3dexp/analysis/sweeps/window_stop_multicase/authority_native_matrix_refresh_20260402_window_stop/window_stop_multicase_sweep_summary.json",
+    "csv": "/home/xgy/remote/snn3dexp/analysis/sweeps/window_stop_multicase/authority_native_matrix_refresh_20260402_window_stop/window_stop_multicase_sweep_runs.csv",
+    "run_tag_manifests": [
+      "/home/xgy/remote/snn3dexp/analysis/sweeps/window_stop_multicase/authority_native_matrix_refresh_20260402_window_stop/run_tag_manifests/2us.json",
+      "/home/xgy/remote/snn3dexp/analysis/sweeps/window_stop_multicase/authority_native_matrix_refresh_20260402_window_stop/run_tag_manifests/5us.json",
+      "/home/xgy/remote/snn3dexp/analysis/sweeps/window_stop_multicase/authority_native_matrix_refresh_20260402_window_stop/run_tag_manifests/10us.json"
+    ]
+  }
+}

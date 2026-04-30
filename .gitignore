@@ -1,0 +1,135 @@
+# Local assistant / workflow metadata
+.codex/
+.serena/
+.observer_fail_lab/
+.observer_recover_lab/
+.spec-workflow/
+.bmad-core/
+.pytest_cache/
+.mcp.json
+
+# Local editor / backup files
+.vscode/
+.tmp_build/
+*.bak
+*.swp
+*.swo
+
+# Build / install trees
+build/
+sst_install/
+sst_install_mpi/
+sst_install_serial/
+
+# Generated outputs / scratch space
+sst_output_data/
+tmp/
+
+# Generic generated logs / caches
+*.log
+*.time
+*.pyc
+__pycache__/
+
+# Experiment run outputs
+NoCexp/**/runs/
+NoCexp/**/inputs/bcsr_meta/
+NoCexp/**/effective_config.json
+NoCexp/**/essential_summary_mesh.json
+NoCexp/noc_mem_joint_lab/__pycache__/
+NoCexp/noc_mem_joint_lab/debug_stepgate/**/20[0-9][0-9][01][0-9][0-3][0-9]-[0-2][0-9][0-5][0-9][0-5][0-9]/
+NoCexp/noc_mem_joint_lab/debug_stepgate/timeout_harness/A_baseline_off/
+NoCexp/noc_mem_joint_lab/debug_stepgate/timeout_harness/failed_runs.csv
+mainexp/**/runs/
+mainexp/**/smoke_runs/
+mainexp/**/runs_debug/
+mainexp/**/runs_smoke_debug/
+mainexp/**/debug_runs/
+mainexp/**/step1_runs/
+mainexp/**/smoke_fix_runs/
+mainexp/**/altstop_fix_runs/
+mainexp/**/mini_runs/
+mainexp/**/out_actual/
+mainexp/**/artifacts/
+mainexp/**/debug/
+mainexp/**/snapshot/
+mainexp/**/input_bcsr/
+mainexp/**/input_profiles/
+riscv_snn_isa_lab/smoke_runs/
+riscv_snn_isa_lab/runtime_runs/
+riscv_snn_isa_lab/runs/
+memop/**/runs/
+memop/**/runs_debug/
+memop/**/runs_serial/
+memop/**/snapshot/
+snn3dexp/runs/
+sst_dram_si/outputs_large/
+sst_dram_si/experiments/*/outputs/
+sst_dram_si/stats/runs/
+
+# sst_dram_si tools: keep source scripts/tests, ignore caches and local scratch dirs
+sst_dram_si/tools/**/__pycache__/
+sst_dram_si/tools/isolated_noc_gas/
+sst_dram_si/tools/isolated_noc_gas_global_credit_p0/
+sst_dram_si/tools/isolated_noc_gas_global_credit_p0b/
+sst_dram_si/tools/isolated_noc_gas_global_credit_p0c_pred/
+
+# sst_dram_si: ignore heavyweight data, logs, local scratch, and backup noise
+sst_dram_si/logs/
+sst_dram_si/run.log
+sst_dram_si/weights/
+sst_dram_si/analysis/diag_step_short/
+sst_dram_si/stats/**/*.log
+sst_dram_si/stats/**/*.old
+sst_dram_si/stats/runs*/
+sst_dram_si/stats/openrow_seq*/
+sst_dram_si/stats/compare_*/
+sst_dram_si/stats/debug*/
+sst_dram_si/stats/run*/
+sst_dram_si/stats/stage_events_db_100us.csv
+sst_dram_si/stats/stage_events_5ms_debug.csv
+sst_dram_si/test_mesh_4x4.py.bak.*
+sst_dram_si/*.backup_*
+sst_dram_si/a.txt
+sst_dram_si/微信图片_*.png
+
+# tensor_si: keep template/tools/tests/docs, ignore outputs and caches
+sst_workloads/tensor_si/outputs/
+sst_workloads/tensor_si/**/__pycache__/
+
+# native_multicast_lab experiments: keep scripts/docs, ignore runs and caches
+experimental_features/native_multicast_lab/experiments/runs/
+experimental_features/native_multicast_lab/experiments/**/__pycache__/
+
+# downloaded source trees / unpacked vendor caches
+sst_workspace/_downloads/
+
+# legacy SnnDL backup snapshots and copied worktrees under experimental_features
+experimental_features/SnnDL/SnnDL_backup/
+experimental_features/SnnDL copy*/
+experimental_features/SnnDL 26 3 30/
+
+# experimental SnnDL build artifacts
+experimental_features/SnnDL/.deps/
+experimental_features/SnnDL/.libs/
+experimental_features/SnnDL/*.lo
+experimental_features/SnnDL/*.la
+experimental_features/SnnDL/*.log
+experimental_features/SnnDL/*.backup
+experimental_features/SnnDL/*.cc.backup
+experimental_features/SnnDL/*.h.backup
+
+# local experiment outputs under experimental_features
+experimental_features/snnDL_neuron_dynamics_tests/out/
+
+# root analysis mesh dumps are run outputs, not source assets
+analysis/mesh_*/
+
+# discarded frontend task source tree
+frontend-dashboard/src/
+
+# riscv_snn_isa_lab: keep core specs/firmware/tools/references, ignore run outputs and caches
+riscv_snn_isa_lab/smoke_runs/
+riscv_snn_isa_lab/runtime_runs/
+riscv_snn_isa_lab/runs/
+riscv_snn_isa_lab/**/__pycache__/
