@@ -33,14 +33,17 @@ __pycache__/
 
 # Experiment run outputs
 NoCexp/**/runs/
+NoCexp/**/bg/
+NoCexp/**/__pycache__/
 NoCexp/**/inputs/bcsr_meta/
 NoCexp/**/effective_config.json
 NoCexp/**/essential_summary_mesh.json
-NoCexp/noc_mem_joint_lab/__pycache__/
 NoCexp/noc_mem_joint_lab/debug_stepgate/**/20[0-9][0-9][01][0-9][0-3][0-9]-[0-2][0-9][0-5][0-9][0-5][0-9]/
 NoCexp/noc_mem_joint_lab/debug_stepgate/timeout_harness/A_baseline_off/
 NoCexp/noc_mem_joint_lab/debug_stepgate/timeout_harness/failed_runs.csv
 mainexp/**/runs/
+mainexp/**/runs*/
+mainexp/**/run_logs/
 mainexp/**/smoke_runs/
 mainexp/**/runs_debug/
 mainexp/**/runs_smoke_debug/
@@ -53,15 +56,23 @@ mainexp/**/out_actual/
 mainexp/**/artifacts/
 mainexp/**/debug/
 mainexp/**/snapshot/
+mainexp/**/summary/
+mainexp/**/early_snapshot*/
+mainexp/**/shadow_vs_actual_snapshot/
 mainexp/**/input_bcsr/
 mainexp/**/input_profiles/
+mainexp/**/__pycache__/
 riscv_snn_isa_lab/smoke_runs/
 riscv_snn_isa_lab/runtime_runs/
 riscv_snn_isa_lab/runs/
 memop/**/runs/
+memop/**/runs*/
 memop/**/runs_debug/
 memop/**/runs_serial/
+memop/**/run_logs/
 memop/**/snapshot/
+memop/**/__pycache__/
+memop/tmp/
 snn3dexp/runs/
 sst_dram_si/outputs_large/
 sst_dram_si/experiments/*/outputs/
@@ -105,9 +116,11 @@ experimental_features/native_multicast_lab/experiments/**/__pycache__/
 sst_workspace/_downloads/
 
 # legacy SnnDL backup snapshots and copied worktrees under experimental_features
+experimental_features/SnnDL/
 experimental_features/SnnDL/SnnDL_backup/
 experimental_features/SnnDL copy*/
 experimental_features/SnnDL 26 3 30/
+experimental_features/test_mesh_4x4.py
 
 # experimental SnnDL build artifacts
 experimental_features/SnnDL/.deps/
@@ -133,3 +146,66 @@ riscv_snn_isa_lab/smoke_runs/
 riscv_snn_isa_lab/runtime_runs/
 riscv_snn_isa_lab/runs/
 riscv_snn_isa_lab/**/__pycache__/
+
+# additional local assistant / recovery metadata
+.claude/
+TECH_PROGRESS.recovered_from_sessions.md
+tmp_codex_test.txt
+
+# nested repositories managed independently from the root repo
+experimental_features/neuron_mapping_framework/
+externals/ramulator2/
+
+# root-level non-source scratch / archival content
+analysis/
+artcile/
+backups/
+github_submission/
+reports/
+spike_data
+package.json
+package-lock.json
+微信图片_*.png
+exp_opt/*.pdf
+externals/HotSpot-v7.0.tar.gz
+
+# entire discarded frontend workspace
+frontend-dashboard/
+
+# HotSpot vendor tree: keep source candidates visible, ignore local builds
+externals/HotSpot-7.0/*.o
+externals/HotSpot-7.0/*.d
+externals/HotSpot-7.0/libhotspot.a
+externals/HotSpot-7.0/hotspot
+externals/HotSpot-7.0/hotfloorplan
+
+# snn3dexp: keep code/cases/tests, ignore generated outputs
+snn3dexp/**/__pycache__/
+snn3dexp/analysis/
+snn3dexp/stats/
+
+# supporting python libraries: keep source, ignore caches
+tools/__pycache__/
+GraphLib/__pycache__/
+snndl_system/__pycache__/
+snndl_topology/__pycache__/
+snndl_spec/__pycache__/
+
+# snndl-thing-exp: keep cases/tests/tools, ignore run products
+snndl-thing-exp/**/__pycache__/
+snndl-thing-exp/runs/
+snndl-thing-exp/run_logs/
+snndl-thing-exp/snapshot/
+snndl-thing-exp/summary/
+
+# selected experimental_features labs: keep scripts/configs, ignore generated outputs
+experimental_features/snnDL_network_validator/**/__pycache__/
+experimental_features/snnDL_neuron_dynamics_tests/**/__pycache__/
+experimental_features/snnDL_neuron_dynamics_tests/model_unit_tests/model_test
+experimental_features/snnDL_learning_tests/**/__pycache__/
+experimental_features/snnDL_learning_tests/errors/
+experimental_features/snnDL_learning_tests/results/
+experimental_features/snnDL_learning_tests/stats/
+experimental_features/neuromoe_experiments/results/
+experimental_features/neuromoe_experiments/spike_data/
+experimental_features/neuromoe_experiments/weights/

@@ -19756,3 +19756,376 @@ Next steps / TODO:
   - 从当前整理后的工作树生成一条仅包含核心资产的干净分支。
   - 将该干净分支推送到 `SSTgdiist` 个人 fork。
   - 推送成功后再决定是否把当前本地工作分支也迁移到同一套干净历史策略。
+
+## 2026-05-01 mainexp memop NoCexp 分类收口
+
+- What changed:
+  - 继续更新 `/home/xgy/remote/.gitignore`，把 `mainexp`、`memop`、`NoCexp` 中已确认属于运行产物、临时目录、缓存目录的模式补齐。
+  - 新增或强化的关键忽略模式包括：
+    - `NoCexp/**/bg/`
+    - `NoCexp/**/__pycache__/`
+    - `mainexp/**/runs*/`
+    - `mainexp/**/run_logs/`
+    - `mainexp/**/__pycache__/`
+    - `mainexp/**/summary/`
+    - `mainexp/**/early_snapshot*/`
+    - `mainexp/**/shadow_vs_actual_snapshot/`
+    - `memop/**/runs*/`
+    - `memop/**/run_logs/`
+    - `memop/**/__pycache__/`
+    - `memop/tmp/`
+  - 本轮目标不是直接提交，而是把三块目录先收敛成“只剩核心实验资产可见”的状态，便于后续一次性纳管。
+
+- How to run / verify:
+  - 查看三块目录在新规则下剩余的待纳管文件：
+    - `git -C "/home/xgy/remote" status --short --untracked-files=all -- "mainexp" | head -n 220`
+    - `git -C "/home/xgy/remote" status --short --untracked-files=all -- "memop" | head -n 220`
+    - `git -C "/home/xgy/remote" status --short --untracked-files=all -- "NoCexp" | head -n 220`
+  - 验证典型大文件/运行输出已命中忽略规则：
+    - `git -C "/home/xgy/remote" check-ignore -v "mainexp/experiments/2026-03-18_offline_anchor_separator_v1_badcore_top32/input_bcsr/pe04/core06.bcsr.bin"`
+    - `git -C "/home/xgy/remote" check-ignore -v "mainexp/experiments/2026-03-17_dual_guard_v3_static_gate_v1/early_snapshot_core00/global_meta_summary.json"`
+    - `git -C "/home/xgy/remote" check-ignore -v "memop/experiments/2026-03-07_naive_tass_runtime_ab_v1/runs_debug_smallfrac/20260307-185403/time.txt"`
+    - `git -C "/home/xgy/remote" check-ignore -v "NoCexp/spiketile_router_lab/runs/20260227-013733_smoke/suite_summary.json"`
+
+- Metrics / results:
+  - 目录体量大致为：
+    - `mainexp/` 约 `3.6G`
+    - `memop/` 约 `184M`
+    - `NoCexp/` 约 `147M`
+  - `mainexp` 中最大噪音主要来自实验目录内的 `input_bcsr/` 和 `artifacts/`，单文件可达约 `14MB` 到 `16MB`。
+  - `memop` 现已基本收敛为 `cases.json`、`run_dirs.json`、`snapshot_experiment.py` 以及少量小型汇总文件。
+  - `NoCexp` 现已基本收敛为：
+    - `noc_idx2_nip_lab` 的分析脚本与启动脚本
+    - `noc_mem_joint_lab` 的 spec/json 与分析脚本
+    - `spiketile_router_lab` 的测试脚本与 `experiments/run_suite.py`
+  - `mainexp` 在新规则下保留下来的主体也已缩到：
+    - `cases.json` / `spec*.json`
+    - `run_case.sh` / `run_ab.sh` / `run_grid.sh` / `run_repeat.sh`
+    - `make_snapshot.py` / `analyze_*.py` / `test_*.py`
+    - 少量 `specs/` 目录中的基线配置
+
+- Next steps / TODO:
+  - 在得到主人明确批准后，对 `mainexp`、`memop`、`NoCexp` 执行 `git add`，把当前剩余的核心实验资产一次性纳入版本管理。
+  - 下一轮继续处理 `snn3dexp` 除 `analysis/` 之外的主体模块，区分核心 3D 建模代码与统计/运行输出。
+
+## 2026-05-01 sst_workspace 真实管理边界核查
+
+- What changed:
+  - 对 `sst_workspace` 做了结构核查，重点确认：
+    - `sst_workspace/sst-elements`
+    - `sst_workspace/sst-core`
+    - `sst_workspace/_downloads`
+    - 以及 `sst-elements` 内部最关键的 `src/sst/elements/SnnDL`
+  - 明确识别出当前并不是“整个 `sst_workspace` 已被主仓普通文件方式纳管”，而是多层嵌套 git 管理与本地构建产物混杂。
+
+- How to run / verify:
+  - 查看外层主仓对 `sst_workspace` 的索引形态：
+    - `git -C "/home/xgy/remote" ls-files --stage -- "sst_workspace/sst-core" "sst_workspace/sst-elements"`
+  - 查看 `sst-elements` 内部子模块定义：
+    - `sed -n '1,200p' "/home/xgy/remote/sst_workspace/sst-elements/.gitmodules"`
+  - 查看 `SnnDL` 子模块状态：
+    - `git -C "/home/xgy/remote/sst_workspace/sst-elements" submodule status --recursive`
+    - `git -C "/home/xgy/remote/sst_workspace/sst-elements/src/sst/elements/SnnDL" status --short --branch`
+  - 查看 `sst_workspace` 三块的大致体量：
+    - `du -sh "/home/xgy/remote/sst_workspace"/* | sort -hr`
+
+- Metrics / results:
+  - 外层主仓当前把下面两个路径记成 `160000` gitlink，而不是普通目录文件：
+    - `sst_workspace/sst-core`
+    - `sst_workspace/sst-elements`
+  - `sst_workspace/sst-elements` 是独立 git 仓，当前分支为：
+    - `snndl_re`
+  - `sst_workspace/sst-elements/src/sst/elements/SnnDL` 进一步是 `sst-elements` 的子模块：
+    - 路径：`src/sst/elements/SnnDL`
+    - 远端：`https://github.com/NJUAIXGY/SnnDL.git`
+    - 当前分支：`fix/gas-mesh-stability`
+    - 当前提交短哈希：`0c1aa5e`
+  - `sst-elements` 当前不仅子模块指针与外层记录不一致，而且内部还有未提交内容：
+    - `src/sst/elements/SnnDL`
+    - `src/sst/elements/memHierarchy/membackend/ramulator2Backend.cc`
+    - `src/sst/elements/memHierarchy/membackend/ramulator2Backend.h`
+  - `sst_workspace/sst-core` 在外层索引里是 gitlink，但本地目录中没有 `.git` 入口，形态不一致，需要后续专门修正。
+  - `sst_workspace/_downloads` 明显属于下载缓存，目前大致为：
+    - `sstcore-src/` 约 `1.2G`
+    - `sstcore-v15.0.0_Final.tar.gz` 约 `2.4M`
+  - `SnnDL` 目录内部包含大量不应进入源码管理的构建产物：
+    - `.deps/`
+    - `.libs/`
+    - `components/.deps`, `components/.libs`
+    - `compute/.deps`, `compute/.libs`
+    - `control/.deps`, `control/.libs`
+    - `events/.deps`, `events/.libs`
+    - `tests/.deps`, `tests/.libs`
+    - `tools/.deps`, `tools/.libs`
+    - `*.o`, `*.lo`, `libSnnDL.la`, `.libs/libSnnDL.so`
+  - `sst-core` 目录中也有明显的本地构建/配置噪音：
+    - `autom4te.cache/`
+    - `build-serial/`
+    - `config.log`
+    - `config.status`
+    - `configure~`
+    - `libtool`
+
+- Classification:
+  - 必须视为“核心源码仓”而不是普通生成目录的部分：
+    - `sst_workspace/sst-elements/src/sst/elements/SnnDL`
+    - `sst_workspace/sst-elements`（因为它承载 SnnDL 集成点与 memHierarchy 改动）
+    - `sst_workspace/sst-core`（SST core 源码本体）
+  - 必须视为“本地构建/缓存/下载产物”的部分：
+    - `sst_workspace/_downloads`
+    - `sst-elements` 内各级 `.deps/.libs/*.o/*.lo/*.la/*.so`
+    - `sst-core` 内 `autom4te.cache/`、`build-serial/`、`config.log`、`config.status` 等
+  - 当前最关键的事实不是“是否忽略”，而是“管理层级”：
+    - 外层主仓
+    - `sst-elements` 子仓
+    - `SnnDL` 子模块仓
+
+- Next steps / TODO:
+  - 先决定 `sst_workspace` 的最终策略：
+    - 保留多层子仓结构
+    - 或将关键源码提升/吸收到主仓
+  - 若继续以核心源码优先整理，应先处理 `sst_workspace/sst-elements/src/sst/elements/SnnDL` 的纳管策略，因为这是最关键且最活跃的核心源码位置。
+  - 随后再单独处理 `sst_workspace/sst-core` 的异常 gitlink 形态，确认是恢复成真正子仓，还是转成主仓普通目录。
+
+## 2026-05-01 SnnDL 子仓边界收口
+
+- What changed:
+  - 对 `sst_workspace/sst-elements/src/sst/elements/SnnDL` 做了仓级核查，确认其本身是独立子模块仓，而不是 `sst-elements` 里的普通目录。
+  - 更新了 `SnnDL` 子仓自己的 [`.gitignore`](/home/xgy/remote/sst_workspace/sst-elements/src/sst/elements/SnnDL/.gitignore)，补充本地构建/配置/缓存噪音规则：
+    - `**/__pycache__/`
+    - `autom4te.cache/`
+    - `config.log`
+    - `config.status`
+    - `config.cache`
+    - `libtool`
+    - `configure~`
+  - 保持现有核心源码、文档、测试文件不变，不改提交历史，不调整子模块指针。
+
+- How to run / verify:
+  - 查看 `SnnDL` 当前仓状态：
+    - `git -C "/home/xgy/remote/sst_workspace/sst-elements/src/sst/elements/SnnDL" status --short --branch`
+  - 查看 `SnnDL` 子模块身份：
+    - `git -C "/home/xgy/remote/sst_workspace/sst-elements/src/sst/elements/SnnDL" remote -v`
+    - `git -C "/home/xgy/remote/sst_workspace/sst-elements/src/sst/elements/SnnDL" rev-parse --short HEAD`
+  - 验证新增忽略规则命中：
+    - `git -C "/home/xgy/remote/sst_workspace/sst-elements/src/sst/elements/SnnDL" check-ignore -v "config.log" "config.status" "libtool"`
+
+- Metrics / results:
+  - `SnnDL` 当前分支：
+    - `fix/gas-mesh-stability`
+  - `SnnDL` 当前提交短哈希：
+    - `0c1aa5e`
+  - `SnnDL` 当前已跟踪文件量大致为：
+    - 约 `366` 个文件
+  - 按二级文件类型粗看，核心源码资产主要集中在：
+    - `77` 个 `.h`
+    - `51` 个 `.cc`
+    - `15` 个 `.md`
+    - `2` 个 `.py`
+  - 目录中存在但应始终视为本地构建产物的对象包括：
+    - 根目录 `.deps/`、`.libs/`
+    - 各子目录 `components/compute/control/events/tests/tools` 下的 `.deps/.libs`
+    - `*.o`、`*.lo`、`*.la`、`*.lai`、`*.so`
+  - 这些构建产物当前没有作为 `SnnDL` 仓内容出现在 `git status` 中，说明规则已能有效压住本地噪音；当前 `SnnDL` 仓显式变更仅为 `.gitignore`。
+
+- Classification:
+  - 必须继续作为 `SnnDL` 核心源码纳管的部分：
+    - `api/`
+    - `components/`
+    - `compute/`
+    - `control/`
+    - `events/`
+    - `services/`
+    - `tests/`
+    - `tools/`
+    - `docs/`
+    - 根部 `README.md`、`configure.m4`、`Makefile.am`、`Makefile.in`、接口规范文档
+  - 必须视为构建/配置噪音并排除的部分：
+    - `.deps/`、`.libs/`
+    - `**/__pycache__/`
+    - `*.o`、`*.lo`、`*.la`、`*.lai`、`*.so`
+    - `autom4te.cache/`、`config.log`、`config.status`、`config.cache`、`libtool`
+
+- Next steps / TODO:
+  - 若主人后续希望“真正推进核心源码管理”，下一步应决定：
+    - 继续保留 `SnnDL` 为独立仓，并单独在其仓内提交整理结果
+    - 或者调整 `sst-elements` 与 `SnnDL` 的子模块指针关系
+  - 在外层主仓层面，`sst-elements` 仍显示 `src/sst/elements/SnnDL` 指针变化，这一层需要后续和 `SnnDL` 子仓整理策略联动处理。
+
+## 2026-05-01 root repo full sweep and submission plan freeze
+
+- What changed:
+  - 对根仓 `/home/xgy/remote` 做了一次逐目录全量核查，重点覆盖：
+    - `docs/plans`
+    - `exp_opt`
+    - `snndleledoc`
+    - `mainexp`
+    - `memop`
+    - `NoCexp`
+    - `snn3dexp`
+    - `snndl-thing-exp`
+    - `GraphLib`
+    - `snndl_system`
+    - `snndl_topology`
+    - `snndl_spec`
+    - `riscv_snn_isa_lab`
+    - `experimental_features/native_multicast_lab`
+    - `experimental_features/snnDL_network_validator`
+    - `experimental_features/snnDL_neuron_dynamics_tests`
+    - `experimental_features/snnDL_learning_tests`
+    - `experimental_features/neuromoe_experiments`
+  - 同时重新核实了根仓之外的独立 git 管理边界：
+    - `sst_workspace/sst-elements`
+    - `sst_workspace/sst-elements/src/sst/elements/SnnDL`
+    - `experimental_features/neuron_mapping_framework`
+    - `externals/ramulator2`
+  - 更新根仓 [`.gitignore`](/home/xgy/remote/.gitignore)，新增三类规则：
+    - 独立子仓排除：`experimental_features/neuron_mapping_framework/`、`externals/ramulator2/`
+    - 明确不入主仓的本地产物：`analysis/`、`reports/`、`github_submission/`、`backups/`、`artcile/`、`frontend-dashboard/`
+    - 各实验子树的 `runs/stats/analysis/__pycache__/weights/results` 等生成物排除
+
+- How to run / verify:
+  - 查看根仓状态：
+    - `git -C "/home/xgy/remote" status --short --branch`
+  - 查看根仓 gitlink：
+    - `git -C "/home/xgy/remote" ls-files --stage | awk '$1==160000 {print $4}'`
+  - 查看独立子仓状态：
+    - `git -C "/home/xgy/remote/sst_workspace/sst-elements" status --short --branch`
+    - `git -C "/home/xgy/remote/sst_workspace/sst-elements/src/sst/elements/SnnDL" status --short --branch`
+    - `git -C "/home/xgy/remote/experimental_features/neuron_mapping_framework" status --short --branch`
+    - `git -C "/home/xgy/remote/externals/ramulator2" status --short --branch`
+  - 查看关键目录体量：
+    - `du -sh docs/plans exp_opt snndleledoc GraphLib NoCexp mainexp memop snn3dexp snndl-thing-exp snndl_spec snndl_system snndl_topology riscv_snn_isa_lab experimental_features/native_multicast_lab experimental_features/snnDL_network_validator experimental_features/snnDL_neuron_dynamics_tests experimental_features/snnDL_learning_tests experimental_features/neuromoe_experiments`
+  - 验证新增忽略规则：
+    - `git -C "/home/xgy/remote" check-ignore -v frontend-dashboard experimental_features/neuron_mapping_framework externals/ramulator2 github_submission analysis reports`
+
+- Metrics / results:
+  - 根仓当前仍包含 3 个 gitlink：
+    - `sst_simulations/SSTgdiist`
+    - `sst_workspace/sst-core`
+    - `sst_workspace/sst-elements`
+  - 根仓外层最重的本地产物/历史包袱主要是：
+    - `sst_dram_si` 约 `32G`
+    - `sst_workspace` 约 `10G`
+    - `experimental_features` 约 `5.9G`
+    - `mainexp` 约 `3.6G`
+    - `sst_install_mpi` 约 `2.1G`
+    - `sst_install` 约 `1.9G`
+    - `analysis` 约 `1.5G`
+    - `snn3dexp` 约 `910M`
+    - `riscv_snn_isa_lab` 约 `673M`
+  - 本轮确认可作为主仓核心资产纳管的目录及大致体量：
+    - `docs/plans` 约 `1.5M`
+    - `exp_opt` 约 `2.7M`，其中主线建议优先纳管 `.md`
+    - `snndleledoc` 约 `60K`
+    - `GraphLib` 约 `112K`
+    - `NoCexp` 约 `147M`，但应排除 `runs/bg/__pycache__`
+    - `memop` 约 `184M`，但应排除 `runs/tmp/snapshot`
+    - `mainexp` 约 `3.6G`，其中大量体积来自 `runs/artifacts/input_bcsr`，源码主体远小于目录总体积
+    - `snn3dexp` 约 `910M`，但源码主干集中在 `cases/configs/mapping/memory/mesh3d_template/noc/platform/runtime/tests/tools`
+    - `snndl-thing-exp` 约 `72M`，适合只纳管 `cases/tests/tools/README`
+    - `snndl_spec` 约 `40K`
+    - `snndl_system` 约 `112K`
+    - `snndl_topology` 约 `80K`
+    - `riscv_snn_isa_lab` 约 `673M`，应继续保留其核心组件身份
+    - `experimental_features/native_multicast_lab` 约 `13M`，保留 `README/edges/tools/tests`
+    - `experimental_features/snnDL_network_validator` 约 `260K`
+    - `experimental_features/snnDL_neuron_dynamics_tests` 约 `124K`，排除 `out/` 与本地编译产物
+    - `experimental_features/snnDL_learning_tests` 约 `44K`，排除 `errors/results/stats`
+    - `experimental_features/neuromoe_experiments` 约 `268K`，保留 `configs/scripts`，排除 `weights/spike_data/results`
+  - 本轮确认不应当作为根仓普通内容直接纳管的对象：
+    - `sst_workspace/sst-elements`、`sst_workspace/sst-core`
+    - `sst_workspace/sst-elements/src/sst/elements/SnnDL`
+    - `experimental_features/neuron_mapping_framework`
+    - `externals/ramulator2`
+    - `frontend-dashboard`
+    - `sst_install*`
+    - `build/`
+    - `tmp/`
+    - `sst_output_data/`
+    - `analysis/`
+    - `github_submission/`
+    - `artcile/`
+    - `backups/`
+    - 各实验树中的 `runs/`、`stats/`、`analysis/`、`weights/`、`results/`、`__pycache__/`
+
+- Classification:
+  - 第一层，根仓核心主线：
+    - `sst_dram_si`
+    - `sst_workloads/tensor_si`
+    - `riscv_snn_isa_lab`
+    - `docs/plans`
+    - `mainexp`
+    - `memop`
+    - `NoCexp`
+    - `snn3dexp`
+    - `tools`
+    - `GraphLib`
+    - `snndl_system`
+    - `snndl_topology`
+    - `snndl_spec`
+    - `snndleledoc`
+    - `snndl-thing-exp`
+    - 精选 `experimental_features/*` 实验资产
+  - 第二层，必须独立仓处理：
+    - `sst_workspace/sst-elements`
+    - `sst_workspace/sst-elements/src/sst/elements/SnnDL`
+    - `experimental_features/neuron_mapping_framework`
+    - `externals/ramulator2`
+  - 第三层，本地构建/输出/归档垃圾：
+    - `sst_install*`
+    - `build`
+    - `tmp`
+    - `sst_output_data`
+    - `analysis`
+    - `reports`
+    - `frontend-dashboard`
+    - `github_submission`
+    - `artcile`
+    - `backups`
+
+- Submission plan:
+  - Batch 1:
+    - `.gitignore`
+    - `TECH_PROGRESS.md`
+  - Batch 2:
+    - `docs/plans`
+    - `exp_opt` 中的 `.md`
+    - `snndleledoc`
+    - `REMOTE_SERVER_SETUP.md`
+  - Batch 3:
+    - `NoCexp` 主体脚本/配置
+  - Batch 4:
+    - `memop` 主体脚本/配置
+  - Batch 5:
+    - `mainexp` 主体脚本/配置
+  - Batch 6:
+    - `snn3dexp` 代码、案例、测试、工具
+    - 不带 `analysis/`、`runs/`、`stats/`
+  - Batch 7:
+    - `tools`
+    - `GraphLib`
+    - `snndl_system`
+    - `snndl_topology`
+    - `snndl_spec`
+    - `snndl-thing-exp` 的源码/案例/测试部分
+  - Batch 8:
+    - `experimental_features/native_multicast_lab`
+    - `experimental_features/snnDL_network_validator`
+    - `experimental_features/snnDL_neuron_dynamics_tests`
+    - `experimental_features/snnDL_learning_tests`
+    - `experimental_features/neuromoe_experiments`
+  - Batch 9:
+    - 根目录辅助脚本与必要收尾项
+    - 包括 `sst` / `sst-info` wrapper 是否纳管的最终决策
+  - 独立仓并行批次：
+    - `SnnDL` 子仓单独提交 `.gitignore` 整理
+    - `sst-elements` 子仓单独提交 `ramulator2Backend.*`、维护文档、以及 `SnnDL` 子模块指针
+    - `experimental_features/neuron_mapping_framework` 独立整理后再单独提交
+    - `externals/ramulator2` 独立整理后再单独提交
+
+- Next steps / TODO:
+  - 先在根仓执行 Batch 1，确认 `git status` 已经不再被 `analysis/frontend-dashboard/github_submission/reports` 淹没。
+  - 然后按 Batch 2 到 Batch 9 顺序做“只加源码、不加输出”的 staged add。
+  - 在任何 `git push` 之前，必须检查目标分支是否仍沿用之前的 clean history 路线，避免把旧的 `sst_install` 大文件历史重新推上去。
+  - 在根仓最后推送前，执行一次大文件检查，确保 clean branch 中不存在明显超大文件与运行日志洪水。
