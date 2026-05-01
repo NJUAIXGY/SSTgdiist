@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "experiment_id": "2026-03-05_gcss_vlf_premphf_clfit_ab_v1",
+  "baseline_case": "premphf_v2ef_full_vlf",
+  "cases": [
+    {
+      "id": "premphf_v2ef_full_vlf",
+      "label": "4x4 bcsr10k step1 gas gcss_vlf_premphf v2ef full_vlf(line,no-hole)",
+      "run_dir": "/home/xgy/remote/memop/experiments/2026-03-05_gcss_vlf_premphf_clfit_ab_v1/runs/baseline_v2ef/20260305-220348"
+    },
+    {
+      "id": "premphf_v3_clfit_full_vlf",
+      "label": "same + index v3 clfit (cacheline-fit pre layout)",
+      "run_dir": "/home/xgy/remote/memop/experiments/2026-03-05_gcss_vlf_premphf_clfit_ab_v1/runs/clfit_v3/20260305-221704"
+    }
+  ]
+}

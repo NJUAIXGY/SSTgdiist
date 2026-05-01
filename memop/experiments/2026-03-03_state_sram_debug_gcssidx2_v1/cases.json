@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "experiment_id": "2026-03-03_state_sram_debug_gcssidx2_v1",
+  "baseline_case": "gcss_idx2_sram_off_fix",
+  "cases": [
+    {
+      "id": "gcss_idx2_sram_off_fix",
+      "label": "4x4 bcsr10k step1 gas gcss_idx2 (frac=0.03, L1=0, SRAM OFF)",
+      "run_dir": "/home/xgy/remote/sst_dram_si/outputs_large/paper2/2026-03-03_state_sram_debug_gcssidx2_v1/gas/l1_0/frac_0p03/20260303-221955-378923660"
+    },
+    {
+      "id": "gcss_idx2_sram_on_fix",
+      "label": "4x4 bcsr10k step1 gas gcss_idx2 (frac=0.03, L1=0, SRAM ON all)",
+      "run_dir": "/home/xgy/remote/sst_dram_si/outputs_large/paper2/2026-03-03_state_sram_debug_gcssidx2_v1/gas/l1_0/frac_0p03/20260303-220920-672240153"
+    }
+  ]
+}

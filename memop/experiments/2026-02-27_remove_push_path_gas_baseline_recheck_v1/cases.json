@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "experiment_id": "2026-02-27_remove_push_path_gas_baseline_recheck_v1",
+  "baseline_case": "baseline_gas",
+  "cases": [
+    {
+      "id": "baseline_gas",
+      "label": "gas baseline after removing push path (4x4 bcsr10k step1)",
+      "run_dir": "/home/xgy/remote/sst_dram_si/outputs_large/paper2/2026-02-27_remove_push_path_gas_baseline/gas/l1_0/frac_0p03/20260228-042124-828662860"
+    }
+  ]
+}

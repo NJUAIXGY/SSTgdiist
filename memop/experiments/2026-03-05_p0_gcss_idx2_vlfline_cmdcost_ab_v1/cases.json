@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "experiment_id": "2026-03-05_p0_gcss_idx2_vlfline_cmdcost_ab_v1",
+  "baseline_case": "cmd_off",
+  "cases": [
+    {
+      "id": "cmd_off",
+      "label": "4x4 bcsr10k step1 gas gcss_idx2 vlf_line cmd_cost=0 (ramulator2, defer, offline_model strict=0)",
+      "run_dir": "/home/xgy/remote/sst_dram_si/outputs_large/paper2/2026-03-05_p0_gcss_idx2_vlfline_cmdcost_ab_v1/off/20260305-012733"
+    },
+    {
+      "id": "cmd_on",
+      "label": "same + cmd_cost=1",
+      "run_dir": "/home/xgy/remote/sst_dram_si/outputs_large/paper2/2026-03-05_p0_gcss_idx2_vlfline_cmdcost_ab_v1/on/20260305-013904"
+    }
+  ]
+}

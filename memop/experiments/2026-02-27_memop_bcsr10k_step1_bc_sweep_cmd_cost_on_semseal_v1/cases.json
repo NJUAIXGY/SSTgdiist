@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "experiment_id": "2026-02-27_memop_bcsr10k_step1_bc_sweep_cmd_cost_on_semseal_v1",
+  "baseline_case": "bc16",
+  "cases": [
+    {
+      "id": "bc16",
+      "label": "bc=16 (baseline), cmd_cost=1 (semseal)",
+      "run_dir": "/home/xgy/remote/sst_dram_si/outputs_large/paper2/dram_mesh_4x4_bcsr10k_freeze_step1_dram_cmd_cost_guardrail_ab_semseal_v1/gas/l1_0/frac_0p03/20260228-071257-370875612"
+    },
+    {
+      "id": "bc8",
+      "label": "bc=8, cmd_cost=1 (semseal)",
+      "run_dir": "/home/xgy/remote/sst_dram_si/outputs_large/paper2/dram_mesh_4x4_bcsr10k_freeze_step1_bc_sweep_cmd_cost_on_semseal_v1/gas/l1_0/frac_0p03/20260228-073429-966823661"
+    },
+    {
+      "id": "bc4",
+      "label": "bc=4, cmd_cost=1 (semseal)",
+      "run_dir": "/home/xgy/remote/sst_dram_si/outputs_large/paper2/dram_mesh_4x4_bcsr10k_freeze_step1_bc_sweep_cmd_cost_on_semseal_v1/gas/l1_0/frac_0p03/20260228-074047-702511196"
+    }
+  ]
+}

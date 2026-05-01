@@ -1,0 +1,6 @@
+{
+  "ddr5_off": "/home/xgy/remote/sst_dram_si/outputs_large/paper2/dram_mesh_4x4_bcsr10k_schemeA_banked_ab_v1/gas/l1_0/frac_0p03/20260228-203052-367440501",
+  "ddr5_on": "/home/xgy/remote/sst_dram_si/outputs_large/paper2/dram_mesh_4x4_bcsr10k_schemeA_banked_ab_v1/gas/l1_0/frac_0p03/20260228-205428-014476410",
+  "ddr5_notrans_off": "/home/xgy/remote/sst_dram_si/outputs_large/paper2/dram_mesh_4x4_bcsr10k_schemeA_banked_ab_v1/gas/l1_0/frac_0p03/20260228-211240-134342405",
+  "ddr5_notrans_on": "/home/xgy/remote/sst_dram_si/outputs_large/paper2/dram_mesh_4x4_bcsr10k_schemeA_banked_ab_v1/gas/l1_0/frac_0p03/20260228-213136-398564510"
+}

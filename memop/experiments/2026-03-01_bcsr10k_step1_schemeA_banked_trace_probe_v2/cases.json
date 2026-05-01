@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "experiment_id": "2026-03-01_bcsr10k_step1_schemeA_banked_trace_probe_v2",
+  "baseline_case": "ddr5_off_trace",
+  "cases": [
+    {
+      "id": "ddr5_off_trace",
+      "label": "ddr5 banked=0 trace_on",
+      "run_dir": "/home/xgy/remote/sst_dram_si/outputs_large/paper2/dram_mesh_4x4_bcsr10k_schemeA_banked_trace_probe_v2/gas/l1_0/frac_0p03/20260301-133444-464988893"
+    },
+    {
+      "id": "ddr5_on_trace",
+      "label": "ddr5 banked=1 trace_on",
+      "run_dir": "/home/xgy/remote/sst_dram_si/outputs_large/paper2/dram_mesh_4x4_bcsr10k_schemeA_banked_trace_probe_v2/gas/l1_0/frac_0p03/20260301-135128-169599398"
+    }
+  ]
+}

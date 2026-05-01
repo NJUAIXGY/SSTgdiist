@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "experiment_id": "2026-02-27_memop_bcsr10k_step1_rowpack_cmd_cost_matrix_semseal_v1",
+  "baseline_case": "flat_cmd0",
+  "cases": [
+    {
+      "id": "flat_cmd0",
+      "label": "flat (bcsr10k), cmd_cost=0 (semseal)",
+      "run_dir": "/home/xgy/remote/sst_dram_si/outputs_large/paper2/dram_mesh_4x4_bcsr10k_freeze_step1_dram_cmd_cost_guardrail_ab_semseal_v1/gas/l1_0/frac_0p03/20260228-070612-464221066"
+    },
+    {
+      "id": "flat_cmd1",
+      "label": "flat (bcsr10k), cmd_cost=1 (semseal)",
+      "run_dir": "/home/xgy/remote/sst_dram_si/outputs_large/paper2/dram_mesh_4x4_bcsr10k_freeze_step1_dram_cmd_cost_guardrail_ab_semseal_v1/gas/l1_0/frac_0p03/20260228-071257-370875612"
+    },
+    {
+      "id": "rowpack_cmd0",
+      "label": "rowpack_v1, cmd_cost=0 (semseal)",
+      "run_dir": "/home/xgy/remote/sst_dram_si/outputs_large/paper2/dram_mesh_4x4_bcsr10k_freeze_step1_rowpack_cmd_cost_guardrail_semseal_matrix_v1/gas/l1_0/frac_0p03/20260228-071946-733853699"
+    },
+    {
+      "id": "rowpack_cmd1",
+      "label": "rowpack_v1, cmd_cost=1 (semseal)",
+      "run_dir": "/home/xgy/remote/sst_dram_si/outputs_large/paper2/dram_mesh_4x4_bcsr10k_freeze_step1_rowpack_cmd_cost_guardrail_semseal_matrix_v1/gas/l1_0/frac_0p03/20260228-072658-551012184"
+    }
+  ]
+}

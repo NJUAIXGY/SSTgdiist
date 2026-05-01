@@ -1,0 +1,20 @@
+{
+  "static_all_pres__core__payload_utilization_global": 0.28234439818236384,
+  "static_all_pres__core__avg_payload_bytes_per_line_global": 18.070041483671286,
+  "static_all_pres__core__avg_edges_per_segment_global": 4.59203532997182,
+  "static_all_pres__pe__payload_utilization_global": 0.5732952360733486,
+  "static_all_pres__pe__avg_payload_bytes_per_line_global": 36.69089510869431,
+  "static_all_pres__pe__avg_edges_per_segment_global": 17.171030760711037,
+  "static_all_pres__block2x2__payload_utilization_global": 0.9040920761273781,
+  "static_all_pres__block2x2__avg_payload_bytes_per_line_global": 57.8618928721522,
+  "static_all_pres__block2x2__avg_edges_per_segment_global": 64.00030000140626,
+  "window_active_pres__core__payload_utilization_global": 0.06780919691034075,
+  "window_active_pres__core__avg_payload_bytes_per_line_global": 4.339788602261808,
+  "window_active_pres__core__avg_edges_per_segment_global": 1.084947150565452,
+  "window_active_pres__pe__payload_utilization_global": 0.12959782800635705,
+  "window_active_pres__pe__avg_payload_bytes_per_line_global": 8.294260992406851,
+  "window_active_pres__pe__avg_edges_per_segment_global": 2.073565248101713,
+  "window_active_pres__block2x2__payload_utilization_global": 0.3908988015978695,
+  "window_active_pres__block2x2__avg_payload_bytes_per_line_global": 25.017523302263648,
+  "window_active_pres__block2x2__avg_edges_per_segment_global": 6.255047142172269
+}

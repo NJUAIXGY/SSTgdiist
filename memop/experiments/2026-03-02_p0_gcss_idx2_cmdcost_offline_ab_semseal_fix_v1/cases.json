@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "experiment_id": "2026-03-02_p0_gcss_idx2_cmdcost_offline_ab_semseal_fix_v1",
+  "baseline_case": "manual_cmdcost",
+  "cases": [
+    {
+      "id": "manual_cmdcost",
+      "label": "gcss_idx2 cmd_cost=1 manual t_hit=30 t_miss=120 (frac=0.03)",
+      "run_dir": "/home/xgy/remote/sst_dram_si/outputs_large/paper2/2026-03-02_p0_gcss_idx2_cmdcost_offline_ab_semseal_fix_v1_manual/gas/l1_0/frac_0p03/20260302-190359-956870359"
+    },
+    {
+      "id": "offline_cmdcost",
+      "label": "gcss_idx2 cmd_cost=1 offline t_hit/t_miss from ramulator2 (frac=0.03)",
+      "run_dir": "/home/xgy/remote/sst_dram_si/outputs_large/paper2/2026-03-02_p0_gcss_idx2_cmdcost_offline_ab_semseal_fix_v1_offline/gas/l1_0/frac_0p03/20260302-191137-913119401"
+    }
+  ]
+}

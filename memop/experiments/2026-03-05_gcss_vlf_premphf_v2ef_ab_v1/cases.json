@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "experiment_id": "2026-03-05_gcss_vlf_premphf_v2ef_ab_v1",
+  "baseline_case": "premphf_v1_full_vlf",
+  "cases": [
+    {
+      "id": "premphf_v1_full_vlf",
+      "label": "4x4 bcsr10k step1 gas gcss_vlf_premphf full_vlf (v1 index)",
+      "run_dir": "/home/xgy/remote/memop/experiments/2026-03-05_gcss_vlf_premphf_v2ef_ab_v1/runs/v1_full_vlf/20260305-191024"
+    },
+    {
+      "id": "premphf_v2ef_full_vlf",
+      "label": "same + gcss_vlf_premphf v2(EF-base) index",
+      "run_dir": "/home/xgy/remote/memop/experiments/2026-03-05_gcss_vlf_premphf_v2ef_ab_v1/runs/v2ef_full_vlf/20260305-192039"
+    }
+  ]
+}

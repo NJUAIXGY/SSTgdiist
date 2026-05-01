@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "experiment_id": "2026-03-06_gcss_plp_index_v6_sr_block2_ab_v1",
+  "baseline_case": "plp_profile_v6_oksr",
+  "cases": [
+    {
+      "id": "plp_profile_v6_oksr",
+      "label": "PLP profile_greedy v6 ordered-key sid-run exact codec baseline",
+      "run_dir": "/home/xgy/remote/memop/experiments/2026-03-06_gcss_plp_index_v6_oksr_ab_v1/runs/plp_profile_v6_oksr/20260306-075500"
+    },
+    {
+      "id": "plp_profile_v6_sr_block2",
+      "label": "PLP profile_greedy_sidrun_reg v6 ordered-key sid-run exact codec",
+      "run_dir": "memop/experiments/2026-03-06_gcss_plp_index_v6_sr_block2_ab_v1/runs/plp_profile_v6_sr_block2/20260306-083557"
+    }
+  ]
+}

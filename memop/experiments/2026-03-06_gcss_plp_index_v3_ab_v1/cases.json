@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "experiment_id": "2026-03-06_gcss_plp_index_v3_ab_v1",
+  "baseline_case": "plp_profile_v1_rerun",
+  "cases": [
+    {
+      "id": "plp_profile_v1_rerun",
+      "label": "PLP profile_greedy legacy v1 slot-arrays rerun on current code",
+      "run_dir": "/home/xgy/remote/memop/experiments/2026-03-06_gcss_plp_index_v3_ab_v1/runs/plp_profile_v1_rerun/20260306-051743"
+    },
+    {
+      "id": "plp_profile_v3",
+      "label": "PLP profile_greedy compressed v3 rank+ef",
+      "run_dir": "/home/xgy/remote/memop/experiments/2026-03-06_gcss_plp_index_v3_ab_v1/runs/plp_profile_v3/20260306-050405"
+    }
+  ]
+}

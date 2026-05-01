@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "experiment_id": "2026-03-01_postremove_banked_gas_baseline_recheck_v1",
+  "baseline_case": "baseline_gas_postremove",
+  "cases": [
+    {
+      "id": "baseline_gas_postremove",
+      "label": "gas baseline after removing banked-admission path (4x4 bcsr10k step1, semseal)",
+      "run_dir": "/home/xgy/remote/sst_dram_si/outputs_large/paper2/2026-03-01_postremove_banked_gas_baseline_semseal/gas/l1_0/frac_0p03/20260301-145952-383963205"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "experiment_id": "2026-02-28_bcsr10k_step1_gas_l0_budget0_semprobe_v1",
+  "baseline_case": "l0_off_default_budget",
+  "cases": [
+    {
+      "id": "l0_off_default_budget",
+      "label": "L0 off + default budget",
+      "run_dir": "/home/xgy/remote/sst_dram_si/outputs_large/paper2/2026-02-27_remove_push_path_gas_baseline/gas/l1_0/frac_0p03/20260228-042124-828662860"
+    },
+    {
+      "id": "l0_on_default_budget",
+      "label": "L0 on + default budget",
+      "run_dir": "/home/xgy/remote/sst_dram_si/outputs_large/paper2/2026-02-28_l0_on_gas_baseline/gas/l1_0/frac_0p03/20260228-045633-868719806"
+    },
+    {
+      "id": "l0_off_budget0",
+      "label": "L0 off + window_read_budget=0",
+      "run_dir": "/home/xgy/remote/sst_dram_si/outputs_large/paper2/2026-02-28_l0_off_gas_budget0_semprobe/gas/l1_0/frac_0p03/20260228-052940-951846192"
+    },
+    {
+      "id": "l0_on_budget0",
+      "label": "L0 on + window_read_budget=0",
+      "run_dir": "/home/xgy/remote/sst_dram_si/outputs_large/paper2/2026-02-28_l0_on_gas_budget0_semprobe/gas/l1_0/frac_0p03/20260228-052223-355547368"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "experiment_id": "2026-02-28_bcsr10k_step1_gas_semseal_defaultbudget_ab_v1",
+  "baseline_case": "semseal_l0_off_default",
+  "cases": [
+    {
+      "id": "prepatch_l0_off_default",
+      "label": "prepatch L0 off + default budget",
+      "run_dir": "/home/xgy/remote/sst_dram_si/outputs_large/paper2/2026-02-27_remove_push_path_gas_baseline/gas/l1_0/frac_0p03/20260228-042124-828662860"
+    },
+    {
+      "id": "prepatch_l0_on_default",
+      "label": "prepatch L0 on + default budget",
+      "run_dir": "/home/xgy/remote/sst_dram_si/outputs_large/paper2/2026-02-28_l0_on_gas_baseline/gas/l1_0/frac_0p03/20260228-045633-868719806"
+    },
+    {
+      "id": "semseal_l0_off_default",
+      "label": "semseal L0 off + default budget",
+      "run_dir": "/home/xgy/remote/sst_dram_si/outputs_large/paper2/2026-02-28_semseal_l0_off_default_budget/gas/l1_0/frac_0p03/20260228-055418-960646632"
+    },
+    {
+      "id": "semseal_l0_on_default",
+      "label": "semseal L0 on + default budget",
+      "run_dir": "/home/xgy/remote/sst_dram_si/outputs_large/paper2/2026-02-28_semseal_l0_on_default_budget/gas/l1_0/frac_0p03/20260228-054721-430164725"
+    }
+  ]
+}

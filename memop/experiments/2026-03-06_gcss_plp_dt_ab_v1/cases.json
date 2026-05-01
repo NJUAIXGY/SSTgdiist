@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "experiment_id": "2026-03-06_gcss_plp_dt_ab_v1",
+  "baseline_case": "baseline_vlf_profile",
+  "cases": [
+    {
+      "id": "baseline_vlf_profile",
+      "label": "4x4 bcsr10k step1 gas gcss_vlf_premphf baseline + profile export",
+      "run_dir": "/home/xgy/remote/memop/experiments/2026-03-06_gcss_plp_dt_ab_v1/runs/baseline_vlf_profile/20260306-035702"
+    },
+    {
+      "id": "plp_preglobal",
+      "label": "same + gcss_plp pre_global_order",
+      "run_dir": "/home/xgy/remote/memop/experiments/2026-03-06_gcss_plp_dt_ab_v1/runs/plp_preglobal/20260306-041813"
+    },
+    {
+      "id": "plp_profile",
+      "label": "same + gcss_plp profile_greedy",
+      "run_dir": "/home/xgy/remote/memop/experiments/2026-03-06_gcss_plp_dt_ab_v1/runs/plp_profile/20260306-042822"
+    }
+  ]
+}

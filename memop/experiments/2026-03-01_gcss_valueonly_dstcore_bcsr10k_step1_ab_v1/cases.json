@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "experiment_id": "2026-03-01_gcss_valueonly_dstcore_bcsr10k_step1_ab_v1",
+  "baseline_case": "baseline_bcsr_gas",
+  "cases": [
+    {
+      "id": "baseline_bcsr_gas",
+      "label": "4x4 bcsr10k step1 baseline (ramulator2 ddr5, gas, semseal)",
+      "run_dir": "/home/xgy/remote/sst_dram_si/outputs_large/paper2/2026-03-01_gcss_valueonly_dstcore_bcsr10k_step1_ab_v1/baseline_bcsr_gas/20260301-195438"
+    },
+    {
+      "id": "gcss_valueonly_noA_scan",
+      "label": "gcss_valueonly_dstcore noA (scan stream order)",
+      "run_dir": "/home/xgy/remote/sst_dram_si/outputs_large/paper2/2026-03-01_gcss_valueonly_dstcore_bcsr10k_step1_ab_v1/gcss_noA_scan/20260301-202903"
+    },
+    {
+      "id": "gcss_valueonly_A_prepost",
+      "label": "gcss_valueonly_dstcore A (pre_post clustered)",
+      "run_dir": "/home/xgy/remote/sst_dram_si/outputs_large/paper2/2026-03-01_gcss_valueonly_dstcore_bcsr10k_step1_ab_v1/gcss_A_prepost/20260301-204312"
+    }
+  ]
+}

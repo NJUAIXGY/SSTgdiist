@@ -1,0 +1,3490 @@
+{
+  "summary_rows": [
+    {
+      "domain": "static_all_pres",
+      "level": "core",
+      "groups": 320.0,
+      "segments_total": 8919792.0,
+      "payload_bytes_total": 163840000.0,
+      "line_count_total": 9066941.0,
+      "payload_utilization_global": 0.28234439818236384,
+      "avg_payload_bytes_per_line_global": 18.070041483671286,
+      "avg_segments_per_group": 27874.35,
+      "avg_edges_per_segment_global": 4.59203532997182,
+      "multi_line_segment_ratio_global": 0.016496909344971274,
+      "max_edges_per_segment_global": 31.0
+    },
+    {
+      "domain": "static_all_pres",
+      "level": "pe",
+      "groups": 16.0,
+      "segments_total": 2385413.0,
+      "payload_bytes_total": 163840000.0,
+      "line_count_total": 4465413.0,
+      "payload_utilization_global": 0.5732952360733486,
+      "avg_payload_bytes_per_line_global": 36.69089510869431,
+      "avg_segments_per_group": 149088.3125,
+      "avg_edges_per_segment_global": 17.171030760711037,
+      "multi_line_segment_ratio_global": 0.06707433890902749,
+      "max_edges_per_segment_global": 218.0
+    },
+    {
+      "domain": "static_all_pres",
+      "level": "block2x2",
+      "groups": 4.0,
+      "segments_total": 639997.0,
+      "payload_bytes_total": 163840000.0,
+      "line_count_total": 2831570.0,
+      "payload_utilization_global": 0.9040920761273781,
+      "avg_payload_bytes_per_line_global": 57.8618928721522,
+      "avg_segments_per_group": 159999.25,
+      "avg_edges_per_segment_global": 64.00030000140626,
+      "multi_line_segment_ratio_global": 0.2590527768098913,
+      "max_edges_per_segment_global": 239.0
+    },
+    {
+      "domain": "window_active_pres",
+      "level": "core",
+      "groups": 320.0,
+      "segments_total": 108232.0,
+      "payload_bytes_total": 469704.0,
+      "line_count_total": 108232.0,
+      "payload_utilization_global": 0.06780919691034075,
+      "avg_payload_bytes_per_line_global": 4.339788602261808,
+      "avg_segments_per_group": 338.225,
+      "avg_edges_per_segment_global": 1.084947150565452,
+      "multi_line_segment_ratio_global": 0.0,
+      "max_edges_per_segment_global": 5.0
+    },
+    {
+      "domain": "window_active_pres",
+      "level": "pe",
+      "groups": 16.0,
+      "segments_total": 56630.0,
+      "payload_bytes_total": 469704.0,
+      "line_count_total": 56630.0,
+      "payload_utilization_global": 0.12959782800635705,
+      "avg_payload_bytes_per_line_global": 8.294260992406851,
+      "avg_segments_per_group": 3539.375,
+      "avg_edges_per_segment_global": 2.073565248101713,
+      "multi_line_segment_ratio_global": 0.0,
+      "max_edges_per_segment_global": 9.0
+    },
+    {
+      "domain": "window_active_pres",
+      "level": "block2x2",
+      "groups": 4.0,
+      "segments_total": 18773.0,
+      "payload_bytes_total": 469704.0,
+      "line_count_total": 18775.0,
+      "payload_utilization_global": 0.3908988015978695,
+      "avg_payload_bytes_per_line_global": 25.017523302263648,
+      "avg_segments_per_group": 4693.25,
+      "avg_edges_per_segment_global": 6.255047142172269,
+      "multi_line_segment_ratio_global": 0.00010653598252809886,
+      "max_edges_per_segment_global": 17.0
+    }
+  ],
+  "overlap_rows": [
+    {
+      "level": "core",
+      "group_id": "pe00/core00",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 340.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe00/core01",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 291.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe00/core02",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 320.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe00/core03",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 304.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe00/core04",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 301.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe00/core05",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 351.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe00/core06",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 343.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe00/core07",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 289.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe00/core08",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 360.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe00/core09",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 315.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe00/core10",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 368.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe00/core11",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 361.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe00/core12",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 330.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe00/core13",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 320.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe00/core14",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 328.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe00/core15",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 332.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe00/core16",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 309.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe00/core17",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 358.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe00/core18",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 355.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe00/core19",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 339.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe01/core00",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 323.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe01/core01",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 289.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe01/core02",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 333.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe01/core03",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 336.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe01/core04",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 316.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe01/core05",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 372.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe01/core06",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 336.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe01/core07",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 351.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe01/core08",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 338.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe01/core09",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 364.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe01/core10",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 378.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe01/core11",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 333.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe01/core12",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 338.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe01/core13",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 309.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe01/core14",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 340.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe01/core15",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 341.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe01/core16",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 349.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe01/core17",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 317.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe01/core18",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 306.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe01/core19",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 328.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe02/core00",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 345.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe02/core01",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 359.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe02/core02",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 330.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe02/core03",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 347.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe02/core04",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 346.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe02/core05",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 358.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe02/core06",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 348.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe02/core07",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 348.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe02/core08",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 331.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe02/core09",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 362.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe02/core10",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 366.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe02/core11",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 356.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe02/core12",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 319.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe02/core13",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 339.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe02/core14",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 354.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe02/core15",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 343.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe02/core16",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 354.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe02/core17",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 331.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe02/core18",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 335.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe02/core19",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 360.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe03/core00",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 332.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe03/core01",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 353.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe03/core02",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 323.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe03/core03",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 346.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe03/core04",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 292.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe03/core05",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 326.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe03/core06",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 350.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe03/core07",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 329.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe03/core08",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 333.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe03/core09",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 334.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe03/core10",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 344.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe03/core11",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 316.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe03/core12",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 343.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe03/core13",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 370.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe03/core14",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 328.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe03/core15",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 343.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe03/core16",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 325.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe03/core17",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 354.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe03/core18",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 301.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe03/core19",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 335.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe04/core00",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 315.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe04/core01",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 335.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe04/core02",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 343.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe04/core03",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 348.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe04/core04",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 328.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe04/core05",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 346.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe04/core06",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 326.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe04/core07",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 335.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe04/core08",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 341.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe04/core09",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 331.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe04/core10",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 346.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe04/core11",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 319.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe04/core12",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 343.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe04/core13",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 337.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe04/core14",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 327.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe04/core15",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 363.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe04/core16",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 315.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe04/core17",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 366.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe04/core18",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 345.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe04/core19",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 341.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe05/core00",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 334.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe05/core01",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 325.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe05/core02",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 339.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe05/core03",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 326.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe05/core04",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 328.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe05/core05",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 347.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe05/core06",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 343.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe05/core07",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 339.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe05/core08",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 334.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe05/core09",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 345.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe05/core10",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 328.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe05/core11",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 322.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe05/core12",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 337.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe05/core13",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 342.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe05/core14",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 320.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe05/core15",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 334.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe05/core16",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 342.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe05/core17",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 373.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe05/core18",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 357.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe05/core19",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 342.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe06/core00",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 373.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe06/core01",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 358.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe06/core02",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 313.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe06/core03",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 360.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe06/core04",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 361.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe06/core05",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 337.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe06/core06",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 335.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe06/core07",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 339.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe06/core08",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 361.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe06/core09",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 347.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe06/core10",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 359.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe06/core11",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 342.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe06/core12",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 341.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe06/core13",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 342.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe06/core14",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 339.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe06/core15",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 346.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe06/core16",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 329.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe06/core17",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 341.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe06/core18",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 374.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe06/core19",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 354.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe07/core00",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 358.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe07/core01",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 340.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe07/core02",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 368.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe07/core03",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 333.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe07/core04",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 339.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe07/core05",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 354.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe07/core06",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 330.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe07/core07",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 332.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe07/core08",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 326.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe07/core09",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 361.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe07/core10",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 364.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe07/core11",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 339.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe07/core12",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 328.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe07/core13",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 322.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe07/core14",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 316.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe07/core15",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 310.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe07/core16",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 343.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe07/core17",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 356.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe07/core18",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 317.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe07/core19",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 335.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe08/core00",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 329.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe08/core01",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 304.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe08/core02",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 312.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe08/core03",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 345.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe08/core04",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 326.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe08/core05",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 327.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe08/core06",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 322.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe08/core07",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 334.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe08/core08",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 335.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe08/core09",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 314.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe08/core10",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 340.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe08/core11",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 302.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe08/core12",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 303.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe08/core13",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 348.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe08/core14",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 336.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe08/core15",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 346.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe08/core16",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 343.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe08/core17",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 360.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe08/core18",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 351.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe08/core19",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 379.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe09/core00",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 345.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe09/core01",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 345.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe09/core02",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 343.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe09/core03",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 361.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe09/core04",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 334.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe09/core05",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 319.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe09/core06",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 340.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe09/core07",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 359.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe09/core08",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 365.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe09/core09",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 362.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe09/core10",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 294.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe09/core11",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 333.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe09/core12",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 333.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe09/core13",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 335.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe09/core14",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 354.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe09/core15",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 352.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe09/core16",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 358.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe09/core17",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 337.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe09/core18",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 317.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe09/core19",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 323.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe10/core00",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 350.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe10/core01",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 334.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe10/core02",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 349.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe10/core03",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 348.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe10/core04",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 367.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe10/core05",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 326.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe10/core06",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 343.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe10/core07",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 324.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe10/core08",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 318.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe10/core09",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 372.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe10/core10",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 330.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe10/core11",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 341.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe10/core12",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 341.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe10/core13",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 340.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe10/core14",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 319.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe10/core15",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 350.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe10/core16",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 351.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe10/core17",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 363.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe10/core18",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 355.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe10/core19",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 339.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe11/core00",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 325.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe11/core01",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 369.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe11/core02",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 321.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe11/core03",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 352.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe11/core04",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 324.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe11/core05",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 331.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe11/core06",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 344.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe11/core07",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 334.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe11/core08",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 333.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe11/core09",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 321.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe11/core10",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 391.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe11/core11",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 343.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe11/core12",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 317.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe11/core13",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 348.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe11/core14",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 364.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe11/core15",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 333.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe11/core16",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 361.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe11/core17",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 318.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe11/core18",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 292.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe11/core19",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 334.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe12/core00",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 359.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe12/core01",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 364.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe12/core02",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 319.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe12/core03",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 335.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe12/core04",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 349.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe12/core05",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 346.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe12/core06",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 314.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe12/core07",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 323.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe12/core08",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 315.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe12/core09",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 307.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe12/core10",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 299.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe12/core11",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 348.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe12/core12",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 344.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe12/core13",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 335.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe12/core14",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 335.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe12/core15",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 315.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe12/core16",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 328.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe12/core17",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 345.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe12/core18",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 340.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe12/core19",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 317.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe13/core00",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 327.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe13/core01",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 339.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe13/core02",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 323.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe13/core03",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 367.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe13/core04",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 353.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe13/core05",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 335.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe13/core06",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 323.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe13/core07",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 333.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe13/core08",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 358.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe13/core09",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 361.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe13/core10",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 335.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe13/core11",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 379.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe13/core12",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 344.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe13/core13",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 357.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe13/core14",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 365.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe13/core15",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 334.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe13/core16",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 336.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe13/core17",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 310.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe13/core18",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 340.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe13/core19",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 331.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe14/core00",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 321.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe14/core01",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 344.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe14/core02",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 344.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe14/core03",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 329.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe14/core04",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 339.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe14/core05",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 340.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe14/core06",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 332.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe14/core07",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 337.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe14/core08",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 325.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe14/core09",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 344.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe14/core10",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 322.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe14/core11",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 342.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe14/core12",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 341.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe14/core13",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 363.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe14/core14",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 338.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe14/core15",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 371.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe14/core16",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 330.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe14/core17",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 326.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe14/core18",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 320.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe14/core19",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 335.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe15/core00",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 351.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe15/core01",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 324.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe15/core02",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 377.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe15/core03",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 340.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe15/core04",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 342.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe15/core05",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 329.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe15/core06",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 333.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe15/core07",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 330.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe15/core08",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 319.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe15/core09",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 389.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe15/core10",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 321.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe15/core11",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 342.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe15/core12",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 348.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe15/core13",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 301.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe15/core14",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 329.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe15/core15",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 335.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe15/core16",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 349.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe15/core17",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 344.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe15/core18",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 321.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "core",
+      "group_id": "pe15/core19",
+      "cores_in_group": 1.0,
+      "unique_active_pres": 350.0,
+      "shared_active_pres": 0.0,
+      "shared_pre_ratio": 0.0,
+      "avg_cores_per_active_pre": 1.0,
+      "max_cores_sharing_same_pre": 1.0
+    },
+    {
+      "level": "pe",
+      "group_id": "pe00",
+      "cores_in_group": 20.0,
+      "unique_active_pres": 3479.0,
+      "shared_active_pres": 1992.0,
+      "shared_pre_ratio": 0.5725783271054901,
+      "avg_cores_per_active_pre": 1.9011210117849957,
+      "max_cores_sharing_same_pre": 7.0
+    },
+    {
+      "level": "pe",
+      "group_id": "pe01",
+      "cores_in_group": 20.0,
+      "unique_active_pres": 3487.0,
+      "shared_active_pres": 2018.0,
+      "shared_pre_ratio": 0.5787209635790077,
+      "avg_cores_per_active_pre": 1.9205620877545169,
+      "max_cores_sharing_same_pre": 7.0
+    },
+    {
+      "level": "pe",
+      "group_id": "pe02",
+      "cores_in_group": 20.0,
+      "unique_active_pres": 3535.0,
+      "shared_active_pres": 2116.0,
+      "shared_pre_ratio": 0.5985855728429986,
+      "avg_cores_per_active_pre": 1.9606789250353607,
+      "max_cores_sharing_same_pre": 7.0
+    },
+    {
+      "level": "pe",
+      "group_id": "pe03",
+      "cores_in_group": 20.0,
+      "unique_active_pres": 3516.0,
+      "shared_active_pres": 2027.0,
+      "shared_pre_ratio": 0.5765073947667805,
+      "avg_cores_per_active_pre": 1.899032992036405,
+      "max_cores_sharing_same_pre": 6.0
+    },
+    {
+      "level": "pe",
+      "group_id": "pe04",
+      "cores_in_group": 20.0,
+      "unique_active_pres": 3544.0,
+      "shared_active_pres": 2019.0,
+      "shared_pre_ratio": 0.5696952595936795,
+      "avg_cores_per_active_pre": 1.904627539503386,
+      "max_cores_sharing_same_pre": 7.0
+    },
+    {
+      "level": "pe",
+      "group_id": "pe05",
+      "cores_in_group": 20.0,
+      "unique_active_pres": 3544.0,
+      "shared_active_pres": 2065.0,
+      "shared_pre_ratio": 0.5826749435665914,
+      "avg_cores_per_active_pre": 1.9066027088036117,
+      "max_cores_sharing_same_pre": 6.0
+    },
+    {
+      "level": "pe",
+      "group_id": "pe06",
+      "cores_in_group": 20.0,
+      "unique_active_pres": 3605.0,
+      "shared_active_pres": 2099.0,
+      "shared_pre_ratio": 0.582246879334258,
+      "avg_cores_per_active_pre": 1.9281553398058253,
+      "max_cores_sharing_same_pre": 7.0
+    },
+    {
+      "level": "pe",
+      "group_id": "pe07",
+      "cores_in_group": 20.0,
+      "unique_active_pres": 3547.0,
+      "shared_active_pres": 2050.0,
+      "shared_pre_ratio": 0.5779531998872286,
+      "avg_cores_per_active_pre": 1.908937129968988,
+      "max_cores_sharing_same_pre": 7.0
+    },
+    {
+      "level": "pe",
+      "group_id": "pe08",
+      "cores_in_group": 20.0,
+      "unique_active_pres": 3529.0,
+      "shared_active_pres": 1989.0,
+      "shared_pre_ratio": 0.5636157551714367,
+      "avg_cores_per_active_pre": 1.8860867101161802,
+      "max_cores_sharing_same_pre": 7.0
+    },
+    {
+      "level": "pe",
+      "group_id": "pe09",
+      "cores_in_group": 20.0,
+      "unique_active_pres": 3579.0,
+      "shared_active_pres": 2070.0,
+      "shared_pre_ratio": 0.5783738474434199,
+      "avg_cores_per_active_pre": 1.902486728136351,
+      "max_cores_sharing_same_pre": 9.0
+    },
+    {
+      "level": "pe",
+      "group_id": "pe10",
+      "cores_in_group": 20.0,
+      "unique_active_pres": 3532.0,
+      "shared_active_pres": 2089.0,
+      "shared_pre_ratio": 0.5914496036240091,
+      "avg_cores_per_active_pre": 1.942242355605889,
+      "max_cores_sharing_same_pre": 8.0
+    },
+    {
+      "level": "pe",
+      "group_id": "pe11",
+      "cores_in_group": 20.0,
+      "unique_active_pres": 3535.0,
+      "shared_active_pres": 2024.0,
+      "shared_pre_ratio": 0.5725601131541725,
+      "avg_cores_per_active_pre": 1.9108910891089108,
+      "max_cores_sharing_same_pre": 6.0
+    },
+    {
+      "level": "pe",
+      "group_id": "pe12",
+      "cores_in_group": 20.0,
+      "unique_active_pres": 3523.0,
+      "shared_active_pres": 1983.0,
+      "shared_pre_ratio": 0.5628725518024411,
+      "avg_cores_per_active_pre": 1.8839057621345445,
+      "max_cores_sharing_same_pre": 7.0
+    },
+    {
+      "level": "pe",
+      "group_id": "pe13",
+      "cores_in_group": 20.0,
+      "unique_active_pres": 3581.0,
+      "shared_active_pres": 2093.0,
+      "shared_pre_ratio": 0.5844736107232616,
+      "avg_cores_per_active_pre": 1.9128734990226193,
+      "max_cores_sharing_same_pre": 7.0
+    },
+    {
+      "level": "pe",
+      "group_id": "pe14",
+      "cores_in_group": 20.0,
+      "unique_active_pres": 3537.0,
+      "shared_active_pres": 2017.0,
+      "shared_pre_ratio": 0.5702572801809443,
+      "avg_cores_per_active_pre": 1.9064178682499293,
+      "max_cores_sharing_same_pre": 7.0
+    },
+    {
+      "level": "pe",
+      "group_id": "pe15",
+      "cores_in_group": 20.0,
+      "unique_active_pres": 3557.0,
+      "shared_active_pres": 2060.0,
+      "shared_pre_ratio": 0.5791397244869272,
+      "avg_cores_per_active_pre": 1.9044138318807984,
+      "max_cores_sharing_same_pre": 7.0
+    },
+    {
+      "level": "block2x2",
+      "group_id": "block00_00",
+      "cores_in_group": 80.0,
+      "unique_active_pres": 4687.0,
+      "shared_active_pres": 4604.0,
+      "shared_pre_ratio": 0.9822914444207382,
+      "avg_cores_per_active_pre": 5.721783656923405,
+      "max_cores_sharing_same_pre": 14.0
+    },
+    {
+      "level": "block2x2",
+      "group_id": "block00_01",
+      "cores_in_group": 80.0,
+      "unique_active_pres": 4695.0,
+      "shared_active_pres": 4622.0,
+      "shared_pre_ratio": 0.9844515441959532,
+      "avg_cores_per_active_pre": 5.740575079872205,
+      "max_cores_sharing_same_pre": 15.0
+    },
+    {
+      "level": "block2x2",
+      "group_id": "block01_00",
+      "cores_in_group": 80.0,
+      "unique_active_pres": 4703.0,
+      "shared_active_pres": 4644.0,
+      "shared_pre_ratio": 0.9874548160748459,
+      "avg_cores_per_active_pre": 5.811184350414629,
+      "max_cores_sharing_same_pre": 15.0
+    },
+    {
+      "level": "block2x2",
+      "group_id": "block01_01",
+      "cores_in_group": 80.0,
+      "unique_active_pres": 4688.0,
+      "shared_active_pres": 4609.0,
+      "shared_pre_ratio": 0.9831484641638225,
+      "avg_cores_per_active_pre": 5.787542662116041,
+      "max_cores_sharing_same_pre": 14.0
+    }
+  ]
+}

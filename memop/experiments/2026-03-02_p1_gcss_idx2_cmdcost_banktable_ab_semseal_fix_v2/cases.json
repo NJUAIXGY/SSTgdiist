@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "experiment_id": "2026-03-02_p1_gcss_idx2_cmdcost_banktable_ab_semseal_fix_v2",
+  "baseline_case": "bank_table_off",
+  "cases": [
+    {
+      "id": "bank_table_off",
+      "label": "gcss_idx2 cmd_cost=1 offline+strict, bank_table=0 (frac=0.03)",
+      "run_dir": "/home/xgy/remote/sst_dram_si/outputs_large/paper2/2026-03-02_p1_gcss_idx2_cmdcost_banktable_ab_semseal_fix_v2_off/gas/l1_0/frac_0p03/20260302-232106"
+    },
+    {
+      "id": "bank_table_on",
+      "label": "gcss_idx2 cmd_cost=1 offline+strict, bank_table=1 (frac=0.03)",
+      "run_dir": "/home/xgy/remote/sst_dram_si/outputs_large/paper2/2026-03-02_p1_gcss_idx2_cmdcost_banktable_ab_semseal_fix_v2_on/gas/l1_0/frac_0p03/20260302-232105"
+    }
+  ]
+}

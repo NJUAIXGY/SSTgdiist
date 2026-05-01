@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "experiment_id": "2026-03-06_per_post_retire_ab_v1",
+  "baseline_case": "global_inorder",
+  "cases": [
+    {
+      "id": "global_inorder",
+      "label": "4x4 bcsr10k step1 gas gcss_vlf_premphf + global_inorder retire",
+      "run_dir": "/home/xgy/remote/memop/experiments/2026-03-06_per_post_retire_ab_v1/runs/global_inorder/20260306-004904"
+    },
+    {
+      "id": "per_post",
+      "label": "same + per_post deterministic retire",
+      "run_dir": "/home/xgy/remote/memop/experiments/2026-03-06_per_post_retire_ab_v1/runs/per_post/20260306-004904"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "experiment_id": "2026-03-05_gcss_vlf_premphf_fullvlf_evidence_v1",
+  "baseline_case": "gcss_idx2_baseline",
+  "cases": [
+    {
+      "id": "gcss_idx2_baseline",
+      "label": "4x4 bcsr10k step1 gas gcss_idx2 (ramulator2, defer, seq_gate, cmd_cost_on)",
+      "run_dir": "/home/xgy/remote/memop/experiments/2026-03-05_gcss_vlf_premphf_ab_v1/runs/baseline/20260305-042012"
+    },
+    {
+      "id": "gcss_vlf_premphf",
+      "label": "same + gcss_valueonly_dstcore_vlf_premphf (VLF off)",
+      "run_dir": "/home/xgy/remote/memop/experiments/2026-03-05_gcss_vlf_premphf_ab_v1/runs/premphf/20260305-043615"
+    },
+    {
+      "id": "gcss_vlf_premphf_full_vlf",
+      "label": "same + gcss_valueonly_dstcore_vlf_premphf + full_vlf(line,no-hole)",
+      "run_dir": "/home/xgy/remote/memop/experiments/2026-03-05_gcss_vlf_premphf_fullvlf_evidence_v1/runs/full_vlf/20260305-172526"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "experiment_id": "2026-02-27_dram_cmd_cost_guardrail_dense_microbench_4x4_ab",
+  "baseline_case": "guardrail_off",
+  "cases": [
+    {
+      "id": "guardrail_off",
+      "label": "dram_cmd_cost_merge_enable=0",
+      "run_dir": "/home/xgy/remote/sst_dram_si/outputs_large/paper2/dense_microbench_4x4_dram_cmd_cost_merge_guardrail_ab/gas/l1_0/20260227-015634-467995008"
+    },
+    {
+      "id": "guardrail_on",
+      "label": "dram_cmd_cost_merge_enable=1",
+      "run_dir": "/home/xgy/remote/sst_dram_si/outputs_large/paper2/dense_microbench_4x4_dram_cmd_cost_merge_guardrail_ab/gas/l1_0/20260227-015656-278058915"
+    }
+  ]
+}
+

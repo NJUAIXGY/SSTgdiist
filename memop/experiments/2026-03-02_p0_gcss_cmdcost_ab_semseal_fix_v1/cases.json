@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "experiment_id": "2026-03-02_p0_gcss_cmdcost_ab_semseal_fix_v1",
+  "baseline_case": "gcss_v1_cmd0",
+  "cases": [
+    {
+      "id": "gcss_v1_cmd0",
+      "label": "gcss_valueonly_dstcore cmd_cost=0 (frac=0.03)",
+      "run_dir": "/home/xgy/remote/sst_dram_si/outputs_large/paper2/2026-03-02_p0_gcss_cmdcost_ab_semseal_v1/gas/l1_0/frac_0p03/20260302-133507-856462805"
+    },
+    {
+      "id": "gcss_v1_cmd1",
+      "label": "gcss_valueonly_dstcore cmd_cost=1 (frac=0.03)",
+      "run_dir": "/home/xgy/remote/sst_dram_si/outputs_large/paper2/2026-03-02_p0_gcss_cmdcost_ab_semseal_v1/gas/l1_0/frac_0p03/20260302-144444-937956407"
+    },
+    {
+      "id": "gcss_idx2_cmd0_fixed",
+      "label": "gcss_valueonly_dstcore_idx2 cmd_cost=0 FIXED (frac=0.03)",
+      "run_dir": "/home/xgy/remote/sst_dram_si/outputs_large/paper2/2026-03-02_p0_idx2_fix_cmdcost_ab_semseal_v1/gas/l1_0/frac_0p03/20260302-171136-424902289"
+    },
+    {
+      "id": "gcss_idx2_cmd1_fixed",
+      "label": "gcss_valueonly_dstcore_idx2 cmd_cost=1 FIXED (frac=0.03)",
+      "run_dir": "/home/xgy/remote/sst_dram_si/outputs_large/paper2/2026-03-02_p0_idx2_fix_cmdcost_ab_semseal_v1/gas/l1_0/frac_0p03/20260302-171933-912164844"
+    }
+  ]
+}

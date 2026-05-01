@@ -20192,3 +20192,34 @@ Next steps / TODO:
 - Next steps / TODO:
   - 完成本批次提交后，继续进入 `memop` 与 `mainexp` 的 clean 纳管。
   - 若网络恢复，再将 Batch 2 与 Batch 3 的 clean 提交一起推送到个人 fork。
+
+## 2026-05-01 clean branch batch4 memop sync
+
+- What changed:
+  - 在 clean 分支 `feature/gas-refactor-doc-clean-v2` 中继续推进 Batch 4，补入 `memop/` 的核心实验定义与辅助脚本。
+  - 本批次同步的内容以实验定义文件为主：
+    - 大量 `experiments/*/cases.json`
+    - 少量 `experiments/*/run_dirs.json`
+    - `tools/snapshot_experiment.py`
+    - `2026-03-06_tass_feasibility_v1` 下的轻量汇总文件
+  - 继续排除 `runs/`、`runs_debug/`、`runs_serial/`、`snapshot/`、`tmp/`、`__pycache__/` 等运行产物。
+
+- How to run / verify:
+  - 查看本批次 clean 工作树中的 `memop` 清单：
+    - `git -C "/home/xgy/remote-clean-v2" status --short --untracked-files=all -- "memop"`
+    - `find "/home/xgy/remote-clean-v2/memop" -type f | sort`
+  - 验证本地运行目录仍被忽略：
+    - `git -C "/home/xgy/remote-clean-v2" check-ignore -v "memop/runs/2026-03-01_gcss_stats_step1/summary.json"`
+    - `git -C "/home/xgy/remote-clean-v2" check-ignore -v "memop/tmp/naive_tass_green_smallfrac/run.log"`
+
+- Metrics / results:
+  - clean 工作树中本批次 `memop` 体量约：
+    - `516K`
+  - 本批次主体包括：
+    - `48` 个实验定义文件（`cases.json` / `run_dirs.json`）
+    - `4` 个 `tass_feasibility_v1` 汇总文件
+    - `1` 个辅助脚本 `snapshot_experiment.py`
+
+- Next steps / TODO:
+  - 完成本批次提交后，继续进入 `mainexp` 这块更大的实验主干。
+  - 若网络恢复，再统一把本地 clean 链上尚未推送的提交送到个人 fork。
