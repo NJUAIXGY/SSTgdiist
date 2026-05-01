@@ -20365,3 +20365,39 @@ Next steps / TODO:
 - Next steps / TODO:
   - 继续评估并处理 `externals/HotSpot-7.0`，将其作为可能的 vendor 源码批次。
   - 完成剩余批次后，通过 SSH 把 clean 分支最新提交统一推送到个人 fork。
+
+## 2026-05-01 clean branch batch9 hotspot vendor sync
+
+- What changed:
+  - 在 clean 分支 `feature/gas-refactor-doc-clean-v2` 中补入 `externals/HotSpot-7.0/` 作为热分析相关的 vendor 源码目录。
+  - 本批次同步的范围包括：
+    - `LICENSE`、`README.md`、`README_archive/*`
+    - `*.c`、`*.h`、`Makefile`、`template.config`
+    - `examples/example*/` 下的 floorplan、ptrace、config、材料文件与运行脚本
+    - `scripts/*.pl`、`scripts/*.py`
+  - 继续排除编译产物：
+    - `externals/HotSpot-7.0/*.o`
+    - `externals/HotSpot-7.0/*.d`
+    - `externals/HotSpot-7.0/libhotspot.a`
+    - `externals/HotSpot-7.0/hotspot`
+    - `externals/HotSpot-7.0/hotfloorplan`
+
+- How to run / verify:
+  - 查看本批次 clean 工作树中的 vendor 清单：
+    - `git -C "/home/xgy/remote-clean-v2" status --short --untracked-files=all -- "externals/HotSpot-7.0"`
+    - `find "/home/xgy/remote-clean-v2/externals/HotSpot-7.0" -type f | sort`
+  - 验证编译产物仍被忽略：
+    - `git -C "/home/xgy/remote-clean-v2" check-ignore -v "externals/HotSpot-7.0/hotspot" "externals/HotSpot-7.0/hotfloorplan" "externals/HotSpot-7.0/libhotspot.a" "externals/HotSpot-7.0/temperature.o"`
+
+- Metrics / results:
+  - 本批次同步文件数：
+    - `103` 个文件
+  - 原始目录体量约：
+    - `2.8M`
+  - clean 工作树中本批次体量约：
+    - `1.3M`
+  - 同步后的主体为 HotSpot 上游源码、示例与脚本，便于仓内 thermal specs 与设计文档引用，不含本地编译结果。
+
+- Next steps / TODO:
+  - 统一检查 clean 工作树是否干净，并将 Batch 7-9 的新增提交通过 SSH 推送到个人 fork。
+  - 推送后用 `ls-remote` 核对远端分支哈希，避免本地 ahead/behind 计数误导。
