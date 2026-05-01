@@ -1,0 +1,70 @@
+{
+  "schema_version": 3,
+  "model": "mesh",
+  "platform": {
+    "mesh_size": 4,
+    "exec_mode": "gas",
+    "stop": {
+      "mode": "step_limited",
+      "max_steps": 2
+    }
+  },
+  "workload": {
+    "type": "snn"
+  },
+  "loader": {
+    "chunk_bytes": 4096
+  },
+  "pe": {
+    "num_cores_per_pe": 20,
+    "neurons_per_core": 500,
+    "core": {
+      "apply_dense_acc_enable": true,
+      "memory_warmup_cycles": 200,
+      "loader_barrier_cycles": 0
+    }
+  },
+  "memory": {
+    "type": "memHierarchy",
+    "backend": {
+      "type": "ramulator2",
+      "config_file": "/home/xgy/remote/sst_dram_si/configs/ramulator2_ddr5_notrans.cfg"
+    }
+  },
+  "gas": {
+    "merge_policy": "cacheline",
+    "max_inflight": 128,
+    "apply_bank_credit": 0,
+    "window_cycles": {
+      "gather": 200,
+      "apply": 40,
+      "scatter": 40
+    }
+  },
+  "step": {
+    "random_activation_enable": 1,
+    "activation_fraction": 0.0002,
+    "activation_fanout": 256,
+    "activation_seed": 271828,
+    "activation_use_bcsr_routes": true
+  },
+  "components": {
+    "pe.core": {
+      "window_read_enable": 1,
+      "window_read_budget": 8192,
+      "experimental_noc_rowidx_prefetch_enable": 0,
+      "experimental_noc_rowidx_prefetch_budget_per_tick": 4,
+      "experimental_noc_rowidx_cache_rows": 1024,
+      "experimental_noc_rowidx_prefetch_gather_only": 1,
+      "experimental_noc_rowidx_hot_touch_min": 1,
+      "experimental_noc_rowidx_budget_adapt_enable": 0,
+      "experimental_noc_rowidx_budget_adapt_max_per_tick": 32,
+      "experimental_noc_rowidx_budget_adapt_q_depth": 16
+    },
+    "pe_mem_controller.backend": {
+      "admission_queue_size": 65536,
+      "admission_issue_budget_per_cycle": 8,
+      "max_requests_per_cycle": 8
+    }
+  }
+}

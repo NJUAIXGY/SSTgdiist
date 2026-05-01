@@ -20160,3 +20160,35 @@ Next steps / TODO:
 - Next steps / TODO:
   - 完成本批次提交与推送后，继续进入 `NoCexp` / `memop` / `mainexp` 等实验主干的 clean 分批纳管。
   - 后续批次继续维持“只收源码与配置，不带运行输出”的规则。
+
+## 2026-05-01 clean branch batch3 NoCexp sync
+
+- What changed:
+  - 在 clean 分支 `feature/gas-refactor-doc-clean-v2` 中继续推进 Batch 3，补入 `NoCexp/` 的核心实验脚本与配置。
+  - 本批次只同步 `git status` 暴露出的 24 个文件，覆盖三块主线：
+    - `noc_idx2_nip_lab` 的分析脚本与启动脚本
+    - `noc_mem_joint_lab` 的 `admission_queue_lab` / `debug_stepgate` 规格配置与分析脚本
+    - `spiketile_router_lab` 的运行脚本与关键测试入口
+  - 显式不纳入 `runs/`、`bg/`、`__pycache__/`、`inputs/bcsr_meta/` 以及各类运行统计输出。
+
+- How to run / verify:
+  - 查看本批次 clean 工作树中的 `NoCexp` 清单：
+    - `git -C "/home/xgy/remote-clean-v2" status --short --untracked-files=all -- "NoCexp"`
+    - `find "/home/xgy/remote-clean-v2/NoCexp" -type f | sort`
+  - 验证工作树中没有把运行目录混入：
+    - `git -C "/home/xgy/remote-clean-v2" check-ignore -v "NoCexp/spiketile_router_lab/runs/20260227-013733_smoke/suite_summary.json"`
+    - `git -C "/home/xgy/remote-clean-v2" check-ignore -v "NoCexp/noc_idx2_nip_lab/runs/diag_idx2_cb_20260303-010219/B_nip_on_default/seed_271828/run/20260303-010219/effective_config.json"`
+
+- Metrics / results:
+  - 本批次纳入 `NoCexp` 的文件数：
+    - `24` 个文件
+  - clean 工作树中本批次 `NoCexp` 体量约：
+    - `200K`
+  - 主体组成如下：
+    - `2` 个 `noc_idx2_nip_lab` 文件
+    - `20` 个 `noc_mem_joint_lab` 文件
+    - `2` 个 `spiketile_router_lab` 文件
+
+- Next steps / TODO:
+  - 完成本批次提交后，继续进入 `memop` 与 `mainexp` 的 clean 纳管。
+  - 若网络恢复，再将 Batch 2 与 Batch 3 的 clean 提交一起推送到个人 fork。
