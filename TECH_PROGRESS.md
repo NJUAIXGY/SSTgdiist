@@ -20129,3 +20129,34 @@ Next steps / TODO:
   - 然后按 Batch 2 到 Batch 9 顺序做“只加源码、不加输出”的 staged add。
   - 在任何 `git push` 之前，必须检查目标分支是否仍沿用之前的 clean history 路线，避免把旧的 `sst_install` 大文件历史重新推上去。
   - 在根仓最后推送前，执行一次大文件检查，确保 clean branch 中不存在明显超大文件与运行日志洪水。
+
+## 2026-05-01 clean branch batch2 docs sync
+
+- What changed:
+  - 在 clean 分支 `feature/gas-refactor-doc-clean-v2` 中继续推进主仓分批纳管，补入 Batch 2 文档资产：
+    - `REMOTE_SERVER_SETUP.md`
+    - `snndleledoc/`
+    - `exp_opt/` 下全部 `.md`
+  - 显式不纳入 `exp_opt/` 中的 PDF 参考资料，保持该批次只包含可维护的文本设计文档。
+
+- How to run / verify:
+  - 查看本批次待提交状态：
+    - `git -C "/home/xgy/remote-clean-v2" status --short --untracked-files=all -- "REMOTE_SERVER_SETUP.md" "exp_opt" "snndleledoc"`
+  - 验证 `exp_opt` 中没有 PDF 被带入 clean 工作树提交集：
+    - `find "/home/xgy/remote-clean-v2/exp_opt" -type f | sort`
+    - `git -C "/home/xgy/remote-clean-v2" check-ignore -v "exp_opt/ActiveN_A_Scalable_and_Flexibly-Programmable_Event-Driven_Neuromorphic_Processor.pdf"`
+  - 推送后核对最新提交与上游：
+    - `git -C "/home/xgy/remote-clean-v2" log --oneline --decorate -1`
+    - `git -C "/home/xgy/remote-clean-v2" rev-parse --abbrev-ref --symbolic-full-name @{u}`
+
+- Metrics / results:
+  - 本批次纳入的文档体量大致为：
+    - `exp_opt/` 约 `1.4M`
+    - `snndleledoc/` 约 `60K`
+    - `REMOTE_SERVER_SETUP.md` 约 `8K`
+  - `exp_opt/` 本批次仅同步 Markdown 设计文档与 `legacyopt/` 下的 Markdown 历史设计记录。
+  - `docs/plans` 已在更早的 clean 分支中存在，本批次不重复提交。
+
+- Next steps / TODO:
+  - 完成本批次提交与推送后，继续进入 `NoCexp` / `memop` / `mainexp` 等实验主干的 clean 分批纳管。
+  - 后续批次继续维持“只收源码与配置，不带运行输出”的规则。
