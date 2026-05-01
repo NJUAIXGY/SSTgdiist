@@ -20294,3 +20294,40 @@ Next steps / TODO:
 - Next steps / TODO:
   - 继续处理 `experimental_features/*` 的精选实验资产。
   - 后续单独处理 `tools/` 这类文件数较多但体量仍可控的工具链目录。
+
+## 2026-05-01 clean branch batch7 experimental feature labs sync
+
+- What changed:
+  - 在 clean 分支 `feature/gas-refactor-doc-clean-v2` 中继续补入一组精选 `experimental_features/*` 实验与验证资产。
+  - 本批次同步的范围包括：
+    - `experimental_features/native_multicast_lab/` 的 README、边文件与 multicast smoke 脚本
+    - `experimental_features/snnDL_network_validator/` 的解析器、分析器与测试入口
+    - `experimental_features/snnDL_neuron_dynamics_tests/` 的 2x2 动力学测试、输入样例与 `model_test.cpp`
+    - `experimental_features/snnDL_learning_tests/` 的最小数据集与测试脚本
+    - `experimental_features/neuromoe_experiments/` 的 gating 配置、运行脚本与分析脚本
+  - 继续排除各实验目录下的 `runs/`、`out/`、`results/`、`weights/`、`spike_data/` 与 `__pycache__/`。
+
+- How to run / verify:
+  - 查看本批次 clean 工作树中的实验资产清单：
+    - `git -C "/home/xgy/remote-clean-v2" status --short --untracked-files=all -- "experimental_features"`
+    - `find "/home/xgy/remote-clean-v2/experimental_features/native_multicast_lab" "/home/xgy/remote-clean-v2/experimental_features/neuromoe_experiments" "/home/xgy/remote-clean-v2/experimental_features/snnDL_learning_tests" "/home/xgy/remote-clean-v2/experimental_features/snnDL_network_validator" "/home/xgy/remote-clean-v2/experimental_features/snnDL_neuron_dynamics_tests" -type f | sort`
+  - 验证实验生成物仍被忽略：
+    - `git -C "/home/xgy/remote-clean-v2" check-ignore -v "experimental_features/native_multicast_lab/experiments/runs/sample/output.json"`
+    - `git -C "/home/xgy/remote-clean-v2" check-ignore -v "experimental_features/snnDL_neuron_dynamics_tests/out/model.log"`
+    - `git -C "/home/xgy/remote-clean-v2" check-ignore -v "experimental_features/neuromoe_experiments/weights/checkpoint.bin"`
+    - `git -C "/home/xgy/remote-clean-v2" check-ignore -v "experimental_features/snnDL_learning_tests/results/summary.json"`
+
+- Metrics / results:
+  - 本批次同步文件数：
+    - `38` 个文件
+  - clean 工作树中本批次各目录体量大致为：
+    - `native_multicast_lab/` 约 `5.1M`
+    - `neuromoe_experiments/` 约 `64K`
+    - `snnDL_learning_tests/` 约 `20K`
+    - `snnDL_network_validator/` 约 `160K`
+    - `snnDL_neuron_dynamics_tests/` 约 `44K`
+  - 同步后的主体全部是实验脚本、配置、样例数据与验证代码，不含运行生成目录。
+
+- Next steps / TODO:
+  - 后续单独处理 `tools/` 目录，把大批量脚本、测试与 JSON specs 作为独立批次纳入 clean 分支。
+  - 评估 `externals/HotSpot-7.0` 的 vendor 源码边界后，再决定是否作为最后一批补入。
