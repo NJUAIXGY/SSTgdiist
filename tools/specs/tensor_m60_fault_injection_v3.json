@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "model": "tensor",
+  "platform": {
+    "mesh_size": 2,
+    "stop": { "mode": "time", "simulation_time": "35us" }
+  },
+  "noc": {
+    "type": "merlin_mesh",
+    "params": { "link_bw": "20GiB/s", "buffer_size": "4KiB", "num_vns": 2 }
+  },
+  "memory": {
+    "type": "shared",
+    "backend": { "type": "simple" },
+    "params": { "core_mem_region_bytes": 1048576, "mem_access_time": "120ns" }
+  },
+  "pe": { "cores_per_pe": 1, "neurons_per_core": 1 },
+  "workload": {
+    "type": "tensor",
+    "stats_modules": "tensor",
+    "params": {
+      "tensor_capability_profile": "energy_ras_v2",
+      "tensor_scheduler_model": "fault_proxy",
+      "tensor_memory_hierarchy_profile": "edge",
+      "tensor_exec_mode": "program",
+      "tensor_iterations": 1,
+      "tensor_mem_enable": 1,
+      "tensor_mem_req_bytes": 64,
+      "tensor_mem_max_outstanding": 16,
+      "tensor_dma_bandwidth_bytes_per_cycle": 64,
+      "tensor_collective_type": "allreduce",
+      "tensor_collective_blocking": 1,
+      "tensor_collective_scope": "per_system",
+      "tensor_collective_algo": "ring_chunked",
+      "tensor_collective_chunk_bytes": 1024,
+      "tensor_collective_packet_bytes": 256,
+      "tensor_collective_max_inflight_chunks": 1,
+      "tensor_collective_credit_enable": 1,
+      "tensor_collective_credit_window_chunks": 1,
+      "tensor_collective_backpressure_mode": "hard",
+      "tensor_noc_bandwidth_bytes_per_cycle": 24
+    },
+    "program": {
+      "loop": false,
+      "ops": [
+        { "op_type": "dma_read", "bytes": 16384 },
+        { "op_type": "gemm_ub", "cycles": 256, "ub_read_bytes": 16384, "ub_write_bytes": 8192 },
+        { "op_type": "allreduce", "bytes": 65536, "blocking": true },
+        { "op_type": "dma_write", "bytes": 8192 },
+        { "op_type": "fence" }
+      ]
+    }
+  }
+}

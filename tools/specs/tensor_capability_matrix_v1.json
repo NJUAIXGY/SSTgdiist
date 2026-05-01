@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "version": "m37_capability_matrix_v1",
+  "description": "Capability matrix for post-M36 tensor realism scoring.",
+  "dimensions": [
+    { "name": "scheduler", "weight": 0.25, "target": 85.0, "notes": "program issue/engine scheduling realism" },
+    { "name": "dataflow", "weight": 0.20, "target": 85.0, "notes": "tiling/dataflow/on-chip reuse realism" },
+    { "name": "memory", "weight": 0.25, "target": 85.0, "notes": "memory hierarchy + latency observability realism" },
+    { "name": "parallelism", "weight": 0.15, "target": 85.0, "notes": "operator/collective/vector concurrency realism" },
+    { "name": "scalability", "weight": 0.15, "target": 85.0, "notes": "mesh/noc/hbm scaling realism" }
+  ]
+}

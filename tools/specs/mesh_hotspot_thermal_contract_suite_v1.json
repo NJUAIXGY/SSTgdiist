@@ -1,0 +1,50 @@
+{
+  "suite_contract_version": "v1",
+  "cases": [
+    {
+      "case_id": "thermal_2d_block_base",
+      "spec_path": "tools/specs/mesh_hotspot_thermal_smoke_v3.json",
+      "expectations": {
+        "require_window_power_samples": true,
+        "require_layer_stack_validation": false,
+        "hotspot_model_type": "block"
+      }
+    },
+    {
+      "case_id": "thermal_3d_grid_base",
+      "spec_path": "tools/specs/mesh_hotspot_thermal_3d_smoke_v3.json",
+      "expectations": {
+        "require_window_power_samples": true,
+        "require_layer_stack_validation": true,
+        "hotspot_model_type": "grid"
+      }
+    },
+    {
+      "case_id": "thermal_3d_grid_csv_source",
+      "spec_path": "tools/specs/mesh_hotspot_thermal_3d_csv_smoke_v1.json",
+      "expectations": {
+        "require_window_power_samples": true,
+        "require_layer_stack_validation": true,
+        "hotspot_model_type": "grid"
+      }
+    },
+    {
+      "case_id": "thermal_3d_grid_stats_prefix",
+      "spec_path": "tools/specs/mesh_hotspot_thermal_3d_stats_prefix_smoke_v1.json",
+      "expectations": {
+        "require_window_power_samples": true,
+        "require_layer_stack_validation": true,
+        "hotspot_model_type": "grid"
+      }
+    },
+    {
+      "case_id": "thermal_3d_grid_power_source",
+      "spec_path": "tools/specs/mesh_hotspot_thermal_3d_power_source_smoke_v1.json",
+      "expectations": {
+        "require_window_power_samples": true,
+        "require_layer_stack_validation": true,
+        "hotspot_model_type": "grid"
+      }
+    }
+  ]
+}

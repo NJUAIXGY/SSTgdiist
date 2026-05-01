@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "description": "M46 stricter drift policy for multi-scenario realism regression.",
+  "thresholds": {
+    "score_total_delta_min": -2.0,
+    "breakdown_delta_min": -4.0,
+    "max_new_drift_flags": 1,
+    "enforce_dimensions": [
+      "scheduler",
+      "dataflow",
+      "memory",
+      "parallelism",
+      "scalability"
+    ]
+  }
+}

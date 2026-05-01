@@ -1,0 +1,30 @@
+{
+  "platform": { "mesh_size": 2, "simulation_time": "35us" },
+  "tensor_params": {
+    "tensor_program_issue_width": 2,
+    "tensor_mem_enable": 1,
+    "tensor_mem_max_outstanding": 64,
+    "tensor_dma_bandwidth_bytes_per_cycle": 192,
+    "tensor_collective_type": "allreduce",
+    "tensor_collective_blocking": 1,
+    "tensor_collective_scope": "per_system",
+    "tensor_collective_algo": "ring_chunked",
+    "tensor_collective_chunk_bytes": 1024,
+    "tensor_collective_packet_bytes": 256,
+    "tensor_collective_max_inflight_chunks": 1,
+    "tensor_collective_credit_enable": 1,
+    "tensor_collective_credit_window_chunks": 1,
+    "tensor_collective_backpressure_mode": "hard",
+    "tensor_noc_bandwidth_bytes_per_cycle": 24
+  },
+  "program_ops": [
+    { "op_type": "dma_read", "bytes": 32768, "resource": "dma" },
+    { "op_type": "gemm_ub", "cycles": 160, "ub_read_bytes": 8192, "ub_write_bytes": 4096, "resource": "mxu", "deps": [0] },
+    { "op_type": "allreduce", "bytes": 65536, "blocking": true, "resource": "coll", "deps": [1] },
+    { "op_type": "dma_read", "bytes": 32768, "resource": "dma", "deps": [1] },
+    { "op_type": "gemm_ub", "cycles": 160, "ub_read_bytes": 8192, "ub_write_bytes": 4096, "resource": "mxu", "deps": [3] },
+    { "op_type": "allreduce", "bytes": 65536, "blocking": true, "resource": "coll", "deps": [2, 4] },
+    { "op_type": "dma_write", "bytes": 4096, "resource": "dma", "deps": [5] },
+    { "op_type": "fence", "resource": "ctrl", "deps": [6] }
+  ]
+}

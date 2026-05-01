@@ -1,0 +1,43 @@
+{
+  "schema_version": 3,
+  "model": "mesh",
+  "platform": {
+    "mesh_size": 4,
+    "exec_mode": "gas",
+    "stop": {
+      "mode": "step_limited",
+      "max_steps": 1
+    }
+  },
+  "pe": {
+    "cores_per_pe": 1,
+    "neurons_per_core": 4
+  },
+  "workload": {
+    "type": "snn"
+  },
+  "loader": {
+    "chunk_bytes": 65536
+  },
+  "step": {
+    "random_activation_enable": 1,
+    "activation_fraction": 0.01,
+    "activation_fanout": 8,
+    "activation_trigger_core": 0
+  },
+  "validate": {
+    "profile": "dev"
+  },
+  "thermal": {
+    "enable": true,
+    "backend": "hotspot",
+    "window_ns": 1000,
+    "out_dir": "thermal",
+    "tile_width_um": 1000,
+    "tile_height_um": 1000,
+    "tile_gap_um": 50,
+    "comp_frac": 0.6,
+    "sram_frac": 0.25,
+    "noc_frac": 0.15
+  }
+}

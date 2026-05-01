@@ -1,0 +1,104 @@
+{
+  "schema_version": 3,
+  "model": "tensor",
+  "platform": {
+    "mesh_size": 4,
+    "stop": {
+      "mode": "time",
+      "simulation_time": "40us"
+    }
+  },
+  "noc": {
+    "type": "merlin_mesh",
+    "params": {
+      "link_bw": "12GiB/s",
+      "buffer_size": "4KiB",
+      "num_vns": 2
+    }
+  },
+  "memory": {
+    "type": "shared",
+    "backend": {
+      "type": "simple"
+    },
+    "params": {
+      "core_mem_region_bytes": 1048576,
+      "mem_access_time": "70ns"
+    }
+  },
+  "pe": {
+    "cores_per_pe": 1,
+    "neurons_per_core": 1
+  },
+  "workload": {
+    "type": "tensor",
+    "stats_modules": "tensor",
+    "params": {
+      "tensor_capability_profile": "cross_layer_causal_v2",
+      "tensor_scheduler_model": "cross_layer_causal_v2",
+      "tensor_memory_hierarchy_profile": "balanced",
+      "tensor_exec_mode": "program",
+      "tensor_iterations": 1,
+      "tensor_mem_enable": 1,
+      "tensor_mem_req_bytes": 64,
+      "tensor_mem_max_outstanding": 128,
+      "tensor_dma_bandwidth_bytes_per_cycle": 256,
+      "tensor_program_issue_width": 4,
+      "tensor_mem_timing_model": "proxy_v3",
+      "tensor_mem_bank_groups_per_channel": 4,
+      "tensor_mem_banks_per_group": 4,
+      "tensor_mem_row_bytes": 2048,
+      "tensor_mem_bank_queue_depth": 8,
+      "tensor_mem_sched_policy": "frfcfs",
+      "tensor_mem_t_rcd_cycles": 10,
+      "tensor_mem_t_cl_cycles": 8,
+      "tensor_mem_t_rp_cycles": 10,
+      "tensor_mem_t_burst_cycles": 6,
+      "tensor_mem_t_ccd_s_cycles": 2,
+      "tensor_mem_t_ccd_l_cycles": 4,
+      "tensor_collective_type": "allreduce",
+      "tensor_collective_blocking": 1,
+      "tensor_collective_scope": "per_system",
+      "tensor_collective_algo": "ring_chunked",
+      "tensor_collective_chunk_bytes": 1024,
+      "tensor_collective_packet_bytes": 256,
+      "tensor_collective_max_inflight_chunks": 1,
+      "tensor_collective_credit_enable": 1,
+      "tensor_collective_credit_window_chunks": 1,
+      "tensor_collective_backpressure_mode": "hard",
+      "tensor_noc_bandwidth_bytes_per_cycle": 16
+    },
+    "program": {
+      "loop": false,
+      "ops": [
+        {
+          "op_type": "dma_read",
+          "bytes": 65536
+        },
+        {
+          "op_type": "gemm_ub",
+          "cycles": 240,
+          "ub_read_bytes": 8192,
+          "ub_write_bytes": 4096
+        },
+        {
+          "op_type": "allreduce",
+          "bytes": 131072,
+          "blocking": true
+        },
+        {
+          "op_type": "allreduce",
+          "bytes": 131072,
+          "blocking": true
+        },
+        {
+          "op_type": "dma_write",
+          "bytes": 8192
+        },
+        {
+          "op_type": "fence"
+        }
+      ]
+    }
+  }
+}

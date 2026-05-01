@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "baseline_id": "tensor_m42_golden_v1",
+  "description": "Golden readiness baseline snapshot for M43 drift governance.",
+  "baseline_report_snapshot": {
+    "capability_score_total_avg": 62.264,
+    "distance_to_target_avg": 22.736,
+    "capability_score_breakdown_avg": {
+      "scheduler": 66.0,
+      "dataflow": 52.5,
+      "memory": 84.75,
+      "parallelism": 51.25,
+      "scalability": 42.594
+    },
+    "regression_drift_flags_union": [
+      "single_node_bandwidth_limited_proxy"
+    ]
+  },
+  "thresholds": {
+    "score_total_delta_min": -3.0,
+    "breakdown_delta_min": -5.0,
+    "max_new_drift_flags": 2
+  }
+}

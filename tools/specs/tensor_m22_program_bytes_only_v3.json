@@ -1,0 +1,42 @@
+{
+  "schema_version": 3,
+  "model": "tensor",
+  "platform": {
+    "mesh_size": 1,
+    "stop": { "mode": "time", "simulation_time": "20us" }
+  },
+  "noc": {
+    "type": "merlin_mesh",
+    "params": { "link_bw": "40GiB/s", "buffer_size": "8KiB", "num_vns": 2 }
+  },
+  "memory": {
+    "type": "shared",
+    "backend": { "type": "simple" },
+    "params": { "core_mem_region_bytes": 1048576, "mem_access_time": "20ns" }
+  },
+  "pe": { "cores_per_pe": 1, "neurons_per_core": 1 },
+  "workload": {
+    "type": "tensor",
+    "stats_modules": "tensor",
+    "params": {
+      "tensor_exec_mode": "program",
+      "tensor_iterations": 1,
+      "tensor_mem_enable": 1,
+      "tensor_mem_req_bytes": 64,
+      "tensor_mem_max_outstanding": 64,
+      "tensor_dma_bandwidth_bytes_per_cycle": 256,
+      "tensor_ub_bytes": 8192,
+      "tensor_program_issue_width": 4
+    },
+    "program": {
+      "loop": false,
+      "ops": [
+        { "op_type": "dma_read", "bytes": 4096, "reset": true },
+        { "op_type": "dma_read", "bytes": 4096 },
+        { "op_type": "gemm_ub", "cycles": 64, "ub_read_bytes": 4096, "ub_write_bytes": 0 },
+        { "op_type": "fence" }
+      ]
+    }
+  }
+}
+

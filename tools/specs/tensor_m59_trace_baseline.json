@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "platform": {
+    "mesh_size": 1,
+    "simulation_time": "25us"
+  },
+  "tensor_params": {
+    "tensor_program_issue_width": 4,
+    "tensor_mem_enable": 1,
+    "tensor_mem_req_bytes": 64,
+    "tensor_mem_max_outstanding": 64,
+    "tensor_dma_bandwidth_bytes_per_cycle": 256
+  },
+  "program_ops": [
+    { "op_type": "dma_read", "bytes": 32768 },
+    { "op_type": "gemm_ub", "cycles": 192, "ub_read_bytes": 16384, "ub_write_bytes": 8192 },
+    { "op_type": "dma_write", "bytes": 8192 },
+    { "op_type": "fence" }
+  ]
+}

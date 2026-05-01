@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "reference_id": "tensor_m76_reference_v3",
+  "description": "Reference ranges for M76 calibration-loop v3.",
+  "metrics": {
+    "tensor_mem_read_latency_cycles_avg": {
+      "source": "target",
+      "expected_min": 20.0,
+      "expected_max": 2000.0,
+      "weight": 0.6
+    },
+    "tensor_program_dma_busy_cycles_total": {
+      "source": "target",
+      "expected_min": 1.0,
+      "expected_max": 200000.0,
+      "weight": 0.4
+    }
+  },
+  "confidence_rules": {
+    "high_max_error": 0.12,
+    "medium_max_error": 0.3
+  }
+}

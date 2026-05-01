@@ -20331,3 +20331,37 @@ Next steps / TODO:
 - Next steps / TODO:
   - 后续单独处理 `tools/` 目录，把大批量脚本、测试与 JSON specs 作为独立批次纳入 clean 分支。
   - 评估 `externals/HotSpot-7.0` 的 vendor 源码边界后，再决定是否作为最后一批补入。
+
+## 2026-05-01 clean branch batch8 tools sync
+
+- What changed:
+  - 在 clean 分支 `feature/gas-refactor-doc-clean-v2` 中继续补入根目录 `tools/` 工具链。
+  - 本批次同步内容覆盖：
+    - `run_snndl_*.sh` 与 `run_tensor_m*_gate.sh` 系列运行脚本
+    - `test_run_*.py` 与 `test_snndl_spec_cli.py` 系列测试入口
+    - `snndl_spec_cli.py`
+    - `tools/specs/*.json` 与 `tools/specs/thermal_csv_profiles/*.csv`
+  - 保持 `tools/__pycache__/` 这类缓存产物继续被忽略，不混入 clean 分支。
+
+- How to run / verify:
+  - 查看本批次 clean 工作树中的 `tools` 清单：
+    - `git -C "/home/xgy/remote-clean-v2" status --short --untracked-files=all -- "tools"`
+    - `find "/home/xgy/remote-clean-v2/tools" -type f | sort`
+  - 验证缓存目录仍被忽略：
+    - `git -C "/home/xgy/remote-clean-v2" check-ignore -v "tools/__pycache__/snndl_spec_cli.cpython-310.pyc"`
+
+- Metrics / results:
+  - 本批次同步文件数：
+    - `491` 个文件
+  - 文件结构组成：
+    - `114` 个 Python 文件
+    - `112` 个 Shell 脚本
+    - `264` 个 JSON specs
+    - `1` 个其他数据文件（CSV）
+  - clean 工作树中本批次 `tools/` 体量约：
+    - `2.3M`
+  - 同步后的主体全部为工具脚本、测试与规范输入，不含缓存目录。
+
+- Next steps / TODO:
+  - 继续评估并处理 `externals/HotSpot-7.0`，将其作为可能的 vendor 源码批次。
+  - 完成剩余批次后，通过 SSH 把 clean 分支最新提交统一推送到个人 fork。

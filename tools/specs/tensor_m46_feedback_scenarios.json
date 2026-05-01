@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "description": "M46 multi-scenario feedback regression set.",
+  "scenarios": [
+    {
+      "name": "capability_baseline",
+      "source_spec": "tools/specs/tensor_m37_capability_baseline_v3.json",
+      "enabled": true
+    },
+    {
+      "name": "scheduler_aggressive",
+      "source_spec": "tools/specs/tensor_m39_scheduler_aggressive_v3.json",
+      "enabled": true
+    },
+    {
+      "name": "mem_profile_server",
+      "source_spec": "tools/specs/tensor_m40_mem_profile_server_v3.json",
+      "enabled": true
+    },
+    {
+      "name": "readiness_mix",
+      "source_spec": "tools/specs/tensor_m42_readiness_mix_v3.json",
+      "enabled": true
+    }
+  ]
+}

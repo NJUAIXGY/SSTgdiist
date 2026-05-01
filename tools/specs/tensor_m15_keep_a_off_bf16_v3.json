@@ -1,0 +1,47 @@
+{
+  "schema_version": 3,
+  "model": "tensor",
+  "platform": {
+    "mesh_size": 1,
+    "stop": { "mode": "time", "simulation_time": "100us" }
+  },
+  "noc": {
+    "type": "merlin_mesh",
+    "params": { "link_bw": "40GiB/s", "buffer_size": "8KiB", "num_vns": 2 }
+  },
+  "memory": {
+    "type": "shared",
+    "backend": { "type": "simple" },
+    "params": { "core_mem_region_bytes": 1048576, "mem_access_time": "1ns" }
+  },
+  "pe": { "cores_per_pe": 4, "neurons_per_core": 4 },
+  "workload": {
+    "type": "tensor",
+    "stats_modules": "tensor",
+    "params": {
+      "tensor_exec_mode": "tile",
+      "tensor_iterations": 1,
+      "tensor_m": 256,
+      "tensor_n": 256,
+      "tensor_k": 256,
+      "tensor_element_bytes": 2,
+      "tensor_array_m": 32,
+      "tensor_array_n": 32,
+      "tensor_compute_precision": "bf16",
+      "tensor_dataflow": "is",
+      "tensor_tile_schedule": "mnk",
+      "tensor_tile_m": 64,
+      "tensor_tile_n": 64,
+      "tensor_tile_k": 64,
+      "tensor_overlap_enable": 0,
+      "tensor_double_buffer": 0,
+      "tensor_mem_req_bytes": 64,
+      "tensor_mem_max_outstanding": 4096,
+      "tensor_ub_bytes": 8192,
+      "tensor_weight_bytes": 8192,
+      "tensor_acc_bytes": 0,
+      "tensor_onchip_model_enable": 1,
+      "tensor_spill_enable": 0
+    }
+  }
+}

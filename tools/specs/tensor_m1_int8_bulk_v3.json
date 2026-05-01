@@ -1,0 +1,33 @@
+{
+  "schema_version": 3,
+  "model": "tensor",
+  "platform": {
+    "mesh_size": 4,
+    "stop": { "mode": "time", "simulation_time": "5us" }
+  },
+  "noc": {
+    "type": "merlin_mesh",
+    "params": { "link_bw": "40GiB/s", "buffer_size": "8KiB", "num_vns": 2 }
+  },
+  "memory": {
+    "type": "shared",
+    "backend": { "type": "simple" },
+    "params": { "core_mem_region_bytes": 1048576, "mem_access_time": "100ns" }
+  },
+  "pe": { "cores_per_pe": 4, "neurons_per_core": 4 },
+  "workload": {
+    "type": "tensor",
+    "stats_modules": "tensor",
+    "params": {
+      "tensor_m": 256,
+      "tensor_n": 256,
+      "tensor_k": 256,
+      "tensor_exec_mode": "bulk",
+      "tensor_compute_precision": "int8"
+    }
+  },
+  "components": { "router": { "input_buf_size": "8KiB" } },
+  "overrides": [
+    { "match": { "role": "router" }, "params": { "input_buf_size": "16KiB" } }
+  ]
+}

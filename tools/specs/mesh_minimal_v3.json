@@ -1,0 +1,37 @@
+{
+  "schema_version": 3,
+  "model": "mesh",
+  "platform": {
+    "mesh_size": 4,
+    "stop": { "mode": "step_limited", "max_steps": 1 }
+  },
+  "noc": {
+    "type": "merlin_mesh",
+    "params": {
+      "link_bw": "40GiB/s",
+      "buffer_size": "8KiB",
+      "router_buffer_size": "4KiB",
+      "num_vns": 2
+    }
+  },
+  "memory": {
+    "type": "per_pe",
+    "backend": { "type": "simple", "access_time": "100ns" }
+  },
+  "pe": { "cores_per_pe": 4, "neurons_per_core": 4 },
+  "workload": {
+    "type": "snn",
+    "stats_modules": "tensor",
+    "params": {
+      "tau_mem": 20.0,
+      "thresholds": { "input": 0.02, "hidden1": 0.03, "hidden2": 0.03, "output": 0.035 }
+    }
+  },
+  "loader": { "chunk_bytes": 65536 },
+  "components": {
+    "router": { "input_buf_size": "8KiB", "output_buf_size": "8KiB" }
+  },
+  "overrides": [
+    { "match": { "role": "router" }, "params": { "input_buf_size": "16KiB" } }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "description": "Whitelist + threshold policy for M45 calibration feedback patching.",
+  "confidence_min": "low",
+  "allowed_profiles": [
+    "baseline",
+    "balanced",
+    "edge",
+    "server",
+    "hbm_like"
+  ],
+  "allowed_paths": [
+    "workload.params.tensor_memory_hierarchy_profile",
+    "workload.params.tensor_calibration_tag",
+    "workload.params.tensor_dma_bandwidth_bytes_per_cycle",
+    "workload.params.tensor_dma_shared_bandwidth_bytes_per_cycle",
+    "workload.params.tensor_dma_hbm_channel_bandwidth_bytes_per_cycle"
+  ],
+  "numeric_limits": {
+    "workload.params.tensor_dma_bandwidth_bytes_per_cycle": {
+      "min": 64,
+      "max": 512,
+      "max_ratio": 1.2
+    },
+    "workload.params.tensor_dma_shared_bandwidth_bytes_per_cycle": {
+      "min": 64,
+      "max": 512,
+      "max_ratio": 1.2
+    },
+    "workload.params.tensor_dma_hbm_channel_bandwidth_bytes_per_cycle": {
+      "min": 32,
+      "max": 256,
+      "max_ratio": 1.2
+    }
+  }
+}

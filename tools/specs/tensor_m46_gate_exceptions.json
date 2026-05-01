@@ -1,0 +1,5 @@
+{
+  "schema_version": 1,
+  "description": "M46 drift gate exceptions (default empty; every waiver must include reason + expires_at).",
+  "waived_scenarios": []
+}

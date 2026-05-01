@@ -1,0 +1,61 @@
+{
+  "schema_version": 3,
+  "model": "tensor",
+  "platform": {
+    "mesh_size": 1,
+    "stop": { "mode": "time", "simulation_time": "30us" }
+  },
+  "noc": {
+    "type": "merlin_mesh",
+    "params": { "link_bw": "40GiB/s", "buffer_size": "8KiB", "num_vns": 2 }
+  },
+  "memory": {
+    "type": "shared",
+    "backend": { "type": "simple" },
+    "params": { "core_mem_region_bytes": 1048576, "mem_access_time": "60ns" }
+  },
+  "pe": { "cores_per_pe": 1, "neurons_per_core": 1 },
+  "workload": {
+    "type": "tensor",
+    "stats_modules": "tensor",
+    "params": {
+      "tensor_capability_profile": "mem_cmd_v1",
+      "tensor_scheduler_model": "legacy",
+      "tensor_memory_hierarchy_profile": "server",
+      "tensor_exec_mode": "program",
+      "tensor_iterations": 1,
+      "tensor_mem_enable": 1,
+      "tensor_mem_req_bytes": 256,
+      "tensor_mem_max_outstanding": 256,
+      "tensor_dma_bandwidth_bytes_per_cycle": 0,
+      "tensor_dma_hbm_channels": 4,
+      "tensor_dma_hbm_channel_interleave_bytes": 256,
+      "tensor_program_issue_width": 4,
+      "tensor_mem_timing_model": "proxy_v2",
+      "tensor_mem_bank_groups_per_channel": 1,
+      "tensor_mem_banks_per_group": 4,
+      "tensor_mem_row_bytes": 4096,
+      "tensor_mem_bank_queue_depth": 64,
+      "tensor_mem_sched_policy": "frfcfs",
+      "tensor_mem_t_rcd_cycles": 10,
+      "tensor_mem_t_cl_cycles": 12,
+      "tensor_mem_t_rp_cycles": 10,
+      "tensor_mem_t_burst_cycles": 4,
+      "tensor_mem_refresh_interval_cycles": 0,
+      "tensor_mem_refresh_block_cycles": 0
+    },
+    "program": {
+      "loop": false,
+      "ops": [
+        { "op_type": "dma_read", "bytes": 131072 },
+        { "op_type": "fence" },
+        { "op_type": "gemm_ub", "cycles": 160, "ub_read_bytes": 8192, "ub_write_bytes": 4096 },
+        { "op_type": "fence" },
+        { "op_type": "dma_read", "bytes": 131072 },
+        { "op_type": "fence" },
+        { "op_type": "gemm_ub", "cycles": 160, "ub_read_bytes": 8192, "ub_write_bytes": 4096 },
+        { "op_type": "fence" }
+      ]
+    }
+  }
+}

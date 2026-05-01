@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "description": "Schema-lite contract for M51 trace-json inputs",
+  "required_top_level": [
+    "schema_version",
+    "name",
+    "program"
+  ],
+  "allowed_ops": [
+    "dma_read",
+    "dma_write",
+    "gemm_ub",
+    "allreduce",
+    "softmax",
+    "fence"
+  ]
+}
