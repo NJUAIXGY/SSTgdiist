@@ -209,3 +209,13 @@ experimental_features/snnDL_learning_tests/stats/
 experimental_features/neuromoe_experiments/results/
 experimental_features/neuromoe_experiments/spike_data/
 experimental_features/neuromoe_experiments/weights/
+
+# SnnDL source snapshot under sst_workspace: keep tracked source, ignore nested git/build outputs
+sst_workspace/sst-elements/src/sst/elements/SnnDL/.git/
+sst_workspace/sst-elements/src/sst/elements/SnnDL/**/.deps/
+sst_workspace/sst-elements/src/sst/elements/SnnDL/**/.libs/
+sst_workspace/sst-elements/src/sst/elements/SnnDL/**/*.lo
+sst_workspace/sst-elements/src/sst/elements/SnnDL/**/*.la
+sst_workspace/sst-elements/src/sst/elements/SnnDL/**/*.so
+sst_workspace/sst-elements/src/sst/elements/SnnDL/**/*.o
+sst_workspace/sst-elements/src/sst/elements/SnnDL/**/.dirstamp

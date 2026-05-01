@@ -20401,3 +20401,31 @@ Next steps / TODO:
 - Next steps / TODO:
   - 统一检查 clean 工作树是否干净，并将 Batch 7-9 的新增提交通过 SSH 推送到个人 fork。
   - 推送后用 `ls-remote` 核对远端分支哈希，避免本地 ahead/behind 计数误导。
+
+## 2026-05-01 clean branch batch10 sst workspace snndl snapshot sync
+
+- What changed:
+  - 在 clean 分支 `feature/gas-refactor-doc-clean-v2` 中补入 `sst_workspace/sst-elements/src/sst/elements/SnnDL/` 的关键源码快照，优先保证最核心的 SnnDL 源码在 root 远端可直接查看。
+  - 本批次没有沿用 root 级 `sst-elements` submodule gitlink 方案，原因是当前缺少可访问的 `NJUAIXGY/sst-elements` 远端仓库来承载 `f30efc3` 这一层提交指针；因此临时改为纳入 `SnnDL` 已跟踪源码文件快照。
+  - 同步方式采用 `SnnDL` 仓库自身 `git ls-files` 清单，只复制已跟踪文件，避免把 `.git/`、`.deps/`、`.libs/` 和本地编译产物带入 clean 分支。
+  - 同时在 root `.gitignore` 中补入 `sst_workspace/.../SnnDL` 路径下的构建输出忽略规则。
+
+- How to run / verify:
+  - 查看本批次 clean 工作树中的 SnnDL 快照清单：
+    - `git -C "/home/xgy/remote-clean-v2" status --short --untracked-files=all -- "sst_workspace/sst-elements/src/sst/elements/SnnDL" ".gitignore"`
+    - `find "/home/xgy/remote-clean-v2/sst_workspace/sst-elements/src/sst/elements/SnnDL" -type f | sort`
+  - 验证嵌套仓库与构建产物仍被忽略：
+    - `git -C "/home/xgy/remote-clean-v2" check-ignore -v "sst_workspace/sst-elements/src/sst/elements/SnnDL/.git/config"`
+    - `git -C "/home/xgy/remote-clean-v2" check-ignore -v "sst_workspace/sst-elements/src/sst/elements/SnnDL/components/.libs/SnnPE.o"`
+    - `git -C "/home/xgy/remote-clean-v2" check-ignore -v "sst_workspace/sst-elements/src/sst/elements/SnnDL/libSnnDL.la"`
+
+- Metrics / results:
+  - 本批次同步文件数：
+    - `366` 个文件
+  - clean 工作树中本批次 `SnnDL/` 快照体量约：
+    - `5.7M`
+  - 该快照覆盖 `api/`、`components/`、`compute/`、`control/`、`events/`、`services/`、`docs/` 等关键源码与设计文档，未混入本地构建目录。
+
+- Next steps / TODO:
+  - 将本批次以独立提交补到 clean 分支并重新 SSH 推送到个人 fork。
+  - 若后续需要恢复标准 submodule 链，再单独准备 `NJUAIXGY/sst-elements` 可访问远端并回切 gitlink 方案。
