@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "experiment_id": "2026-03-23_pulse_mfb_gather_barrier_ab_v1",
+  "baseline_case": "pulse_shared_line_actual_baseline",
+  "cases": [
+    {
+      "id": "pulse_shared_line_actual_baseline",
+      "label": "PULSE Stage-A actual shared-line baseline without gather-preband owner-first seed",
+      "run_dir": "/home/xgy/remote/mainexp/experiments/2026-03-23_pulse_mfb_gather_barrier_ab_v1/runs/pulse_shared_line_actual_baseline/latest"
+    },
+    {
+      "id": "pulse_shared_line_actual_mfb_gather_preband_min3_top24_lines4_budget6",
+      "label": "Reference best-known point: min-consumers-3 top-24 lines-4 budget-6",
+      "run_dir": "/home/xgy/remote/mainexp/experiments/2026-03-23_pulse_mfb_gather_barrier_ab_v1/runs/pulse_shared_line_actual_mfb_gather_preband_min3_top24_lines4_budget6/latest"
+    },
+    {
+      "id": "pulse_shared_line_actual_mfb_gather_preband_min3_top24_lines4_budget6_barrier",
+      "label": "Same best-known point plus PE-scoped gather-preband barrier reselection",
+      "run_dir": "/home/xgy/remote/mainexp/experiments/2026-03-23_pulse_mfb_gather_barrier_ab_v1/runs/pulse_shared_line_actual_mfb_gather_preband_min3_top24_lines4_budget6_barrier/latest"
+    }
+  ]
+}

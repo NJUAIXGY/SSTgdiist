@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "experiment_id": "2026-03-08_full_system_baseline_ab_v1",
+  "baseline_case": "full_system_baseline",
+  "cases": [
+    {
+      "id": "memory_baseline",
+      "label": "Memory mainline baseline: Merlin + GCSS-GLIDE (4x4 bcsr10k step1, ramulator2, paper profile)",
+      "run_dir": "/home/xgy/remote/mainexp/experiments/2026-03-08_full_system_baseline_ab_v1/runs/memory_baseline/20260308-004450"
+    },
+    {
+      "id": "noc_baseline",
+      "label": "NoC mainline baseline: MulticastRouter + GCSS idx2 row-mphf older memory control (4x4 bcsr10k step1, ramulator2, paper profile)",
+      "run_dir": "/home/xgy/remote/mainexp/experiments/2026-03-08_full_system_baseline_ab_v1/runs/noc_baseline/20260308-005400"
+    },
+    {
+      "id": "full_system_baseline",
+      "label": "Full-system mainline baseline: STORM MulticastRouter + GAS GCSS-GLIDE (4x4 bcsr10k step1, ramulator2, paper profile)",
+      "run_dir": "/home/xgy/remote/mainexp/experiments/2026-03-08_full_system_baseline_ab_v1/runs/full_system_baseline/20260308-003632"
+    }
+  ]
+}

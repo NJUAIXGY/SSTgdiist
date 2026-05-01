@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "experiment_id": "2026-03-21_pulse_mfb_gather_min_consumers_ab_v1",
+  "baseline_case": "pulse_shared_line_actual_baseline",
+  "cases": [
+    {
+      "id": "pulse_shared_line_actual_baseline",
+      "label": "PULSE Stage-A actual shared-line baseline without gather-preband owner-first seed",
+      "run_dir": "/home/xgy/remote/mainexp/experiments/2026-03-21_pulse_mfb_gather_min_consumers_ab_v1/runs/pulse_shared_line_actual_baseline/latest"
+    },
+    {
+      "id": "pulse_shared_line_actual_mfb_gather_preband_top24_lines4_budget6_min2",
+      "label": "PULSE Stage-A actual shared-line baseline plus gather-preband owner-first seed top-24 lines-4 budget-6 min-consumers-2",
+      "run_dir": "/home/xgy/remote/mainexp/experiments/2026-03-21_pulse_mfb_gather_min_consumers_ab_v1/runs/pulse_shared_line_actual_mfb_gather_preband_top24_lines4_budget6_min2/latest"
+    },
+    {
+      "id": "pulse_shared_line_actual_mfb_gather_preband_top24_lines4_budget6_min3",
+      "label": "PULSE Stage-A actual shared-line baseline plus gather-preband owner-first seed top-24 lines-4 budget-6 min-consumers-3",
+      "run_dir": "/home/xgy/remote/mainexp/experiments/2026-03-21_pulse_mfb_gather_min_consumers_ab_v1/runs/pulse_shared_line_actual_mfb_gather_preband_top24_lines4_budget6_min3/latest"
+    }
+  ]
+}

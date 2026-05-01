@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "experiment_id": "2026-03-18_pulse_prebase_shared_lookup_sram_ab_v1",
+  "baseline_case": "gcssplp_sram_idx_baseline",
+  "cases": [
+    {
+      "id": "gcssplp_sram_idx_baseline",
+      "label": "Mainline gcssplp + multicast + weight-idx SRAM baseline without PE-scoped pre-base shared lookup",
+      "run_dir": "/home/xgy/remote/mainexp/experiments/2026-03-18_pulse_prebase_shared_lookup_sram_ab_v1/runs/gcssplp_sram_idx_baseline/latest"
+    },
+    {
+      "id": "gcssplp_sram_idx_prebase_lookup",
+      "label": "Mainline gcssplp + multicast + weight-idx SRAM plus PE-scoped pre-base shared lookup",
+      "run_dir": "/home/xgy/remote/mainexp/experiments/2026-03-18_pulse_prebase_shared_lookup_sram_ab_v1/runs/gcssplp_sram_idx_prebase_lookup/latest"
+    }
+  ]
+}

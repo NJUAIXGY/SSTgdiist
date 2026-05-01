@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "experiment_id": "2026-03-10_seed_only_steps4_stability_v1",
+  "baseline_case": "seed_only_steps4_frac003",
+  "cases": [
+    {
+      "id": "seed_only_steps4_frac003",
+      "label": "Seed-only stability (steps=4): Full-system mainline stack (STORM MulticastRouter + GAS GCSS-GLIDE), ramulator2 DDR5, gcss_valueonly_dstcore_vlf_premphf_plp",
+      "run_dir": "/home/xgy/remote/mainexp/experiments/2026-03-10_seed_only_steps4_stability_v1/runs/seed_only_steps4_frac003/20260310-111944"
+    }
+  ]
+}

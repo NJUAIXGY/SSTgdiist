@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "experiment_id": "2026-03-18_pulse_mfb_preband_actual_ab_v1",
+  "baseline_case": "pulse_shared_line_actual_baseline",
+  "cases": [
+    {
+      "id": "pulse_shared_line_actual_baseline",
+      "label": "PULSE Stage-A actual shared-line baseline without pre-band owner-first seed",
+      "run_dir": "/home/xgy/remote/mainexp/experiments/2026-03-18_pulse_mfb_preband_actual_ab_v1/runs/pulse_shared_line_actual_baseline/latest"
+    },
+    {
+      "id": "pulse_shared_line_actual_mfb_preband_top24_lines4_budget6",
+      "label": "PULSE Stage-A actual shared-line baseline plus pre-band owner-first seed top-24 lines-4 budget-6",
+      "run_dir": "/home/xgy/remote/mainexp/experiments/2026-03-18_pulse_mfb_preband_actual_ab_v1/runs/pulse_shared_line_actual_mfb_preband_top24_lines4_budget6/latest"
+    }
+  ]
+}

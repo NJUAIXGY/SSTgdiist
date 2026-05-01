@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "experiment_id": "2026-03-12_atlas_pe_storage_only_ab_v1",
+  "baseline_case": "baseline_step1_seed_only_frac003",
+  "cases": [
+    {
+      "id": "baseline_step1_seed_only_frac003",
+      "label": "ATLAS-PE storage-only baseline: full-system mainline step1 seed-only, fraction=0.03, ramulator2 DDR5, GCSS-GLIDE + STORM + MulticastRouter",
+      "run_dir": ""
+    },
+    {
+      "id": "atlas_pe_storage_only_step1_seed_only_frac003",
+      "label": "ATLAS-PE storage-only: same full-system mainline step1 seed-only, but switch to gcss_valueonly_dstpe_atlas_v1 and atlas_pe_enable=1",
+      "run_dir": ""
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "experiment_id": "2026-03-12_atlas_pe_lap_ab_v1",
+  "baseline_case": "baseline_step1_seed_only_frac003",
+  "cases": [
+    {
+      "id": "baseline_step1_seed_only_frac003",
+      "label": "ATLAS-LAP baseline: full-system mainline step1 seed-only, fraction=0.03, ramulator2 DDR5, GCSS-GLIDE + STORM + MulticastRouter",
+      "run_dir": "/home/xgy/remote/mainexp/experiments/2026-03-12_atlas_pe_storage_only_ab_v1/runs/baseline_step1_seed_only_frac003/20260312-164751"
+    },
+    {
+      "id": "atlas_pe_storage_only_step1_seed_only_frac003",
+      "label": "ATLAS-PE storage-only: same full-system mainline step1 seed-only, switch to gcss_valueonly_dstpe_atlas_v1 and atlas_pe_enable=1",
+      "run_dir": "/home/xgy/remote/mainexp/experiments/2026-03-12_atlas_pe_storage_only_ab_v1/runs/atlas_pe_storage_only_step1_seed_only_frac003/20260312-170736"
+    },
+    {
+      "id": "atlas_pe_lap_step1_seed_only_frac003",
+      "label": "ATLAS-LAP: same as storage-only, but use line-aligned PE-shared values slices",
+      "run_dir": "/home/xgy/remote/mainexp/experiments/2026-03-12_atlas_pe_lap_ab_v1/runs/atlas_pe_lap_step1_seed_only_frac003/20260312-174407"
+    }
+  ]
+}

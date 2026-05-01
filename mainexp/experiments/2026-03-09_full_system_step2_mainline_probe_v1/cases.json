@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "experiment_id": "2026-03-09_full_system_step2_mainline_probe_v1",
+  "baseline_case": "full_system_baseline_steps2",
+  "cases": [
+    {
+      "id": "full_system_baseline_steps2",
+      "label": "Full-system mainline step2 baseline: STORM MulticastRouter + GAS GCSS-GLIDE (4x4 bcsr10k step2, ramulator2, paper profile)",
+      "run_dir": "/home/xgy/remote/mainexp/experiments/2026-03-09_full_system_step2_mainline_probe_v1/runs/full_system_baseline_steps2/20260309-134505"
+    },
+    {
+      "id": "full_system_steps2_frac0001_gbiprobe_core0",
+      "label": "Full-system mainline step2 debug probe: same mainline stack + activation_fraction=0.0001 + GBI step-gate progress on node0/core0",
+      "run_dir": "/home/xgy/remote/mainexp/experiments/2026-03-09_full_system_step2_mainline_probe_v1/runs/full_system_steps2_frac0001_gbiprobe_core0/20260309-134511"
+    }
+  ]
+}

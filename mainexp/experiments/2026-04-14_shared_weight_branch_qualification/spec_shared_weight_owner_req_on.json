@@ -1,0 +1,113 @@
+{
+  "schema_version": 3,
+  "platform": {
+    "mesh_size": 4,
+    "node_limit": 16,
+    "exec_mode": "gas",
+    "stop": {
+      "mode": "step_limited",
+      "max_steps": 1
+    },
+    "flags": {
+      "enable_node_summary": true
+    }
+  },
+  "workload": {
+    "impl": "snn",
+    "spike_source": {
+      "enable": false
+    }
+  },
+  "memory": {
+    "backend": {
+      "type": "ramulator2",
+      "config_file": "/home/xgy/remote/sst_dram_si/configs/ramulator2_ddr5.cfg"
+    }
+  },
+  "noc": {
+    "type": "multicast_mesh",
+    "params": {
+      "multicast_enable": true,
+      "multicast_block_w": 2,
+      "multicast_block_h": 2,
+      "multicast_ingress_policy": "top_left",
+      "multicast_inter_policy": "xy",
+      "multicast_intra_policy": "manhattan_x_first",
+      "local_endpoint_multicast_enable": false
+    }
+  },
+  "loader": {
+    "chunk_bytes": 65536
+  },
+  "pe": {
+    "num_cores_per_pe": 2,
+    "core": {
+      "apply_dense_acc_enable": true
+    }
+  },
+  "control": {
+    "global_step_sync_enable": true,
+    "global_step_done": {
+      "policy": "fixed",
+      "fixed_cycles": 10000
+    }
+  },
+  "pulse": {
+    "enable": 0,
+    "ingress_enable": 1,
+    "agenda_observe_only": 1,
+    "osa_enable": 1,
+    "osa_shared_weight_owner_enable": 1,
+    "osa_shared_weight_owner_actual_enable": 0
+  },
+  "gas": {
+    "gap_k_bytes": 2048,
+    "row_window_bytes": 16384,
+    "vlf_enable": 1,
+    "vlf_run_enable": 0,
+    "window_cycles": {
+      "gather": 64,
+      "apply": 32,
+      "scatter": 16
+    },
+    "gather_quiesce_cycles": 4,
+    "gather_min_cycles": 4
+  },
+  "components": {
+    "pe": {
+      "local_storage_enable": 1,
+      "pe_internal_cpe_enable": 1,
+      "pe_internal_pod_enable": 1,
+      "pe_internal_pod_count": 1,
+      "pe_internal_pod_metadata_enable": 1,
+      "pe_internal_pod_owner_enable": 1,
+      "pe_internal_pod_join_enable": 1,
+      "pe_internal_pod_ready_enable": 1,
+      "pe_internal_pod_owner_entries": 256,
+      "pe_internal_pod_join_entries": 256,
+      "pe_internal_pod_ready_entries": 256
+    }
+  },
+  "sram": {
+    "model_enable": 1,
+    "weight": {
+      "idx_enable": 1,
+      "l0_enable": 1,
+      "idx_capacity_bytes": 1048576,
+      "l0_capacity_bytes": 4194304,
+      "idx_banks": 8,
+      "l0_banks": 8,
+      "ports_per_bank": 1
+    }
+  },
+  "step": {
+    "random_activation_enable": 1,
+    "activation_fraction": 0.03,
+    "activation_fanout": 8,
+    "activation_seed": 17,
+    "activation_use_bcsr_routes": true,
+    "seed_only_mode": 1
+  },
+  "synapse_weight_mode": "gcss_valueonly_dstcore_vlf_premphf_plp",
+  "gcssplp_dir": "/home/xgy/remote/sst_dram_si/weights/gcss_valueonly_dstcore_vlf_premphf_plp_fanout256_10k_v7_lpblp_j8"
+}

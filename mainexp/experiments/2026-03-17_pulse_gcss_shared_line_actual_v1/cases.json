@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "experiment_id": "2026-03-17_pulse_gcss_shared_line_actual_v1",
+  "baseline_case": "baseline_step1_seed_only_frac003",
+  "cases": [
+    {
+      "id": "baseline_step1_seed_only_frac003",
+      "label": "PULSE baseline: full-system mainline step1 seed-only, fraction=0.03, ramulator2 DDR5, GCSS-GLIDE + STORM + MulticastRouter",
+      "run_dir": "/home/xgy/remote/mainexp/experiments/2026-03-17_pulse_gcss_shared_line_actual_v1/runs/baseline_step1_seed_only_frac003/20260317-112059"
+    },
+    {
+      "id": "pulse_gcss_shared_line_actual_step1_seed_only_frac003",
+      "label": "PULSE GCSS shared-line actual service: same full-system mainline step1 seed-only, ingress/harbor/descriptor remain observe-only while WMS actual shared line service is enabled for GCSS value lines",
+      "run_dir": "/home/xgy/remote/mainexp/experiments/2026-03-17_pulse_gcss_shared_line_actual_v1/runs/pulse_gcss_shared_line_actual_step1_seed_only_frac003/20260317-115051"
+    }
+  ]
+}

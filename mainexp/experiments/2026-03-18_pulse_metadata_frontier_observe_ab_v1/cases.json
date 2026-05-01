@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "experiment_id": "2026-03-18_pulse_metadata_frontier_observe_ab_v1",
+  "baseline_case": "pulse_shared_line_actual_baseline",
+  "cases": [
+    {
+      "id": "pulse_shared_line_actual_baseline",
+      "label": "PULSE Stage-A actual shared-line baseline without metadata frontier observe",
+      "run_dir": "/home/xgy/remote/mainexp/experiments/2026-03-18_pulse_metadata_frontier_observe_ab_v1/runs/pulse_shared_line_actual_baseline/latest"
+    },
+    {
+      "id": "pulse_shared_line_actual_metadata_frontier_observe_top64_band256",
+      "label": "PULSE Stage-A actual shared-line baseline plus metadata frontier observe-only top-64 export and band-256",
+      "run_dir": "/home/xgy/remote/mainexp/experiments/2026-03-18_pulse_metadata_frontier_observe_ab_v1/runs/pulse_shared_line_actual_metadata_frontier_observe_top64_band256/latest"
+    }
+  ]
+}

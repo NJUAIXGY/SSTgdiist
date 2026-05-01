@@ -1,0 +1,14 @@
+{
+  "experiment_id": "2026-04-03_atlas_rowindex_noninflight_stress_ab_v1",
+  "baseline_case": "rowindex_stress_off",
+  "cases": [
+    {
+      "id": "rowindex_stress_off",
+      "run_dir": "runs/rowindex_stress_off/latest"
+    },
+    {
+      "id": "rowindex_stress_on",
+      "run_dir": "runs/rowindex_stress_on/latest"
+    }
+  ]
+}

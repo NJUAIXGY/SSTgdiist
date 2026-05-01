@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "experiment_id": "2026-03-18_pulse_frontier_observe_ab_v1",
+  "baseline_case": "pulse_shared_line_actual_baseline",
+  "cases": [
+    {
+      "id": "pulse_shared_line_actual_baseline",
+      "label": "PULSE Stage-A actual shared-line baseline without frontier observe",
+      "run_dir": "/home/xgy/remote/mainexp/experiments/2026-03-18_pulse_frontier_observe_ab_v1/runs/pulse_shared_line_actual_baseline/20260318-135327"
+    },
+    {
+      "id": "pulse_shared_line_actual_frontier_observe_top32",
+      "label": "PULSE Stage-A actual shared-line baseline plus frontier observe-only top-32 export",
+      "run_dir": "/home/xgy/remote/mainexp/experiments/2026-03-18_pulse_frontier_observe_ab_v1/runs/pulse_shared_line_actual_frontier_observe_top32/20260318-135724"
+    }
+  ]
+}

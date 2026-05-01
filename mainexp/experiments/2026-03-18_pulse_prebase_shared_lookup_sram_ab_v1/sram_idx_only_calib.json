@@ -1,0 +1,31 @@
+{
+  "weight_idx": {
+    "capacity_bytes": 131072,
+    "banks": 16,
+    "ports_per_bank": 1,
+    "bank_interleave_bytes": 4,
+    "t_read_cycles": 2,
+    "t_write_cycles": 2,
+    "sample_log2": 0
+  },
+  "weight_l0": {
+    "capacity_bytes": 65536,
+    "banks": 8,
+    "ports_per_bank": 1,
+    "bank_interleave_bytes": 4,
+    "t_read_cycles": 2,
+    "t_write_cycles": 2,
+    "sample_log2": 0,
+    "slots": 1048576
+  },
+  "state": {
+    "enable": 0,
+    "capacity_bytes": 262144,
+    "banks": 16,
+    "ports_per_bank": 1,
+    "bank_interleave_bytes": 4,
+    "t_read_cycles": 2,
+    "t_write_cycles": 2,
+    "sample_log2": 0
+  }
+}

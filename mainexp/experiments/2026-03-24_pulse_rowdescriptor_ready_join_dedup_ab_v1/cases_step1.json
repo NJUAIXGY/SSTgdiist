@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "experiment_id": "2026-03-24_pulse_rowdescriptor_ready_join_dedup_ab_v1_step1",
+  "baseline_case": "pulse_shared_line_step1_actual_mfb_gather_preband_dedup_off",
+  "cases": [
+    {
+      "id": "pulse_shared_line_step1_actual_mfb_gather_preband_dedup_off",
+      "label": "PULSE step1 gather-preband dedup off",
+      "run_dir": "/home/xgy/remote/mainexp/experiments/2026-03-24_pulse_rowdescriptor_ready_join_dedup_ab_v1/step1_runs/pulse_shared_line_step1_actual_mfb_gather_preband_dedup_off/latest"
+    },
+    {
+      "id": "pulse_shared_line_step1_actual_mfb_gather_preband_dedup_on",
+      "label": "PULSE step1 gather-preband dedup on",
+      "run_dir": "/home/xgy/remote/mainexp/experiments/2026-03-24_pulse_rowdescriptor_ready_join_dedup_ab_v1/step1_runs/pulse_shared_line_step1_actual_mfb_gather_preband_dedup_on/latest"
+    }
+  ]
+}

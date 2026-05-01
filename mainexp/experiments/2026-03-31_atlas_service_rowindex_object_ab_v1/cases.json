@@ -1,0 +1,14 @@
+{
+  "experiment_id": "2026-03-31_atlas_service_rowindex_object_ab_v1",
+  "baseline_case": "rowindex_object_off",
+  "cases": [
+    {
+      "id": "rowindex_object_off",
+      "run_dir": "runs/rowindex_object_off/latest"
+    },
+    {
+      "id": "rowindex_object_on",
+      "run_dir": "runs/rowindex_object_on/latest"
+    }
+  ]
+}

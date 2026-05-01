@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "experiment_id": "2026-03-24_pulse_rowdescriptor_ready_join_dedup_ab_v1_active_smoke",
+  "baseline_case": "pulse_shared_line_actual_mfb_gather_preband_dedup_off_smoke",
+  "cases": [
+    {
+      "id": "pulse_shared_line_actual_mfb_gather_preband_dedup_off_smoke",
+      "label": "PULSE active gather-preband smoke alt-stop 1us with ready-join dedup disabled",
+      "run_dir": "/home/xgy/remote/mainexp/experiments/2026-03-24_pulse_rowdescriptor_ready_join_dedup_ab_v1/smoke_runs/pulse_shared_line_actual_mfb_gather_preband_dedup_off/latest"
+    },
+    {
+      "id": "pulse_shared_line_actual_mfb_gather_preband_dedup_on_smoke",
+      "label": "PULSE active gather-preband smoke alt-stop 1us with ready-join dedup enabled",
+      "run_dir": "/home/xgy/remote/mainexp/experiments/2026-03-24_pulse_rowdescriptor_ready_join_dedup_ab_v1/smoke_runs/pulse_shared_line_actual_mfb_gather_preband_dedup_on/latest"
+    }
+  ]
+}

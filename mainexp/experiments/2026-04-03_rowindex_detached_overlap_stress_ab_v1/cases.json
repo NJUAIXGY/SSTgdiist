@@ -1,0 +1,38 @@
+{
+  "experiment_id": "2026-04-03_rowindex_detached_overlap_stress_ab_v1",
+  "baseline_case": "rowindex_detached_overlap_off",
+  "cases": [
+    {
+      "id": "rowindex_detached_overlap_off",
+      "run_dir": "runs/rowindex_detached_overlap_off/latest"
+    },
+    {
+      "id": "rowindex_detached_overlap_on",
+      "run_dir": "runs/rowindex_detached_overlap_on/latest"
+    },
+    {
+      "id": "rowindex_detached_overlap_pascal_off",
+      "run_dir": "runs/rowindex_detached_overlap_pascal_off/latest"
+    },
+    {
+      "id": "rowindex_detached_overlap_pascal_on",
+      "run_dir": "runs/rowindex_detached_overlap_pascal_on/latest"
+    },
+    {
+      "id": "rowindex_detached_overlap_probe_off",
+      "run_dir": "runs/rowindex_detached_overlap_probe_off/latest"
+    },
+    {
+      "id": "rowindex_detached_overlap_probe_on",
+      "run_dir": "runs/rowindex_detached_overlap_probe_on/latest"
+    },
+    {
+      "id": "rowindex_detached_overlap_probe_time_off",
+      "run_dir": "runs/rowindex_detached_overlap_probe_time_off/latest"
+    },
+    {
+      "id": "rowindex_detached_overlap_probe_time_on",
+      "run_dir": "runs/rowindex_detached_overlap_probe_time_on/latest"
+    }
+  ]
+}

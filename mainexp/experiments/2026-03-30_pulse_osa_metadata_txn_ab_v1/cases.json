@@ -1,0 +1,30 @@
+{
+  "experiment_id": "2026-03-30_pulse_osa_metadata_txn_ab_v1",
+  "baseline_case": "pulse_shared_line_actual_mfb_gather_preband_metadata_txn_off",
+  "cases": [
+    {
+      "id": "pulse_shared_line_actual_mfb_gather_preband_metadata_txn_off",
+      "run_dir": "runs/pulse_shared_line_actual_mfb_gather_preband_metadata_txn_off/latest"
+    },
+    {
+      "id": "pulse_shared_line_actual_mfb_gather_preband_metadata_txn_rowdescriptor_ttl256",
+      "run_dir": "runs/pulse_shared_line_actual_mfb_gather_preband_metadata_txn_rowdescriptor_ttl256/latest"
+    },
+    {
+      "id": "pulse_shared_line_actual_mfb_gather_preband_metadata_txn_rowidx_ttl256",
+      "run_dir": "runs/pulse_shared_line_actual_mfb_gather_preband_metadata_txn_rowidx_ttl256/latest"
+    },
+    {
+      "id": "pulse_shared_line_actual_mfb_gather_preband_metadata_txn_idx2_ttl256",
+      "run_dir": "runs/pulse_shared_line_actual_mfb_gather_preband_metadata_txn_idx2_ttl256/latest"
+    },
+    {
+      "id": "pulse_shared_line_actual_mfb_gather_preband_metadata_txn_preband_ttl256",
+      "run_dir": "runs/pulse_shared_line_actual_mfb_gather_preband_metadata_txn_preband_ttl256/latest"
+    },
+    {
+      "id": "pulse_shared_line_actual_mfb_gather_preband_metadata_txn_all_ttl256",
+      "run_dir": "runs/pulse_shared_line_actual_mfb_gather_preband_metadata_txn_all_ttl256/latest"
+    }
+  ]
+}

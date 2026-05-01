@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "experiment_id": "2026-03-22_idx2_ingress_frontiercarry_sweep_v3",
+  "baseline_case": "idx2_ingress_baseline_cap8_ref",
+  "cases": [
+    {
+      "id": "idx2_ingress_baseline_cap8_ref",
+      "label": "Reference baseline from applycarry sweep v1: gather-only pending dropped at BeginApply, cap=8",
+      "run_dir": "/home/xgy/remote/mainexp/experiments/2026-03-22_idx2_ingress_applycarry_sweep_v1/runs/idx2_ingress_baseline_cap8/latest"
+    },
+    {
+      "id": "idx2_ingress_carry_guard_frontier_k32",
+      "label": "Apply-carry guarded + frontier keep: apply_max_inflight=1, outstanding_reserve=48, frontier_keep_pending=32",
+      "run_dir": "/home/xgy/remote/mainexp/experiments/2026-03-22_idx2_ingress_frontiercarry_sweep_v3/runs/idx2_ingress_carry_guard_frontier_k32/latest"
+    },
+    {
+      "id": "idx2_ingress_carry_guard_frontier_k64",
+      "label": "Apply-carry guarded + frontier keep: apply_max_inflight=1, outstanding_reserve=48, frontier_keep_pending=64",
+      "run_dir": "/home/xgy/remote/mainexp/experiments/2026-03-22_idx2_ingress_frontiercarry_sweep_v3/runs/idx2_ingress_carry_guard_frontier_k64/latest"
+    }
+  ]
+}

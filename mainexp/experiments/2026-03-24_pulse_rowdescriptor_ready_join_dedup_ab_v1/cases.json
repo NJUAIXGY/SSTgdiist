@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "experiment_id": "2026-03-24_pulse_rowdescriptor_ready_join_dedup_ab_v1",
+  "baseline_case": "manual_shared_line_baseline_dedup_off",
+  "cases": [
+    {
+      "id": "manual_shared_line_baseline_dedup_off",
+      "label": "PULSE actual shared-line safe baseline with gather-preband off and ready-join dedup disabled",
+      "run_dir": "/home/xgy/remote/mainexp/experiments/2026-03-24_pulse_rowdescriptor_ready_join_dedup_ab_v1/runs/manual_shared_line_baseline_dedup_off/latest"
+    },
+    {
+      "id": "manual_shared_line_baseline_dedup_on",
+      "label": "PULSE actual shared-line safe baseline with gather-preband off and ready-join dedup enabled",
+      "run_dir": "/home/xgy/remote/mainexp/experiments/2026-03-24_pulse_rowdescriptor_ready_join_dedup_ab_v1/runs/manual_shared_line_baseline_dedup_on/latest"
+    }
+  ]
+}

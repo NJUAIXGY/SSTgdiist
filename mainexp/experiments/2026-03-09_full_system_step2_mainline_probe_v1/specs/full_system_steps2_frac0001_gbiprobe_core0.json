@@ -1,0 +1,68 @@
+{
+  "schema_version": 3,
+  "model": "mesh",
+  "platform": {
+    "mesh_size": 4,
+    "exec_mode": "gas",
+    "stop": {"mode": "step_limited", "max_steps": 2}
+  },
+  "workload": {
+    "type": "snn",
+    "params": {
+      "tau_mem": 20.0,
+      "t_ref": 2,
+      "init_default_weight": 0.5,
+      "thresholds": {
+        "input": 0.02,
+        "hidden1": 0.03,
+        "hidden2": 0.03,
+        "output": 0.035
+      }
+    }
+  },
+  "loader": {"chunk_bytes": 65536},
+  "pe": {
+    "num_cores_per_pe": 20,
+    "neurons_per_core": 500,
+    "core": {
+      "apply_dense_acc_enable": true,
+      "memory_warmup_cycles": 200,
+      "loader_barrier_cycles": 0
+    }
+  },
+  "memory": {
+    "type": "memHierarchy",
+    "backend": {
+      "type": "ramulator2",
+      "config_file": "/home/xgy/remote/sst_dram_si/configs/ramulator2_ddr5.cfg"
+    }
+  },
+  "gas": {
+    "merge_policy": "cacheline",
+    "gap_k_bytes": 2048,
+    "lmax_bytes": 65536,
+    "row_window_bytes": 16384,
+    "row_window_timeout_ns": 0,
+    "max_inflight": 128,
+    "apply_issue_policy": "order"
+  },
+  "step": {
+    "random_activation_enable": 1,
+    "activation_fraction": 0.0001,
+    "activation_fanout": 256,
+    "activation_seed": 314159,
+    "activation_use_bcsr_routes": true
+  },
+  "noc": {
+    "type": "multicast_mesh",
+    "params": {
+      "multicast_enable": true,
+      "multicast_block_w": 2,
+      "multicast_block_h": 2,
+      "multicast_ingress_policy": "top_left",
+      "multicast_inter_policy": "xy",
+      "multicast_intra_policy": "manhattan_x_first",
+      "local_endpoint_multicast_enable": false
+    }
+  }
+}

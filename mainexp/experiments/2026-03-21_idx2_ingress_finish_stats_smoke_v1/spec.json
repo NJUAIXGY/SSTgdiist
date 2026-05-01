@@ -1,0 +1,72 @@
+{
+  "schema_version": 3,
+  "platform": {
+    "mesh_size": 4,
+    "node_limit": 1,
+    "exec_mode": "gas",
+    "stop": {
+      "mode": "time",
+      "simulation_time": "10us"
+    },
+    "flags": {
+      "enable_node_summary": true
+    }
+  },
+  "workload": {
+    "impl": "snn",
+    "spike_source": {
+      "enable": false
+    }
+  },
+  "memory": {
+    "backend": {
+      "type": "simple",
+      "access_time": "20ns"
+    }
+  },
+  "pe": {
+    "num_cores_per_pe": 1,
+    "core": {
+      "apply_dense_acc_enable": true
+    }
+  },
+  "control": {
+    "global_step_sync_enable": true,
+    "global_step_done": {
+      "policy": "fixed",
+      "fixed_cycles": 2000
+    }
+  },
+  "gas": {
+    "window_cycles": {
+      "gather": 64,
+      "apply": 16,
+      "scatter": 16
+    },
+    "gather_quiesce_cycles": 4,
+    "gather_min_cycles": 4
+  },
+  "components": {
+    "pe.core": {
+      "window_read_enable": 1,
+      "window_read_budget": 128,
+      "experimental_idx2_ingress_prefetch_enable": 1,
+      "experimental_idx2_ingress_prefetch_budget_per_tick": 1,
+      "experimental_idx2_ingress_prefetch_cache_entries": 64,
+      "experimental_idx2_ingress_prefetch_gather_only": 1,
+      "experimental_idx2_ingress_tail_guard_enable": 1,
+      "experimental_idx2_ingress_budget_adapt_enable": 1,
+      "experimental_idx2_ingress_budget_adapt_max_per_tick": 8,
+      "experimental_idx2_ingress_budget_adapt_q_depth": 1
+    }
+  },
+  "step": {
+    "random_activation_enable": 1,
+    "activation_fraction": 0.02,
+    "activation_fanout": 8,
+    "activation_seed": 17,
+    "activation_use_bcsr_routes": true
+  },
+  "synapse_weight_mode": "gcss_valueonly_dstcore_idx2",
+  "gcss2_dir": "sst_dram_si/weights/gcss_valueonly_dstcore_idx2_rowmphf_fanout256_10k_v2_j32"
+}

@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "experiment_id": "2026-03-22_idx2_ingress_applycarry_sweep_v1",
+  "baseline_case": "idx2_ingress_baseline_cap8",
+  "cases": [
+    {
+      "id": "idx2_ingress_baseline_cap8",
+      "label": "Idx2 ingress baseline: gather-only pending dropped at BeginApply, cap=8",
+      "run_dir": "/home/xgy/remote/mainexp/experiments/2026-03-22_idx2_ingress_applycarry_sweep_v1/runs/idx2_ingress_baseline_cap8/latest"
+    },
+    {
+      "id": "idx2_ingress_carry_cap8",
+      "label": "Idx2 ingress carry-to-apply enabled, cap=8",
+      "run_dir": "/home/xgy/remote/mainexp/experiments/2026-03-22_idx2_ingress_applycarry_sweep_v1/runs/idx2_ingress_carry_cap8/latest"
+    },
+    {
+      "id": "idx2_ingress_carry_cap16",
+      "label": "Idx2 ingress carry-to-apply enabled, cap=16",
+      "run_dir": "/home/xgy/remote/mainexp/experiments/2026-03-22_idx2_ingress_applycarry_sweep_v1/runs/idx2_ingress_carry_cap16/latest"
+    },
+    {
+      "id": "idx2_ingress_carry_cap32",
+      "label": "Idx2 ingress carry-to-apply enabled, cap=32",
+      "run_dir": "/home/xgy/remote/mainexp/experiments/2026-03-22_idx2_ingress_applycarry_sweep_v1/runs/idx2_ingress_carry_cap32/latest"
+    }
+  ]
+}

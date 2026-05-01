@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "experiment_id": "2026-04-14_shared_weight_branch_qualification",
+  "baseline_case": "shared_weight_owner_off",
+  "cases": [
+    {
+      "id": "shared_weight_owner_off",
+      "label": "Shared-weight owner feature disabled",
+      "run_dir": "/home/xgy/remote/mainexp/experiments/2026-04-14_shared_weight_branch_qualification/runs/shared_weight_owner_off/latest",
+      "spec": "spec_shared_weight_owner_off.json"
+    },
+    {
+      "id": "shared_weight_owner_req_on",
+      "label": "Shared-weight owner request path enabled but no actual residency",
+      "run_dir": "/home/xgy/remote/mainexp/experiments/2026-04-14_shared_weight_branch_qualification/runs/shared_weight_owner_req_on/latest",
+      "spec": "spec_shared_weight_owner_req_on.json"
+    },
+    {
+      "id": "shared_weight_actual_owner_on",
+      "label": "Shared-weight owner request flows through and actual residency granted",
+      "run_dir": "/home/xgy/remote/mainexp/experiments/2026-04-14_shared_weight_branch_qualification/runs/shared_weight_actual_owner_on/latest",
+      "spec": "spec_shared_weight_actual_owner_on.json"
+    }
+  ]
+}

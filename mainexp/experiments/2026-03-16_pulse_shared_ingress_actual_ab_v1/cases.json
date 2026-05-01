@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "experiment_id": "2026-03-16_pulse_shared_ingress_actual_ab_v1",
+  "baseline_case": "baseline_step1_seed_only_frac003",
+  "cases": [
+    {
+      "id": "baseline_step1_seed_only_frac003",
+      "label": "PULSE baseline: full-system mainline step1 seed-only, fraction=0.03, ramulator2 DDR5, GCSS-GLIDE + STORM + MulticastRouter",
+      "run_dir": "/home/xgy/remote/mainexp/experiments/2026-03-16_pulse_shared_ingress_actual_ab_v1/runs/baseline_step1_seed_only_frac003/20260316-233622"
+    },
+    {
+      "id": "pulse_shared_ingress_actual_step1_seed_only_frac003",
+      "label": "PULSE shared-ingress actual path: same full-system mainline step1 seed-only, plus PE-internal shared ingress dispatch with agenda still observe-only",
+      "run_dir": "/home/xgy/remote/mainexp/experiments/2026-03-16_pulse_shared_ingress_actual_ab_v1/runs/pulse_shared_ingress_actual_step1_seed_only_frac003/20260316-234038"
+    }
+  ]
+}

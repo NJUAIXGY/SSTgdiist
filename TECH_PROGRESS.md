@@ -20223,3 +20223,38 @@ Next steps / TODO:
 - Next steps / TODO:
   - 完成本批次提交后，继续进入 `mainexp` 这块更大的实验主干。
   - 若网络恢复，再统一把本地 clean 链上尚未推送的提交送到个人 fork。
+
+## 2026-05-01 clean branch batch5 mainexp sync
+
+- What changed:
+  - 在 clean 分支 `feature/gas-refactor-doc-clean-v2` 中继续推进 Batch 5，补入 `mainexp/` 的核心实验定义、运行脚本、快照工具与对应测试。
+  - 本批次同步对象主要包括：
+    - 各实验目录下的 `cases.json`
+    - `run_case.sh`、`run_ab.sh`、`run_grid.sh`、`run_repeat.sh`
+    - `spec*.json`
+    - `make_snapshot.py`、`make_*_figure.py`、`make_*_summary.py`
+    - 对应的 `test_*.py`
+    - 根部 `mainexp/__init__.py` 与 `mainexp/tools/__init__.py`
+  - 继续排除 `runs/`、`run_logs/`、`artifacts/`、`input_bcsr/`、`summary/`、`snapshot/`、`debug/` 等重型运行输出。
+
+- How to run / verify:
+  - 查看本批次 clean 工作树中的 `mainexp` 清单：
+    - `git -C "/home/xgy/remote-clean-v2" status --short --untracked-files=all -- "mainexp"`
+    - `find "/home/xgy/remote-clean-v2/mainexp" -type f | sort`
+  - 验证重型输出目录仍被忽略：
+    - `git -C "/home/xgy/remote-clean-v2" check-ignore -v "mainexp/runs/atlas_probe_runtime_visibility_v3/summary.json"`
+    - `git -C "/home/xgy/remote-clean-v2" check-ignore -v "mainexp/experiments/2026-03-17_pulse_domain_retire_shadow_ab_v1/summary/main.csv"`
+    - `git -C "/home/xgy/remote-clean-v2" check-ignore -v "mainexp/experiments/2026-03-18_pulse_mfb_preband_actual_ab_v1/input_bcsr/pe00/core00.bcsr.bin"`
+
+- Metrics / results:
+  - 原始 `mainexp/` 目录约：
+    - `3.6G`
+  - clean 工作树中本批次 `mainexp` 体量约：
+    - `1.4M`
+  - 本批次同步文件数：
+    - `167` 个文件
+  - 同步后的主体已经收敛为实验定义、脚本、快照工具与验证测试，不含运行生成物。
+
+- Next steps / TODO:
+  - 完成本批次提交后，继续处理 `snn3dexp`、`tools`、`GraphLib`、`snndl_*` 与精选 `experimental_features/*`。
+  - 若网络恢复，再统一推送当前 clean 分支上累计的本地提交。

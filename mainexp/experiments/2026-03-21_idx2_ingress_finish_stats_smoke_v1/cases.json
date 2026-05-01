@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "experiment_id": "2026-03-21_idx2_ingress_finish_stats_smoke_v1",
+  "baseline_case": "idx2_ingress_finish_stats_smoke_tiny",
+  "cases": [
+    {
+      "id": "idx2_ingress_finish_stats_smoke_tiny",
+      "label": "Tiny spec-first smoke to confirm exp_noc_idx2_ingress finish-time stats land in mesh_stats and essential_summary",
+      "run_dir": "/home/xgy/remote/mainexp/experiments/2026-03-21_idx2_ingress_finish_stats_smoke_v1/runs/idx2_ingress_finish_stats_smoke_tiny/latest"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "experiment_id": "2026-03-18_pulse_metadata_seed_actual_ab_v1",
+  "baseline_case": "pulse_shared_line_actual_baseline",
+  "cases": [
+    {
+      "id": "pulse_shared_line_actual_baseline",
+      "label": "PULSE Stage-A actual shared-line baseline without metadata seed",
+      "run_dir": "/home/xgy/remote/mainexp/experiments/2026-03-18_pulse_metadata_seed_actual_ab_v1/runs/pulse_shared_line_actual_baseline/latest"
+    },
+    {
+      "id": "pulse_shared_line_actual_metadata_seed_top24_budget6",
+      "label": "PULSE Stage-A actual shared-line baseline plus metadata seed top-24 and budget-6",
+      "run_dir": "/home/xgy/remote/mainexp/experiments/2026-03-18_pulse_metadata_seed_actual_ab_v1/runs/pulse_shared_line_actual_metadata_seed_top24_budget6/latest"
+    }
+  ]
+}

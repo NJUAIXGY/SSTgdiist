@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "experiment_id": "2026-03-22_pulse_osa_shared_weight_owner_smoke_v1",
+  "baseline_case": "pulse_osa_shared_weight_owner_baseline",
+  "cases": [
+    {
+      "id": "pulse_osa_shared_weight_owner_baseline",
+      "label": "PULSE-OSA shared weight owner smoke baseline without actual residency authority",
+      "run_dir": "/home/xgy/remote/mainexp/experiments/2026-03-22_pulse_osa_shared_weight_owner_smoke_v1/runs/pulse_osa_shared_weight_owner_baseline/latest"
+    },
+    {
+      "id": "pulse_osa_shared_weight_owner_actual",
+      "label": "PULSE-OSA shared weight owner smoke with actual residency authority enabled",
+      "run_dir": "/home/xgy/remote/mainexp/experiments/2026-03-22_pulse_osa_shared_weight_owner_smoke_v1/runs/pulse_osa_shared_weight_owner_actual/latest"
+    }
+  ]
+}

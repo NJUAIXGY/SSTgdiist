@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "experiment_id": "2026-03-27_pulse_owner_first_frontier_combo_ab_v1",
+  "baseline_case": "pulse_shared_line_actual_mfb_gather_preband_dedup_off",
+  "cases": [
+    {
+      "id": "pulse_shared_line_actual_mfb_gather_preband_dedup_off",
+      "label": "PULSE actual gather-preband with rowdescriptor owner path active and metadata frontier observe disabled",
+      "run_dir": "/home/xgy/remote/mainexp/experiments/2026-03-27_pulse_owner_first_frontier_combo_ab_v1/runs/pulse_shared_line_actual_mfb_gather_preband_dedup_off/latest"
+    },
+    {
+      "id": "pulse_shared_line_actual_mfb_gather_preband_dedup_off_metadata_frontier_top32_observe_band128_preband_band80_budget6",
+      "label": "PULSE actual gather-preband with metadata frontier observe top32/band128 plus actual preband band80 and gather budget6",
+      "run_dir": "/home/xgy/remote/mainexp/experiments/2026-03-27_pulse_owner_first_frontier_combo_ab_v1/runs/pulse_shared_line_actual_mfb_gather_preband_dedup_off_metadata_frontier_top32_observe_band128_preband_band80_budget6/latest"
+    }
+  ]
+}

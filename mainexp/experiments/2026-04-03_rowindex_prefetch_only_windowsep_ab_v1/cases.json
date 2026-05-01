@@ -1,0 +1,14 @@
+{
+  "experiment_id": "2026-04-03_rowindex_prefetch_only_windowsep_ab_v1",
+  "baseline_case": "rowindex_windowsep_off",
+  "cases": [
+    {
+      "id": "rowindex_windowsep_off",
+      "run_dir": "runs/rowindex_windowsep_off/latest"
+    },
+    {
+      "id": "rowindex_windowsep_on",
+      "run_dir": "runs/rowindex_windowsep_on/latest"
+    }
+  ]
+}

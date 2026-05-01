@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "experiment_id": "2026-03-17_pulse_domain_retire_shadow_ab_v1",
+  "baseline_case": "pulse_gcss_shared_line_actual_baseline",
+  "cases": [
+    {
+      "id": "pulse_gcss_shared_line_actual_baseline",
+      "label": "PULSE Stage-A actual shared-line service baseline for Stage-B shadow A/B",
+      "run_dir": "/home/xgy/remote/mainexp/experiments/2026-03-17_pulse_domain_retire_shadow_ab_v1/runs/pulse_gcss_shared_line_actual_baseline/20260317-140827"
+    },
+    {
+      "id": "pulse_domain_retire_shadow",
+      "label": "PULSE Stage-B shadow domain-local retire over Stage-A actual shared service",
+      "run_dir": "/home/xgy/remote/mainexp/experiments/2026-03-17_pulse_domain_retire_shadow_ab_v1/runs/pulse_domain_retire_shadow/20260317-141218"
+    }
+  ]
+}
