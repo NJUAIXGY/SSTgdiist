@@ -1,0 +1,37 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+SST_HOME="/home/xgy/remote"
+export SST_HOME
+export RAMULATOR2_DIR="$SST_HOME/externals/ramulator2"
+
+pick_prefix() {
+  local candidates=()
+  if [ -n "${SST_INSTALL_PREFIX:-}" ]; then
+    candidates+=("$SST_INSTALL_PREFIX")
+  fi
+  candidates+=(
+    "$SST_HOME/sst_install_mpi"
+    "$SST_HOME/sst_install_serial"
+    "$SST_HOME/sst_install"
+  )
+  local p
+  for p in "${candidates[@]}"; do
+    if [ -x "$p/bin/sst-info" ] && "$p/bin/sst-info" --version >/dev/null 2>&1; then
+      printf "%s" "$p"
+      return 0
+    fi
+  done
+  return 1
+}
+
+if ! SST_INSTALL_PREFIX="$(pick_prefix)"; then
+  echo "[sst-info-wrapper] ERROR: no runnable sst-info found under expected prefixes." >&2
+  echo "[sst-info-wrapper] tried: \$SST_INSTALL_PREFIX, $SST_HOME/sst_install_mpi, $SST_HOME/sst_install_serial, $SST_HOME/sst_install" >&2
+  exit 2
+fi
+export SST_INSTALL_PREFIX
+export PATH="$SST_INSTALL_PREFIX/bin:$PATH"
+export LD_LIBRARY_PATH="$SST_INSTALL_PREFIX/lib:$SST_INSTALL_PREFIX/lib64:/usr/lib/x86_64-linux-gnu:/lib/x86_64-linux-gnu:/usr/lib:/lib:/home/xgy/miniconda3/lib"
+
+exec "$SST_INSTALL_PREFIX/bin/sst-info" "$@"

@@ -1,0 +1,10 @@
+{
+  "case_id": "weight_l0_fill_smoke",
+  "description": "IDX2 ingress-prefetch case to force weight L0 SRAM lookup/fill activity.",
+  "spec": "spec.json",
+  "env": {
+    "MESH_SST_NPROC": "1",
+    "MESH_VALIDATE_PROFILE": "dev",
+    "MESH_EXPERIMENTAL_ENABLE": "1"
+  }
+}

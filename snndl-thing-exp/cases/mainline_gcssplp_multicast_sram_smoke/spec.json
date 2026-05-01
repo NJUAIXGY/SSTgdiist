@@ -1,0 +1,72 @@
+{
+  "schema_version": 3,
+  "platform": {
+    "mesh_size": 4,
+    "exec_mode": "gas",
+    "stop": {
+      "mode": "step_limited",
+      "max_steps": 1
+    },
+    "flags": {
+      "enable_node_summary": true
+    }
+  },
+  "noc": {
+    "type": "multicast_mesh",
+    "params": {
+      "multicast_enable": true,
+      "multicast_block_w": 2,
+      "multicast_block_h": 2,
+      "local_endpoint_multicast_enable": true
+    }
+  },
+  "workload": {
+    "impl": "snn",
+    "spike_source": {
+      "enable": false
+    }
+  },
+  "sram": {
+    "model_enable": 1,
+    "state": {
+      "enable": 1,
+      "capacity_bytes": 262144,
+      "banks": 16,
+      "ports_per_bank": 1,
+      "bank_interleave_bytes": 4,
+      "t_read_cycles": 2,
+      "t_write_cycles": 2
+    },
+    "weight": {
+      "idx_enable": 0,
+      "l0_enable": 0,
+      "idx_capacity_bytes": 131072,
+      "l0_capacity_bytes": 65536,
+      "idx_banks": 16,
+      "l0_banks": 8,
+      "ports_per_bank": 1,
+      "bank_interleave_bytes": 4,
+      "t_read_cycles": 2,
+      "t_write_cycles": 2
+    }
+  },
+  "loader": {
+    "chunk_bytes": 65536
+  },
+  "control": {
+    "global_step_sync_enable": true,
+    "global_step_done": {
+      "policy": "drain",
+      "drain_min_cycles": 200
+    }
+  },
+  "step": {
+    "random_activation_enable": 1,
+    "activation_fraction": 0.001,
+    "activation_fanout": 1,
+    "activation_seed": 23,
+    "activation_use_bcsr_routes": true
+  },
+  "synapse_weight_mode": "gcss_valueonly_dstcore_vlf_premphf_plp",
+  "gcssplp_dir": "weights/gcss_valueonly_dstcore_vlf_premphf_plp_fanout256_10k_v7_lpblp_j8"
+}

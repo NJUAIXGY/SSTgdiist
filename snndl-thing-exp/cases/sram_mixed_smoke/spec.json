@@ -1,0 +1,75 @@
+{
+  "schema_version": 3,
+  "platform": {
+    "mesh_size": 4,
+    "exec_mode": "gas",
+    "stop": {
+      "mode": "step_limited",
+      "max_steps": 1
+    },
+    "flags": {
+      "enable_node_summary": true
+    }
+  },
+  "workload": {
+    "impl": "snn",
+    "spike_source": {
+      "enable": false
+    }
+  },
+  "sram": {
+    "model_enable": 1,
+    "weight": {
+      "idx_enable": 1,
+      "l0_enable": 1,
+      "idx_capacity_bytes": 131072,
+      "l0_capacity_bytes": 65536,
+      "idx_banks": 16,
+      "l0_banks": 8,
+      "ports_per_bank": 1,
+      "bank_interleave_bytes": 4,
+      "t_read_cycles": 2,
+      "t_write_cycles": 2,
+      "l0_slots": 256
+    },
+    "state": {
+      "enable": 1,
+      "capacity_bytes": 262144,
+      "banks": 16,
+      "ports_per_bank": 1,
+      "bank_interleave_bytes": 4,
+      "t_read_cycles": 2,
+      "t_write_cycles": 2
+    }
+  },
+  "loader": {
+    "chunk_bytes": 65536
+  },
+  "control": {
+    "global_step_sync_enable": true,
+    "global_step_done": {
+      "policy": "drain",
+      "drain_min_cycles": 200
+    }
+  },
+  "components": {
+    "pe.core": {
+      "window_read_enable": 1,
+      "window_read_budget": 8192,
+      "experimental_idx2_ingress_prefetch_enable": 1,
+      "experimental_idx2_ingress_prefetch_budget_per_tick": 4,
+      "experimental_idx2_ingress_prefetch_cache_entries": 128,
+      "experimental_idx2_ingress_prefetch_gather_only": 1,
+      "experimental_idx2_ingress_tail_guard_enable": 0
+    }
+  },
+  "step": {
+    "random_activation_enable": 1,
+    "activation_fraction": 0.001,
+    "activation_fanout": 1,
+    "activation_seed": 17,
+    "activation_use_bcsr_routes": true
+  },
+  "synapse_weight_mode": "gcss_valueonly_dstcore_idx2",
+  "gcss2_dir": "sst_dram_si/weights/gcss_valueonly_dstcore_idx2_rowmphf_fanout256_10k_v2_j32"
+}

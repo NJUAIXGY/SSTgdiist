@@ -1,0 +1,10 @@
+{
+  "case_id": "pe_dma_ab_smoke",
+  "description": "SNN IDX2 smoke with PE-shared DMA enabled for baseline A/B comparison.",
+  "spec": "spec.json",
+  "env": {
+    "MESH_SST_NPROC": "1",
+    "MESH_VALIDATE_PROFILE": "dev",
+    "MESH_EXPERIMENTAL_ENABLE": "1"
+  }
+}

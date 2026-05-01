@@ -1,0 +1,10 @@
+{
+  "case_id": "state_sram_debug",
+  "description": "State-SRAM focused debug case with weight SRAM paths disabled.",
+  "spec": "spec.json",
+  "env": {
+    "MESH_SST_NPROC": "1",
+    "MESH_VALIDATE_PROFILE": "dev",
+    "MESH_EXPERIMENTAL_ENABLE": "1"
+  }
+}

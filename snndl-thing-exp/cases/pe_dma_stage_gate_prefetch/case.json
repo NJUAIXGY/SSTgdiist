@@ -1,0 +1,10 @@
+{
+  "case_id": "pe_dma_stage_gate_prefetch",
+  "description": "SNN IDX2 prefetch smoke with PE DMA enabled and Apply-stage P2 gate enforced.",
+  "spec": "spec.json",
+  "env": {
+    "MESH_SST_NPROC": "1",
+    "MESH_VALIDATE_PROFILE": "dev",
+    "MESH_EXPERIMENTAL_ENABLE": "1"
+  }
+}

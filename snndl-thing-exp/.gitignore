@@ -1,0 +1,8 @@
+runs/*
+!runs/.gitkeep
+run_logs/*
+!run_logs/.gitkeep
+snapshot/*
+!snapshot/.gitkeep
+summary/*
+!summary/.gitkeep

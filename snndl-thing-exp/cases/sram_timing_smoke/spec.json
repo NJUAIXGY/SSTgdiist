@@ -1,0 +1,57 @@
+{
+  "schema_version": 3,
+  "platform": {
+    "mesh_size": 4,
+    "exec_mode": "gas",
+    "stop": {
+      "mode": "step_limited",
+      "max_steps": 1
+    },
+    "flags": {
+      "enable_node_summary": true
+    }
+  },
+  "workload": {
+    "impl": "snn",
+    "spike_source": {
+      "enable": false
+    }
+  },
+  "components": {
+    "pe.core": {
+      "state_sram_enable": 1,
+      "state_sram_capacity_bytes": 262144,
+      "state_sram_banks": 16,
+      "state_sram_ports_per_bank": 1,
+      "state_sram_bank_interleave_bytes": 4,
+      "state_sram_t_read_cycles": 2,
+      "state_sram_t_write_cycles": 2,
+      "weight_idx_sram_enable": 1,
+      "weight_idx_sram_capacity_bytes": 131072,
+      "weight_idx_sram_banks": 16,
+      "weight_l0_sram_enable": 1,
+      "weight_l0_sram_capacity_bytes": 65536,
+      "weight_l0_sram_banks": 8,
+      "weight_ports_per_bank": 1,
+      "weight_bank_interleave_bytes": 4,
+      "weight_t_read_cycles": 2,
+      "weight_t_write_cycles": 2
+    }
+  },
+  "loader": {
+    "chunk_bytes": 65536
+  },
+  "control": {
+    "global_step_sync_enable": true,
+    "global_step_done": {
+      "policy": "drain",
+      "drain_min_cycles": 200
+    }
+  },
+  "step": {
+    "random_activation_enable": 1,
+    "activation_fraction": 0.001,
+    "activation_fanout": 1,
+    "activation_seed": 7
+  }
+}

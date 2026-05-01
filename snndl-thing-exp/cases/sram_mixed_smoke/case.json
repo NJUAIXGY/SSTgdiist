@@ -1,0 +1,10 @@
+{
+  "case_id": "sram_mixed_smoke",
+  "description": "Mixed state + weight SRAM smoke using IDX2 ingress prefetch.",
+  "spec": "spec.json",
+  "env": {
+    "MESH_SST_NPROC": "1",
+    "MESH_VALIDATE_PROFILE": "dev",
+    "MESH_EXPERIMENTAL_ENABLE": "1"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "case_id": "sram_timing_smoke",
+  "description": "Isolated SRAM timing smoke using lightweight step random activation.",
+  "spec": "spec.json",
+  "env": {
+    "MESH_SST_NPROC": "1",
+    "MESH_VALIDATE_PROFILE": "dev"
+  }
+}

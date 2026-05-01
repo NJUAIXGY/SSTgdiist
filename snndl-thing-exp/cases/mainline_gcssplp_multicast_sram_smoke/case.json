@@ -1,0 +1,10 @@
+{
+  "case_id": "mainline_gcssplp_multicast_sram_smoke",
+  "description": "Mainline smoke: MulticastRouter NoC + GCSS-GLIDE (gcssplp v7 lpblp) + state SRAM.",
+  "spec": "spec.json",
+  "env": {
+    "MESH_SST_NPROC": "1",
+    "MESH_VALIDATE_PROFILE": "dev",
+    "MESH_EXPERIMENTAL_ENABLE": "1"
+  }
+}

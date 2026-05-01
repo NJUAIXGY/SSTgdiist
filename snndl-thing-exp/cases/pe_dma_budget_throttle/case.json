@@ -1,0 +1,10 @@
+{
+  "case_id": "pe_dma_budget_throttle",
+  "description": "SNN IDX2 smoke with aggressively throttled PE DMA budget for latency/stall studies.",
+  "spec": "spec.json",
+  "env": {
+    "MESH_SST_NPROC": "1",
+    "MESH_VALIDATE_PROFILE": "dev",
+    "MESH_EXPERIMENTAL_ENABLE": "1"
+  }
+}

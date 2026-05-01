@@ -1,0 +1,10 @@
+{
+  "case_id": "weight_idx_sram_debug",
+  "description": "IDX2 weight-index focused SRAM debug with L0/state disabled.",
+  "spec": "spec.json",
+  "env": {
+    "MESH_SST_NPROC": "1",
+    "MESH_VALIDATE_PROFILE": "dev",
+    "MESH_EXPERIMENTAL_ENABLE": "1"
+  }
+}

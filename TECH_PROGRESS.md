@@ -20258,3 +20258,39 @@ Next steps / TODO:
 - Next steps / TODO:
   - 完成本批次提交后，继续处理 `snn3dexp`、`tools`、`GraphLib`、`snndl_*` 与精选 `experimental_features/*`。
   - 若网络恢复，再统一推送当前 clean 分支上累计的本地提交。
+
+## 2026-05-01 clean branch batch6 support modules sync
+
+- What changed:
+  - 在 clean 分支 `feature/gas-refactor-doc-clean-v2` 中继续补入一组支撑模块与入口脚本：
+    - `GraphLib/`
+    - `snndl_system/`
+    - `snndl_topology/`
+    - `snndl_spec/`
+    - `snndl-thing-exp/` 的 cases/tests/tools/README
+    - `sst`
+    - `sst-info`
+    - `setup_sst_env.sh`
+    - `sst_workloads/tools/new_workload_dir.sh`
+  - 本批次刻意不纳入 `snndl-thing-exp` 的 `runs/`、`run_logs/`、`snapshot/`、`summary/` 等本地产物。
+
+- How to run / verify:
+  - 查看本批次 clean 工作树中的支撑模块清单：
+    - `git -C "/home/xgy/remote-clean-v2" status --short --untracked-files=all -- "GraphLib" "snndl_system" "snndl_topology" "snndl_spec" "snndl-thing-exp" "sst" "sst-info" "setup_sst_env.sh" "sst_workloads/tools"`
+  - 验证 `snndl-thing-exp` 运行目录仍被忽略：
+    - `git -C "/home/xgy/remote-clean-v2" check-ignore -v "snndl-thing-exp/runs/mainline_gcssplp_multicast_sram_smoke/20260310-143049/mesh_run.log"`
+    - `git -C "/home/xgy/remote-clean-v2" check-ignore -v "snndl-thing-exp/run_logs/mainline_gcssplp_multicast_sram_smoke/latest.log"`
+
+- Metrics / results:
+  - clean 工作树中本批次各模块体量大致为：
+    - `GraphLib/` 约 `44K`
+    - `snndl_system/` 约 `60K`
+    - `snndl_topology/` 约 `44K`
+    - `snndl_spec/` 约 `20K`
+    - `snndl-thing-exp/` 约 `156K`
+    - `sst_workloads/tools/` 约 `8K`
+  - 本批次同步内容全部为源码、案例定义、测试或入口脚本，不含运行统计目录。
+
+- Next steps / TODO:
+  - 继续处理 `experimental_features/*` 的精选实验资产。
+  - 后续单独处理 `tools/` 这类文件数较多但体量仍可控的工具链目录。
